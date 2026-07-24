@@ -1,45 +1,305 @@
 {
-  "_placeholder": "M2+ content — the JSON schema for the research-agent return value. See research/workflow-design.md §2.2 for the canonical schema and §5 for the worked example. Will be filled in M2 once the research-agent operator confirms the contract.",
-  "schema_version": "1.0",
-  "project_slug": "<placeholder>",
-  "fetched_at": "<placeholder>",
-  "research_scrapes_ids": [],
-  "sources": {
-    "own_site": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null},
-    "linkedin": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null},
-    "instagram": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null},
-    "reference": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clone-website.local/schemas/brand-brief/v1.json",
+  "title": "Brand Brief",
+  "description": "Contract between the research-agent and the site-cloner / web-designer agents. Canonical shape is research/workflow-design.md §2.2. The schema is strict on structure and lenient on optionality: per §2.4, sources may be partial or blocked, so fetch_backend values like 'manual_summary' are allowed and individual source entries may be omitted / null. Colors are pinned to 6-digit hex (#RRGGBB).",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_slug",
+    "fetched_at",
+    "sources",
+    "voice_and_tone",
+    "palette_from_logo",
+    "typography_recommendation",
+    "real_photo_inventory",
+    "service_facts",
+    "social_highlights",
+    "testimonials",
+    "brand_donts",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "description": "Version of this contract the document conforms to (semver-ish string, e.g. '1.0').",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[0-9]+\\.[0-9]+([-.+].+)?$"
+    },
+    "project_slug": {
+      "description": "Slug identifying the project (kebab-case).",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "fetched_at": {
+      "description": "ISO-8601 UTC timestamp of when the brief was assembled.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "research_scrapes_ids": {
+      "description": "Optional. research_scrapes rows this brief is grounded in. Omit if research-agent did not record scrapes_ids.",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 1 }
+    },
+    "sources": {
+      "description": "Per-source provenance map. Per §2.4 each entry may be missing or null when the source was blocked.",
+      "type": "object",
+      "required": ["own_site", "linkedin", "instagram", "reference"],
+      "properties": {
+        "own_site":  { "$ref": "#/$defs/source_record" },
+        "linkedin":  { "$ref": "#/$defs/source_record" },
+        "instagram": { "$ref": "#/$defs/source_record" },
+        "reference": { "$ref": "#/$defs/source_record" }
+      },
+      "additionalProperties": false
+    },
+    "voice_and_tone": { "$ref": "#/$defs/voice_and_tone" },
+    "palette_from_logo": { "$ref": "#/$defs/palette_from_logo" },
+    "typography_recommendation": { "$ref": "#/$defs/typography_recommendation" },
+    "real_photo_inventory": { "$ref": "#/$defs/photo_array" },
+    "service_facts": { "$ref": "#/$defs/service_array" },
+    "social_highlights": { "$ref": "#/$defs/social_highlights" },
+    "testimonials": { "$ref": "#/$defs/testimonial_array" },
+    "brand_donts": {
+      "description": "Per-niche / per-brand design + copy guardrails (free-form strings, one rule per entry).",
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "limitations": {
+      "description": "Honest list of what research-agent could NOT recover (login-walled posts, blocked sources, etc.). Empty array is allowed when research-agent recovered everything.",
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
   },
-  "voice_and_tone": {
-    "register": "<placeholder>",
-    "sentence_case": true,
-    "favorite_words": [],
-    "banned_words": [],
-    "formality_score_1to5": 0,
-    "avg_sentence_length_words": 0,
-    "example_lines": [],
-    "notes": "<placeholder>"
-  },
-  "palette_from_logo": {
-    "method": "<placeholder>",
-    "primary": "<placeholder>",
-    "secondary": "<placeholder>",
-    "accent": "<placeholder>",
-    "neutrals": [],
-    "rationale": "<placeholder>"
-  },
-  "typography_recommendation": {
-    "display_family": "<placeholder>",
-    "body_family": "<placeholder>",
-    "mono_family": "<placeholder>",
-    "license_notes": "<placeholder>",
-    "scale_ratio": 0,
-    "scale_steps": []
-  },
-  "real_photo_inventory": [],
-  "service_facts": [],
-  "social_highlights": {"linkedin": [], "instagram": []},
-  "testimonials": [],
-  "brand_donts": [],
-  "limitations": []
+  "additionalProperties": true,
+
+  "$defs": {
+    "hex_color": {
+      "description": "6-digit RGB hex color (uppercase or lowercase).",
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+
+    "fetch_backend": {
+      "description": "Which fetch path produced this source's content. Per §2.4, 'manual_summary' is allowed when automated scraping was blocked.",
+      "type": ["string", "null"],
+      "enum": ["cloak", "cloak_loggedin", "firecrawl", "manual_summary", null]
+    },
+
+    "source_record": {
+      "description": "Provenance record for a single source (own_site, linkedin, instagram, or reference). Per §2.4, the whole record may be null when the source was blocked, and many fields are nullable.",
+      "type": ["object", "null"],
+      "properties": {
+        "url":           { "type": ["string", "null"], "format": "uri" },
+        "fetch_backend": { "$ref": "#/$defs/fetch_backend" },
+        "char_count":    { "type": ["integer", "null"], "minimum": 0 },
+        "scrapes_id":    { "type": ["integer", "null"], "minimum": 1 },
+
+        "post_count_30d": { "type": ["integer", "null"], "minimum": 0, "description": "LinkedIn / Instagram only." },
+        "top_posts": {
+          "description": "LinkedIn top posts (when available).",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date"],
+            "properties": {
+              "date":       { "type": "string", "format": "date" },
+              "engagement": { "type": ["integer", "null"], "minimum": 0 },
+              "url":        { "type": ["string", "null"], "format": "uri" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "grid_themes": {
+          "description": "Instagram grid-theme strings.",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "required": ["url", "fetch_backend", "char_count", "scrapes_id"],
+      "additionalProperties": true
+    },
+
+    "voice_and_tone": {
+      "description": "Voice + tone profile derived from the brand's existing copy.",
+      "type": "object",
+      "required": [
+        "register",
+        "sentence_case",
+        "favorite_words",
+        "banned_words",
+        "formality_score_1to5",
+        "avg_sentence_length_words",
+        "example_lines",
+        "notes"
+      ],
+      "properties": {
+        "register": {
+          "description": "Voice register — short kebab-case label (e.g. 'conversational-professional').",
+          "type": "string",
+          "minLength": 1
+        },
+        "sentence_case": { "type": "boolean" },
+        "favorite_words": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "banned_words": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "formality_score_1to5": {
+          "description": "1 = very casual, 5 = very formal.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "avg_sentence_length_words": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 200
+        },
+        "example_lines": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+
+    "palette_from_logo": {
+      "description": "Color palette extracted from the brand logo (or analogous mood words when no logo).",
+      "type": "object",
+      "required": ["method", "primary", "secondary", "accent", "neutrals", "rationale"],
+      "properties": {
+        "method":    { "type": "string", "minLength": 1 },
+        "primary":   { "$ref": "#/$defs/hex_color" },
+        "secondary": { "$ref": "#/$defs/hex_color" },
+        "accent":    { "$ref": "#/$defs/hex_color" },
+        "neutrals": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/hex_color" }
+        },
+        "rationale": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+
+    "typography_recommendation": {
+      "type": "object",
+      "required": [
+        "display_family",
+        "body_family",
+        "mono_family",
+        "license_notes",
+        "scale_ratio",
+        "scale_steps"
+      ],
+      "properties": {
+        "display_family": { "type": "string", "minLength": 1 },
+        "body_family":    { "type": "string", "minLength": 1 },
+        "mono_family":    { "type": "string", "minLength": 1 },
+        "license_notes":  { "type": "string", "minLength": 1 },
+        "scale_ratio":    { "type": "number", "exclusiveMinimum": 1.0, "maximum": 2.0 },
+        "scale_steps": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "number", "minimum": 6, "maximum": 256 }
+        }
+      },
+      "additionalProperties": true
+    },
+
+    "photo_array": {
+      "description": "Inventory of real, owned / licensed photos for the new site.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "subject", "license", "use"],
+        "properties": {
+          "url":        { "type": "string", "format": "uri" },
+          "subject":    { "type": "string", "minLength": 1 },
+          "license":    { "type": "string", "minLength": 1 },
+          "use": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "scrapes_id": { "type": ["integer", "null"], "minimum": 1 }
+        },
+        "additionalProperties": true
+      }
+    },
+
+    "service_array": {
+      "description": "Service offerings as the brand describes them.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "price_range"],
+        "properties": {
+          "name":        { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "price_range": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    },
+
+    "social_highlights": {
+      "description": "Top posts / captions from each social source. Arrays may be empty per §2.4 when a source was blocked.",
+      "type": "object",
+      "required": ["linkedin", "instagram"],
+      "properties": {
+        "linkedin": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date", "excerpt"],
+            "properties": {
+              "date":       { "type": "string", "format": "date" },
+              "excerpt":    { "type": "string", "minLength": 1 },
+              "engagement": { "type": ["integer", "null"], "minimum": 0 }
+            },
+            "additionalProperties": true
+          }
+        },
+        "instagram": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date", "caption"],
+            "properties": {
+              "date":      { "type": "string", "format": "date" },
+              "caption":   { "type": "string", "minLength": 1 },
+              "image_url": { "type": ["string", "null"], "format": "uri" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+
+    "testimonial_array": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["quote", "attribution", "license"],
+        "properties": {
+          "quote":       { "type": "string", "minLength": 1 },
+          "attribution": { "type": "string", "minLength": 1 },
+          "source_url":  { "type": ["string", "null"], "format": "uri" },
+          "license":     { "type": "string", "minLength": 1 },
+          "scrapes_id":  { "type": ["integer", "null"], "minimum": 1 }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
 }
