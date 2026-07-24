@@ -1,0 +1,48 @@
+model:
+  default: MiniMax-M3
+  provider: minimax
+  base_url: ''
+providers:
+  minimax:
+    api: https://api.minimax.io/anthropic
+    name: minimax
+    transport: chat_completions
+    models:
+      MiniMax-M3:
+        supports_vision: true
+toolsets:
+  - hermes-cli
+skills:
+  external_dirs:
+    - /home/openclaw/.hermes/skills
+    - /home/openclaw/Coding/badass-skills
+agent:
+  max_turns: 90
+  tool_use_enforcement: auto
+  reasoning_effort: high
+memory:
+  memory_enabled: false        # stateless per clone; isolates from other profiles' memory cubes
+  user_profile_enabled: false
+  memory_char_limit: 3000
+  user_char_limit: 1375
+  provider: ''                 # no memtensor cube; holographic/local fallback if ever re-enabled
+fallback_providers:
+- provider: gemini
+  model: gemini-3-flash-preview
+delegation:
+  max_iterations: 90
+  default_toolsets:
+  - terminal
+  - file
+  - web
+  - skills
+terminal:
+  timeout: 600
+timezone: 'Europe/Madrid'
+web:
+  backend: firecrawl
+auxiliary:
+  vision:
+    provider: auto
+    model: ''
+    timeout: 60

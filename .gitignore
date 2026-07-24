@@ -1,0 +1,12 @@
+.env
+*.env
+**/.env
+auth.json
+**/auth.json
+__pycache__/
+*.pyc
+node_modules/
+*.log
+gateway.pid
+gateway_state.json
+response_store.db*

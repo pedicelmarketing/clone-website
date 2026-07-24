@@ -1,0 +1,453 @@
+/* ============================================================
+   Riki Coach — faithful Editable Recreation (phase-1 baseline)
+   Fonts: Cormorant Garamond (serif headings) + Work Sans (body)
+   ============================================================ */
+
+:root{
+  --dark:      #313d34;   /* contact section / buttons / footer bottom */
+  --dark-2:    #2c3730;
+  --olive:     #928c62;   /* eyebrow accent labels */
+  --ink:       #23231f;   /* headings */
+  --text:      #4a4a45;   /* body copy */
+  --muted:     #6f6f68;
+  --bg:        #ffffff;
+  --bg-soft:   #f3f1ec;   /* soft warm grey sections & cards */
+  --line:      #e2ded6;
+  --maxw:      1180px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:"Work Sans", Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ margin:0; padding:0; list-style:none; }
+
+.container{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+
+h1,h2,h3{ font-family:"Cormorant Garamond", Georgia, serif; color:var(--ink); font-weight:500; margin:0; }
+
+.section-title{ font-size:2.6rem; line-height:1.1; letter-spacing:.3px; }
+
+.eyebrow,
+.card-eyebrow{
+  font-family:"Work Sans", sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:.72rem;
+  font-weight:600;
+  color:var(--olive);
+  margin:0 0 1rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;
+  background:var(--dark);
+  color:#fff;
+  font-size:.9rem;
+  font-weight:500;
+  padding:.72em 1.6em;
+  border-radius:24px;
+  transition:background .2s ease, transform .2s ease;
+}
+.btn:hover{ background:var(--dark-2); transform:translateY(-1px); }
+
+/* ---------- Promo bar ---------- */
+.promo-bar{
+  text-align:center;
+  font-size:.66rem;
+  letter-spacing:.05em;
+  color:#5b5b55;
+  padding:5px 10px;
+  background:#fff;
+}
+.promo-bar strong{ font-weight:700; }
+
+/* ---------- top/bottom skip anchors ---------- */
+.skip-top, .skip-bottom{
+  position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:saturate(140%) blur(6px);
+  border-bottom:1px solid rgba(0,0,0,.04);
+}
+.header-inner{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; height:74px; }
+.brand{ justify-self:start; }
+.brand-logo{ height:34px; width:auto; }
+.main-nav{ display:flex; gap:2.4rem; justify-self:center; }
+.nav-link{
+  font-size:.95rem; font-weight:500; color:#3a3a35; padding:4px 0;
+  border-bottom:2px solid transparent; transition:color .2s, border-color .2s;
+}
+.nav-link:hover{ color:#000; }
+.nav-link.is-active{ color:#1d1d1a; border-color:var(--olive); }
+
+/* ---------- Hero ---------- */
+.hero{ padding:64px 0 80px; }
+.hero-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;
+}
+.hero-copy{ padding-top:18px; }
+.hero-title{ font-size:4.4rem; line-height:1; margin:.2rem 0 1.6rem; }
+.lead{ font-size:1.02rem; color:var(--text); margin:0 0 1.6rem; max-width:34ch; }
+.hero-list li{
+  position:relative; padding-left:1.1em; margin-bottom:1.15rem;
+  font-size:.95rem; color:var(--text);
+}
+.hero-list li::before{
+  content:"•"; position:absolute; left:0; color:var(--text);
+}
+.hero-media img{
+  width:100%; height:auto; border-radius:2px;
+  aspect-ratio:1536/2048; object-fit:cover;
+}
+
+/* ---------- Elite section ---------- */
+.elite{ background:var(--bg-soft); padding:96px 0; }
+.elite-grid{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+.rule{ display:block; width:60px; height:2px; background:#c9c3b4; margin-bottom:26px; }
+.elite-copy .section-title{ margin-bottom:1.6rem; }
+.elite-copy p{ font-size:.9rem; color:var(--muted); margin:0 0 1rem; line-height:1.75; }
+.elite-media{ position:relative; min-height:420px; }
+.elite-img-back{
+  width:74%; margin-left:auto; border-radius:18px;
+  aspect-ratio:1/1; object-fit:cover;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+.elite-img-front{
+  position:absolute; left:0; bottom:-6%; width:46%;
+  border-radius:16px; aspect-ratio:1/1; object-fit:cover;
+  border:6px solid var(--bg-soft);
+  box-shadow:0 18px 34px rgba(0,0,0,.18);
+}
+
+/* ---------- Programs / cards ---------- */
+.programs{ padding:90px 0; background:#fff; }
+.cards-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.card{
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:34px 30px 36px;
+  display:flex; flex-direction:column;
+}
+.card-title{
+  font-family:"Work Sans", sans-serif;
+  font-weight:700; font-size:1.3rem; line-height:1.2; color:#222;
+  text-transform:uppercase; letter-spacing:.01em;
+  margin:0 0 1rem;
+}
+.card-desc{
+  font-size:.86rem; color:var(--muted); line-height:1.6; margin:0 0 1.3rem;
+}
+.card-list li{
+  position:relative; padding-left:1.1em; margin-bottom:.7rem;
+  font-size:.86rem; color:var(--muted); line-height:1.5;
+}
+.card-list li::before{ content:"•"; position:absolute; left:0; color:var(--muted); }
+.card .btn{ margin-top:auto; align-self:flex-start; margin-top:26px; }
+
+/* card titles that are short headings (local service style uses smaller uppercase heading in source) */
+
+/* ---------- Expect section ---------- */
+.expect{ background:#fff; padding:0; }
+.expect-grid{ display:grid; grid-template-columns:1fr 1fr; align-items:stretch; }
+.expect-media img{ width:100%; height:100%; object-fit:cover; min-height:520px; }
+.expect-copy{ display:flex; flex-direction:column; justify-content:center; padding:80px 64px; }
+.container-pad{ }
+.expect-title{ font-size:3rem; line-height:1.05; margin-bottom:2rem; max-width:12ch; }
+.expect-list li{
+  position:relative; padding-left:1.2em; margin-bottom:1rem;
+  font-size:.9rem; color:var(--muted); line-height:1.6;
+}
+.expect-list li::before{ content:"•"; position:absolute; left:0; color:var(--muted); }
+
+/* ---------- Contact ---------- */
+.contact{ background:var(--dark); color:#eef0ec; padding:96px 0 110px; }
+.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+.contact-title{ color:#fff; font-size:3.4rem; line-height:1.05; margin-bottom:2rem; max-width:8ch; }
+.contact-line{ margin:.4rem 0; font-size:1rem; color:#d7dbd4; }
+.contact-line a{ color:#d7dbd4; }
+.contact-divider{ display:block; width:44px; height:1px; background:rgba(255,255,255,.35); margin:1.2rem 0; }
+.contact-widget{
+  background:#f3f4f1; border-radius:34px; min-height:120px; width:100%;
+  box-shadow:0 20px 50px rgba(0,0,0,.18);
+}
+
+/* ---------- Footer ---------- */
+.site-footer{ background:#fff; }
+.footer-cols{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:40px;
+  padding-top:64px; padding-bottom:48px;
+}
+.footer-col h4{
+  font-family:"Work Sans", sans-serif;
+  text-transform:uppercase; letter-spacing:.16em; font-size:.72rem;
+  font-weight:700; color:#2c2c28; margin:0 0 1rem;
+}
+.footer-col p{ font-size:.85rem; color:#6a6a63; margin:0; line-height:1.7; }
+.socials{ display:flex; gap:12px; }
+.soc{
+  width:26px; height:26px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+}
+.soc svg{ width:15px; height:15px; fill:#fff; }
+.soc-fb{ background:#1877f2; }
+.soc-ig{ background:#e1306c; }
+.soc-yt{ background:#ff0000; }
+.soc-x{ background:#000; }
+.soc-in{ background:#0a66c2; }
+.soc-tt{ background:#010101; }
+
+.footer-tagline{
+  text-align:center; text-transform:uppercase; letter-spacing:.2em;
+  font-size:.72rem; color:#8a8a82; padding:26px 20px 40px; margin:0;
+  border-top:1px solid var(--line);
+}
+.footer-bottom{ background:var(--dark); }
+.footer-bottom-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  height:70px;
+}
+.footer-brand img{ height:26px; width:auto; filter:brightness(0) invert(1); opacity:.95; }
+.copyright{ margin:0; font-size:.74rem; color:#b8bdb5; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width:1024px){
+  .hero-title{ font-size:3.4rem; }
+  .section-title{ font-size:2.2rem; }
+  .expect-title{ font-size:2.4rem; }
+  .contact-title{ font-size:2.8rem; }
+  .expect-copy{ padding:60px 44px; }
+}
+
+@media (max-width:860px){
+  .container{ padding:0 26px; }
+
+  .hero{ padding:40px 0 56px; }
+  .hero-grid{ grid-template-columns:1fr; gap:36px; }
+  .hero-copy{ order:1; }
+  .hero-media{ order:0; }
+  .hero-title{ font-size:3rem; }
+  .lead{ max-width:none; }
+
+  .elite{ padding:64px 0; }
+  .elite-grid{ grid-template-columns:1fr; gap:48px; }
+  .elite-media{ min-height:0; margin-top:10px; }
+
+  .cards-grid{ grid-template-columns:1fr; gap:22px; }
+
+  .expect-grid{ grid-template-columns:1fr; }
+  .expect-media img{ min-height:360px; }
+  .expect-copy{ padding:48px 26px; }
+  .expect-title{ max-width:none; }
+
+  .contact-grid{ grid-template-columns:1fr; gap:36px; }
+  .contact-title{ max-width:none; }
+
+  .footer-cols{ grid-template-columns:1fr; gap:30px; text-align:left; padding-top:48px; }
+  .footer-bottom-inner{ flex-direction:column; gap:12px; height:auto; padding:20px 0; text-align:center; }
+}
+
+@media (max-width:560px){
+  .header-inner{ height:64px; }
+  .brand-logo{ height:28px; }
+  .main-nav{ gap:1.3rem; }
+  .nav-link{ font-size:.85rem; }
+  .hero-title{ font-size:2.6rem; }
+  .section-title{ font-size:2rem; }
+  .expect-title{ font-size:2.1rem; }
+  .contact-title{ font-size:2.4rem; }
+  .card{ padding:28px 24px 30px; }
+}
+
+/* ============================================================
+   Clubs + Camps pages
+   ============================================================ */
+.btn-ghost{ background:transparent; border:1px solid rgba(255,255,255,.6); color:#fff; }
+.btn-ghost:hover{ background:rgba(255,255,255,.12); }
+
+/* ---- Dark image hero (Clubs) ---- */
+.page-hero{
+  background-size:cover; background-position:center; color:#fff;
+  min-height:76vh; display:flex; align-items:center;
+}
+.page-hero-inner{ max-width:var(--maxw); }
+.page-hero-title{
+  font-size:5rem; line-height:1; color:#fff; letter-spacing:.02em; margin:0 0 1.4rem;
+}
+.page-hero-lead{ max-width:52ch; font-size:1.02rem; color:#e7e9e4; margin:0 0 2rem; }
+.hero-btns{ display:flex; gap:16px; flex-wrap:wrap; }
+
+/* ---- 2x2 features ---- */
+.features{ padding:72px 0 40px; background:#fff; }
+.features-eyebrow{ margin-bottom:2.4rem; }
+.features-grid{ display:grid; grid-template-columns:1fr 1fr; gap:44px 64px; }
+.feature-title{
+  font-family:"Work Sans",sans-serif; font-weight:700; font-size:1.02rem;
+  text-transform:uppercase; letter-spacing:.06em; color:#232320; margin:0 0 .7rem;
+}
+.feature-item p{ font-size:.9rem; color:var(--muted); margin:0; max-width:44ch; }
+
+/* ---- Club program cards ---- */
+.club-programs{ padding:76px 0; background:#fff; }
+.club-programs-title{ margin-bottom:2.4rem; }
+.club-cards{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+.club-card{
+  background:var(--bg-soft); border:1px solid var(--line); border-radius:14px;
+  overflow:hidden; display:flex; flex-direction:column; padding-bottom:28px;
+}
+.club-card-media{ aspect-ratio:1/1; overflow:hidden; }
+.club-card-media img{ width:100%; height:100%; object-fit:cover; }
+.club-card-title{
+  font-family:"Cormorant Garamond",serif; font-size:1.5rem; color:var(--ink);
+  margin:22px 24px 10px;
+}
+.club-card p{ font-size:.85rem; color:var(--muted); margin:0 24px 18px; line-height:1.55; }
+.club-card .btn{ margin:auto 24px 0; align-self:flex-start; }
+
+/* ---- Dinámica de impacto ---- */
+.impact{ padding:80px 0; background:var(--bg-soft); }
+.impact-intro{ max-width:52ch; color:var(--muted); font-size:.95rem; margin:1rem 0 3rem; }
+.impact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:48px 40px; }
+.impact-step h4{
+  font-family:"Work Sans",sans-serif; font-weight:700; font-size:.82rem;
+  text-transform:uppercase; letter-spacing:.08em; color:#232320; margin:0 0 .8rem;
+}
+.impact-step p{ font-size:.86rem; color:var(--muted); margin:0 0 1.2rem; line-height:1.6; }
+.impact-num{
+  font-family:"Cormorant Garamond",serif; font-size:3.2rem; color:#c7c1b2; line-height:1;
+}
+
+/* ---- Programas 100% personalizados ---- */
+.personalized{ padding:96px 0; background:#faf9f6; }
+.personalized-inner{ text-align:center; max-width:820px; }
+.personalized-title{ margin-bottom:2.6rem; }
+.personalized-item{ margin:0 auto 2.8rem; }
+.personalized-item p{
+  font-family:"Cormorant Garamond",serif; font-size:1.7rem; line-height:1.35;
+  color:#2c2c26; margin:0 0 .8rem;
+}
+.personalized-label{
+  font-family:"Work Sans",sans-serif !important; font-size:.7rem !important;
+  text-transform:uppercase; letter-spacing:.2em; color:var(--olive); font-weight:600;
+}
+
+/* ---- Portfolio gallery ---- */
+.portfolio{ padding:40px 0 96px; background:#faf9f6; }
+.portfolio-intro{ color:var(--muted); font-size:.95rem; margin:1rem 0 2.6rem; max-width:50ch; }
+.gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.gallery-item{ margin:0; position:relative; }
+.gallery-item img{
+  width:100%; aspect-ratio:4/3; object-fit:cover; filter:grayscale(1) contrast(1.02);
+  border-radius:2px;
+}
+.gallery-item figcaption{
+  display:flex; justify-content:space-between; align-items:baseline;
+  margin-top:.6rem; font-size:.78rem; color:#55554e;
+}
+.gallery-item figcaption em{ font-style:normal; color:#a6a196; }
+
+/* ---- Camps hero ---- */
+.camps-hero{ padding:70px 0 60px; }
+.camps-hero-title{ font-size:4rem; margin:.4rem 0 1.4rem; }
+.camps-hero-lead{ max-width:46ch; }
+
+/* ---- Camps image band + card ---- */
+.camps-band{ position:relative; background:var(--bg-soft); }
+.camps-band-media{ width:72%; }
+.camps-band-media img{ width:100%; height:560px; object-fit:cover; }
+.camps-band-card{
+  position:absolute; right:6%; top:50%; transform:translateY(-50%);
+  width:34%; max-width:420px; background:#fff; border:1px solid var(--line);
+  padding:44px 40px; box-shadow:0 24px 50px rgba(0,0,0,.12);
+}
+.camps-band-card .section-title{ font-size:2.2rem; margin-bottom:1rem; }
+.camps-band-card p{ font-size:.9rem; color:var(--muted); margin:0 0 1.6rem; }
+
+/* ---- Gold methodology band ---- */
+.methodology{ background:#b8975a; color:#fff; padding:70px 0; }
+.methodology-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+.rule-light{ background:rgba(255,255,255,.6); }
+.methodology-title{ color:#fff; margin-bottom:1.4rem; }
+.methodology-copy p{ color:#f4efe4; font-size:.94rem; line-height:1.7; margin:0; }
+.methodology-media img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; }
+
+/* ---- Includes (4 icons) ---- */
+.includes{ padding:90px 0; background:#fff; text-align:center; }
+.includes-title{ margin-bottom:3.4rem; }
+.includes-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:36px; text-align:left; }
+.include-icon{ display:block; margin-bottom:1.1rem; }
+.include-icon svg{ width:34px; height:34px; }
+.include-item h3{
+  font-family:"Cormorant Garamond",serif; font-size:1.35rem; color:var(--ink); margin:0 0 .6rem;
+}
+.include-item p{ font-size:.85rem; color:var(--muted); margin:0; line-height:1.6; }
+
+/* ---- FAQ ---- */
+.faq{ padding:20px 0 96px; background:#faf9f6; }
+.faq-inner{ max-width:760px; }
+.faq-title{ text-align:center; margin-bottom:2.4rem; }
+.faq-item{ padding:1.6rem 0; border-bottom:1px solid var(--line); }
+.faq-item h3{ font-family:"Cormorant Garamond",serif; font-size:1.5rem; color:var(--ink); margin:0 0 .7rem; }
+.faq-item p{ font-size:.85rem; color:var(--muted); margin:0; line-height:1.65; }
+
+/* ---- Request / custom program ---- */
+.request{ padding:80px 0 96px; background:#fff; }
+.request-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:64px; }
+.request-copy .section-title{ margin-bottom:1.2rem; }
+.request-copy p{ font-size:.9rem; color:var(--muted); max-width:36ch; }
+.request-form-title{ margin-bottom:1.8rem; }
+.request-form label{ display:block; font-size:.76rem; color:#55554e; margin-bottom:1.1rem; }
+.request-form label span{ color:#b04a3a; }
+.request-form .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.request-form input, .request-form textarea{
+  display:block; width:100%; margin-top:.4rem; padding:.6rem .2rem;
+  border:none; border-bottom:1px solid #cfcabf; background:transparent;
+  font-family:"Work Sans",sans-serif; font-size:.9rem; color:#2c2c26;
+}
+.request-form input:focus, .request-form textarea:focus{ outline:none; border-color:var(--dark); }
+.request-btn{ margin-top:.6rem; }
+
+@media (max-width:1024px){
+  .page-hero-title{ font-size:3.6rem; }
+  .club-cards{ grid-template-columns:repeat(2,1fr); }
+  .impact-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:860px){
+  .page-hero{ min-height:64vh; }
+  .page-hero-title{ font-size:3rem; }
+  .features-grid{ grid-template-columns:1fr; gap:32px; }
+  .club-cards{ grid-template-columns:1fr; }
+  .impact-grid{ grid-template-columns:1fr; gap:32px; }
+  .personalized-item p{ font-size:1.4rem; }
+  .gallery-grid{ grid-template-columns:1fr 1fr; }
+  .camps-band-media{ width:100%; }
+  .camps-band-media img{ height:340px; }
+  .camps-band-card{ position:static; transform:none; width:auto; max-width:none; margin:-40px 24px 0; }
+  .methodology-grid{ grid-template-columns:1fr; gap:32px; }
+  .includes-grid{ grid-template-columns:1fr 1fr; gap:28px; }
+  .request-grid{ grid-template-columns:1fr; gap:36px; }
+}
+@media (max-width:560px){
+  .page-hero-title{ font-size:2.5rem; }
+  .camps-hero-title{ font-size:2.8rem; }
+  .gallery-grid{ grid-template-columns:1fr; }
+  .includes-grid{ grid-template-columns:1fr; }
+  .request-form .form-row{ grid-template-columns:1fr; }
+}

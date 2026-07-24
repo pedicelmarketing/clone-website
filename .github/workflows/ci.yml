@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - "feat/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile skill scripts
+        run: python -m py_compile skills/nt-site-mirror/scripts/*.py
+
+      - name: Script smoke
+        run: python skills/nt-site-mirror/scripts/mirror_assets.py --help >/dev/null && python skills/nt-site-mirror/scripts/serve.py --help >/dev/null
+
+      - name: HTML sanity
+        shell: bash
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          import sys
+
+          class AssetParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.references = []
+
+              def handle_starttag(self, tag, attrs):
+                  for name, value in attrs:
+                      if name in {"src", "href"} and value:
+                          self.references.append(value)
+
+          missing = []
+          html_files = sorted(Path("examples").glob("**/recreation/*.html"))
+          for html_file in html_files:
+              parser = AssetParser()
+              parser.feed(html_file.read_text(encoding="utf-8"))
+              recreation_root = html_file.parent
+              for reference in parser.references:
+                  parsed = urlsplit(reference)
+                  if parsed.scheme or parsed.netloc or reference.startswith(("#", "//")):
+                      continue
+                  path_text = parsed.path
+                  if not path_text:
+                      continue
+                  relative = path_text.lstrip("/")
+                  first_part = Path(relative).parts[0] if Path(relative).parts else ""
+                  if first_part not in {"assets", "css"}:
+                      continue
+                  target = recreation_root / relative
+                  if not target.exists():
+                      missing.append(f"{html_file}: {reference} -> {target}")
+
+          if missing:
+              print("Missing local HTML assets:", file=sys.stderr)
+              print("\n".join(missing), file=sys.stderr)
+              raise SystemExit(1)
+          print(f"Checked {len(html_files)} HTML files; all local assets/css references exist.")
+          PY
