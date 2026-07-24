@@ -5,9 +5,12 @@
   "evidence_basis": "Not exercised",
   "meta": {
     "access_state": "ok",
+    "color_source": "computed_styles_fallback",
     "evidence_basis": "DOM+assets confirmed",
-    "extracted_at": "2026-07-24T19:48:34Z",
-    "notes": [],
+    "extracted_at": "2026-07-24T20:42:44Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 46 role-cells (10 unique colors)"
+    ],
     "page_context": {
       "h1_count": 1,
       "section_count": 11,

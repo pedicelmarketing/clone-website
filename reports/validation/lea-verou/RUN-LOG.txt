@@ -38,3 +38,13 @@ widths_swept: 12, breakpoints: 2 (high/medium/low: 2/0/0)
 exit_code: 0
 
 RESULT: ALL 4 SCRIPTS PASSED
+access_state: ok
+css variables at :root: 1
+color tokens: 6, typography roles: 5, spacing samples: 6, radius samples: 2, shadow samples: 0
+notes: color_source: :root yielded 0 named tokens; used computed-style fallback on 20 role-cells (6 unique colors)
+reports/validation/lea-verou/tokens/color.json
+reports/validation/lea-verou/tokens/typography.json
+reports/validation/lea-verou/tokens/spacing.json
+reports/validation/lea-verou/tokens/radius.json
+reports/validation/lea-verou/tokens/shadow.json
+reports/validation/lea-verou/tokens/tailwind.json

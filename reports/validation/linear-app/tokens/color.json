@@ -2,9 +2,12 @@
   "families": {},
   "meta": {
     "access_state": "ok",
+    "color_source": "computed_styles_fallback",
     "evidence_basis": "DOM+assets confirmed",
-    "extracted_at": "2026-07-24T19:48:34Z",
-    "notes": [],
+    "extracted_at": "2026-07-24T20:42:44Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 46 role-cells (10 unique colors)"
+    ],
     "page_context": {
       "h1_count": 1,
       "section_count": 11,
@@ -16,7 +19,130 @@
     "tool_version": "1.0",
     "viewport": "1440x900"
   },
-  "primary_candidates": [],
-  "tokens": [],
-  "total_unique": 0
+  "primary_candidates": [
+    "#f7f8f8",
+    "#ffffff",
+    "#8a8f98"
+  ],
+  "sample_count": 46,
+  "source": "computed_styles_fallback",
+  "tokens": [
+    {
+      "dominant_property": "color",
+      "hex": "#f7f8f8",
+      "refs": 27,
+      "role_count": 14,
+      "roles": [
+        "a",
+        "article",
+        "body",
+        "card",
+        "footer",
+        "h1",
+        "h2",
+        "h3",
+        "header",
+        "html",
+        "input",
+        "li",
+        "nav",
+        "section"
+      ]
+    },
+    {
+      "dominant_property": "border",
+      "hex": "#ffffff",
+      "refs": 10,
+      "role_count": 6,
+      "roles": [
+        "a",
+        "card",
+        "code",
+        "header",
+        "input",
+        "tag"
+      ]
+    },
+    {
+      "dominant_property": "color",
+      "hex": "#8a8f98",
+      "refs": 9,
+      "role_count": 5,
+      "roles": [
+        "a",
+        "button",
+        "h2",
+        "p",
+        "tag"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#08090a",
+      "refs": 6,
+      "role_count": 3,
+      "roles": [
+        "body",
+        "footer",
+        "html"
+      ]
+    },
+    {
+      "dominant_property": "color",
+      "hex": "#d0d6e0",
+      "refs": 5,
+      "role_count": 3,
+      "roles": [
+        "code",
+        "h3",
+        "input"
+      ]
+    },
+    {
+      "dominant_property": "border",
+      "hex": "#e5e5e6",
+      "refs": 2,
+      "role_count": 1,
+      "roles": [
+        "button"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#5e6ad2",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "a"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#3b3b3b",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "input"
+      ]
+    },
+    {
+      "dominant_property": "border",
+      "hex": "#23252a",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "footer"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#0f1011",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "card"
+      ]
+    }
+  ],
+  "total_unique": 10
 }

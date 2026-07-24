@@ -233,6 +233,61 @@ EXTRACT_JS = r"""
   }
   out.var_reference_counts = refCounts;
 
+  //----- 2a fallback: computed-style color mining on representative elements -----
+  // Many production sites (Linear, personal sites, Wikipedia) inline their colors
+  // per-component rather than exposing a :root palette. We sample color /
+  // background-color / border-color on a representative element set so the
+  // frequency map (§2a "which colors are used by the largest number of elements")
+  // still has signal even when :root is empty. Each sample carries the element
+  // role so we can also deduplicate by role.
+  const COLOR_SAMPLE_SEL = [
+    {role: 'body',        selector: 'body'},
+    {role: 'html',        selector: 'html'},
+    {role: 'h1',          selector: 'h1'},
+    {role: 'h2',          selector: 'h2'},
+    {role: 'h3',          selector: 'h3'},
+    {role: 'p',           selector: 'p'},
+    {role: 'a',           selector: 'a'},
+    {role: 'button',      selector: 'button, [role="button"], input[type="submit"]'},
+    {role: 'input',       selector: 'input, textarea, select'},
+    {role: 'nav',         selector: 'nav, [role="navigation"]'},
+    {role: 'header',      selector: 'header, [role="banner"]'},
+    {role: 'footer',      selector: 'footer, [role="contentinfo"]'},
+    {role: 'section',     selector: 'section, main > div'},
+    {role: 'article',     selector: 'article, main'},
+    {role: 'aside',       selector: 'aside, [role="complementary"]'},
+    {role: 'card',        selector: '[class*="card" i], [class*="panel" i]'},
+    {role: 'tag',         selector: '[class*="tag" i], [class*="badge" i], [class*="pill" i]'},
+    {role: 'li',          selector: 'li'},
+    {role: 'blockquote',  selector: 'blockquote'},
+    {role: 'code',        selector: 'code, pre, kbd'},
+  ];
+  const colorSamples = [];
+  const seenRoles = new Set();
+  for (const {role, selector} of COLOR_SAMPLE_SEL) {
+    if (seenRoles.has(role)) continue;
+    const nodes = document.querySelectorAll(selector);
+    if (!nodes.length) continue;
+    // Take up to 3 elements per role so cards / sections don't drown the signal.
+    const take = Math.min(3, nodes.length);
+    for (let i = 0; i < take; i++) {
+      const el = nodes[i];
+      const cs = getComputedStyle(el);
+      colorSamples.push({
+        role,
+        tag: el.tagName,
+        color:           cs.color,
+        background_color: cs.backgroundColor,
+        border_top_color:    cs.borderTopColor,
+        border_right_color:  cs.borderRightColor,
+        border_bottom_color: cs.borderBottomColor,
+        border_left_color:   cs.borderLeftColor,
+      });
+    }
+    seenRoles.add(role);
+  }
+  out.color_samples = colorSamples;
+
   //----- page context -----
   out.page_context = {
     title: document.title,
@@ -273,7 +328,7 @@ def _normalize_hex(value: str) -> str | None:
         if re.fullmatch(r"[0-9a-fA-F]{8}", body):
             return "#" + body.lower()
         return None
-    m = re.fullmatch(r"rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)", v)
+    m = re.fullmatch(r"rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)(?:\s*,\s*[0-9.]+\s*)?\)", v)
     if m:
         r, g, b = (int(m.group(i)) for i in (1, 2, 3))
         return "#%02x%02x%02x" % (r, g, b)
@@ -360,6 +415,109 @@ def build_color_tokens(css_variables: dict[str, str], frequency: dict[str, int])
         "families": families,
         "primary_candidates": [t["name"] for t in primaries],
         "total_unique": len(color_tokens),
+    }
+
+
+# Transparent / near-transparent values we exclude from the fallback palette —
+# they drown the signal because every browser default renders them. Rec. 709
+# max channel < 8 means "effectively black-on-black" or "translucent over
+# unknown bg"; we keep them ONLY if they appear as a foreground color (rare).
+_FULLY_TRANSPARENT_VALUES = {"rgba(0, 0, 0, 0)", "transparent"}
+
+
+def _is_skippable_color(value) -> bool:
+    """True for transparent / near-transparent defaults that should not pollute
+    the palette. RGBA-0 alpha gets skipped; opaque near-black (#000000 /
+    rgb(0,0,0)) is kept because it's a real design choice (e.g. body text)."""
+    if value is None or not value:
+        return True
+    v = value.strip().lower()
+    if v in _FULLY_TRANSPARENT_VALUES:
+        return True
+    m = re.fullmatch(r"rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)(?:\s*,\s*([0-9.]+))?\s*\)", v)
+    if m and m.group(4) is not None:
+        try:
+            alpha = float(m.group(4))
+            if alpha < 0.05:
+                return True
+        except ValueError:
+            pass
+    return False
+
+
+def build_color_tokens_from_computed(samples: list[dict]) -> dict[str, Any]:
+    """§2a fallback: build a frequency-ranked color palette from getComputedStyle
+    on representative elements (body, headings, links, buttons, nav, header,
+    footer, sections, cards, tags, code). This is the source we use when :root
+    exposes nothing useful — confirmed necessary for Linear, Lea Verou,
+    Wikipedia, and most modern SPAs that compile tailwind-classnames or
+    emotion/styled-components output.
+
+    The output mirrors `build_color_tokens` so the JSON shape is consistent:
+      - tokens: list of {hex, dominant_property, roles, refs, role_count} where
+        refs = how many distinct (role, property) cells applied this color.
+      - primary_candidates: top-3 by frequency.
+      - families: empty (we don't have token names to bucket by).
+    """
+    if not samples:
+        return {"tokens": [], "families": {}, "primary_candidates": [],
+                "total_unique": 0, "source": "computed_styles_fallback",
+                "sample_count": 0}
+
+    PROP_FIELDS = [
+        ("color", "color"),
+        ("background_color", "background"),
+        ("border_top_color", "border"),
+        ("border_right_color", "border"),
+        ("border_bottom_color", "border"),
+        ("border_left_color", "border"),
+    ]
+
+    # role -> prop -> {hex: ...}   →   we count each unique hex at most once per
+    # (role, prop) cell so a wrapper element with 8 nested colored descendants
+    # doesn't 8x-count a single hex.
+    by_role_prop: dict[tuple[str, str], set[str]] = {}
+    for s in samples:
+        for field, prop in PROP_FIELDS:
+            raw = s.get(field)
+            if _is_skippable_color(raw):
+                continue
+            hex_color = _normalize_hex(raw)
+            if not hex_color or not hex_color.startswith("#"):
+                continue
+            by_role_prop.setdefault((s["role"], prop), set()).add(hex_color)
+
+    # Frequency across all cells — this is the §2a "used by the largest number
+    # of elements" reading.
+    freq: Counter = Counter()
+    examples: dict[str, dict[str, list[str]]] = {}  # hex -> {prop: [roles]}
+    for (role, prop), hexes in by_role_prop.items():
+        for h in hexes:
+            freq[h] += 1
+            examples.setdefault(h, {}).setdefault(prop, []).append(role)
+
+    tokens = []
+    for hex_color, refs in freq.most_common():
+        prop_roles = examples[hex_color]
+        # most-populated property for this color (background vs color vs border)
+        dominant_prop = max(prop_roles, key=lambda p: len(set(prop_roles[p])))
+        roles = sorted(set(prop_roles[dominant_prop]))
+        tokens.append({
+            "hex": hex_color,
+            "dominant_property": dominant_prop,
+            "roles": roles,
+            "refs": refs,
+            "role_count": len(roles),
+        })
+
+    primaries = tokens[:3]
+    return {
+        "tokens": tokens,
+        "families": {},
+        "primary_candidates": [t["hex"] for t in primaries],
+        "total_unique": len(tokens),
+        "source": "computed_styles_fallback",
+        "sample_count": len(samples),
     }
 
 
@@ -652,6 +810,30 @@ def main(argv: list[str] | None = None) -> int:
         frequency.setdefault(name, 0)
 
     color = build_color_tokens(css_variables, frequency)
+    color_source = "root_custom_props"
+
+    # §2a fallback: when :root exposes nothing useful (Linear, personal sites,
+    # Wikipedia, basically any site that doesn't compile a token palette), we
+    # sample getComputedStyle on representative elements and build the
+    # frequency map from the applied values. Keep the :root result if it
+    # yielded anything — it carries semantic names (--color-primary-600) the
+    # fallback can't recover.
+    if color["total_unique"] == 0:
+        fallback = build_color_tokens_from_computed(raw.get("color_samples") or [])
+        if fallback["total_unique"] > 0:
+            color = fallback
+            color_source = "computed_styles_fallback"
+            notes.append(
+                "color_source: :root yielded 0 named tokens; used "
+                "computed-style fallback on %d role-cells (%d unique colors)"
+                % (fallback["sample_count"], fallback["total_unique"])
+            )
+        else:
+            color_source = "empty"
+            notes.append("color_source: :root yielded 0 and computed-style fallback found no colors")
+    else:
+        # Mark the source so the evidence basis stays honest.
+        color["source"] = "root_custom_props"
     typography_out = build_typography_tokens(typography)
     spacing_out = build_spacing_tokens(spacings)
     radius_out = build_radius_tokens(radii)
@@ -673,6 +855,7 @@ def main(argv: list[str] | None = None) -> int:
         "viewport": "%dx%d" % (width, height),
         "access_state": access_state,
         "evidence_basis": "DOM+assets confirmed" if access_state == "ok" else "HTTP-200 only",
+        "color_source": color_source,
         "notes": notes,
         "page_context": page_context,
     }

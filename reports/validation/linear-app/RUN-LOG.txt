@@ -38,3 +38,23 @@ widths_swept: 12, breakpoints: 4 (high/medium/low: 4/0/0)
 exit_code: 0
 
 RESULT: ALL 4 SCRIPTS PASSED
+access_state: ok
+css variables at :root: 0
+color tokens: 0, typography roles: 7, spacing samples: 27, radius samples: 19, shadow samples: 1
+notes: color_source: :root yielded 0 and computed-style fallback found no colors
+reports/validation/linear-app/tokens/color.json
+reports/validation/linear-app/tokens/typography.json
+reports/validation/linear-app/tokens/spacing.json
+reports/validation/linear-app/tokens/radius.json
+reports/validation/linear-app/tokens/shadow.json
+reports/validation/linear-app/tokens/tailwind.json
+access_state: ok
+css variables at :root: 0
+color tokens: 10, typography roles: 7, spacing samples: 27, radius samples: 19, shadow samples: 1
+notes: color_source: :root yielded 0 named tokens; used computed-style fallback on 46 role-cells (10 unique colors)
+reports/validation/linear-app/tokens/color.json
+reports/validation/linear-app/tokens/typography.json
+reports/validation/linear-app/tokens/spacing.json
+reports/validation/linear-app/tokens/radius.json
+reports/validation/linear-app/tokens/shadow.json
+reports/validation/linear-app/tokens/tailwind.json

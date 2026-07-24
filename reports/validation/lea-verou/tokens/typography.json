@@ -53,9 +53,12 @@
   },
   "meta": {
     "access_state": "ok",
+    "color_source": "computed_styles_fallback",
     "evidence_basis": "DOM+assets confirmed",
-    "extracted_at": "2026-07-24T19:51:16Z",
-    "notes": [],
+    "extracted_at": "2026-07-24T20:42:59Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 20 role-cells (6 unique colors)"
+    ],
     "page_context": {
       "h1_count": 0,
       "section_count": 2,

@@ -38,3 +38,13 @@ widths_swept: 12, breakpoints: 3 (high/medium/low: 3/0/0)
 exit_code: 0
 
 RESULT: ALL 4 SCRIPTS PASSED
+access_state: ok
+css variables at :root: 5
+color tokens: 10, typography roles: 8, spacing samples: 17, radius samples: 13, shadow samples: 0
+notes: color_source: :root yielded 0 named tokens; used computed-style fallback on 38 role-cells (10 unique colors)
+reports/validation/wikipedia/tokens/color.json
+reports/validation/wikipedia/tokens/typography.json
+reports/validation/wikipedia/tokens/spacing.json
+reports/validation/wikipedia/tokens/radius.json
+reports/validation/wikipedia/tokens/shadow.json
+reports/validation/wikipedia/tokens/tailwind.json

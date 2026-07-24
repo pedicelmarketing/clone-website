@@ -2,9 +2,12 @@
   "families": {},
   "meta": {
     "access_state": "ok",
+    "color_source": "computed_styles_fallback",
     "evidence_basis": "DOM+assets confirmed",
-    "extracted_at": "2026-07-24T19:51:55Z",
-    "notes": [],
+    "extracted_at": "2026-07-24T20:43:13Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 38 role-cells (10 unique colors)"
+    ],
     "page_context": {
       "h1_count": 1,
       "section_count": 32,
@@ -16,7 +19,121 @@
     "tool_version": "1.0",
     "viewport": "1440x900"
   },
-  "primary_candidates": [],
-  "tokens": [],
-  "total_unique": 0
+  "primary_candidates": [
+    "#202122",
+    "#101418",
+    "#000000"
+  ],
+  "sample_count": 38,
+  "source": "computed_styles_fallback",
+  "tokens": [
+    {
+      "dominant_property": "color",
+      "hex": "#202122",
+      "refs": 19,
+      "role_count": 10,
+      "roles": [
+        "article",
+        "body",
+        "button",
+        "footer",
+        "header",
+        "input",
+        "li",
+        "nav",
+        "p",
+        "section"
+      ]
+    },
+    {
+      "dominant_property": "color",
+      "hex": "#101418",
+      "refs": 7,
+      "role_count": 4,
+      "roles": [
+        "code",
+        "h1",
+        "h2",
+        "h3"
+      ]
+    },
+    {
+      "dominant_property": "color",
+      "hex": "#000000",
+      "refs": 6,
+      "role_count": 3,
+      "roles": [
+        "button",
+        "html",
+        "input"
+      ]
+    },
+    {
+      "dominant_property": "color",
+      "hex": "#3366cc",
+      "refs": 4,
+      "role_count": 2,
+      "roles": [
+        "a",
+        "tag"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#f8f9fa",
+      "refs": 2,
+      "role_count": 2,
+      "roles": [
+        "body",
+        "code"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#ffffff",
+      "refs": 2,
+      "role_count": 2,
+      "roles": [
+        "header",
+        "input"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#eaecf0",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "button"
+      ]
+    },
+    {
+      "dominant_property": "border",
+      "hex": "#72777d",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "input"
+      ]
+    },
+    {
+      "dominant_property": "border",
+      "hex": "#a2a9b1",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "footer"
+      ]
+    },
+    {
+      "dominant_property": "border",
+      "hex": "#dadde3",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "code"
+      ]
+    }
+  ],
+  "total_unique": 10
 }
