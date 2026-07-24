@@ -1,0 +1,22 @@
+{
+  "config": null,
+  "config_error": null,
+  "detected": false,
+  "evidence_basis": "Not exercised",
+  "meta": {
+    "access_state": "ok",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T19:48:34Z",
+    "notes": [],
+    "page_context": {
+      "h1_count": 1,
+      "section_count": 11,
+      "title": "Linear – The system for product development",
+      "url": "https://linear.app/"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://linear.app",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  }
+}

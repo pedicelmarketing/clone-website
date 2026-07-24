@@ -1,0 +1,20 @@
+{
+  "elevations": [],
+  "evidence_basis": "DOM+assets confirmed",
+  "meta": {
+    "access_state": "ok",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T19:51:16Z",
+    "notes": [],
+    "page_context": {
+      "h1_count": 0,
+      "section_count": 2,
+      "title": "Home • Lea Verou",
+      "url": "https://lea.verou.me/"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://lea.verou.me",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  }
+}

@@ -1,0 +1,40 @@
+================================================================
+Validation run for: https://linear.app
+Slug: linear-app
+Date: 2026-07-24T19:48:34Z
+Python: /home/openclaw/.venvs/nt-mirror/bin/python (Python 3.12.3)
+================================================================
+
+--- extract_tokens.py ---
+access_state: ok
+css variables at :root: 0
+color tokens: 0, typography roles: 7, spacing samples: 27, radius samples: 19, shadow samples: 1
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens/color.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens/typography.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens/spacing.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens/radius.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens/shadow.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens/tailwind.json
+exit_code: 0
+
+--- inventory_copy.py ---
+access_state: ok
+text_blocks: 576, alt_labels: 75, sections_seen: [2]
+by_role: {'h1': 1, 'p': 14, 'a': 17, 'button': 37, 'span': 490, 'h3': 1, 'h4': 1, 'h2': 8, 'label': 1, 'combobox': 2, 'li': 4}
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/copy.json
+exit_code: 0
+
+--- inventory_components.py ---
+access_state: ok
+components: 83 (confirmed: 22, candidate: 61); total_instances: 280
+by_kind: {'list-item': 58, 'link': 70, 'generic': 36, 'button': 97, 'card': 7, 'header': 9, 'nav': 2, 'footer': 1}
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/components.json
+exit_code: 0
+
+--- infer_breakpoints.py ---
+access_state: ok
+widths_swept: 12, breakpoints: 4 (high/medium/low: 4/0/0)
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/breakpoints.json
+exit_code: 0
+
+RESULT: ALL 4 SCRIPTS PASSED

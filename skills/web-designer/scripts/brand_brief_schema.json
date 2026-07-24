@@ -1,0 +1,45 @@
+{
+  "_placeholder": "M2+ content — the JSON schema for the research-agent return value. See research/workflow-design.md §2.2 for the canonical schema and §5 for the worked example. Will be filled in M2 once the research-agent operator confirms the contract.",
+  "schema_version": "1.0",
+  "project_slug": "<placeholder>",
+  "fetched_at": "<placeholder>",
+  "research_scrapes_ids": [],
+  "sources": {
+    "own_site": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null},
+    "linkedin": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null},
+    "instagram": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null},
+    "reference": {"url": null, "fetch_backend": null, "char_count": 0, "scrapes_id": null}
+  },
+  "voice_and_tone": {
+    "register": "<placeholder>",
+    "sentence_case": true,
+    "favorite_words": [],
+    "banned_words": [],
+    "formality_score_1to5": 0,
+    "avg_sentence_length_words": 0,
+    "example_lines": [],
+    "notes": "<placeholder>"
+  },
+  "palette_from_logo": {
+    "method": "<placeholder>",
+    "primary": "<placeholder>",
+    "secondary": "<placeholder>",
+    "accent": "<placeholder>",
+    "neutrals": [],
+    "rationale": "<placeholder>"
+  },
+  "typography_recommendation": {
+    "display_family": "<placeholder>",
+    "body_family": "<placeholder>",
+    "mono_family": "<placeholder>",
+    "license_notes": "<placeholder>",
+    "scale_ratio": 0,
+    "scale_steps": []
+  },
+  "real_photo_inventory": [],
+  "service_facts": [],
+  "social_highlights": {"linkedin": [], "instagram": []},
+  "testimonials": [],
+  "brand_donts": [],
+  "limitations": []
+}

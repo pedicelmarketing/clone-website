@@ -1,0 +1,144 @@
+{
+  "base_unit_px": 4,
+  "evidence_basis": "DOM+assets confirmed",
+  "meta": {
+    "access_state": "ok",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T19:51:55Z",
+    "notes": [],
+    "page_context": {
+      "h1_count": 1,
+      "section_count": 32,
+      "title": "Web design - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Web_design"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://en.wikipedia.org/wiki/Web_design",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  },
+  "samples": [
+    {
+      "class": "",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "SECTION"
+    },
+    {
+      "class": "vector-page-toolbar",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "vector-column-end no-font-mode-scale",
+      "gap_px": 0,
+      "margin_px": 44.8,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "vector-header-container",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "vector-unpinned-container",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "mw-logo-container skin-invert",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "SPAN"
+    },
+    {
+      "class": "vector-typeahead-search-container",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "box-More_citations_needed_section plainlinks metadata ambox ambox-content ambox-",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "TABLE"
+    },
+    {
+      "class": "side-box-flex",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "vector-header mw-header no-font-mode-scale",
+      "gap_px": 16,
+      "margin_px": 0,
+      "padding_px": 8,
+      "tag": "HEADER"
+    },
+    {
+      "class": "mw-body-header vector-page-titlebar no-font-mode-scale",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "HEADER"
+    },
+    {
+      "class": "mw-footer",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 12,
+      "tag": "FOOTER"
+    },
+    {
+      "class": "vector-main-menu-landmark",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "NAV"
+    },
+    {
+      "class": "vector-user-links vector-user-links-wide",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "NAV"
+    },
+    {
+      "class": "vector-appearance-landmark",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "NAV"
+    },
+    {
+      "class": "mw-table-of-contents-container vector-toc-landmark",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "NAV"
+    }
+  ],
+  "scale": [
+    8
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "base_unit_px": 4,
+  "evidence_basis": "DOM+assets confirmed",
+  "meta": {
+    "access_state": "ok",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T19:48:34Z",
+    "notes": [],
+    "page_context": {
+      "h1_count": 1,
+      "section_count": 11,
+      "title": "Linear – The system for product development",
+      "url": "https://linear.app/"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://linear.app",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  },
+  "samples": [
+    {
+      "class": "",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "SECTION"
+    },
+    {
+      "class": "b-30Va_root b-30Va_rootHomepage",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 128,
+      "tag": "SECTION"
+    },
+    {
+      "class": "",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "_7bwwmq_root _7bwwmq_homepage",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "_5l06ia_container MwJdiW_root",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "QI8oKG_container Fzcv4W_inset",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "QI8oKG_descriptionContainer ImRUSq_root ImRUSq_justify-space-between",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "w9ZFkq_commentBoxContainer",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "Fzcv4W_inset Fzcv4W_insetLarge b-30Va_titleContainer",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "_8fVXdW_codeSectionDesktop",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "_8fVXdW_codeSection",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "_8fVXdW_codeSectionMobile",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "Jmh1Wq_section",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "Jmh1Wq_sectionTitle",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "H3"
+    },
+    {
+      "class": "[object SVGAnimatedString]",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "svg"
+    },
+    {
+      "class": "[object SVGAnimatedString]",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "circle"
+    },
+    {
+      "class": "ImRUSq_root ImRUSq_align-flex-start ImRUSq_justify-start",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "GJ9TEa_carouselCard NAY0wa_item",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "DIV"
+    },
+    {
+      "class": "Dc5tqa_mobileCard NAY0wa_item",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 20,
+      "tag": "DIV"
+    },
+    {
+      "class": "TZTsQG_header TZTsQG_header",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "HEADER"
+    },
+    {
+      "class": "w9ZFkq_header CV-gUa_header",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "HEADER"
+    },
+    {
+      "class": "w9ZFkq_chatBoxHeader",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "HEADER"
+    },
+    {
+      "class": "qM9FAa_header Fzcv4W_bottomGradientBorder",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 17,
+      "tag": "HEADER"
+    },
+    {
+      "class": "_9Zs8oG_initiativesBoxHeader",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "HEADER"
+    },
+    {
+      "class": "Jmh1Wq_footer",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "FOOTER"
+    },
+    {
+      "class": "TZTsQG_menuRoot",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 0,
+      "tag": "NAV"
+    },
+    {
+      "class": "M1bpsa_sidebar",
+      "gap_px": 0,
+      "margin_px": 0,
+      "padding_px": 8,
+      "tag": "NAV"
+    }
+  ],
+  "scale": [
+    8
+  ]
+}
