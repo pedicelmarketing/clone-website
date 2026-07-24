@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "pedicel-marketing-redesign-smoke",
+  "fetched_at": "2026-07-24T21:55:00Z",
+  "sources": {
+    "own_site": {
+      "url": "https://pedicelmarketing.com",
+      "fetch_backend": null,
+      "char_count": 0,
+      "scrapes_id": null
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/company/pedicel-marketing",
+      "fetch_backend": "cloak",
+      "char_count": 1051,
+      "scrapes_id": null,
+      "post_count_30d": null,
+      "top_posts": []
+    },
+    "instagram": {
+      "url": "https://www.instagram.com/pedicelmarketing",
+      "fetch_backend": null,
+      "char_count": 0,
+      "scrapes_id": null,
+      "post_count_30d": null,
+      "grid_themes": []
+    },
+    "reference": {
+      "url": "https://linear.app",
+      "fetch_backend": "cloak",
+      "char_count": 11220,
+      "scrapes_id": null
+    }
+  },
+  "voice_and_tone": {
+    "register": "confessional-educational",
+    "sentence_case": true,
+    "favorite_words": [
+      "uniqueness",
+      "limitless",
+      "customised",
+      "branding",
+      "strategy",
+      "leads"
+    ],
+    "banned_words": [
+      "synergy",
+      "delve",
+      "leverage",
+      "disrupt",
+      "best-in-class",
+      "revolutionary",
+      "cutting-edge",
+      "in today's world"
+    ],
+    "formality_score_1to5": 3,
+    "avg_sentence_length_words": 13,
+    "example_lines": [
+      "All brands are unique, they just haven't shown it to the world yet.",
+      "Limitless.",
+      "We are an inbound Marketing and Branding agency with the goal of helping businesses find their uniqueness.",
+      "Our approach is customised from top to bottom."
+    ],
+    "notes": "Voice recovered from the LinkedIn public meta-description and the embedded JSON \"description\" blob on the same page. Both the brand tagline and the 'about' blurb are short, sentence-case, and avoid jargon. The brand's own surfacing language ('unique', 'uniqueness', 'customised', 'limitless') is treated as 'favorite words' because the brand chose to repeat them. British/American spelling is mixed on the live page (customised/customized); the LinkedIn surface uses the British form, so the brief preserves that. Note: tagged 'confessional-educational' rather than 'conversational-professional' because the brand's actual voice is more teacher-like than peer-to-peer — the tagline is a statement of belief, not a competitive claim."
+  },
+  "palette_from_logo": {
+    "method": "color-thief on the official SVG logo (cdn.prod.website-files.com/64a2995238dba40820b37689/64a52e82805f80ff256b96e6_Logo-Pedicel.svg) + cross-check against the live Webflow CSS (cdn.prod.website-files.com/64a2995238dba40820b37689/css/new-pedicel-website.webflow.shared.3140baf36.css). The logo SVG declares exactly two fill colors via .cls-1 and .cls-2; the CSS file is the brand's actual stylesheet (223 KB, served from the same Wix-origin CDN as the live site). Note: the live site itself returned 403 to every path during this run, so the logo and CSS were fetched from the brand's CDN directly rather than from the home page.",
+    "primary": "#efad2b",
+    "secondary": "#f0f8ff",
+    "accent": "#3898ec",
+    "neutrals": [
+      "#0b0c0d",
+      "#1c1d1c",
+      "#5d5d6d",
+      "#9c9c9c",
+      "#e6e6e6",
+      "#fafafa",
+      "#ffffff"
+    ],
+    "rationale": "Primary #efad2b is the gold that fills the logo's accent glyph (the dot over the 'i' in 'Pedicel') and is the only saturated brand color in the logo SVG — it is the brand's signature. Secondary #f0f8ff is the alice-blue the logo wordmark is set on (the SVG's .cls-2 fill) — used as the brand's near-white surface. Accent #3898ec is a vivid blue that appears 22 times in the Webflow CSS and is the brand's main interactive/CTA color (buttons, links, focus rings). Neutrals descend from the CSS's documented greyscale (#0b0c0d, #1c1d1c for headings/body; #5d5d6d, #9c9c9c for secondary text; #e6e6e6, #fafafa, #ffffff for surfaces and dividers)."
+  },
+  "typography_recommendation": {
+    "display_family": "Switzer",
+    "body_family": "Poppins",
+    "mono_family": "JetBrains Mono",
+    "license_notes": "Switzer is by Indian Type Foundry — free for personal use; commercial use requires a paid license. Do not vendor the .otf files into the production build. Poppins is by Indian Type Foundry as well — released under the SIL Open Font License (OFL) and is safe to self-host. JetBrains Mono is OFL. Recommended safe self-hosted pair for a redesign: Switzer (paid) retained for the live Pedicel brand if a site license is purchased; otherwise substitute with Inter (OFL) for display and keep Poppins for body. The brand's own site loads Switzer-Light, Switzer-Regular, Switzer-Medium and Poppins-Regular from the Webflow CDN (per mirror-manifest.json in pedicelmarketing/audit).",
+    "scale_ratio": 1.250,
+    "scale_steps": [12, 14, 16, 20, 24, 32, 48, 64]
+  },
+  "real_photo_inventory": [
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a52e82805f80ff256b96e6_Logo-Pedicel.svg",
+      "subject": "Official Pedicel wordmark logo (SVG)",
+      "license": "brand-owned (recovered from brand's own Webflow CDN)",
+      "use": [
+        "header",
+        "footer",
+        "favicon"
+      ],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/656016dc008b45e6a1f01471_pedicelmarketingpreviewwebsite.jpg",
+      "subject": "Pedicel Marketing — website preview (og:image / social share card)",
+      "license": "brand-owned (recovered from brand's own Webflow CDN) — declared as the og:image and twitter:image in the page head",
+      "use": [
+        "social share card",
+        "press kit",
+        "case study hero"
+      ],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D0BAQEpD_qVmnEm7w/company-logo_200_200/company-logo_200_200/0/1684913513575",
+      "subject": "Pedicel Marketing — LinkedIn company logo (200x200)",
+      "license": "recovered from LinkedIn's public company-page og:image; redistribution subject to LinkedIn's terms",
+      "use": [
+        "about page (LinkedIn badge)",
+        "speaker bio"
+      ],
+      "scrapes_id": null
+    }
+  ],
+  "service_facts": [
+    {
+      "name": "Social Media Marketing",
+      "description": "Listed by the brand on its public LinkedIn company page as the first service offering.",
+      "price_range": "not disclosed on public surfaces"
+    },
+    {
+      "name": "Community Management",
+      "description": "Listed by the brand on its public LinkedIn company page as a discrete service.",
+      "price_range": "not disclosed on public surfaces"
+    },
+    {
+      "name": "Branding Strategy",
+      "description": "Listed by the brand on its public LinkedIn company page; consistent with the brand's 'Branding' positioning in its tagline.",
+      "price_range": "not disclosed on public surfaces"
+    },
+    {
+      "name": "Sale Funnels",
+      "description": "Listed by the brand on its public LinkedIn company page; the brand's positioning is lead-generation-driven.",
+      "price_range": "not disclosed on public surfaces"
+    },
+    {
+      "name": "SEO",
+      "description": "Listed by the brand on its public LinkedIn company page.",
+      "price_range": "not disclosed on public surfaces"
+    },
+    {
+      "name": "Web Design",
+      "description": "Listed by the brand on its public LinkedIn company page; the mirror in this repo confirms a Webflow-built site.",
+      "price_range": "not disclosed on public surfaces"
+    },
+    {
+      "name": "Rebranding",
+      "description": "Listed by the brand on its public LinkedIn company page.",
+      "price_range": "not disclosed on public surfaces"
+    },
+    {
+      "name": "Paid Advertising",
+      "description": "Listed by the brand on its public LinkedIn company page.",
+      "price_range": "not disclosed on public surfaces"
+    }
+  ],
+  "social_highlights": {
+    "linkedin": [],
+    "instagram": []
+  },
+  "testimonials": [],
+  "brand_donts": [
+    "No typography 'impact' tropes (avoid italics, all-caps longer than 3 words, or stretched display).",
+    "No purple gradients — the Pedicel logo surface is alice-blue, not lavender; the Webflow CSS contains a purple (#6a34b3) but it is only used as a Webflow default state, never as a brand surface.",
+    "No generic stock photography of offices or handshakes — the brand's references on its own visual share card ('pedicelmarketingpreviewwebsite.jpg') are bespoke marketing visuals.",
+    "No 'revolutionary / cutting-edge / disrupt' copy. The brand's own tone is warm and teacher-like, not challenger.",
+    "No LinkedIn-style clickbait top-posts; the brand's public LinkedIn surface is a tagline + about blurb, not a thought-leadership feed.",
+    "No vendor Switzer OTF files in the production build unless the brand has a paid license; the free personal-use license forbids commercial use."
+  ],
+  "limitations": [
+    "own_site (pedicelmarketing.com) is fully blocked by an OpenResty WAF: HTTP 403 on /, /about, /services, /contact, /sitemap.xml, /robots.txt, /wp-login.php, and /index.html. www.pedicelmarketing.com returns 404. Cloak stealth + CapSolver also returns 403 — this is not a captcha challenge, it is a blanket IP-level block. Palette and typography are therefore derived from the brand's CDN-hosted logo SVG and the Webflow CSS file, not from the live HTML.",
+    "LinkedIn public company page returns 200 but the content is gated behind a cookie banner and an auth wall. The only recoverable content is the page's <meta> tags and the embedded JSON 'description' blob (Pedicel name, tagline, About blurb, ~3,982 followers, 12 employees, industry 'Marketing Services', service list). Post bodies, dates, and engagement metrics are NOT recoverable from the public surface — social_highlights.linkedin is empty by design.",
+    "Instagram (https://www.instagram.com/pedicelmarketing) returns 302 to the login wall; no public grid, captions, or themes are recoverable. social_highlights.instagram is empty by design.",
+    "Supabase POST credentials are not configured in this profile (claude/research-agent), so research_scrapes rows were NOT written; every scrapes_id in this brief is null. The cloak responses and the raw LinkedIn HTML are recoverable from the temporary files used during this run, but they are not durably persisted.",
+    "loggedin/cloak_loggedin fetch path was intentionally not used — the request is a contract smoke test, not a real engagement, and stealth-by-logged-in-account would violate LinkedIn's terms. The brand's actual public surface is the LinkedIn meta-description, which is exhaustively captured in voice_and_tone.example_lines and service_facts.",
+    "No real_photo_inventory entry is a real photograph of a person, team, or client work — the only 'real' images the brand exposes are the logo SVG, the OG/social share image, and the LinkedIn company logo. The brand's actual portfolio imagery is behind the gated site and could not be inspected.",
+    "No testimonials are recoverable from any public surface. Including a testimonial would have been invention.",
+    "palette_from_logo.secondary is the alice-blue that fills the logo wordmark glyphs (#f0f8ff). It is functionally a near-white, not a true secondary brand color; it is included because it is the literal second fill declared in the brand's own SVG. If the redesign team prefers a true secondary color, the Webflow CSS offers #3898ec (the brand's interactive blue) as the next-strongest candidate.",
+    "Reference source (linear.app) was fetched successfully (11,220 chars of markdown) because it is open and not behind any gate. It is a structural reference only; the brand voice and visual decisions in this brief are grounded in Pedicel's own surface, not in Linear."
+  ]
+}
