@@ -265,3 +265,48 @@ Lead with a concise summary in this order, keeping detailed artifacts in `worksp
 ## Definition of done
 
 After ANY change to the web-designer scripts you MUST run `./verify.sh`, paste its summary table, and only commit when it exits 0. Never claim success from reading code — only from a `verify.sh` run that exited 0. Regenerate before reporting; a stale artifact is a failed task.
+
+### Self-critique duty (after composing a site)
+
+`verify.sh` proves a site is *correct* (valid CSS, accessible, tokens wired,
+no stale artifacts). It does NOT prove the site is *well designed*. After
+`compose_site.py` produces a composed site, run the vision self-critique
+yourself before declaring done:
+
+```bash
+python3 skills/web-designer/scripts/critique_pass.py \
+    --site reports/m6-composed-site \
+    --brand-brief reports/brand-smoke/brand-brief.json \
+    --design-plan reports/m6-design/design-plan.json \
+    -o reports/m6-critique \
+    --tokens reports/m6-design/tokens.json \
+    --reference-report reports/validation/linear-app \
+    --reference-tokens reports/validation/linear-app/tokens
+```
+
+The rubric (0-10 each; `looks_templated` inverted) is:
+
+  visual_hierarchy, use_of_space, typographic_contrast, focal_point,
+  brand_fit, motion_restraint, looks_templated
+
+Read `reports/m6-critique/critique-summary.md` and the per-iteration
+`critique-NN.md` files. If a score is low (especially `use_of_space` or
+`looks_templated` < 6) and the revision is concrete (names a section id and
+a specific change), pass `--apply` and iterate — but **never let a revision
+silently regress the score**; the loop keeps the highest-scoring plan and
+emits a score table so you can see improvement or regression at a glance.
+Then verify the loop result with `WITH_CRITIQUE=1 ./verify.sh` to print the
+score row in the summary table.
+
+You do NOT ask a human to look at the page for you — that's the whole point
+of this loop. If the rubric / prompt is biased (e.g. scoring `use_of_space`
+high when 50% of the 1440px viewport is empty), patch
+`skills/web-designer/scripts/critique_pass.py` so the next run catches it.
+The rubric must flag the real problems you can see — uniform heading-over-
+paragraph rhythm, empty right half, no focal imagery, all-defaults type —
+not flatter the design.
+
+If `MINIMAX_API_KEY` is missing, the account is out of credits, or the
+vision API is otherwise unavailable, `critique_pass.py` degrades to a no-op
+(exit 0) and `verify.sh`'s critique row is `WARN`. Correctness gates stay
+hard; the critique is advisory.

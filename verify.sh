@@ -77,6 +77,31 @@ if got!=exp: raise SystemExit(f'stale input_hashes: expected {exp}, got {got}')
 print('gate-results input_hashes match current composed artifacts')
 PY
 then row "7. Validation staleness hashes" PASS; else row "7. Validation staleness hashes" FAIL "gate-results.json is stale"; fi
+
+# 8. Vision design critique — ADVISORY ONLY. Scored against a 7-dimension rubric by
+# critique_pass.py; printed in the summary table but never blocks verify.sh.
+# Hard correctness gates (rows 1-7) stay the only thing that can fail verify.sh.
+if [[ "${WITH_CRITIQUE:-0}" == "1" ]]; then
+  CRITIQUE_DIR=reports/m6-critique
+  rm -rf "$CRITIQUE_DIR"
+  if "$PYTHON" "$SCRIPTS/critique_pass.py" \
+       --site "$PLAN_OUT" --brand-brief "$BRIEF" --design-plan "$PLAN" \
+       -o "$CRITIQUE_DIR" \
+       --tokens "$TOKENS" --reference-report "$REF" --reference-tokens "$REF_TOKENS" \
+       >reports/critique.log 2>&1; then
+    if [[ -s "$CRITIQUE_DIR/iterations.json" ]]; then
+      SCORES=$(python3 -c "import json; d=json.load(open('$CRITIQUE_DIR/iterations.json')); print(','.join(str(sum(int(h['scores'][k]['score']) for k in ('visual_hierarchy','use_of_space','typographic_contrast','focal_point','brand_fit','motion_restraint','looks_templated')))+'/70' for h in d))" 2>/dev/null || echo "parse-error")
+      LAST=$(python3 -c "import json; d=json.load(open('$CRITIQUE_DIR/iterations.json')); s=d[-1]['scores']; print(' '.join(f\"{k}={s[k]['score']}\" for k in ('visual_hierarchy','use_of_space','typographic_contrast','focal_point','brand_fit','motion_restraint','looks_templated')))" 2>/dev/null || echo "parse-error")
+      row "8. Vision critique (advisory)" PASS "iter scores: $SCORES — $LAST"
+    else
+      row "8. Vision critique (advisory)" WARN "no iterations.json — see reports/critique.log"
+    fi
+  else
+    # critique_pass.py is designed to be non-blocking: missing API key, 402
+    # insufficient balance, or any transient API issue must WARN, not FAIL.
+    row "8. Vision critique (advisory)" WARN "vision API unavailable — see reports/critique.log"
+  fi
+fi
 printf '\n%-40s %-8s %s\n' CHECK STATUS DETAIL
 printf '%-40s %-8s %s\n' '----------------------------------------' '--------' '------'
 for r in "${rows[@]}"; do IFS='|' read -r s n d <<<"$r"; printf '%-40s %-8s %s\n' "$n" "$s" "$d"; done
