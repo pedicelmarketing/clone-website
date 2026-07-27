@@ -38,4 +38,8 @@
   --radius-full: 9999px;
 
   --shadow-0: rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px;
+
+  /* Composer-derived WCAG AA normal-text variants. */
+  --color-primary-text: #9e6d0c;
+  --color-accent-text: #1477ce;
 }

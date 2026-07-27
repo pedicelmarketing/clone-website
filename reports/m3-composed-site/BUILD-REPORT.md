@@ -25,23 +25,23 @@ Outdir: `reports/m3-composed-site`
 
 ## Contrast decision
 
-- **Text token:** `--color-neutral-0` (#0b0c0d)
-- **Background token:** `--color-neutral-6` (#ffffff)
-- **Accent token:** `--color-accent` (#3898ec)
-- **Measured contrast (text vs. background):** 19.58:1
-- **Decision note:** text --color-neutral-0 (#0b0c0d) on background --color-neutral-6 (#ffffff) = 19.58:1, meets WCAG AA body-text threshold (4.5:1)
+- **Neutral body text token:** `--color-neutral-0` (#0b0c0d)
+- **Neutral background token:** `--color-neutral-6` (#ffffff)
+- **Neutral measured contrast:** 19.58:1
+- **Neutral decision note:** text --color-neutral-0 (#0b0c0d) on background --color-neutral-6 (#ffffff) = 19.58:1, meets WCAG AA body-text threshold (4.5:1)
 
-If the measured ratio is below WCAG AA body-text (4.5:1), the page is shipped
-anyway with this note — the contrast limitation is **carried forward** rather
-than hidden. Operators may pick a different neutral pair manually in a later
-pass.
+Brand colors remain unchanged for non-text identity uses. When a brand color is
+used as normal-sized text, the composer uses the derived `*-text` token below.
+
+- **Primary used as text:** original `#efad2b` on `#ffffff` measured 1.97:1; derived `#9e6d0c` (darken, 22 lightness steps) measures 4.52:1. Text uses: hero tagline text. Original `--color-primary` remains for non-text uses: skip-link background, decorative brand fills.
+- **Accent used as text:** original `#3898ec` on `#ffffff` measured 3.06:1; derived `#1477ce` (darken, 13 lightness steps) measures 4.61:1. Text uses: links, navigation hover text. Original `--color-accent` remains for non-text uses: button backgrounds, focus outlines, borders, decorative fills.
 
 ## Token discipline
 
 - **Source of truth:** `reports/m3-token-synthesis/tokens/dist/tokens.css`
 - **Copied to site as:** `reports/m3-composed-site/tokens.css`
 - **Token JSON:** `reports/m3-token-synthesis/tokens/dist/tailwind-tokens.json`
-- **Audit:** PASS — all 21 expected token vars are declared in tokens.css
+- **Audit:** PASS — all 23 expected token vars are declared in tokens.css
 
 The page CSS links `tokens.css` and references token CSS variables for every
 color, spacing value, radius, and shadow. No raw hex colors are emitted in

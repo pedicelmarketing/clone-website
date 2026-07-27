@@ -40,7 +40,7 @@ body {
   inset-block-start: 0;
   transform: translateY(-150%);
   background: var(--color-primary);
-  color: var(--color-neutral-6);
+  color: var(--color-neutral-0);
   padding: var(--spacing-8) calc(var(--spacing-8) * 2);
   border-radius: var(--radius-4);
   text-decoration: none;
@@ -82,7 +82,7 @@ ul {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
@@ -145,7 +145,7 @@ a:hover { text-decoration-thickness: 2px; }
   text-decoration: none;
   font-weight: 500;
 }
-.nav-list a:hover { color: var(--color-accent); }
+.nav-list a:hover { color: var(--color-accent-text); }
 
 /* ---- Main ---- */
 main {
@@ -169,7 +169,7 @@ section {
   font-family: var(--typography-font-family-display, var(--page-display, serif));
   font-size: var(--typography-font-size-3, 20px);
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-primary-text);
   margin-bottom: var(--spacing-8);
 }
 .hero-subhead {
@@ -185,7 +185,7 @@ section {
 .button {
   display: inline-block;
   background: var(--color-accent);
-  color: var(--color-neutral-6);
+  color: var(--color-neutral-0);
   padding: calc(var(--spacing-8) * 1.5) calc(var(--spacing-8) * 3);
   border-radius: var(--radius-8);
   font-weight: 600;
@@ -196,6 +196,7 @@ section {
 .button:hover,
 .button:focus-visible {
   background: var(--color-neutral-0);
+  color: var(--color-neutral-6);
   border-color: var(--color-accent);
 }
 
@@ -378,7 +379,7 @@ section {
   font-size: var(--typography-font-size-1, 14px);
 }
 .site-footer p { margin: 0 0 var(--spacing-8); max-width: none; }
-.footer-meta { font-size: var(--typography-font-size-0, 12px); color: var(--color-neutral-3); }
+.footer-meta { font-size: var(--typography-font-size-0, 12px); color: var(--color-neutral-2); }
 
 /* ---- Motion: restrained by default, CSS-only ---- */
 @keyframes fade-slide-up {
