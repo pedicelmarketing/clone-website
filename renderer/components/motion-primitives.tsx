@@ -84,3 +84,30 @@ export function GoldDotMarker() {
     </div>
   );
 }
+
+/**
+ * SignatureMark — the design plan's signature element rendered at scale.
+ *
+ * The plan specifies "the gold dot": the literal fill of the dot above the
+ * 'i' in the Pedicel wordmark, reused as a recurring brand device. Here it
+ * anchors the cover's right column, giving the hero a focal point instead
+ * of dead space. Colour comes from --color-primary (never a raw hex).
+ */
+export function SignatureMark() {
+  return (
+    <div className="relative flex h-full min-h-[220px] items-start justify-start lg:justify-center lg:pt-6">
+      <motion.div
+        aria-hidden="true"
+        initial={{ scale: 0.6, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.7, ease: [0.2, 0.7, 0.2, 1] }}
+        className="rounded-full"
+        style={{
+          width: "clamp(88px, 12vw, 168px)",
+          height: "clamp(88px, 12vw, 168px)",
+          background: "var(--color-primary)",
+        }}
+      />
+    </div>
+  );
+}

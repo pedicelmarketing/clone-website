@@ -25,7 +25,7 @@ import {
   OffsetRight9,
   Full,
 } from "@/components/section";
-import { FadeIn, GoldDotMarker, SmoothScroll } from "@/components/motion-primitives";
+import { FadeIn, GoldDotMarker, SignatureMark, SmoothScroll } from "@/components/motion-primitives";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -83,14 +83,13 @@ function SectionContent({
             )}
           </FadeIn>
         </Cols7>
+        {/* Right column carries the SIGNATURE ELEMENT, not copy. The plan
+         *  supplies no third copy block for the cover, and design-plan
+         *  metadata (purpose/component/rationale) must never surface as
+         *  user-facing text — it is internal reasoning, not brand content. */}
         <Cols5>
           <FadeIn delay={0.08}>
-            <div className="border-l border-border pl-6 text-sm leading-relaxed text-muted-foreground lg:pt-3">
-              <span className="font-mono text-xs uppercase tracking-widest text-primary">
-                {purpose.slice(0, 32)}
-              </span>
-              <p className="mt-3 font-body">{component}</p>
-            </div>
+            <SignatureMark />
           </FadeIn>
         </Cols5>
       </Layout>
@@ -124,11 +123,9 @@ function SectionContent({
                       </span>
                       <span className="ml-3">{line}</span>
                     </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="font-body text-sm text-muted-foreground">
-                        {purpose}
-                      </p>
-                    </AccordionContent>
+                    {/* No per-chapter copy block exists in the plan; render
+                     *  nothing rather than leaking plan metadata. */}
+                    <AccordionContent />
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -143,7 +140,7 @@ function SectionContent({
         <Cols4>
           <FadeIn>
             <span className="font-mono text-xs uppercase tracking-widest text-primary">
-              {String(section.order).padStart(2, "0")} / {purpose.slice(0, 24)}
+              {String(section.order).padStart(2, "0")}{section.nav_label ? ` / ${section.nav_label}` : ""}
             </span>
           </FadeIn>
         </Cols4>
@@ -195,7 +192,7 @@ function SectionContent({
         <Cols3>
           <FadeIn>
             <span className="font-mono text-xs uppercase tracking-widest text-primary">
-              {purpose.slice(0, 28)}
+              {section.nav_label ?? ""}
             </span>
           </FadeIn>
         </Cols3>

@@ -55,7 +55,7 @@ function flatten(node, prefix, out) {
   for (const [k, v] of Object.entries(node)) {
     const next = [...prefix, k];
     if (typeof v === "string" || Array.isArray(v)) {
-      out.push(next);
+      out.push({ path: next, value: Array.isArray(v) ? v.join(", ") : v });
     } else if (typeof v === "object") {
       flatten(v, next, out);
     }
@@ -66,7 +66,8 @@ const flatPaths = [];
 flatten(tokensJson.theme?.extend ?? {}, [], flatPaths);
 
 const themeLines = ["@theme inline {"];
-for (const path of flatPaths) {
+for (const entry of flatPaths) {
+  const { path, value } = entry;
   const [v3Namespace, ...rest] = path;
   const v4Namespace = v3ToV4[v3Namespace];
   if (!v4Namespace) continue; // skip unknown namespaces
@@ -75,13 +76,17 @@ for (const path of flatPaths) {
   // (synthesize_tokens emits --color-primary, --typography-font-family-display,
   //  --radius-8, --spacing-8, --shadow-0). For fontFamily we need to map to
   // the upstream --typography-font-family-<name> var instead.
-  let upstreamVar;
+  // Tailwind v4 `@theme inline` must receive a RESOLVED value. Emitting
+  // `--color-primary: var(--color-primary)` is self-referential, which CSS
+  // treats as invalid at computed-value time — it silently wiped every colour
+  // token (the gold signature dot rendered transparent). Font families still
+  // indirect through the canonical --typography-* var because that name
+  // differs from the theme key, so no cycle is possible there.
   if (v3Namespace === "fontFamily") {
-    upstreamVar = `--typography-font-family-${rest.join("-")}`;
+    themeLines.push(`  --${v4Name}: var(--typography-font-family-${rest.join("-")});`);
   } else {
-    upstreamVar = `--${v4Name}`;
+    themeLines.push(`  --${v4Name}: ${value};`);
   }
-  themeLines.push(`  --${v4Name}: var(${upstreamVar});`);
 }
 themeLines.push("}");
 
