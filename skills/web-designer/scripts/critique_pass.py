@@ -41,9 +41,9 @@ CLI
 
 Environment
 -----------
-  MINIMAX_API_KEY   required for vision calls; if missing/unauthorised the
-                    script degrades to a no-op with a clear stderr message
-                    and exit code 0 (matches `design_pass.py` graceful path).
+  MINIMAX_API_KEY   required for vision calls. If it cannot be resolved, the
+                    run is unsuccessful and exits nonzero; a critique run may
+                    exit 0 only after at least one parsed, scored iteration.
 """
 from __future__ import annotations
 
@@ -121,6 +121,56 @@ def _vision_call(model: str, system: str, messages: list, timeout: int = 180) ->
     )
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read())
+
+
+_TRANSIENT_API_RETRY_DELAYS = (2, 6, 15)
+
+
+def _is_transient_api_error(exc: BaseException) -> bool:
+    """Return whether an API failure is worth retrying."""
+    if isinstance(exc, urllib.error.HTTPError):
+        return exc.code in (408, 409) or exc.code == 429 or exc.code >= 500
+    return isinstance(exc, (urllib.error.URLError, TimeoutError, ConnectionError))
+
+
+def _critique_with_retries(plan: dict, brief: dict, screenshots: list[dict], model: str,
+                           html_section_ids: list[str]) -> tuple[dict | None, list[dict]]:
+    """Run one critique, retrying only transient API failures.
+
+    Expected API/parse failures are returned as diagnostics so the caller can
+    persist them in iterations.json. Unexpected failures still propagate with
+    their traceback; they are programming/runtime errors, not critique data.
+    """
+    attempts: list[dict] = []
+    for attempt_no in range(len(_TRANSIENT_API_RETRY_DELAYS) + 1):
+        try:
+            critique = _critique_once(plan, brief, screenshots, model, html_section_ids)
+            attempts.append({"attempt": attempt_no + 1, "outcome": "ok"})
+            return critique, attempts
+        except urllib.error.HTTPError as exc:
+            transient = _is_transient_api_error(exc)
+            attempts.append({"attempt": attempt_no + 1, "outcome": "api-error",
+                             "error": f"{type(exc).__name__}: {exc}"})
+            if not transient or attempt_no >= len(_TRANSIENT_API_RETRY_DELAYS):
+                return None, attempts
+            delay = _TRANSIENT_API_RETRY_DELAYS[attempt_no]
+            print(f"critique API transient error on attempt {attempt_no + 1}; retrying in {delay}s: {exc}",
+                  file=sys.stderr)
+            time.sleep(delay)
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
+            attempts.append({"attempt": attempt_no + 1, "outcome": "api-error",
+                             "error": f"{type(exc).__name__}: {exc}"})
+            if attempt_no >= len(_TRANSIENT_API_RETRY_DELAYS):
+                return None, attempts
+            delay = _TRANSIENT_API_RETRY_DELAYS[attempt_no]
+            print(f"critique API transient error on attempt {attempt_no + 1}; retrying in {delay}s: {exc}",
+                  file=sys.stderr)
+            time.sleep(delay)
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError, RuntimeError) as exc:
+            attempts.append({"attempt": attempt_no + 1, "outcome": "parse-error",
+                             "error": f"{type(exc).__name__}: {exc}"})
+            return None, attempts
+    raise AssertionError("unreachable")
 
 
 def _extract_text(body: dict) -> str:
@@ -554,31 +604,45 @@ def _md_for_iteration(iter_no: int, critique: dict, plan_path: Path,
 
 
 def _summary_md(history: list[dict]) -> str:
+    scored = [h for h in history if h.get("outcome", "ok") == "ok" and "scores" in h]
     lines = ["# Critique summary", "",
-             "Score table across iterations (lower is worse; looks_templated is inverted).",
+             "Score table across successful iterations (lower is worse; looks_templated is inverted).",
              ""]
     header = "| Iter | " + " | ".join(RUBRIC_DIMENSIONS) + " | Total | Applied | Best |"
     sep = "|------|" + "|".join("-" * len(d) for d in RUBRIC_DIMENSIONS) + "|------|---------|------|"
     lines.append(header)
     lines.append(sep)
-    best_total = max(_safe_total(h) for h in history)
-    for h in history:
-        scores = {d: h["scores"][d]["score"] for d in RUBRIC_DIMENSIONS}
-        is_best = _safe_total(h) == best_total
-        applied_count = sum(1 for a in h.get("applied", []) if a.startswith("APPLIED"))
-        lines.append(
-            "| " + str(h["iteration"])
-            + " | " + " | ".join(str(scores[d]) for d in RUBRIC_DIMENSIONS)
-            + " | " + str(_safe_total(h))
-            + " | " + str(applied_count)
-            + " | " + ("**best**" if is_best else "")
-            + " |"
-        )
-    lines.append("")
-    if history and _safe_total(history[-1]) < best_total:
-        lines.append(f"> Note: iteration {history[-1]['iteration']} regressed "
-                     f"(score {_safe_total(history[-1])} < best {best_total}); "
-                     "the higher-scoring design plan was kept.")
+    if not scored:
+        lines.append("| — | no successful critique iteration | — | — | — | — |")
+        lines.append("")
+        lines.append("**No critique iteration succeeded; no parsed/scored result was produced.**")
+    else:
+        best_total = max(_safe_total(h) for h in scored)
+        for h in scored:
+            scores = {d: h["scores"][d]["score"] for d in RUBRIC_DIMENSIONS}
+            is_best = _safe_total(h) == best_total
+            applied_count = sum(1 for a in h.get("applied", []) if a.startswith("APPLIED"))
+            lines.append(
+                "| " + str(h["iteration"])
+                + " | " + " | ".join(str(scores[d]) for d in RUBRIC_DIMENSIONS)
+                + " | " + str(_safe_total(h))
+                + " | " + str(applied_count)
+                + " | " + ("**best**" if is_best else "")
+                + " |"
+            )
+        lines.append("")
+        if _safe_total(scored[-1]) < best_total:
+            lines.append(f"> Note: iteration {scored[-1]['iteration']} regressed "
+                         f"(score {_safe_total(scored[-1])} < best {best_total}); "
+                         "the higher-scoring design plan was kept.")
+            lines.append("")
+    failures = [h for h in history if h.get("outcome", "ok") != "ok"]
+    if failures:
+        lines.append("## Iteration outcomes")
+        lines.append("")
+        for h in failures:
+            detail = h.get("error", "no details recorded")
+            lines.append(f"- iteration {h.get('iteration', '?')}: **{h.get('outcome')}** — {detail}")
         lines.append("")
     return "\n".join(lines) + "\n"
 
@@ -631,15 +695,19 @@ def main(argv=None):
     # or $HERMES_PROFILE_DIR/.env — see skills/web-designer/scripts/_secrets.py).
     # Only no-op if the key really cannot be found anywhere.
     if not get_minimax_key():
-        msg = ("WARN: MINIMAX_API_KEY is not set and could not be resolved from "
-               "any .env file. critique_pass.py cannot run vision calls. "
-               "Skipping critique (no-op).")
+        msg = ("ERROR: MINIMAX_API_KEY is not set and could not be resolved from "
+               "any .env file. critique_pass.py produced no successful critique iteration.")
         print(msg, file=sys.stderr)
-        return 0
+        (out_dir / "critique-summary.md").write_text(_summary_md([{
+            "iteration": 0, "outcome": "api-error", "error": msg,
+        }]))
+        _save_history(out_dir, [{"iteration": 0, "outcome": "api-error", "error": msg}])
+        return 1
 
     history: list[dict] = []
     last_total = -1
     iteration = 0
+    run_failed = False
 
     # Pre-extract section IDs from the HTML so we can offer them as candidates
     # to the vision model (avoids the cover-vs-hero id-mismatch class of bug).
@@ -652,6 +720,7 @@ def main(argv=None):
 
     while iteration < args.max_iterations:
         iteration += 1
+        iter_outcome = {"iteration": iteration, "outcome": "pending"}
         iter_dir = out_dir / f"iter-{iteration:02d}"
         iter_dir.mkdir(parents=True, exist_ok=True)
         shots_dir = iter_dir / "shots"
@@ -676,13 +745,25 @@ def main(argv=None):
                     "png_path": str(png),
                     "settle": s.get("settle"),
                 })
-            critique = _critique_once(plan, brief, screenshots, args.model, html_section_ids)
+            critique, attempts = _critique_with_retries(
+                plan, brief, screenshots, args.model, html_section_ids
+            )
+            if critique is None:
+                outcome = "api-error" if any(a["outcome"] == "api-error" for a in attempts) else "parse-error"
+                error = attempts[-1].get("error", "critique failed")
+                iter_outcome.update({"outcome": outcome, "error": error, "attempts": attempts})
+                history.append(iter_outcome)
+                _save_history(out_dir, history)
+                print(f"iteration {iteration}: {outcome} — {error}", file=sys.stderr)
+                break
         finally:
             server.kill()
 
         critique["generated_at"] = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
         critique["model"] = args.model
         critique["iteration"] = iteration
+        critique["outcome"] = "ok"
+        critique["attempts"] = attempts
         critique["viewports"] = [s["viewport"] for s in screenshots]
         critique["plan_snapshot"] = str(plan_path)
 
@@ -697,21 +778,39 @@ def main(argv=None):
             if any(a.startswith("APPLIED") for a in applied):
                 plan_path.write_text(json.dumps(new_plan, indent=2) + "\n")
                 plan = new_plan
-                # Re-compose so the next critique sees the updated structure
+                # Re-compose so the next critique sees the updated structure.
+                # NOTE: compose_site.py's --tokens wants the SYNTHESIZE output
+                # DIRECTORY (which contains tokens/dist/), not the tokens.json
+                # file. Critique callers often pass the file path because the
+                # rest of the pipeline (synthesize_tokens, design_pass) does
+                # too — we normalise it here so the loop doesn't blow up
+                # on every apply step. compose_site.py also does not accept
+                # --reference-tokens; that flag is for the design pass only,
+                # so we deliberately omit it.
+                tokens_arg = args.tokens
+                if tokens_arg:
+                    tokens_arg_path = Path(tokens_arg)
+                    if tokens_arg_path.is_file() and tokens_arg_path.name == "tokens.json":
+                        # Heuristic: file at .../tokens/dist/tokens.json -> pass .../tokens/
+                        candidate = tokens_arg_path.parent.parent
+                        if (candidate / "dist").is_dir():
+                            tokens_arg = str(candidate)
                 compose_cmd = [sys.executable, args.compose_script,
                                "--brand-brief", str(brief_path),
                                "--design-plan", str(plan_path),
                                "-o", str(site_dir)]
-                if args.tokens:
-                    compose_cmd += ["--tokens", args.tokens]
+                if tokens_arg:
+                    compose_cmd += ["--tokens", tokens_arg]
                 if args.reference_report:
                     compose_cmd += ["--reference-report", args.reference_report]
-                if args.reference_tokens:
-                    compose_cmd += ["--reference-tokens", args.reference_tokens]
                 proc = subprocess.run(compose_cmd, capture_output=True, text=True, timeout=300)
                 if proc.returncode != 0:
-                    print(f"compose_site.py failed in iteration {iteration}: {proc.stderr[-300:]}",
-                          file=sys.stderr)
+                    msg = f"compose_site.py failed in iteration {iteration}: {proc.stderr[-300:]}"
+                    iter_outcome = {"iteration": iteration, "outcome": "api-error", "error": msg}
+                    history.append(iter_outcome)
+                    _save_history(out_dir, history)
+                    print(msg, file=sys.stderr)
+                    run_failed = True
                     break
 
         history.append(critique)
@@ -739,7 +838,12 @@ def main(argv=None):
             break
 
     (out_dir / "critique-summary.md").write_text(_summary_md(history))
-    print(json.dumps({"iterations": [_safe_total(h) for h in history], "out_dir": str(out_dir)}))
+    successful = [h for h in history if h.get("outcome", "ok") == "ok" and "scores" in h]
+    if not successful:
+        msg = "critique_pass.py produced no successful critique iteration; see iterations.json and critique-summary.md"
+        print(msg, file=sys.stderr)
+        return 1
+    print(json.dumps({"iterations": [_safe_total(h) for h in successful], "out_dir": str(out_dir)}))
     return 0
 
 

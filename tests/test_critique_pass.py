@@ -12,8 +12,14 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
+import subprocess
+import sys
+import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
+from unittest import mock
 
 
 REPO = Path(__file__).resolve().parents[1]
@@ -171,6 +177,10 @@ class ScoreHelpers(unittest.TestCase):
         md = cp._summary_md(history)
         self.assertIn("regressed", md)
 
+    def test_summary_md_handles_empty_history(self):
+        md = cp._summary_md([])
+        self.assertIn("no successful critique iteration", md.lower())
+
 
 class ViewportParser(unittest.TestCase):
     def test_default_parse(self):
@@ -205,6 +215,36 @@ class RestoreBest(unittest.TestCase):
         import tempfile
         with tempfile.TemporaryDirectory() as td:
             self.assertIsNone(cp._restore_best(Path(td), []))
+
+
+class MainExitContract(unittest.TestCase):
+    def test_model_always_failing_exits_nonzero_and_records_outcome(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            site = root / "site"
+            site.mkdir()
+            (site / "index.html").write_text('<main id="cover">Smoke</main>')
+            brief_path = root / "brief.json"
+            plan_path = root / "plan.json"
+            out_dir = root / "critique"
+            brief_path.write_text(json.dumps(_tiny_brief()))
+            plan_path.write_text(json.dumps(_tiny_plan()))
+            with mock.patch.object(cp, "get_minimax_key", return_value="test-key"), \
+                 mock.patch.object(cp, "_screenshot", return_value=[{"ok": True, "viewport": "375x812", "shot": str(root / "shot.png")}]), \
+                 mock.patch.object(cp, "_downscale_png_to_jpeg", return_value=b"jpeg"), \
+                 mock.patch.object(cp, "_vision_call", side_effect=urllib.error.HTTPError(
+                     url="https://api.minimax.io", code=402, msg="payment required", hdrs={}, fp=None)), \
+                 mock.patch.object(cp, "_free_port", return_value=43123), \
+                 mock.patch.object(cp.time, "sleep"):
+                result = cp.main([
+                    "--site", str(site), "--brand-brief", str(brief_path),
+                    "--design-plan", str(plan_path), "-o", str(out_dir),
+                    "--max-iterations", "1",
+                ])
+            self.assertNotEqual(result, 0)
+            history = json.loads((out_dir / "iterations.json").read_text())
+            self.assertEqual(history[0]["outcome"], "api-error")
+            self.assertIn("no successful critique iteration", (out_dir / "critique-summary.md").read_text().lower())
 
 
 if __name__ == "__main__":
