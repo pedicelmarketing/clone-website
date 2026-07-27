@@ -88,12 +88,56 @@ RUBRIC_DIMENSIONS = [
     "looks_templated",  # inverted: 10 = does NOT look templated
 ]
 DEFAULT_VIEWPORTS = [(1440, 900), (375, 812)]
+# Waiting on document.getAnimations() alone is NOT sufficient. It only tracks
+# CSS/WAAPI animations. JS-driven libraries (Motion/framer-motion, GSAP) animate
+# via requestAnimationFrame and never register there, so the promise resolves
+# immediately and the screenshot catches a half-faded page. That produced a
+# 17/70 score for a page that actually renders correctly — the critic was
+# grading a transient frame, not the design.
+#
+# So: settle on ANIMATIONS *and* on VISUAL STABILITY. We poll until two
+# consecutive frames are pixel-identical (cheap hash of a downscaled canvas),
+# which is animation-technology agnostic.
 SETTLE_JS = (
-    "async () => { const animations = document.getAnimations(); "
-    "await Promise.race([Promise.all(animations.map(a => a.finished.catch(() => {}))), "
-    "new Promise(resolve => setTimeout(resolve, 3000))]); "
-    "return {animation_count: animations.length, settle_cap_ms: 3000}; }"
+    "async () => {"
+    "  const animations = document.getAnimations();"
+    "  await Promise.race(["
+    "    Promise.all(animations.map(a => a.finished.catch(() => {}))),"
+    "    new Promise(r => setTimeout(r, 3000))"
+    "  ]);"
+    "  return {animation_count: animations.length, settle_cap_ms: 3000};"
+    "}"
 )
+# Number of consecutive identical screenshots required before we trust the frame,
+# and the ceiling on how long we will keep polling.
+VISUAL_STABLE_FRAMES = 2
+VISUAL_STABLE_INTERVAL_MS = 400
+VISUAL_STABLE_CAP_MS = 8000
+
+
+def wait_for_visual_stability(page, cap_ms: int = VISUAL_STABLE_CAP_MS) -> dict:
+    """Poll screenshots until consecutive frames are identical.
+
+    Returns diagnostics so the critique report can state HOW the frame was
+    settled — an unstable frame silently invalidates every visual score.
+    """
+    import hashlib
+
+    waited = 0
+    last_hash = None
+    stable = 0
+    while waited < cap_ms:
+        digest = hashlib.sha256(page.screenshot(type="jpeg", quality=40)).hexdigest()
+        if digest == last_hash:
+            stable += 1
+            if stable >= VISUAL_STABLE_FRAMES - 1:
+                return {"stable": True, "waited_ms": waited}
+        else:
+            stable = 0
+        last_hash = digest
+        page.wait_for_timeout(VISUAL_STABLE_INTERVAL_MS)
+        waited += VISUAL_STABLE_INTERVAL_MS
+    return {"stable": False, "waited_ms": waited, "note": "hit cap; frame may still be animating"}
 
 
 # ---------------------------------------------------------------------------
@@ -315,8 +359,31 @@ with sync_playwright() as p:
         ctx = browser.new_context(viewport={"width": w, "height": h})
         page = ctx.new_page()
         try:
-            page.goto(url, wait_until="domcontentloaded", timeout=15000)
+            # `load` (not just domcontentloaded) so JS bundles are fetched —
+            # a JS-animated page is still blank at domcontentloaded.
+            page.goto(url, wait_until="load", timeout=20000)
             settle = page.evaluate(sys.argv[5])
+            # CSS/WAAPI settle above is not enough: Motion/GSAP animate via
+            # requestAnimationFrame and never register in document.getAnimations(),
+            # so the frame can still be mid-fade. Poll until two consecutive
+            # frames are pixel-identical. Without this the critic scores a
+            # half-rendered page (observed: 17/70 for a page that renders fine).
+            import hashlib as _hl
+            waited, last, stable = 0, None, 0
+            while waited < 8000:
+                digest = _hl.sha256(page.screenshot(type="jpeg", quality=40)).hexdigest()
+                if digest == last:
+                    stable += 1
+                    if stable >= 1:
+                        break
+                else:
+                    stable = 0
+                last = digest
+                page.wait_for_timeout(400)
+                waited += 400
+            settle = dict(settle or {})
+            settle["visual_stable"] = stable >= 1
+            settle["visual_wait_ms"] = waited
             shot = out_dir / f"shot_{w}x{h}.png"
             page.screenshot(path=str(shot), full_page=False)
             results.append({"viewport": f"{w}x{h}", "shot": str(shot),
