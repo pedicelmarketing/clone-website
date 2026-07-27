@@ -218,6 +218,42 @@ class RestoreBest(unittest.TestCase):
 
 
 class MainExitContract(unittest.TestCase):
+    def test_default_tokens_output_is_inferred(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            site = root / "site"
+            site.mkdir()
+            (site / "index.html").write_text('<main id="cover">Smoke</main>')
+            brief_path = root / "brief.json"
+            plan_path = root / "plan.json"
+            out_dir = root / "critique"
+            brief_path.write_text(json.dumps(_tiny_brief()))
+            plan_path.write_text(json.dumps(_tiny_plan()))
+            critique = {
+                "scores": {d: {"score": 5, "justification": "x", "observation": "x"}
+                           for d in cp.RUBRIC_DIMENSIONS},
+                "total": 35,
+                "revisions": [{"section_id": "cover", "change": "split the cover into two editorial columns",
+                               "rationale": "Use the empty side.", "addressed_observation": "right side is empty"}],
+            }
+            completed = subprocess.CompletedProcess([], 0, "", "")
+            with mock.patch.object(cp, "get_minimax_key", return_value="test-key"), \
+                 mock.patch.object(cp, "_screenshot", return_value=[{"ok": True, "viewport": "375x812", "shot": str(root / "shot.png")}]), \
+                 mock.patch.object(cp, "_downscale_png_to_jpeg", return_value=b"jpeg"), \
+                 mock.patch.object(cp, "_critique_with_retries", return_value=(critique, [{"attempt": 1, "outcome": "ok"}])), \
+                 mock.patch.object(cp, "_free_port", return_value=43123), \
+                 mock.patch.object(cp.subprocess, "run", return_value=completed) as run_mock, \
+                 mock.patch.object(cp.time, "sleep"):
+                result = cp.main([
+                    "--site", str(site), "--brand-brief", str(brief_path),
+                    "--design-plan", str(plan_path), "-o", str(out_dir),
+                    "--apply", "--max-iterations", "1",
+                ])
+            self.assertEqual(result, 0)
+            compose_cmd = run_mock.call_args.args[0]
+            self.assertIn("--tokens", compose_cmd)
+            self.assertIn("reports/m3-token-synthesis", compose_cmd)
+
     def test_model_always_failing_exits_nonzero_and_records_outcome(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)

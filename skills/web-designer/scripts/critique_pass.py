@@ -677,7 +677,13 @@ def main(argv=None):
     ap.add_argument("--apply", action="store_true",
                     help="apply revisions back into the design plan, recompose, critique again")
     ap.add_argument("--compose-script", default=str(HERE / "compose_site.py"))
-    ap.add_argument("--tokens")
+    # Default to reports/m3-token-synthesis so callers running the loop after a
+    # fresh synthesize_tokens step don't have to remember to pass this; compose
+    # requires --tokens and dies without it. Override per-run if your tokens
+    # live elsewhere.
+    ap.add_argument("--tokens", default="reports/m3-token-synthesis",
+                    help="tokens directory passed through to compose_site.py "
+                         "(default: reports/m3-token-synthesis).")
     ap.add_argument("--reference-report")
     ap.add_argument("--reference-tokens")
     args = ap.parse_args(argv)
@@ -788,6 +794,14 @@ def main(argv=None):
                 # --reference-tokens; that flag is for the design pass only,
                 # so we deliberately omit it.
                 tokens_arg = args.tokens
+                if not tokens_arg:
+                    # The canonical M6 CLI shown in the workflow omits --tokens.
+                    # Infer the stable synthesize_tokens output used by the
+                    # composed site/verify pipeline rather than emitting an
+                    # invalid compose command.
+                    candidate = Path("reports/m3-token-synthesis")
+                    if (candidate / "tokens" / "dist").is_dir():
+                        tokens_arg = str(candidate)
                 if tokens_arg:
                     tokens_arg_path = Path(tokens_arg)
                     if tokens_arg_path.is_file() and tokens_arg_path.name == "tokens.json":
@@ -795,18 +809,37 @@ def main(argv=None):
                         candidate = tokens_arg_path.parent.parent
                         if (candidate / "dist").is_dir():
                             tokens_arg = str(candidate)
+                # compose_site.py requires --tokens; if the caller didn't supply
+                # it AND the default path doesn't exist, fail loudly here with a
+                # real diagnosis (the silent omit was the M6b loop-killer bug).
+                if not tokens_arg or not Path(tokens_arg).exists():
+                    msg = (f"compose_site.py requires --tokens <dir>; "
+                           f"got tokens_arg={tokens_arg!r} which does not exist. "
+                           "Pass --tokens to critique_pass.py pointing at the "
+                           "synthesize_tokens output directory.")
+                    iter_outcome = {"iteration": iteration, "outcome": "compose-error", "error": msg}
+                    history.append(iter_outcome)
+                    _save_history(out_dir, history)
+                    print(msg, file=sys.stderr)
+                    run_failed = True
+                    break
                 compose_cmd = [sys.executable, args.compose_script,
                                "--brand-brief", str(brief_path),
                                "--design-plan", str(plan_path),
+                               "--tokens", str(tokens_arg),
                                "-o", str(site_dir)]
-                if tokens_arg:
-                    compose_cmd += ["--tokens", tokens_arg]
                 if args.reference_report:
                     compose_cmd += ["--reference-report", args.reference_report]
+                # Echo the exact subprocess arg list to stderr so the caller can
+                # verify --tokens is present without re-grepping the source.
+                print(f"critique: compose_site.py argv = {compose_cmd[2:]}", file=sys.stderr)
                 proc = subprocess.run(compose_cmd, capture_output=True, text=True, timeout=300)
                 if proc.returncode != 0:
-                    msg = f"compose_site.py failed in iteration {iteration}: {proc.stderr[-300:]}"
-                    iter_outcome = {"iteration": iteration, "outcome": "api-error", "error": msg}
+                    msg = (f"compose_site.py failed in iteration {iteration} "
+                           f"(exit {proc.returncode}); "
+                           f"argv={compose_cmd[2:]}; "
+                           f"stderr_tail={proc.stderr[-400:]}")
+                    iter_outcome = {"iteration": iteration, "outcome": "compose-error", "error": msg}
                     history.append(iter_outcome)
                     _save_history(out_dir, history)
                     print(msg, file=sys.stderr)
