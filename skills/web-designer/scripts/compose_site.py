@@ -590,6 +590,8 @@ def plan_section_view(
             "purpose": sec.get("purpose", ""),
             "rationale": sec.get("rationale", ""),
             "brief_fields": brief_fields,
+            "nav_label": sec.get("nav_label"),
+            "in_nav": bool(sec.get("in_nav", False)),
             "headline": headline,
             "subhead": subhead,
             "body": body,
@@ -848,7 +850,7 @@ def render_html_from_plan(
     thesis_statement = (thesis.get("statement") or "").strip()[:160]
     description = escape(thesis_statement or first_headline)
 
-    display = escape(typography.get("display_family", "sans-serif"))
+    display = "Inter" if typography.get("display_family") == "Switzer" else escape(typography.get("display_family", "sans-serif"))
     body = escape(typography.get("body_family", "sans-serif"))
     mono = escape(typography.get("mono_family", "monospace"))
     primary = escape(palette.get("primary", "#000000"))
@@ -856,11 +858,11 @@ def render_html_from_plan(
 
     # Nav: link to every section that exists. The first one anchors to #hero.
     nav_items: list[str] = []
-    for i, sec in enumerate(sections):
+    for i, sec in enumerate([s for s in sections if s.get("in_nav", False)]):
         sid = sec["id"]
         href = "#hero" if i == 0 else f"#{sid}"
-        label = sid.replace("-", " ")
-        nav_items.append(f'          <li><a href="{href}">{escape(label.capitalize())}</a></li>')
+        label = sec.get("nav_label") or " ".join(w.capitalize() for w in sid.replace("-", " ").split()[:2])
+        nav_items.append(f'          <li><a href="{href}">{escape(label)}</a></li>')
 
     nav_html = "\n".join(nav_items) if nav_items else (
         '          <li><a href="#hero">Home</a></li>'
@@ -871,6 +873,9 @@ def render_html_from_plan(
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <title>{title}</title>
     <meta name="description" content="{description}">
     <link rel="stylesheet" href="tokens.css">
@@ -959,7 +964,7 @@ def render_html(
 
     # Font family stacks — used as inline fallback inside the <html> style attr
     # so the page degrades gracefully even if tokens.css fails to load.
-    display = escape(typography.get("display_family", "sans-serif"))
+    display = "Inter" if typography.get("display_family") == "Switzer" else escape(typography.get("display_family", "sans-serif"))
     body = escape(typography.get("body_family", "sans-serif"))
     mono = escape(typography.get("mono_family", "monospace"))
 
@@ -971,6 +976,9 @@ def render_html(
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <title>{title}</title>
     <meta name="description" content="{description}">
     <link rel="stylesheet" href="tokens.css">

@@ -9,18 +9,18 @@ Outdir: `reports/m6-composed-site`
 
 ## Layout thesis (from design-plan.json)
 
-- **Statement:** Pedicel sells the act of making a brand legible to itself. The redesign should read like a quiet classroom: one thesis at the top, a slow reveal of services as chapters, and a single recurring mark — the gold dot above the 'i' — used as a wayfinding device that doubles as a visual syllabus of the agency's beliefs.
-- **Audience:** Founder-led SMB owners (≈10–80 employees) who already have a product and a vague brand, but no shared language for it; they need a partner who will teach them what their own brand already is, not a vendor pitching disruption.
-- **Job to be done:** Convert a skeptical founder reading the home page for 45 seconds into a booked discovery call, by demonstrating — not claiming — that Pedicel extracts a uniqueness the visitor couldn't articulate themselves.
-- **Why this, not generic:** Generic agency sites lead with a centered hero, three icon-cards, a 'services' grid, a testimonials carousel, and a 'let's talk' footer — the exact template the brief's brand_donts forbid (no impact tropes, no purple gradients, no challenger copy, no stock photography). Instead, this redesign leads with a one-sentence confession of belief, then progresses as a numbered curriculum so the visitor is taught the agency's process before being sold on its outputs. The gold dot above the 'i' (Pedicel's only saturated brand color, literally the dot of the brand mark) is reused throughout as an inline marker, a bullet, a step number, and a cursor accent — turning one logo detail into the page's signature.
+- **Statement:** A confessional-teacher's workbook: the page reads like a quiet lesson on what makes a brand unique, with the gold 'i' dot from the logo acting as a moving highlighter that travels down the page to mark every lesson and every sentence that lands.
+- **Audience:** Small-to-mid business owners evaluating an inbound marketing and branding partner; people who distrust hype and want a calm, opinionated teacher to walk them through what 'customised' actually means.
+- **Job to be done:** Convert skeptical first-time visitors into qualified discovery-call bookings by proving the agency's point of view in the page itself — not in a 'why us' block.
+- **Why this, not generic:** Stock agency templates lead with a centered hero, a three-icon service grid, and a 'trusted by' wall. The brand's own voice ('All brands are unique, they just haven't shown it to the world yet' / 'Limitless.' / 'customised from top to bottom') is a teacher's voice, not a competitor's. The layout must therefore behave like a margin-noted textbook, not a pitch deck. The gold dot is a literal carryover from the logo's most distinctive feature (the dot above the 'i' in 'Pedicel') and is the only saturated color the brand actually owns — using it as a navigational marker is more honest than burying it in a button.
 
 ## Signature element (from design-plan.json)
 
-- **Name:** the gold dot
-- **Description:** A single oversized circle in #efad2b — the literal fill of the dot above the 'i' in the Pedicel wordmark — reused as a wayfinding marker throughout the page: as the period that ends the thesis headline, as a numbered list bullet, as a step counter, as the cursor accent on the CTA button, and as the only color used at scale.
-- **Why it fits the brand:** Pedicel's logo declares exactly two fills: alice-blue for the wordmark glyphs and #efad2b gold for the dot. The dot is the brand's only saturated color and the literal punctuation of its name (the dot on the 'i'). Reusing it across the page turns a logo detail into the page's structural system — which matches the brand's own positioning that 'uniqueness' lives in details most agencies ignore.
+- **Name:** The gold 'i'-dot highlighter
+- **Description:** A 10px gold circle (#efad2b) that travels down the page as a margin marker beside every lesson number, every chapter being read, and every teacher-margin note in the annotated image essay. It is a literal enlargement of the single saturated pixel of color in the brand's own logo — the dot above the 'i' in 'Pedicel'.
+- **Why it fits the brand:** It is the only saturated color the logo actually owns (per palette_from_logo.rationale: 'the only saturated brand color in the logo SVG'). Using it as a moving highlighter, rather than burying it inside a button, treats the logo's most distinctive feature as the page's reading guide. It also visually echoes the brand's own surfacing language of marking the 'unique' thing on every page.
 - **Implementation note (rendered in HTML+CSS as a real device):**
-  Render the dot as a CSS pseudo-element with a 0.6em diameter, color #efad2b, border-radius 9999px (the only place the design system uses a fully circular radius — every other corner stays sharp, per 'no uniform rounded corners'). Use it inline at the end of the thesis sentence; vertically centered beside numbered list items; and as a 0.4em trailing element inside the CTA button so the button reads 'book a call →' where the arrow is the gold dot. Never use it as a background fill behind text.
+  Render once as a fixed-position SVG dot in a single page-level layer; recompute its top offset on scroll using IntersectionObserver against each numbered lesson/chapter node. Animate position with a 280ms cubic-bezier(.2,.7,.2,1) so the movement feels like a marker sliding down a page, not a UI flourish. Never animate opacity, never pulse, never use it inside a button — those uses would turn it into a generic accent.
 
 The signature element is emitted in HTML as `<span class="signature-dot" aria-hidden="true">`
 and styled in `styles.css` under the `.signature-dot` selector. It uses
@@ -33,13 +33,12 @@ curriculum rows and process steps, and trailing the CTA button.
 ## Motion vocabulary (from design-plan.json)
 
 - **Register:** `restrained`
-- **Rationale:** The brand voice is 'confessional-educational' — quiet and teacher-like. Cinematic motion would contradict that register. Restrained, on-paint reveals respect the reader's pace and keep the page feeling like an essay rather than a launch site. The single kinetic flourish is the dot scaling into place, because the dot is the signature and it deserves one moment of attention.
+- **Rationale:** A confessional-educational voice demands reading-speed motion, not showcase motion. The only 'cinematic' moment is the gold dot's slide, and even that is short enough to feel like a marker, not a transition. No parallax, no scroll-jacking, no video, no spring overshoots — all of those would betray the teacher register.
 - **Effects:**
-  - thesis headline fades in once, 320ms, on first viewport entry
-  - numbered list items reveal one row at a time as they cross 20% into the viewport, 240ms stagger, no bounce
-  - gold dot scales from 0.6em to its final size on first paint of each section, 180ms ease-out
-  - CTA button has a 1px underline that draws left-to-right on hover over 200ms
-  - no parallax, no marquee, no auto-playing video, no scroll-jacking
+  - Gold dot position interpolation on scroll (280ms, cubic-bezier easing)
+  - Lesson/chapter accordion expand via height + opacity (200ms ease-out)
+  - Margin-note underlines draw in on viewport entry (1 line, 400ms)
+  - Sticky manifesto index highlight swap (no animation, instant)
 
 The plan's register drives `styles.css` via `_motion_css_for_register()` —
 `restrained` ⇒ 320ms fade-in only; `balanced` ⇒ 420ms fade + 6px lift;
@@ -51,30 +50,27 @@ no marquee, no auto-play regardless of register. All variants honor
 
 | Section | Emphasis | Order | Component (truncated) | Brief fields that fed it |
 |---------|----------|-------|-----------------------|--------------------------|
-| thesis-statement (`#thesis-statement`) | hero | 1 | single-line thesis headline, left-aligned, anchored top-left, with the gold dot … | `voice_and_tone.example_lines`, `voice_and_tone.favorite_words`, `palette_from_logo.primary` |
-| | | | | **Why this section:** Lead with the brand's actual belief in the brand's own sentence-case voice, with no marketing framing above it. |
-| | | | | **Rationale:** Pedicel's own tagline is a teacher-like statement of belief, not a value claim. Placing it alone, left-aligned, in display weight, with the logo's gold dot functioning as a sentence-ending mark, makes the page feel like the opening line of an essay rather than a marketing surface. This deliberately breaks the centered-everything hero default. |
-| what-we-believe (`#what-we-believe`) | primary | 2 | two-column prose block (left: short numbered premise; right: short numbered prem… | `voice_and_tone.register`, `voice_and_tone.example_lines`, `voice_and_tone.banned_words` |
-| | | | | **Why this section:** Explain the agency's worldview in the brand's own 'confessional-educational' register before any service appears. |
-| | | | | **Rationale:** Voice notes describe the brand as 'teacher-like' and 'confessional-educational'. Putting the worldview before the service catalog enforces that order — the visitor is taught what Pedicel believes before they are shown what Pedicel sells. Avoiding banned words ('disrupt', 'revolutionary', 'cutting-edge') keeps the prose in the brand's own register. |
-| service-curriculum (`#service-curriculum`) | primary | 3 | vertically stacked numbered rows; each row contains a gold-dot chapter number, t… | `service_facts`, `voice_and_tone.favorite_words`, `voice_and_tone.banned_words`, `palette_from_logo.accent` |
-| | | | | **Why this section:** List the eight public services from LinkedIn as chapters of a syllabus, not as feature cards. |
-| | | | | **Rationale:** The brief's only service inventory is the LinkedIn list (Social Media, Community Management, Branding Strategy, Sale Funnels, SEO, Web Design, Rebranding, Paid Advertising). A vertical 'curriculum' layout reads those as a process instead of a checkbox grid — a deliberate counter to the forbidden 'three-column feature grid with icons'. Pricing is 'not disclosed' so no price line is invented. |
-| how-we-work (`#how-we-work`) | secondary | 4 | horizontal 4-step strip on desktop, stacked on mobile; each step is a number (go… | `voice_and_tone.favorite_words`, `voice_and_tone.notes`, `palette_from_logo.primary` |
-| | | | | **Why this section:** Show the agency's process as four short numbered steps so the visitor understands delivery before seeing proof. |
-| | | | | **Rationale:** Pedicel's positioning is 'customised from top to bottom' and lead-generation-driven. Naming a process addresses the founder's fear of a black-box engagement without inventing methodology specifics the brand hasn't published. Steps are deliberately described as verbs to keep them action-shaped, not jargon-shaped. |
-| brand-not-blurb (`#brand-not-blurb`) | secondary | 5 | single framed image of the recovered og:image asset, captioned in the brand's vo… | `real_photo_inventory`, `brand_donts` |
-| | | | | **Why this section:** Use the brand's own OG share image as the only large visual in the page, framed as 'how the brand already presents itself' rather than a stock hero. |
-| | | | | **Rationale:** The only brand-owned image asset the brief authorizes for non-logo use is the og:image ('pedicelmarketingpreviewwebsite.jpg'). The brand_donts explicitly forbid stock photography of offices and handshakes, and the limitations section notes no real team/client photo is recoverable. Using the brand's own share card is the only honest choice. |
-| what-the-dot-means (`#what-the-dot-means`) | secondary | 6 | short two-sentence aside set in body type next to a single oversized gold dot gl… | `palette_from_logo.rationale`, `palette_from_logo.primary`, `voice_and_tone.example_lines` |
-| | | | | **Why this section:** Make the signature element explicit: explain that the gold dot above the 'i' in Pedicel is the page's recurring wayfinding mark. |
-| | | | | **Rationale:** The signature element is only memorable if it is acknowledged once. A short aside teaches the visitor that the gold dot is intentional, then the rest of the page can use it as a marker without needing to label it again. |
-| book-a-call (`#book-a-call`) | primary | 7 | full-width band in the alice-blue secondary surface with one sentence of copy an… | `voice_and_tone.example_lines`, `palette_from_logo.secondary`, `palette_from_logo.accent`, `service_facts` |
-| | | | | **Why this section:** Convert with a single sentence and a single button — no form fields, no calendar embed, no 'subscribe to our newsletter'. |
-| | | | | **Rationale:** The job-to-be-done is a discovery call. Anything more than a sentence plus a button is friction. The secondary alice-blue surface gives the band a quiet visual break without introducing a new color, and the accent blue (#3898ec) is the brand's actual interactive color from its own CSS, not a forbidden purple. |
-| footer-colophon (`#footer-colophon`) | minor | 8 | two-line footer: brand line (logo wordmark + tagline) above a single line of leg… | `real_photo_inventory`, `voice_and_tone.example_lines`, `typography_recommendation.license_notes` |
-| | | | | **Why this section:** Close with a small, sentence-case colophon that names the brand, the tagline, and the source of the page's typography — no social-feed embeds, no 'follow us' row. |
-| | | | | **Rationale:** No social highlights or testimonials are recoverable (brief limitations). Inventing a 'follow us on LinkedIn/Instagram' row would be invention. The colophon is honest, sentence-case, and acknowledges the typography license constraint rather than hiding it. |
+| cover (`#cover`) | hero | 0 | Asymmetric editorial cover: left 60% holds a single sentence-case belief stateme… | `voice_and_tone.register`, `voice_and_tone.example_lines`, `voice_and_tone.sentence_case`, `palette_from_logo.primary`, `palette_from_logo.secondary`, `typography_recommendation.display_family` |
+| | | | | **Why this section:** Set the teacher-register tone and introduce the signature gold-dot highlighter in its largest, slowest form. |
+| | | | | **Rationale:** The brand's strongest recoverable copy is one short sentence ('All brands are unique, they just haven't shown it to the world yet.'). Leading with it at display size, in sentence case, with no chrome around it, is the most on-voice choice. Putting the gold dot on the lesson index makes the signature element discoverable in the first screen without ever being labeled as a logo feature. |
+| manifesto (`#manifesto`) | primary | 1 | Two-column editorial: a narrow left column (28%) holds a sticky numbered index o… | `voice_and_tone.register`, `voice_and_tone.notes`, `voice_and_tone.favorite_words`, `voice_and_tone.banned_words`, `voice_and_tone.avg_sentence_length_words` |
+| | | | | **Why this section:** State the agency's teaching philosophy in long-form, using the teacher's margin-note cadence. |
+| | | | | **Rationale:** Confessional-educational voice is best shown, not declared. A numbered list of belief-statements, written at the brand's actual ~13-word average sentence length, lets the voice carry the section without resorting to testimonials (which the brief flags as unrecoverable). |
+| uniqueness-lesson (`#uniqueness-lesson`) | primary | 2 | Four-step teaching block laid out as a vertical timeline rather than a horizonta… | `voice_and_tone.example_lines`, `voice_and_tone.favorite_words`, `palette_from_logo.primary`, `palette_from_logo.secondary`, `brand_donts` |
+| | | | | **Why this section:** Teach the visitor the agency's core framework (the thing every 'unique' brand has to do) without calling it a framework. |
+| | | | | **Rationale:** The brief's first explicit banned default is the three-column feature grid with icons. A vertical numbered timeline is the same information density without the template fingerprint, and it lets the gold dot carry meaning instead of decoration. |
+| services-as-chapters (`#services-as-chapters`) | primary | 3 | Expandable chapter list (accordion with persistent chapter numbers). Each chapte… | `service_facts`, `voice_and_tone.register`, `voice_and_tone.formality_score_1to5` |
+| | | | | **Why this section:** Present the eight public services as chapters of a customised curriculum rather than a service catalog. |
+| | | | | **Rationale:** Service facts are the most complete recoverable factual inventory (eight named services with descriptions). Grouping them as chapters of a curriculum — rather than cards with icons — matches the teacher register and avoids the banned 'three-column feature grid'. |
+| the-customised-proof (`#the-customised-proof`) | secondary | 4 | Annotated image essay: a single tall image (the brand's own OG share card, used … | `real_photo_inventory`, `voice_and_tone.favorite_words`, `brand_donts`, `limitations` |
+| | | | | **Why this section:** Show what 'customised from top to bottom' means in practice, using only the imagery the brand actually exposes. |
+| | | | | **Rationale:** The brief explicitly states no real photograph of a person, team, or client work was recoverable. Using the brand's own og:image as the only visual and annotating it teacher-style is honest about what is available while still demonstrating the 'customised' point of view. |
+| lead-generation-cta (`#lead-generation-cta`) | secondary | 5 | Single-sentence CTA block: one short paragraph framed as an invitation to the ne… | `service_facts`, `palette_from_logo.accent`, `voice_and_tone.register`, `voice_and_tone.banned_words` |
+| | | | | **Why this section:** Convert the reader into a discovery-call booking without breaking the teacher register. |
+| | | | | **Rationale:** The brand's positioning is lead-generation-driven (per service_facts: 'Sale Funnels', 'Paid Advertising'), so the page must end with a clear conversion path. Restricting the accent blue to this single block keeps the gold dot as the dominant accent elsewhere and avoids the 'everything is a button' generic pattern. |
+| colophon (`#colophon`) | minor | 6 | Single short paragraph plus a small monospaced token table (font families, hex v… | `typography_recommendation.license_notes`, `typography_recommendation.mono_family`, `palette_from_logo.primary`, `palette_from_logo.secondary`, `palette_from_logo.accent`, `palette_from_logo.neutrals`, `brand_donts` |
+| | | | | **Why this section:** Disclose fonts, colors, and license notes the brief flagged as sensitive (Switzer commercial use). |
+| | | | | **Rationale:** Switzer requires a paid commercial license; the brief explicitly bans vendoring the OTF into production. A colophon that states the substitution rule transparently is both legally safer and on-voice for a brand whose tagline is about uniqueness. |
 
 ## Sections skipped by the plan (data absent in brief)
 
@@ -83,12 +79,12 @@ brief fields that would have been needed but are absent.
 
 | Section | Reason | Missing brief fields |
 |---------|--------|----------------------|
-| `testimonials` | The brief's limitations section explicitly states no testimonials are recoverable from any public surface. Including one would be invention, which is forbidden. | `testimonials` |
-| `social-feed` | Both social_highlights.linkedin and social_highlights.instagram are empty by design — LinkedIn is gated and Instagram returns a login wall. A 'follow us' or post-grid section would have to be fabricated. | `social_highlights.linkedin`, `social_highlights.instagram` |
-| `case-studies` | No client work imagery or case-study copy is recoverable from any public surface; the only brand-owned image is the OG share card, already used in 'brand-not-blurb'. A case-studies grid would invent clients. | `real_photo_inventory`, `testimonials` |
-| `pricing` | Every service_facts entry has price_range 'not disclosed on public surfaces'. Showing tiers or starting prices would invent commercial facts. | `service_facts[].price_range` |
-| `team-grid` | No real photograph of a person or team is in real_photo_inventory. The brief's limitations explicitly note the brand exposes no team imagery on its public surface. Headshots would have to be stock, which brand_donts forbid. | `real_photo_inventory` |
-| `stats-counter` | Recoverable public numbers are limited to ~3,982 LinkedIn followers and 12 employees (gated). Basing a stats band on a single sourced metric would over-weight it; inventing metrics (campaigns run, leads generated) would be fabrication. | `testimonials`, `social_highlights` |
+| `testimonials` | The brief's limitations section explicitly states no testimonials are recoverable from any public surface and that including one would have been invention. | `testimonials` |
+| `case-studies` | No client portfolio imagery or case-study metrics were recoverable; the brand's own site is blocked by a WAF and Instagram is gated. Building a case-studies section would require fabricated clients. | `real_photo_inventory`, `social_highlights.linkedin`, `social_highlights.instagram` |
+| `trusted-by-logos` | No client list is recoverable from any public surface. A logo wall would either be empty or invented. | `service_facts`, `real_photo_inventory`, `limitations` |
+| `team` | No real photographs of the team are recoverable; only the LinkedIn company logo is available. A team grid would have to use avatars or be omitted. | `real_photo_inventory` |
+| `pricing` | Every service_facts entry is marked 'price_range: not disclosed on public surfaces'. A pricing table would be invention. | `service_facts.price_range` |
+| `blog-or-thought-leadership` | social_highlights.linkedin and social_highlights.instagram are both empty by design; the LinkedIn public surface is a tagline and about blurb, not a content feed. There is no recoverable body of posts to surface. | `social_highlights.linkedin`, `social_highlights.instagram`, `sources.linkedin.top_posts`, `sources.instagram.grid_themes` |
 
 ## Sections skipped at render time (no copy or payload)
 
@@ -102,27 +98,27 @@ reported here in addition to the plan's own skipped list.
 
 ## Design decisions (from design-plan.json)
 
-- **Lead with a one-sentence thesis instead of a value-proposition headline-and-subhead pair.**
-  - Alternatives considered: headline + subhead + CTA button trio, headline + benefit bullets, headline + animated tagline reveal
-  - Why chosen: The brief's example_lines are short, sentence-case, and belief-shaped ('All brands are unique…', 'Limitless.', 'Our approach is customised from top to bottom.'). A single sentence respects that voice and breaks the centered-hero default. The CTA is moved to its own dedicated section further down the page.
-- **Render services as a vertical numbered 'curriculum' rather than a grid of icon cards.**
-  - Alternatives considered: three-column feature grid with icons, horizontal scrolling card row, tabbed service switcher
-  - Why chosen: The forbidden-defaults list explicitly bans the three-column icon grid. A vertical numbered list reads the eight services as a sequence (which matches the brand's positioning that discovery is a process), keeps every service name exactly as the brand wrote it on LinkedIn, and gives each one room for a one-line teacherly description instead of a vague headline.
-- **Use only #efad2b as the accent color and reserve the brand's CSS-blue (#3898ec) for the single CTA button.**
-  - Alternatives considered: use both #efad2b and #3898ec interchangeably as accents, introduce a new accent color (purple/teal) to 'modernize', use the Webflow CSS's purple #6a34b3 as an accent
-  - Why chosen: The brand_donts explicitly forbid purple, and the brief notes the CSS purple is a Webflow default state, not a brand surface. Treating gold as the only accent preserves the logo's actual color story (one saturated hue, one near-white) and lets the CTA button be the only place a second color appears — which makes the CTA unmissable.
-- **Keep all corners sharp except the gold dot, which is the only fully circular element.**
-  - Alternatives considered: uniform 8px rounded corners across cards and buttons, pill-shaped buttons with fully rounded ends, 16px corners on cards, 4px on buttons
-  - Why chosen: The forbidden-defaults list bans 'uniform rounded corners'. Using a single sharp-cornered system (0px on cards and buttons, 1px dividers) and reserving full rounding for the signature dot reinforces that the dot is special and gives the page one visible moment of softness.
-- **Use Switzer for display and Poppins for body, with an explicit license note in the footer colophon.**
-  - Alternatives considered: swap to Inter for display to avoid the Switzer commercial-license issue, use Inter for everything, self-host Poppins only and fall back to system sans for display
-  - Why chosen: The brief's brand surface already loads Switzer from the Webflow CDN and the typography_recommendation flags the license issue. Matching the brand's own loaded family keeps the redesign visually faithful to Pedicel's current intent, while a one-line colophon credit is the honest way to surface the license constraint instead of hiding it.
-- **Hold motion to a single restrained register (on-paint fades, dot scale-in, underline draw) and refuse parallax, marquee, or auto-playing video.**
-  - Alternatives considered: cinematic scroll-driven reveals, auto-playing background video in the hero, parallax depth between sections
-  - Why chosen: Voice is 'confessional-educational'. Cinematic motion would over-perform the teacher-like register and contradict the brand's own positioning as quiet, customized, inbound. The one kinetic flourish (the dot scaling in) is reserved for the signature element so it earns its moment.
-- **Skip testimonials, social feed, case studies, pricing, team grid, and stats entirely instead of fabricating any of them.**
-  - Alternatives considered: fabricate plausible-but-unsourced testimonials, embed LinkedIn/Instagram widgets that would render empty, invent starting prices from industry averages
-  - Why chosen: Every skipped section has a documented missing_brief_field. The brief's limitations section is explicit that invention is forbidden. Removing six conventional agency-site sections is itself a brand-specific design choice — the page is shorter, quieter, and more honest than a typical agency site, which matches the brand's own positioning.
+- **Lead with a single sentence-case belief statement at display size instead of a centered headline + subhead + CTA hero.**
+  - Alternatives considered: Centered hero with two CTAs and a stock background photo, Video background with a 10-second manifesto loop, Carousel of three rotating taglines
+  - Why chosen: The brand's strongest recoverable voice asset is one short sentence ('All brands are unique…'). A centered-everything hero is an explicit forbidden default and would dilute the teacher register. A single sentence at 64px reads like the first line of a book, which matches the workbook thesis.
+- **Use a vertical timeline for the four-step uniqueness lesson instead of a horizontal four-column grid.**
+  - Alternatives considered: Four equal cards in a single row with line icons, Tabs across the top with one panel of content, A single long-form essay with inline pull-quotes
+  - Why chosen: The three-column feature grid with icons is the first banned default in brand_donts. A vertical timeline preserves the four-part structure the brand needs to teach, lets the gold dot act as the step marker, and reads at scroll-speed instead of glance-speed.
+- **Render the eight LinkedIn-listed services as expandable chapters rather than as a grid of service cards with icons.**
+  - Alternatives considered: Eight cards with one icon each in a 4×2 grid, A single long-form services page reached from a 'Services' link, Three category buckets (Marketing / Branding / Web) each holding the relevant services
+  - Why chosen: service_facts gives eight named services with descriptions and no prices; that is exactly the shape of a chapter list. Cards would force invention of icons and would compete with the gold dot for attention. Categories would lie about the brand's actual flat list.
+- **Restrict the Webflow interactive blue (#3898ec) to a single CTA button and use gold (#efad2b) as the dominant accent everywhere else.**
+  - Alternatives considered: Use #3898ec as the primary brand color throughout, Use a purple gradient as the primary surface (per the Webflow CSS default), Split accents evenly between gold and blue across the page
+  - Why chosen: palette_from_logo.rationale is explicit: gold is the only saturated color in the logo SVG and is the brand's signature. Purple gradients are explicitly banned. A single accent creates a clear visual hierarchy: gold = reading/lesson, blue = the one interactive moment.
+- **Include a colophon that names the Switzer commercial-license substitution rule instead of vendoring Switzer OTF files.**
+  - Alternatives considered: Self-host Switzer OTF in the production bundle, Silently substitute Inter for Switzer without disclosure, Use only system fonts and skip the display family
+  - Why chosen: typography_recommendation.license_notes and brand_donts both flag that the free personal-use Switzer license forbids commercial use. Silent substitution would be dishonest; bundling would be a license violation. A colophon that names the rule is on-voice for a brand whose tagline is about showing what was hidden.
+- **Use the brand's own og:image as the single visual in the annotated image essay instead of inventing portfolio imagery.**
+  - Alternatives considered: Commission or generate bespoke case-study imagery, Use abstract decorative shapes instead of any photograph, Omit imagery entirely and use type only
+  - Why chosen: real_photo_inventory contains no real photographs of people, team, or client work — only the logo SVG, the OG share card, and the LinkedIn company logo. brand_donts bans generic stock photography. The OG card is brand-owned and is the only honest visual the agency can currently expose without invention.
+- **Skip testimonials, case studies, a 'trusted by' wall, a team grid, pricing, and a blog feed entirely.**
+  - Alternatives considered: Include a single invented client quote labeled 'example', Show placeholder case-study cards marked 'coming soon', Source client logos from the agency's LinkedIn follower list
+  - Why chosen: The brief's limitations section is explicit that every one of those sections would have to be invented. The layout thesis explicitly prefers showing the agency's point of view in the page itself over borrowing third-party credibility. The skipped_sections list names each missing brief field so the gap is auditable, not hidden.
 
 ## Contrast decision
 

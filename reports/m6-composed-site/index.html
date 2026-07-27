@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="en" style="--page-display: Switzer; --page-body: Poppins; --page-mono: JetBrains Mono; --page-primary: #efad2b; --page-secondary: #f0f8ff;">
+<html lang="en" style="--page-display: Inter; --page-body: Poppins; --page-mono: JetBrains Mono; --page-primary: #efad2b; --page-secondary: #f0f8ff;">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pedicel Marketing — All brands are unique. They just haven&#x27;t shown it to the world yet.</title>
-    <meta name="description" content="Pedicel sells the act of making a brand legible to itself. The redesign should read like a quiet classroom: one thesis at the top, a slow reveal of services as ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <title>Pedicel Marketing — All brands are unique, they just haven&#x27;t shown it to the world yet.</title>
+    <meta name="description" content="A confessional-teacher&#x27;s workbook: the page reads like a quiet lesson on what makes a brand unique, with the gold &#x27;i&#x27; dot from the logo acting as a moving highl">
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -14,30 +17,31 @@
       <nav aria-label="Primary">
         <a class="brand" href="#hero" aria-label="Pedicel Marketing — home">Pedicel Marketing</a>
         <ul class="nav-list" role="list">
-          <li><a href="#hero">Thesis statement</a></li>
-          <li><a href="#what-we-believe">What we believe</a></li>
-          <li><a href="#service-curriculum">Service curriculum</a></li>
-          <li><a href="#how-we-work">How we work</a></li>
-          <li><a href="#brand-not-blurb">Brand not blurb</a></li>
-          <li><a href="#what-the-dot-means">What the dot means</a></li>
-          <li><a href="#book-a-call">Book a call</a></li>
-          <li><a href="#footer-colophon">Footer colophon</a></li>
+          <li><a href="#hero">Manifesto</a></li>
+          <li><a href="#uniqueness-lesson">The lesson</a></li>
+          <li><a href="#services-as-chapters">What we do</a></li>
+          <li><a href="#the-customised-proof">How it&#x27;s made</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main" tabindex="-1">
-    <section id="hero" class="plan-section emphasis-hero" data-emphasis="hero" data-component="single-line thesis headline, left-aligned, anchored top-left, with the gold dot set as an oversize period at the end of the line" aria-labelledby="thesis-statement-heading">
-      <h1 id="thesis-statement-heading" class="plan-heading plan-heading--hero">All brands are unique. They just haven&#x27;t shown it to the world yet. <span class="signature-dot" aria-hidden="true"></span></h1>
-      <p class="plan-subhead">Pedicel is an inbound marketing and branding agency. We help you find what is already yours.</p>
+    <section id="hero" class="plan-section emphasis-hero" data-emphasis="hero" data-component="Asymmetric editorial cover: left 60% holds a single sentence-case belief statement at display size; right 40% holds a vertical &#x27;lesson index&#x27; (services list treated like chapter titles) with the gold dot sitting beside the first item. No centered hero, no stock imagery, no CTA button above the fold — the page is read, not pitched to." aria-labelledby="cover-heading">
+      <h1 id="cover-heading" class="plan-heading plan-heading--hero">All brands are unique, they just haven&#x27;t shown it to the world yet. <span class="signature-dot" aria-hidden="true"></span></h1>
+      <p class="plan-subhead">A short, customised lesson in what your brand has been hiding.</p>
     </section>
 
-    <section id="what-we-believe" class="plan-section emphasis-primary" data-emphasis="primary" data-component="two-column prose block (left: short numbered premise; right: short numbered premise), no icons, no bullets — just gold dots as numbered list markers" aria-labelledby="what-we-believe-heading">
-      <p class="plan-body">Uniqueness is not invented in a branding workshop. It is recovered — from the way your team talks about the work, from the customers who keep coming back, from the things you refuse to do. Our job is to listen for it, name it, and put it in front of the people who need to see it.</p>
+    <section id="manifesto" class="plan-section emphasis-primary" data-emphasis="primary" data-component="Two-column editorial: a narrow left column (28%) holds a sticky numbered index of short manifesto statements; a wide right column (72%) shows one full paragraph per statement with the gold dot as a margin marker beside each paragraph number. Footnote-style attribution appears under each paragraph." aria-labelledby="manifesto-heading">
+      <h2 id="manifesto-heading" class="plan-heading">What we believe, before you read anything else.</h2>
+      <p class="plan-body">We are an inbound Marketing and Branding agency with the goal of helping businesses find their uniqueness. Our approach is customised from top to bottom.</p>
     </section>
 
-    <section id="service-curriculum" class="plan-section emphasis-primary" data-emphasis="primary" data-component="vertically stacked numbered rows; each row contains a gold-dot chapter number, the service name in display weight, and a one-line teacherly description set in body type — no icons, no equal-height cards" aria-labelledby="service-curriculum-heading">
-      <h2 id="service-curriculum-heading" class="plan-heading">Eight chapters, one syllabus.</h2>
+    <section id="uniqueness-lesson" class="plan-section emphasis-primary" data-emphasis="primary" data-component="Four-step teaching block laid out as a vertical timeline rather than a horizontal grid. Each step is a numbered card with a single-sentence rule, a one-line example, and the gold dot acting as the step&#x27;s bullet. On wide screens the timeline is centered with generous gutter; on narrow screens it collapses to a single column but keeps the dot." aria-labelledby="uniqueness-lesson-heading">
+      <h2 id="uniqueness-lesson-heading" class="plan-heading">The four things every &#x27;unique&#x27; brand has already done, whether it knows it or not.</h2>
+    </section>
+
+    <section id="services-as-chapters" class="plan-section emphasis-primary" data-emphasis="primary" data-component="Expandable chapter list (accordion with persistent chapter numbers). Each chapter title is one of the eight LinkedIn-listed services; opening a chapter reveals a short teacher-style explanation of when that chapter is needed and what it produces. The gold dot marks the chapter currently being read." aria-labelledby="services-as-chapters-heading">
+      <h2 id="services-as-chapters-heading" class="plan-heading">Eight chapters, one curriculum, no packages.</h2>
 
       <ol class="plan-curriculum" role="list">
         <li class="plan-curriculum-row">
@@ -97,61 +101,23 @@
           </div>
         </li>
       </ol>
-      <p class="plan-body">Social media marketing. Community management. Branding strategy. Sale funnels. SEO. Web design. Rebranding. Paid advertising. Listed as the brand lists them — no merging, no rebranding of services into cleverer-sounding categories.</p>
+      <p class="plan-body">Social Media Marketing, Community Management, Branding Strategy, Sale Funnels, SEO, Web Design, Rebranding, Paid Advertising — taught in the order your brand needs them, not the order a price list would prefer.</p>
     </section>
 
-    <section id="how-we-work" class="plan-section emphasis-secondary" data-emphasis="secondary" data-component="horizontal 4-step strip on desktop, stacked on mobile; each step is a number (gold dot), a verb-led step name, and a one-sentence description" aria-labelledby="how-we-work-heading">
-      <h2 id="how-we-work-heading" class="plan-heading">A customised process, top to bottom.</h2>
-
-      <ol class="plan-steps" role="list">
-        <li class="plan-step">
-          <span class="plan-step-number" aria-hidden="true"><span class="signature-dot" aria-hidden="true"></span><span class="plan-step-numeral">1</span></span>
-          <p class="plan-step-body">Listen for what is already true.</p>
-        </li>
-        <li class="plan-step">
-          <span class="plan-step-number" aria-hidden="true"><span class="signature-dot" aria-hidden="true"></span><span class="plan-step-numeral">2</span></span>
-          <p class="plan-step-body">Name it in language your team will actually use.</p>
-        </li>
-        <li class="plan-step">
-          <span class="plan-step-number" aria-hidden="true"><span class="signature-dot" aria-hidden="true"></span><span class="plan-step-numeral">3</span></span>
-          <p class="plan-step-body">Build the funnel around that language.</p>
-        </li>
-        <li class="plan-step">
-          <span class="plan-step-number" aria-hidden="true"><span class="signature-dot" aria-hidden="true"></span><span class="plan-step-numeral">4</span></span>
-          <p class="plan-step-body">Measure what brings the right people in.</p>
-        </li>
-      </ol>
-      <p class="plan-body">Listen for what is already true. Name it in language your team will actually use. Build the funnel around that language. Measure what brings the right people in.</p>
+    <section id="the-customised-proof" class="plan-section emphasis-secondary" data-emphasis="secondary" data-component="Annotated image essay: a single tall image (the brand&#x27;s own OG share card, used as a stand-in for the gated portfolio) sits on the right; on the left, three short teacher-margin notes point to specific parts of the image, each ending with a gold dot. No fake client logos, no fabricated case-study metrics." aria-labelledby="the-customised-proof-heading">
+      <p class="plan-caption">A real piece of the brand&#x27;s own surface, annotated the way we annotate client work.</p>
     </section>
 
-    <section id="brand-not-blurb" class="plan-section emphasis-secondary" data-emphasis="secondary" data-component="single framed image of the recovered og:image asset, captioned in the brand&#x27;s voice, anchored with a small gold-dot bullet in the caption" aria-labelledby="brand-not-blurb-heading">
-
-      <figure class="plan-asset">
-        <img src="https://cdn.prod.website-files.com/64a2995238dba40820b37689/656016dc008b45e6a1f01471_pedicelmarketingpreviewwebsite.jpg" alt="Pedicel Marketing — website preview (og:image / social share card)" loading="lazy">
-        <figcaption>
-          <span class="plan-asset-subject">Pedicel Marketing — website preview (og:image / social share card)</span>
-          <span class="plan-asset-meta">License: brand-owned (recovered from brand&#x27;s own Webflow CDN) — declared as the og:image and twitter:image in the page head</span>
-                <p class="plan-caption">This is how Pedicel already presents itself to the world. No stock photography, no stock promises.</p>
-
-        </figcaption>
-      </figure>
-      <p class="plan-caption">This is how Pedicel already presents itself to the world. No stock photography, no stock promises.</p>
-    </section>
-
-    <section id="what-the-dot-means" class="plan-section emphasis-secondary" data-emphasis="secondary" data-component="short two-sentence aside set in body type next to a single oversized gold dot glyph, no heading" aria-labelledby="what-the-dot-means-heading">
-      <p class="plan-body">The gold dot above the &#x27;i&#x27; in Pedicel is the only saturated color in our mark. We use it on this page the same way we use it in our work — as a small detail most agencies would skip, and the first thing the right client notices.</p>
-    </section>
-
-    <section id="book-a-call" class="plan-section emphasis-primary" data-emphasis="primary" data-component="full-width band in the alice-blue secondary surface with one sentence of copy and one accent-blue button" aria-labelledby="book-a-call-heading">
-      <h2 id="book-a-call-heading" class="plan-heading">If something here sounded like your brand, let&#x27;s talk.</h2>
+    <section id="lead-generation-cta" class="plan-section emphasis-secondary" data-emphasis="secondary" data-component="Single-sentence CTA block: one short paragraph framed as an invitation to the next &#x27;lesson&#x27;, with one inline button that uses the Webflow interactive blue (#3898ec) — the only place that blue appears, so the CTA reads as the one interactive moment on the page." aria-labelledby="lead-generation-cta-heading">
 
       <div class="plan-cta-band">
-                <p class="plan-cta-action"><a class="button plan-cta-button" href="#contact">Book a call <span class="signature-dot" aria-hidden="true"></span></a></p>
+              <p class="plan-body">If anything on this page sounded like it was written about your business, the next lesson is a 30-minute call.</p>
+        <p class="plan-cta-action"><a class="button plan-cta-button" href="#contact">Book the call <span class="signature-dot" aria-hidden="true"></span></a></p>
       </div>
     </section>
 
-    <section id="footer-colophon" class="plan-section emphasis-minor" data-emphasis="minor" data-component="two-line footer: brand line (logo wordmark + tagline) above a single line of legal/credit text, set in body size" aria-labelledby="footer-colophon-heading">
-      <p class="plan-body">Pedicel Marketing. Limitless, customised, inbound. Set in Switzer and Poppins. © Pedicel Marketing.</p>
+    <section id="colophon" class="plan-section emphasis-minor" data-emphasis="minor" data-component="Single short paragraph plus a small monospaced token table (font families, hex values, license status). JetBrains Mono handles the token rows." aria-labelledby="colophon-heading">
+      <p class="plan-body">Display type is set in Switzer under a paid commercial license held by the brand; body type is set in Poppins under the SIL Open Font License. Gold #efad2b, surface #f0f8ff, interactive #3898ec.</p>
     </section>
     </main>
 

@@ -1,10 +1,10 @@
 # Validation Report
 
-Generated: 2026-07-27T15:40:32.988313+00:00
+Generated: 2026-07-27T15:56:40.814895+00:00
 Schema: validate_site.py v1.0 (8-gate-v1.0)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site`
 Routes validated: /
-Local server: http://127.0.0.1:41367 (python3 -m http.server, killed on exit)
+Local server: http://127.0.0.1:45531 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/server.log
 
 ## Declared scope
@@ -20,7 +20,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 | # | Gate | Verdict | Evidence basis | Summary |
 |---|------|---------|----------------|---------|
 | 1 | Boot | **PASS** | HTTP-200 only | All 1 route(s) returned HTTP 200 via local server. |
-| 2 | Dependency | **PASS** | HTTP-200 only | All 14 local reference(s) resolved HTTP 200. 1 external host reference(s) classified as Kept External. |
+| 2 | Dependency | **PASS** | HTTP-200 only | All 12 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External. |
 | 3 | Accessibility | **PASS** | DOM+assets confirmed | axe-core found 0 serious/critical violations across 1 route(s) (0 total). |
 | 4 | Performance | **PASS** | DOM+assets confirmed | Lighthouse met thresholds on 1 route(s). |
 | 5 | Site-wide audit | **PASS** | DOM+assets confirmed | Only one route declared; per-route vs. whole-site comparison is not applicable. Single-route Lighthouse score was emitted by gate 4. |
@@ -47,28 +47,31 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:41367/"
+      "final_url": "http://127.0.0.1:45531/"
     }
   },
-  "base_url": "http://127.0.0.1:41367"
+  "base_url": "http://127.0.0.1:45531"
 }
 ```
 
 ### Gate 2 — Dependency  (PASS)
 
 - **Evidence basis:** HTTP-200 only
-- **Summary:** All 14 local reference(s) resolved HTTP 200. 1 external host reference(s) classified as Kept External.
+- **Summary:** All 12 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External.
 - **Observations (JSON):**
 
 ```json
 {
-  "reference_count": 14,
-  "external_count": 1,
+  "reference_count": 12,
+  "external_count": 3,
   "external_sample": [
-    "https://cdn.prod.website-files.com/64a2995238dba40820b37689/656016dc008b45e6a1f01471_pedicelmarketingpreviewwebsite.jpg"
+    "https://fonts.googleapis.com",
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap",
+    "https://fonts.gstatic.com"
   ],
   "external_hosts": [
-    "cdn.prod.website-files.com"
+    "fonts.googleapis.com",
+    "fonts.gstatic.com"
   ]
 }
 ```
@@ -85,7 +88,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:41367/",
+      "url": "http://127.0.0.1:45531/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -121,7 +124,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "exit": 0,
       "ok": true,
       "stdout_tail": "",
-      "stderr_tail": "npm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1\nnpm notice To update run: npm install -g npm@12.0.1\nnpm notice\n",
+      "stderr_tail": "",
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -165,7 +168,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "exit": 0,
       "ok": true,
       "stdout_tail": "",
-      "stderr_tail": "npm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1\nnpm notice To update run: npm install -g npm@12.0.1\nnpm notice\n",
+      "stderr_tail": "",
       "scores": {
         "performance": 100,
         "accessibility": 100,
@@ -196,52 +199,52 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 4433,
+      "scrollHeight": 3655,
       "settle": {
-        "animation_count": 22,
+        "animation_count": 17,
         "settle_cap_ms": 3000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6098904397742231193__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/750968771033050272__320x720.png"
     },
     {
       "route": "/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 3827,
+      "scrollHeight": 2915,
       "settle": {
-        "animation_count": 22,
+        "animation_count": 17,
         "settle_cap_ms": 3000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3137083383595274365__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/5429592410744792240__768x1024.png"
     },
     {
       "route": "/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 3847,
+      "scrollHeight": 2915,
       "settle": {
-        "animation_count": 22,
+        "animation_count": 17,
         "settle_cap_ms": 3000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3313780688213180325__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/4560955536016026583__1024x768.png"
     },
     {
       "route": "/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 3807,
+      "scrollHeight": 2915,
       "settle": {
-        "animation_count": 22,
+        "animation_count": 17,
         "settle_cap_ms": 3000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/322403700942622314__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6267159638437067694__1440x900.png"
     }
   ],
   "viewports": [
