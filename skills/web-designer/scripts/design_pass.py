@@ -7,6 +7,8 @@ from urllib import request
 
 HERE = Path(__file__).resolve().parent
 SCHEMA = HERE / "design_plan_schema.json"
+sys.path.insert(0, str(HERE))
+from _secrets import require_minimax_key  # noqa: E402
 
 
 def resolve_path(document, dotted):
@@ -73,8 +75,7 @@ def compact_reference(root):
 
 
 def call_model(brief, reference, model, feedback=''):
-    key = os.environ.get('MINIMAX_API_KEY')
-    if not key: raise RuntimeError('MINIMAX_API_KEY is not set')
+    key = require_minimax_key('design_pass.call_model')
     system = '''You are a senior web designer. Return JSON only matching the supplied schema. Produce a plan, never files. State a layout thesis first; every section serves it. For every section supply a short human nav_label (1-2 words, or null) and in_nav boolean; footer, colophon, legal and utility sections must have in_nav false. Forbidden defaults: centered-everything hero, three-column feature grid with icons, purple/blue gradients, uniform rounded corners, Inter-for-everything, generic stock-photo layout. Choose one memorable brand-specific SIGNATURE ELEMENT. Vary order and emphasis for this brand, never a fixed template. Invent layout, structure, emphasis, and phrasing, but NEVER facts: cite only real non-empty brand brief dotted paths in source_brief_fields. Empty/missing evidence belongs in skipped_sections.'''
     payload = {'model': model, 'max_tokens': 6000, 'system': system, 'messages': [{'role':'user','content': 'Schema:\n'+SCHEMA.read_text()+'\nBrand brief:\n'+json.dumps(brief)+'\nCompact reference analysis:\n'+json.dumps(reference)+'\nValidation feedback from prior attempt:\n'+feedback}]}
     req = request.Request('https://api.minimax.io/anthropic/v1/messages', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type':'application/json'}, method='POST')

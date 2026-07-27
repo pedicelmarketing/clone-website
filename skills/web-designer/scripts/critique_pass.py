@@ -65,6 +65,14 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+# Sibling helper: shared MiniMax key resolution (env var, .env, HERMES_PROFILE_DIR/.env).
+# Importing it has the side effect of populating os.environ["MINIMAX_API_KEY"]
+# when it can be resolved from a .env file, so the rest of the script just uses
+# the env var normally.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _secrets import require_minimax_key, get_minimax_key  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 PYBROWSER = Path("/home/openclaw/.venvs/nt-mirror/bin/python")  # Playwright + Chromium
@@ -94,9 +102,7 @@ SETTLE_JS = (
 
 def _vision_call(model: str, system: str, messages: list, timeout: int = 180) -> dict:
     """Single round-trip. Raises on HTTP errors so callers can decide."""
-    key = os.environ.get("MINIMAX_API_KEY")
-    if not key:
-        raise RuntimeError("MINIMAX_API_KEY is not set")
+    key = require_minimax_key("critique_pass._vision_call")
     payload = {
         "model": model,
         "max_tokens": 4096,
@@ -621,10 +627,13 @@ def main(argv=None):
     plan = json.loads(plan_path.read_text())
     viewports = _parse_viewports(args.viewports)
 
-    # Pre-flight: API key
-    if not os.environ.get("MINIMAX_API_KEY"):
-        msg = "WARN: MINIMAX_API_KEY is not set; critique_pass.py cannot run. "\
-              "Skipping critique (no-op)."
+    # Pre-flight: API key (resolves env var, ~/.hermes/profiles/site-cloner/.env,
+    # or $HERMES_PROFILE_DIR/.env — see skills/web-designer/scripts/_secrets.py).
+    # Only no-op if the key really cannot be found anywhere.
+    if not get_minimax_key():
+        msg = ("WARN: MINIMAX_API_KEY is not set and could not be resolved from "
+               "any .env file. critique_pass.py cannot run vision calls. "
+               "Skipping critique (no-op).")
         print(msg, file=sys.stderr)
         return 0
 
