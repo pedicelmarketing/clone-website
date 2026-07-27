@@ -182,5 +182,30 @@ class ViewportParser(unittest.TestCase):
             cp._parse_viewports("1440")
 
 
+class RestoreBest(unittest.TestCase):
+    def test_picks_highest_total_snapshot(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            d = Path(td)
+            (d / "iter-01.design-plan.json").write_text("{}")
+            (d / "iter-02.design-plan.json").write_text("{}")
+            history = [
+                {"iteration": 1, "scores": {k: {"score": 4} for k in cp.RUBRIC_DIMENSIONS},
+                 "plan_snapshot": "iter-01", "applied": []},
+                {"iteration": 2, "scores": {k: {"score": 8} for k in cp.RUBRIC_DIMENSIONS},
+                 "plan_snapshot": "iter-02", "applied": []},
+            ]
+            # Rewrite paths to absolute so _restore_best can stat them
+            history[0]["plan_snapshot"] = str(d / "iter-01.design-plan.json")
+            history[1]["plan_snapshot"] = str(d / "iter-02.design-plan.json")
+            best = cp._restore_best(d, history)
+            self.assertEqual(best, str(d / "iter-02.design-plan.json"))
+
+    def test_returns_none_when_history_empty(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            self.assertIsNone(cp._restore_best(Path(td), []))
+
+
 if __name__ == "__main__":
     unittest.main()

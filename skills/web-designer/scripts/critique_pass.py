@@ -630,7 +630,6 @@ def main(argv=None):
 
     history: list[dict] = []
     last_total = -1
-    best_plan_snapshot: str | None = str(plan_path)
     iteration = 0
 
     # Pre-extract section IDs from the HTML so we can offer them as candidates
@@ -678,15 +677,15 @@ def main(argv=None):
         critique["viewports"] = [s["viewport"] for s in screenshots]
         critique["plan_snapshot"] = str(plan_path)
 
+        # Always snapshot the plan BEFORE applying — that's the revert target.
+        plan_snap = out_dir / f"iter-{iteration:02d}.design-plan.json"
+        plan_snap.write_text(json.dumps(plan, indent=2) + "\n")
+
         applied: list[str] = []
         if args.apply:
             new_plan, applied = _apply_revisions(plan, critique["revisions"], brief)
             critique["applied"] = applied
             if any(a.startswith("APPLIED") for a in applied):
-                # Write the new plan to a snapshot first; we'll only commit it if it
-                # doesn't regress in the next critique pass.
-                snap = out_dir / f"iter-{iteration:02d}.design-plan.json"
-                snap.write_text(json.dumps(new_plan, indent=2) + "\n")
                 plan_path.write_text(json.dumps(new_plan, indent=2) + "\n")
                 plan = new_plan
                 # Re-compose so the next critique sees the updated structure
