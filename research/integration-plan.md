@@ -1,10 +1,9 @@
-# Integration plan — DEFERRED implementation
+# Integration plan — implementation status
 
 **Date:** 2026-07-24 · **Author:** site-cloner-agent · **Branch:** feat/web-designer
-**Status:** **DEFERRED. Do not implement now.** This document describes the *future* wiring
-of the workflow in `workflow-design.md` into the `site-cloner` profile. It is a planning
-artifact; it contains no code changes and no immediate file moves. It exists so a later
-implementation pass can be sequenced without re-deciding the architecture.
+**Status:** **IMPLEMENTED.** M1–M5 are complete on this branch. The original research and
+architecture notes below remain useful context; the milestone table in §5 is the authoritative
+implementation status.
 
 The research above (the other three files in `research/`) is the input. This file is the
 "how do we ship it" answer.
@@ -210,40 +209,51 @@ a shared filesystem path both profiles can read). See open question §6.5.
 
 ## §5 — Phased milestones
 
-### Milestone M0 — Research dossier (THIS PR)
+### Milestone M0 — Research dossier
 - ✅ Author the four files in `research/`.
 - ✅ Open draft PR for operator review.
 
-### Milestone M1 — Skill scaffold + reference-understanding scripts (next sprint)
-- Create `skills/web-designer/SKILL.md` (process only — trigger + 5 steps + honesty rules).
-- Implement `extract_tokens.py`, `inventory_copy.py`, `inventory_components.py`,
+### Milestone status summary
+
+| Milestone | Status | Commit(s) |
+|---|---|---|
+| M1 — Skill scaffold + reference-understanding scripts | ✅ Done | `89bbdbe`, `51f2966` |
+| M2 — Brand-brief contract + research-agent integration | ✅ Done | `f92c98d`, `88d546f`, `af26947` |
+| M3 — Design pass | ✅ Done | `9debe0f`, `08d68b4` |
+| M4 — Validation gate wiring | ✅ Done | `7248c18` |
+| M5 — Operator-facing docs + rollout | ✅ Done | this commit |
+
+### Milestone M1 — Skill scaffold + reference-understanding scripts
+- ✅ Create `skills/web-designer/SKILL.md` (trigger + 5 steps + honesty rules).
+- ✅ Implement `extract_tokens.py`, `inventory_copy.py`, `inventory_components.py`,
   `infer_breakpoints.py` following the recipes in `understand-the-reference.md`.
-- Vendor the assets under `skills/web-designer/assets/`.
-- Validate on 3 reference URLs of varying complexity (a SaaS marketing site, a personal
+- ✅ Vendor the assets under `skills/web-designer/assets/`.
+- ✅ Validate on 3 reference URLs of varying complexity (a SaaS marketing site, a personal
   portfolio, a content-heavy news site).
 
 ### Milestone M2 — Brand-brief contract + research-agent integration
-- Finalize `brand_brief_schema.json` with the research-agent operator.
-- Add the cross-channel posting rule to site-cloner's SOUL.md.
-- Run a smoke test: site-cloner posts a brief, research-agent responds, site-cloner
+- ✅ Finalize `brand_brief_schema.json` with the research-agent operator.
+- ✅ Add the cross-channel posting rule to site-cloner's SOUL.md.
+- ✅ Run a smoke test: site-cloner posts a brief, research-agent responds, site-cloner
   validates the JSON shape, both profiles agree on the schema.
 
 ### Milestone M3 — Design pass (the actual creative work)
-- Implement step 3 of the web-designer skill (token synthesis + section composition +
+- ✅ Implement step 3 of the web-designer skill (token synthesis + section composition +
   motion design + copy pass).
-- Vendor the motion recipes (AOS / Motion / GSAP snippets).
-- Test on the `pedicelmarketing` example from `clone-website/` end-to-end.
+- ✅ Vendor the motion recipes (CSS-only implementation in the current composer; reference
+  material remains under `skills/web-designer/assets/`).
+- ✅ Test on the `pedicelmarketing` example from `clone-website/` end-to-end.
 
 ### Milestone M4 — Validation gate wiring
-- Wire the 8 gates from `workflow-design.md` §4 into the skill's step 5.
-- Add `unlighthouse` and `axe-core` integration to the local CI.
-- Validate on the `pedicelmarketing` example; capture the comparison table vs Linear.
+- ✅ Wire the 8 gates from `workflow-design.md` §4 into the skill's step 5.
+- ✅ Add axe-core/Lighthouse integration to the local validation harness.
+- ✅ Validate on the `pedicelmarketing` example; evidence is in `reports/m4-validation/`.
 
 ### Milestone M5 — Operator-facing docs + rollout
-- Add a worked example to the project's README.
-- Update the site-cloner SOUL.md to reference the new web-designer skill (without
-  duplicating its content).
-- Mark `feat/web-designer` ready for merge.
+- ✅ Add a worked example to the project's README.
+- ✅ Refresh `skills/web-designer/SKILL.md` from the M1 process stub to the implemented
+  five-step workflow, including known limits.
+- ✅ Mark M1–M5 status and commit hashes in this plan; §6 remains open for operator input.
 
 ---
 

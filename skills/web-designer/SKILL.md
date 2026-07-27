@@ -6,211 +6,244 @@ license: Adapted internal copy. See LEGAL_NOTICE.md.
 
 # Web Designer — 5-step brand-authentic redesign workflow
 
-This skill takes three inputs (brand site + reference site + brand social/asset folder) and
-produces a new site that is brand-authentic (real copy, real photos, real services) and
-measurably better than the reference (the reference's *craft* without copying its *code*).
+This skill takes three inputs — the brand's own site, a reference site, and brand social or asset
+inputs — and produces a new, brand-authentic site. The reference contributes observable
+structure, typography, responsive behavior, and motion vocabulary; it does not contribute copied
+source code or visual identity. This is the phase-2 sibling of `nt-site-mirror`: a single-URL
+faithful baseline still belongs to that skill.
 
-It is the **phase-2** sibling of `nt-site-mirror`. That skill produces a *faithful baseline*
-of a single URL; this skill produces a *new* site that is informed by a reference but lives
-in the brand's world. The two skills share the same tooling philosophy: observation is the
-floor, structure is the goal, and a missing feature is a Fidelity Gap, never a Pass.
+All five workflow steps are implemented in this repository. The scripts are deterministic where
+measurement matters, and every handoff is evidence-bearing:
 
-**This M1 copy is process-only.** The four scripts under `scripts/` (`extract_tokens.py`,
-`inventory_copy.py`, `inventory_components.py`, `infer_breakpoints.py`) are the
-reference-understanding passes that step 1 needs. The brand-brief handoff (step 2), token
-synthesis (step 3), design pass (step 4), and validation gates (step 5) are not yet
-implemented — they arrive in M2+. Each script can be invoked in isolation; the 5-step
-process below describes how the *workflow* will compose them once M2-M5 land.
+1. reference understanding (`capture_assets.py`, `extract_tokens.py`, `inventory_copy.py`,
+   `inventory_components.py`, `infer_breakpoints.py`, and record-only `motion_audit.py`);
+2. brand-brief handoff and schema validation (`research-agent`, `validate_brand_brief.py`);
+3. token synthesis (`synthesize_tokens.py`);
+4. static design pass / composition (`compose_site.py`);
+5. eight-gate validation (`validate_site.py`).
 
 ---
+
+## Trigger and inputs
+
+Trigger this skill only when the operator provides all three inputs:
+
+1. the brand's own site URL;
+2. a reference site URL, admired for structure/craft/motion rather than visual identity; and
+3. at least one brand social handle or a folder of brand assets (logo, photos, copy, or related
+   material).
+
+Do not trigger it for a single-URL mirror request. Do not use it to make an isolated token, copy,
+component, or breakpoint observation sound like a redesign. The isolated browser scripts may be
+invoked directly when that is all the operator requested.
 
 ## Honesty rules (apply to every step)
 
-The same discipline as `nt-site-mirror` applies here. Every claim must be backed by observed
-evidence.
+The same evidence discipline as `nt-site-mirror` applies throughout this workflow.
 
-- **Observation is the floor.** Every structural fact, every token, every component, every
-  breakpoint, every copy block must come from a real observation. Fabricating a section
-  list you did not observe, a palette you did not extract, or a testimonial you did not
-  find is a Fidelity Gap.
-- **Pass / Partial / Blocked.** State the tier the evidence supports. Do not claim a
-  higher tier. A script that exits nonzero is a blocker, not a partial — fix the script
-  or fix the input, then re-run.
-- **Asset hygiene.** The same classification table as `nt-site-mirror` (Original / Local
-  Copy / Embed / Kept External / User-Supplied Baseline Asset / Recreated / Approximated /
-  Blocked / Unknown) applies to extracted tokens, captured fonts, and inventoried
-  components. The reference's source code is *not* extracted — only its observable
-  *behavior* (tokens, structure, copy, motion) is.
-- **Each script reports its own evidence basis.** Every output JSON includes a
-  `meta.evidence_basis` field: `Observed visually` / `Interaction-tested` /
-  `DOM+assets confirmed` / `HTTP-200 only` / `Not exercised`. A "Pass" backed only by
-  HTTP 200s must say so.
-- **Builder-hosted / telemetry-heavy sites emit benign errors.** Wix, Squarespace, and
-  Webflow targets will produce console errors and blocked sub-resources from their own
-  runtime — these are present on the live source too, so they are not mirror defects.
-  When any of these scripts run against such a target, the script must record the access
-  state honestly (`Observed under challenge`, `Blocked by bot mitigation`, etc.) and emit
-  whatever data it could still extract, rather than exiting silently.
-- **No silent fallbacks.** If a script cannot extract a token class (e.g. no CSS custom
-  properties at `:root`), it writes an empty array for that class and notes the reason
-  in the output's `meta.notes` — it does not invent counts or fake values.
+- **Observation is the floor.** Structural facts, tokens, components, breakpoints, copy blocks,
+  brand facts, and motion claims must come from an observed artifact or an operator-provided
+  input. Do not fabricate a section, palette, testimonial, service, photo, or social post.
+- **Pass / Partial / Blocked.** State the tier supported by the evidence. A required script that
+  exits nonzero is a blocker: stop, preserve its diagnostic output, and report it. Do not silently
+  continue with guessed inputs.
+- **Evidence basis is explicit.** Per-system claims use one of `Observed visually`,
+  `Interaction-tested`, `DOM+assets confirmed`, `HTTP-200 only`, or `Not exercised`. A result
+  backed only by an HTTP response is not a browser-behavior claim.
+- **Positive evidence only.** A zero count is a pass only when the runner exited cleanly and
+  emitted a parsed result document containing that count. Missing output is `Not exercised`, not
+  an inferred pass.
+- **Asset hygiene.** Use the canonical statuses `Original | Local Copy | Embed | Kept External |
+  User-Supplied Baseline Asset | Recreated | Recreated From Observation | Approximated | Blocked |
+  Unknown`. Paid fonts, protected assets, and provider-streamed media remain classified and are
+  not silently redistributed.
+- **Blocked source = limitation.** If own-site, social, or reference research is blocked, carry
+  the limitation into the brief/build/validation report. Empty arrays stay empty. Never replace a
+  missing real photo with stock content or invent a testimonial.
+- **No silent fallbacks.** Extractors emit empty arrays and notes when a class cannot be observed;
+  they do not synthesize values. The composer omits sections whose source data is absent and
+  records the reason in `BUILD-REPORT.md`.
+- **Fidelity gap rule.** A missing, frozen, disabled, or materially downgraded in-scope feature is
+  a `Fidelity Gap`, never a `Pass`. An accepted exception remains an exception.
+- **Acceptance tiers.** Use only the tier supported by exercised evidence: `First-render`,
+  `Validated (declared scope)`, `Offline-validated`, or `Partial`.
 
-## The 5-step process
+## Runtime prerequisites and interpreter split
+
+Run project commands from the repository root.
+
+- Browser scripts require Playwright and Chromium through
+  `~/.venvs/nt-mirror/bin/python` (on this host: `/home/openclaw/.venvs/nt-mirror/bin/python`).
+  This applies to `capture_assets.py`, `extract_tokens.py`, `inventory_copy.py`,
+  `inventory_components.py`, `infer_breakpoints.py`, and record-only `motion_audit.py`.
+- `validate_brand_brief.py`, `synthesize_tokens.py`, and `compose_site.py` are stdlib-only and run
+  with `python3`.
+- `validate_site.py` is launched with `python3`. Its browser-backed responsive and axe checks use
+  the Playwright venv; axe-core and Lighthouse require `node`/`npx` (the harness invokes them via
+  `npx`). If a required runner is unavailable, the affected gate is `Not exercised` and the tier
+  is downgraded.
+- Step 2 belongs to the separate `research-agent` profile. Send the structured request through
+  the configured inter-profile channel/gateway and read the returned files; never write into
+  `~/.hermes/profiles/research-agent/` directly.
+
+## The five implemented steps
 
 ### Step 1 — Understand the reference
 
-Owner: **site-cloner agent itself**, with the `nt-site-mirror` skill + the four M1 scripts
-under this skill.
+Owner: site-cloner, using the existing `nt-site-mirror` capture helper and this skill's browser
+scripts. Persist all outputs under a project-local `reports/reference/` directory.
 
-Substeps:
-1. `capture_assets.py <reference_url> -o reports/reference/asset-graph.json` — existing
-   `nt-site-mirror` script; produces the runtime asset graph.
-2. `extract_tokens.py <reference_url> -o reports/reference/tokens/` — this skill; emits
-   `tokens/color.json`, `tokens/typography.json`, `tokens/spacing.json`,
-   `tokens/radius.json`, `tokens/shadow.json` per `understand-the-reference.md` §2.
-3. `inventory_copy.py <reference_url> -o reports/reference/copy.json` — this skill;
-   emits the copy inventory with section/role/source_url labels per §3.
-4. `inventory_components.py <reference_url> -o reports/reference/components.json` — this
-   skill; emits the component instance map per §4.
-5. `infer_breakpoints.py <reference_url> -o reports/reference/breakpoints.json` — this
-   skill; sweeps widths 320..1920 and emits the responsive breakpoint map per §5.
-6. `motion_audit.py --source-url <reference_url> --local-url <reference_url> --record-only
-   --out reports/reference/motion --seconds 12` — reuse existing `nt-site-mirror` tool,
-   *record-only* mode, to produce a webm of the reference's motion vocabulary.
-7. Concatenate into `reports/reference/REPORT.md` using `templates/reference-REPORT.md`.
+```sh
+PYBROWSER="$HOME/.venvs/nt-mirror/bin/python"
+REFERENCE_URL="https://example-reference.test"
+REFERENCE_DIR="reports/reference"
+mkdir -p "$REFERENCE_DIR/tokens"
 
-**Honesty constraint:** if any substep is blocked (e.g. reference is a Wix site with
-session-coupled root document — see `nt-site-mirror`'s builder-runtime guidance), document
-the block and fall back to observation-only. Do not invent a section list you did not
-observe.
+"$PYBROWSER" skills/nt-site-mirror/scripts/capture_assets.py \
+  "$REFERENCE_URL" -o "$REFERENCE_DIR/asset-graph.json"
+"$PYBROWSER" skills/web-designer/scripts/extract_tokens.py \
+  "$REFERENCE_URL" -o "$REFERENCE_DIR/tokens/"
+"$PYBROWSER" skills/web-designer/scripts/inventory_copy.py \
+  "$REFERENCE_URL" -o "$REFERENCE_DIR/copy.json"
+"$PYBROWSER" skills/web-designer/scripts/inventory_components.py \
+  "$REFERENCE_URL" -o "$REFERENCE_DIR/components.json"
+"$PYBROWSER" skills/web-designer/scripts/infer_breakpoints.py \
+  "$REFERENCE_URL" -o "$REFERENCE_DIR/breakpoints.json"
+```
 
-**Stop and report** if any substep is blocked. The reference brief is the input to every
-later step; an incomplete brief produces an incomplete redesign.
+When the reference has meaningful motion, record it with the existing helper:
 
-### Step 2 — Understand the brand (research-agent handoff)
+```sh
+"$PYBROWSER" skills/nt-site-mirror/scripts/motion_audit.py \
+  --source-url "$REFERENCE_URL" --local-url "$REFERENCE_URL" --record-only \
+  --out "$REFERENCE_DIR/motion" --seconds 12
+```
 
-Owner: **`research-agent` profile** (M2+).
+Fill `reports/reference/REPORT.md` from `templates/reference-REPORT.md`. The four web-designer
+scripts emit `color.json`, `typography.json`, `spacing.json`, `radius.json`, `shadow.json`,
+`copy.json`, `components.json`, and `breakpoints.json` with metadata and an evidence basis.
+`capture_assets.py` supplies the runtime asset graph; `motion_audit.py` is record-only here.
+Stop and report a blocked substep rather than inventing a reference brief.
 
-Site-cloner posts a structured brief to the `#research` channel (the research-agent home)
-describing the brand site, the reference, the operator's design brief, and the deliverable
-schema. Research-agent returns `reports/brand/brand-brief.json` (machine-readable) +
-`reports/brand/brand-brief.md` (1-page human summary).
+### Step 2 — Understand the brand via research-agent
 
-Site-cloner validates the JSON against `scripts/brand_brief_schema.json` (M2+). Reject
-with a clear message if it does not conform.
+Owner: the `research-agent` profile. Post a request matching `research/workflow-design.md §2.1`:
+`task: "brand_research_for_redesign"`, `project_slug`, `brand{name, own_site, social,
+assets_provided, design_brief}`, `reference{url, rationale}`, and
+a `deliverable{format, save_to, must_include}`. Research-agent returns:
 
-**Stop and report** if research-agent returns partial / blocked content. Do not invent
-brand facts (testimonials, services, photos) to fill in gaps; record the gap in the
-validation report and ask the operator.
+- `reports/brand/brand-brief.json` — machine-readable contract;
+- `reports/brand/brand-brief.md` — human-readable summary.
+
+Validate before consuming the brief:
+
+```sh
+python3 skills/web-designer/scripts/validate_brand_brief.py \
+  reports/brand/brand-brief.json \
+  --schema skills/web-designer/scripts/brand_brief_schema.json
+```
+
+The command must print `VALID <path>`. If it does not, reject the brief and re-request with the
+schema attached. Partial or blocked source declarations in the brief are authoritative; do not
+supplement them with guesses or a second uncontracted scrape.
 
 ### Step 3 — Synthesize the token system
 
-Owner: **site-cloner agent itself** (M3+).
+Owner: site-cloner, using `synthesize_tokens.py`. The validated brand brief owns the palette and
+font-family decisions. The reference token directory contributes observed structural scales;
+reference colors are intentionally not copied wholesale. The script emits Style-Dictionary-
+friendly JSON, canonical CSS, a Tailwind bridge, and provenance.
 
-Build a single token system that fuses the brand's real palette (from
-`brand-brief.palette_from_logo`) with the reference's typographic discipline (from
-`reports/reference/tokens/`). Persist via Style Dictionary →
-`tokens/dist/tokens.css` + `tailwind.config.ts`. The reference's tokens are *not* copied
-holistically — they suggest the *scale* the designer cared about; the brand's palette
-overrides the *colors*.
+```sh
+python3 skills/web-designer/scripts/synthesize_tokens.py \
+  --brand-brief reports/brand/brand-brief.json \
+  --reference-tokens reports/reference/tokens \
+  -o reports/tokens
+```
 
-**Token discipline:** every new color in a component must reference a token variable. No
-ad-hoc hex codes in component files.
+Required outputs include `reports/tokens/tokens/dist/tokens.css`,
+`reports/tokens/tokens/dist/tailwind-tokens.json`, and `reports/tokens/tokens/PROVENANCE.md`.
+Every new page color must reference a token variable; paid-font license notes stay in provenance.
 
 ### Step 4 — Compose the new site
 
-Owner: **site-cloner agent itself** (M3+).
+Owner: site-cloner, using `compose_site.py`. This is a real, executable design pass: it selects
+and orders sections from available brand data, uses brand-authentic copy/assets, emits token-driven
+HTML/CSS, applies the implemented CSS motion recipe, and writes a build report listing emitted and
+skipped sections plus limitations. It revalidates the brief before composing.
 
-Per `workflow-design.md` §3, this is the actual creative work: section composition, motion
-design, copy pass, signature element, *iterate with screenshots*. Push the 10x not by
-re-coding the reference but by replacing each reference component with the
-accessible, theme-able shadcn equivalent, then visually differentiating through tokens.
-
-### Step 5 — Validate against the 8 gates
-
-Owner: **site-cloner agent itself** (M4+).
-
-Per `workflow-design.md` §4 and `references/validation-checklist.md`: boot, dependency,
-accessibility (axe), performance (Lighthouse ≥ 90), site-wide audit (unlighthouse),
-responsive (viewports), motion, source-paired. Each gate states its evidence basis;
-failure → `Partial` / `Fidelity Gap` per the acceptance tiers.
-
----
-
-## Asset classification (canonical — referenced by every step)
-
-The same table as `nt-site-mirror`, applied to *extracted* tokens / *captured* fonts:
-
-| Status | Meaning (in the web-designer context) |
-|--------|--------------------------------------|
-| `Original` | (not used here — web-designer builds a *new* site, not a mirror) |
-| `Local Copy` | A token / font / component that the new site reproduces from the reference's extracted values |
-| `Embed` | A third-party widget kept in the new deliverable (e.g. Cal.com embed) |
-| `Kept External` | A reference asset kept external in the redesign (e.g. a font CDN URL) |
-| `User-Supplied Baseline Asset` | A brand-provided asset (logo, photo) — the source of truth for the brand's palette |
-| `Recreated` | A component rebuilt from observation (we observed it, then re-coded it in shadcn) |
-| `Recreated From Observation` | Same as Recreated; preferred wording when the recreation is explicitly visual |
-| `Approximated` | A reference token / component where the extracted value was incomplete (e.g. only 3 of 4 weights available) |
-| `Blocked` | An extractor couldn't capture the asset (CSP, XHR, etc.) |
-| `Unknown` | Default when extraction is not yet exercised |
-
-`User-Supplied Baseline Asset` is the most important status here — it is the *brand*'s
-asset, not the *reference*'s. The brand-brief is the pathway that fills this in (M2+).
-
-## Evidence priority
-
-1. Operator-provided brand assets (Dropbox paths, social screenshots)
-2. Brand-brief JSON from research-agent
-3. Reference brief from step 1 (extracted tokens, copy, components, breakpoints, motion)
-4. Live website (the reference)
-5. Source inspection (the reference's CSS / DOM)
-
-Higher priority wins. Conflicts go in the validation report's Risks section.
-
-## Conventions
-
-- **File layout.** All reference outputs land under `reports/reference/`. All brand
-  outputs (when M2+ lands) under `reports/brand/`. Validation under `reports/validation/`.
-- **Output path on stdout.** Each script prints the path(s) it wrote to stdout so a
-  parent orchestrator can chain them. Errors go to stderr; exit code is nonzero on
-  failure. Strict — the same honesty discipline as `nt-site-mirror`.
-- **Python interpreter.** Reference-understanding scripts that need a browser use
-  `~/.venvs/nt-mirror/bin/python` (the same Playwright/Chromium interpreter
-  `nt-site-mirror` uses). Scripts that don't need a browser use plain `python3`.
-- **What we do NOT do.** No rebrand of the reference. No copy of the reference's
-  source code. No extraction of the reference's JS bundle. No inference of values that
-  were not observed. The reference brief is *descriptive* of the reference, not a
-  template for the new site.
-
-## File layout
-
-```
-skills/web-designer/
-├── SKILL.md                              ← this file (process only, M1 scope)
-├── scripts/
-│   ├── extract_tokens.py                 ← M1 — color/typography/spacing/radius/shadow
-│   ├── inventory_copy.py                 ← M1 — every text node tagged by section + role
-│   ├── inventory_components.py           ← M1 — component instance detection
-│   ├── infer_breakpoints.py              ← M1 — Playwright width sweep 320..1920
-│   └── brand_brief_schema.json           ← M2 — research-agent return contract
-├── references/
-│   ├── token-extraction-recipes.md       ← M1 — vendored from understand-the-reference §2
-│   ├── validation-checklist.md           ← M1 — the 8 gates from workflow-design §4
-│   ├── motion-vocabulary-to-library.md   ← M2+ — vendored from workflow-design §3
-│   ├── brand-brief-contract.md           ← M2+ — JSON schema + worked example
-│   └── anti-ai-slop.md                   ← M3+ — vendored from frontend-design skill
-├── templates/
-│   ├── reference-REPORT.md               ← M1 — the §7 concatenation template
-│   ├── brand-brief.md                    ← M2+ — human-readable summary
-│   └── validation-report.md              ← M4+ — the 8-gate report template
-└── assets/
-    ├── tailwind-preset.cjs               ← M3+ — opinionated preset
-    ├── style-dictionary.config.cjs       ← M3+ — base config for token build
-    ├── motion-recipes/                   ← M3+ — AOS / Motion / GSAP snippets
-    └── shadcn-registry.json              ← M3+ — which shadcn components map to which patterns
+```sh
+python3 skills/web-designer/scripts/compose_site.py \
+  --brand-brief reports/brand/brand-brief.json \
+  --tokens reports/tokens \
+  --reference-report reports/reference \
+  -o reports/site
 ```
 
-This M1 commit ships the four scripts plus the M1-scoped references and templates. M2+
-files are placeholders (`PACKED_WITH_M2_PLACEHOLDER` content) so the directory tree
-matches `integration-plan.md` §2 from day one — they will be filled in their respective
-milestones, not as a single batch.
+The output is a servable site containing `index.html`, `tokens.css`, `styles.css`, and
+`BUILD-REPORT.md`. Missing source data causes an explicit skipped section, not invented content.
+
+### Step 5 — Validate the eight gates
+
+Owner: site-cloner, using `validate_site.py` and its local-server/browser/Node integrations.
+The harness validates the declared routes (default `/`) and viewport widths (default
+`320,768,1024,1440`) and writes both machine-readable and Markdown evidence.
+
+```sh
+python3 skills/web-designer/scripts/validate_site.py \
+  reports/site -o reports/validation
+```
+
+Available options include `--routes /,/about`, `--viewports 320,768,1024,1440`,
+`--timeout 30`, and `--skip-lighthouse`. Do not use `--skip-lighthouse` when claiming a full
+validated tier. The eight reported gates are boot, dependency, accessibility (axe), performance
+(Lighthouse), site-wide audit, responsive, motion/reduced-motion, and token discipline. Every
+verdict carries its evidence basis; any `FAIL` or `NOT-EXERCISED` result prevents a `Validated`
+claim.
+
+## Known limits
+
+- The composer emits one single-route static HTML/CSS site. It has no framework build and no
+  multi-route composition yet.
+- Motion is CSS-only (the emitted restrained fade/slide recipe plus reduced-motion handling); it
+  does not implement JavaScript motion libraries or a video-motion recreation pass.
+- The design pass does not yet map observed components to shadcn primitives and does not yet run
+  a separate signature-element pass. Those are M3 stretch items described in
+  `research/workflow-design.md §3`, and are not implemented here.
+- Reference understanding can observe multiple routes only when the operator invokes the scripts
+  for those routes; the current composer still emits one route.
+- Kept-external and blocked/paid assets remain dependencies or documented limitations. They are not
+  silently downloaded or replaced.
+
+## Asset classification
+
+Use the canonical table below for every reference, brand, and generated asset:
+
+| Status | Web-designer meaning |
+|---|---|
+| `Original` | Not a phase-2 deliverable asset; phase 2 creates a new site. |
+| `Local Copy` | A permitted local representation of an observed value or asset. |
+| `Embed` | A third-party widget intentionally retained. |
+| `Kept External` | A classified external URL left outside the output. |
+| `User-Supplied Baseline Asset` | A brand-provided logo, photo, or other source-of-truth asset. |
+| `Recreated` / `Recreated From Observation` | A new implementation based on observed behavior. |
+| `Approximated` | An incomplete observation represented with an explicit limitation. |
+| `Blocked` | Capture or acquisition was prevented. |
+| `Unknown` | Not exercised or not yet classified. |
+
+## Evidence and delivery checklist
+
+Before reporting a phase-2 result:
+
+- [ ] The three-input trigger was satisfied and the reference scope is declared.
+- [ ] Step-1 JSON and the reference report are present, with blocks and unknowns documented.
+- [ ] Research-agent returned a schema-valid brief; `validate_brand_brief.py` printed `VALID`.
+- [ ] Token provenance identifies brand-authoritative versus reference-structural inputs.
+- [ ] `BUILD-REPORT.md` records emitted/skipped sections and carried-forward limitations.
+- [ ] `validate_site.py` produced `gate-results.json` and `validation-report.md`.
+- [ ] Every gate and external dependency has an evidence basis and honest status.
+- [ ] The final acceptance tier matches the actual exercised evidence.
+
+For the handoff contract and unresolved operator decisions, see `research/workflow-design.md` and
+`research/integration-plan.md`. For a copy-pasteable worked example and the measured M4 result,
+see the repository-root `README.md`.
