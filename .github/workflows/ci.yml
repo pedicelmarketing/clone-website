@@ -35,8 +35,15 @@ jobs:
           print("web-designer imports PASS")
           PY
 
+      - name: Install pytest
+        # `setup-python` installs pip into the runner PATH via get-pip.py on
+        # ubuntu-latest, so `python -m pip` is available without extra apt
+        # packages. This avoids the previous dependency on `uv` (not installed
+        # on a clean runner) while keeping pytest isolated to this step.
+        run: python -m pip install --quiet pytest
+
       - name: Web-designer pytest
-        run: uv run --with pytest pytest -q
+        run: python -m pytest -q
 
       - name: Script smoke
         run: python skills/nt-site-mirror/scripts/mirror_assets.py --help >/dev/null && python skills/nt-site-mirror/scripts/serve.py --help >/dev/null
