@@ -187,19 +187,27 @@ def revalidate_brief(brief_path: Path, schema_path: Path) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 
 
-def load_tokens(tokens_root: Path) -> tuple[Path, dict[str, Any], str]:
-    """Load the synthesized token artifacts. Returns (tokens.css path, tailwind json dict, css text).
+def load_tokens(tokens_root: Path) -> tuple[Path, dict[str, Any], str, dict[str, Any]]:
+    """Load the synthesized token artifacts. Returns (tokens.css path, tailwind json dict, css text, font_substitutions).
 
     The composer needs:
       * tokens/dist/tokens.css     — copied into the output site as a static asset.
       * tokens/dist/tailwind-tokens.json — read for the palette + spacing values
                                            so we can do contrast math + record
                                            provenance without re-parsing CSS.
+      * tokens/dist/font-substitutions.json — authoritatively records which
+                                              families the synthesizer emitted
+                                              (and which were paid->OFL swapped).
+                                              Used to build the Google Fonts
+                                              <link> tag so the page never
+                                              requests a paid family and never
+                                              fetches a family nothing uses.
 
-    Raises ComposeError if either is missing.
+    Raises ComposeError if any required file is missing.
     """
     css_path = tokens_root / "tokens" / "dist" / "tokens.css"
     json_path = tokens_root / "tokens" / "dist" / "tailwind-tokens.json"
+    substitutions_path = tokens_root / "tokens" / "dist" / "font-substitutions.json"
 
     if not css_path.is_file():
         raise ComposeError(
@@ -218,7 +226,54 @@ def load_tokens(tokens_root: Path) -> tuple[Path, dict[str, Any], str]:
     except json.JSONDecodeError as exc:
         raise ComposeError(f"tailwind-tokens.json is not valid JSON ({json_path}): {exc}") from exc
 
-    return css_path, tw, css_text
+    font_substitutions: dict[str, Any] = {
+        "meta": {},
+        "font_substitutions": {},
+        "google_fonts_requested": [],
+    }
+    if substitutions_path.is_file():
+        try:
+            font_substitutions = json.loads(substitutions_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise ComposeError(
+                f"font-substitutions.json is not valid JSON ({substitutions_path}): {exc}"
+            ) from exc
+    else:
+        # Older synthesizer outputs without a sidecar are tolerated: build a
+        # defensive empty mapping so the render path still works. We never
+        # fabricate Google Fonts requests from tokens.css alone — if the
+        # synthesizer didn't write a sidecar we ship no webfont link and let
+        # the fallback chain carry the page.
+        font_substitutions = {
+            "meta": {},
+            "font_substitutions": {},
+            "google_fonts_requested": [],
+            "missing_sidecar": True,
+        }
+
+    return css_path, tw, css_text, font_substitutions
+
+
+def google_fonts_link(font_substitutions: dict[str, Any]) -> str:
+    """Build the `<link href="https://fonts.googleapis.com/css2?…">` value
+    from the synthesizer's font-substitutions sidecar. Returns an empty string
+    if no family is on the Google Fonts catalog that the project supports —
+    in which case the page must rely on the system-font fallback chain.
+    Never returns a link for a family that the synthesizer did not record as
+    a substituted (OFL) primary, so paid families cannot leak into the HTML.
+    """
+    families: list[str] = []
+    for entry in font_substitutions.get("google_fonts_requested", []) or []:
+        family_arg = entry.get("family_arg")
+        if family_arg and family_arg not in families:
+            families.append(family_arg)
+    if not families:
+        return ""
+    return (
+        "https://fonts.googleapis.com/css2?"
+        + "&".join(f"family={arg}" for arg in families)
+        + "&display=swap"
+    )
 
 
 def assert_tokens_referenced(css_text: str, referenced: list[str]) -> None:
@@ -818,6 +873,7 @@ def render_html_from_plan(
     sections: list[dict[str, Any]],
     brand_name: str,
     brand_name_source: str,
+    font_substitutions: dict[str, Any] | None = None,
 ) -> str:
     """Render the full index.html from a plan.
 
@@ -825,9 +881,18 @@ def render_html_from_plan(
     fallback (header, main, footer, semantic landmarks, one h1, alt text,
     labels) but every section body comes from `sections`, which in turn was
     built by plan_section_view() from the design plan.
+
+    `font_substitutions` is the synthesizer sidecar; it carries the resolved
+    primary family for each role (after any paid->OFL substitution) and the
+    Google Fonts URL fragment list to fetch. The page-side `<html style="...">`
+    inline fallback uses the synthesized primary names — never the brand's
+    original (paid) names — so the inline fallback cannot accidentally load
+    an unlicensed font either.
     """
     typography = brief.get("typography_recommendation", {}) or {}
     palette = brief.get("palette_from_logo", {}) or {}
+    subs = font_substitutions or {}
+    resolved = subs.get("font_substitutions", {}) or {}
 
     copy_index = index_copy_blocks(plan.get("copy_blocks", []) or [])
     section_htmls = [
@@ -850,11 +915,27 @@ def render_html_from_plan(
     thesis_statement = (thesis.get("statement") or "").strip()[:160]
     description = escape(thesis_statement or first_headline)
 
-    display = "Inter" if typography.get("display_family") == "Switzer" else escape(typography.get("display_family", "sans-serif"))
-    body = escape(typography.get("body_family", "sans-serif"))
-    mono = escape(typography.get("mono_family", "monospace"))
+    # Use the resolved (post-substitution) families for the inline fallback
+    # chain in <html style="...">. Fall back to the brand-declared family only
+    # if the synthesizer didn't write a sidecar.
+    display = escape(resolved.get("display", {}).get("primary") or typography.get("display_family") or "sans-serif")
+    body = escape(resolved.get("body", {}).get("primary") or typography.get("body_family") or "sans-serif")
+    mono = escape(resolved.get("mono", {}).get("primary") or typography.get("mono_family") or "monospace")
     primary = escape(palette.get("primary", "#000000"))
     secondary = escape(palette.get("secondary", "#ffffff"))
+
+    fonts_link = google_fonts_link(subs)
+    if fonts_link:
+        fonts_preconnect = (
+            '    <link rel="preconnect" href="https://fonts.googleapis.com">\n'
+            '    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+            f'    <link href="{fonts_link}" rel="stylesheet">\n'
+        )
+    else:
+        fonts_preconnect = (
+            '    <!-- No Google Fonts link: synthesizer sidecar recorded zero '
+            'catalog families; the page relies on its fallback chain. -->\n'
+        )
 
     # Nav: link to every section that exists. The first one anchors to #hero.
     nav_items: list[str] = []
@@ -2686,6 +2767,7 @@ def render_plan_build_report(
     expected_token_vars: list[str],
     tokens_dist_css: str,
     tokens_dist_json: str,
+    font_substitutions: dict[str, Any] | None = None,
     outdir: Path,
 ) -> str:
     """Emit BUILD-REPORT.md for a plan-driven build.
@@ -2784,6 +2866,32 @@ def render_plan_build_report(
         )
     brand_decisions_section = "\n".join(brand_decision_lines)
 
+    # Font substitutions (paid -> OFL). Synthesizer sidecar records every
+    # primary that was rewritten so a paid family never reaches the page;
+    # surface it in the build report so reviewers can see the swap.
+    subs = font_substitutions or {}
+    subs_meta = subs.get("meta", {}) or {}
+    sub_entries = subs.get("font_substitutions", {}) or {}
+    if sub_entries:
+        sub_lines = [
+            f"- **{role}:** `{entry.get('from', '?')}` ({entry.get('from_license', '?')}) "
+            f"→ `{entry.get('to', '?')}` ({entry.get('to_license', '?')}) "
+            f"— {entry.get('reason', '')}"
+            for role, entry in sub_entries.items()
+        ]
+        font_substitutions_section = "\n".join(sub_lines)
+        if subs_meta:
+            font_substitutions_section += (
+                "\n\n" + "\n".join(f"- _{k}:_ {v}" for k, v in subs_meta.items())
+            )
+    else:
+        font_substitutions_section = (
+            "_None — every primary family is OFL/CC-licensed and was kept as-is._"
+            if not subs.get("missing_sidecar")
+            else "_font-substitutions.json sidecar was not produced by the synthesizer; "
+            "no paid->OFL mapping was applied._"
+        )
+
     limitations_section = (
         "\n".join(f"- {item}" for item in limitations)
         if limitations
@@ -2875,6 +2983,15 @@ Brand colors remain unchanged for non-text identity uses. When a brand color is
 used as normal-sized text, the composer uses the derived `*-text` token below.
 
 {brand_decisions_section}
+
+## Font substitutions (paid → OFL)
+
+The synthesizer's `font-substitutions.json` sidecar is the authoritative
+record of every paid primary family that was rewritten to an OFL/CC-licensed
+fallback before being emitted into `tokens.css`. The page never ships a
+font the operator hasn't licensed.
+
+{font_substitutions_section}
 
 ## Token discipline
 
@@ -2995,7 +3112,7 @@ def main(argv: list[str] | None = None) -> int:
 
     # 2. Load synthesized tokens.
     try:
-        tokens_css_src, tw, tokens_css_text = load_tokens(tokens_root)
+        tokens_css_src, tw, tokens_css_text, font_substitutions = load_tokens(tokens_root)
     except ComposeError as exc:
         print(f"compose_site: {exc}", file=sys.stderr)
         return 1
@@ -3021,6 +3138,7 @@ def main(argv: list[str] | None = None) -> int:
             tokens_root=tokens_root,
             tokens_css_src=tokens_css_src,
             tokens_css_text=tokens_css_text,
+            font_substitutions=font_substitutions,
             project_slug_override=args.project_slug,
             outdir=outdir,
         )
@@ -3094,6 +3212,7 @@ def _run_plan_path(
     tokens_root: Path,
     tokens_css_src: Path,
     tokens_css_text: str,
+    font_substitutions: dict[str, Any],
     project_slug_override: str | None,
     outdir: Path,
 ) -> int:
@@ -3171,6 +3290,7 @@ def _run_plan_path(
         sections=sections,
         brand_name=brand_name,
         brand_name_source=brand_name_source,
+        font_substitutions=font_substitutions,
     )
     stylesheet = render_plan_stylesheet(contrast, motion_register)
 
@@ -3206,6 +3326,7 @@ def _run_plan_path(
         expected_token_vars=list(EXPECTED_TOKEN_VARS),
         tokens_dist_css=str(tokens_css_src),
         tokens_dist_json=str(tokens_root / "tokens" / "dist" / "tailwind-tokens.json"),
+        font_substitutions=font_substitutions,
         outdir=outdir,
     )
     (outdir / "BUILD-REPORT.md").write_text(report_md, encoding="utf-8")

@@ -133,6 +133,25 @@ used as normal-sized text, the composer uses the derived `*-text` token below.
 - **Primary used as text:** original `#efad2b` on `#ffffff` measured 1.97:1; derived `#9e6d0c` (darken, 22 lightness steps) measures 4.52:1. Text uses: hero tagline text. Original `--color-primary` remains for non-text uses: skip-link background, decorative brand fills.
 - **Accent used as text:** original `#3898ec` on `#ffffff` measured 3.06:1; derived `#1477ce` (darken, 13 lightness steps) measures 4.61:1. Text uses: links, navigation hover text. Original `--color-accent` remains for non-text uses: button backgrounds, focus outlines, borders, decorative fills.
 
+## Font substitutions (paid → OFL)
+
+The synthesizer's `font-substitutions.json` sidecar is the authoritative
+record of every paid primary family that was rewritten to an OFL/CC-licensed
+fallback before being emitted into `tokens.css`. The page never ships a
+font the operator hasn't licensed.
+
+- **display:** `?` (?) → `?` (?) — license_notes flagged restricted licensing; substituted 'Switzer' with OFL substitute 'Inter'
+- **body:** `?` (?) → `?` (?) — license_notes flag restricted licensing, but the brief explicitly names 'Poppins' as OFL; brand family kept
+- **mono:** `?` (?) → `?` (?) — license_notes flag restricted licensing, but the brief explicitly names 'JetBrains Mono' as OFL; brand family kept
+
+- _schema_version:_ 1.0
+- _tool_version:_ 1.0
+- _generated_at:_ 2026-07-27T16:27:58Z
+- _evidence_basis:_ DOM+assets confirmed
+- _project_slug:_ pedicel-marketing-redesign-smoke
+- _brand_brief:_ /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-smoke/brand-brief.json
+- _reference_tokens:_ /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens
+
 ## Token discipline
 
 - **Source of truth:** `reports/m3-token-synthesis/tokens/dist/tokens.css`

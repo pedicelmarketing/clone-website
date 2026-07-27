@@ -38,6 +38,47 @@ DEFAULT_SHADOWS = [
     {"level": 3, "value": "0 12px 32px rgba(0, 0, 0, 0.16)"},
 ]
 
+# OFL-licensed substitutes used when a brief-declared family requires a paid
+# commercial license and cannot be vendored. Picked by class (geometric humanist
+# sans for display/body, monospaced slab for mono) so they ship with full
+# fallback chains that degrade to system fonts. The mapping is hardcoded here
+# rather than per-call so the substitution is deterministic and auditable; the
+# detection of *which* family is paid lives in
+# `_resolve_font_substitutions()` and is driven by the brief's `license_notes`,
+# never by the literal family name string.
+OFL_SUBSTITUTES: dict[str, str] = {
+    "display": "Inter",
+    "body": "Inter",
+    "mono": "JetBrains Mono",
+}
+
+# CSS fallback chains appended after the primary family in every emitted token.
+# A single-family declaration with no generic fallback is a real-world bug:
+# when the primary face fails to load the browser falls back to a Times-like
+# default that visually breaks the page. Always include system fonts.
+FALLBACK_CHAINS: dict[str, str] = {
+    "display": 'system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+    "body": 'system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+    "mono": 'ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace',
+}
+
+# Phrases in `typography_recommendation.license_notes` that flag a family as
+# restricted/paid. Matched case-insensitively as substrings of the license_notes
+# block. Generic on purpose — driven by wording the brand brief already uses,
+# never by hardcoded font names.
+PAID_LICENSE_PHRASES: tuple[str, ...] = (
+    "paid license",
+    "commercial license",
+    "do not vendor",
+    "not licensed",
+    "requires a paid",
+    "requires a commercial",
+    "is not free for commercial",
+    "free for personal use",
+    "personal use only",
+    "not free for commercial",
+)
+
 
 class InputError(ValueError):
     """An input could not support honest token synthesis."""
@@ -247,6 +288,177 @@ def css_family(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
+def css_family_chain(primary: str, role: str) -> str:
+    """Return a CSS `font-family` declaration value with a real fallback chain.
+
+    A bare family name (e.g. `"Inter"`) is a bug because if the family fails
+    to load the browser picks an arbitrary serif default. Every emitted token
+    includes the role-appropriate system-font chain so the page degrades
+    gracefully. The returned value is the unquoted CSS chain itself
+    (e.g. `Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif`),
+    suitable for direct interpolation into a `--typography-font-family-*: …;`
+    declaration.
+
+    Individual family names are quoted only when they contain characters that
+    aren't valid in an unquoted CSS identifier (spaces, digits-leading, dots,
+    etc.). Wrapping the whole chain in `json.dumps` would produce one bogus
+    quoted family name and break `document.fonts.check(...)` lookups.
+    """
+
+    def _quote(name: str) -> str:
+        # CSS unquoted family names are limited to identifier-like chars.
+        # Anything else (spaces, digits-leading, dots, hyphens at start, …) must
+        # be wrapped in double quotes; inner double quotes are escaped.
+        if re.fullmatch(r"[A-Za-z0-9_-]+", name):
+            return name
+        escaped = name.replace("\\", "\\\\").replace('"', '\\"')
+        return f'"{escaped}"'
+
+    chain = FALLBACK_CHAINS.get(role, FALLBACK_CHAINS["body"])
+    return f"{_quote(primary)}, {chain}"
+
+
+def _license_notes_flag_paid(license_notes: str) -> bool:
+    """Generic paid-license detection from the brand brief's license_notes.
+
+    Driven by wording, not by family name, so it generalizes to any brand whose
+    brief declares restricted fonts. Returns True if the license_notes block
+    mentions at least one of the restricted-licensing phrases.
+    """
+    text = (license_notes or "").lower()
+    return any(phrase in text for phrase in PAID_LICENSE_PHRASES)
+
+
+def _family_explicitly_ofl(license_notes: str, family: str) -> bool:
+    """Return True if the brand brief's license_notes explicitly names `family`
+    as OFL / safe-to-self-host as the *subject* of its clause.
+
+    Patterns accepted as the OFL declaration for `family`:
+        "<family> is OFL"
+        "<family> is released under ..."
+        "<family> is safe to self-host"
+        "<family> ... released under the SIL Open Font License"
+        "<family> ... is open font license"
+
+    The detection is conservative: it requires the OFL phrase to be in the
+    same clause as the family name, AND the family name to appear before the
+    OFL phrase (so a sentence like
+        "Switzer (paid) retained ... otherwise substitute with Inter (OFL)"
+    does NOT mark Switzer as OFL — only Inter qualifies).
+
+    If a sentence mentions multiple families, only the family that appears
+    before the OFL marker is treated as OFL.
+    """
+    text = (license_notes or "")
+    if not family:
+        return False
+    name = family.lower()
+    ofl_markers = (
+        " is ofl",
+        " was ofl",
+        " is released under",
+        " was released under",
+        " is safe to self-host",
+        " is open font license",
+        " is released under the sil open font license",
+        " is licensed under the open font license",
+        " is licensed under the sil open font license",
+    )
+    for sentence in re.split(r"(?<=[.!?])\s+", text):
+        sl = sentence.lower()
+        if name not in sl:
+            continue
+        for marker in ofl_markers:
+            index = sl.find(marker)
+            if index == -1:
+                continue
+            # The family name must appear strictly before the OFL marker so
+            # sentences of the form "X (paid) ... substitute with Y (OFL)"
+            # mark Y as OFL but leave X alone.
+            if sl.find(name) < index:
+                return True
+    return False
+
+
+def _resolve_font_substitutions(
+    *,
+    brand_type: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    """Apply OFL-substitution rules to every family role.
+
+    Returns a dict keyed by role ("display", "body", "mono") with each entry
+    shaped as::
+
+        {"primary": "Inter",
+         "original_family": "Switzer",
+         "substituted": True,
+         "reason": "license_notes flags paid/commercial use"}
+
+    When the brief's license_notes flag restricted licensing, the brand-declared
+    family is substituted with the OFL substitute UNLESS the brief explicitly
+    calls the family OFL / safe-to-self-host, in which case the brand family is
+    kept verbatim. When the notes do NOT flag restricted licensing, every
+    brand-declared family is used unchanged and `substituted` is False.
+    """
+    license_notes = str(brand_type.get("license_notes", ""))
+    notes_flag_paid = _license_notes_flag_paid(license_notes)
+    roles = ("display", "body", "mono")
+    field_names = {"display": "display_family", "body": "body_family", "mono": "mono_family"}
+
+    resolved: dict[str, dict[str, Any]] = {}
+    for role in roles:
+        original = str(brand_type.get(field_names[role], "")).strip()
+        if not notes_flag_paid:
+            resolved[role] = {
+                "primary": original,
+                "original_family": original,
+                "substituted": False,
+                "reason": "license_notes clear; brand family used as-is",
+            }
+            continue
+
+        if _family_explicitly_ofl(license_notes, original):
+            resolved[role] = {
+                "primary": original,
+                "original_family": original,
+                "substituted": False,
+                "reason": (
+                    f"license_notes flag restricted licensing, but the brief "
+                    f"explicitly names '{original}' as OFL; brand family kept"
+                ),
+            }
+            continue
+
+        substitute = OFL_SUBSTITUTES.get(role, original)
+        resolved[role] = {
+            "primary": substitute,
+            "original_family": original,
+            "substituted": substitute != original,
+            "reason": (
+                f"license_notes flagged restricted licensing; "
+                f"substituted '{original}' with OFL substitute '{substitute}'"
+            ),
+        }
+    return resolved
+
+
+def google_fonts_family_args(role: str, primary: str) -> str | None:
+    """Return the `family=` URL argument for a Google Fonts request, or None
+    if the family is not on the Google Fonts catalog and cannot be self-hosted
+    here. Inter / Poppins / JetBrains Mono are the three families this project
+    ships with webfont links for; anything else gets no link and is expected
+    to arrive via the fallback chain (system fonts) — that path is supported
+    by `_resolve_font_substitutions` mapping the two restricted candidates
+    onto Inter so this function never emits a request for a paid face.
+    """
+    catalog = {
+        "Inter": "Inter:wght@400;500;600;700",
+        "Poppins": "Poppins:wght@400;500;600;700",
+        "JetBrains Mono": "JetBrains+Mono:wght@400;600",
+    }
+    return catalog.get(primary)
+
+
 def render_css(
     *,
     meta: dict[str, Any],
@@ -272,8 +484,13 @@ def render_css(
     for index, value in enumerate(neutrals):
         lines.append(f"  --color-neutral-{index}: {value};")
     lines.append("")
+    # Emit each font-family token as a real fallback chain, not a bare name.
+    # A single-family declaration breaks silently when the primary face fails
+    # to load, so the role-specific system-font chain is appended here.
     for role in ("display", "body", "mono"):
-        lines.append(f"  --typography-font-family-{role}: {css_family(families[role])};")
+        lines.append(
+            f"  --typography-font-family-{role}: {css_family_chain(families[role], role)};"
+        )
     lines.append(f"  --typography-scale-ratio: {scale_ratio:g};")
     for index, value in enumerate(type_steps):
         lines.append(f"  --typography-font-size-{index}: {value:g}px;")
@@ -304,6 +521,7 @@ def render_provenance(
     reference_dir: Path,
     rows: list[tuple[str, str, str]],
     license_notes: str,
+    font_substitutions: dict[str, dict[str, Any]] | None = None,
 ) -> str:
     table = [
         "| Token group | Source | Detail |",
@@ -313,30 +531,56 @@ def render_provenance(
         table.append(
             f"| {markdown_cell(group)} | `{source}` | {markdown_cell(detail)} |"
         )
-    return "\n".join(
-        [
-            "# Token provenance",
-            "",
-            f"- Project: `{project_slug}`",
-            f"- Generated at: `{generated_at}`",
-            f"- Brand brief: `{brief_path.resolve()}` (schema validated before use)",
-            f"- Reference tokens: `{reference_dir.resolve()}`",
-            "- Evidence basis: `DOM+assets confirmed`",
-            "",
-            "The reference color inventory was intentionally not consumed. Brand colors and",
-            "font families are authoritative; the reference contributes structure only.",
-            "",
-            *table,
-            "",
-            "## Font license notes (carried over verbatim from brand-brief)",
-            "",
-            license_notes.strip(),
-            "",
-            "Review these notes before vendoring or redistributing any font files. Paid or",
-            "restricted fonts remain external until the project has the required license.",
-            "",
-        ]
-    )
+    parts = [
+        "# Token provenance",
+        "",
+        f"- Project: `{project_slug}`",
+        f"- Generated at: `{generated_at}`",
+        f"- Brand brief: `{brief_path.resolve()}` (schema validated before use)",
+        f"- Reference tokens: `{reference_dir.resolve()}`",
+        "- Evidence basis: `DOM+assets confirmed`",
+        "",
+        "The reference color inventory was intentionally not consumed. Brand colors and",
+        "font families are authoritative; the reference contributes structure only.",
+        "",
+        *table,
+        "",
+        "## Font license notes (carried over verbatim from brand-brief)",
+        "",
+        license_notes.strip(),
+        "",
+        "Review these notes before vendoring or redistributing any font files. Paid or",
+        "restricted fonts remain external until the project has the required license.",
+        "",
+    ]
+    if font_substitutions:
+        any_substituted = any(
+            entry.get("substituted") for entry in font_substitutions.values()
+        )
+        if any_substituted:
+            parts.extend(
+                [
+                    "## Font substitutions (paid -> OFL)",
+                    "",
+                    "The brand brief's `license_notes` flag restricted licensing, so every",
+                    "role with a paid/commercial family is emitted as an OFL-licensed",
+                    "substitute. The original family is preserved here for provenance; it",
+                    "never appears as a live CSS `font-family` value, and no Google Fonts",
+                    "request is emitted for it.",
+                    "",
+                    "| Role | Original (paid) | Substitute (OFL) | Reason |",
+                    "|---|---|---|---|",
+                ]
+            )
+            for role in ("display", "body", "mono"):
+                entry = font_substitutions.get(role, {})
+                original = markdown_cell(entry.get("original_family", ""))
+                substitute = markdown_cell(entry.get("primary", ""))
+                reason = markdown_cell(entry.get("reason", ""))
+                parts.append(f"| {role} | {original} | {substitute} | {reason} |")
+            parts.append("")
+    parts.append("")
+    return "\n".join(parts)
 
 
 def synthesize(
@@ -384,6 +628,20 @@ def synthesize(
         "body": brand_type["body_family"].strip(),
         "mono": brand_type["mono_family"].strip(),
     }
+
+    # Apply paid-license substitution driven by the brief's `license_notes`.
+    # This is the only place paid fonts are rewritten to OFL substitutes;
+    # render_css() then turns each substitute into a real CSS fallback chain.
+    # Every original brand-declared family is preserved in `font_substitutions`
+    # for PROVENANCE.md / BUILD-REPORT.md provenance and for the composer to
+    # read so the page never embeds a request for a paid family.
+    font_substitutions = _resolve_font_substitutions(brand_type=brand_type)
+    families = {role: entry["primary"] for role, entry in font_substitutions.items()}
+    substituted_families = [
+        entry["original_family"]
+        for entry in font_substitutions.values()
+        if entry["substituted"]
+    ]
 
     ratio_value = brand_type.get("scale_ratio")
     ratio_source = "brand-brief"
@@ -533,7 +791,11 @@ def synthesize(
 
     provenance_rows = [
         ("Color", "brand-brief", "palette_from_logo; reference colors ignored"),
-        ("Font families", "brand-brief", "typography_recommendation families"),
+        (
+            "Font families",
+            "brand-brief + substitution",
+            "typography_recommendation families, paid->OFL substitution applied",
+        ),
         ("Type scale", type_scale_source, type_scale_detail),
         ("Type scale ratio", ratio_source, ratio_detail),
         ("Spacing", spacing_source, spacing_detail),
@@ -547,8 +809,27 @@ def synthesize(
         reference_dir=reference_dir,
         rows=provenance_rows,
         license_notes=brand_type["license_notes"],
+        font_substitutions=font_substitutions,
     )
     (out_dir / "tokens/PROVENANCE.md").write_text(provenance, encoding="utf-8")
+
+    # Sidecar: machine-readable record of every font-family substitution so the
+    # composer can read it without re-parsing tokens.css. Authoritative for
+    # "what families are emitted, and which were swapped for licensing".
+    substitutions_sidecar = {
+        "meta": meta,
+        "font_substitutions": font_substitutions,
+        "google_fonts_requested": [
+            {
+                "role": role,
+                "primary": entry["primary"],
+                "family_arg": google_fonts_family_args(role, entry["primary"]),
+            }
+            for role, entry in font_substitutions.items()
+            if google_fonts_family_args(role, entry["primary"])
+        ],
+    }
+    write_json(dist_dir / "font-substitutions.json", substitutions_sidecar)
 
 
 def main(argv: list[str] | None = None) -> int:

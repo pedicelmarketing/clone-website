@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "tool_version": "1.0",
+    "generated_at": "2026-07-27T16:27:58Z",
+    "evidence_basis": "DOM+assets confirmed",
+    "project_slug": "pedicel-marketing-redesign-smoke",
+    "brand_brief": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-smoke/brand-brief.json",
+    "reference_tokens": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens"
+  },
+  "font_substitutions": {
+    "display": {
+      "primary": "Inter",
+      "original_family": "Switzer",
+      "substituted": true,
+      "reason": "license_notes flagged restricted licensing; substituted 'Switzer' with OFL substitute 'Inter'"
+    },
+    "body": {
+      "primary": "Poppins",
+      "original_family": "Poppins",
+      "substituted": false,
+      "reason": "license_notes flag restricted licensing, but the brief explicitly names 'Poppins' as OFL; brand family kept"
+    },
+    "mono": {
+      "primary": "JetBrains Mono",
+      "original_family": "JetBrains Mono",
+      "substituted": false,
+      "reason": "license_notes flag restricted licensing, but the brief explicitly names 'JetBrains Mono' as OFL; brand family kept"
+    }
+  },
+  "google_fonts_requested": [
+    {
+      "role": "display",
+      "primary": "Inter",
+      "family_arg": "Inter:wght@400;500;600;700"
+    },
+    {
+      "role": "body",
+      "primary": "Poppins",
+      "family_arg": "Poppins:wght@400;500;600;700"
+    },
+    {
+      "role": "mono",
+      "primary": "JetBrains Mono",
+      "family_arg": "JetBrains+Mono:wght@400;600"
+    }
+  ]
+}
