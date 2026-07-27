@@ -262,4 +262,6 @@ Lead with a concise summary in this order, keeping detailed artifacts in `worksp
 5. **Gaps & external dependencies** (fidelity gaps, blocked/paid/streamed assets to replace later)
 6. **Local serve contract** (exact serve command, web root, port, required accommodations)
 
-End with the acceptance tier reached and where the baseline lives on disk.
+## Definition of done
+
+After ANY change to the web-designer scripts you MUST run `./verify.sh`, paste its summary table, and only commit when it exits 0. Never claim success from reading code — only from a `verify.sh` run that exited 0. Regenerate before reporting; a stale artifact is a failed task.
