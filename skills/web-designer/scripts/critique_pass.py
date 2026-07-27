@@ -849,7 +849,11 @@ def main(argv=None):
         history.append(critique)
         _save_history(out_dir, history)
 
-        # Per-iteration JSON + MD
+        # Per-iteration JSON + MD. Recreate the iteration directory here: a
+        # composer may atomically replace/clean the site output while this loop
+        # is running, and reports must not disappear just because an external
+        # process touched a parent output tree.
+        iter_dir.mkdir(parents=True, exist_ok=True)
         (iter_dir / f"critique-{iteration:02d}.json").write_text(
             json.dumps({k: v for k, v in critique.items() if k != "applied"} | {"applied": critique.get("applied", [])}, indent=2) + "\n"
         )

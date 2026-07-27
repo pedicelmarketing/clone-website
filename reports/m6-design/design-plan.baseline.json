@@ -34,7 +34,7 @@
       "nav_label": "Manifesto",
       "in_nav": true,
       "purpose": "State the agency's teaching philosophy in long-form, using the teacher's margin-note cadence.",
-      "component": "Two-column editorial: a narrow left column (28%) holds a sticky numbered index of short manifesto statements; a wide right column (72%) shows one full paragraph per statement with the gold dot as a margin marker beside each paragraph number. Footnote-style attribution appears under each paragraph. | REVISION: Replace the standalone h2 + paragraph with a two-column 'workbook page' layout at >=1024px: left column keeps the h2 and short paragraph, right column becomes a 240px-wide teacher-margin note column carrying a large numeral '01' and the signature gold dot fixed to its baseline. | REVISION: break this section's rhythm by replacing the plain h2 + paragraph with a chapter-opening treatment: large numeral ('I' or '01') left-aligned in the margin, the existing subhead as a pull line, then a narrow body column capped at ~52ch; add a second gold dot in the right margin next to the numeral. | REVISION: Convert 'What we believe, before you read anything else.' from a one-line h2 into a two-column layout at >=1024px: an italicised serif pull-quote on the right (~55% wide) and a 3-item sentence-case belief list on the left, replacing the single 2-sentence paragraph.",
+      "component": "Two-column editorial: a narrow left column (28%) holds a sticky numbered index of short manifesto statements; a wide right column (72%) shows one full paragraph per statement with the gold dot as a margin marker beside each paragraph number. Footnote-style attribution appears under each paragraph.",
       "emphasis": "primary",
       "source_brief_fields": [
         "voice_and_tone.register",
@@ -43,7 +43,7 @@
         "voice_and_tone.banned_words",
         "voice_and_tone.avg_sentence_length_words"
       ],
-      "rationale": "Confessional-educational voice is best shown, not declared. A numbered list of belief-statements, written at the brand's actual ~13-word average sentence length, lets the voice carry the section without resorting to testimonials (which the brief flags as unrecoverable). | Revision rationale: The layout thesis explicitly describes a workbook with margin notes and a traveling highlighter; today the manifesto is a generic centered block. Splitting it into body + margin column activates the workbook metaphor on the first content section after the hero. | Revision rationale: right now the manifesto and the uniqueness-lesson heading use visually identical subhead weight and shape, so the page has no chapter rhythm; a numeral + margin dot makes this section read as a chapter opening rather than a generic blog paragraph. | Revision rationale: Currently 'What we believe' is followed by a single short paragraph, which is exactly the shape the thesis asks the page to avoid \u2014 a list and a pull-quote turn it into the teacher-margin note the brand voice promises."
+      "rationale": "Confessional-educational voice is best shown, not declared. A numbered list of belief-statements, written at the brand's actual ~13-word average sentence length, lets the voice carry the section without resorting to testimonials (which the brief flags as unrecoverable)."
     },
     {
       "id": "uniqueness-lesson",
@@ -51,7 +51,7 @@
       "nav_label": "The lesson",
       "in_nav": true,
       "purpose": "Teach the visitor the agency's core framework (the thing every 'unique' brand has to do) without calling it a framework.",
-      "component": "Four-step teaching block laid out as a vertical timeline rather than a horizontal grid. Each step is a numbered card with a single-sentence rule, a one-line example, and the gold dot acting as the step's bullet. On wide screens the timeline is centered with generous gutter; on narrow screens it collapses to a single column but keeps the dot. | REVISION: Introduce a numbered chapter-opening treatment: prepend a large ~120px serif or display '01' numeral in the left margin, and pin the gold signature dot 16px to the right of the numeral so it visually functions as the i-dot highlighter beside the lesson number.",
+      "component": "Four-step teaching block laid out as a vertical timeline rather than a horizontal grid. Each step is a numbered card with a single-sentence rule, a one-line example, and the gold dot acting as the step's bullet. On wide screens the timeline is centered with generous gutter; on narrow screens it collapses to a single column but keeps the dot.",
       "emphasis": "primary",
       "source_brief_fields": [
         "voice_and_tone.example_lines",
@@ -60,7 +60,7 @@
         "palette_from_logo.secondary",
         "brand_donts"
       ],
-      "rationale": "The brief's first explicit banned default is the three-column feature grid with icons. A vertical numbered timeline is the same information density without the template fingerprint, and it lets the gold dot carry meaning instead of decoration. | Revision rationale: The thesis states the gold dot should travel beside every lesson number. This section is literally called the 'uniqueness lesson' yet has no number and no dot, breaking the brand's own reading-guide metaphor."
+      "rationale": "The brief's first explicit banned default is the three-column feature grid with icons. A vertical numbered timeline is the same information density without the template fingerprint, and it lets the gold dot carry meaning instead of decoration."
     },
     {
       "id": "services-as-chapters",
@@ -68,14 +68,14 @@
       "nav_label": "What we do",
       "in_nav": true,
       "purpose": "Present the eight public services as chapters of a customised curriculum rather than a service catalog.",
-      "component": "Expandable chapter list (accordion with persistent chapter numbers). Each chapter title is one of the eight LinkedIn-listed services; opening a chapter reveals a short teacher-style explanation of when that chapter is needed and what it produces. The gold dot marks the chapter currently being read. | REVISION: Break the single-paragraph section rhythm by rendering the four services as four stacked 'chapter' rows: each row pairs a large left-margin number (01\u201304) with a sentence-case h3 and one-line description, separated by thin 1px hairlines and pinned to the signature gold dot via a fixed left rail. | REVISION: render each service as a numbered chapter row with the gold dot anchored to the row's left margin, an oversized numeral ('01', '02', '03', '04'), a sentence-case title, and a single 1-2 line teacher-margin note set in italic to the right of the title at desktop widths. | REVISION: Restructure each service as a numbered chapter block with a large gold numeral (e.g. '01', '02', '03') in the left margin and a chapter title in display weight, separated by horizontal rules, instead of a single heading + paragraph shape. | REVISION: Lay the 'four things every unique brand has done' out as a 2x2 grid at >=1024px (single column on mobile), with each cell prefixed by a numeral '01\u201304' in the bold display size and the gold dot positioned as a fixed margin marker beside whichever cell is in view.",
+      "component": "Expandable chapter list (accordion with persistent chapter numbers). Each chapter title is one of the eight LinkedIn-listed services; opening a chapter reveals a short teacher-style explanation of when that chapter is needed and what it produces. The gold dot marks the chapter currently being read.",
       "emphasis": "primary",
       "source_brief_fields": [
         "service_facts",
         "voice_and_tone.register",
         "voice_and_tone.formality_score_1to5"
       ],
-      "rationale": "Service facts are the most complete recoverable factual inventory (eight named services with descriptions). Grouping them as chapters of a curriculum \u2014 rather than cards with icons \u2014 matches the teacher register and avoids the banned 'three-column feature grid'. | Revision rationale: Currently services-as-chapters reads as a heading plus a single paragraph; the section id literally calls them chapters but they have no chapter form. A numbered list turns the section into the annotated-chapter essay the thesis promises. | Revision rationale: the brand's four-things framing ('The four things every unique brand has already done') only earns its weight if it reads as four distinct chapters; identical card styling without numerals or margin dots will make it feel like another generic 4-column grid. | Revision rationale: Every section currently repeats the same heading + paragraph shape, so the page reads as a flat blog. The thesis says it should read like a workbook of lessons; numbering and chapter framing are the cheapest way to introduce that rhythm without adding imagery. | Revision rationale: A grid of four numbered cells gives the dot four discrete anchor points to travel between, which is what the implementation_note requires; the current single-paragraph layout offers the dot nowhere to go."
+      "rationale": "Service facts are the most complete recoverable factual inventory (eight named services with descriptions). Grouping them as chapters of a curriculum \u2014 rather than cards with icons \u2014 matches the teacher register and avoids the banned 'three-column feature grid'."
     },
     {
       "id": "the-customised-proof",
@@ -83,7 +83,7 @@
       "nav_label": "How it's made",
       "in_nav": true,
       "purpose": "Show what 'customised from top to bottom' means in practice, using only the imagery the brand actually exposes.",
-      "component": "Annotated image essay: a single tall image (the brand's own OG share card, used as a stand-in for the gated portfolio) sits on the right; on the left, three short teacher-margin notes point to specific parts of the image, each ending with a gold dot. No fake client logos, no fabricated case-study metrics. | REVISION: switch this section to a dark or accent background (charcoal #111 or warm cream) so it visually breaks the page rhythm and reads as the essay's 'proof' chapter rather than another grey block; keep the gold dot as the only chromatic element inside the block. | REVISION: Replace the plain heading + paragraph with a 3-column 'proof' layout at >=1024px: each column headed by a short sentence-case label (e.g. 'Diagnostic', 'Method', 'Measure') in bold, with a single supporting paragraph below, so the page proves 'customised' structurally rather than just claiming it. | REVISION: Turn this section into the annotated image essay called out in the thesis: a single screenshot on the right with a fixed left margin of numbered teacher-margin notes (Note 1 / Note 2 / Note 3 in 14px regular) that the gold dot tracks as the reader scrolls. | REVISION: switch the section from a single centred paragraph to a two-column layout at >=1024px: a left column with the prose, a right column with a vertical stack of 3\u20134 short proof points each prefaced by the gold dot",
+      "component": "Annotated image essay: a single tall image (the brand's own OG share card, used as a stand-in for the gated portfolio) sits on the right; on the left, three short teacher-margin notes point to specific parts of the image, each ending with a gold dot. No fake client logos, no fabricated case-study metrics.",
       "emphasis": "secondary",
       "source_brief_fields": [
         "real_photo_inventory",
@@ -91,7 +91,7 @@
         "brand_donts",
         "limitations"
       ],
-      "rationale": "The brief explicitly states no real photograph of a person, team, or client work was recoverable. Using the brand's own og:image as the only visual and annotating it teacher-style is honest about what is available while still demonstrating the 'customised' point of view. | Revision rationale: every section currently shares the same white background and the same grey hr divider, which is the strongest signal of a templated layout; one deliberate background break is the single cheapest way to signal bespoke structure. | Revision rationale: The brand's own argument is that its approach is 'customised from top to bottom', yet the section currently makes that claim in a single paragraph. A three-column proof structure embodies the claim in the layout itself and breaks the monotony of the repeating heading + paragraph shape. | Revision rationale: The brief specifies 'every teacher-margin note in the annotated image essay' as a dot use case; without the annotated layout there is no surface for those margin notes to live on. | Revision rationale: the 'proof' section is the one place a workbook reader expects concrete evidence, but as rendered it is the same h2 + paragraph shape as the manifesto, so it carries no extra weight. Splitting it into prose + a dotted checklist gives the section a distinct chapter shape and finally gives the gold dot a second home on the page."
+      "rationale": "The brief explicitly states no real photograph of a person, team, or client work was recoverable. Using the brand's own og:image as the only visual and annotating it teacher-style is honest about what is available while still demonstrating the 'customised' point of view."
     },
     {
       "id": "lead-generation-cta",

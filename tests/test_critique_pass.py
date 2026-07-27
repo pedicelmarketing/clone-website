@@ -253,6 +253,7 @@ class MainExitContract(unittest.TestCase):
             compose_cmd = run_mock.call_args.args[0]
             self.assertIn("--tokens", compose_cmd)
             self.assertIn("reports/m3-token-synthesis", compose_cmd)
+            self.assertTrue((out_dir / "iter-01" / "critique-01.json").is_file())
 
     def test_model_always_failing_exits_nonzero_and_records_outcome(self):
         with tempfile.TemporaryDirectory() as td:

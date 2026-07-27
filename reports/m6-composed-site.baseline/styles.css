@@ -1,0 +1,455 @@
+/* compose_site.py v1.1 — plan-driven page CSS.
+ *
+ * Design rule: NO raw hex colors appear below. Every color comes from a
+ * tokens.css custom property (declared in tokens/dist/tokens.css). This is
+ * enforced at emit time by a hex-literal grep; see BUILD-REPORT.md.
+ *
+ * Contrast decision: text --color-neutral-0 on background --color-neutral-6, accent --color-accent.
+ * Contrast ratio measured: 19.58:1
+ * (WCAG AA for normal body text requires >= 4.5:1).
+ *
+ * Motion register (from design-plan.json): restrained
+ */
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--typography-font-family-body, var(--page-body, sans-serif));
+  font-size: var(--typography-font-size-2, 16px);
+  line-height: 1.55;
+  color: var(--color-neutral-0);
+  background-color: var(--color-neutral-6);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link — visible only on focus (a11y best practice). */
+.skip-link {
+  position: absolute;
+  inset-inline-start: var(--spacing-8);
+  inset-block-start: 0;
+  transform: translateY(-150%);
+  background: var(--color-primary);
+  color: var(--color-neutral-0);
+  padding: var(--spacing-8) calc(var(--spacing-8) * 2);
+  border-radius: var(--radius-4);
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 100;
+  transition: transform 120ms ease-out;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Headings — display family, scale per tokens.css. */
+h1, h2, h3, h4 {
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  line-height: 1.15;
+  margin: 0 0 calc(var(--spacing-8) * 2);
+  color: var(--color-neutral-0);
+}
+p {
+  margin: 0 0 calc(var(--spacing-8) * 2);
+  max-width: 60ch;
+}
+ul, ol {
+  padding-inline-start: calc(var(--spacing-8) * 2);
+  margin: 0 0 calc(var(--spacing-8) * 2);
+}
+
+a {
+  color: var(--color-accent-text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+/* Keyboard focus — visible to all users, not just mouse. */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-4);
+}
+
+/* Visually hidden — for screen-reader-only labels. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Header / nav ---- */
+.site-header {
+  background: var(--color-neutral-6);
+  border-block-end: 1px solid var(--color-neutral-4);
+  padding: calc(var(--spacing-8) * 2) var(--spacing-8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacing-8) * 2);
+  flex-wrap: wrap;
+}
+.brand {
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  font-size: var(--typography-font-size-4, 24px);
+  font-weight: 700;
+  color: var(--color-neutral-0);
+  text-decoration: none;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: calc(var(--spacing-8) * 2);
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.nav-list a {
+  color: var(--color-neutral-1);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-list a:hover { color: var(--color-accent-text); }
+
+/* ---- Main ---- */
+main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: calc(var(--spacing-8) * 4) var(--spacing-8);
+}
+main:focus { outline: none; }
+
+/* ---- Plan sections: emphasis-driven treatment ---- */
+/*
+ * The whole point of plan-mode is that two different plans yield two
+ * structurally different pages. These four emphasis classes are the visual
+ * contract that makes that promise real:
+ *   emphasis-hero      — large, left-aligned, generous padding
+ *   emphasis-primary   — comfortable, full-width, normal scale
+ *   emphasis-secondary — narrower max-width, quieter spacing
+ *   emphasis-minor     — small text, single-line colophon weight
+ */
+.plan-section {
+  margin-block-end: calc(var(--spacing-8) * 6);
+}
+.plan-heading { margin-block-end: calc(var(--spacing-8) * 2); }
+.plan-subhead {
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-1);
+  max-width: 50ch;
+}
+.plan-body { max-width: 60ch; }
+.plan-caption {
+  font-size: var(--typography-font-size-0, 12px);
+  color: var(--color-neutral-2);
+}
+
+/* Hero — left-aligned, display-weight, oversize. The signature dot trails
+ * the headline like a sentence-ending period (per the plan's signature
+ * element implementation_note). */
+.plan-section.emphasis-hero {
+  padding-block: calc(var(--spacing-8) * 6);
+  border-block-end: 1px solid var(--color-neutral-4);
+}
+.plan-heading--hero {
+  font-size: var(--typography-font-size-6, 48px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  max-width: 22ch;
+  text-align: start;
+  line-height: 1.05;
+}
+.plan-heading--hero .signature-dot {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  vertical-align: 0.05em;
+  margin-inline-start: 0.15em;
+}
+
+/* Primary — comfortable reading width, normal scale, full-bleed by default. */
+.plan-section.emphasis-primary {
+  padding-block: calc(var(--spacing-8) * 4);
+}
+.plan-section.emphasis-primary .plan-heading {
+  font-size: var(--typography-font-size-5, 32px);
+  letter-spacing: -0.005em;
+  max-width: 30ch;
+}
+
+/* Secondary — narrower, quieter. Two columns on wide viewports. */
+.plan-section.emphasis-secondary {
+  padding-block: calc(var(--spacing-8) * 3);
+  max-width: 900px;
+}
+.plan-section.emphasis-secondary .plan-heading {
+  font-size: var(--typography-font-size-4, 24px);
+  max-width: 30ch;
+}
+.plan-section.emphasis-secondary .plan-body {
+  max-width: 50ch;
+}
+
+/* Minor — colophon-sized, single-line weight. */
+.plan-section.emphasis-minor {
+  padding-block: calc(var(--spacing-8) * 2);
+  font-size: var(--typography-font-size-1, 14px);
+  color: var(--color-neutral-2);
+  max-width: 60ch;
+}
+.plan-section.emphasis-minor .plan-heading {
+  font-size: var(--typography-font-size-2, 16px);
+  font-weight: 500;
+  margin-block-end: var(--spacing-8);
+}
+
+/* ---- Signature element: the gold dot ---- */
+/*
+ * The plan's signature_element describes a single circular dot in the brand's
+ * primary color, reused as a sentence-ending period, a numbered list bullet,
+ * a step counter, and a CTA cursor. The implementation_note from the plan
+ * specifies a 0.6em diameter, the brand primary color (var(--color-primary)
+ * in tokens.css), a border-radius of 9999px, and explicitly reserves full
+ * rounding as the design system's only circular radius. We use the token
+ * reference (never a raw hex) so the dot picks up whatever the synthesized
+ * token system actually declares for the brand.
+ */
+.signature-dot {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+  vertical-align: 0.05em;
+  margin-inline-end: 0.1em;
+  /* No background-fill behind text — the dot is always inline. */
+}
+.plan-cta-button .signature-dot {
+  width: 0.4em;
+  height: 0.4em;
+  vertical-align: middle;
+  margin-inline-start: 0.2em;
+}
+
+/* ---- Curriculum (services-as-chapters) ---- */
+.plan-curriculum {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-8) * 2);
+}
+.plan-curriculum-row {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: calc(var(--spacing-8) * 2);
+  align-items: baseline;
+  padding-block-end: calc(var(--spacing-8) * 2);
+  border-block-end: 1px solid var(--color-neutral-4);
+}
+.plan-curriculum-number {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-1);
+}
+.plan-curriculum-numeral {
+  font-variant-numeric: tabular-nums;
+}
+.plan-curriculum-name {
+  margin: 0 0 var(--spacing-8);
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-0);
+}
+.plan-curriculum-description {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--color-neutral-1);
+}
+
+/* ---- Steps (process strip) ---- */
+.plan-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(var(--spacing-8) * 2);
+}
+.plan-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  padding: calc(var(--spacing-8) * 2);
+  border: 1px solid var(--color-neutral-4);
+  border-radius: var(--radius-6);
+}
+.plan-step-number {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  font-size: var(--typography-font-size-2, 16px);
+  color: var(--color-neutral-1);
+}
+.plan-step-numeral {
+  font-variant-numeric: tabular-nums;
+}
+.plan-step-body {
+  margin: 0;
+  max-width: none;
+  font-size: var(--typography-font-size-1, 14px);
+  color: var(--color-neutral-1);
+}
+
+/* ---- Asset band (single real-photo figure) ---- */
+.plan-asset {
+  margin: 0;
+  background: var(--color-neutral-6);
+  border: 1px solid var(--color-neutral-4);
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.plan-asset img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--color-neutral-4);
+}
+.plan-asset figcaption {
+  padding: calc(var(--spacing-8) * 1.5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  font-size: var(--typography-font-size-0, 12px);
+}
+.plan-asset-subject {
+  font-weight: 600;
+  color: var(--color-neutral-0);
+}
+.plan-asset-meta {
+  color: var(--color-neutral-2);
+}
+
+/* ---- CTA band ---- */
+.plan-cta-band {
+  background: var(--color-secondary);
+  padding: calc(var(--spacing-8) * 4);
+  border-radius: var(--radius-8);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-8) * 2);
+  align-items: flex-start;
+}
+.plan-cta-band .plan-body {
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-0);
+  max-width: 50ch;
+}
+.plan-cta-action { margin: 0; }
+
+/* ---- Buttons ---- */
+.button {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-neutral-0);
+  padding: calc(var(--spacing-8) * 1.5) calc(var(--spacing-8) * 3);
+  border-radius: var(--radius-8);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 120ms ease-out, border-color 120ms ease-out;
+}
+.button:hover,
+.button:focus-visible {
+  background: var(--color-neutral-0);
+  color: var(--color-neutral-6);
+  border-color: var(--color-accent);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--color-neutral-5);
+  border-block-start: 1px solid var(--color-neutral-4);
+  padding: calc(var(--spacing-8) * 3) var(--spacing-8);
+  color: var(--color-neutral-2);
+  font-size: var(--typography-font-size-1, 14px);
+}
+.site-footer p { margin: 0 0 var(--spacing-8); max-width: none; }
+.footer-meta { font-size: var(--typography-font-size-0, 12px); color: var(--color-neutral-2); }
+
+/* ---- Motion: chosen by the plan's motion_vocabulary.register ---- */
+/* Motion register: restrained — on-paint fades only. */
+@keyframes plan-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.plan-section { animation: plan-fade-in 320ms ease-out both; }
+.plan-section:nth-of-type(2) { animation-delay: 40ms; }
+.plan-section:nth-of-type(3) { animation-delay: 80ms; }
+.plan-section:nth-of-type(4) { animation-delay: 120ms; }
+.plan-section:nth-of-type(n+5) { animation-delay: 160ms; }
+.signature-dot { animation: plan-fade-in 180ms ease-out both; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Responsive: mobile-first, no horizontal overflow at 320px ---- */
+@media (max-width: 480px) {
+  :root {
+    --typography-font-size-6: 36px; /* tame h1 on phones */
+  }
+  main { padding: calc(var(--spacing-8) * 2) var(--spacing-8); }
+  .site-header { padding: var(--spacing-8); }
+  .plan-steps { grid-template-columns: 1fr; }
+  .plan-curriculum-row { grid-template-columns: 2rem 1fr; }
+  h1 { font-size: var(--typography-font-size-5, 32px); }
+  .plan-section.emphasis-hero { padding-block: calc(var(--spacing-8) * 3); }
+  .plan-heading--hero { font-size: var(--typography-font-size-5, 32px); }
+}
+
+/* Fluid images: capped at 100% container width, never overflow. */
+img { max-width: 100%; height: auto; }
