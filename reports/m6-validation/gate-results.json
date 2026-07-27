@@ -9,9 +9,9 @@
     1024,
     1440
   ],
-  "generated": "2026-07-27T16:28:49.341903+00:00",
+  "generated": "2026-07-27T20:56:10.233842+00:00",
   "host": "127.0.0.1",
-  "port": 49809,
+  "port": 33857,
   "results": [
     {
       "id": "1",
@@ -26,10 +26,10 @@
         "per_route": {
           "/": {
             "status": 200,
-            "final_url": "http://127.0.0.1:49809/"
+            "final_url": "http://127.0.0.1:33857/"
           }
         },
-        "base_url": "http://127.0.0.1:49809"
+        "base_url": "http://127.0.0.1:33857"
       },
       "error": null
     },
@@ -67,7 +67,7 @@
         "per_route": {
           "/": {
             "route": "/",
-            "url": "http://127.0.0.1:49809/",
+            "url": "http://127.0.0.1:33857/",
             "status": 200,
             "exit": 0,
             "ok": true,
@@ -184,7 +184,7 @@
               "settle_cap_ms": 3000
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/5758606616371914986__320x720.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/2980692688825903495__320x720.png"
           },
           {
             "route": "/",
@@ -197,7 +197,7 @@
               "settle_cap_ms": 3000
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/5777362766587376702__768x1024.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/4995964388776491788__768x1024.png"
           },
           {
             "route": "/",
@@ -210,7 +210,7 @@
               "settle_cap_ms": 3000
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3708037019300310900__1024x768.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/5098660511886837789__1024x768.png"
           },
           {
             "route": "/",
@@ -223,7 +223,7 @@
               "settle_cap_ms": 3000
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/1799420681168948913__1440x900.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/4825773346368345659__1440x900.png"
           }
         ],
         "viewports": [
@@ -277,5 +277,14 @@
       },
       "error": null
     }
-  ]
+  ],
+  "meta": {
+    "input_hashes": {
+      "index.html": "09e13fc36d60d622ca9c43d4d4739ae0c05d0112d839a96e55a4a2af6012d8a0",
+      "styles.css": "e6d00de98ae6ec1510e9124ef2e8d5a4784b6eeee4275daecbab77264ba2e947",
+      "tokens.css": "bc5a6b359b3b10850a9df76493ebb6e67a2a2687da16d5b355aa7b9083f0dd38"
+    },
+    "input_hashes_algorithm": "sha256",
+    "input_hashes_note": "Recompute with: sha256sum <site_dir>/index.html <site_dir>/styles.css <site_dir>/tokens.css. If these change without re-running validate_site.py the gate results are stale."
+  }
 }

@@ -54,7 +54,12 @@ PASS — no raw hex literals in styles.css (every color is a token)
 
 
 ## Reference brief
-No `--reference-report` directory was provided; the site was composed from the brand brief + synthesized tokens alone.
+Reference report directory: `reports/validation/linear-app`
+
+- `components.json`: `reports/validation/linear-app/components.json`
+- `copy.json`: `reports/validation/linear-app/copy.json`
+
+The reference brief was used for cross-checks only; no content was copied or invented from it.
 
 ## Accessibility decisions
 

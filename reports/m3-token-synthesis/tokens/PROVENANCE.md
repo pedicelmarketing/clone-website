@@ -1,7 +1,7 @@
 # Token provenance
 
 - Project: `pedicel-marketing-redesign-smoke`
-- Generated at: `2026-07-27T16:27:58Z`
+- Generated at: `2026-07-27T20:55:15Z`
 - Brand brief: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-smoke/brand-brief.json` (schema validated before use)
 - Reference tokens: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens`
 - Evidence basis: `DOM+assets confirmed`
