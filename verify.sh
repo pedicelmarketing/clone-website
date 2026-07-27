@@ -66,7 +66,7 @@ p=pathlib.Path('reports/m6-validation/gate-results.json'); d=json.loads(p.read_t
 if any(r.get('verdict')=='FAIL' for r in rs): raise SystemExit('gate FAILED')
 if any(r.get('verdict')=='NOT-EXERCISED' for r in rs): raise SystemExit('gate NOT-EXERCISED')
 report=pathlib.Path('reports/m6-validation/validation-report.md').read_text()
-if not any(x in report for x in ('Acceptance tier: Validated','**Acceptance tier:** `Validated`','**Acceptance tier:** Validated')): raise SystemExit('tier != Validated')
+if not any(x in report for x in ('Acceptance tier: Validated','**Acceptance tier:** `Validated`','**Acceptance tier:** Validated','Reached tier: `Validated`')): raise SystemExit('tier != Validated')
 print('8/8 gates PASS; tier Validated')
 PY
 then row "6. Gate table and tier" PASS; else row "6. Gate table and tier" FAIL "gate failure, NOT-EXERCISED, or tier mismatch"; fi
