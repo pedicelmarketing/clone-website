@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "tool_version": "1.0",
+    "generated_at": "2026-07-27T11:00:01Z",
+    "evidence_basis": "DOM+assets confirmed",
+    "project_slug": "pedicel-marketing-redesign-smoke",
+    "brand_brief": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-smoke/brand-brief.json",
+    "reference_tokens": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens"
+  },
+  "theme": {
+    "extend": {
+      "colors": {
+        "primary": "#efad2b",
+        "secondary": "#f0f8ff",
+        "accent": "#3898ec",
+        "neutral": {
+          "0": "#0b0c0d",
+          "1": "#1c1d1c",
+          "2": "#5d5d6d",
+          "3": "#9c9c9c",
+          "4": "#e6e6e6",
+          "5": "#fafafa",
+          "6": "#ffffff"
+        }
+      },
+      "fontFamily": {
+        "display": [
+          "Switzer"
+        ],
+        "body": [
+          "Poppins"
+        ],
+        "mono": [
+          "JetBrains Mono"
+        ]
+      },
+      "spacing": {
+        "8": "8px"
+      },
+      "borderRadius": {
+        "0": "0px",
+        "4": "4px",
+        "6": "6px",
+        "8": "8px",
+        "24": "24px",
+        "full": "9999px"
+      },
+      "boxShadow": {
+        "0": "rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px"
+      }
+    }
+  }
+}
