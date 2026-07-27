@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/web-designer/design-plan.schema.json",
+  "title": "Web Designer Design Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "project_slug", "generated_at", "model", "layout_thesis", "sections", "signature_element", "motion_vocabulary", "copy_blocks", "skipped_sections", "decisions"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "project_slug": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "layout_thesis": {
+      "type": "object", "additionalProperties": false,
+      "required": ["statement", "audience", "job_to_be_done", "why_this_not_generic"],
+      "properties": {"statement": {"type": "string", "minLength": 1}, "audience": {"type": "string", "minLength": 1}, "job_to_be_done": {"type": "string", "minLength": 1}, "why_this_not_generic": {"type": "string", "minLength": 1}}
+    },
+    "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}},
+    "signature_element": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "description", "why_it_fits_brand", "implementation_note"],
+      "properties": {"name": {"type": "string", "minLength": 1}, "description": {"type": "string", "minLength": 1}, "why_it_fits_brand": {"type": "string", "minLength": 1}, "implementation_note": {"type": "string", "minLength": 1}}
+    },
+    "motion_vocabulary": {
+      "type": "object", "additionalProperties": false,
+      "required": ["register", "effects", "rationale"],
+      "properties": {"register": {"enum": ["restrained", "balanced", "cinematic"]}, "effects": {"type": "array", "items": {"type": "string"}}, "rationale": {"type": "string", "minLength": 1}}
+    },
+    "copy_blocks": {"type": "array", "items": {"$ref": "#/$defs/copyBlock"}},
+    "skipped_sections": {"type": "array", "items": {"$ref": "#/$defs/skipped"}},
+    "decisions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["decision", "alternatives_considered", "why_chosen"], "properties": {"decision": {"type": "string", "minLength": 1}, "alternatives_considered": {"type": "array", "items": {"type": "string"}}, "why_chosen": {"type": "string", "minLength": 1}}}}
+  },
+  "$defs": {
+    "sourceFields": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "section": {"type": "object", "additionalProperties": false, "required": ["id", "order", "purpose", "component", "emphasis", "source_brief_fields", "rationale"], "properties": {"id": {"type": "string", "minLength": 1}, "order": {"type": "integer", "minimum": 0}, "purpose": {"type": "string", "minLength": 1}, "component": {"type": "string", "minLength": 1}, "emphasis": {"enum": ["hero", "primary", "secondary", "minor"]}, "source_brief_fields": {"$ref": "#/$defs/sourceFields"}, "rationale": {"type": "string", "minLength": 1}}},
+    "copyBlock": {"type": "object", "additionalProperties": false, "required": ["section_id", "role", "text", "source_brief_fields"], "properties": {"section_id": {"type": "string", "minLength": 1}, "role": {"enum": ["headline", "subhead", "body", "cta", "caption"]}, "text": {"type": "string", "minLength": 1}, "source_brief_fields": {"$ref": "#/$defs/sourceFields"}}},
+    "skipped": {"type": "object", "additionalProperties": false, "required": ["id", "reason", "missing_brief_fields"], "properties": {"id": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}, "missing_brief_fields": {"type": "array", "items": {"type": "string", "minLength": 1}}}}
+  }
+}

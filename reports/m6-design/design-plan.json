@@ -1,0 +1,359 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "pedicel-marketing-redesign-smoke",
+  "generated_at": "2026-07-24T22:10:00Z",
+  "model": "MiniMax-M3",
+  "layout_thesis": {
+    "statement": "Pedicel sells the act of making a brand legible to itself. The redesign should read like a quiet classroom: one thesis at the top, a slow reveal of services as chapters, and a single recurring mark \u2014 the gold dot above the 'i' \u2014 used as a wayfinding device that doubles as a visual syllabus of the agency's beliefs.",
+    "audience": "Founder-led SMB owners (\u224810\u201380 employees) who already have a product and a vague brand, but no shared language for it; they need a partner who will teach them what their own brand already is, not a vendor pitching disruption.",
+    "job_to_be_done": "Convert a skeptical founder reading the home page for 45 seconds into a booked discovery call, by demonstrating \u2014 not claiming \u2014 that Pedicel extracts a uniqueness the visitor couldn't articulate themselves.",
+    "why_this_not_generic": "Generic agency sites lead with a centered hero, three icon-cards, a 'services' grid, a testimonials carousel, and a 'let's talk' footer \u2014 the exact template the brief's brand_donts forbid (no impact tropes, no purple gradients, no challenger copy, no stock photography). Instead, this redesign leads with a one-sentence confession of belief, then progresses as a numbered curriculum so the visitor is taught the agency's process before being sold on its outputs. The gold dot above the 'i' (Pedicel's only saturated brand color, literally the dot of the brand mark) is reused throughout as an inline marker, a bullet, a step number, and a cursor accent \u2014 turning one logo detail into the page's signature."
+  },
+  "sections": [
+    {
+      "id": "thesis-statement",
+      "order": 1,
+      "purpose": "Lead with the brand's actual belief in the brand's own sentence-case voice, with no marketing framing above it.",
+      "component": "single-line thesis headline, left-aligned, anchored top-left, with the gold dot set as an oversize period at the end of the line",
+      "emphasis": "hero",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.favorite_words",
+        "palette_from_logo.primary"
+      ],
+      "rationale": "Pedicel's own tagline is a teacher-like statement of belief, not a value claim. Placing it alone, left-aligned, in display weight, with the logo's gold dot functioning as a sentence-ending mark, makes the page feel like the opening line of an essay rather than a marketing surface. This deliberately breaks the centered-everything hero default."
+    },
+    {
+      "id": "what-we-believe",
+      "order": 2,
+      "purpose": "Explain the agency's worldview in the brand's own 'confessional-educational' register before any service appears.",
+      "component": "two-column prose block (left: short numbered premise; right: short numbered premise), no icons, no bullets \u2014 just gold dots as numbered list markers",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "voice_and_tone.register",
+        "voice_and_tone.example_lines",
+        "voice_and_tone.banned_words"
+      ],
+      "rationale": "Voice notes describe the brand as 'teacher-like' and 'confessional-educational'. Putting the worldview before the service catalog enforces that order \u2014 the visitor is taught what Pedicel believes before they are shown what Pedicel sells. Avoiding banned words ('disrupt', 'revolutionary', 'cutting-edge') keeps the prose in the brand's own register."
+    },
+    {
+      "id": "service-curriculum",
+      "order": 3,
+      "purpose": "List the eight public services from LinkedIn as chapters of a syllabus, not as feature cards.",
+      "component": "vertically stacked numbered rows; each row contains a gold-dot chapter number, the service name in display weight, and a one-line teacherly description set in body type \u2014 no icons, no equal-height cards",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "service_facts",
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.banned_words",
+        "palette_from_logo.accent"
+      ],
+      "rationale": "The brief's only service inventory is the LinkedIn list (Social Media, Community Management, Branding Strategy, Sale Funnels, SEO, Web Design, Rebranding, Paid Advertising). A vertical 'curriculum' layout reads those as a process instead of a checkbox grid \u2014 a deliberate counter to the forbidden 'three-column feature grid with icons'. Pricing is 'not disclosed' so no price line is invented."
+    },
+    {
+      "id": "how-we-work",
+      "order": 4,
+      "purpose": "Show the agency's process as four short numbered steps so the visitor understands delivery before seeing proof.",
+      "component": "horizontal 4-step strip on desktop, stacked on mobile; each step is a number (gold dot), a verb-led step name, and a one-sentence description",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.notes",
+        "palette_from_logo.primary"
+      ],
+      "rationale": "Pedicel's positioning is 'customised from top to bottom' and lead-generation-driven. Naming a process addresses the founder's fear of a black-box engagement without inventing methodology specifics the brand hasn't published. Steps are deliberately described as verbs to keep them action-shaped, not jargon-shaped."
+    },
+    {
+      "id": "brand-not-blurb",
+      "order": 5,
+      "purpose": "Use the brand's own OG share image as the only large visual in the page, framed as 'how the brand already presents itself' rather than a stock hero.",
+      "component": "single framed image of the recovered og:image asset, captioned in the brand's voice, anchored with a small gold-dot bullet in the caption",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "brand_donts"
+      ],
+      "rationale": "The only brand-owned image asset the brief authorizes for non-logo use is the og:image ('pedicelmarketingpreviewwebsite.jpg'). The brand_donts explicitly forbid stock photography of offices and handshakes, and the limitations section notes no real team/client photo is recoverable. Using the brand's own share card is the only honest choice."
+    },
+    {
+      "id": "what-the-dot-means",
+      "order": 6,
+      "purpose": "Make the signature element explicit: explain that the gold dot above the 'i' in Pedicel is the page's recurring wayfinding mark.",
+      "component": "short two-sentence aside set in body type next to a single oversized gold dot glyph, no heading",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "palette_from_logo.rationale",
+        "palette_from_logo.primary",
+        "voice_and_tone.example_lines"
+      ],
+      "rationale": "The signature element is only memorable if it is acknowledged once. A short aside teaches the visitor that the gold dot is intentional, then the rest of the page can use it as a marker without needing to label it again."
+    },
+    {
+      "id": "book-a-call",
+      "order": 7,
+      "purpose": "Convert with a single sentence and a single button \u2014 no form fields, no calendar embed, no 'subscribe to our newsletter'.",
+      "component": "full-width band in the alice-blue secondary surface with one sentence of copy and one accent-blue button",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "palette_from_logo.secondary",
+        "palette_from_logo.accent",
+        "service_facts"
+      ],
+      "rationale": "The job-to-be-done is a discovery call. Anything more than a sentence plus a button is friction. The secondary alice-blue surface gives the band a quiet visual break without introducing a new color, and the accent blue (#3898ec) is the brand's actual interactive color from its own CSS, not a forbidden purple."
+    },
+    {
+      "id": "footer-colophon",
+      "order": 8,
+      "purpose": "Close with a small, sentence-case colophon that names the brand, the tagline, and the source of the page's typography \u2014 no social-feed embeds, no 'follow us' row.",
+      "component": "two-line footer: brand line (logo wordmark + tagline) above a single line of legal/credit text, set in body size",
+      "emphasis": "minor",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "voice_and_tone.example_lines",
+        "typography_recommendation.license_notes"
+      ],
+      "rationale": "No social highlights or testimonials are recoverable (brief limitations). Inventing a 'follow us on LinkedIn/Instagram' row would be invention. The colophon is honest, sentence-case, and acknowledges the typography license constraint rather than hiding it."
+    }
+  ],
+  "signature_element": {
+    "name": "the gold dot",
+    "description": "A single oversized circle in #efad2b \u2014 the literal fill of the dot above the 'i' in the Pedicel wordmark \u2014 reused as a wayfinding marker throughout the page: as the period that ends the thesis headline, as a numbered list bullet, as a step counter, as the cursor accent on the CTA button, and as the only color used at scale.",
+    "why_it_fits_brand": "Pedicel's logo declares exactly two fills: alice-blue for the wordmark glyphs and #efad2b gold for the dot. The dot is the brand's only saturated color and the literal punctuation of its name (the dot on the 'i'). Reusing it across the page turns a logo detail into the page's structural system \u2014 which matches the brand's own positioning that 'uniqueness' lives in details most agencies ignore.",
+    "implementation_note": "Render the dot as a CSS pseudo-element with a 0.6em diameter, color #efad2b, border-radius 9999px (the only place the design system uses a fully circular radius \u2014 every other corner stays sharp, per 'no uniform rounded corners'). Use it inline at the end of the thesis sentence; vertically centered beside numbered list items; and as a 0.4em trailing element inside the CTA button so the button reads 'book a call \u2192' where the arrow is the gold dot. Never use it as a background fill behind text."
+  },
+  "motion_vocabulary": {
+    "register": "restrained",
+    "effects": [
+      "thesis headline fades in once, 320ms, on first viewport entry",
+      "numbered list items reveal one row at a time as they cross 20% into the viewport, 240ms stagger, no bounce",
+      "gold dot scales from 0.6em to its final size on first paint of each section, 180ms ease-out",
+      "CTA button has a 1px underline that draws left-to-right on hover over 200ms",
+      "no parallax, no marquee, no auto-playing video, no scroll-jacking"
+    ],
+    "rationale": "The brand voice is 'confessional-educational' \u2014 quiet and teacher-like. Cinematic motion would contradict that register. Restrained, on-paint reveals respect the reader's pace and keep the page feeling like an essay rather than a launch site. The single kinetic flourish is the dot scaling into place, because the dot is the signature and it deserves one moment of attention."
+  },
+  "copy_blocks": [
+    {
+      "section_id": "thesis-statement",
+      "role": "headline",
+      "text": "All brands are unique. They just haven't shown it to the world yet.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "thesis-statement",
+      "role": "subhead",
+      "text": "Pedicel is an inbound marketing and branding agency. We help you find what is already yours.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.notes"
+      ]
+    },
+    {
+      "section_id": "what-we-believe",
+      "role": "body",
+      "text": "Uniqueness is not invented in a branding workshop. It is recovered \u2014 from the way your team talks about the work, from the customers who keep coming back, from the things you refuse to do. Our job is to listen for it, name it, and put it in front of the people who need to see it.",
+      "source_brief_fields": [
+        "voice_and_tone.register",
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "service-curriculum",
+      "role": "headline",
+      "text": "Eight chapters, one syllabus.",
+      "source_brief_fields": [
+        "service_facts",
+        "voice_and_tone.sentence_case"
+      ]
+    },
+    {
+      "section_id": "service-curriculum",
+      "role": "body",
+      "text": "Social media marketing. Community management. Branding strategy. Sale funnels. SEO. Web design. Rebranding. Paid advertising. Listed as the brand lists them \u2014 no merging, no rebranding of services into cleverer-sounding categories.",
+      "source_brief_fields": [
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "how-we-work",
+      "role": "headline",
+      "text": "A customised process, top to bottom.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "how-we-work",
+      "role": "body",
+      "text": "Listen for what is already true. Name it in language your team will actually use. Build the funnel around that language. Measure what brings the right people in.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "brand-not-blurb",
+      "role": "caption",
+      "text": "This is how Pedicel already presents itself to the world. No stock photography, no stock promises.",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "brand_donts"
+      ]
+    },
+    {
+      "section_id": "what-the-dot-means",
+      "role": "body",
+      "text": "The gold dot above the 'i' in Pedicel is the only saturated color in our mark. We use it on this page the same way we use it in our work \u2014 as a small detail most agencies would skip, and the first thing the right client notices.",
+      "source_brief_fields": [
+        "palette_from_logo.rationale",
+        "palette_from_logo.primary"
+      ]
+    },
+    {
+      "section_id": "book-a-call",
+      "role": "headline",
+      "text": "If something here sounded like your brand, let's talk.",
+      "source_brief_fields": [
+        "voice_and_tone.register",
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "book-a-call",
+      "role": "cta",
+      "text": "Book a call",
+      "source_brief_fields": [
+        "palette_from_logo.accent",
+        "voice_and_tone.sentence_case"
+      ]
+    },
+    {
+      "section_id": "footer-colophon",
+      "role": "body",
+      "text": "Pedicel Marketing. Limitless, customised, inbound. Set in Switzer and Poppins. \u00a9 Pedicel Marketing.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.favorite_words",
+        "typography_recommendation.display_family",
+        "typography_recommendation.body_family"
+      ]
+    }
+  ],
+  "skipped_sections": [
+    {
+      "id": "testimonials",
+      "reason": "The brief's limitations section explicitly states no testimonials are recoverable from any public surface. Including one would be invention, which is forbidden.",
+      "missing_brief_fields": [
+        "testimonials"
+      ]
+    },
+    {
+      "id": "social-feed",
+      "reason": "Both social_highlights.linkedin and social_highlights.instagram are empty by design \u2014 LinkedIn is gated and Instagram returns a login wall. A 'follow us' or post-grid section would have to be fabricated.",
+      "missing_brief_fields": [
+        "social_highlights.linkedin",
+        "social_highlights.instagram"
+      ]
+    },
+    {
+      "id": "case-studies",
+      "reason": "No client work imagery or case-study copy is recoverable from any public surface; the only brand-owned image is the OG share card, already used in 'brand-not-blurb'. A case-studies grid would invent clients.",
+      "missing_brief_fields": [
+        "real_photo_inventory",
+        "testimonials"
+      ]
+    },
+    {
+      "id": "pricing",
+      "reason": "Every service_facts entry has price_range 'not disclosed on public surfaces'. Showing tiers or starting prices would invent commercial facts.",
+      "missing_brief_fields": [
+        "service_facts[].price_range"
+      ]
+    },
+    {
+      "id": "team-grid",
+      "reason": "No real photograph of a person or team is in real_photo_inventory. The brief's limitations explicitly note the brand exposes no team imagery on its public surface. Headshots would have to be stock, which brand_donts forbid.",
+      "missing_brief_fields": [
+        "real_photo_inventory"
+      ]
+    },
+    {
+      "id": "stats-counter",
+      "reason": "Recoverable public numbers are limited to ~3,982 LinkedIn followers and 12 employees (gated). Basing a stats band on a single sourced metric would over-weight it; inventing metrics (campaigns run, leads generated) would be fabrication.",
+      "missing_brief_fields": [
+        "testimonials",
+        "social_highlights"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "Lead with a one-sentence thesis instead of a value-proposition headline-and-subhead pair.",
+      "alternatives_considered": [
+        "headline + subhead + CTA button trio",
+        "headline + benefit bullets",
+        "headline + animated tagline reveal"
+      ],
+      "why_chosen": "The brief's example_lines are short, sentence-case, and belief-shaped ('All brands are unique\u2026', 'Limitless.', 'Our approach is customised from top to bottom.'). A single sentence respects that voice and breaks the centered-hero default. The CTA is moved to its own dedicated section further down the page."
+    },
+    {
+      "decision": "Render services as a vertical numbered 'curriculum' rather than a grid of icon cards.",
+      "alternatives_considered": [
+        "three-column feature grid with icons",
+        "horizontal scrolling card row",
+        "tabbed service switcher"
+      ],
+      "why_chosen": "The forbidden-defaults list explicitly bans the three-column icon grid. A vertical numbered list reads the eight services as a sequence (which matches the brand's positioning that discovery is a process), keeps every service name exactly as the brand wrote it on LinkedIn, and gives each one room for a one-line teacherly description instead of a vague headline."
+    },
+    {
+      "decision": "Use only #efad2b as the accent color and reserve the brand's CSS-blue (#3898ec) for the single CTA button.",
+      "alternatives_considered": [
+        "use both #efad2b and #3898ec interchangeably as accents",
+        "introduce a new accent color (purple/teal) to 'modernize'",
+        "use the Webflow CSS's purple #6a34b3 as an accent"
+      ],
+      "why_chosen": "The brand_donts explicitly forbid purple, and the brief notes the CSS purple is a Webflow default state, not a brand surface. Treating gold as the only accent preserves the logo's actual color story (one saturated hue, one near-white) and lets the CTA button be the only place a second color appears \u2014 which makes the CTA unmissable."
+    },
+    {
+      "decision": "Keep all corners sharp except the gold dot, which is the only fully circular element.",
+      "alternatives_considered": [
+        "uniform 8px rounded corners across cards and buttons",
+        "pill-shaped buttons with fully rounded ends",
+        "16px corners on cards, 4px on buttons"
+      ],
+      "why_chosen": "The forbidden-defaults list bans 'uniform rounded corners'. Using a single sharp-cornered system (0px on cards and buttons, 1px dividers) and reserving full rounding for the signature dot reinforces that the dot is special and gives the page one visible moment of softness."
+    },
+    {
+      "decision": "Use Switzer for display and Poppins for body, with an explicit license note in the footer colophon.",
+      "alternatives_considered": [
+        "swap to Inter for display to avoid the Switzer commercial-license issue",
+        "use Inter for everything",
+        "self-host Poppins only and fall back to system sans for display"
+      ],
+      "why_chosen": "The brief's brand surface already loads Switzer from the Webflow CDN and the typography_recommendation flags the license issue. Matching the brand's own loaded family keeps the redesign visually faithful to Pedicel's current intent, while a one-line colophon credit is the honest way to surface the license constraint instead of hiding it."
+    },
+    {
+      "decision": "Hold motion to a single restrained register (on-paint fades, dot scale-in, underline draw) and refuse parallax, marquee, or auto-playing video.",
+      "alternatives_considered": [
+        "cinematic scroll-driven reveals",
+        "auto-playing background video in the hero",
+        "parallax depth between sections"
+      ],
+      "why_chosen": "Voice is 'confessional-educational'. Cinematic motion would over-perform the teacher-like register and contradict the brand's own positioning as quiet, customized, inbound. The one kinetic flourish (the dot scaling in) is reserved for the signature element so it earns its moment."
+    },
+    {
+      "decision": "Skip testimonials, social feed, case studies, pricing, team grid, and stats entirely instead of fabricating any of them.",
+      "alternatives_considered": [
+        "fabricate plausible-but-unsourced testimonials",
+        "embed LinkedIn/Instagram widgets that would render empty",
+        "invent starting prices from industry averages"
+      ],
+      "why_chosen": "Every skipped section has a documented missing_brief_field. The brief's limitations section is explicit that invention is forbidden. Removing six conventional agency-site sections is itself a brand-specific design choice \u2014 the page is shorter, quieter, and more honest than a typical agency site, which matches the brand's own positioning."
+    }
+  ]
+}
