@@ -152,7 +152,15 @@ boot from a local origin, so validate before claiming a tier.
 Screenshots cannot see motion. When the mirror **renders** and the source has meaningful motion
 (scroll choreography, entrance/hover animations, carousels, background video), run — while the local
 server is still up — a motion-fidelity audit that records source vs. mirror and compares them with
-Gemini's native video vision (MiniMax vision is frame-only and not suitable here):
+a video-capable model. NOTE: MiniMax-M3 DOES accept video input (Anthropic-style
+video content block; Video-MME 84.6) — an earlier claim here that MiniMax vision is
+frame-only was wrong. The practical difference is FRAME RATE: Gemini documents an
+fps override (videoMetadata fps up to 24 + clipping), while MiniMax samples ~1 fps.
+At 1 fps an 8s entrance yields 8 frames — enough to say motion is present/absent,
+NOT enough to judge easing or stagger. So: Gemini-with-fps => `Interaction-tested`;
+MiniMax at ~1 fps => `Observed visually` (coarse verdict only, downgrade the tier);
+no key => `Not exercised`. Kimi K3 CANNOT accept video at all, so keep the video
+model a SWAPPABLE slot, separate from the main agent model:
 
 ```bash
 "$PYBROWSER" "$SKILL/scripts/motion_audit.py" \
