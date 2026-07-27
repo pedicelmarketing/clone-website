@@ -4,6 +4,7 @@
 auth.json
 **/auth.json
 __pycache__/
+tests/__pycache__/
 *.pyc
 node_modules/
 *.log

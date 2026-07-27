@@ -1,0 +1,1201 @@
+{
+  "access_state": "ok",
+  "breakpoints": [
+    {
+      "changes": [
+        {
+          "after_px": 622,
+          "after_top_px": 2238,
+          "before_px": 587,
+          "before_top_px": 1841,
+          "selector": "p"
+        },
+        {
+          "after_px": 622,
+          "after_top_px": 751,
+          "before_px": 587,
+          "before_top_px": 635,
+          "selector": "ol.subtle-markers posts compact"
+        },
+        {
+          "after_px": 622,
+          "after_top_px": 141,
+          "before_px": 587,
+          "before_top_px": 119,
+          "selector": "div.nutshell"
+        },
+        {
+          "after_px": 622,
+          "after_top_px": 593,
+          "before_px": 587,
+          "before_top_px": 502,
+          "selector": "h2"
+        }
+      ],
+      "confidence": "high",
+      "label": "tablet-portrait",
+      "min_width_px": 768,
+      "observed_change_at_px": 768
+    },
+    {
+      "changes": [
+        {
+          "after_px": 728,
+          "after_top_px": 1923,
+          "before_px": 754,
+          "before_top_px": 1889,
+          "selector": "p"
+        },
+        {
+          "after_px": 728,
+          "after_top_px": 718,
+          "before_px": 754,
+          "before_top_px": 714,
+          "selector": "ol.subtle-markers posts compact"
+        },
+        {
+          "after_px": 728,
+          "after_top_px": 141,
+          "before_px": 754,
+          "before_top_px": 141,
+          "selector": "div.nutshell"
+        },
+        {
+          "after_px": 728,
+          "after_top_px": 554,
+          "before_px": 754,
+          "before_top_px": 553,
+          "selector": "h2"
+        }
+      ],
+      "confidence": "high",
+      "label": "tablet-landscape",
+      "min_width_px": 1024,
+      "observed_change_at_px": 1024
+    }
+  ],
+  "extracted_at": "2026-07-24T19:51:31Z",
+  "meta": {
+    "evidence_basis": "DOM+assets confirmed",
+    "notes": []
+  },
+  "schema_version": "1.0",
+  "snapshots": [
+    {
+      "client_width": 320,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 79,
+          "tag": "header",
+          "top": 0,
+          "width": 320
+        },
+        {
+          "cls": "",
+          "height": 3575,
+          "tag": "main",
+          "top": 79,
+          "width": 320
+        },
+        {
+          "cls": "nutshell",
+          "height": 747,
+          "tag": "div",
+          "top": 119,
+          "width": 267
+        },
+        {
+          "cls": "",
+          "height": 33,
+          "tag": "h2",
+          "top": 891,
+          "width": 267
+        },
+        {
+          "cls": "",
+          "height": 106,
+          "tag": "p",
+          "top": 948,
+          "width": 267
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 2454,
+          "tag": "ol",
+          "top": 1071,
+          "width": 267
+        },
+        {
+          "cls": "",
+          "height": 35,
+          "tag": "p",
+          "top": 3543,
+          "width": 267
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "footer",
+          "top": 3596,
+          "width": 267
+        },
+        {
+          "cls": "",
+          "height": 498,
+          "tag": "footer",
+          "top": 3689,
+          "width": 320
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 320,
+      "width": 320
+    },
+    {
+      "client_width": 360,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 79,
+          "tag": "header",
+          "top": 0,
+          "width": 360
+        },
+        {
+          "cls": "",
+          "height": 3051,
+          "tag": "main",
+          "top": 79,
+          "width": 360
+        },
+        {
+          "cls": "nutshell",
+          "height": 644,
+          "tag": "div",
+          "top": 119,
+          "width": 307
+        },
+        {
+          "cls": "",
+          "height": 33,
+          "tag": "h2",
+          "top": 788,
+          "width": 307
+        },
+        {
+          "cls": "",
+          "height": 106,
+          "tag": "p",
+          "top": 846,
+          "width": 307
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 2032,
+          "tag": "ol",
+          "top": 969,
+          "width": 307
+        },
+        {
+          "cls": "",
+          "height": 35,
+          "tag": "p",
+          "top": 3019,
+          "width": 307
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "footer",
+          "top": 3072,
+          "width": 307
+        },
+        {
+          "cls": "",
+          "height": 476,
+          "tag": "footer",
+          "top": 3165,
+          "width": 360
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 360,
+      "width": 360
+    },
+    {
+      "client_width": 414,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 79,
+          "tag": "header",
+          "top": 0,
+          "width": 414
+        },
+        {
+          "cls": "",
+          "height": 2699,
+          "tag": "main",
+          "top": 79,
+          "width": 414
+        },
+        {
+          "cls": "nutshell",
+          "height": 576,
+          "tag": "div",
+          "top": 119,
+          "width": 361
+        },
+        {
+          "cls": "",
+          "height": 34,
+          "tag": "h2",
+          "top": 720,
+          "width": 361
+        },
+        {
+          "cls": "",
+          "height": 79,
+          "tag": "p",
+          "top": 779,
+          "width": 361
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 1795,
+          "tag": "ol",
+          "top": 876,
+          "width": 361
+        },
+        {
+          "cls": "",
+          "height": 35,
+          "tag": "p",
+          "top": 2688,
+          "width": 361
+        },
+        {
+          "cls": "",
+          "height": 20,
+          "tag": "footer",
+          "top": 2741,
+          "width": 361
+        },
+        {
+          "cls": "",
+          "height": 476,
+          "tag": "footer",
+          "top": 2814,
+          "width": 414
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 414,
+      "width": 414
+    },
+    {
+      "client_width": 480,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 79,
+          "tag": "header",
+          "top": 0,
+          "width": 480
+        },
+        {
+          "cls": "",
+          "height": 2347,
+          "tag": "main",
+          "top": 79,
+          "width": 480
+        },
+        {
+          "cls": "nutshell",
+          "height": 459,
+          "tag": "div",
+          "top": 119,
+          "width": 427
+        },
+        {
+          "cls": "",
+          "height": 34,
+          "tag": "h2",
+          "top": 603,
+          "width": 427
+        },
+        {
+          "cls": "",
+          "height": 79,
+          "tag": "p",
+          "top": 664,
+          "width": 427
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 1557,
+          "tag": "ol",
+          "top": 760,
+          "width": 427
+        },
+        {
+          "cls": "",
+          "height": 35,
+          "tag": "p",
+          "top": 2335,
+          "width": 427
+        },
+        {
+          "cls": "",
+          "height": 20,
+          "tag": "footer",
+          "top": 2388,
+          "width": 427
+        },
+        {
+          "cls": "",
+          "height": 476,
+          "tag": "footer",
+          "top": 2461,
+          "width": 480
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 480,
+      "width": 480
+    },
+    {
+      "client_width": 640,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 79,
+          "tag": "header",
+          "top": 0,
+          "width": 640
+        },
+        {
+          "cls": "",
+          "height": 1852,
+          "tag": "main",
+          "top": 79,
+          "width": 640
+        },
+        {
+          "cls": "nutshell",
+          "height": 356,
+          "tag": "div",
+          "top": 119,
+          "width": 587
+        },
+        {
+          "cls": "",
+          "height": 36,
+          "tag": "h2",
+          "top": 502,
+          "width": 587
+        },
+        {
+          "cls": "",
+          "height": 53,
+          "tag": "p",
+          "top": 565,
+          "width": 587
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 1188,
+          "tag": "ol",
+          "top": 635,
+          "width": 587
+        },
+        {
+          "cls": "",
+          "height": 35,
+          "tag": "p",
+          "top": 1841,
+          "width": 587
+        },
+        {
+          "cls": "",
+          "height": 20,
+          "tag": "footer",
+          "top": 1894,
+          "width": 587
+        },
+        {
+          "cls": "",
+          "height": 310,
+          "tag": "footer",
+          "top": 1967,
+          "width": 640
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 640,
+      "width": 640
+    },
+    {
+      "client_width": 768,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 94,
+          "tag": "header",
+          "top": 0,
+          "width": 768
+        },
+        {
+          "cls": "",
+          "height": 2251,
+          "tag": "main",
+          "top": 94,
+          "width": 768
+        },
+        {
+          "cls": "nutshell",
+          "height": 420,
+          "tag": "div",
+          "top": 141,
+          "width": 622
+        },
+        {
+          "cls": "",
+          "height": 43,
+          "tag": "h2",
+          "top": 593,
+          "width": 622
+        },
+        {
+          "cls": "",
+          "height": 62,
+          "tag": "p",
+          "top": 668,
+          "width": 622
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 1466,
+          "tag": "ol",
+          "top": 751,
+          "width": 622
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "p",
+          "top": 2238,
+          "width": 622
+        },
+        {
+          "cls": "",
+          "height": 24,
+          "tag": "footer",
+          "top": 2300,
+          "width": 622
+        },
+        {
+          "cls": "",
+          "height": 320,
+          "tag": "footer",
+          "top": 2386,
+          "width": 768
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 768,
+      "width": 768
+    },
+    {
+      "client_width": 900,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 94,
+          "tag": "header",
+          "top": 0,
+          "width": 900
+        },
+        {
+          "cls": "",
+          "height": 1902,
+          "tag": "main",
+          "top": 94,
+          "width": 900
+        },
+        {
+          "cls": "nutshell",
+          "height": 379,
+          "tag": "div",
+          "top": 141,
+          "width": 754
+        },
+        {
+          "cls": "",
+          "height": 44,
+          "tag": "h2",
+          "top": 553,
+          "width": 754
+        },
+        {
+          "cls": "",
+          "height": 62,
+          "tag": "p",
+          "top": 631,
+          "width": 754
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 1154,
+          "tag": "ol",
+          "top": 714,
+          "width": 754
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "p",
+          "top": 1889,
+          "width": 754
+        },
+        {
+          "cls": "",
+          "height": 24,
+          "tag": "footer",
+          "top": 1951,
+          "width": 754
+        },
+        {
+          "cls": "",
+          "height": 294,
+          "tag": "footer",
+          "top": 2038,
+          "width": 900
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 900,
+      "width": 900
+    },
+    {
+      "client_width": 1024,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 94,
+          "tag": "header",
+          "top": 0,
+          "width": 1024
+        },
+        {
+          "cls": "",
+          "height": 1937,
+          "tag": "main",
+          "top": 94,
+          "width": 1024
+        },
+        {
+          "cls": "nutshell",
+          "height": 379,
+          "tag": "div",
+          "top": 141,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 46,
+          "tag": "h2",
+          "top": 554,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 62,
+          "tag": "p",
+          "top": 634,
+          "width": 728
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 1185,
+          "tag": "ol",
+          "top": 718,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "p",
+          "top": 1923,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 24,
+          "tag": "footer",
+          "top": 1986,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 294,
+          "tag": "footer",
+          "top": 2072,
+          "width": 1024
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 1024,
+      "width": 1024
+    },
+    {
+      "client_width": 1200,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 94,
+          "tag": "header",
+          "top": 0,
+          "width": 1200
+        },
+        {
+          "cls": "",
+          "height": 1937,
+          "tag": "main",
+          "top": 94,
+          "width": 1200
+        },
+        {
+          "cls": "nutshell",
+          "height": 379,
+          "tag": "div",
+          "top": 141,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 46,
+          "tag": "h2",
+          "top": 555,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 62,
+          "tag": "p",
+          "top": 635,
+          "width": 728
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 1185,
+          "tag": "ol",
+          "top": 718,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "p",
+          "top": 1924,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 24,
+          "tag": "footer",
+          "top": 1986,
+          "width": 728
+        },
+        {
+          "cls": "",
+          "height": 294,
+          "tag": "footer",
+          "top": 2073,
+          "width": 1200
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 1200,
+      "width": 1200
+    },
+    {
+      "client_width": 1440,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 94,
+          "tag": "header",
+          "top": 0,
+          "width": 1440
+        },
+        {
+          "cls": "",
+          "height": 1566,
+          "tag": "main",
+          "top": 94,
+          "width": 1440
+        },
+        {
+          "cls": "nutshell",
+          "height": 258,
+          "tag": "div",
+          "top": 141,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 46,
+          "tag": "h2",
+          "top": 433,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 62,
+          "tag": "p",
+          "top": 513,
+          "width": 1040
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 936,
+          "tag": "ol",
+          "top": 596,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "p",
+          "top": 1553,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 24,
+          "tag": "footer",
+          "top": 1615,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 294,
+          "tag": "footer",
+          "top": 1701,
+          "width": 1440
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 1440,
+      "width": 1440
+    },
+    {
+      "client_width": 1680,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 94,
+          "tag": "header",
+          "top": 0,
+          "width": 1680
+        },
+        {
+          "cls": "",
+          "height": 1566,
+          "tag": "main",
+          "top": 94,
+          "width": 1680
+        },
+        {
+          "cls": "nutshell",
+          "height": 258,
+          "tag": "div",
+          "top": 141,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 46,
+          "tag": "h2",
+          "top": 433,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 62,
+          "tag": "p",
+          "top": 513,
+          "width": 1040
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 936,
+          "tag": "ol",
+          "top": 596,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "p",
+          "top": 1553,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 24,
+          "tag": "footer",
+          "top": 1615,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 294,
+          "tag": "footer",
+          "top": 1701,
+          "width": 1680
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 1680,
+      "width": 1680
+    },
+    {
+      "client_width": 1920,
+      "container_snap": [
+        {
+          "cls": "monitor-in-view in-view",
+          "height": 94,
+          "tag": "header",
+          "top": 0,
+          "width": 1920
+        },
+        {
+          "cls": "",
+          "height": 1566,
+          "tag": "main",
+          "top": 94,
+          "width": 1920
+        },
+        {
+          "cls": "nutshell",
+          "height": 258,
+          "tag": "div",
+          "top": 141,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 46,
+          "tag": "h2",
+          "top": 433,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 62,
+          "tag": "p",
+          "top": 513,
+          "width": 1040
+        },
+        {
+          "cls": "subtle-markers posts compact",
+          "height": 936,
+          "tag": "ol",
+          "top": 596,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 41,
+          "tag": "p",
+          "top": 1553,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 24,
+          "tag": "footer",
+          "top": 1615,
+          "width": 1040
+        },
+        {
+          "cls": "",
+          "height": 294,
+          "tag": "footer",
+          "top": 1701,
+          "width": 1920
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "cta",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary work-with-me",
+          "display": "block",
+          "tag": "a",
+          "visibility": "visible"
+        },
+        {
+          "cls": "cta secondary",
+          "display": "inline-block",
+          "tag": "a",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Home • Lea Verou",
+      "scroll_width": 1920,
+      "width": 1920
+    }
+  ],
+  "source_url": "https://lea.verou.me",
+  "summary": {
+    "breakpoints_detected": 2,
+    "high_confidence": 2,
+    "low_confidence": 0,
+    "medium_confidence": 0,
+    "total_widths_swept": 12
+  },
+  "tool_version": "1.0",
+  "viewport_height": 900,
+  "widths_swept": [
+    320,
+    360,
+    414,
+    480,
+    640,
+    768,
+    900,
+    1024,
+    1200,
+    1440,
+    1680,
+    1920
+  ]
+}

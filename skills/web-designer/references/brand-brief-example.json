@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "pedicel-marketing-redesign",
+  "fetched_at": "2026-07-24T16:30:00Z",
+  "research_scrapes_ids": [142, 143, 144, 145, 146, 147],
+  "sources": {
+    "own_site": {
+      "url": "https://pedicelmarketing.com",
+      "fetch_backend": "cloak",
+      "char_count": 18432,
+      "scrapes_id": 142
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/company/pedicel-marketing",
+      "fetch_backend": "cloak_loggedin",
+      "char_count": 8200,
+      "scrapes_id": 143,
+      "post_count_30d": 18,
+      "top_posts": [
+        {"date": "2026-07-12", "engagement": 312, "url": "https://www.linkedin.com/posts/pedicel-marketing-pipeline-1234"}
+      ]
+    },
+    "instagram": {
+      "url": "https://www.instagram.com/pedicelmarketing",
+      "fetch_backend": "firecrawl",
+      "char_count": 4400,
+      "post_count_30d": 12,
+      "grid_themes": ["team photos at conferences", "client work snapshots", "tactical marketing tips"],
+      "scrapes_id": 144
+    },
+    "reference": {
+      "url": "https://linear.app",
+      "fetch_backend": "firecrawl",
+      "char_count": 21000,
+      "scrapes_id": 145
+    }
+  },
+  "voice_and_tone": {
+    "register": "conversational-professional",
+    "sentence_case": true,
+    "favorite_words": ["without", "behind", "real", "specific"],
+    "banned_words": ["synergy", "delve", "leverage", "in today's"],
+    "formality_score_1to5": 3,
+    "avg_sentence_length_words": 14,
+    "example_lines": [
+      "We build content engines that compound.",
+      "Most agencies optimize for impressions. We optimize for pipeline."
+    ],
+    "notes": "Voice is confident, peer-to-peer (no marketing fluff), explicitly anti-jargon."
+  },
+  "palette_from_logo": {
+    "method": "color-thief on primary logo + brand mood words",
+    "primary": "#1F4D3F",
+    "secondary": "#F5F1E8",
+    "accent": "#E8B14F",
+    "neutrals": ["#1A1A1A", "#5C5C5C", "#A8A8A8", "#E5E5E5", "#FAFAFA"],
+    "rationale": "Logo's deep evergreen + warm cream backdrop came from the founder's preference; the gold accent is reserved for CTA hover."
+  },
+  "typography_recommendation": {
+    "display_family": "GT Walsheim",
+    "body_family": "Inter",
+    "mono_family": "JetBrains Mono",
+    "license_notes": "GT Walsheim is paid (Grilli Type) — DO NOT vendored; substitute Fraunces or Söhne (MIT-ish) for production. Inter is SIL OFL.",
+    "scale_ratio": 1.250,
+    "scale_steps": [12, 14, 16, 20, 24, 32, 48, 64]
+  },
+  "real_photo_inventory": [
+    {
+      "url": "https://pedicelmarketing.com/wp-content/uploads/team/kristin-headshot-2026.jpg",
+      "subject": "Kristin, founder, headshot",
+      "license": "brand-owned",
+      "use": ["about page", "speaker bio"],
+      "scrapes_id": 146
+    },
+    {
+      "url": "https://pedicelmarketing.com/wp-content/uploads/work/acme-case-study-cover.jpg",
+      "subject": "Case study hero for Acme client",
+      "license": "client-owned, brand-permission-to-display",
+      "use": ["case study hero", "homepage carousel"],
+      "scrapes_id": 147
+    }
+  ],
+  "service_facts": [
+    {"name": "Content Engine", "description": "End-to-end SEO program: strategy, writing, distribution, measurement.", "price_range": "$8k–$15k/mo"},
+    {"name": "Fractional CMO", "description": "Senior marketing leadership, 1 day/week, embedded with your team.", "price_range": "$6k–$12k/mo"},
+    {"name": "Brand Sprint", "description": "2-week positioning + messaging engagement.", "price_range": "$15k flat"}
+  ],
+  "social_highlights": {
+    "linkedin": [
+      {"date": "2026-07-12", "excerpt": "Most agencies sell impressions. We sell pipeline.", "engagement": 312},
+      {"date": "2026-07-05", "excerpt": "A short post on why we don't do A/B tests at the headline level", "engagement": 187}
+    ],
+    "instagram": [
+      {"date": "2026-07-18", "caption": "Team at Content Marketing World 2026", "image_url": "https://instagram.com/p/abc"},
+      {"date": "2026-07-09", "caption": "New client work drop", "image_url": "https://instagram.com/p/def"}
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Pedicel made our content engine predictable. We went from 0 to 40 qualified demos/month in 6 months.",
+      "attribution": "Sarah Chen, VP Marketing, Acme Co",
+      "source_url": "https://www.linkedin.com/in/sarahchen/details/recommendations",
+      "license": "public, attributed",
+      "scrapes_id": 147
+    }
+  ],
+  "brand_donts": [
+    "No purple gradients",
+    "No 'revolutionary' or 'cutting-edge'",
+    "No stock photography of generic office scenes",
+    "No carousel auto-advance on the homepage hero (slows down the message)"
+  ],
+  "limitations": [
+    "Instagram login-walled: public grid scraped via firecrawl, captions recovered for 12/30 most-recent posts only",
+    "LinkedIn session was the throwaway-account Cloak session; volume kept low per skill rules"
+  ]
+}

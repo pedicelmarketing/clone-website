@@ -1,0 +1,50 @@
+================================================================
+Validation run for: https://lea.verou.me
+Slug: lea-verou
+Date: 2026-07-24T19:51:16Z
+Python: /home/openclaw/.venvs/nt-mirror/bin/python (Python 3.12.3)
+================================================================
+
+--- extract_tokens.py ---
+access_state: ok
+css variables at :root: 1
+color tokens: 0, typography roles: 5, spacing samples: 6, radius samples: 2, shadow samples: 0
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/tokens/color.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/tokens/typography.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/tokens/spacing.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/tokens/radius.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/tokens/shadow.json
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/tokens/tailwind.json
+exit_code: 0
+
+--- inventory_copy.py ---
+access_state: ok
+text_blocks: 64, alt_labels: 13, sections_seen: [1, 2, 3, 4, 5, 6, 7, 8]
+by_role: {'a': 28, 'p': 2, 'li': 30, 'span': 1, 'h4': 2, 'small': 1}
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/copy.json
+exit_code: 0
+
+--- inventory_components.py ---
+access_state: ok
+components: 27 (confirmed: 4, candidate: 23); total_instances: 119
+by_kind: {'link': 84, 'list-item': 30, 'header': 1, 'nav': 2, 'footer': 2}
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/components.json
+exit_code: 0
+
+--- infer_breakpoints.py ---
+access_state: ok
+widths_swept: 12, breakpoints: 2 (high/medium/low: 2/0/0)
+/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/lea-verou/breakpoints.json
+exit_code: 0
+
+RESULT: ALL 4 SCRIPTS PASSED
+access_state: ok
+css variables at :root: 1
+color tokens: 6, typography roles: 5, spacing samples: 6, radius samples: 2, shadow samples: 0
+notes: color_source: :root yielded 0 named tokens; used computed-style fallback on 20 role-cells (6 unique colors)
+reports/validation/lea-verou/tokens/color.json
+reports/validation/lea-verou/tokens/typography.json
+reports/validation/lea-verou/tokens/spacing.json
+reports/validation/lea-verou/tokens/radius.json
+reports/validation/lea-verou/tokens/shadow.json
+reports/validation/lea-verou/tokens/tailwind.json

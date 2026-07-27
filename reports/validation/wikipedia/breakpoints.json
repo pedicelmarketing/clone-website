@@ -1,0 +1,6470 @@
+{
+  "access_state": "ok",
+  "breakpoints": [
+    {
+      "changes": [
+        {
+          "after_px": 140,
+          "after_top_px": 14,
+          "before_px": 120,
+          "before_top_px": 14,
+          "selector": "span.mw-logo-container skin-invert"
+        },
+        {
+          "display_after": "none",
+          "display_before": "block",
+          "selector": "div.vector-dropdown vector-user-menu vector-button-flush-right v"
+        },
+        {
+          "display_after": "none",
+          "display_before": "list-item",
+          "selector": "li.mw-list-item vector-menu-item--collapsible"
+        }
+      ],
+      "confidence": "high",
+      "label": "tablet-portrait",
+      "min_width_px": 640,
+      "observed_change_at_px": 640
+    },
+    {
+      "changes": [
+        {
+          "after_px": 196,
+          "after_top_px": 135,
+          "before_px": 976,
+          "before_top_px": 167,
+          "selector": "div.vector-column-end no-font-mode-scale"
+        },
+        {
+          "after_px": 672,
+          "after_top_px": 90,
+          "before_px": 976,
+          "before_top_px": 90,
+          "selector": "header.mw-body-header vector-page-titlebar no-font-mode-scale"
+        },
+        {
+          "after_px": 196,
+          "after_top_px": 136,
+          "before_px": 976,
+          "before_top_px": 90,
+          "selector": "div.vector-main-menu-container"
+        },
+        {
+          "after_px": 892,
+          "after_top_px": 90,
+          "before_px": 976,
+          "before_top_px": 90,
+          "selector": "main.mw-body"
+        },
+        {
+          "after_px": 672,
+          "after_top_px": 163,
+          "before_px": 976,
+          "before_top_px": 167,
+          "selector": "div.vector-body ve-init-mw-desktopArticleTarget-targetContainer"
+        },
+        {
+          "after_px": 404,
+          "after_top_px": 17,
+          "before_px": 0,
+          "before_top_px": 0,
+          "selector": "div.cdx-search-input__input-wrapper"
+        },
+        {
+          "after_px": 892,
+          "after_top_px": 90,
+          "before_px": 976,
+          "before_top_px": 90,
+          "selector": "div.mw-content-container"
+        },
+        {
+          "after_px": 672,
+          "after_top_px": 130,
+          "before_px": 976,
+          "before_top_px": 134,
+          "selector": "div.vector-page-toolbar-container"
+        },
+        {
+          "after_px": 150,
+          "after_top_px": 178,
+          "before_px": 145,
+          "before_top_px": 182,
+          "selector": "div.vector-unpinned-container"
+        },
+        {
+          "after_px": 672,
+          "after_top_px": 130,
+          "before_px": 976,
+          "before_top_px": 134,
+          "selector": "div.vector-page-toolbar"
+        },
+        {
+          "display_after": "flex",
+          "display_before": "block",
+          "selector": "ul.vector-menu-content-list"
+        }
+      ],
+      "confidence": "high",
+      "label": "desktop",
+      "min_width_px": 1200,
+      "observed_change_at_px": 1200
+    },
+    {
+      "changes": [
+        {
+          "after_px": 260,
+          "after_top_px": 136,
+          "before_px": 208,
+          "before_top_px": 136,
+          "selector": "nav.mw-table-of-contents-container vector-toc-landmark"
+        },
+        {
+          "after_px": 248,
+          "after_top_px": 136,
+          "before_px": 196,
+          "before_top_px": 136,
+          "selector": "div.vector-pinned-container"
+        },
+        {
+          "after_px": 248,
+          "after_top_px": 136,
+          "before_px": 196,
+          "before_top_px": 136,
+          "selector": "div.vector-sticky-pinned-container"
+        },
+        {
+          "after_px": 248,
+          "after_top_px": 135,
+          "before_px": 196,
+          "before_top_px": 135,
+          "selector": "div.vector-column-end no-font-mode-scale"
+        },
+        {
+          "after_px": 948,
+          "after_top_px": 90,
+          "before_px": 912,
+          "before_top_px": 90,
+          "selector": "header.mw-body-header vector-page-titlebar no-font-mode-scale"
+        },
+        {
+          "after_px": 248,
+          "after_top_px": 136,
+          "before_px": 196,
+          "before_top_px": 136,
+          "selector": "div.vector-main-menu-container"
+        },
+        {
+          "after_px": 1220,
+          "after_top_px": 90,
+          "before_px": 1132,
+          "before_top_px": 90,
+          "selector": "main.mw-body"
+        },
+        {
+          "after_px": 948,
+          "after_top_px": 163,
+          "before_px": 912,
+          "before_top_px": 163,
+          "selector": "div.vector-body ve-init-mw-desktopArticleTarget-targetContainer"
+        },
+        {
+          "after_px": 1220,
+          "after_top_px": 90,
+          "before_px": 1132,
+          "before_top_px": 90,
+          "selector": "div.mw-content-container"
+        },
+        {
+          "after_px": 948,
+          "after_top_px": 130,
+          "before_px": 912,
+          "before_top_px": 130,
+          "selector": "div.vector-page-toolbar-container"
+        },
+        {
+          "after_px": 948,
+          "after_top_px": 130,
+          "before_px": 912,
+          "before_top_px": 130,
+          "selector": "div.vector-page-toolbar"
+        }
+      ],
+      "confidence": "high",
+      "label": "wide-desktop",
+      "min_width_px": 1680,
+      "observed_change_at_px": 1680
+    }
+  ],
+  "extracted_at": "2026-07-24T19:52:08Z",
+  "meta": {
+    "evidence_basis": "DOM+assets confirmed",
+    "notes": []
+  },
+  "schema_version": "1.0",
+  "snapshots": [
+    {
+      "client_width": 320,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 126,
+          "tag": "div",
+          "top": 0,
+          "width": 320
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 120
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 134,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 27581,
+          "tag": "div",
+          "top": 126,
+          "width": 320
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 27557,
+          "tag": "div",
+          "top": 150,
+          "width": 272
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 150,
+          "width": 272
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 150,
+          "width": 272
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 27213,
+          "tag": "div",
+          "top": 150,
+          "width": 272
+        },
+        {
+          "cls": "mw-body",
+          "height": 27213,
+          "tag": "main",
+          "top": 150,
+          "width": 272
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 76,
+          "tag": "header",
+          "top": 150,
+          "width": 272
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 210,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 226,
+          "width": 272
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 226,
+          "width": 272
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 274,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 259,
+          "width": 272
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 27104,
+          "tag": "div",
+          "top": 259,
+          "width": 272
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 16089,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 344,
+          "tag": "div",
+          "top": 27363,
+          "width": 272
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 349,
+      "width": 320
+    },
+    {
+      "client_width": 360,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 360
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 120
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 24512,
+          "tag": "div",
+          "top": 66,
+          "width": 360
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 24488,
+          "tag": "div",
+          "top": 90,
+          "width": 312
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 312
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 312
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 24160,
+          "tag": "div",
+          "top": 90,
+          "width": 312
+        },
+        {
+          "cls": "mw-body",
+          "height": 24160,
+          "tag": "main",
+          "top": 90,
+          "width": 312
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 76,
+          "tag": "header",
+          "top": 90,
+          "width": 312
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 150,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 166,
+          "width": 312
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 166,
+          "width": 312
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 214,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 199,
+          "width": 312
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 24051,
+          "tag": "div",
+          "top": 199,
+          "width": 312
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 14158,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 327,
+          "tag": "div",
+          "top": 24250,
+          "width": 312
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 360,
+      "width": 360
+    },
+    {
+      "client_width": 414,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 414
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 120
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 21455,
+          "tag": "div",
+          "top": 66,
+          "width": 414
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 21431,
+          "tag": "div",
+          "top": 90,
+          "width": 366
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 366
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 366
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 21121,
+          "tag": "div",
+          "top": 90,
+          "width": 366
+        },
+        {
+          "cls": "mw-body",
+          "height": 21121,
+          "tag": "main",
+          "top": 90,
+          "width": 366
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 76,
+          "tag": "header",
+          "top": 90,
+          "width": 366
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 150,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 166,
+          "width": 366
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 166,
+          "width": 366
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 214,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 199,
+          "width": 366
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 21012,
+          "tag": "div",
+          "top": 199,
+          "width": 366
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 12333,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 311,
+          "tag": "div",
+          "top": 21211,
+          "width": 366
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 414,
+      "width": 414
+    },
+    {
+      "client_width": 480,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 480
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 120
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 18794,
+          "tag": "div",
+          "top": 66,
+          "width": 480
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 18770,
+          "tag": "div",
+          "top": 90,
+          "width": 432
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 432
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 432
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 18477,
+          "tag": "div",
+          "top": 90,
+          "width": 432
+        },
+        {
+          "cls": "mw-body",
+          "height": 18477,
+          "tag": "main",
+          "top": 90,
+          "width": 432
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 76,
+          "tag": "header",
+          "top": 90,
+          "width": 432
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 150,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 166,
+          "width": 432
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 166,
+          "width": 432
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 214,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 199,
+          "width": 432
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 18368,
+          "tag": "div",
+          "top": 199,
+          "width": 432
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 10716,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 294,
+          "tag": "div",
+          "top": 18567,
+          "width": 432
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 480,
+      "width": 480
+    },
+    {
+      "client_width": 640,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 640
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 14707,
+          "tag": "div",
+          "top": 66,
+          "width": 640
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 14683,
+          "tag": "div",
+          "top": 90,
+          "width": 592
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 592
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 592
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 14434,
+          "tag": "div",
+          "top": 90,
+          "width": 592
+        },
+        {
+          "cls": "mw-body",
+          "height": 14434,
+          "tag": "main",
+          "top": 90,
+          "width": 592
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 44,
+          "tag": "header",
+          "top": 90,
+          "width": 592
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 150,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 592
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 592
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 182,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 167,
+          "width": 592
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 14357,
+          "tag": "div",
+          "top": 167,
+          "width": 592
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 8138,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 248,
+          "tag": "div",
+          "top": 14524,
+          "width": 592
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 640,
+      "width": 640
+    },
+    {
+      "client_width": 768,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 768
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 12932,
+          "tag": "div",
+          "top": 66,
+          "width": 768
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 12908,
+          "tag": "div",
+          "top": 90,
+          "width": 720
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 720
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 720
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 12660,
+          "tag": "div",
+          "top": 90,
+          "width": 720
+        },
+        {
+          "cls": "mw-body",
+          "height": 12660,
+          "tag": "main",
+          "top": 90,
+          "width": 720
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 44,
+          "tag": "header",
+          "top": 90,
+          "width": 720
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 150,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 720
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 720
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 182,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 167,
+          "width": 720
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 12583,
+          "tag": "div",
+          "top": 167,
+          "width": 720
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 7020,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 248,
+          "tag": "div",
+          "top": 12750,
+          "width": 720
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 768,
+      "width": 768
+    },
+    {
+      "client_width": 900,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 900
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 11358,
+          "tag": "div",
+          "top": 66,
+          "width": 900
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 11334,
+          "tag": "div",
+          "top": 90,
+          "width": 852
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 852
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 852
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 11102,
+          "tag": "div",
+          "top": 90,
+          "width": 852
+        },
+        {
+          "cls": "mw-body",
+          "height": 11102,
+          "tag": "main",
+          "top": 90,
+          "width": 852
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 44,
+          "tag": "header",
+          "top": 90,
+          "width": 852
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 150,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 852
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 852
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 182,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 167,
+          "width": 852
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 11025,
+          "tag": "div",
+          "top": 167,
+          "width": 852
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 6292,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 231,
+          "tag": "div",
+          "top": 11192,
+          "width": 852
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 900,
+      "width": 900
+    },
+    {
+      "client_width": 1024,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 1024
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 110
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 71,
+          "width": 88
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 10037,
+          "tag": "div",
+          "top": 66,
+          "width": 1024
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 10013,
+          "tag": "div",
+          "top": 90,
+          "width": 976
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 976
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 90,
+          "width": 976
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 0,
+          "tag": "nav",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 9781,
+          "tag": "div",
+          "top": 90,
+          "width": 976
+        },
+        {
+          "cls": "mw-body",
+          "height": 9781,
+          "tag": "main",
+          "top": 90,
+          "width": 976
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 44,
+          "tag": "header",
+          "top": 90,
+          "width": 976
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 344,
+          "tag": "div",
+          "top": 150,
+          "width": 237
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 976
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 134,
+          "width": 976
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 182,
+          "width": 145
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 0,
+          "tag": "div",
+          "top": 167,
+          "width": 976
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 9704,
+          "tag": "div",
+          "top": 167,
+          "width": 976
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 5642,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 231,
+          "tag": "div",
+          "top": 9871,
+          "width": 976
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-custo",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-vector-feature-limit",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-portlet mw-portlet-skin-client-prefs-skin-theme vector-me",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 1024,
+      "width": 1024
+    },
+    {
+      "client_width": 1200,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 1200
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 65,
+          "width": 186
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 500
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 404
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 13628,
+          "tag": "div",
+          "top": 66,
+          "width": 1200
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 13628,
+          "tag": "div",
+          "top": 66,
+          "width": 1112
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 24,
+          "tag": "div",
+          "top": 66,
+          "width": 1112
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 136,
+          "width": 196
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 408,
+          "tag": "div",
+          "top": 136,
+          "width": 208
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 360,
+          "tag": "nav",
+          "top": 136,
+          "width": 208
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 360,
+          "tag": "div",
+          "top": 136,
+          "width": 208
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 13292,
+          "tag": "div",
+          "top": 90,
+          "width": 892
+        },
+        {
+          "cls": "mw-body",
+          "height": 13292,
+          "tag": "main",
+          "top": 90,
+          "width": 892
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 40,
+          "tag": "header",
+          "top": 90,
+          "width": 672
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 33,
+          "tag": "div",
+          "top": 130,
+          "width": 672
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 130,
+          "width": 672
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 178,
+          "width": 150
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 13248,
+          "tag": "div",
+          "top": 135,
+          "width": 196
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 475,
+          "tag": "div",
+          "top": 136,
+          "width": 196
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 136,
+          "width": 196
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 13220,
+          "tag": "div",
+          "top": 163,
+          "width": 672
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 7431,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 311,
+          "tag": "div",
+          "top": 13383,
+          "width": 1112
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-associate",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-variants emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-views",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "selected mw-list-item vector-menu-item--collapsible vector-t",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 1200,
+      "width": 1200
+    },
+    {
+      "client_width": 1440,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 1440
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 65,
+          "width": 186
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 500
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 404
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 10660,
+          "tag": "div",
+          "top": 66,
+          "width": 1440
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 10660,
+          "tag": "div",
+          "top": 66,
+          "width": 1352
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 24,
+          "tag": "div",
+          "top": 66,
+          "width": 1352
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 136,
+          "width": 196
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 408,
+          "tag": "div",
+          "top": 136,
+          "width": 208
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 360,
+          "tag": "nav",
+          "top": 136,
+          "width": 208
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 360,
+          "tag": "div",
+          "top": 136,
+          "width": 208
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 10361,
+          "tag": "div",
+          "top": 90,
+          "width": 1132
+        },
+        {
+          "cls": "mw-body",
+          "height": 10361,
+          "tag": "main",
+          "top": 90,
+          "width": 1132
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 40,
+          "tag": "header",
+          "top": 90,
+          "width": 912
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 33,
+          "tag": "div",
+          "top": 130,
+          "width": 912
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 130,
+          "width": 912
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 178,
+          "width": 150
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 10316,
+          "tag": "div",
+          "top": 135,
+          "width": 196
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 475,
+          "tag": "div",
+          "top": 136,
+          "width": 196
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 136,
+          "width": 196
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 10288,
+          "tag": "div",
+          "top": 163,
+          "width": 912
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 5897,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 275,
+          "tag": "div",
+          "top": 10451,
+          "width": 1352
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-associate",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-variants emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-views",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "selected mw-list-item vector-menu-item--collapsible vector-t",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 1440,
+      "width": 1440
+    },
+    {
+      "client_width": 1680,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 1680
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 65,
+          "width": 186
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 500
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 404
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 10487,
+          "tag": "div",
+          "top": 66,
+          "width": 1596
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 10487,
+          "tag": "div",
+          "top": 66,
+          "width": 1492
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 24,
+          "tag": "div",
+          "top": 66,
+          "width": 1492
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 136,
+          "width": 248
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 408,
+          "tag": "div",
+          "top": 136,
+          "width": 260
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 360,
+          "tag": "nav",
+          "top": 136,
+          "width": 260
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 360,
+          "tag": "div",
+          "top": 136,
+          "width": 260
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 10205,
+          "tag": "div",
+          "top": 90,
+          "width": 1220
+        },
+        {
+          "cls": "mw-body",
+          "height": 10205,
+          "tag": "main",
+          "top": 90,
+          "width": 1220
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 40,
+          "tag": "header",
+          "top": 90,
+          "width": 948
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 33,
+          "tag": "div",
+          "top": 130,
+          "width": 948
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 130,
+          "width": 948
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 178,
+          "width": 150
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 10160,
+          "tag": "div",
+          "top": 135,
+          "width": 248
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 475,
+          "tag": "div",
+          "top": 136,
+          "width": 248
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 136,
+          "width": 248
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 10132,
+          "tag": "div",
+          "top": 163,
+          "width": 948
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 5767,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 259,
+          "tag": "div",
+          "top": 10295,
+          "width": 1492
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-associate",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-variants emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-views",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "selected mw-list-item vector-menu-item--collapsible vector-t",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 1680,
+      "width": 1680
+    },
+    {
+      "client_width": 1920,
+      "container_snap": [
+        {
+          "cls": "vector-header-container",
+          "height": 66,
+          "tag": "div",
+          "top": 0,
+          "width": 1920
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 65,
+          "width": 186
+        },
+        {
+          "cls": "mw-logo-container skin-invert",
+          "height": 38,
+          "tag": "span",
+          "top": 14,
+          "width": 140
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 500
+        },
+        {
+          "cls": "cdx-search-input__input-wrapper",
+          "height": 32,
+          "tag": "div",
+          "top": 17,
+          "width": 404
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "mw-page-container",
+          "height": 10487,
+          "tag": "div",
+          "top": 66,
+          "width": 1596
+        },
+        {
+          "cls": "mw-page-container-inner",
+          "height": 10487,
+          "tag": "div",
+          "top": 66,
+          "width": 1492
+        },
+        {
+          "cls": "vector-sitenotice-container",
+          "height": 24,
+          "tag": "div",
+          "top": 66,
+          "width": 1492
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "height": 0,
+          "tag": "div",
+          "top": 136,
+          "width": 248
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 408,
+          "tag": "div",
+          "top": 136,
+          "width": 260
+        },
+        {
+          "cls": "mw-table-of-contents-container vector-toc-landmark",
+          "height": 360,
+          "tag": "nav",
+          "top": 136,
+          "width": 260
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 360,
+          "tag": "div",
+          "top": 136,
+          "width": 260
+        },
+        {
+          "cls": "mw-content-container",
+          "height": 10205,
+          "tag": "div",
+          "top": 90,
+          "width": 1220
+        },
+        {
+          "cls": "mw-body",
+          "height": 10205,
+          "tag": "main",
+          "top": 90,
+          "width": 1220
+        },
+        {
+          "cls": "mw-body-header vector-page-titlebar no-font-mode-scale",
+          "height": 40,
+          "tag": "header",
+          "top": 90,
+          "width": 948
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-page-toolbar",
+          "height": 33,
+          "tag": "div",
+          "top": 130,
+          "width": 948
+        },
+        {
+          "cls": "vector-page-toolbar-container",
+          "height": 32,
+          "tag": "div",
+          "top": 130,
+          "width": 948
+        },
+        {
+          "cls": "vector-unpinned-container",
+          "height": 561,
+          "tag": "div",
+          "top": 178,
+          "width": 150
+        },
+        {
+          "cls": "vector-column-end no-font-mode-scale",
+          "height": 10160,
+          "tag": "div",
+          "top": 135,
+          "width": 248
+        },
+        {
+          "cls": "vector-sticky-pinned-container",
+          "height": 475,
+          "tag": "div",
+          "top": 136,
+          "width": 248
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-pinned-container",
+          "height": 427,
+          "tag": "div",
+          "top": 136,
+          "width": 248
+        },
+        {
+          "cls": "vector-body ve-init-mw-desktopArticleTarget-targetContainer",
+          "height": 10132,
+          "tag": "div",
+          "top": 163,
+          "width": 948
+        },
+        {
+          "cls": "date-container",
+          "height": 17,
+          "tag": "span",
+          "top": 5767,
+          "width": 83
+        },
+        {
+          "cls": "mw-footer-container",
+          "height": 259,
+          "tag": "div",
+          "top": 10295,
+          "width": 1492
+        },
+        {
+          "cls": "vector-header-container vector-sticky-header-container no-fo",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        },
+        {
+          "cls": "vector-typeahead-search-container",
+          "height": 0,
+          "tag": "div",
+          "top": 0,
+          "width": 0
+        }
+      ],
+      "display_probes": [
+        {
+          "cls": "client-js vector-feature-language-in-header-enabled vector-f",
+          "display": "block",
+          "tag": "html",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "block",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-main-menu-dropdown vector-button-flus",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-bu",
+          "display": "block",
+          "tag": "span",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu vector-pinnable-element",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-pinnable-header vector-main-menu-pinnable-header vect",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-navigation",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-interaction",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-heading",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-dropdown vector-user-menu vector-button-flush-right v",
+          "display": "none",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-personal",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "mw-list-item vector-menu-item--collapsible",
+          "display": "none",
+          "tag": "li",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-main-menu-container",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-main-menu-landmark",
+          "display": "none",
+          "tag": "nav",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-associate",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu mw-portlet mw-portlet-variants emptyPortlet",
+          "display": "none",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "block",
+          "tag": "ul",
+          "visibility": "hidden"
+        },
+        {
+          "cls": "vector-menu vector-menu-tabs mw-portlet mw-portlet-views",
+          "display": "flex",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content",
+          "display": "block",
+          "tag": "div",
+          "visibility": "visible"
+        },
+        {
+          "cls": "vector-menu-content-list",
+          "display": "flex",
+          "tag": "ul",
+          "visibility": "visible"
+        },
+        {
+          "cls": "selected mw-list-item vector-menu-item--collapsible vector-t",
+          "display": "list-item",
+          "tag": "li",
+          "visibility": "visible"
+        }
+      ],
+      "document_title": "Web design - Wikipedia",
+      "scroll_width": 1920,
+      "width": 1920
+    }
+  ],
+  "source_url": "https://en.wikipedia.org/wiki/Web_design",
+  "summary": {
+    "breakpoints_detected": 3,
+    "high_confidence": 3,
+    "low_confidence": 0,
+    "medium_confidence": 0,
+    "total_widths_swept": 12
+  },
+  "tool_version": "1.0",
+  "viewport_height": 900,
+  "widths_swept": [
+    320,
+    360,
+    414,
+    480,
+    640,
+    768,
+    900,
+    1024,
+    1200,
+    1440,
+    1680,
+    1920
+  ]
+}

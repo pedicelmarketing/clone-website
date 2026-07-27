@@ -1,0 +1,40 @@
+{
+  "elevations": [
+    {
+      "blur_px": 0,
+      "level": 0,
+      "used_by": [
+        "button"
+      ],
+      "value": "rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px"
+    }
+  ],
+  "evidence_basis": "DOM+assets confirmed",
+  "meta": {
+    "access_state": "ok",
+    "color_source": "computed_styles_fallback",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T20:42:44Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 46 role-cells (10 unique colors)"
+    ],
+    "page_context": {
+      "h1_count": 1,
+      "section_count": 11,
+      "title": "Linear – The system for product development",
+      "url": "https://linear.app/"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://linear.app",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  },
+  "samples": [
+    {
+      "blur_px": 0,
+      "role": "button",
+      "selector": "button, a.btn, [role=\"button\"]",
+      "value": "rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px"
+    }
+  ]
+}

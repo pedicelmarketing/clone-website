@@ -1,0 +1,98 @@
+{
+  "families": {},
+  "meta": {
+    "access_state": "ok",
+    "color_source": "computed_styles_fallback",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T20:42:59Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 20 role-cells (6 unique colors)"
+    ],
+    "page_context": {
+      "h1_count": 0,
+      "section_count": 2,
+      "title": "Home • Lea Verou",
+      "url": "https://lea.verou.me/"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://lea.verou.me",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  },
+  "primary_candidates": [
+    "#000000",
+    "#ffffff",
+    "#fffdfa"
+  ],
+  "sample_count": 20,
+  "source": "computed_styles_fallback",
+  "tokens": [
+    {
+      "dominant_property": "color",
+      "hex": "#000000",
+      "refs": 22,
+      "role_count": 11,
+      "roles": [
+        "a",
+        "article",
+        "body",
+        "footer",
+        "h2",
+        "header",
+        "html",
+        "li",
+        "nav",
+        "p",
+        "section"
+      ]
+    },
+    {
+      "dominant_property": "color",
+      "hex": "#ffffff",
+      "refs": 5,
+      "role_count": 3,
+      "roles": [
+        "footer",
+        "nav",
+        "section"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#fffdfa",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "body"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#fff4e6",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "header"
+      ]
+    },
+    {
+      "dominant_property": "border",
+      "hex": "#f1f2f4",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "footer"
+      ]
+    },
+    {
+      "dominant_property": "background",
+      "hex": "#353941",
+      "refs": 1,
+      "role_count": 1,
+      "roles": [
+        "footer"
+      ]
+    }
+  ],
+  "total_unique": 6
+}

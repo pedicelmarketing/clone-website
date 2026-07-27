@@ -1,0 +1,45 @@
+{
+  "defaults_by_role": {
+    "button": 9999,
+    "card": 8,
+    "image": 0,
+    "input": 6,
+    "tag": 4
+  },
+  "evidence_basis": "DOM+assets confirmed",
+  "meta": {
+    "access_state": "ok",
+    "color_source": "computed_styles_fallback",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T20:42:44Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 46 role-cells (10 unique colors)"
+    ],
+    "page_context": {
+      "h1_count": 1,
+      "section_count": 11,
+      "title": "Linear – The system for product development",
+      "url": "https://linear.app/"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://linear.app",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  },
+  "scale": [
+    0,
+    4,
+    6,
+    8,
+    24,
+    9999
+  ],
+  "value_frequency": {
+    "0": 7,
+    "4": 3,
+    "6": 2,
+    "8": 4,
+    "50": 1,
+    "9999": 2
+  }
+}

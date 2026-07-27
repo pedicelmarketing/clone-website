@@ -1,0 +1,181 @@
+{
+  "evidence_basis": "DOM+assets confirmed",
+  "families": {
+    "body": [
+      "sans-serif"
+    ],
+    "display": [
+      "linux libertine",
+      "sans-serif"
+    ],
+    "mono": []
+  },
+  "family_by_role": {
+    "body": {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": null,
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    "button": {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": null,
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    "h1": {
+      "family": "\"Linux Libertine\", Georgia, Times, \"Source Serif 4\", serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 39.6,
+      "size_px": 28.8,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    "h2": {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 22.4,
+      "size_px": 14,
+      "text_transform": "none",
+      "weight": "700"
+    },
+    "h3": {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 30.72,
+      "size_px": 19.2,
+      "text_transform": "none",
+      "weight": "700"
+    },
+    "h4": {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 25.6,
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "700"
+    },
+    "p": {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 26,
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    "small": {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 22.1,
+      "size_px": 13.6,
+      "text_transform": "none",
+      "weight": "400"
+    }
+  },
+  "meta": {
+    "access_state": "ok",
+    "color_source": "computed_styles_fallback",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T20:43:13Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 38 role-cells (10 unique colors)"
+    ],
+    "page_context": {
+      "h1_count": 1,
+      "section_count": 32,
+      "title": "Web design - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Web_design"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://en.wikipedia.org/wiki/Web_design",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  },
+  "scale": [
+    {
+      "family": "\"Linux Libertine\", Georgia, Times, \"Source Serif 4\", serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 39.6,
+      "role": "h1",
+      "selector": "h1",
+      "size_px": 28.8,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 22.4,
+      "role": "h2",
+      "selector": "h2",
+      "size_px": 14,
+      "text_transform": "none",
+      "weight": "700"
+    },
+    {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 30.72,
+      "role": "h3",
+      "selector": "h3",
+      "size_px": 19.2,
+      "text_transform": "none",
+      "weight": "700"
+    },
+    {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 25.6,
+      "role": "h4",
+      "selector": "h4",
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "700"
+    },
+    {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 26,
+      "role": "p",
+      "selector": "p",
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": null,
+      "role": "body",
+      "selector": "body",
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": null,
+      "role": "button",
+      "selector": "button, a.btn, [class*=\"button\" i], [role=\"button\"]",
+      "size_px": 16,
+      "text_transform": "none",
+      "weight": "400"
+    },
+    {
+      "family": "sans-serif",
+      "letter_spacing_px": 0,
+      "line_height_px": 22.1,
+      "role": "small",
+      "selector": "small, .small, [class*=\"caption\" i]",
+      "size_px": 13.6,
+      "text_transform": "none",
+      "weight": "400"
+    }
+  ],
+  "scale_ratio": 2.118
+}

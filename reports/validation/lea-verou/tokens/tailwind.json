@@ -1,0 +1,25 @@
+{
+  "config": null,
+  "config_error": null,
+  "detected": false,
+  "evidence_basis": "Not exercised",
+  "meta": {
+    "access_state": "ok",
+    "color_source": "computed_styles_fallback",
+    "evidence_basis": "DOM+assets confirmed",
+    "extracted_at": "2026-07-24T20:42:59Z",
+    "notes": [
+      "color_source: :root yielded 0 named tokens; used computed-style fallback on 20 role-cells (6 unique colors)"
+    ],
+    "page_context": {
+      "h1_count": 0,
+      "section_count": 2,
+      "title": "Home • Lea Verou",
+      "url": "https://lea.verou.me/"
+    },
+    "schema_version": "1.0",
+    "source_url": "https://lea.verou.me",
+    "tool_version": "1.0",
+    "viewport": "1440x900"
+  }
+}
