@@ -37,7 +37,7 @@ for p in sorted(pathlib.Path('skills/web-designer/scripts').glob('*.py')):
 print('all script imports clean')
 PY
 then row "1. Python script imports" PASS; else row "1. Python script imports" FAIL "import failure"; fi
-if "$PYTHON" -m pytest -q; then row "2. pytest" PASS; else row "2. pytest" FAIL "pytest failed"; fi
+if uv run --with pytest pytest -q; then row "2. pytest" PASS; else row "2. pytest" FAIL "pytest failed"; fi
 if "$PYTHON" -m doctest "$SCRIPTS/_output_assertions.py"; then row "3. _output_assertions doctests" PASS; else row "3. _output_assertions doctests" FAIL "doctest failed"; fi
 if "$PYTHON" - <<'PY'
 import re,pathlib,sys

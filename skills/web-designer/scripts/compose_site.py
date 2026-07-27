@@ -2772,7 +2772,7 @@ color, spacing value, radius, and shadow. No raw hex colors are emitted in
 {audit_line}
 ```
 
-{audit_lines and "First hits (for diagnosis):\n\n```\n" + audit_lines + "\n```\n" or ""}
+{audit_lines and ("First hits (for diagnosis):\n\n```\n" + audit_lines + "\n```\n") or ""}
 
 ## Reference brief
 {ref_section}
@@ -3076,7 +3076,7 @@ color, spacing value, radius, and shadow. No raw hex colors are emitted in
 {audit_line}
 ```
 
-{audit_lines and "First hits (for diagnosis):\n\n```\n" + audit_lines + "\n```\n" or ""}
+{audit_lines and ("First hits (for diagnosis):\n\n```\n" + audit_lines + "\n```\n") or ""}
 
 ## Accessibility decisions
 
