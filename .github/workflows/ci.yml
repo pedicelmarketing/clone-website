@@ -36,7 +36,7 @@ jobs:
           PY
 
       - name: Web-designer pytest
-        run: pytest -q
+        run: uv run --with pytest pytest -q
 
       - name: Script smoke
         run: python skills/nt-site-mirror/scripts/mirror_assets.py --help >/dev/null && python skills/nt-site-mirror/scripts/serve.py --help >/dev/null
