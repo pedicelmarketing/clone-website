@@ -2,7 +2,7 @@
 
 Project slug: `pedicel-marketing-redesign-smoke`
 Brand name: **Pedicel Marketing** — _derived from project_slug 'pedicel-marketing-redesign-smoke' (suffixes stripped)_
-Generated: 2026-07-24T21:55:00Z brief → composed by compose_site.py v1.0
+Generated: 2026-07-24T21:55:00Z brief → composed by compose_site.py v1.1
 Outdir: `reports/m3-composed-site`
 
 ---
