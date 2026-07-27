@@ -70,6 +70,74 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from validate_brand_brief import _fallback_validate, _jsonschema_validate  # noqa: E402
 
+# M6: shared output-assertion helpers (HTML links tokens.css, no raw hex in
+# styles.css, every plan section id rendered-or-skipped). Imported here so both
+# the fallback and the plan-driven emit-paths run identical gates before exit 0.
+from _output_assertions import (  # noqa: E402
+    OutputAssertionError,
+    find_raw_hex_in_css,
+    require_css_references_tokens_css,
+    require_section_ids_rendered_or_skipped,
+)
+
+
+# ---------------------------------------------------------------------------
+# Output assertions (M6)
+# ---------------------------------------------------------------------------
+
+
+def _run_output_assertions(
+    *,
+    html: str,
+    stylesheet_text: str,
+    declared_section_ids: Iterable[str],
+    rendered_skipped_ids: Iterable[str],
+    css_label: str,
+    tokens_href: str = "tokens.css",
+    id_aliases: dict[str, str] | None = None,
+) -> None:
+    """Run the M6 self-verification gates against an emit's outputs.
+
+    Raises OutputAssertionError (caught by verify.sh / callers) on any violation;
+    the message names the offending value. Three checks:
+
+      1. The HTML links `tokens.css` — without it the page silently loses every
+         design token and renders off-brand.
+      2. `stylesheet_text` contains no raw hex literals. `tokens.css` is exempt
+         via `allow_in_token_block=True` semantics — this helper is run on
+         styles.css only, where hex is forbidden (use var(--token)).
+      3. Every plan section id is either rendered into the HTML or listed as
+         skipped. Silence is a Fidelity Gap. `id_aliases` lets callers map
+         plan-id -> rendered-id for sections the composer intentionally
+         renames (e.g. the first plan section is always anchored as `hero`).
+    """
+    errors: list[str] = []
+
+    errors.extend(require_css_references_tokens_css(html, tokens_href=tokens_href))
+
+    # `find_raw_hex_in_css` with `allow_in_token_block=True` only exempts lines
+    # inside a `:root { ... }` block. styles.css has no such block — every hit
+    # is a violation.
+    hex_hits = find_raw_hex_in_css(stylesheet_text, allow_in_token_block=True)
+    if hex_hits:
+        for ln, line in hex_hits:
+            errors.append(f"{css_label} L{ln}: raw hex literal — {line}")
+
+    errors.extend(
+        require_section_ids_rendered_or_skipped(
+            declared_section_ids,
+            html,
+            rendered_skipped_ids,
+            id_aliases=id_aliases,
+        )
+    )
+
+    if errors:
+        raise OutputAssertionError(
+            f"compose_site output assertions FAILED ({len(errors)} issue(s)):\n  "
+            + "\n  ".join(errors)
+        )
+
 SCHEMA_VERSION = "1.0"
 TOOL_VERSION = "1.1"
 
@@ -3181,6 +3249,21 @@ def main(argv: list[str] | None = None) -> int:
     (outdir / "styles.css").write_text(stylesheet, encoding="utf-8")
     (outdir / "tokens.css").write_text(copied_tokens_css, encoding="utf-8")
 
+    # 7b. M6 output assertions: HTML must link tokens.css, styles.css must
+    # contain no raw hex, and every plan section id must be either rendered
+    # or explicitly skipped.
+    try:
+        _run_output_assertions(
+            html=html,
+            stylesheet_text=stylesheet,
+            declared_section_ids=[s["id"] for s in plan],
+            rendered_skipped_ids=[s["id"] for s in plan if not s["emitted"]],
+            css_label="styles.css",
+        )
+    except OutputAssertionError as exc:
+        print(f"compose_site: {exc}", file=sys.stderr)
+        return 1
+
     # 8. Build report.
     report_md = render_build_report(
         brief=brief,
@@ -3312,6 +3395,34 @@ def _run_plan_path(
     (outdir / "index.html").write_text(html, encoding="utf-8")
     (outdir / "styles.css").write_text(stylesheet, encoding="utf-8")
     (outdir / "tokens.css").write_text(copied_tokens_css, encoding="utf-8")
+
+    # 7b. M6 output assertions: HTML links tokens.css, no raw hex in
+    # styles.css, every plan section id is rendered-or-skipped.
+    # The composer anchors the first plan section as `id="hero"` regardless
+    # of the plan id — reflect that deliberate alias in id_aliases so the
+    # rendered-ids-present check is satisfied.
+    plan_sections_list = list(plan.get("sections", []) or [])
+    first_section_id = ""
+    if plan_sections_list and isinstance(plan_sections_list[0], dict):
+        first_section_id = str(plan_sections_list[0].get("id", "") or "")
+    id_aliases: dict[str, str] | None = None
+    if first_section_id and first_section_id != "hero":
+        id_aliases = {first_section_id: "hero"}
+    try:
+        _run_output_assertions(
+            html=html,
+            stylesheet_text=stylesheet,
+            declared_section_ids=[
+                str(s.get("id", ""))
+                for s in plan_sections_list
+            ],
+            rendered_skipped_ids=list(runtime_skipped),
+            css_label="styles.css",
+            id_aliases=id_aliases,
+        )
+    except OutputAssertionError as exc:
+        print(f"compose_site: {exc}", file=sys.stderr)
+        return 1
 
     report_md = render_plan_build_report(
         brief=brief,

@@ -1508,6 +1508,25 @@ def run(args: argparse.Namespace) -> int:
 
 def finalize(results: list[GateResult], site_dir: str, args: argparse.Namespace,
              server: ServerHandle, server_log: str, report_dir: str) -> int:
+    # M6: compute sha256 over every artifact the validator consumed so a later
+    # verify.sh run can detect that gate-results.json is stale relative to its
+    # inputs. We hash the inputs the actual site (index.html, styles.css,
+    # tokens.css) — these are the files the gates inspected. External browsers
+    # don't alter them; the validator itself never writes them.
+    import hashlib
+    input_hashes: dict[str, str] = {}
+    for fname in ("index.html", "styles.css", "tokens.css"):
+        path = os.path.join(site_dir, fname)
+        if os.path.isfile(path):
+            h = hashlib.sha256()
+            with open(path, "rb") as fh:
+                while True:
+                    chunk = fh.read(64 * 1024)
+                    if not chunk:
+                        break
+                    h.update(chunk)
+            input_hashes[fname] = h.hexdigest()
+
     # Write gate-results.json
     with open(os.path.join(report_dir, "gate-results.json"), "w", encoding="utf-8") as f:
         json.dump({
@@ -1520,6 +1539,16 @@ def finalize(results: list[GateResult], site_dir: str, args: argparse.Namespace,
             "host": args.host,
             "port": server.port,
             "results": [r.to_dict() for r in results],
+            "meta": {
+                "input_hashes": input_hashes,
+                "input_hashes_algorithm": "sha256",
+                "input_hashes_note": (
+                    "Recompute with: sha256sum <site_dir>/index.html "
+                    "<site_dir>/styles.css <site_dir>/tokens.css. If these "
+                    "change without re-running validate_site.py the gate "
+                    "results are stale."
+                ),
+            },
         }, f, indent=2, default=str)
 
     # Write validation-report.md

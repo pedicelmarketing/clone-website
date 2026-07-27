@@ -254,27 +254,37 @@ def require_section_ids_rendered_or_skipped(
     declared_ids: Iterable[str],
     rendered_html: str,
     skipped_ids: Iterable[str],
+    id_aliases: dict[str, str] | None = None,
 ) -> list[str]:
     """Return error messages for every section id in `declared_ids` that
     is NEITHER rendered into the HTML NOR listed as skipped.
 
-    Every plan section id is either rendered (`<section id="...">` or
-    a link to `#...`) or recorded as skipped in BUILD-REPORT.md. There
-    is no third option — a silently dropped section is a Fidelity Gap.
+    Every plan section id is either rendered (`<section id="X">` or a link
+    to `#X`) or recorded as skipped in BUILD-REPORT.md. There is no third
+    option — a silently dropped section is a Fidelity Gap.
+
+    `id_aliases` (optional) maps `plan_id -> rendered_id` for IDs that the
+    renderer intentionally renames. Used by compose_site.py where the
+    first plan section is forcibly aliased to ``hero`` regardless of what
+    the plan called it. An alias counts as "rendered": if `plan_id == "cover"`
+    and `id_aliases["cover"] == "hero"`, then the section is satisfied as
+    long as `id="hero"` or `#hero` appears in the HTML.
     """
     errors: list[str] = []
     declared_set = {sid for sid in declared_ids if sid}
-    rendered_set = set(skipped_ids)
-    # We look for either a `<section id="X" ...>` block or any `href="#X"`
-    # link in the rendered HTML. Nav links are sufficient evidence a
-    # section exists (the section element itself is rendered just below
-    # the nav).
+    skipped_set = set(skipped_ids)
+    aliases = id_aliases or {}
+    # We look for either a `<section id="X" ...>` block or any `href="X"` /
+    # `#X` link in the rendered HTML. Nav links are sufficient evidence a
+    # section exists (the section element itself is rendered just below the
+    # nav). For aliased plan ids we look up the rendered form first.
     for sid in declared_set:
-        if sid in rendered_set:
+        if sid in skipped_set:
             continue
+        render_id = aliases.get(sid, sid)
         section_present = (
-            f'id="{sid}"' in rendered_html
-            or f"#{sid}" in rendered_html
+            f'id="{render_id}"' in rendered_html
+            or f"#{render_id}" in rendered_html
         )
         if not section_present:
             errors.append(
