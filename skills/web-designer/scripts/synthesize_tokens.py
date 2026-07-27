@@ -24,6 +24,11 @@ from pathlib import Path
 from typing import Any
 
 from validate_brand_brief import _fallback_validate, _jsonschema_validate
+from _output_assertions import (
+    OutputAssertionError,
+    parse_css_variable_declarations,
+    validate_css_font_family,
+)
 
 
 SCHEMA_VERSION = "1.0"
@@ -759,6 +764,34 @@ def synthesize(
         radius=radius,
         shadows=shadows,
     )
+
+    # ---- Output self-assertion (M6 self-verification) --------------------
+    # The CSS we are about to write to disk is the canonical token
+    # contract for every downstream renderer (composer, validation).
+    # Before persisting it, every emitted font-family token MUST be a
+    # valid CSS stack: >=2 comma-separated families, no whole-value
+    # quoting, no character-splitting, and no paid family used as a
+    # primary face. A single failure here used to ship (e.g. M3
+    # char-split `Inter, s, y, s, t, e, m` regression); we now refuse.
+    declarations = parse_css_variable_declarations(css)
+    assertion_failures: list[str] = []
+    for var_name, value in declarations.items():
+        if "font-family" not in var_name:
+            continue
+        for err in validate_css_font_family(value):
+            assertion_failures.append(f"{var_name}: {err}")
+    if assertion_failures:
+        for failure in assertion_failures:
+            print(f"synthesize_tokens: OUTPUT ASSERTION FAILED: {failure}",
+                  file=sys.stderr)
+        raise OutputAssertionError(
+            "synthesize_tokens refused to write tokens.css: "
+            f"{len(assertion_failures)} font-family invariant violation(s). "
+            f"See {out_dir / 'tokens/dist/tokens.css'} (NOT written). "
+            "Inspect _output_assertions.validate_css_font_family for the "
+            "exact rule and the offending value."
+        )
+
     dist_dir.mkdir(parents=True, exist_ok=True)
     (dist_dir / "tokens.css").write_text(css, encoding="utf-8")
 
@@ -871,6 +904,12 @@ def main(argv: list[str] | None = None) -> int:
     except InputError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
+    except OutputAssertionError as exc:
+        # Self-verification caught a bad output before it was written.
+        # The diagnostic was already printed above the raise; the exit
+        # code is non-zero so verify.sh and CI fail loudly.
+        print(f"error: {exc}", file=sys.stderr)
+        return 4
     except OSError as exc:
         print(f"error: could not write token outputs: {exc}", file=sys.stderr)
         return 3

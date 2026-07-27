@@ -55,9 +55,20 @@ class SynthesizeTokensCliTests(unittest.TestCase):
             provenance = (out / "tokens/PROVENANCE.md").read_text()
 
             self.assertEqual(color["color"]["primary"]["value"], "#efad2b")
+            # Brand brief marks Switzer as paid and recommends Inter (OFL) as the
+            # safe substitution. The M6 paid-font substitution must rewrite the
+            # live CSS family from Switzer to Inter.
             self.assertEqual(
                 typography["typography"]["fontFamily"]["display"]["value"],
-                "Switzer",
+                "Inter",
+            )
+            self.assertEqual(
+                typography["typography"]["fontFamily"]["body"]["value"],
+                "Poppins",
+            )
+            self.assertEqual(
+                typography["typography"]["fontFamily"]["mono"]["value"],
+                "JetBrains Mono",
             )
             self.assertEqual(
                 [token["value"] for token in spacing["spacing"].values()],
@@ -71,8 +82,29 @@ class SynthesizeTokensCliTests(unittest.TestCase):
 
             self.assertIn("--color-primary: #efad2b;", css)
             self.assertNotIn("#5e6ad2", css.lower())
+            # The live CSS must use the OFL substitute (Inter), never the
+            # brand-declared paid family (Switzer), as a primary face.
+            self.assertIn(
+                "--typography-font-family-display: Inter,",
+                css,
+            )
+            self.assertNotIn("--typography-font-family-display: Switzer,", css)
+            self.assertNotIn("Switzer,", css.replace("JetBrains", ""))
             self.assertEqual(tailwind["theme"]["extend"]["colors"]["primary"], "#efad2b")
-            self.assertEqual(tailwind["theme"]["extend"]["fontFamily"]["display"], ["Switzer"])
+            self.assertEqual(tailwind["theme"]["extend"]["fontFamily"]["display"], ["Inter"])
+            # Sidecar records every substitution for the composer to consume.
+            substitutions = json.loads(
+                (out / "tokens/dist/font-substitutions.json").read_text()
+            )
+            by_role = substitutions["font_substitutions"]
+            self.assertEqual(by_role["display"]["original_family"], "Switzer")
+            self.assertEqual(by_role["display"]["primary"], "Inter")
+            self.assertTrue(by_role["display"]["substituted"])
+            # No live CSS request for the paid family.
+            self.assertNotIn(
+                "family=Switzer",
+                json.dumps(substitutions["google_fonts_requested"]),
+            )
 
             for payload in (color, typography, spacing, radius, shadow):
                 self.assertEqual(payload["meta"]["schema_version"], "1.0")
