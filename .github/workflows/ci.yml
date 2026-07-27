@@ -22,6 +22,22 @@ jobs:
       - name: Compile skill scripts
         run: python -m py_compile skills/nt-site-mirror/scripts/*.py
 
+      - name: Web-designer import check
+        run: |
+          python - <<'PY'
+          import importlib.util, pathlib, sys
+          for p in sorted(pathlib.Path("skills/web-designer/scripts").glob("*.py")):
+              name = "ci_" + p.stem
+              spec = importlib.util.spec_from_file_location(name, p)
+              module = importlib.util.module_from_spec(spec)
+              sys.modules[name] = module
+              spec.loader.exec_module(module)
+          print("web-designer imports PASS")
+          PY
+
+      - name: Web-designer pytest
+        run: pytest -q
+
       - name: Script smoke
         run: python skills/nt-site-mirror/scripts/mirror_assets.py --help >/dev/null && python skills/nt-site-mirror/scripts/serve.py --help >/dev/null
 
