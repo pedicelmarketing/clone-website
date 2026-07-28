@@ -284,5 +284,171 @@ class MainExitContract(unittest.TestCase):
             self.assertIn("no successful critique iteration", (out_dir / "critique-summary.md").read_text().lower())
 
 
+def _http_error(code: int) -> urllib.error.HTTPError:
+    return urllib.error.HTTPError("http://x", code, "boom", {}, None)
+
+
+class ProviderClassification(unittest.TestCase):
+    """Which failures justify switching judges, and which do not."""
+
+    def test_billing_and_auth_codes_are_provider_unavailable(self):
+        for code in (401, 402, 403):
+            with self.subTest(code=code):
+                self.assertTrue(cp._is_provider_unavailable(_http_error(code)))
+
+    def test_transient_codes_are_not_provider_unavailable(self):
+        # 429/5xx mean "try again", not "this vendor is closed for business".
+        # Misclassifying them would swap judges over a passing blip.
+        for code in (429, 500, 503):
+            with self.subTest(code=code):
+                self.assertFalse(cp._is_provider_unavailable(_http_error(code)))
+                self.assertTrue(cp._is_transient_api_error(_http_error(code)))
+
+    def test_unavailable_codes_are_not_retried(self):
+        for code in (401, 402, 403):
+            with self.subTest(code=code):
+                self.assertFalse(cp._is_transient_api_error(_http_error(code)))
+
+
+class GeminiPayloadTranslation(unittest.TestCase):
+    def test_translates_text_and_image_parts(self):
+        messages = [{"role": "user", "content": [
+            {"type": "image", "source": {"type": "base64",
+                                         "media_type": "image/jpeg", "data": "AAAA"}},
+            {"type": "text", "text": "hello"},
+        ]}]
+        body = cp._anthropic_messages_to_gemini("SYSTEM", messages)
+        parts = body["contents"][0]["parts"]
+        self.assertEqual(parts[0]["inline_data"],
+                         {"mime_type": "image/jpeg", "data": "AAAA"})
+        self.assertEqual(parts[1]["text"], "hello")
+        self.assertEqual(body["systemInstruction"]["parts"][0]["text"], "SYSTEM")
+        self.assertEqual(body["generationConfig"]["responseMimeType"], "application/json")
+
+    def test_output_ceiling_leaves_room_for_reasoning_tokens(self):
+        # Gemini 2.5 charges thinking tokens against maxOutputTokens. A ceiling
+        # sized to the visible rubric JSON (~1k tokens) truncated the response
+        # mid-string and surfaced as an unrelated JSON parse error.
+        body = cp._anthropic_messages_to_gemini("", [{"role": "user", "content": []}])
+        self.assertGreaterEqual(body["generationConfig"]["maxOutputTokens"], 8192)
+
+    def test_unknown_block_type_raises(self):
+        messages = [{"role": "user", "content": [{"type": "video", "src": "x"}]}]
+        with self.assertRaises(RuntimeError):
+            cp._anthropic_messages_to_gemini("", messages)
+
+
+class GeminiResponseHandling(unittest.TestCase):
+    """A truncated or blocked response must never be parsed as a critique."""
+
+    def _call(self, payload):
+        class _Resp:
+            def __enter__(_s): return _s
+            def __exit__(*_a): return False
+            def read(_s): return json.dumps(payload).encode()
+        with mock.patch.object(cp, "_gemini_key", return_value="k"), \
+             mock.patch.object(cp.urllib.request, "urlopen", return_value=_Resp()):
+            return cp._vision_call_gemini("gemini-2.5-flash", "sys", [])
+
+    def test_truncated_response_raises_naming_the_reason(self):
+        with self.assertRaises(RuntimeError) as ctx:
+            self._call({"candidates": [{"finishReason": "MAX_TOKENS",
+                                        "content": {"parts": [{"text": '{"scores": '}]}}]})
+        self.assertIn("MAX_TOKENS", str(ctx.exception))
+
+    def test_no_candidates_raises(self):
+        with self.assertRaises(RuntimeError):
+            self._call({"candidates": []})
+
+    def test_empty_text_raises(self):
+        with self.assertRaises(RuntimeError):
+            self._call({"candidates": [{"finishReason": "STOP",
+                                        "content": {"parts": [{"text": "   "}]}}]})
+
+    def test_good_response_normalises_to_anthropic_shape(self):
+        body = self._call({"candidates": [{"finishReason": "STOP",
+                                           "content": {"parts": [{"text": "{}"}]}}]})
+        self.assertEqual(body, {"content": [{"type": "text", "text": "{}"}]})
+
+
+class Failover(unittest.TestCase):
+    """Failover exists to survive a dead vendor — not to shop for a nicer score."""
+
+    def setUp(self):
+        self.chain = [("minimax", "MiniMax-M3"), ("gemini", "gemini-2.5-flash")]
+
+    def test_switches_provider_when_first_is_unavailable(self):
+        calls = []
+
+        def fake(plan, brief, shots, model, ids, provider="minimax"):
+            calls.append(provider)
+            if provider == "minimax":
+                raise _http_error(402)
+            return {"scores": {}, "total": 1}
+
+        with mock.patch.object(cp, "_critique_once", side_effect=fake):
+            critique, attempts, judge = cp._critique_with_failover(
+                {}, {}, [], self.chain, [])
+        self.assertIsNotNone(critique)
+        self.assertEqual(judge, ("gemini", "gemini-2.5-flash"))
+        self.assertEqual(calls, ["minimax", "gemini"])
+
+    def test_does_not_switch_on_parse_error(self):
+        # A malformed reply says something about the request, not the vendor.
+        # Switching judges here would silently change what the score means.
+        calls = []
+
+        def fake(plan, brief, shots, model, ids, provider="minimax"):
+            calls.append(provider)
+            raise ValueError("bad json")
+
+        with mock.patch.object(cp, "_critique_once", side_effect=fake):
+            critique, attempts, judge = cp._critique_with_failover(
+                {}, {}, [], self.chain, [])
+        self.assertIsNone(critique)
+        self.assertIsNone(judge)
+        self.assertEqual(calls, ["minimax"])
+
+    def test_does_not_switch_after_exhausted_transient_retries(self):
+        calls = []
+
+        def fake(plan, brief, shots, model, ids, provider="minimax"):
+            calls.append(provider)
+            raise _http_error(500)
+
+        with mock.patch.object(cp, "_critique_once", side_effect=fake), \
+             mock.patch.object(cp.time, "sleep"):
+            critique, attempts, judge = cp._critique_with_failover(
+                {}, {}, [], self.chain, [])
+        self.assertIsNone(critique)
+        self.assertEqual(set(calls), {"minimax"})
+
+    def test_judge_is_reported_for_the_provider_that_answered(self):
+        with mock.patch.object(cp, "_critique_once",
+                               return_value={"scores": {}, "total": 1}):
+            _, _, judge = cp._critique_with_failover({}, {}, [], self.chain, [])
+        self.assertEqual(judge, ("minimax", "MiniMax-M3"))
+
+
+class JudgeAttribution(unittest.TestCase):
+    """Scores from different models are different measurements, not a trend."""
+
+    def _hist(self, *judges):
+        return [{"iteration": i, "provider": p, "model": m, "applied": [],
+                 "scores": {d: {"score": 5} for d in cp.RUBRIC_DIMENSIONS}}
+                for i, (p, m) in enumerate(judges, 1)]
+
+    def test_single_judge_is_named(self):
+        md = cp._summary_md(self._hist(("gemini", "gemini-2.5-flash")))
+        self.assertIn("gemini/gemini-2.5-flash", md)
+        self.assertNotIn("NOT comparable", md)
+
+    def test_mixed_judges_are_flagged_as_not_comparable(self):
+        md = cp._summary_md(self._hist(("minimax", "MiniMax-M3"),
+                                       ("gemini", "gemini-2.5-flash")))
+        self.assertIn("Mixed judges", md)
+        self.assertIn("NOT comparable", md)
+
+
 if __name__ == "__main__":
     unittest.main()

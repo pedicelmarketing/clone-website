@@ -41,9 +41,21 @@ CLI
 
 Environment
 -----------
-  MINIMAX_API_KEY   required for vision calls. If it cannot be resolved, the
-                    run is unsuccessful and exits nonzero; a critique run may
-                    exit 0 only after at least one parsed, scored iteration.
+  MINIMAX_API_KEY   vision key for the default (minimax) backend.
+  GEMINI_API_KEY    vision key for the gemini backend (GOOGLE_API_KEY also
+                    accepted). Used when --provider gemini is pinned, or when
+                    --provider auto fails over because minimax is unavailable
+                    for billing/auth reasons.
+
+  At least ONE of the above must resolve. If none does, the run is
+  unsuccessful and exits nonzero; a critique run may exit 0 only after at
+  least one parsed, scored iteration.
+
+  Failover is deliberately narrow: it triggers only on HTTP 401/402/403 —
+  states no amount of retrying fixes — and never on parse errors or exhausted
+  transient retries. Every score records the provider+model that produced it,
+  and a run whose iterations used different judges is reported as
+  non-comparable rather than as a quality trend.
 """
 from __future__ import annotations
 
@@ -167,7 +179,145 @@ def _vision_call(model: str, system: str, messages: list, timeout: int = 180) ->
         return json.loads(r.read())
 
 
+# --- Gemini backend ---------------------------------------------------------
+#
+# Why a second provider exists at all: the critique loop is the pipeline's only
+# measure of design quality, and it was welded to one vendor. A single billing
+# blip ("insufficient_balance_error") therefore stopped ALL quality measurement
+# with no way for the agent to proceed unaided. That is precisely the kind of
+# single point of failure the agent must be able to route around by itself.
+#
+# What this must NOT become: a silent quality downgrade. Two different models
+# are two different judges, and their scores are NOT comparable. Every critique
+# records the provider+model that produced it, and _summary_md refuses to
+# present a mixed-judge score table as a trend (see _judge_of / _summary_md).
+
+DEFAULT_MODELS = {"minimax": "MiniMax-M3", "gemini": "gemini-2.5-flash"}
+
+GEMINI_ENDPOINT = ("https://generativelanguage.googleapis.com/v1beta/models/"
+                   "{model}:generateContent")
+
+#: Output ceiling for the Gemini backend. Sized for reasoning tokens, not just
+#: the rubric JSON — see _anthropic_messages_to_gemini for why.
+GEMINI_MAX_OUTPUT_TOKENS = 16384
+
+
+def _gemini_key() -> Optional[str]:
+    """Resolve a Gemini key without ever returning/logging its value elsewhere.
+
+    Mirrors the resolution order used by nt-site-mirror/scripts/motion_audit.py
+    so the operator only has to place the key once.
+    """
+    key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if key:
+        return key
+    for env_path in (Path.home() / "Coding/ Cloning Sites/.env",
+                     Path.home() / ".hermes/.env",
+                     Path.home() / ".hermes/profiles/site-cloner/.env"):
+        try:
+            for line in env_path.read_text().splitlines():
+                if line.startswith(("GEMINI_API_KEY=", "GOOGLE_API_KEY=")):
+                    return line.split("=", 1)[1].strip().strip("'\"")
+        except OSError:
+            continue
+    return None
+
+
+def _anthropic_messages_to_gemini(system: str, messages: list) -> dict:
+    """Translate the Anthropic-format payload into Gemini's REST shape.
+
+    Only the subset this script emits is handled: a single user turn whose
+    content is a list of `image` (base64) and `text` parts. Anything else is a
+    programming error here, not a runtime condition, so it raises.
+    """
+    parts: list[dict] = []
+    for msg in messages:
+        for block in msg.get("content", []):
+            if block["type"] == "text":
+                parts.append({"text": block["text"]})
+            elif block["type"] == "image":
+                src = block["source"]
+                parts.append({"inline_data": {"mime_type": src["media_type"],
+                                              "data": src["data"]}})
+            else:
+                raise RuntimeError(f"unsupported content block for Gemini: {block['type']}")
+    body: dict = {"contents": [{"role": "user", "parts": parts}]}
+    if system:
+        body["systemInstruction"] = {"parts": [{"text": system}]}
+    # The rubric demands strict JSON back; ask for it explicitly rather than
+    # relying on the prompt alone.
+    #
+    # maxOutputTokens is deliberately far above the ~1k tokens the rubric JSON
+    # actually needs. Gemini 2.5 models are thinking models and their reasoning
+    # tokens are charged against this SAME ceiling, so a limit sized to the
+    # visible answer truncates mid-JSON — which reached the caller as an opaque
+    # "Unterminated string" parse error rather than as "the response was cut off".
+    body["generationConfig"] = {"maxOutputTokens": GEMINI_MAX_OUTPUT_TOKENS,
+                                "responseMimeType": "application/json"}
+    return body
+
+
+def _vision_call_gemini(model: str, system: str, messages: list, timeout: int = 180) -> dict:
+    """Gemini round-trip, normalised to the Anthropic response shape.
+
+    Returning the Anthropic shape means `_extract_text` — and every caller
+    downstream of it — stays provider-agnostic.
+    """
+    key = _gemini_key()
+    if not key:
+        raise SystemExit(
+            "GEMINI_API_KEY (or GOOGLE_API_KEY) is not set and could not be resolved "
+            "from ~/Coding/ Cloning Sites/.env, ~/.hermes/.env, or "
+            "~/.hermes/profiles/site-cloner/.env"
+        )
+    req = urllib.request.Request(
+        GEMINI_ENDPOINT.format(model=model),
+        data=json.dumps(_anthropic_messages_to_gemini(system, messages)).encode(),
+        headers={"Content-Type": "application/json", "x-goog-api-key": key},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        body = json.loads(r.read())
+    candidates = body.get("candidates") or []
+    if not candidates:
+        # A blocked/empty response must not look like an empty critique.
+        raise RuntimeError(f"Gemini returned no candidates: {json.dumps(body)[:400]}")
+    # Name truncation and safety blocks for what they are. Without this the
+    # caller sees only a JSON parse failure on the half-written body and has no
+    # way to tell "the model was cut off" from "the model emitted bad JSON".
+    finish = candidates[0].get("finishReason")
+    if finish and finish not in ("STOP", "FINISH_REASON_STOP"):
+        usage = body.get("usageMetadata", {})
+        raise RuntimeError(
+            f"Gemini stopped early (finishReason={finish}); the critique JSON is "
+            f"incomplete and must not be parsed. usage={json.dumps(usage)}"
+        )
+    text = "".join(p.get("text", "") for p in candidates[0].get("content", {}).get("parts", []))
+    if not text.strip():
+        raise RuntimeError(f"Gemini returned an empty text part: {json.dumps(body)[:400]}")
+    return {"content": [{"type": "text", "text": text}]}
+
+
+def _dispatch_vision(provider: str, model: str, system: str, messages: list) -> dict:
+    if provider == "minimax":
+        return _vision_call(model, system, messages)
+    if provider == "gemini":
+        return _vision_call_gemini(model, system, messages)
+    raise RuntimeError(f"unknown vision provider: {provider}")
+
+
 _TRANSIENT_API_RETRY_DELAYS = (2, 6, 15)
+
+#: HTTP codes that mean "this provider will not serve this request, ever, until
+#: a human changes something" — billing exhausted, bad/expired credentials. They
+#: are NOT retryable (retrying burns time and still fails), but they ARE the
+#: exact case where switching providers is the correct move.
+_PROVIDER_UNAVAILABLE_CODES = (401, 402, 403)
+
+
+def _is_provider_unavailable(exc: BaseException) -> bool:
+    return (isinstance(exc, urllib.error.HTTPError)
+            and exc.code in _PROVIDER_UNAVAILABLE_CODES)
 
 
 def _is_transient_api_error(exc: BaseException) -> bool:
@@ -178,22 +328,30 @@ def _is_transient_api_error(exc: BaseException) -> bool:
 
 
 def _critique_with_retries(plan: dict, brief: dict, screenshots: list[dict], model: str,
-                           html_section_ids: list[str]) -> tuple[dict | None, list[dict]]:
-    """Run one critique, retrying only transient API failures.
+                           html_section_ids: list[str], provider: str = "minimax",
+                           ) -> tuple[dict | None, list[dict]]:
+    """Run one critique against ONE provider, retrying only transient failures.
 
     Expected API/parse failures are returned as diagnostics so the caller can
     persist them in iterations.json. Unexpected failures still propagate with
     their traceback; they are programming/runtime errors, not critique data.
+
+    Provider-unavailable errors (billing/auth) return immediately and are
+    tagged `provider-unavailable` so the caller can decide whether a different
+    provider is worth trying. Retrying them here would only burn the backoff.
     """
     attempts: list[dict] = []
     for attempt_no in range(len(_TRANSIENT_API_RETRY_DELAYS) + 1):
         try:
-            critique = _critique_once(plan, brief, screenshots, model, html_section_ids)
-            attempts.append({"attempt": attempt_no + 1, "outcome": "ok"})
+            critique = _critique_once(plan, brief, screenshots, model, html_section_ids, provider)
+            attempts.append({"attempt": attempt_no + 1, "outcome": "ok", "provider": provider})
             return critique, attempts
         except urllib.error.HTTPError as exc:
             transient = _is_transient_api_error(exc)
-            attempts.append({"attempt": attempt_no + 1, "outcome": "api-error",
+            unavailable = _is_provider_unavailable(exc)
+            attempts.append({"attempt": attempt_no + 1,
+                             "outcome": "provider-unavailable" if unavailable else "api-error",
+                             "provider": provider,
                              "error": f"{type(exc).__name__}: {exc}"})
             if not transient or attempt_no >= len(_TRANSIENT_API_RETRY_DELAYS):
                 return None, attempts
@@ -203,6 +361,7 @@ def _critique_with_retries(plan: dict, brief: dict, screenshots: list[dict], mod
             time.sleep(delay)
         except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
             attempts.append({"attempt": attempt_no + 1, "outcome": "api-error",
+                             "provider": provider,
                              "error": f"{type(exc).__name__}: {exc}"})
             if attempt_no >= len(_TRANSIENT_API_RETRY_DELAYS):
                 return None, attempts
@@ -212,9 +371,38 @@ def _critique_with_retries(plan: dict, brief: dict, screenshots: list[dict], mod
             time.sleep(delay)
         except (json.JSONDecodeError, KeyError, TypeError, ValueError, RuntimeError) as exc:
             attempts.append({"attempt": attempt_no + 1, "outcome": "parse-error",
+                             "provider": provider,
                              "error": f"{type(exc).__name__}: {exc}"})
             return None, attempts
     raise AssertionError("unreachable")
+
+
+def _critique_with_failover(plan: dict, brief: dict, screenshots: list[dict],
+                            providers: list[tuple[str, str]], html_section_ids: list[str],
+                            ) -> tuple[dict | None, list[dict], Optional[tuple[str, str]]]:
+    """Try each (provider, model) in order; fail over ONLY when a provider is
+    genuinely unavailable (billing/auth).
+
+    A parse error or a transient-exhausted error is NOT a reason to switch: those
+    say something about the request or the network, not about the vendor, and
+    silently swapping judges would change what the score means. Returns the
+    critique, the flattened attempt log, and the (provider, model) that produced
+    it — the caller stamps that onto the critique so a score is never anonymous.
+    """
+    all_attempts: list[dict] = []
+    for provider, model in providers:
+        critique, attempts = _critique_with_retries(
+            plan, brief, screenshots, model, html_section_ids, provider)
+        for a in attempts:
+            a.setdefault("model", model)
+        all_attempts.extend(attempts)
+        if critique is not None:
+            return critique, all_attempts, (provider, model)
+        if not any(a["outcome"] == "provider-unavailable" for a in attempts):
+            break  # not a vendor-availability problem — do not switch judges
+        print(f"critique provider '{provider}' unavailable (billing/auth); "
+              f"failing over to next configured provider", file=sys.stderr)
+    return None, all_attempts, None
 
 
 def _extract_text(body: dict) -> str:
@@ -511,8 +699,9 @@ def _build_messages(plan: dict, brief: dict, screenshots: list[dict], html_secti
 
 
 def _critique_once(plan: dict, brief: dict, screenshots: list[dict], model: str,
-                   html_section_ids: list[str]) -> dict:
-    body = _vision_call(model, RUBRIC_PROMPT, _build_messages(plan, brief, screenshots, html_section_ids))
+                   html_section_ids: list[str], provider: str = "minimax") -> dict:
+    body = _dispatch_vision(provider, model, RUBRIC_PROMPT,
+                            _build_messages(plan, brief, screenshots, html_section_ids))
     text = _extract_text(body)
     if "```" in text:
         text = text.split("```json", 1)[-1].split("```", 1)[0]
@@ -629,7 +818,7 @@ def _md_for_iteration(iter_no: int, critique: dict, plan_path: Path,
     lines.append("")
     lines.append(f"_Plan: `{plan_path}`_")
     lines.append(f"_Generated: {critique.get('generated_at', '')}_  ")
-    lines.append(f"_Model: {critique.get('model', '')}_  ")
+    lines.append(f"_Judge: {critique.get('provider', 'minimax')}/{critique.get('model', '')}_  ")
     lines.append(f"_Viewports: {', '.join(s['viewport'] for s in screenshots)}_")
     lines.append("")
     lines.append("## Scores (0-10, looks_templated inverted)")
@@ -670,17 +859,35 @@ def _md_for_iteration(iter_no: int, critique: dict, plan_path: Path,
     return "\n".join(lines) + "\n"
 
 
+def _judge_of(h: dict) -> str:
+    """Human-readable judge id for an iteration ('provider/model')."""
+    return f"{h.get('provider', 'minimax')}/{h.get('model', '?')}"
+
+
 def _summary_md(history: list[dict]) -> str:
     scored = [h for h in history if h.get("outcome", "ok") == "ok" and "scores" in h]
     lines = ["# Critique summary", "",
              "Score table across successful iterations (lower is worse; looks_templated is inverted).",
              ""]
-    header = "| Iter | " + " | ".join(RUBRIC_DIMENSIONS) + " | Total | Applied | Best |"
-    sep = "|------|" + "|".join("-" * len(d) for d in RUBRIC_DIMENSIONS) + "|------|---------|------|"
+    # A score is only meaningful next to the judge that produced it. If failover
+    # swapped models mid-run, the column-to-column deltas measure the judge as
+    # much as the design, and presenting them as a trend would be a lie.
+    judges = sorted({_judge_of(h) for h in scored})
+    if len(judges) > 1:
+        lines.append(f"> **Mixed judges: {', '.join(judges)}.** Scores below were produced by "
+                     "different models and are NOT comparable to each other — read each row "
+                     "on its own and do not treat the column deltas as a quality trend. "
+                     "Re-run with `--provider` pinned to one backend for a comparable series.")
+        lines.append("")
+    elif judges:
+        lines.append(f"_Judge: {judges[0]}_")
+        lines.append("")
+    header = "| Iter | Judge | " + " | ".join(RUBRIC_DIMENSIONS) + " | Total | Applied | Best |"
+    sep = "|------|-------|" + "|".join("-" * len(d) for d in RUBRIC_DIMENSIONS) + "|------|---------|------|"
     lines.append(header)
     lines.append(sep)
     if not scored:
-        lines.append("| — | no successful critique iteration | — | — | — | — |")
+        lines.append("| — | — | no successful critique iteration | — | — | — | — |")
         lines.append("")
         lines.append("**No critique iteration succeeded; no parsed/scored result was produced.**")
     else:
@@ -691,6 +898,7 @@ def _summary_md(history: list[dict]) -> str:
             applied_count = sum(1 for a in h.get("applied", []) if a.startswith("APPLIED"))
             lines.append(
                 "| " + str(h["iteration"])
+                + " | " + _judge_of(h)
                 + " | " + " | ".join(str(scores[d]) for d in RUBRIC_DIMENSIONS)
                 + " | " + str(_safe_total(h))
                 + " | " + str(applied_count)
@@ -739,7 +947,14 @@ def main(argv=None):
     ap.add_argument("-o", required=True, help="critique output directory")
     ap.add_argument("--viewports", default="1440x900,375x812")
     ap.add_argument("--max-iterations", type=int, default=3)
-    ap.add_argument("--model", default="MiniMax-M3")
+    ap.add_argument("--provider", default="auto", choices=("auto", "minimax", "gemini"),
+                    help="vision backend. 'auto' (default) uses minimax and fails over to "
+                         "gemini ONLY when minimax is unavailable for billing/auth reasons. "
+                         "Pin to a single provider when producing scores you intend to "
+                         "compare against each other.")
+    ap.add_argument("--model", default=None,
+                    help="model id; defaults per provider (%s)"
+                         % ", ".join(f"{p}={m}" for p, m in DEFAULT_MODELS.items()))
     ap.add_argument("--entry", default="index.html")
     ap.add_argument("--apply", action="store_true",
                     help="apply revisions back into the design plan, recompose, critique again")
@@ -764,12 +979,24 @@ def main(argv=None):
     plan = json.loads(plan_path.read_text())
     viewports = _parse_viewports(args.viewports)
 
-    # Pre-flight: API key (resolves env var, ~/.hermes/profiles/site-cloner/.env,
-    # or $HERMES_PROFILE_DIR/.env — see skills/web-designer/scripts/_secrets.py).
-    # Only no-op if the key really cannot be found anywhere.
-    if not get_minimax_key():
-        msg = ("ERROR: MINIMAX_API_KEY is not set and could not be resolved from "
-               "any .env file. critique_pass.py produced no successful critique iteration.")
+    # Resolve the provider chain. An explicit --provider pins a single judge
+    # (what you want when producing comparable scores); 'auto' allows exactly
+    # one failover, and only for billing/auth unavailability.
+    if args.provider == "auto":
+        chain = [("minimax", args.model or DEFAULT_MODELS["minimax"]),
+                 ("gemini", DEFAULT_MODELS["gemini"])]
+    else:
+        chain = [(args.provider, args.model or DEFAULT_MODELS[args.provider])]
+
+    # Pre-flight: at least one provider in the chain must have a resolvable key.
+    # MiniMax resolves via env var, ~/.hermes/profiles/site-cloner/.env, or
+    # $HERMES_PROFILE_DIR/.env (see _secrets.py); Gemini via _gemini_key().
+    key_probe = {"minimax": get_minimax_key, "gemini": _gemini_key}
+    chain = [(p, m) for p, m in chain if key_probe[p]()]
+    if not chain:
+        msg = ("ERROR: no vision provider key could be resolved (checked MINIMAX_API_KEY "
+               "and GEMINI_API_KEY/GOOGLE_API_KEY in the environment and the known .env "
+               "files). critique_pass.py produced no successful critique iteration.")
         print(msg, file=sys.stderr)
         (out_dir / "critique-summary.md").write_text(_summary_md([{
             "iteration": 0, "outcome": "api-error", "error": msg,
@@ -818,11 +1045,14 @@ def main(argv=None):
                     "png_path": str(png),
                     "settle": s.get("settle"),
                 })
-            critique, attempts = _critique_with_retries(
-                plan, brief, screenshots, args.model, html_section_ids
+            critique, attempts, judge = _critique_with_failover(
+                plan, brief, screenshots, chain, html_section_ids
             )
             if critique is None:
-                outcome = "api-error" if any(a["outcome"] == "api-error" for a in attempts) else "parse-error"
+                outcome = ("api-error"
+                           if any(a["outcome"] in ("api-error", "provider-unavailable")
+                                  for a in attempts)
+                           else "parse-error")
                 error = attempts[-1].get("error", "critique failed")
                 iter_outcome.update({"outcome": outcome, "error": error, "attempts": attempts})
                 history.append(iter_outcome)
@@ -833,7 +1063,10 @@ def main(argv=None):
             server.kill()
 
         critique["generated_at"] = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
-        critique["model"] = args.model
+        # Stamp the judge that actually produced this score. With failover in
+        # play, `args.model` is a request, not a fact — recording the requested
+        # model here would misattribute a Gemini score to MiniMax.
+        critique["provider"], critique["model"] = judge
         critique["iteration"] = iteration
         critique["outcome"] = "ok"
         critique["attempts"] = attempts
