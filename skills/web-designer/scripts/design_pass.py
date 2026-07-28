@@ -41,13 +41,30 @@ def verify_source_fields(plan, brief):
     return violations
 
 
-def validate_plan(plan, brief):
+def validate_plan(plan, brief, assets=None):
     try:
         import jsonschema
         errors = sorted(jsonschema.Draft202012Validator(json.loads(SCHEMA.read_text())).iter_errors(plan), key=lambda e: list(e.absolute_path))
         violations = ['/'.join(map(str, e.absolute_path)) + ': ' + e.message for e in errors]
     except Exception as exc:
         violations = [f'schema validation unavailable: {exc}']
+    # Media filenames must reference REAL fetched assets. Without this the model
+    # can cite a plausible-looking filename (or a stock URL) and the renderer emits
+    # a broken <img> — the image equivalent of inventing a testimonial.
+    allowed = {a['file'] for a in (assets or [])}
+    for i, sec in enumerate(plan.get('sections') or []):
+        media = sec.get('media')
+        if not media:
+            continue
+        fname = media.get('file')
+        if not allowed:
+            violations.append(f"sections[{i}].media: no brand photography was fetched, so no section may declare media")
+        elif fname not in allowed:
+            violations.append(
+                f"sections[{i}].media.file '{fname}' is not in the fetched asset manifest; "
+                f"use one of the supplied filenames verbatim (never invent or use stock)")
+        if not (media.get('alt') or '').strip():
+            violations.append(f"sections[{i}].media.alt is required and must describe the photo")
     return violations + verify_source_fields(plan, brief)
 
 
@@ -74,10 +91,11 @@ def compact_reference(root):
     return out
 
 
-def call_model(brief, reference, model, feedback=''):
+def call_model(brief, reference, model, feedback='', assets=None):
     key = require_minimax_key('design_pass.call_model')
-    system = '''You are a senior web designer. Return JSON only matching the supplied schema. Produce a plan, never files. State a layout thesis first; every section serves it. For every section supply a short human nav_label (1-2 words, or null) and in_nav boolean; footer, colophon, legal and utility sections must have in_nav false. Forbidden defaults: centered-everything hero, three-column feature grid with icons, purple/blue gradients, uniform rounded corners, Inter-for-everything, generic stock-photo layout. Choose one memorable brand-specific SIGNATURE ELEMENT. Vary order and emphasis for this brand, never a fixed template. Invent layout, structure, emphasis, and phrasing, but NEVER facts: cite only real non-empty brand brief dotted paths in source_brief_fields. Empty/missing evidence belongs in skipped_sections.'''
-    payload = {'model': model, 'max_tokens': 6000, 'system': system, 'messages': [{'role':'user','content': 'Schema:\n'+SCHEMA.read_text()+'\nBrand brief:\n'+json.dumps(brief)+'\nCompact reference analysis:\n'+json.dumps(reference)+'\nValidation feedback from prior attempt:\n'+feedback}]}
+    system = '''You are a senior web designer. Return JSON only matching the supplied schema. Produce a plan, never files. State a layout thesis first; every section serves it. For every section supply a short human nav_label (1-2 words, or null) and in_nav boolean; footer, colophon, legal and utility sections must have in_nav false. Forbidden defaults: centered-everything hero, three-column feature grid with icons, purple/blue gradients, uniform rounded corners, Inter-for-everything, generic stock-photo layout. Choose one memorable brand-specific SIGNATURE ELEMENT. Vary order and emphasis for this brand, never a fixed template. Invent layout, structure, emphasis, and phrasing, but NEVER facts: cite only real non-empty brand brief dotted paths in source_brief_fields. Empty/missing evidence belongs in skipped_sections.
+REAL BRAND PHOTOGRAPHY: you are given an inventory of the brand's OWN photographs that have already been downloaded. Place them deliberately via each section's optional `media` object ({file, alt, treatment, rationale}). Rules: `file` MUST be one of the supplied filenames verbatim — never invent one, never reference stock imagery or a URL. `alt` must genuinely describe that photo (use its subject). Choose `treatment` to serve the layout thesis. A page carrying the brand's real photography beats a text-only page, so use the good ones; but a section with no suitable photo should simply omit media rather than force a bad fit.'''
+    payload = {'model': model, 'max_tokens': 6000, 'system': system, 'messages': [{'role':'user','content': 'Schema:\n'+SCHEMA.read_text()+'\nBrand brief:\n'+json.dumps(brief)+'\nCompact reference analysis:\n'+json.dumps(reference)+'\nAvailable brand photographs (use filenames verbatim in sections[].media.file):\n'+json.dumps(assets or [])+'\nValidation feedback from prior attempt:\n'+feedback}]}
     req = request.Request('https://api.minimax.io/anthropic/v1/messages', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type':'application/json'}, method='POST')
     with request.urlopen(req, timeout=120) as response: body = json.loads(response.read())
     text = ''.join(x.get('text','') for x in body.get('content',[]) if isinstance(x,dict))
@@ -86,7 +104,7 @@ def call_model(brief, reference, model, feedback=''):
 
 
 def main(argv=None):
-    ap=argparse.ArgumentParser(); ap.add_argument('--brand-brief',required=True); ap.add_argument('--reference'); ap.add_argument('-o',required=True); ap.add_argument('--model',default='MiniMax-M3'); ap.add_argument('--max-retries',type=int,default=2); args=ap.parse_args(argv)
+    ap=argparse.ArgumentParser(); ap.add_argument('--brand-brief',required=True); ap.add_argument('--reference'); ap.add_argument('-o',required=True); ap.add_argument('--model',default='MiniMax-M3'); ap.add_argument('--max-retries',type=int,default=2); ap.add_argument('--assets',help='dir containing ASSET-MANIFEST.json from fetch_brand_assets.py'); args=ap.parse_args(argv)
     brief_path=Path(args.brand_brief); brief=json.loads(brief_path.read_text())
     validator=HERE/'validate_brand_brief.py'
     import importlib.util
@@ -102,15 +120,26 @@ def main(argv=None):
     if not valid:
         print('invalid brand brief:\n'+'\n'.join(brief_errors),file=sys.stderr); return 1
     reference=compact_reference(args.reference) if args.reference else {'available': False}
+    # Real brand photography available to place. Only files listed here may be used;
+    # validate_plan enforces that so the model cannot invent a filename or reach for stock.
+    assets=[]
+    if args.assets:
+        mpath=Path(args.assets)/'ASSET-MANIFEST.json'
+        if mpath.is_file():
+            assets=[{'file':a['file'],'subject':a.get('subject',''),
+                     'width':a.get('width'),'height':a.get('height')}
+                    for a in json.loads(mpath.read_text()).get('assets',[])]
+        else:
+            print(f'warning: no ASSET-MANIFEST.json in {args.assets}; designing without photography',file=sys.stderr)
     feedback=''; plan=None
     for attempt in range(args.max_retries+1):
         try:
-            plan=call_model(brief, reference, args.model, feedback)
+            plan=call_model(brief, reference, args.model, feedback, assets)
             plan['schema_version'] = '1.0'
             plan['project_slug'] = brief['project_slug']
             plan['generated_at'] = dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00', 'Z')
             plan['model'] = args.model
-            violations=validate_plan(plan,brief)
+            violations=validate_plan(plan,brief,assets)
         except Exception as exc: violations=[str(exc)]
         if not violations: break
         feedback='\n'.join(violations)

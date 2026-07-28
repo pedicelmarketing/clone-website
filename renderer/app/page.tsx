@@ -38,6 +38,39 @@ import {
 const plan = loadDesignPlan();
 const sections = getRenderableSections(plan);
 
+/**
+ * Brand photography. Files live in public/brand, fetched by
+ * skills/web-designer/scripts/fetch_brand_assets.py from the brand brief's
+ * real_photo_inventory — every one is a verified, brand-owned image with
+ * recorded provenance. Never stock, never an invented filename.
+ *
+ * Plain <img> rather than next/image because the renderer builds with
+ * output:'export' + images.unoptimized, so next/image would add machinery
+ * without doing any optimisation here.
+ */
+function BrandImage({
+  file, alt, treatment,
+}: { file: string; alt: string; treatment?: string }) {
+  // Aspect ratio AND a height cap. Without the cap a 1800x1800 product shot
+  // fills a whole 12-col row and the page grew from ~3.5k to ~9k px tall —
+  // photography should punctuate the page, not become it.
+  const shape =
+    treatment === "portrait" ? "aspect-[4/5] max-h-[420px]"
+    : treatment === "full-bleed" ? "aspect-[21/9] max-h-[380px]"
+    : treatment === "grid" ? "aspect-square max-h-[260px]"
+    : treatment === "side-by-side" ? "aspect-[3/2] max-h-[320px]"
+    : "aspect-[4/3] max-h-[340px]";
+  return (
+    <img
+      src={`/brand/${file}`}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className={`w-full ${shape} object-cover object-center rounded-[var(--radius-8,8px)]`}
+    />
+  );
+}
+
 function chooseLayout(emphasis: string) {
   switch (emphasis) {
     case "hero":
@@ -64,7 +97,8 @@ function SectionContent({
 }: {
   section: ReturnType<typeof getRenderableSections>[number];
 }) {
-  const { emphasis, id, copy, purpose, component } = section;
+  const { emphasis, id, copy } = section;
+  const media = section.media ?? null;
   const Layout = chooseLayout(emphasis);
 
   // === hero (cover) ===
@@ -89,7 +123,11 @@ function SectionContent({
          *  user-facing text — it is internal reasoning, not brand content. */}
         <Cols5>
           <FadeIn delay={0.08}>
-            <SignatureMark />
+            {media ? (
+              <BrandImage file={media.file} alt={media.alt} treatment={media.treatment} />
+            ) : (
+              <SignatureMark />
+            )}
           </FadeIn>
         </Cols5>
       </Layout>
@@ -159,6 +197,11 @@ function SectionContent({
                 {copy.caption}
               </p>
             )}
+            {media && (
+              <div className="mt-10">
+                <BrandImage file={media.file} alt={media.alt} treatment={media.treatment} />
+              </div>
+            )}
           </FadeIn>
         </Cols8>
       </Layout>
@@ -198,7 +241,11 @@ function SectionContent({
         </Cols3>
         <OffsetRight9>
           <FadeIn delay={0.06}>
-            <div className="aspect-[16/10] w-full rounded-8 border border-border bg-muted" />
+            {media ? (
+              <BrandImage file={media.file} alt={media.alt} treatment={media.treatment} />
+            ) : (
+              <div className="aspect-[16/10] w-full rounded-8 border border-border bg-muted" />
+            )}
             {copy.caption && (
               <p className="mt-4 font-body text-base italic text-muted-foreground">
                 {copy.caption}

@@ -48,6 +48,15 @@ export interface PlanSection {
   emphasis: Emphasis;
   source_brief_fields: string[];
   rationale: string;
+  /** Optional brand photograph placed by the design pass. `file` is always a
+   *  filename that exists in public/brand (validated in design_pass.py against
+   *  the fetched ASSET-MANIFEST.json), never an invented name or stock URL. */
+  media?: {
+    file: string;
+    alt: string;
+    treatment?: "full-bleed" | "inset" | "side-by-side" | "grid" | "background" | "portrait";
+    rationale?: string;
+  } | null;
 }
 
 export interface SkippedSection {

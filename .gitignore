@@ -11,3 +11,8 @@ node_modules/
 gateway.pid
 gateway_state.json
 response_store.db*
+
+# Fetched brand photography — regenerate with fetch_brand_assets.py.
+# Brand-owned imagery is not redistributed through this repo.
+renderer/public/brand/*
+!renderer/public/brand/ASSET-MANIFEST.json
