@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "tool_version": "1.0",
+    "generated_at": "2026-07-28T00:15:24Z",
+    "evidence_basis": "DOM+assets confirmed",
+    "project_slug": "leo-foods-redesign",
+    "brand_brief": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-leofoods/brand-brief.json",
+    "reference_tokens": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens"
+  },
+  "font_substitutions": {
+    "display": {
+      "primary": "Inter",
+      "original_family": "Recoleta",
+      "substituted": true,
+      "reason": "license_notes flagged restricted licensing; substituted 'Recoleta' with OFL substitute 'Inter'"
+    },
+    "body": {
+      "primary": "Inter",
+      "original_family": "Inter",
+      "substituted": false,
+      "reason": "license_notes flagged restricted licensing; substituted 'Inter' with OFL substitute 'Inter'"
+    },
+    "mono": {
+      "primary": "JetBrains Mono",
+      "original_family": "JetBrains Mono",
+      "substituted": false,
+      "reason": "license_notes flag restricted licensing, but the brief explicitly names 'JetBrains Mono' as OFL; brand family kept"
+    }
+  },
+  "google_fonts_requested": [
+    {
+      "role": "display",
+      "primary": "Inter",
+      "family_arg": "Inter:wght@400;500;600;700"
+    },
+    {
+      "role": "body",
+      "primary": "Inter",
+      "family_arg": "Inter:wght@400;500;600;700"
+    },
+    {
+      "role": "mono",
+      "primary": "JetBrains Mono",
+      "family_arg": "JetBrains+Mono:wght@400;600"
+    }
+  ]
+}

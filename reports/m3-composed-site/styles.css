@@ -1,4 +1,4 @@
-/* compose_site.py v1.0 — token-driven page CSS.
+/* compose_site.py v1.1 — token-driven page CSS.
  *
  * Design rule: NO raw hex colors appear below. Every color comes from a
  * tokens.css custom property (declared in tokens/dist/tokens.css). This is

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT=$(git rev-parse --show-toplevel)
+cd "$ROOT"
+python3 - <<'PY'
+import importlib.util, pathlib, sys
+for p in sorted(pathlib.Path('skills/web-designer/scripts').glob('*.py')):
+    name='precommit_'+p.stem; spec=importlib.util.spec_from_file_location(name,p); m=importlib.util.module_from_spec(spec); sys.modules[name]=m; spec.loader.exec_module(m)
+print('import check PASS')
+PY
+uv run --with pytest pytest -q
+python3 - <<'PY'
+import hashlib, json, pathlib
+site=pathlib.Path('reports/m6-composed-site'); report=pathlib.Path('reports/m6-validation/gate-results.json')
+d=json.loads(report.read_text()); got=d.get('meta',{}).get('input_hashes',{}); exp={n:hashlib.sha256((site/n).read_bytes()).hexdigest() for n in ('index.html','styles.css','tokens.css')}
+if got != exp: raise SystemExit('stale gate-results.json: input_hashes do not match current composed artifacts')
+print('staleness check PASS')
+PY

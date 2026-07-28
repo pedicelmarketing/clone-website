@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "pedicel-marketing-redesign-smoke",
+  "generated_at": "2026-07-27T15:55:45.711204Z",
+  "model": "MiniMax-M3",
+  "layout_thesis": {
+    "statement": "A confessional-teacher's workbook: the page reads like a quiet lesson on what makes a brand unique, with the gold 'i' dot from the logo acting as a moving highlighter that travels down the page to mark every lesson and every sentence that lands.",
+    "audience": "Small-to-mid business owners evaluating an inbound marketing and branding partner; people who distrust hype and want a calm, opinionated teacher to walk them through what 'customised' actually means.",
+    "job_to_be_done": "Convert skeptical first-time visitors into qualified discovery-call bookings by proving the agency's point of view in the page itself \u2014 not in a 'why us' block.",
+    "why_this_not_generic": "Stock agency templates lead with a centered hero, a three-icon service grid, and a 'trusted by' wall. The brand's own voice ('All brands are unique, they just haven't shown it to the world yet' / 'Limitless.' / 'customised from top to bottom') is a teacher's voice, not a competitor's. The layout must therefore behave like a margin-noted textbook, not a pitch deck. The gold dot is a literal carryover from the logo's most distinctive feature (the dot above the 'i' in 'Pedicel') and is the only saturated color the brand actually owns \u2014 using it as a navigational marker is more honest than burying it in a button."
+  },
+  "sections": [
+    {
+      "id": "cover",
+      "order": 0,
+      "nav_label": null,
+      "in_nav": false,
+      "purpose": "Set the teacher-register tone and introduce the signature gold-dot highlighter in its largest, slowest form.",
+      "component": "Asymmetric editorial cover: left 60% holds a single sentence-case belief statement at display size; right 40% holds a vertical 'lesson index' (services list treated like chapter titles) with the gold dot sitting beside the first item. No centered hero, no stock imagery, no CTA button above the fold \u2014 the page is read, not pitched to. | REVISION: Anchor the gold dot with a small '01' numeral and the label 'Lesson one' set in the same small-caps style as the '01 / REWRITTEN' tag below, so the dot reads as a margin marker for Lesson 01 rather than a floating ornament. | REVISION: Add a small 'Lesson 01' eyebrow label above the h1 in sentence-case, set flush-left and accompanied by a short horizontal rule that runs into the gold dot's left edge, so the dot reads as the marker that 'ticks' the lesson rather than a free-floating shape. | REVISION: Reduce the right-side empty zone by shifting the gold dot left to sit at roughly 62% page width and adding a small italic teacher-margin note (~14px, sentence-case) anchored to it, e.g., 'the only saturated pixel in the whole logo.', so the right third carries content instead of air.",
+      "emphasis": "hero",
+      "source_brief_fields": [
+        "voice_and_tone.register",
+        "voice_and_tone.example_lines",
+        "voice_and_tone.sentence_case",
+        "palette_from_logo.primary",
+        "palette_from_logo.secondary",
+        "typography_recommendation.display_family"
+      ],
+      "rationale": "The brand's strongest recoverable copy is one short sentence ('All brands are unique, they just haven't shown it to the world yet.'). Leading with it at display size, in sentence case, with no chrome around it, is the most on-voice choice. Putting the gold dot on the lesson index makes the signature element discoverable in the first screen without ever being labeled as a logo feature. | Revision rationale: The thesis says the dot must 'mark every lesson and every sentence that lands'; right now it floats in the right gutter with nothing to mark. A lesson number beside it converts decoration into structure and starts the workbook metaphor on the very first screen. | Revision rationale: The brand thesis requires the gold dot to act as a moving highlighter beside every lesson number; without a numbered eyebrow and a connecting rule, the dot is just ornament and the workbook metaphor never starts. | Revision rationale: The right ~55% of 1440px currently holds a single shape; replacing that air with a margin-note + dot makes the signature element legible and gives the desktop layout a real two-column rhythm."
+    },
+    {
+      "id": "manifesto",
+      "order": 1,
+      "nav_label": "Manifesto",
+      "in_nav": true,
+      "purpose": "State the agency's teaching philosophy in long-form, using the teacher's margin-note cadence.",
+      "component": "Two-column editorial: a narrow left column (28%) holds a sticky numbered index of short manifesto statements; a wide right column (72%) shows one full paragraph per statement with the gold dot as a margin marker beside each paragraph number. Footnote-style attribution appears under each paragraph. | REVISION: Replace the standalone h2 + paragraph with a two-column 'workbook page' layout at >=1024px: left column keeps the h2 and short paragraph, right column becomes a 240px-wide teacher-margin note column carrying a large numeral '01' and the signature gold dot fixed to its baseline. | REVISION: break this section's rhythm by replacing the plain h2 + paragraph with a chapter-opening treatment: large numeral ('I' or '01') left-aligned in the margin, the existing subhead as a pull line, then a narrow body column capped at ~52ch; add a second gold dot in the right margin next to the numeral. | REVISION: Convert 'What we believe, before you read anything else.' from a one-line h2 into a two-column layout at >=1024px: an italicised serif pull-quote on the right (~55% wide) and a 3-item sentence-case belief list on the left, replacing the single 2-sentence paragraph. | REVISION: Reduce the 'What we believe, before you read anything else.' headline from display weight to roughly 1.3x the body size, and add a gold dot in the left margin aligned to the first letter of the headline so it visually marks this as the start of the workbook's body. | REVISION: Open this section with a chapter-style eyebrow 'Chapter 0 - What we believe' in the same small caps the colophon uses, set above the h2 and aligned to a thin vertical margin rule on the left, so the manifesto reads as a chapter heading rather than a continuation of the hero. | REVISION: Re-flow the manifesto body into a narrow measure (~560px) pulled to the left third of the page at >=1024px, leaving the right two-thirds empty so the gold dot can travel down that margin and 'mark' sentences as the user scrolls.",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "voice_and_tone.register",
+        "voice_and_tone.notes",
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.banned_words",
+        "voice_and_tone.avg_sentence_length_words"
+      ],
+      "rationale": "Confessional-educational voice is best shown, not declared. A numbered list of belief-statements, written at the brand's actual ~13-word average sentence length, lets the voice carry the section without resorting to testimonials (which the brief flags as unrecoverable). | Revision rationale: The layout thesis explicitly describes a workbook with margin notes and a traveling highlighter; today the manifesto is a generic centered block. Splitting it into body + margin column activates the workbook metaphor on the first content section after the hero. | Revision rationale: right now the manifesto and the uniqueness-lesson heading use visually identical subhead weight and shape, so the page has no chapter rhythm; a numeral + margin dot makes this section read as a chapter opening rather than a generic blog paragraph. | Revision rationale: Currently 'What we believe' is followed by a single short paragraph, which is exactly the shape the thesis asks the page to avoid \u2014 a list and a pull-quote turn it into the teacher-margin note the brand voice promises. | Revision rationale: Two equally-large headlines in a row break the reading rhythm and remove the sense that the hero is the lesson opener. Demoting this h2 and placing the dot here also creates the first 'travel' of the signature element from hero into manifesto, fulfilling the layout thesis. | Revision rationale: Right now the manifesto heading sits ~340px below the hero with no divider, so the user has no signal that a new unit of content has begun; the brand thesis explicitly frames the page as a sequence of lessons and chapters. | Revision rationale: The current layout centers body copy across the full content width, leaving no margin gutter for the signature dot to slide through; a left-anchored narrow column recreates the workbook-margin effect."
+    },
+    {
+      "id": "uniqueness-lesson",
+      "order": 2,
+      "nav_label": "The lesson",
+      "in_nav": true,
+      "purpose": "Teach the visitor the agency's core framework (the thing every 'unique' brand has to do) without calling it a framework.",
+      "component": "Four-step teaching block laid out as a vertical timeline rather than a horizontal grid. Each step is a numbered card with a single-sentence rule, a one-line example, and the gold dot acting as the step's bullet. On wide screens the timeline is centered with generous gutter; on narrow screens it collapses to a single column but keeps the dot. | REVISION: Introduce a numbered chapter-opening treatment: prepend a large ~120px serif or display '01' numeral in the left margin, and pin the gold signature dot 16px to the right of the numeral so it visually functions as the i-dot highlighter beside the lesson number. | REVISION: Convert this lesson into a 3-step numbered list where each step opens with a roman numeral ('i', 'ii', 'iii') set in display size, followed by a sentence-case header and one short paragraph, and place the gold dot in the left margin aligned to whichever step is currently in view. | REVISION: Render this section as a two-column 'annotated sentence' at desktop: a large display sentence on the left (~60%) and a small teacher-margin note on the right (~30%) that the gold dot sits beside, so the section performs the thesis instead of describing it.",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.favorite_words",
+        "palette_from_logo.primary",
+        "palette_from_logo.secondary",
+        "brand_donts"
+      ],
+      "rationale": "The brief's first explicit banned default is the three-column feature grid with icons. A vertical numbered timeline is the same information density without the template fingerprint, and it lets the gold dot carry meaning instead of decoration. | Revision rationale: The thesis states the gold dot should travel beside every lesson number. This section is literally called the 'uniqueness lesson' yet has no number and no dot, breaking the brand's own reading-guide metaphor. | Revision rationale: A single paragraph after the hero cannot carry the 'confessional-teacher's workbook' metaphor. Numbered, sentence-case lesson steps give the page rhythm and give the gold dot multiple anchor points to mark as it travels down \u2014 the structural payoff the signature element was designed for. | Revision rationale: The brand's signature element is meant to mark 'every sentence that lands', but no section currently has a margin note for the dot to point at; building one here establishes the pattern that can then repeat down the page."
+    },
+    {
+      "id": "services-as-chapters",
+      "order": 3,
+      "nav_label": "What we do",
+      "in_nav": true,
+      "purpose": "Present the eight public services as chapters of a customised curriculum rather than a service catalog.",
+      "component": "Expandable chapter list (accordion with persistent chapter numbers). Each chapter title is one of the eight LinkedIn-listed services; opening a chapter reveals a short teacher-style explanation of when that chapter is needed and what it produces. The gold dot marks the chapter currently being read. | REVISION: Break the single-paragraph section rhythm by rendering the four services as four stacked 'chapter' rows: each row pairs a large left-margin number (01\u201304) with a sentence-case h3 and one-line description, separated by thin 1px hairlines and pinned to the signature gold dot via a fixed left rail. | REVISION: render each service as a numbered chapter row with the gold dot anchored to the row's left margin, an oversized numeral ('01', '02', '03', '04'), a sentence-case title, and a single 1-2 line teacher-margin note set in italic to the right of the title at desktop widths. | REVISION: Restructure each service as a numbered chapter block with a large gold numeral (e.g. '01', '02', '03') in the left margin and a chapter title in display weight, separated by horizontal rules, instead of a single heading + paragraph shape. | REVISION: Lay the 'four things every unique brand has done' out as a 2x2 grid at >=1024px (single column on mobile), with each cell prefixed by a numeral '01\u201304' in the bold display size and the gold dot positioned as a fixed margin marker beside whichever cell is in view. | REVISION: Lay the chapter cards out as a single vertical numbered list (01, 02, 03, 04) at desktop width instead of a grid, with each number set in display size and the gold dot sitting to its right \u2014 making the chapter itself look like a page the teacher is annotating. | REVISION: Introduce a vertical timeline spine down the left edge of the section at >=1024px, with a small gold dot pinned to each chapter node and the chapter number set in sentence-case beside it, so the dot visibly 'travels' between chapters rather than appearing once.",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "service_facts",
+        "voice_and_tone.register",
+        "voice_and_tone.formality_score_1to5"
+      ],
+      "rationale": "Service facts are the most complete recoverable factual inventory (eight named services with descriptions). Grouping them as chapters of a curriculum \u2014 rather than cards with icons \u2014 matches the teacher register and avoids the banned 'three-column feature grid'. | Revision rationale: Currently services-as-chapters reads as a heading plus a single paragraph; the section id literally calls them chapters but they have no chapter form. A numbered list turns the section into the annotated-chapter essay the thesis promises. | Revision rationale: the brand's four-things framing ('The four things every unique brand has already done') only earns its weight if it reads as four distinct chapters; identical card styling without numerals or margin dots will make it feel like another generic 4-column grid. | Revision rationale: Every section currently repeats the same heading + paragraph shape, so the page reads as a flat blog. The thesis says it should read like a workbook of lessons; numbering and chapter framing are the cheapest way to introduce that rhythm without adding imagery. | Revision rationale: A grid of four numbered cells gives the dot four discrete anchor points to travel between, which is what the implementation_note requires; the current single-paragraph layout offers the dot nowhere to go. | Revision rationale: The thesis is built around a workbook that reads top-to-bottom; a multi-column grid breaks that spine. A vertical numbered list with the dot in the margin preserves reading order, gives the dot a consistent left-edge channel to slide down, and lets each chapter read as a 'lesson' rather than a service card. | Revision rationale: The layout thesis describes a single dot moving down the page as a marker; without a sequence of nodes to travel between, the dot is static and the workbook metaphor is reduced to a single accent."
+    },
+    {
+      "id": "the-customised-proof",
+      "order": 4,
+      "nav_label": "How it's made",
+      "in_nav": true,
+      "purpose": "Show what 'customised from top to bottom' means in practice, using only the imagery the brand actually exposes.",
+      "component": "Annotated image essay: a single tall image (the brand's own OG share card, used as a stand-in for the gated portfolio) sits on the right; on the left, three short teacher-margin notes point to specific parts of the image, each ending with a gold dot. No fake client logos, no fabricated case-study metrics. | REVISION: switch this section to a dark or accent background (charcoal #111 or warm cream) so it visually breaks the page rhythm and reads as the essay's 'proof' chapter rather than another grey block; keep the gold dot as the only chromatic element inside the block. | REVISION: Replace the plain heading + paragraph with a 3-column 'proof' layout at >=1024px: each column headed by a short sentence-case label (e.g. 'Diagnostic', 'Method', 'Measure') in bold, with a single supporting paragraph below, so the page proves 'customised' structurally rather than just claiming it. | REVISION: Turn this section into the annotated image essay called out in the thesis: a single screenshot on the right with a fixed left margin of numbered teacher-margin notes (Note 1 / Note 2 / Note 3 in 14px regular) that the gold dot tracks as the reader scrolls. | REVISION: switch the section from a single centred paragraph to a two-column layout at >=1024px: a left column with the prose, a right column with a vertical stack of 3\u20134 short proof points each prefaced by the gold dot",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "voice_and_tone.favorite_words",
+        "brand_donts",
+        "limitations"
+      ],
+      "rationale": "The brief explicitly states no real photograph of a person, team, or client work was recoverable. Using the brand's own og:image as the only visual and annotating it teacher-style is honest about what is available while still demonstrating the 'customised' point of view. | Revision rationale: every section currently shares the same white background and the same grey hr divider, which is the strongest signal of a templated layout; one deliberate background break is the single cheapest way to signal bespoke structure. | Revision rationale: The brand's own argument is that its approach is 'customised from top to bottom', yet the section currently makes that claim in a single paragraph. A three-column proof structure embodies the claim in the layout itself and breaks the monotony of the repeating heading + paragraph shape. | Revision rationale: The brief specifies 'every teacher-margin note in the annotated image essay' as a dot use case; without the annotated layout there is no surface for those margin notes to live on. | Revision rationale: the 'proof' section is the one place a workbook reader expects concrete evidence, but as rendered it is the same h2 + paragraph shape as the manifesto, so it carries no extra weight. Splitting it into prose + a dotted checklist gives the section a distinct chapter shape and finally gives the gold dot a second home on the page."
+    },
+    {
+      "id": "lead-generation-cta",
+      "order": 5,
+      "nav_label": null,
+      "in_nav": false,
+      "purpose": "Convert the reader into a discovery-call booking without breaking the teacher register.",
+      "component": "Single-sentence CTA block: one short paragraph framed as an invitation to the next 'lesson', with one inline button that uses the Webflow interactive blue (#3898ec) \u2014 the only place that blue appears, so the CTA reads as the one interactive moment on the page. | REVISION: Wrap the CTA in a single sentence-case line (e.g. 'Tell us what your brand has been hiding \u2192') with no button fill \u2014 only a thin gold underline whose left endpoint terminates in the gold dot \u2014 so the closing lesson uses the signature element as the link affordance rather than a separate button color.",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "service_facts",
+        "palette_from_logo.accent",
+        "voice_and_tone.register",
+        "voice_and_tone.banned_words"
+      ],
+      "rationale": "The brand's positioning is lead-generation-driven (per service_facts: 'Sale Funnels', 'Paid Advertising'), so the page must end with a clear conversion path. Restricting the accent blue to this single block keeps the gold dot as the dominant accent elsewhere and avoids the 'everything is a button' generic pattern. | Revision rationale: The signature element brief explicitly forbids using the dot inside a button ('those uses would turn it into a generic accent'). A text-link CTA with the dot as the link's starting point keeps the lesson-metaphor intact to the final screen and avoids the agency-default 'Book a call' button pattern."
+    },
+    {
+      "id": "colophon",
+      "order": 6,
+      "nav_label": null,
+      "in_nav": false,
+      "purpose": "Disclose fonts, colors, and license notes the brief flagged as sensitive (Switzer commercial use).",
+      "component": "Single short paragraph plus a small monospaced token table (font families, hex values, license status). JetBrains Mono handles the token rows.",
+      "emphasis": "minor",
+      "source_brief_fields": [
+        "typography_recommendation.license_notes",
+        "typography_recommendation.mono_family",
+        "palette_from_logo.primary",
+        "palette_from_logo.secondary",
+        "palette_from_logo.accent",
+        "palette_from_logo.neutrals",
+        "brand_donts"
+      ],
+      "rationale": "Switzer requires a paid commercial license; the brief explicitly bans vendoring the OTF into production. A colophon that states the substitution rule transparently is both legally safer and on-voice for a brand whose tagline is about uniqueness."
+    }
+  ],
+  "signature_element": {
+    "name": "The gold 'i'-dot highlighter",
+    "description": "A 10px gold circle (#efad2b) that travels down the page as a margin marker beside every lesson number, every chapter being read, and every teacher-margin note in the annotated image essay. It is a literal enlargement of the single saturated pixel of color in the brand's own logo \u2014 the dot above the 'i' in 'Pedicel'.",
+    "why_it_fits_brand": "It is the only saturated color the logo actually owns (per palette_from_logo.rationale: 'the only saturated brand color in the logo SVG'). Using it as a moving highlighter, rather than burying it inside a button, treats the logo's most distinctive feature as the page's reading guide. It also visually echoes the brand's own surfacing language of marking the 'unique' thing on every page.",
+    "implementation_note": "Render once as a fixed-position SVG dot in a single page-level layer; recompute its top offset on scroll using IntersectionObserver against each numbered lesson/chapter node. Animate position with a 280ms cubic-bezier(.2,.7,.2,1) so the movement feels like a marker sliding down a page, not a UI flourish. Never animate opacity, never pulse, never use it inside a button \u2014 those uses would turn it into a generic accent."
+  },
+  "motion_vocabulary": {
+    "register": "restrained",
+    "effects": [
+      "Gold dot position interpolation on scroll (280ms, cubic-bezier easing)",
+      "Lesson/chapter accordion expand via height + opacity (200ms ease-out)",
+      "Margin-note underlines draw in on viewport entry (1 line, 400ms)",
+      "Sticky manifesto index highlight swap (no animation, instant)"
+    ],
+    "rationale": "A confessional-educational voice demands reading-speed motion, not showcase motion. The only 'cinematic' moment is the gold dot's slide, and even that is short enough to feel like a marker, not a transition. No parallax, no scroll-jacking, no video, no spring overshoots \u2014 all of those would betray the teacher register."
+  },
+  "copy_blocks": [
+    {
+      "section_id": "cover",
+      "role": "headline",
+      "text": "All brands are unique, they just haven't shown it to the world yet.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.sentence_case"
+      ]
+    },
+    {
+      "section_id": "cover",
+      "role": "subhead",
+      "text": "A short, customised lesson in what your brand has been hiding.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.notes"
+      ]
+    },
+    {
+      "section_id": "manifesto",
+      "role": "headline",
+      "text": "What we believe, before you read anything else.",
+      "source_brief_fields": [
+        "voice_and_tone.register",
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "manifesto",
+      "role": "body",
+      "text": "We are an inbound Marketing and Branding agency with the goal of helping businesses find their uniqueness. Our approach is customised from top to bottom.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.formality_score_1to5"
+      ]
+    },
+    {
+      "section_id": "uniqueness-lesson",
+      "role": "headline",
+      "text": "The four things every 'unique' brand has already done, whether it knows it or not.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.notes"
+      ]
+    },
+    {
+      "section_id": "services-as-chapters",
+      "role": "headline",
+      "text": "Eight chapters, one curriculum, no packages.",
+      "source_brief_fields": [
+        "service_facts",
+        "voice_and_tone.banned_words",
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "services-as-chapters",
+      "role": "body",
+      "text": "Social Media Marketing, Community Management, Branding Strategy, Sale Funnels, SEO, Web Design, Rebranding, Paid Advertising \u2014 taught in the order your brand needs them, not the order a price list would prefer.",
+      "source_brief_fields": [
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "the-customised-proof",
+      "role": "caption",
+      "text": "A real piece of the brand's own surface, annotated the way we annotate client work.",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "brand_donts"
+      ]
+    },
+    {
+      "section_id": "lead-generation-cta",
+      "role": "body",
+      "text": "If anything on this page sounded like it was written about your business, the next lesson is a 30-minute call.",
+      "source_brief_fields": [
+        "voice_and_tone.register",
+        "voice_and_tone.avg_sentence_length_words"
+      ]
+    },
+    {
+      "section_id": "lead-generation-cta",
+      "role": "cta",
+      "text": "Book the call",
+      "source_brief_fields": [
+        "palette_from_logo.accent",
+        "voice_and_tone.sentence_case"
+      ]
+    },
+    {
+      "section_id": "colophon",
+      "role": "body",
+      "text": "Display type is set in Switzer under a paid commercial license held by the brand; body type is set in Poppins under the SIL Open Font License. Gold #efad2b, surface #f0f8ff, interactive #3898ec.",
+      "source_brief_fields": [
+        "typography_recommendation.license_notes",
+        "palette_from_logo.primary",
+        "palette_from_logo.secondary",
+        "palette_from_logo.accent"
+      ]
+    }
+  ],
+  "skipped_sections": [
+    {
+      "id": "testimonials",
+      "reason": "The brief's limitations section explicitly states no testimonials are recoverable from any public surface and that including one would have been invention.",
+      "missing_brief_fields": [
+        "testimonials"
+      ]
+    },
+    {
+      "id": "case-studies",
+      "reason": "No client portfolio imagery or case-study metrics were recoverable; the brand's own site is blocked by a WAF and Instagram is gated. Building a case-studies section would require fabricated clients.",
+      "missing_brief_fields": [
+        "real_photo_inventory",
+        "social_highlights.linkedin",
+        "social_highlights.instagram"
+      ]
+    },
+    {
+      "id": "trusted-by-logos",
+      "reason": "No client list is recoverable from any public surface. A logo wall would either be empty or invented.",
+      "missing_brief_fields": [
+        "service_facts",
+        "real_photo_inventory",
+        "limitations"
+      ]
+    },
+    {
+      "id": "team",
+      "reason": "No real photographs of the team are recoverable; only the LinkedIn company logo is available. A team grid would have to use avatars or be omitted.",
+      "missing_brief_fields": [
+        "real_photo_inventory"
+      ]
+    },
+    {
+      "id": "pricing",
+      "reason": "Every service_facts entry is marked 'price_range: not disclosed on public surfaces'. A pricing table would be invention.",
+      "missing_brief_fields": [
+        "service_facts.price_range"
+      ]
+    },
+    {
+      "id": "blog-or-thought-leadership",
+      "reason": "social_highlights.linkedin and social_highlights.instagram are both empty by design; the LinkedIn public surface is a tagline and about blurb, not a content feed. There is no recoverable body of posts to surface.",
+      "missing_brief_fields": [
+        "social_highlights.linkedin",
+        "social_highlights.instagram",
+        "sources.linkedin.top_posts",
+        "sources.instagram.grid_themes"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "Lead with a single sentence-case belief statement at display size instead of a centered headline + subhead + CTA hero.",
+      "alternatives_considered": [
+        "Centered hero with two CTAs and a stock background photo",
+        "Video background with a 10-second manifesto loop",
+        "Carousel of three rotating taglines"
+      ],
+      "why_chosen": "The brand's strongest recoverable voice asset is one short sentence ('All brands are unique\u2026'). A centered-everything hero is an explicit forbidden default and would dilute the teacher register. A single sentence at 64px reads like the first line of a book, which matches the workbook thesis."
+    },
+    {
+      "decision": "Use a vertical timeline for the four-step uniqueness lesson instead of a horizontal four-column grid.",
+      "alternatives_considered": [
+        "Four equal cards in a single row with line icons",
+        "Tabs across the top with one panel of content",
+        "A single long-form essay with inline pull-quotes"
+      ],
+      "why_chosen": "The three-column feature grid with icons is the first banned default in brand_donts. A vertical timeline preserves the four-part structure the brand needs to teach, lets the gold dot act as the step marker, and reads at scroll-speed instead of glance-speed."
+    },
+    {
+      "decision": "Render the eight LinkedIn-listed services as expandable chapters rather than as a grid of service cards with icons.",
+      "alternatives_considered": [
+        "Eight cards with one icon each in a 4\u00d72 grid",
+        "A single long-form services page reached from a 'Services' link",
+        "Three category buckets (Marketing / Branding / Web) each holding the relevant services"
+      ],
+      "why_chosen": "service_facts gives eight named services with descriptions and no prices; that is exactly the shape of a chapter list. Cards would force invention of icons and would compete with the gold dot for attention. Categories would lie about the brand's actual flat list."
+    },
+    {
+      "decision": "Restrict the Webflow interactive blue (#3898ec) to a single CTA button and use gold (#efad2b) as the dominant accent everywhere else.",
+      "alternatives_considered": [
+        "Use #3898ec as the primary brand color throughout",
+        "Use a purple gradient as the primary surface (per the Webflow CSS default)",
+        "Split accents evenly between gold and blue across the page"
+      ],
+      "why_chosen": "palette_from_logo.rationale is explicit: gold is the only saturated color in the logo SVG and is the brand's signature. Purple gradients are explicitly banned. A single accent creates a clear visual hierarchy: gold = reading/lesson, blue = the one interactive moment."
+    },
+    {
+      "decision": "Include a colophon that names the Switzer commercial-license substitution rule instead of vendoring Switzer OTF files.",
+      "alternatives_considered": [
+        "Self-host Switzer OTF in the production bundle",
+        "Silently substitute Inter for Switzer without disclosure",
+        "Use only system fonts and skip the display family"
+      ],
+      "why_chosen": "typography_recommendation.license_notes and brand_donts both flag that the free personal-use Switzer license forbids commercial use. Silent substitution would be dishonest; bundling would be a license violation. A colophon that names the rule is on-voice for a brand whose tagline is about showing what was hidden."
+    },
+    {
+      "decision": "Use the brand's own og:image as the single visual in the annotated image essay instead of inventing portfolio imagery.",
+      "alternatives_considered": [
+        "Commission or generate bespoke case-study imagery",
+        "Use abstract decorative shapes instead of any photograph",
+        "Omit imagery entirely and use type only"
+      ],
+      "why_chosen": "real_photo_inventory contains no real photographs of people, team, or client work \u2014 only the logo SVG, the OG share card, and the LinkedIn company logo. brand_donts bans generic stock photography. The OG card is brand-owned and is the only honest visual the agency can currently expose without invention."
+    },
+    {
+      "decision": "Skip testimonials, case studies, a 'trusted by' wall, a team grid, pricing, and a blog feed entirely.",
+      "alternatives_considered": [
+        "Include a single invented client quote labeled 'example'",
+        "Show placeholder case-study cards marked 'coming soon'",
+        "Source client logos from the agency's LinkedIn follower list"
+      ],
+      "why_chosen": "The brief's limitations section is explicit that every one of those sections would have to be invented. The layout thesis explicitly prefers showing the agency's point of view in the page itself over borrowing third-party credibility. The skipped_sections list names each missing brief field so the gap is auditable, not hidden."
+    }
+  ]
+}

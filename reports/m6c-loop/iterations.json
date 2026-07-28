@@ -1,0 +1,299 @@
+[
+  {
+    "scores": {
+      "visual_hierarchy": {
+        "score": 4,
+        "justification": "The hero has no clear focal relationship between the headline, the tagline, and the gold dot \u2014 they read as three detached elements rather than a composed opening.",
+        "observation": "On the desktop view, the gold dot sits at ~740px from the left while the headline ends at ~590px, leaving ~150px of dead horizontal space between the headline and the dot, and the tagline has no visual anchor at all."
+      },
+      "use_of_space": {
+        "score": 3,
+        "justification": "The first screen is dominated by white space with no supporting structure, so the emptiness reads as unresolved rather than confident.",
+        "observation": "On the desktop 1440x900 viewport, the top 80% of the visible area above the fold contains only the headline, tagline, and one gold dot \u2014 roughly 70% of the visible canvas is empty."
+      },
+      "typographic_contrast": {
+        "score": 7,
+        "justification": "The headline-to-body size jump is genuinely large, but a single typeface family across every element flattens the lesson-by-lesson rhythm the thesis promises.",
+        "observation": "The h1 appears to be roughly 64-72px display while the tagline is ~16-18px \u2014 a ratio of about 4:1 \u2014 but h1, h2, eyebrow ('01 / MANIFESTO'), and body all appear to share one family and weight logic."
+      },
+      "focal_point": {
+        "score": 3,
+        "justification": "The signature element (the gold dot) is present but is placed as a free-floating shape rather than reading as the page's highlighter or margin marker.",
+        "observation": "On desktop the gold dot is centered vertically against the headline block at roughly y=120, with no lesson number, headline line, or margin note adjacent to it \u2014 it functions as decoration rather than a moving highlighter."
+      },
+      "brand_fit": {
+        "score": 4,
+        "justification": "The teacher's-workbook thesis asks for a margin-marker relationship between dot and lesson, but the dot is detached from any lesson or margin note \u2014 the signature element's job is unmet.",
+        "observation": "On the mobile view the dot sits at the bottom-left of the hero with no adjacent lesson number or 'teacher's note', so it reads as a brand mark in space rather than a highlighter beside a lesson."
+      },
+      "motion_restraint": {
+        "score": 6,
+        "justification": "There is no evidence of motion in the static screenshot, but nothing in the static composition telegraphs how the dot would travel either \u2014 restraint is fine, but the signature element is supposed to move.",
+        "observation": "The brand brief specifies a 280ms cubic-bezier(.2,.7,.2,1) transition between lesson markers, but the hero composition gives no visual hint (no lesson number adjacent to the dot) for what it would move between."
+      },
+      "looks_templated": {
+        "score": 6,
+        "justification": "The sentence-case headline and small grey tagline feel bespoke and on-brand, but the overall big-headline-plus-corner-dot composition is a familiar agency-hero pattern.",
+        "observation": "The eyebrow label '01 / MANIFESTO' in the bottom-left in tiny gold caps is a distinguishing mark that the page is not a stock Webflow template, but the hero's headline-left / dot-right layout is generic."
+      }
+    },
+    "total": 33,
+    "revisions": [
+      {
+        "section_id": "cover",
+        "change": "Add a small lesson number (e.g. 'Lesson 01') in sentence case directly to the left of the headline at the same baseline as the first line, and reposition the gold dot to sit at the left margin adjacent to that lesson number rather than floating to the right of the headline.",
+        "rationale": "The brand thesis requires the gold dot to act as a margin highlighter next to lesson markers; right now the dot floats free and the lesson number is buried in the eyebrow at the bottom of the section.",
+        "addressed_observation": "On desktop the gold dot is centered vertically against the headline block at roughly y=120, with no lesson number, headline line, or margin note adjacent to it \u2014 it functions as decoration rather than a moving highlighter."
+      },
+      {
+        "section_id": "manifesto",
+        "change": "Add a short teacher-margin note (one italicised sentence in 14-16px) set in the right margin at desktop, anchored by the gold dot, so the manifesto reads as an annotated lesson rather than a paragraph followed by another headline.",
+        "rationale": "Two consecutive centered headlines with a single body paragraph between them produce a flat rhythm; a margin note gives the section the workbook feel the thesis calls for and gives the dot a real job.",
+        "addressed_observation": "On the desktop 1440x900 viewport, the top 80% of the visible area above the fold contains only the headline, tagline, and one gold dot \u2014 roughly 70% of the visible canvas is empty."
+      },
+      {
+        "section_id": "uniqueness-lesson",
+        "change": "Break the section into three numbered sub-lessons ('Lesson 01 / Lesson 02 / Lesson 03') each with a short sentence-case header and one supporting sentence, with the gold dot anchored to the left of whichever lesson is in view as the user scrolls.",
+        "rationale": "The thesis describes a moving highlighter that travels between lessons, but a single block of body copy gives the dot nothing to move between; numbered sub-lessons create the reading checkpoints the signature element needs.",
+        "addressed_observation": "The eyebrow label '01 / MANIFESTO' in the bottom-left in tiny gold caps is a distinguishing mark that the page is not a stock Webflow template, but the hero's headline-left / dot-right layout is generic."
+      },
+      {
+        "section_id": "cover",
+        "change": "Reduce the hero's top whitespace so the headline begins at roughly y=120 instead of y=80, and let the tagline sit directly under the headline without a full blank row between them.",
+        "rationale": "The current vertical gap between the headline and tagline (roughly 40px) plus the further gap before the dot makes the first screen feel unresolved; tightening the headline-tagline pair creates a single composed block.",
+        "addressed_observation": "On desktop the gold dot is centered vertically against the headline block at roughly y=120, with no lesson number, headline line, or margin note adjacent to it \u2014 it functions as decoration rather than a moving highlighter."
+      },
+      {
+        "section_id": "services-as-chapters",
+        "change": "Render each service as a chapter opening with a large numeral ('01', '02', '03') on the left and the gold dot anchored to the numeral's right edge, instead of presenting them as a uniform row of three equal cards.",
+        "rationale": "Equal cards flatten the teacher-workbook thesis into a generic services grid; a chapter-opening pattern with a numeral+dot marker reintroduces the signature element as a reading guide and breaks the section rhythm.",
+        "addressed_observation": "On the desktop 1440x900 viewport, the top 80% of the visible area above the fold contains only the headline, tagline, and one gold dot \u2014 roughly 70% of the visible canvas is empty."
+      }
+    ],
+    "rubric_self_check": {
+      "every_score_has_observation": true,
+      "every_revision_names_section_and_change": true,
+      "no_vague_advice_given": true
+    },
+    "generated_at": "2026-07-28T00:00:48.276451Z",
+    "model": "MiniMax-M3",
+    "iteration": 1,
+    "outcome": "ok",
+    "attempts": [
+      {
+        "attempt": 1,
+        "outcome": "ok"
+      }
+    ],
+    "viewports": [
+      "1440x900",
+      "375x812"
+    ],
+    "plan_snapshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-design/design-plan.json",
+    "applied": [
+      "APPLIED 'cover': Add a small lesson number (e.g. 'Lesson 01') in sentence case directly to the left of the headline at the same baseline as the first line, and reposition the gold dot to sit at the left margin adjacent to that lesson number rather than floating to the right of the headline.",
+      "APPLIED 'manifesto': Add a short teacher-margin note (one italicised sentence in 14-16px) set in the right margin at desktop, anchored by the gold dot, so the manifesto reads as an annotated lesson rather than a paragraph followed by another headline.",
+      "APPLIED 'uniqueness-lesson': Break the section into three numbered sub-lessons ('Lesson 01 / Lesson 02 / Lesson 03') each with a short sentence-case header and one supporting sentence, with the gold dot anchored to the left of whichever lesson is in view as the user scrolls.",
+      "APPLIED 'cover': Reduce the hero's top whitespace so the headline begins at roughly y=120 instead of y=80, and let the tagline sit directly under the headline without a full blank row between them.",
+      "APPLIED 'services-as-chapters': Render each service as a chapter opening with a large numeral ('01', '02', '03') on the left and the gold dot anchored to the numeral's right edge, instead of presenting them as a uniform row of three equal cards."
+    ]
+  },
+  {
+    "scores": {
+      "visual_hierarchy": {
+        "score": 6,
+        "justification": "Hero headline reads first, then subhead, then the manifesto h2 \u2014 clear rank. But the second lesson block 'What we believe\u2026' and the cover/lesson copy have no visible lesson number or margin marker, so the workbook thesis is invisible.",
+        "observation": "h1 display size ~72px vs body ~16px gives ~4.5:1 ratio, but the manifesto h2 (~36px) and the cover subhead (~16px gray) have nearly identical weight, so two competing second-tier heads sit on screen with no differentiation."
+      },
+      "use_of_space": {
+        "score": 5,
+        "justification": "Left-aligned text column with a single gold dot is clean, but at 1440px the headline column only occupies ~28% of the viewport width and the right ~60% is empty white \u2014 the signature dot floats without anchoring anything.",
+        "observation": "At 1440px the headline block ends near x\u2248560px; right of that, ~880px of canvas is unused apart from one ~80px gold circle, giving a hero that reads as half-empty rather than calm."
+      },
+      "typographic_contrast": {
+        "score": 7,
+        "justification": "Strong serif/sans contrast between the large display headline and the sentence-case subhead in a quiet gray. However the manifesto h2 is set in what appears to be the same family as the hero, weakening chapter-to-chapter differentiation.",
+        "observation": "Hero h1 is a large geometric/humanist sans at ~72px; subhead is the same family at ~16px in #6b7280-ish gray; no italic, no small-caps, no numeral \u2014 the brief's 'workbook' rhythm cues (numerals, chapter marks) are absent."
+      },
+      "focal_point": {
+        "score": 6,
+        "justification": "The gold circle is the only saturated color on screen and correctly becomes the eye's anchor. But at desktop it sits at roughly the vertical midpoint of the hero (y\u2248170px on a 900px viewport) while the headline ends ~y\u2248180px \u2014 they read as parallel, not as a marker pointing at a sentence.",
+        "observation": "Gold circle center \u2248 (1050, 170) at 1440\u00d7900; nearest text line baseline is the subhead at \u2248(60, 215) \u2014 vertical offset ~45px with no horizontal line or arrow connecting them."
+      },
+      "brand_fit": {
+        "score": 7,
+        "justification": "Confessional-teacher register lands: 'A short, customised lesson in what your brand has been hiding.' is the exact voice the brief calls for, and the gold dot is honored. But the page hasn't yet earned the 'workbook with moving highlighter' thesis \u2014 there are no lesson numbers, no chapter labels, no margin notes.",
+        "observation": "Voice is on brief; structure is not \u2014 there is no visible 'Lesson 01' / 'Chapter' marker anywhere in the rendered viewport, so the signature dot has nothing to highlight yet."
+      },
+      "motion_restraint": {
+        "score": 8,
+        "justification": "Nothing in the static frame screams motion; no pulse, no parallax hint, no rotating elements. The dot is a single still circle, consistent with the 'never animate opacity, never pulse' rule.",
+        "observation": "Single static gold circle, no gradients, no shadow, no glow \u2014 closest implementation note compliance of any dimension so far."
+      },
+      "looks_templated": {
+        "score": 7,
+        "justification": "The asymmetric left-text + right-dot layout and the sentence-case confessional subhead feel specific to this brand rather than a stock Webflow template. Penalized only because the lower '01 \u2014 MANIFESTO' label and the second h2 'What we believe\u2026' start to look like a generic 'big-text + small-text' agency template.",
+        "observation": "The small caps eyebrow '01 \u2014 MANIFESTO' in gold and the centered-ish second h2 mirror a common Webflow 'agency manifesto' starter pattern; the hero itself is the more bespoke element."
+      }
+    },
+    "total": 46,
+    "revisions": [
+      {
+        "section_id": "cover",
+        "change": "Prefix the hero subhead with a small lesson marker such as 'Lesson 01 \u2014' set in sentence-case at ~14px above the subhead, and add a thin 1px gold rule (~40px wide) under the word 'unique.' as the first thing the highlighter points at.",
+        "rationale": "The thesis says the gold dot acts as a moving highlighter beside every lesson number; right now the hero has no lesson number, so the dot has no lesson to mark. Adding 'Lesson 01' and a short gold rule gives the dot a concrete target and converts the hero from a billboard into the first page of a workbook.",
+        "addressed_observation": "Voice is on brief; structure is not \u2014 there is no visible 'Lesson 01' / 'Chapter' marker anywhere in the rendered viewport, so the signature dot has nothing to highlight yet."
+      },
+      {
+        "section_id": "cover",
+        "change": "At >=1024px, split the hero into a two-column grid where the headline + subhead occupy the left ~55% and the right ~45% holds the gold dot stacked above a short teacher-margin note (e.g. 'See lesson notes \u2192') in 14px sentence-case gray, so the right side is not empty.",
+        "rationale": "At 1440px the headline ends near x\u2248560px and ~880px of canvas is unused apart from one ~80px gold circle. A second small element on the right column gives the dot company and turns the right half from dead space into the 'margin' the thesis keeps referencing.",
+        "addressed_observation": "At 1440px the headline block ends near x\u2248560px; right of that, ~880px of canvas is unused apart from one ~80px gold circle, giving a hero that reads as half-empty rather than calm."
+      },
+      {
+        "section_id": "manifesto",
+        "change": "Convert the manifesto block from a single h2 + single paragraph into a chapter opening: place a small numeral '02' in the left margin (~64px from edge) at ~80px display size, then the h2 'What we believe, before you read anything else.' flush to it, and replace the single paragraph with 3 short numbered sub-beliefs each prefixed by a sentence-case label (e.g. '01. Customised means yours.').",
+        "rationale": "The signature element is supposed to travel down the page marking every lesson number; without numerals and sub-beliefs there is nothing for it to travel between. This also breaks the 'every section is h2 + p' shape the page currently has.",
+        "addressed_observation": "The manifesto h2 (~36px) and the cover subhead (~16px gray) have nearly identical weight, so two competing second-tier heads sit on screen with no differentiation."
+      },
+      {
+        "section_id": "_R_",
+        "change": "Add a fixed-position single SVG gold circle in a page-level layer (as called for in the implementation note) rather than only rendering it once inside the hero section, so it persists as the dot travels down to the manifesto and beyond.",
+        "rationale": "The brief specifies a fixed-position SVG dot with IntersectionObserver-driven top offset; what is currently shown is a static in-section circle that cannot 'travel.' Lifting it to a page layer is the structural change that lets the signature element actually function.",
+        "addressed_observation": "Gold circle center \u2248 (1050, 170) at 1440\u00d7900; nearest text line baseline is the subhead at \u2248(60, 215) \u2014 vertical offset ~45px with no horizontal line or arrow connecting them."
+      },
+      {
+        "section_id": "cover",
+        "change": "On mobile (\u2264480px), move the gold circle from below the headline (current y\u2248420px on a 812px viewport) to the left margin at roughly the vertical midpoint of the h1, and reduce its diameter from ~80px to ~24px so it reads as a margin marker, not a hero illustration.",
+        "rationale": "On mobile the circle currently sits as a second visual block under the copy with the same visual weight as the headline, which contradicts the 'margin marker' role. A smaller dot pinned to the left gutter restores the teacher-margin metaphor at narrow widths.",
+        "addressed_observation": "At 375\u00d7812 the gold circle appears at roughly y\u2248420 with diameter \u224880px, giving it the same visual weight as the headline block above it instead of acting as a margin marker."
+      }
+    ],
+    "rubric_self_check": {
+      "every_score_has_observation": true,
+      "every_revision_names_section_and_change": true,
+      "no_vague_advice_given": true
+    },
+    "generated_at": "2026-07-28T00:01:32.798963Z",
+    "model": "MiniMax-M3",
+    "iteration": 2,
+    "outcome": "ok",
+    "attempts": [
+      {
+        "attempt": 1,
+        "outcome": "ok"
+      }
+    ],
+    "viewports": [
+      "1440x900",
+      "375x812"
+    ],
+    "plan_snapshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-design/design-plan.json",
+    "applied": [
+      "APPLIED 'cover': Prefix the hero subhead with a small lesson marker such as 'Lesson 01 \u2014' set in sentence-case at ~14px above the subhead, and add a thin 1px gold rule (~40px wide) under the word 'unique.' as the first thing the highlighter points at.",
+      "APPLIED 'cover': At >=1024px, split the hero into a two-column grid where the headline + subhead occupy the left ~55% and the right ~45% holds the gold dot stacked above a short teacher-margin note (e.g. 'See lesson notes \u2192') in 14px sentence-case gray, so the right side is not empty.",
+      "APPLIED 'manifesto': Convert the manifesto block from a single h2 + single paragraph into a chapter opening: place a small numeral '02' in the left margin (~64px from edge) at ~80px display size, then the h2 'What we believe, before you read anything else.' flush to it, and replace the single paragraph with 3 short numbered sub-beliefs each prefixed by a sentence-case label (e.g. '01. Customised means yours.').",
+      "REJECTED: revision references unknown section_id '_R_'",
+      "APPLIED 'cover': On mobile (\u2264480px), move the gold circle from below the headline (current y\u2248420px on a 812px viewport) to the left margin at roughly the vertical midpoint of the h1, and reduce its diameter from ~80px to ~24px so it reads as a margin marker, not a hero illustration."
+    ]
+  },
+  {
+    "scores": {
+      "visual_hierarchy": {
+        "score": 6,
+        "justification": "The hero h1 and supporting h2 below it have clear size separation, but within the hero block the gold dot competes with the headline instead of reading as a quiet margin marker beside a lesson number.",
+        "observation": "Hero h1 sits at roughly 64px, supporting paragraph at ~18px (~3.5:1 ratio), but the gold dot is ~130px in diameter \u2014 larger than a single line of the h1 \u2014 so it dominates the right column at 1440px rather than acting as a 10px margin mark."
+      },
+      "use_of_space": {
+        "score": 4,
+        "justification": "The hero uses an approximate left 50% / right 50% split where the right column holds only a single oversized circle, leaving roughly 35-40% of the viewport as empty white at 1440px.",
+        "observation": "At 1440x900, the right column (x\u2248900\u20131300) is ~400px wide and contains only the gold dot centered vertically against the headline \u2014 roughly 280,000px\u00b2 of unused canvas with no secondary lesson number, margin note, or chapter cue."
+      },
+      "typographic_contrast": {
+        "score": 7,
+        "justification": "Sentence-case headings, mixed line lengths, and a restrained single-weight sans create a teacher-like workbook feel consistent with the confessional-educational register.",
+        "observation": "Display h1 is approximately 64px / lh ~1.05, supporting h2 around 32px, body around 18px \u2014 a clean three-step scale with no italics, all-caps, or stretched display, matching the 'no impact tropes' rule."
+      },
+      "focal_point": {
+        "score": 4,
+        "justification": "The brief calls for the gold dot to read as a 10px margin marker beside lesson numbers; here it is rendered as a 130px decorative sun, which inverts the signature element and splits focus with the headline.",
+        "observation": "Gold circle diameter in the hero is roughly 13\u00d7 the signature specification of 10px, and it is placed in negative space rather than adjacent to a lesson number or margin note \u2014 the focal point becomes the dot, not the lesson."
+      },
+      "brand_fit": {
+        "score": 5,
+        "justification": "The sentence-case, teacher-like headline ('All brands are unique\u2026') fits the confessional-educational register, but the oversized dot contradicts the brand's own signature element spec and the right-side emptiness breaks the workbook framing.",
+        "observation": "The brief explicitly states the dot must be a fixed 10px SVG travelling with lesson numbers; the rendered dot is a static ~130px circle, violating both size and behavior contracts of the signature element."
+      },
+      "motion_restraint": {
+        "score": 8,
+        "justification": "No pulsing, parallax, or animated flourishes are visible \u2014 the page reads as still, which honors the 'never animate opacity, never pulse' rule.",
+        "observation": "Across both viewports only the static layout is observable; there are no transition cues, hover hints, or animated underlines \u2014 restraint is intact even if the signature element itself is mis-scaled."
+      },
+      "looks_templated": {
+        "score": 7,
+        "justification": "The single h1 + sub + oversized accent-circle pattern is a recognizable 'agency hero' template, but the sentence-case teaching voice and the custom Pedicel brand framing keep it from reading as fully generic.",
+        "observation": "The hero composition (left-aligned headline block, right-aligned single decorative shape, small section label '01 / 0025FBE0D' below) repeats a stock Webflow hero pattern that appears on hundreds of agency sites."
+      }
+    },
+    "total": 41,
+    "revisions": [
+      {
+        "section_id": "cover",
+        "change": "Shrink the gold circle from ~130px to the spec'd 10px and pin it to the left margin as a fixed-position marker immediately left of the headline baseline; remove the centered right-column placement.",
+        "rationale": "The signature element is defined as a 10px margin marker beside lesson numbers \u2014 at 13\u00d7 that size it stops being a highlighter and becomes a decorative sun, breaking the brand_fit and focal_point contracts.",
+        "addressed_observation": "Gold circle diameter in the hero is roughly 13\u00d7 the signature specification of 10px, and it is placed in negative space rather than adjacent to a lesson number or margin note \u2014 the focal point becomes the dot, not the lesson."
+      },
+      {
+        "section_id": "cover",
+        "change": "Replace the empty right half (x\u2248900\u20131300 at 1440px) with a vertical chapter index: a small '01' numeral followed by 4\u20135 sentence-case lesson titles in a tight column, with the 10px gold dot sitting to the left of the active item.",
+        "rationale": "The thesis calls for a workbook where the dot marks every lesson being read; a chapter index in the right column turns dead canvas into the page's table of contents and gives the dot a structural job to do.",
+        "addressed_observation": "At 1440x900, the right column (x\u2248900\u20131300) is ~400px wide and contains only the gold dot centered vertically against the headline \u2014 roughly 280,000px\u00b2 of unused canvas with no secondary lesson number, margin note, or chapter cue."
+      },
+      {
+        "section_id": "manifesto",
+        "change": "Break the manifesto section out of the same white background by giving it a subtle alice-blue fill (#f0f6fa, pulled from the logo surface per palette_from_logo.rationale) and a single sentence-case subhead in the upper-left corner.",
+        "rationale": "Right now the manifesto reads as a continuation of the hero \u2014 same background, same alignment, same shape. A background shift turns it into a visible chapter opening, which is what the 'quiet lesson' thesis depends on.",
+        "addressed_observation": "The manifesto 'What we believe\u2026' section sits directly under the hero on identical white with the same left-aligned h2/p shape, giving the page two consecutive identical sections and zero rhythm change."
+      },
+      {
+        "section_id": "services-as-chapters",
+        "change": "Number each service item with a left-margin numeral ('01', '02', '03') and place the 10px gold dot flush-left of that numeral; left-justify the service title under the numeral rather than centering it.",
+        "rationale": "The signature element is supposed to mark every lesson being read; without lesson numbers beside each service, the dot has nothing to travel between and the chapters don't read as chapters.",
+        "addressed_observation": "Observed that no section in the rendered HTML is named with a numbered lesson prefix (no '01 /', '02 /' style structure visible on services-as-chapters), so the dot-as-highlighter mechanic has no anchor points."
+      },
+      {
+        "section_id": "the-customised-proof",
+        "change": "Restructure the section as a two-column 'annotated image essay' at >=1024px: a left column holding a single bespoke marketing visual with three 10px gold dots placed in its margins, and a right column of sentence-case teacher-margin notes aligned to each dot.",
+        "rationale": "The signature element description explicitly references 'the annotated image essay' with margin notes; the current layout has no annotated visual and no margin notes, so the signature element has nothing to highlight.",
+        "addressed_observation": "The brief's signature element description names 'the annotated image essay' as one of the dot's three anchor contexts, but the-customised-proof renders as a plain text column with no image and no margin annotations."
+      }
+    ],
+    "rubric_self_check": {
+      "every_score_has_observation": true,
+      "every_revision_names_section_and_change": true,
+      "no_vague_advice_given": true
+    },
+    "generated_at": "2026-07-28T00:02:16.893323Z",
+    "model": "MiniMax-M3",
+    "iteration": 3,
+    "outcome": "ok",
+    "attempts": [
+      {
+        "attempt": 1,
+        "outcome": "ok"
+      }
+    ],
+    "viewports": [
+      "1440x900",
+      "375x812"
+    ],
+    "plan_snapshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-design/design-plan.json",
+    "applied": [
+      "APPLIED 'cover': Shrink the gold circle from ~130px to the spec'd 10px and pin it to the left margin as a fixed-position marker immediately left of the headline baseline; remove the centered right-column placement.",
+      "APPLIED 'cover': Replace the empty right half (x\u2248900\u20131300 at 1440px) with a vertical chapter index: a small '01' numeral followed by 4\u20135 sentence-case lesson titles in a tight column, with the 10px gold dot sitting to the left of the active item.",
+      "APPLIED 'manifesto': Break the manifesto section out of the same white background by giving it a subtle alice-blue fill (#f0f6fa, pulled from the logo surface per palette_from_logo.rationale) and a single sentence-case subhead in the upper-left corner.",
+      "APPLIED 'services-as-chapters': Number each service item with a left-margin numeral ('01', '02', '03') and place the 10px gold dot flush-left of that numeral; left-justify the service title under the numeral rather than centering it.",
+      "APPLIED 'the-customised-proof': Restructure the section as a two-column 'annotated image essay' at >=1024px: a left column holding a single bespoke marketing visual with three 10px gold dots placed in its margins, and a right column of sentence-case teacher-margin notes aligned to each dot."
+    ]
+  }
+]

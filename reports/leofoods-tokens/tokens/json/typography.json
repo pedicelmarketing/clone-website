@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "tool_version": "1.0",
+    "generated_at": "2026-07-28T00:15:24Z",
+    "evidence_basis": "DOM+assets confirmed",
+    "project_slug": "leo-foods-redesign",
+    "brand_brief": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-leofoods/brand-brief.json",
+    "reference_tokens": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens"
+  },
+  "typography": {
+    "fontFamily": {
+      "display": {
+        "value": "Inter"
+      },
+      "body": {
+        "value": "Inter"
+      },
+      "mono": {
+        "value": "JetBrains Mono"
+      }
+    },
+    "scaleRatio": {
+      "value": 1.25
+    },
+    "fontSize": {
+      "0": {
+        "value": "12px"
+      },
+      "1": {
+        "value": "14px"
+      },
+      "2": {
+        "value": "16px"
+      },
+      "3": {
+        "value": "20px"
+      },
+      "4": {
+        "value": "24px"
+      },
+      "5": {
+        "value": "32px"
+      },
+      "6": {
+        "value": "48px"
+      },
+      "7": {
+        "value": "64px"
+      }
+    }
+  }
+}

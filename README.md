@@ -243,6 +243,14 @@ evidence, not numbers to round away or embellish.
 
 ### Honesty and handoff rules
 
+### Self-verification harness
+
+After changing any web-designer script, run `./verify.sh` from the repository root. It regenerates
+the token/design/composition/validation artifacts, checks imports, tests, doctests, CSS discipline,
+gate status, and validation staleness. A commit is acceptable only when it exits 0. The design API
+may be unavailable; in that case the harness retries transient failures and warns when reusing the
+existing design plan, while all deterministic checks still run.
+
 - A blocked source is a documented limitation, never a fabricated brand brief or a stock-photo
   fallback.
 - `voice_and_tone.banned_words`, `brand_donts`, empty social arrays, license notes, and research

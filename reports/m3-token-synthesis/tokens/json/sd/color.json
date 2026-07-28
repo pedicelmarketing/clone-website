@@ -1,0 +1,36 @@
+{
+  "color": {
+    "primary": {
+      "value": "#efad2b"
+    },
+    "secondary": {
+      "value": "#f0f8ff"
+    },
+    "accent": {
+      "value": "#3898ec"
+    },
+    "neutral": {
+      "0": {
+        "value": "#0b0c0d"
+      },
+      "1": {
+        "value": "#1c1d1c"
+      },
+      "2": {
+        "value": "#5d5d6d"
+      },
+      "3": {
+        "value": "#9c9c9c"
+      },
+      "4": {
+        "value": "#e6e6e6"
+      },
+      "5": {
+        "value": "#fafafa"
+      },
+      "6": {
+        "value": "#ffffff"
+      }
+    }
+  }
+}

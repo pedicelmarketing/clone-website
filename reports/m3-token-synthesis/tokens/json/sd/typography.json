@@ -1,0 +1,44 @@
+{
+  "typography": {
+    "fontFamily": {
+      "display": {
+        "value": "Inter"
+      },
+      "body": {
+        "value": "Poppins"
+      },
+      "mono": {
+        "value": "JetBrains Mono"
+      }
+    },
+    "scaleRatio": {
+      "value": 1.25
+    },
+    "fontSize": {
+      "0": {
+        "value": "12px"
+      },
+      "1": {
+        "value": "14px"
+      },
+      "2": {
+        "value": "16px"
+      },
+      "3": {
+        "value": "20px"
+      },
+      "4": {
+        "value": "24px"
+      },
+      "5": {
+        "value": "32px"
+      },
+      "6": {
+        "value": "48px"
+      },
+      "7": {
+        "value": "64px"
+      }
+    }
+  }
+}

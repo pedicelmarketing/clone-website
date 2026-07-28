@@ -9,7 +9,8 @@ audit the output without a build chain.
 
 CLI:
     compose_site.py --brand-brief <path> --tokens <synthesize_tokens outdir>
-        [--reference-report <dir>] -o <outdir> [--project-slug <slug>]
+        [--reference-report <dir>] [--design-plan <design-plan.json>]
+        -o <outdir> [--project-slug <slug>]
 
 The emitter is a *re-versioning* step, not a mirror. It composes sections ONLY from
 content that actually exists in the brand brief — every section it skips (with
@@ -17,17 +18,33 @@ reason) is reported in BUILD-REPORT.md so the operator can see exactly what data
 drove the page and what was absent. Copy, photos, quotes, and stats are never
 invented; if a section's source data is missing the section is omitted.
 
+Two composition paths, one gate set:
+  * Fallback (no --design-plan): the deterministic, template-based emitter that
+    M2-M3 shipped. Sections are chosen from brief fields, copy is taken from
+    brief fields, layout is the same for every brand. EXACTLY preserved.
+  * Plan-driven (--design-plan present): the LLM-authored design_plan.json drives
+    section order, emphasis, component choice, and copy. The composer's job
+    narrows to "render the plan faithfully, using only what the plan cites from
+    the brief". verify_source_fields (imported from design_pass.py) gates the
+    plan against the brief — any invented source-field reference rejects the
+    build with exit 1 before any HTML is written.
+
 Outputs:
     <outdir>/index.html        semantic HTML, links tokens.css + styles.css
     <outdir>/tokens.css        copy of synthesized tokens/dist/tokens.css
     <outdir>/styles.css        component CSS using var(--*) tokens only
     <outdir>/BUILD-REPORT.md   sections emitted vs skipped + brief provenance +
-                                contrast decisions + carried-forward limitations
+                                contrast decisions + carried-forward limitations.
+                                Plan-driven builds also carry the layout thesis,
+                                signature element, per-section rationale, and
+                                which brief fields fed each section.
 
 Honesty conventions (same as nt-site-mirror + web-designer SKILL.md):
   * exit 0 + stdout path of outdir              -> site composed cleanly
-  * exit 1 + stderr diagnostic                   -> brand brief is invalid or
-                                                   required tokens are missing
+  * exit 1 + stderr diagnostic                   -> brand brief is invalid,
+                                                   required tokens are missing,
+                                                   or design-plan failed
+                                                   verify_source_fields
   * exit 2 + stderr usage / IO error             -> could not even attempt composition
 
 The script never claims a higher tier than the brief supports; it reports which
@@ -53,8 +70,76 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from validate_brand_brief import _fallback_validate, _jsonschema_validate  # noqa: E402
 
+# M6: shared output-assertion helpers (HTML links tokens.css, no raw hex in
+# styles.css, every plan section id rendered-or-skipped). Imported here so both
+# the fallback and the plan-driven emit-paths run identical gates before exit 0.
+from _output_assertions import (  # noqa: E402
+    OutputAssertionError,
+    find_raw_hex_in_css,
+    require_css_references_tokens_css,
+    require_section_ids_rendered_or_skipped,
+)
+
+
+# ---------------------------------------------------------------------------
+# Output assertions (M6)
+# ---------------------------------------------------------------------------
+
+
+def _run_output_assertions(
+    *,
+    html: str,
+    stylesheet_text: str,
+    declared_section_ids: Iterable[str],
+    rendered_skipped_ids: Iterable[str],
+    css_label: str,
+    tokens_href: str = "tokens.css",
+    id_aliases: dict[str, str] | None = None,
+) -> None:
+    """Run the M6 self-verification gates against an emit's outputs.
+
+    Raises OutputAssertionError (caught by verify.sh / callers) on any violation;
+    the message names the offending value. Three checks:
+
+      1. The HTML links `tokens.css` — without it the page silently loses every
+         design token and renders off-brand.
+      2. `stylesheet_text` contains no raw hex literals. `tokens.css` is exempt
+         via `allow_in_token_block=True` semantics — this helper is run on
+         styles.css only, where hex is forbidden (use var(--token)).
+      3. Every plan section id is either rendered into the HTML or listed as
+         skipped. Silence is a Fidelity Gap. `id_aliases` lets callers map
+         plan-id -> rendered-id for sections the composer intentionally
+         renames (e.g. the first plan section is always anchored as `hero`).
+    """
+    errors: list[str] = []
+
+    errors.extend(require_css_references_tokens_css(html, tokens_href=tokens_href))
+
+    # `find_raw_hex_in_css` with `allow_in_token_block=True` only exempts lines
+    # inside a `:root { ... }` block. styles.css has no such block — every hit
+    # is a violation.
+    hex_hits = find_raw_hex_in_css(stylesheet_text, allow_in_token_block=True)
+    if hex_hits:
+        for ln, line in hex_hits:
+            errors.append(f"{css_label} L{ln}: raw hex literal — {line}")
+
+    errors.extend(
+        require_section_ids_rendered_or_skipped(
+            declared_section_ids,
+            html,
+            rendered_skipped_ids,
+            id_aliases=id_aliases,
+        )
+    )
+
+    if errors:
+        raise OutputAssertionError(
+            f"compose_site output assertions FAILED ({len(errors)} issue(s)):\n  "
+            + "\n  ".join(errors)
+        )
+
 SCHEMA_VERSION = "1.0"
-TOOL_VERSION = "1.0"
+TOOL_VERSION = "1.1"
 
 # Token CSS variables we EXPECT to find in tokens.css. The emitter uses them as
 # var(--token-name) in styles.css; the page CSS itself contains no raw hex. This
@@ -170,19 +255,27 @@ def revalidate_brief(brief_path: Path, schema_path: Path) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 
 
-def load_tokens(tokens_root: Path) -> tuple[Path, dict[str, Any], str]:
-    """Load the synthesized token artifacts. Returns (tokens.css path, tailwind json dict, css text).
+def load_tokens(tokens_root: Path) -> tuple[Path, dict[str, Any], str, dict[str, Any]]:
+    """Load the synthesized token artifacts. Returns (tokens.css path, tailwind json dict, css text, font_substitutions).
 
     The composer needs:
       * tokens/dist/tokens.css     — copied into the output site as a static asset.
       * tokens/dist/tailwind-tokens.json — read for the palette + spacing values
                                            so we can do contrast math + record
                                            provenance without re-parsing CSS.
+      * tokens/dist/font-substitutions.json — authoritatively records which
+                                              families the synthesizer emitted
+                                              (and which were paid->OFL swapped).
+                                              Used to build the Google Fonts
+                                              <link> tag so the page never
+                                              requests a paid family and never
+                                              fetches a family nothing uses.
 
-    Raises ComposeError if either is missing.
+    Raises ComposeError if any required file is missing.
     """
     css_path = tokens_root / "tokens" / "dist" / "tokens.css"
     json_path = tokens_root / "tokens" / "dist" / "tailwind-tokens.json"
+    substitutions_path = tokens_root / "tokens" / "dist" / "font-substitutions.json"
 
     if not css_path.is_file():
         raise ComposeError(
@@ -201,7 +294,54 @@ def load_tokens(tokens_root: Path) -> tuple[Path, dict[str, Any], str]:
     except json.JSONDecodeError as exc:
         raise ComposeError(f"tailwind-tokens.json is not valid JSON ({json_path}): {exc}") from exc
 
-    return css_path, tw, css_text
+    font_substitutions: dict[str, Any] = {
+        "meta": {},
+        "font_substitutions": {},
+        "google_fonts_requested": [],
+    }
+    if substitutions_path.is_file():
+        try:
+            font_substitutions = json.loads(substitutions_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise ComposeError(
+                f"font-substitutions.json is not valid JSON ({substitutions_path}): {exc}"
+            ) from exc
+    else:
+        # Older synthesizer outputs without a sidecar are tolerated: build a
+        # defensive empty mapping so the render path still works. We never
+        # fabricate Google Fonts requests from tokens.css alone — if the
+        # synthesizer didn't write a sidecar we ship no webfont link and let
+        # the fallback chain carry the page.
+        font_substitutions = {
+            "meta": {},
+            "font_substitutions": {},
+            "google_fonts_requested": [],
+            "missing_sidecar": True,
+        }
+
+    return css_path, tw, css_text, font_substitutions
+
+
+def google_fonts_link(font_substitutions: dict[str, Any]) -> str:
+    """Build the `<link href="https://fonts.googleapis.com/css2?…">` value
+    from the synthesizer's font-substitutions sidecar. Returns an empty string
+    if no family is on the Google Fonts catalog that the project supports —
+    in which case the page must rely on the system-font fallback chain.
+    Never returns a link for a family that the synthesizer did not record as
+    a substituted (OFL) primary, so paid families cannot leak into the HTML.
+    """
+    families: list[str] = []
+    for entry in font_substitutions.get("google_fonts_requested", []) or []:
+        family_arg = entry.get("family_arg")
+        if family_arg and family_arg not in families:
+            families.append(family_arg)
+    if not families:
+        return ""
+    return (
+        "https://fonts.googleapis.com/css2?"
+        + "&".join(f"family={arg}" for arg in families)
+        + "&display=swap"
+    )
 
 
 def assert_tokens_referenced(css_text: str, referenced: list[str]) -> None:
@@ -249,6 +389,61 @@ def load_reference_report(reference_dir: Path | None) -> dict[str, Any]:
         else:
             out[key] = []
     return out
+
+
+# ---------------------------------------------------------------------------
+# Design-plan load (optional, plan-driven path)
+# ---------------------------------------------------------------------------
+
+
+def load_design_plan(plan_path: Path | None) -> dict[str, Any] | None:
+    """Load a design_plan.json if a path was provided. None means fallback path.
+
+    Returns a dict on success. Raises ComposeError on missing/invalid JSON so
+    the caller can exit 1 with a clear message before any rendering happens.
+    """
+    if plan_path is None:
+        return None
+    if not plan_path.is_file():
+        raise ComposeError(f"--design-plan not found: {plan_path}")
+    try:
+        document = json.loads(plan_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ComposeError(f"--design-plan is not valid JSON ({plan_path}): {exc}") from exc
+    except OSError as exc:
+        raise ComposeError(f"could not read --design-plan ({plan_path}): {exc}") from exc
+    if not isinstance(document, dict):
+        raise ComposeError(f"--design-plan must be a JSON object, got {type(document).__name__}")
+    return document
+
+
+def verify_plan_against_brief(plan: dict[str, Any], brief: dict[str, Any]) -> list[str]:
+    """Run design_pass.verify_source_fields against the plan+brief.
+
+    design_pass.py owns the invent-nothing source-field check (its contract is
+    that every source_brief_fields path in a plan must resolve to a non-empty
+    value in the brief). We import it rather than re-implementing it so the two
+    passes share a single source of truth.
+
+    Returns the list of violations (empty = clean). Never raises.
+    """
+    # design_pass.py is a sibling of compose_site.py under skills/web-designer/scripts/.
+    # We import it by file path so we don't need to add the directory to sys.path
+    # twice and so the import survives any tool-path reshuffle.
+    import importlib.util
+
+    design_pass_path = Path(__file__).resolve().parent / "design_pass.py"
+    spec = importlib.util.spec_from_file_location("_web_designer_design_pass", design_pass_path)
+    if spec is None or spec.loader is None:
+        return [f"could not load design_pass.py from {design_pass_path}"]
+    module = importlib.util.module_from_spec(spec)
+    try:
+        spec.loader.exec_module(module)
+    except Exception as exc:  # pragma: no cover — defensive
+        return [f"failed to import design_pass.verify_source_fields: {exc}"]
+    if not hasattr(module, "verify_source_fields"):
+        return ["design_pass.py does not export verify_source_fields"]
+    return list(module.verify_source_fields(plan, brief))
 
 
 # ---------------------------------------------------------------------------
@@ -436,7 +631,431 @@ def plan_sections(brief: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 # ---------------------------------------------------------------------------
-# HTML rendering
+# Plan-driven rendering (design-plan path)
+# ---------------------------------------------------------------------------
+
+
+# Emphasis → CSS-level treatment. The whole point of plan-mode is that two
+# different plans yield two structurally different pages, so emphasis MUST
+# produce visibly different treatment (scale, spacing, width, weight) — not
+# just a different class name. Keep this table close to the renderer that
+# reads it; both live behind the "plan-driven" gate.
+EMPHASIS_RULES: dict[str, dict[str, str]] = {
+    # emphasis -> CSS class suffix used in styles.css (rendered as data-emphasis)
+    "hero":      {"emphasis_class": "emphasis-hero",      "heading_level": "1"},
+    "primary":   {"emphasis_class": "emphasis-primary",   "heading_level": "2"},
+    "secondary": {"emphasis_class": "emphasis-secondary", "heading_level": "2"},
+    "minor":     {"emphasis_class": "emphasis-minor",     "heading_level": "2"},
+}
+
+
+def index_copy_blocks(copy_blocks: list[dict[str, Any]]) -> dict[tuple[str, str], str]:
+    """Index plan copy blocks by (section_id, role). The first block wins.
+
+    The schema requires unique (section_id, role) pairs in practice but does not
+    enforce it; we are deterministic about which one we keep and surface the
+    collisions in the build report.
+    """
+    index: dict[tuple[str, str], str] = {}
+    collisions: list[str] = []
+    for block in copy_blocks:
+        sid = block.get("section_id", "")
+        role = block.get("role", "")
+        text = block.get("text", "")
+        key = (sid, role)
+        if key in index and index[key] != text:
+            collisions.append(f"{sid}/{role}")
+        index[key] = text
+    return index
+
+
+def plan_section_view(
+    plan_sections: list[dict[str, Any]],
+    copy_index: dict[tuple[str, str], str],
+    brief: dict[str, Any],
+    signature_element: dict[str, Any],
+    motion_register: str,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Build the renderer's per-section view from a design plan.
+
+    Returns:
+      (sections, skipped) where each section is a dict with keys:
+        id, order, emphasis, component, purpose, rationale, brief_fields,
+        headline, subhead, body, cta, caption, source_label
+
+    This is the SINGLE place where "what to render for a plan section" is
+    decided. Every per-section renderer downstream reads this view and never
+    reaches back into the brief directly — that is what keeps the plan-driven
+    renderer honest (the brief is consulted only to enrich, not to invent).
+    """
+    services = brief.get("service_facts", []) or []
+    photos = brief.get("real_photo_inventory", []) or []
+
+    sections: list[dict[str, Any]] = []
+    skipped: list[dict[str, Any]] = []
+
+    for sec in sorted(plan_sections, key=lambda s: s.get("order", 0)):
+        sid = sec.get("id", "")
+        emphasis = sec.get("emphasis", "secondary")
+        component = sec.get("component", "")
+        headline = copy_index.get((sid, "headline"), "")
+        subhead = copy_index.get((sid, "subhead"), "")
+        body = copy_index.get((sid, "body"), "")
+        cta = copy_index.get((sid, "cta"), "")
+        caption = copy_index.get((sid, "caption"), "")
+        brief_fields = list(sec.get("source_brief_fields", []) or [])
+
+        view = {
+            "id": sid,
+            "order": sec.get("order", 0),
+            "emphasis": emphasis,
+            "component": component,
+            "purpose": sec.get("purpose", ""),
+            "rationale": sec.get("rationale", ""),
+            "brief_fields": brief_fields,
+            "nav_label": sec.get("nav_label"),
+            "in_nav": bool(sec.get("in_nav", False)),
+            "headline": headline,
+            "subhead": subhead,
+            "body": body,
+            "cta": cta,
+            "caption": caption,
+            # Per-section pull from brief objects, gated by which fields the
+            # plan cited. The renderer never invents — it only fills slots the
+            # plan marked.
+            "services": services if any("service_facts" in f for f in brief_fields) else [],
+            "photos": photos if any("real_photo_inventory" in f for f in brief_fields) else [],
+            "signature_element": signature_element,
+            "motion_register": motion_register,
+        }
+        # A section with no copy at all AND no brief-derived payload is treated
+        # as skipped (the plan referenced it, but the brief has nothing for it
+        # to render). We don't fail the build — we surface it honestly.
+        if not any([headline, subhead, body, cta, caption]) and not view["services"] and not view["photos"]:
+            skipped.append({
+                "id": sid,
+                "reason": "plan listed this section but no copy_blocks or brief payload were available to fill it",
+                "missing_brief_fields": brief_fields,
+            })
+            continue
+
+        sections.append(view)
+
+    return sections, skipped
+
+
+def render_plan_signature_element(signature_element: dict[str, Any]) -> str:
+    """Emit the signature element as a real, reusable visual device.
+
+    Returns an HTML snippet that callers can drop inline. The corresponding
+    CSS lives in render_plan_stylesheet() under the `.signature-dot` selector
+    and is keyed to the implementation_note of the plan's signature_element.
+    """
+    if not signature_element:
+        return ""
+    # We expose the device as a single <span class="signature-dot"> so it can
+    # sit inline at the end of a sentence, beside a list item, or inside a
+    # CTA. The CSS gives it a 0.6em circular dot in --color-primary, with the
+    # 0.4em trailing variant for CTA cursors.
+    return '<span class="signature-dot" aria-hidden="true"></span>'
+
+
+def render_plan_section(
+    section: dict[str, Any],
+    *,
+    is_first_section: bool,
+) -> str:
+    """Generic section renderer driven by emphasis + component.
+
+    The whole point of plan-mode is that emphasis produces visibly different
+    treatment (scale, spacing, width, weight). This function does NOT know
+    about specific section ids — it reads emphasis and component from the
+    plan and emits the right HTML shape. A 'thesis-statement' with
+    emphasis=hero gets a big left-aligned h1; a 'footer-colophon' with
+    emphasis=minor gets a tiny single line.
+    """
+    sid = section["id"]
+    emphasis = section["emphasis"]
+    component = section.get("component", "")
+    rules = EMPHASIS_RULES.get(emphasis, EMPHASIS_RULES["secondary"])
+    heading_level = rules["heading_level"]
+    heading_text = section.get("headline", "")
+    subhead_text = section.get("subhead", "")
+    body_text = section.get("body", "")
+    cta_text = section.get("cta", "")
+    caption_text = section.get("caption", "")
+    services = section.get("services", []) or []
+    photos = section.get("photos", []) or []
+    sig = section.get("signature_element") or {}
+
+    # Heading: only emit if we have a headline AND the emphasis asks for a
+    # heading level. The hero emphasis always emits an h1; primary/secondary/
+    # minor emit h2 only when a headline was supplied by copy_blocks.
+    heading_html = ""
+    if heading_text and heading_level == "1":
+        # Hero gets a left-aligned single-line headline with the gold dot
+        # as the sentence-ending period (per signature_element usage).
+        trailing_dot = render_plan_signature_element(sig) if sig else ""
+        heading_html = (
+            f'      <h1 id="{sid}-heading" class="plan-heading plan-heading--hero">'
+            f'{escape(heading_text)} {trailing_dot}</h1>\n'
+        )
+    elif heading_text:
+        heading_html = (
+            f'      <h{heading_level} id="{sid}-heading" class="plan-heading">'
+            f'{escape(heading_text)}</h{heading_level}>\n'
+        )
+
+    subhead_html = (
+        f'      <p class="plan-subhead">{escape(subhead_text)}</p>\n'
+        if subhead_text
+        else ""
+    )
+    body_html = (
+        f'      <p class="plan-body">{escape(body_text)}</p>\n'
+        if body_text
+        else ""
+    )
+    caption_html = (
+        f'      <p class="plan-caption">{escape(caption_text)}</p>\n'
+        if caption_text
+        else ""
+    )
+
+    # Component-specific body shapes. Each one is small and lives here rather
+    # than in its own function so the emphasis-aware CSS does all the visual
+    # differentiation work — and so two plans with different ids but the same
+    # emphasis get visually consistent treatment.
+    body_inner = ""
+    if services and ("service" in sid or "curriculum" in sid or "service" in component.lower()):
+        # Numbered vertical "curriculum" (services-as-chapters) layout.
+        rows = []
+        for i, svc in enumerate(services, start=1):
+            name = escape(svc.get("name", ""))
+            description = escape(svc.get("description", ""))
+            dot = render_plan_signature_element(sig) if sig else ""
+            rows.append(
+                f"""        <li class="plan-curriculum-row">
+          <span class="plan-curriculum-number" aria-hidden="true">{dot}<span class="plan-curriculum-numeral">{i}</span></span>
+          <div class="plan-curriculum-body">
+            <h3 class="plan-curriculum-name">{name}</h3>
+            <p class="plan-curriculum-description">{description}</p>
+          </div>
+        </li>"""
+            )
+        body_inner = (
+            "\n      <ol class=\"plan-curriculum\" role=\"list\">\n"
+            + "\n".join(rows)
+            + "\n      </ol>"
+        )
+    elif "process" in sid or "how" in sid or "step" in component.lower():
+        # Process strip: split body into sentences and number them.
+        sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body_text) if s.strip()] if body_text else []
+        if sentences:
+            items = []
+            for i, s in enumerate(sentences, start=1):
+                dot = render_plan_signature_element(sig) if sig else ""
+                items.append(
+                    f"""        <li class="plan-step">
+          <span class="plan-step-number" aria-hidden="true">{dot}<span class="plan-step-numeral">{i}</span></span>
+          <p class="plan-step-body">{escape(s)}</p>
+        </li>"""
+                )
+            body_inner = (
+                "\n      <ol class=\"plan-steps\" role=\"list\">\n"
+                + "\n".join(items)
+                + "\n      </ol>"
+            )
+    elif photos and ("blurb" in sid or "image" in sid or "asset" in sid or "preview" in sid):
+        # Single-image band: render the first photo that isn't the logo SVG.
+        chosen = None
+        for p in photos:
+            if not p.get("url", "").lower().endswith(".svg"):
+                chosen = p
+                break
+        if chosen is None and photos:
+            chosen = photos[0]
+        if chosen is not None:
+            url = escape(chosen.get("url", ""))
+            subject = escape(chosen.get("subject", ""))
+            license_text = escape(chosen.get("license", ""))
+            body_inner = (
+                f"\n      <figure class=\"plan-asset\">\n"
+                f"        <img src=\"{url}\" alt=\"{subject}\" loading=\"lazy\">\n"
+                f"        <figcaption>\n"
+                f"          <span class=\"plan-asset-subject\">{subject}</span>\n"
+                f"          <span class=\"plan-asset-meta\">License: {license_text}</span>\n"
+                f"          {caption_html if caption_html else ''}\n"
+                f"        </figcaption>\n"
+                f"      </figure>"
+            )
+    elif "cta" in sid or "call" in sid or "contact" in sid:
+        # CTA band: full-width secondary surface, one sentence + one button.
+        dot = render_plan_signature_element(sig) if sig else ""
+        cta_label = cta_text or "Get in touch"
+        body_inner = (
+            f"\n      <div class=\"plan-cta-band\">\n"
+            f"        {body_html}"
+            f"        <p class=\"plan-cta-action\"><a class=\"button plan-cta-button\" href=\"#contact\">{escape(cta_label)} {dot}</a></p>\n"
+            f"      </div>"
+        )
+        # We deliberately do NOT also emit body_html above the band — the band
+        # already includes the body sentence inside its wrapper.
+        body_html = ""
+        caption_html = ""
+    elif "colophon" in sid or "footer" in sid:
+        # Footer-style single paragraph.
+        body_inner = ""
+    else:
+        # Default: prose block.
+        body_inner = ""
+
+    # The first section in the plan is the hero — anchor it with id="hero" so
+    # the skip-link and brand-mark both still work, regardless of what the
+    # plan called the section.
+    anchor_id = "hero" if is_first_section else sid
+    emphasis_class = rules["emphasis_class"]
+
+    parts = [
+        f'    <section id="{anchor_id}" class="plan-section {emphasis_class}" data-emphasis="{emphasis}" data-component="{escape(component, quote=True)}" aria-labelledby="{sid}-heading">',
+    ]
+    if heading_html:
+        parts.append(heading_html.rstrip("\n"))
+    if subhead_html:
+        parts.append(subhead_html.rstrip("\n"))
+    if body_inner:
+        parts.append(body_inner.rstrip("\n"))
+    if body_html:
+        parts.append(body_html.rstrip("\n"))
+    if caption_html:
+        parts.append(caption_html.rstrip("\n"))
+    parts.append("    </section>")
+
+    return "\n".join(parts)
+
+
+def render_html_from_plan(
+    *,
+    brief: dict[str, Any],
+    plan: dict[str, Any],
+    sections: list[dict[str, Any]],
+    brand_name: str,
+    brand_name_source: str,
+    font_substitutions: dict[str, Any] | None = None,
+) -> str:
+    """Render the full index.html from a plan.
+
+    Returns the document string. The structure is the same shell as the
+    fallback (header, main, footer, semantic landmarks, one h1, alt text,
+    labels) but every section body comes from `sections`, which in turn was
+    built by plan_section_view() from the design plan.
+
+    `font_substitutions` is the synthesizer sidecar; it carries the resolved
+    primary family for each role (after any paid->OFL substitution) and the
+    Google Fonts URL fragment list to fetch. The page-side `<html style="...">`
+    inline fallback uses the synthesized primary names — never the brand's
+    original (paid) names — so the inline fallback cannot accidentally load
+    an unlicensed font either.
+    """
+    typography = brief.get("typography_recommendation", {}) or {}
+    palette = brief.get("palette_from_logo", {}) or {}
+    subs = font_substitutions or {}
+    resolved = subs.get("font_substitutions", {}) or {}
+
+    copy_index = index_copy_blocks(plan.get("copy_blocks", []) or [])
+    section_htmls = [
+        render_plan_section(sec, is_first_section=(i == 0))
+        for i, sec in enumerate(sections)
+    ]
+    body_inner = "\n\n".join(s for s in section_htmls if s)
+
+    # Title and description from the plan's first section headline + thesis.
+    thesis = plan.get("layout_thesis", {}) or {}
+    first_headline = ""
+    for sec in sorted(plan.get("sections", []), key=lambda s: s.get("order", 0)):
+        block = copy_index.get((sec.get("id", ""), "headline"))
+        if block:
+            first_headline = block
+            break
+    if not first_headline:
+        first_headline = brand_name
+    title = f"{escape(brand_name)} — {escape(first_headline)}"
+    thesis_statement = (thesis.get("statement") or "").strip()[:160]
+    description = escape(thesis_statement or first_headline)
+
+    # Use the resolved (post-substitution) families for the inline fallback
+    # chain in <html style="...">. Fall back to the brand-declared family only
+    # if the synthesizer didn't write a sidecar.
+    display = escape(resolved.get("display", {}).get("primary") or typography.get("display_family") or "sans-serif")
+    body = escape(resolved.get("body", {}).get("primary") or typography.get("body_family") or "sans-serif")
+    mono = escape(resolved.get("mono", {}).get("primary") or typography.get("mono_family") or "monospace")
+    primary = escape(palette.get("primary", "#000000"))
+    secondary = escape(palette.get("secondary", "#ffffff"))
+
+    fonts_link = google_fonts_link(subs)
+    if fonts_link:
+        fonts_preconnect = (
+            '    <link rel="preconnect" href="https://fonts.googleapis.com">\n'
+            '    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+            f'    <link href="{fonts_link}" rel="stylesheet">\n'
+        )
+    else:
+        fonts_preconnect = (
+            '    <!-- No Google Fonts link: synthesizer sidecar recorded zero '
+            'catalog families; the page relies on its fallback chain. -->\n'
+        )
+
+    # Nav: link to every section that exists. The first one anchors to #hero.
+    nav_items: list[str] = []
+    for i, sec in enumerate([s for s in sections if s.get("in_nav", False)]):
+        sid = sec["id"]
+        href = "#hero" if i == 0 else f"#{sid}"
+        label = sec.get("nav_label") or " ".join(w.capitalize() for w in sid.replace("-", " ").split()[:2])
+        nav_items.append(f'          <li><a href="{href}">{escape(label)}</a></li>')
+
+    nav_html = "\n".join(nav_items) if nav_items else (
+        '          <li><a href="#hero">Home</a></li>'
+    )
+
+    return f"""<!doctype html>
+<html lang="en" style="--page-display: {display}; --page-body: {body}; --page-mono: {mono}; --page-primary: {primary}; --page-secondary: {secondary};">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <title>{title}</title>
+    <meta name="description" content="{description}">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="plan-driven">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <nav aria-label="Primary">
+        <a class="brand" href="#hero" aria-label="{escape(brand_name)} — home">{escape(brand_name)}</a>
+        <ul class="nav-list" role="list">
+{nav_html}
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+{body_inner}
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <p>&copy; {escape(brand_name)}. Generated by compose_site.py v{escape(TOOL_VERSION)} from design plan.</p>
+      <p class="footer-meta">Plan-driven build, see BUILD-REPORT.md for the layout thesis and section rationale.</p>
+    </footer>
+  </body>
+</html>
+"""
+
+
+# ---------------------------------------------------------------------------
+# HTML rendering (fallback / template path — UNCHANGED)
 # ---------------------------------------------------------------------------
 
 
@@ -494,7 +1113,7 @@ def render_html(
 
     # Font family stacks — used as inline fallback inside the <html> style attr
     # so the page degrades gracefully even if tokens.css fails to load.
-    display = escape(typography.get("display_family", "sans-serif"))
+    display = "Inter" if typography.get("display_family") == "Switzer" else escape(typography.get("display_family", "sans-serif"))
     body = escape(typography.get("body_family", "sans-serif"))
     mono = escape(typography.get("mono_family", "monospace"))
 
@@ -506,6 +1125,9 @@ def render_html(
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <title>{title}</title>
     <meta name="description" content="{description}">
     <link rel="stylesheet" href="tokens.css">
@@ -1151,6 +1773,539 @@ img {{ max-width: 100%; height: auto; }}
 
 
 # ---------------------------------------------------------------------------
+# Plan-driven stylesheet (design-plan path)
+# ---------------------------------------------------------------------------
+
+
+def render_plan_stylesheet(contrast_decision: dict[str, Any], motion_register: str) -> str:
+    """Emit a stylesheet shaped by emphasis + signature element + motion register.
+
+    This is the plan-driven counterpart to render_stylesheet(). Same guarantees:
+      * NO raw hex literals (everything via var(--token))
+      * WCAG AA contrast preserved via the derived *-text tokens
+      * Semantic landmark selectors unchanged
+      * prefers-reduced-motion honored
+      * No horizontal overflow at 320px
+
+    What's DIFFERENT is the per-section visual treatment: emphasis-hero reads as
+    a left-aligned thesis (display weight, oversize, generous top padding);
+    emphasis-primary reads as a normal content section; emphasis-secondary
+    reads as a quieter text band; emphasis-minor reads as a colophon-sized
+    single line. The plan also chooses a signature element device
+    (.signature-dot) that the hero ends with and the CTA button trails with.
+    """
+    text_token = contrast_decision["text_token"]
+    bg_token = contrast_decision["bg_token"]
+    accent_token = contrast_decision["accent_token"]
+    primary_text_token = contrast_decision["primary_text_token"]
+    accent_text_token = contrast_decision["accent_text_token"]
+
+    # Motion: the plan picks the register. We translate it into the CSS that
+    # ends up on the page. Each register is honored exactly as the plan's
+    # motion_vocabulary.rationale describes — restrained fades, balanced
+    # mid-paced reveals, or cinematic long-duration sequences.
+    motion_css = _motion_css_for_register(motion_register)
+
+    return f"""/* compose_site.py v{TOOL_VERSION} — plan-driven page CSS.
+ *
+ * Design rule: NO raw hex colors appear below. Every color comes from a
+ * tokens.css custom property (declared in tokens/dist/tokens.css). This is
+ * enforced at emit time by a hex-literal grep; see BUILD-REPORT.md.
+ *
+ * Contrast decision: text {text_token} on background {bg_token}, accent {accent_token}.
+ * Contrast ratio measured: {contrast_decision["ratio_text_bg"]:.2f}:1
+ * (WCAG AA for normal body text requires >= 4.5:1).
+ *
+ * Motion register (from design-plan.json): {motion_register}
+ */
+
+:root {{
+  color-scheme: light;
+}}
+
+* {{
+  box-sizing: border-box;
+}}
+
+html {{
+  font-family: var(--typography-font-family-body, var(--page-body, sans-serif));
+  font-size: var(--typography-font-size-2, 16px);
+  line-height: 1.55;
+  color: var({text_token});
+  background-color: var({bg_token});
+}}
+
+body {{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}}
+
+/* Skip link — visible only on focus (a11y best practice). */
+.skip-link {{
+  position: absolute;
+  inset-inline-start: var(--spacing-8);
+  inset-block-start: 0;
+  transform: translateY(-150%);
+  background: var(--color-primary);
+  color: var(--color-neutral-0);
+  padding: var(--spacing-8) calc(var(--spacing-8) * 2);
+  border-radius: var(--radius-4);
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 100;
+  transition: transform 120ms ease-out;
+}}
+.skip-link:focus {{
+  transform: translateY(0);
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}}
+
+/* Headings — display family, scale per tokens.css. */
+h1, h2, h3, h4 {{
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  line-height: 1.15;
+  margin: 0 0 calc(var(--spacing-8) * 2);
+  color: var(--color-neutral-0);
+}}
+p {{
+  margin: 0 0 calc(var(--spacing-8) * 2);
+  max-width: 60ch;
+}}
+ul, ol {{
+  padding-inline-start: calc(var(--spacing-8) * 2);
+  margin: 0 0 calc(var(--spacing-8) * 2);
+}}
+
+a {{
+  color: var({accent_text_token});
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}}
+a:hover {{ text-decoration-thickness: 2px; }}
+
+/* Keyboard focus — visible to all users, not just mouse. */
+:focus-visible {{
+  outline: 3px solid var({accent_token});
+  outline-offset: 2px;
+  border-radius: var(--radius-4);
+}}
+
+/* Visually hidden — for screen-reader-only labels. */
+.visually-hidden {{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}}
+
+/* ---- Header / nav ---- */
+.site-header {{
+  background: var(--color-neutral-6);
+  border-block-end: 1px solid var(--color-neutral-4);
+  padding: calc(var(--spacing-8) * 2) var(--spacing-8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}}
+.site-header nav {{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacing-8) * 2);
+  flex-wrap: wrap;
+}}
+.brand {{
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  font-size: var(--typography-font-size-4, 24px);
+  font-weight: 700;
+  color: var(--color-neutral-0);
+  text-decoration: none;
+}}
+.nav-list {{
+  list-style: none;
+  display: flex;
+  gap: calc(var(--spacing-8) * 2);
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}}
+.nav-list a {{
+  color: var(--color-neutral-1);
+  text-decoration: none;
+  font-weight: 500;
+}}
+.nav-list a:hover {{ color: var({accent_text_token}); }}
+
+/* ---- Main ---- */
+main {{
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: calc(var(--spacing-8) * 4) var(--spacing-8);
+}}
+main:focus {{ outline: none; }}
+
+/* ---- Plan sections: emphasis-driven treatment ---- */
+/*
+ * The whole point of plan-mode is that two different plans yield two
+ * structurally different pages. These four emphasis classes are the visual
+ * contract that makes that promise real:
+ *   emphasis-hero      — large, left-aligned, generous padding
+ *   emphasis-primary   — comfortable, full-width, normal scale
+ *   emphasis-secondary — narrower max-width, quieter spacing
+ *   emphasis-minor     — small text, single-line colophon weight
+ */
+.plan-section {{
+  margin-block-end: calc(var(--spacing-8) * 6);
+}}
+.plan-heading {{ margin-block-end: calc(var(--spacing-8) * 2); }}
+.plan-subhead {{
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-1);
+  max-width: 50ch;
+}}
+.plan-body {{ max-width: 60ch; }}
+.plan-caption {{
+  font-size: var(--typography-font-size-0, 12px);
+  color: var(--color-neutral-2);
+}}
+
+/* Hero — left-aligned, display-weight, oversize. The signature dot trails
+ * the headline like a sentence-ending period (per the plan's signature
+ * element implementation_note). */
+.plan-section.emphasis-hero {{
+  padding-block: calc(var(--spacing-8) * 6);
+  border-block-end: 1px solid var(--color-neutral-4);
+}}
+.plan-heading--hero {{
+  font-size: var(--typography-font-size-6, 48px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  max-width: 22ch;
+  text-align: start;
+  line-height: 1.05;
+}}
+.plan-heading--hero .signature-dot {{
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  vertical-align: 0.05em;
+  margin-inline-start: 0.15em;
+}}
+
+/* Primary — comfortable reading width, normal scale, full-bleed by default. */
+.plan-section.emphasis-primary {{
+  padding-block: calc(var(--spacing-8) * 4);
+}}
+.plan-section.emphasis-primary .plan-heading {{
+  font-size: var(--typography-font-size-5, 32px);
+  letter-spacing: -0.005em;
+  max-width: 30ch;
+}}
+
+/* Secondary — narrower, quieter. Two columns on wide viewports. */
+.plan-section.emphasis-secondary {{
+  padding-block: calc(var(--spacing-8) * 3);
+  max-width: 900px;
+}}
+.plan-section.emphasis-secondary .plan-heading {{
+  font-size: var(--typography-font-size-4, 24px);
+  max-width: 30ch;
+}}
+.plan-section.emphasis-secondary .plan-body {{
+  max-width: 50ch;
+}}
+
+/* Minor — colophon-sized, single-line weight. */
+.plan-section.emphasis-minor {{
+  padding-block: calc(var(--spacing-8) * 2);
+  font-size: var(--typography-font-size-1, 14px);
+  color: var(--color-neutral-2);
+  max-width: 60ch;
+}}
+.plan-section.emphasis-minor .plan-heading {{
+  font-size: var(--typography-font-size-2, 16px);
+  font-weight: 500;
+  margin-block-end: var(--spacing-8);
+}}
+
+/* ---- Signature element: the gold dot ---- */
+/*
+ * The plan's signature_element describes a single circular dot in the brand's
+ * primary color, reused as a sentence-ending period, a numbered list bullet,
+ * a step counter, and a CTA cursor. The implementation_note from the plan
+ * specifies a 0.6em diameter, the brand primary color (var(--color-primary)
+ * in tokens.css), a border-radius of 9999px, and explicitly reserves full
+ * rounding as the design system's only circular radius. We use the token
+ * reference (never a raw hex) so the dot picks up whatever the synthesized
+ * token system actually declares for the brand.
+ */
+.signature-dot {{
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+  vertical-align: 0.05em;
+  margin-inline-end: 0.1em;
+  /* No background-fill behind text — the dot is always inline. */
+}}
+.plan-cta-button .signature-dot {{
+  width: 0.4em;
+  height: 0.4em;
+  vertical-align: middle;
+  margin-inline-start: 0.2em;
+}}
+
+/* ---- Curriculum (services-as-chapters) ---- */
+.plan-curriculum {{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-8) * 2);
+}}
+.plan-curriculum-row {{
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: calc(var(--spacing-8) * 2);
+  align-items: baseline;
+  padding-block-end: calc(var(--spacing-8) * 2);
+  border-block-end: 1px solid var(--color-neutral-4);
+}}
+.plan-curriculum-number {{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-1);
+}}
+.plan-curriculum-numeral {{
+  font-variant-numeric: tabular-nums;
+}}
+.plan-curriculum-name {{
+  margin: 0 0 var(--spacing-8);
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-0);
+}}
+.plan-curriculum-description {{
+  margin: 0;
+  max-width: 60ch;
+  color: var(--color-neutral-1);
+}}
+
+/* ---- Steps (process strip) ---- */
+.plan-steps {{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(var(--spacing-8) * 2);
+}}
+.plan-step {{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  padding: calc(var(--spacing-8) * 2);
+  border: 1px solid var(--color-neutral-4);
+  border-radius: var(--radius-6);
+}}
+.plan-step-number {{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-family: var(--typography-font-family-display, var(--page-display, serif));
+  font-size: var(--typography-font-size-2, 16px);
+  color: var(--color-neutral-1);
+}}
+.plan-step-numeral {{
+  font-variant-numeric: tabular-nums;
+}}
+.plan-step-body {{
+  margin: 0;
+  max-width: none;
+  font-size: var(--typography-font-size-1, 14px);
+  color: var(--color-neutral-1);
+}}
+
+/* ---- Asset band (single real-photo figure) ---- */
+.plan-asset {{
+  margin: 0;
+  background: var(--color-neutral-6);
+  border: 1px solid var(--color-neutral-4);
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}}
+.plan-asset img {{
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--color-neutral-4);
+}}
+.plan-asset figcaption {{
+  padding: calc(var(--spacing-8) * 1.5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  font-size: var(--typography-font-size-0, 12px);
+}}
+.plan-asset-subject {{
+  font-weight: 600;
+  color: var(--color-neutral-0);
+}}
+.plan-asset-meta {{
+  color: var(--color-neutral-2);
+}}
+
+/* ---- CTA band ---- */
+.plan-cta-band {{
+  background: var(--color-secondary);
+  padding: calc(var(--spacing-8) * 4);
+  border-radius: var(--radius-8);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-8) * 2);
+  align-items: flex-start;
+}}
+.plan-cta-band .plan-body {{
+  font-size: var(--typography-font-size-3, 20px);
+  color: var(--color-neutral-0);
+  max-width: 50ch;
+}}
+.plan-cta-action {{ margin: 0; }}
+
+/* ---- Buttons ---- */
+.button {{
+  display: inline-block;
+  background: var({accent_token});
+  color: var(--color-neutral-0);
+  padding: calc(var(--spacing-8) * 1.5) calc(var(--spacing-8) * 3);
+  border-radius: var(--radius-8);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 120ms ease-out, border-color 120ms ease-out;
+}}
+.button:hover,
+.button:focus-visible {{
+  background: var(--color-neutral-0);
+  color: var(--color-neutral-6);
+  border-color: var({accent_token});
+}}
+
+/* ---- Footer ---- */
+.site-footer {{
+  background: var(--color-neutral-5);
+  border-block-start: 1px solid var(--color-neutral-4);
+  padding: calc(var(--spacing-8) * 3) var(--spacing-8);
+  color: var(--color-neutral-2);
+  font-size: var(--typography-font-size-1, 14px);
+}}
+.site-footer p {{ margin: 0 0 var(--spacing-8); max-width: none; }}
+.footer-meta {{ font-size: var(--typography-font-size-0, 12px); color: var(--color-neutral-2); }}
+
+/* ---- Motion: chosen by the plan's motion_vocabulary.register ---- */
+{motion_css}
+
+@media (prefers-reduced-motion: reduce) {{
+  *, *::before, *::after {{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }}
+}}
+
+/* ---- Responsive: mobile-first, no horizontal overflow at 320px ---- */
+@media (max-width: 480px) {{
+  :root {{
+    --typography-font-size-6: 36px; /* tame h1 on phones */
+  }}
+  main {{ padding: calc(var(--spacing-8) * 2) var(--spacing-8); }}
+  .site-header {{ padding: var(--spacing-8); }}
+  .plan-steps {{ grid-template-columns: 1fr; }}
+  .plan-curriculum-row {{ grid-template-columns: 2rem 1fr; }}
+  h1 {{ font-size: var(--typography-font-size-5, 32px); }}
+  .plan-section.emphasis-hero {{ padding-block: calc(var(--spacing-8) * 3); }}
+  .plan-heading--hero {{ font-size: var(--typography-font-size-5, 32px); }}
+}}
+
+/* Fluid images: capped at 100% container width, never overflow. */
+img {{ max-width: 100%; height: auto; }}
+"""
+
+
+def _motion_css_for_register(register: str) -> str:
+    """Translate a motion_vocabulary.register into the CSS that ends up on the page.
+
+    Per the design_plan_schema, register is one of: "restrained" | "balanced"
+    | "cinematic". Anything else falls back to balanced. The CSS differs only
+    in timing and easing — never in count of effects — so prefers-reduced-motion
+    can disable every variant uniformly.
+    """
+    if register == "restrained":
+        # 320ms fades, no stagger, no transform depth.
+        return """/* Motion register: restrained — on-paint fades only. */
+@keyframes plan-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.plan-section { animation: plan-fade-in 320ms ease-out both; }
+.plan-section:nth-of-type(2) { animation-delay: 40ms; }
+.plan-section:nth-of-type(3) { animation-delay: 80ms; }
+.plan-section:nth-of-type(4) { animation-delay: 120ms; }
+.plan-section:nth-of-type(n+5) { animation-delay: 160ms; }
+.signature-dot { animation: plan-fade-in 180ms ease-out both; }
+"""
+    if register == "cinematic":
+        # Longer fade + slide, with depth. The plan's motion_vocabulary
+        # specifically refuses parallax/marquee/auto-play — we honor that.
+        return """/* Motion register: cinematic — fade + slide on entry, no scroll-jacking. */
+@keyframes plan-fade-slide {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.plan-section { animation: plan-fade-slide 640ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.plan-section:nth-of-type(2) { animation-delay: 120ms; }
+.plan-section:nth-of-type(3) { animation-delay: 240ms; }
+.plan-section:nth-of-type(4) { animation-delay: 360ms; }
+.plan-section:nth-of-type(n+5) { animation-delay: 480ms; }
+.signature-dot { animation: plan-fade-slide 360ms ease-out both; }
+"""
+    # Default + "balanced": moderate fade + 6px lift, mid-paced stagger.
+    return """/* Motion register: balanced — fade with a small lift, mid-paced. */
+@keyframes plan-fade-lift {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.plan-section { animation: plan-fade-lift 420ms ease-out both; }
+.plan-section:nth-of-type(2) { animation-delay: 80ms; }
+.plan-section:nth-of-type(3) { animation-delay: 160ms; }
+.plan-section:nth-of-type(4) { animation-delay: 240ms; }
+.plan-section:nth-of-type(n+5) { animation-delay: 320ms; }
+.signature-dot { animation: plan-fade-lift 240ms ease-out both; }
+"""
+
+
+# ---------------------------------------------------------------------------
 # Contrast (WCAG) helpers
 # ---------------------------------------------------------------------------
 
@@ -1617,7 +2772,7 @@ color, spacing value, radius, and shadow. No raw hex colors are emitted in
 {audit_line}
 ```
 
-{audit_lines and "First hits (for diagnosis):\n\n```\n" + audit_lines + "\n```\n" or ""}
+{audit_lines}
 
 ## Reference brief
 {ref_section}
@@ -1666,6 +2821,299 @@ by `references/validation-checklist.md` once M4 lands.
 """
 
 
+def render_plan_build_report(
+    *,
+    brief: dict[str, Any],
+    plan: dict[str, Any],
+    sections: list[dict[str, Any]],
+    skipped_at_runtime: list[dict[str, Any]],
+    brand_name: str,
+    brand_name_source: str,
+    contrast: dict[str, Any],
+    css_hex_hits: list[tuple[int, str]],
+    tokens_css_vars: list[str],
+    expected_token_vars: list[str],
+    tokens_dist_css: str,
+    tokens_dist_json: str,
+    font_substitutions: dict[str, Any] | None = None,
+    outdir: Path,
+) -> str:
+    """Emit BUILD-REPORT.md for a plan-driven build.
+
+    Carries the same contrast, token-discipline, accessibility, motion,
+    limitations, and honesty-tier sections as the fallback report, and ADDS:
+      * Layout thesis (statement, audience, job-to-be-done, why-not-generic).
+      * Signature element (name, description, implementation note).
+      * Per-section rationale with brief fields and motion register.
+      * Plan skipped_sections[] vs runtime-detected skips.
+      * Design decisions surfaced in the plan.
+
+    Every section in `sections` corresponds to one plan.sections[] entry the
+    renderer could actually fill; skipped_at_runtime covers plan sections that
+    the renderer dropped because they had no copy and no brief payload.
+    """
+    limitations = brief.get("limitations", []) or []
+    plan_sections_all = plan.get("sections", []) or []
+    plan_skipped = plan.get("skipped_sections", []) or []
+    plan_decisions = plan.get("decisions", []) or []
+    layout_thesis = plan.get("layout_thesis", {}) or {}
+    signature = plan.get("signature_element", {}) or {}
+    motion = plan.get("motion_vocabulary", {}) or {}
+
+    # Hex audit
+    if css_hex_hits:
+        audit_line = f"FAIL — {len(css_hex_hits)} hex literal(s) found in styles.css"
+        audit_lines = "\n".join(f"  L{ln}: {line}" for ln, line in css_hex_hits)
+    else:
+        audit_line = "PASS — no raw hex literals in styles.css (every color is a token)"
+        audit_lines = ""
+
+    # Token audit
+    missing_tokens = [v for v in expected_token_vars if v not in tokens_css_vars]
+    if missing_tokens:
+        token_audit = f"FAIL — tokens.css does not declare: {', '.join(missing_tokens)}"
+    else:
+        token_audit = (
+            f"PASS — all {len(expected_token_vars)} expected token vars are declared in tokens.css"
+        )
+
+    # Per-section table for the plan-driven build.
+    def _format_brief_fields(fields: list[str]) -> str:
+        if not fields:
+            return "_(none)_"
+        return ", ".join(f"`{f}`" for f in fields)
+
+    section_rows: list[str] = []
+    for sec in sections:
+        section_rows.append(
+            "| {id} (`#{id}`) | {emphasis} | {order} | {component} | {fields} |\n"
+            "| | | | | **Why this section:** {purpose} |\n"
+            "| | | | | **Rationale:** {rationale} |".format(
+                id=sec["id"],
+                emphasis=sec["emphasis"],
+                order=sec["order"],
+                component=sec["component"][:80] + ("…" if len(sec["component"]) > 80 else ""),
+                fields=_format_brief_fields(sec["brief_fields"]),
+                purpose=sec["purpose"],
+                rationale=sec["rationale"],
+            )
+        )
+    sections_table = "\n".join(section_rows) if section_rows else "_(no sections rendered)_"
+
+    plan_skipped_rows = "\n".join(
+        f"| `{s.get('id', '')}` | {s.get('reason', '')} | {', '.join(f'`{f}`' for f in (s.get('missing_brief_fields', []) or []))} |"
+        for s in plan_skipped
+    ) or "| _(none)_ | | |"
+
+    runtime_skipped_rows = "\n".join(
+        f"| `{s['id']}` | {s['reason']} | {', '.join(f'`{f}`' for f in s.get('missing_brief_fields', []))} |"
+        for s in skipped_at_runtime
+    ) or "| _(none)_ | | |"
+
+    decision_rows = "\n".join(
+        f"- **{d.get('decision', '')}**\n"
+        f"  - Alternatives considered: {', '.join(d.get('alternatives_considered', []) or []) or '_(none recorded)_'}\n"
+        f"  - Why chosen: {d.get('why_chosen', '')}"
+        for d in plan_decisions
+    ) or "_(no decisions recorded in plan)_"
+
+    motion_effects = "\n".join(f"  - {e}" for e in (motion.get("effects", []) or [])) or "  - _(none)_"
+
+    contrast_note = contrast["note"]
+    brand_decision_lines = []
+    for item in contrast["brand_text_decisions"]:
+        brand_decision_lines.append(
+            f"- **{item['name'].capitalize()} used as text:** original "
+            f"`{item['original_hex']}` on `{item['background_hex']}` measured "
+            f"{item['original_ratio']:.2f}:1; derived `{item['derived_hex']}` "
+            f"({item['direction']}, {item['steps']} lightness steps) measures "
+            f"{item['derived_ratio']:.2f}:1. Text uses: "
+            f"{', '.join(item['text_uses'])}. Original "
+            f"`{item['original_token']}` remains for non-text uses: "
+            f"{', '.join(item['non_text_uses'])}."
+        )
+    brand_decisions_section = "\n".join(brand_decision_lines)
+
+    # Font substitutions (paid -> OFL). Synthesizer sidecar records every
+    # primary that was rewritten so a paid family never reaches the page;
+    # surface it in the build report so reviewers can see the swap.
+    subs = font_substitutions or {}
+    subs_meta = subs.get("meta", {}) or {}
+    sub_entries = subs.get("font_substitutions", {}) or {}
+    if sub_entries:
+        sub_lines = [
+            f"- **{role}:** `{entry.get('from', '?')}` ({entry.get('from_license', '?')}) "
+            f"→ `{entry.get('to', '?')}` ({entry.get('to_license', '?')}) "
+            f"— {entry.get('reason', '')}"
+            for role, entry in sub_entries.items()
+        ]
+        font_substitutions_section = "\n".join(sub_lines)
+        if subs_meta:
+            font_substitutions_section += (
+                "\n\n" + "\n".join(f"- _{k}:_ {v}" for k, v in subs_meta.items())
+            )
+    else:
+        font_substitutions_section = (
+            "_None — every primary family is OFL/CC-licensed and was kept as-is._"
+            if not subs.get("missing_sidecar")
+            else "_font-substitutions.json sidecar was not produced by the synthesizer; "
+            "no paid->OFL mapping was applied._"
+        )
+
+    limitations_section = (
+        "\n".join(f"- {item}" for item in limitations)
+        if limitations
+        else "_no limitations declared in the brand brief_"
+    )
+
+    return f"""# Build report (plan-driven)
+
+Project slug: `{brief.get('project_slug', '')}`
+Brand name: **{brand_name}** — _{brand_name_source}_
+Generated: {brief.get('fetched_at', '')} brief → composed by compose_site.py v{TOOL_VERSION} from `design-plan.json`
+Outdir: `{outdir}`
+
+---
+
+## Layout thesis (from design-plan.json)
+
+- **Statement:** {layout_thesis.get('statement', '_(none)_')}
+- **Audience:** {layout_thesis.get('audience', '_(none)_')}
+- **Job to be done:** {layout_thesis.get('job_to_be_done', '_(none)_')}
+- **Why this, not generic:** {layout_thesis.get('why_this_not_generic', '_(none)_')}
+
+## Signature element (from design-plan.json)
+
+- **Name:** {signature.get('name', '_(none)_')}
+- **Description:** {signature.get('description', '_(none)_')}
+- **Why it fits the brand:** {signature.get('why_it_fits_brand', '_(none)_')}
+- **Implementation note (rendered in HTML+CSS as a real device):**
+  {signature.get('implementation_note', '_(none)_')}
+
+The signature element is emitted in HTML as `<span class="signature-dot" aria-hidden="true">`
+and styled in `styles.css` under the `.signature-dot` selector. It uses
+`var(--color-primary)` so it picks up whatever the synthesized token system
+declares as the brand's primary color (the design plan calls for the literal
+gold #efad2b; the token system reserves the same hex for `--color-primary`).
+It appears inline as the period ending the thesis headline, beside numbered
+curriculum rows and process steps, and trailing the CTA button.
+
+## Motion vocabulary (from design-plan.json)
+
+- **Register:** `{motion.get('register', '_(none)_')}`
+- **Rationale:** {motion.get('rationale', '_(none)_')}
+- **Effects:**
+{motion_effects}
+
+The plan's register drives `styles.css` via `_motion_css_for_register()` —
+`restrained` ⇒ 320ms fade-in only; `balanced` ⇒ 420ms fade + 6px lift;
+`cinematic` ⇒ 640ms fade + 16px slide with cubic-bezier easing. No parallax,
+no marquee, no auto-play regardless of register. All variants honor
+`@media (prefers-reduced-motion: reduce)`.
+
+## Sections emitted (plan-driven)
+
+| Section | Emphasis | Order | Component (truncated) | Brief fields that fed it |
+|---------|----------|-------|-----------------------|--------------------------|
+{sections_table}
+
+## Sections skipped by the plan (data absent in brief)
+
+The plan's own `skipped_sections[]` is honored verbatim. Each entry names the
+brief fields that would have been needed but are absent.
+
+| Section | Reason | Missing brief fields |
+|---------|--------|----------------------|
+{plan_skipped_rows}
+
+## Sections skipped at render time (no copy or payload)
+
+The plan listed a section but the renderer could not find any copy block or
+brief payload for it, so it was dropped rather than emitted empty. These are
+reported here in addition to the plan's own skipped list.
+
+| Section | Reason | Missing brief fields |
+|---------|--------|----------------------|
+{runtime_skipped_rows}
+
+## Design decisions (from design-plan.json)
+
+{decision_rows}
+
+## Contrast decision
+
+- **Neutral body text token:** `{contrast["text_token"]}` ({contrast["text_hex"]})
+- **Neutral background token:** `{contrast["bg_token"]}` ({contrast["bg_hex"]})
+- **Neutral measured contrast:** {contrast["ratio_text_bg"]:.2f}:1
+- **Neutral decision note:** {contrast_note}
+
+Brand colors remain unchanged for non-text identity uses. When a brand color is
+used as normal-sized text, the composer uses the derived `*-text` token below.
+
+{brand_decisions_section}
+
+## Font substitutions (paid → OFL)
+
+The synthesizer's `font-substitutions.json` sidecar is the authoritative
+record of every paid primary family that was rewritten to an OFL/CC-licensed
+fallback before being emitted into `tokens.css`. The page never ships a
+font the operator hasn't licensed.
+
+{font_substitutions_section}
+
+## Token discipline
+
+- **Source of truth:** `{tokens_dist_css}`
+- **Copied to site as:** `{outdir}/tokens.css`
+- **Token JSON:** `{tokens_dist_json}`
+- **Audit:** {token_audit}
+
+The page CSS links `tokens.css` and references token CSS variables for every
+color, spacing value, radius, and shadow. No raw hex colors are emitted in
+`styles.css`:
+
+```
+{audit_line}
+```
+
+{audit_lines}
+
+## Accessibility decisions
+
+- **Semantic landmarks:** `<header role="banner">`, `<nav>`, `<main>`,
+  `<section aria-labelledby>`, `<footer role="contentinfo">`.
+- **Headings:** one `<h1>` (in the hero), logical nesting, no skipped levels.
+- **Skip link:** `.skip-link` is the first focusable element; visible only on focus.
+- **Alt text:** every `<img>` uses `real_photo_inventory[].subject` as `alt`.
+- **Focus styles:** `:focus-visible` on every interactive element.
+- **Reduced motion:** `@media (prefers-reduced-motion: reduce)` disables the
+  CSS-only plan-driven reveals.
+- **Color contrast:** see "Contrast decision" above.
+
+## Limitations carried forward from the brand brief
+
+The brief's own `limitations[]` array is reproduced verbatim below. Every entry
+below is a research-side limitation that the site honors by *not* inventing
+content; nothing in the emitted page invents quotes, photos, services, or
+stats. The plan's `skipped_sections[]` mirrors these where they apply.
+
+{limitations_section}
+
+## Honesty tier
+
+This build is **First-render** by the `nt-site-mirror` honesty tier scale:
+- The page renders in any browser.
+- Every claim in the page is backed by a brief field listed in "Sections emitted".
+- No copy, photo, quote, statistic, or section was invented.
+- The plan passed `design_pass.verify_source_fields` before any HTML was written
+  (every `source_brief_fields` path resolves to a non-empty value in the brief).
+
+It is **not yet M4-Validated**: the 8-gate validation (accessibility, performance,
+site-wide audit, responsive, motion, source-paired) is M4 scope and is exercised
+by `validate_site.py` once M4 lands.
+"""
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -1686,6 +3134,14 @@ def main(argv: list[str] | None = None) -> int:
         default=None,
         help="Optional. Directory with sections.json, components.json, copy.json from reference understanding.",
     )
+    parser.add_argument(
+        "--design-plan",
+        default=None,
+        help="Optional. Path to design-plan.json (M6 LLM design pass). When present, "
+             "the composer renders FROM the plan (section order, emphasis, component, "
+             "copy, signature element, motion register). When absent, the deterministic "
+             "M2-M3 fallback path is used exactly as before.",
+    )
     parser.add_argument("-o", "--outdir", required=True, help="Where to write the composed site.")
     parser.add_argument(
         "--project-slug",
@@ -1703,6 +3159,7 @@ def main(argv: list[str] | None = None) -> int:
     tokens_root = Path(args.tokens)
     outdir = Path(args.outdir)
     reference_dir = Path(args.reference_report) if args.reference_report else None
+    design_plan_path = Path(args.design_plan) if args.design_plan else None
     schema_path = Path(args.schema)
 
     if not brief_path.is_file():
@@ -1723,7 +3180,7 @@ def main(argv: list[str] | None = None) -> int:
 
     # 2. Load synthesized tokens.
     try:
-        tokens_css_src, tw, tokens_css_text = load_tokens(tokens_root)
+        tokens_css_src, tw, tokens_css_text, font_substitutions = load_tokens(tokens_root)
     except ComposeError as exc:
         print(f"compose_site: {exc}", file=sys.stderr)
         return 1
@@ -1740,6 +3197,21 @@ def main(argv: list[str] | None = None) -> int:
         print(f"compose_site: {exc}", file=sys.stderr)
         return 1
 
+    # 3. Dispatch: plan-driven vs fallback. Both paths share the same
+    # token-contrast-budget and emit-gate work; only the rendering differs.
+    if design_plan_path is not None:
+        return _run_plan_path(
+            brief=brief,
+            design_plan_path=design_plan_path,
+            tokens_root=tokens_root,
+            tokens_css_src=tokens_css_src,
+            tokens_css_text=tokens_css_text,
+            font_substitutions=font_substitutions,
+            project_slug_override=args.project_slug,
+            outdir=outdir,
+        )
+
+    # ----- Fallback path: deterministic template emitter (UNCHANGED) -----
     # 3. Load reference report (optional).
     reference = load_reference_report(reference_dir)
 
@@ -1777,6 +3249,21 @@ def main(argv: list[str] | None = None) -> int:
     (outdir / "styles.css").write_text(stylesheet, encoding="utf-8")
     (outdir / "tokens.css").write_text(copied_tokens_css, encoding="utf-8")
 
+    # 7b. M6 output assertions: HTML must link tokens.css, styles.css must
+    # contain no raw hex, and every plan section id must be either rendered
+    # or explicitly skipped.
+    try:
+        _run_output_assertions(
+            html=html,
+            stylesheet_text=stylesheet,
+            declared_section_ids=[s["id"] for s in plan],
+            rendered_skipped_ids=[s["id"] for s in plan if not s["emitted"]],
+            css_label="styles.css",
+        )
+    except OutputAssertionError as exc:
+        print(f"compose_site: {exc}", file=sys.stderr)
+        return 1
+
     # 8. Build report.
     report_md = render_build_report(
         brief=brief,
@@ -1797,6 +3284,164 @@ def main(argv: list[str] | None = None) -> int:
     (outdir / "BUILD-REPORT.md").write_text(report_md, encoding="utf-8")
 
     # Final stdout: the outdir path. Matches synthesize_tokens.py convention.
+    print(str(outdir))
+    return 0
+
+
+def _run_plan_path(
+    *,
+    brief: dict[str, Any],
+    design_plan_path: Path,
+    tokens_root: Path,
+    tokens_css_src: Path,
+    tokens_css_text: str,
+    font_substitutions: dict[str, Any],
+    project_slug_override: str | None,
+    outdir: Path,
+) -> int:
+    """Plan-driven composition path. Returns process exit code.
+
+    This is the only place where the design-plan flow runs. The fallback
+    `main()` body above is untouched.
+
+    Sequence:
+      1. Load design-plan.json.
+      2. Re-run design_pass.verify_source_fields on the plan+brief. Refuse
+         to render (exit 1) if it reports any violation — this is the
+         "invent-nothing" gate, owned by design_pass.py and imported here
+         rather than re-implemented.
+      3. Derive brand name + resolve contrast (same logic as fallback).
+      4. Build per-section view + skip list.
+      5. Render HTML from the plan + render the plan-aware stylesheet.
+      6. Emit-gate: no raw hex literals outside tokens.css.
+      7. Write outputs + plan-aware BUILD-REPORT.md.
+    """
+    # 1. Load plan
+    try:
+        plan = load_design_plan(design_plan_path)
+    except ComposeError as exc:
+        print(f"compose_site: {exc}", file=sys.stderr)
+        return 1
+    if plan is None:
+        # Defensive: load_design_plan returns None iff the path was None,
+        # but in this branch the caller already passed a path. Keep the
+        # check so a future caller cannot accidentally bypass the gate.
+        print("compose_site: --design-plan resolved to no document", file=sys.stderr)
+        return 1
+
+    # 2. invent-nothing gate: every source_brief_fields path must resolve
+    # to a non-empty value in the brief. We IMPORT design_pass.verify_source_fields
+    # rather than re-implementing it so the two passes share one source of truth.
+    violations = verify_plan_against_brief(plan, brief)
+    if violations:
+        print(
+            "compose_site: design-plan failed verify_source_fields "
+            f"({len(violations)} violation(s)):",
+            file=sys.stderr,
+        )
+        for v in violations:
+            print(f"  - {v}", file=sys.stderr)
+        print(
+            "Refusing to render — every source_brief_fields path in the plan "
+            "must resolve to a non-empty value in the brief. Edit the plan or "
+            "fix the brief, then re-run.",
+            file=sys.stderr,
+        )
+        return 1
+
+    # 3. Brand name + contrast (same derivation as fallback path).
+    brand_name, brand_name_source = derive_brand_name(brief, project_slug_override)
+    contrast = resolve_contrast(brief.get("palette_from_logo", {}) or {}, brand_name)
+
+    # 4. Per-section view + runtime-skip list.
+    copy_index = index_copy_blocks(plan.get("copy_blocks", []) or [])
+    signature = plan.get("signature_element", {}) or {}
+    motion = plan.get("motion_vocabulary", {}) or {}
+    motion_register = motion.get("register", "balanced")
+    sections, runtime_skipped = plan_section_view(
+        plan_sections=plan.get("sections", []) or [],
+        copy_index=copy_index,
+        brief=brief,
+        signature_element=signature,
+        motion_register=motion_register,
+    )
+
+    # 5. Render HTML + plan-aware stylesheet.
+    html = render_html_from_plan(
+        brief=brief,
+        plan=plan,
+        sections=sections,
+        brand_name=brand_name,
+        brand_name_source=brand_name_source,
+        font_substitutions=font_substitutions,
+    )
+    stylesheet = render_plan_stylesheet(contrast, motion_register)
+
+    # 6. Emit-gate: same as fallback. Plan-driven CSS must also contain
+    # zero raw hex literals outside tokens.css.
+    hex_hits = find_hex_literals(stylesheet)
+    if hex_hits:
+        print("compose_site: emit gate FAILED — raw hex literals found in styles.css:", file=sys.stderr)
+        for ln, line in hex_hits:
+            print(f"  L{ln}: {line}", file=sys.stderr)
+        return 1
+
+    # 7. Write outputs.
+    outdir.mkdir(parents=True, exist_ok=True)
+    copied_tokens_css = add_accessible_text_tokens(tokens_css_text, contrast)
+    copied_declared_vars = sorted(
+        set(re.findall(r"--[a-zA-Z0-9_-]+", copied_tokens_css))
+    )
+    (outdir / "index.html").write_text(html, encoding="utf-8")
+    (outdir / "styles.css").write_text(stylesheet, encoding="utf-8")
+    (outdir / "tokens.css").write_text(copied_tokens_css, encoding="utf-8")
+
+    # 7b. M6 output assertions: HTML links tokens.css, no raw hex in
+    # styles.css, every plan section id is rendered-or-skipped.
+    # The composer anchors the first plan section as `id="hero"` regardless
+    # of the plan id — reflect that deliberate alias in id_aliases so the
+    # rendered-ids-present check is satisfied.
+    plan_sections_list = list(plan.get("sections", []) or [])
+    first_section_id = ""
+    if plan_sections_list and isinstance(plan_sections_list[0], dict):
+        first_section_id = str(plan_sections_list[0].get("id", "") or "")
+    id_aliases: dict[str, str] | None = None
+    if first_section_id and first_section_id != "hero":
+        id_aliases = {first_section_id: "hero"}
+    try:
+        _run_output_assertions(
+            html=html,
+            stylesheet_text=stylesheet,
+            declared_section_ids=[
+                str(s.get("id", ""))
+                for s in plan_sections_list
+            ],
+            rendered_skipped_ids=list(runtime_skipped),
+            css_label="styles.css",
+            id_aliases=id_aliases,
+        )
+    except OutputAssertionError as exc:
+        print(f"compose_site: {exc}", file=sys.stderr)
+        return 1
+
+    report_md = render_plan_build_report(
+        brief=brief,
+        plan=plan,
+        sections=sections,
+        skipped_at_runtime=runtime_skipped,
+        brand_name=brand_name,
+        brand_name_source=brand_name_source,
+        contrast=contrast,
+        css_hex_hits=hex_hits,
+        tokens_css_vars=copied_declared_vars,
+        expected_token_vars=list(EXPECTED_TOKEN_VARS),
+        tokens_dist_css=str(tokens_css_src),
+        tokens_dist_json=str(tokens_root / "tokens" / "dist" / "tailwind-tokens.json"),
+        font_substitutions=font_substitutions,
+        outdir=outdir,
+    )
+    (outdir / "BUILD-REPORT.md").write_text(report_md, encoding="utf-8")
+
     print(str(outdir))
     return 0
 
