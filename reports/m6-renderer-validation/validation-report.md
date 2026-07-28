@@ -1,10 +1,10 @@
 # Validation Report
 
-Generated: 2026-07-28T23:13:00.142863+00:00
+Generated: 2026-07-28T23:21:44.076809+00:00
 Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site`
 Routes validated: /
-Local server: http://127.0.0.1:48953 (python3 -m http.server, killed on exit)
+Local server: http://127.0.0.1:42737 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/server.log
 
 ## Declared scope
@@ -52,10 +52,10 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:48953/"
+      "final_url": "http://127.0.0.1:42737/"
     }
   },
-  "base_url": "http://127.0.0.1:48953"
+  "base_url": "http://127.0.0.1:42737"
 }
 ```
 
@@ -86,7 +86,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:48953/",
+      "url": "http://127.0.0.1:42737/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -205,7 +205,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/4536874512350609667__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/4755593612084194380__320x720.png"
     },
     {
       "route": "/",
@@ -220,7 +220,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/7192147166333163111__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/1350797561002787436__768x1024.png"
     },
     {
       "route": "/",
@@ -235,7 +235,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/4706711957811836581__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/2033460349129965155__1024x768.png"
     },
     {
       "route": "/",
@@ -250,7 +250,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/3498006941112091910__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/7054591399499333317__1440x900.png"
     }
   ],
   "viewports": [

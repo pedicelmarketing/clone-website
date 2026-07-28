@@ -332,6 +332,19 @@ class GeminiPayloadTranslation(unittest.TestCase):
         body = cp._anthropic_messages_to_gemini("", [{"role": "user", "content": []}])
         self.assertGreaterEqual(body["generationConfig"]["maxOutputTokens"], 8192)
 
+    def test_string_content_is_one_text_part_not_one_part_per_character(self):
+        """`content` may be a bare string (design_pass.py sends that shape).
+
+        Iterating a string as a block list walks it character by character —
+        the same failure mode that once turned a font stack into
+        "I, n, t, e, r". Guard it explicitly.
+        """
+        body = cp._anthropic_messages_to_gemini(
+            "", [{"role": "user", "content": "Schema:\nBrand brief:\n{}"}])
+        parts = body["contents"][0]["parts"]
+        self.assertEqual(len(parts), 1)
+        self.assertEqual(parts[0]["text"], "Schema:\nBrand brief:\n{}")
+
     def test_unknown_block_type_raises(self):
         messages = [{"role": "user", "content": [{"type": "video", "src": "x"}]}]
         with self.assertRaises(RuntimeError):

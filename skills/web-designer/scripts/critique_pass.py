@@ -232,7 +232,15 @@ def _anthropic_messages_to_gemini(system: str, messages: list) -> dict:
     """
     parts: list[dict] = []
     for msg in messages:
-        for block in msg.get("content", []):
+        content = msg.get("content", [])
+        # The Anthropic shape allows `content` to be a bare string. Iterating it
+        # as a block list would walk it CHARACTER BY CHARACTER — the same failure
+        # that once turned a font stack into "I, n, t, e, r". design_pass.py
+        # sends exactly this shape.
+        if isinstance(content, str):
+            parts.append({"text": content})
+            continue
+        for block in content:
             if block["type"] == "text":
                 parts.append({"text": block["text"]})
             elif block["type"] == "image":
