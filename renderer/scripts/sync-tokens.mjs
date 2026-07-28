@@ -22,7 +22,13 @@ import { fileURLToPath } from "node:url";
 const here = dirname(fileURLToPath(import.meta.url));
 const rendererRoot = resolve(here, "..");
 const repoRoot = resolve(rendererRoot, "..");
-const tokenDir = resolve(repoRoot, "reports/m3-token-synthesis/tokens/dist");
+// Token source is overridable so the renderer is not welded to one brand.
+// WEB_DESIGNER_TOKENS_DIR is set by render_nextjs.py from its --tokens argument.
+// Without this the renderer silently rendered every brand in the FIRST brand's
+// palette — a bug only a second brand could reveal.
+const tokenDir = process.env.WEB_DESIGNER_TOKENS_DIR
+  ? resolve(process.env.WEB_DESIGNER_TOKENS_DIR, "tokens/dist")
+  : resolve(repoRoot, "reports/m3-token-synthesis/tokens/dist");
 const cssOut = resolve(rendererRoot, "app/_tokens.generated.css");
 const jsonIn = resolve(tokenDir, "tailwind-tokens.json");
 const cssIn = resolve(tokenDir, "tokens.css");

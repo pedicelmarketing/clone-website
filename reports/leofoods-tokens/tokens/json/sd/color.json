@@ -1,0 +1,30 @@
+{
+  "color": {
+    "primary": {
+      "value": "#FFC517"
+    },
+    "secondary": {
+      "value": "#CDBD81"
+    },
+    "accent": {
+      "value": "#259E7E"
+    },
+    "neutral": {
+      "0": {
+        "value": "#FBF7E9"
+      },
+      "1": {
+        "value": "#765F2C"
+      },
+      "2": {
+        "value": "#3D3D3D"
+      },
+      "3": {
+        "value": "#FFF7C5"
+      },
+      "4": {
+        "value": "#95CC7D"
+      }
+    }
+  }
+}

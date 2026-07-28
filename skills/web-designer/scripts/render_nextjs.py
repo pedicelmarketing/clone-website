@@ -28,6 +28,7 @@ Honesty notes
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -39,9 +40,9 @@ REPO_ROOT = HERE.parent.parent.parent
 RENDERER = REPO_ROOT / "renderer"
 
 
-def run(cmd: list[str], cwd: Path, label: str) -> None:
+def run(cmd: list[str], cwd: Path, label: str, env: dict | None = None) -> None:
     print(f"[render_nextjs] {label}: {' '.join(cmd)}", file=sys.stderr)
-    proc = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True)
+    proc = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True, env=env)
     if proc.returncode != 0:
         sys.stderr.write(proc.stdout[-2000:])
         sys.stderr.write(proc.stderr[-2000:])
@@ -70,9 +71,17 @@ def main(argv: list[str] | None = None) -> int:
     if not (RENDERER / "node_modules").is_dir():
         run(["npm", "install", "--silent"], RENDERER, "npm install")
 
+    # Point the renderer at THIS brand's artifacts. Without these the renderer
+    # falls back to hardcoded paths and silently renders whichever brand happens
+    # to be baked in — it rendered brand B's plan entirely in brand A's palette
+    # until a second brand exposed it.
+    env = dict(os.environ)
+    env["WEB_DESIGNER_TOKENS_DIR"] = str(Path(args.tokens).resolve())
+    env["WEB_DESIGNER_DESIGN_PLAN"] = str(plan)
+
     # Tokens first: the renderer's Tailwind theme is generated from them.
-    run(["npm", "run", "sync:tokens"], RENDERER, "sync tokens")
-    run(["npm", "run", "build"], RENDERER, "next build")
+    run(["npm", "run", "sync:tokens"], RENDERER, "sync tokens", env=env)
+    run(["npm", "run", "build"], RENDERER, "next build", env=env)
 
     out_src = RENDERER / "out"
     if not out_src.is_dir() or not (out_src / "index.html").is_file():

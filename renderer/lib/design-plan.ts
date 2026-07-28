@@ -21,13 +21,13 @@ import { resolve } from "node:path";
 
 // design-plan.json is colocated with the rest of the reports/ tree, two
 // directories up from renderer/.
-const PLAN_PATH = resolve(
-  process.cwd(),
-  "..",
-  "reports",
-  "m6-design",
-  "design-plan.json",
-);
+// Overridable so the renderer is not welded to a single brand. render_nextjs.py
+// sets WEB_DESIGNER_DESIGN_PLAN from its --design-plan argument. Hardcoding this
+// meant every brand rendered the FIRST brand's plan — invisible until a second
+// brand was run through the pipeline.
+const PLAN_PATH = process.env.WEB_DESIGNER_DESIGN_PLAN
+  ? resolve(process.env.WEB_DESIGNER_DESIGN_PLAN)
+  : resolve(process.cwd(), "..", "reports", "m6-design", "design-plan.json");
 
 export type Emphasis = "hero" | "primary" | "secondary" | "minor";
 

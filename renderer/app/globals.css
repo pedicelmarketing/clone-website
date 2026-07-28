@@ -70,8 +70,8 @@
  *    synthesized design tokens. */
 :root {
   /* Neutrals: surface/backgrounds map to the brand-neutral palette. */
-  --background: var(--color-neutral-6);     /* #ffffff */
-  --foreground: var(--color-neutral-0);     /* #0b0c0d */
+  --background: var(--color-bg, var(--color-neutral-6));     /* #ffffff */
+  --foreground: var(--color-fg, var(--color-neutral-0));     /* #0b0c0d */
   --card: var(--color-neutral-6);
   --card-foreground: var(--color-neutral-0);
   --popover: var(--color-neutral-6);

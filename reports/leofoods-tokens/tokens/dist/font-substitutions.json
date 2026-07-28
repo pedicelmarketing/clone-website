@@ -4,22 +4,22 @@
     "tool_version": "1.0",
     "generated_at": "2026-07-28T00:15:24Z",
     "evidence_basis": "DOM+assets confirmed",
-    "project_slug": "pedicel-marketing-redesign-smoke",
-    "brand_brief": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-smoke/brand-brief.json",
+    "project_slug": "leo-foods-redesign",
+    "brand_brief": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-leofoods/brand-brief.json",
     "reference_tokens": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens"
   },
   "font_substitutions": {
     "display": {
       "primary": "Inter",
-      "original_family": "Switzer",
+      "original_family": "Recoleta",
       "substituted": true,
-      "reason": "license_notes flagged restricted licensing; substituted 'Switzer' with OFL substitute 'Inter'"
+      "reason": "license_notes flagged restricted licensing; substituted 'Recoleta' with OFL substitute 'Inter'"
     },
     "body": {
-      "primary": "Poppins",
-      "original_family": "Poppins",
+      "primary": "Inter",
+      "original_family": "Inter",
       "substituted": false,
-      "reason": "license_notes flag restricted licensing, but the brief explicitly names 'Poppins' as OFL; brand family kept"
+      "reason": "license_notes flagged restricted licensing; substituted 'Inter' with OFL substitute 'Inter'"
     },
     "mono": {
       "primary": "JetBrains Mono",
@@ -36,8 +36,8 @@
     },
     {
       "role": "body",
-      "primary": "Poppins",
-      "family_arg": "Poppins:wght@400;500;600;700"
+      "primary": "Inter",
+      "family_arg": "Inter:wght@400;500;600;700"
     },
     {
       "role": "mono",

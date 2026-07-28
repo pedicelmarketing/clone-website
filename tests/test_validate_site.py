@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Behavior tests for the validate_site.py 8-gate harness.
+"""Behavior tests for the validate_site.py 10-gate harness.
 
 Specifically these lock down the positive-evidence-only verdict rule and the
 tier computation. They target the gates' *decision logic* (not the runners
@@ -50,12 +50,12 @@ def _notex(gid: str, name: str, summary: str = "runner did not produce evidence"
 
 class TierRules(unittest.TestCase):
     def test_validated_only_when_every_gate_pass(self):
-        results = [_pass(str(i), f"g{i}") for i in range(1, 9)]
+        results = [_pass(str(i), f"g{i}") for i in range(1, 11)]
         tier, _ = compute_tier(results)
         self.assertEqual(tier, "Validated")
 
     def test_partial_when_a11y_not_exercised(self):
-        results = [_pass(str(i), f"g{i}") for i in range(1, 9)]
+        results = [_pass(str(i), f"g{i}") for i in range(1, 11)]
         results[2] = _notex("3", "Accessibility",
                             summary="axe-core crashed, 0 violations not verified",
                             error="runner exit 1; chromedriver crash")
@@ -65,7 +65,7 @@ class TierRules(unittest.TestCase):
         self.assertIn("3", reason, f"reason must name the failing gate, got: {reason}")
 
     def test_partial_when_perf_not_exercised(self):
-        results = [_pass(str(i), f"g{i}") for i in range(1, 9)]
+        results = [_pass(str(i), f"g{i}") for i in range(1, 11)]
         results[3] = _notex("4", "Performance",
                             summary="Lighthouse JSON not produced",
                             error="lighthouse JSON output not produced")
@@ -77,8 +77,8 @@ class TierRules(unittest.TestCase):
     def test_partial_when_any_single_gate_not_exercised(self):
         """Every gate, when alone, being NOT-EXERCISED, must cap the tier at
         Partial. The spec is unambiguous: only all-PASS = Validated."""
-        for gate_id in ("1", "2", "3", "4", "5", "6", "7", "8"):
-            results = [_pass(str(i), f"g{i}") for i in range(1, 9)]
+        for gate_id in ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"):
+            results = [_pass(str(i), f"g{i}") for i in range(1, 11)]
             results[int(gate_id) - 1] = _notex(gate_id, f"g{gate_id}")
             tier, _ = compute_tier(results)
             self.assertEqual(
@@ -87,8 +87,8 @@ class TierRules(unittest.TestCase):
             )
 
     def test_partial_when_any_gate_fails(self):
-        for gate_id in ("1", "2", "3", "4", "5", "6", "7", "8"):
-            results = [_pass(str(i), f"g{i}") for i in range(1, 9)]
+        for gate_id in ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"):
+            results = [_pass(str(i), f"g{i}") for i in range(1, 11)]
             results[int(gate_id) - 1] = _fail(gate_id, f"g{gate_id}")
             tier, _ = compute_tier(results)
             self.assertEqual(
@@ -100,7 +100,7 @@ class TierRules(unittest.TestCase):
         """The exact prior-run scenario: a11y AND perf not-exercised.
         The prior harness called this 'Offline-validated'. The M4 honesty
         fix says Partial."""
-        results = [_pass(str(i), f"g{i}") for i in range(1, 9)]
+        results = [_pass(str(i), f"g{i}") for i in range(1, 11)]
         results[2] = _notex("3", "Accessibility", error="axe crash")
         results[3] = _notex("4", "Performance", error="lighthouse no JSON")
         tier, reason = compute_tier(results)
@@ -163,7 +163,10 @@ class VerdictSemantics(unittest.TestCase):
         self.assertEqual(d["id"], "3")
 
     def test_eight_gates_declared(self):
-        self.assertIn("8-gate", GATE_VERSION)
+        # M6c-4: schema bump 8-gate -> 10-gate to add the Next.js-only
+        # build/bundle gates (9 and 10). The exact gate count is part of
+        # the version contract — change in lockstep with GATE_VERSION.
+        self.assertIn("10-gate", GATE_VERSION)
 
 
 class PriorRunRegression(unittest.TestCase):

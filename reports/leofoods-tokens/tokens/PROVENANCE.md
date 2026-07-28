@@ -1,8 +1,8 @@
 # Token provenance
 
-- Project: `pedicel-marketing-redesign-smoke`
+- Project: `leo-foods-redesign`
 - Generated at: `2026-07-28T00:15:24Z`
-- Brand brief: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-smoke/brand-brief.json` (schema validated before use)
+- Brand brief: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-leofoods/brand-brief.json` (schema validated before use)
 - Reference tokens: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens`
 - Evidence basis: `DOM+assets confirmed`
 
@@ -21,7 +21,7 @@ font families are authoritative; the reference contributes structure only.
 
 ## Font license notes (carried over verbatim from brand-brief)
 
-Switzer is by Indian Type Foundry — free for personal use; commercial use requires a paid license. Do not vendor the .otf files into the production build. Poppins is by Indian Type Foundry as well — released under the SIL Open Font License (OFL) and is safe to self-host. JetBrains Mono is OFL. Recommended safe self-hosted pair for a redesign: Switzer (paid) retained for the live Pedicel brand if a site license is purchased; otherwise substitute with Inter (OFL) for display and keep Poppins for body. The brand's own site loads Switzer-Light, Switzer-Regular, Switzer-Medium and Poppins-Regular from the Webflow CDN (per mirror-manifest.json in pedicelmarketing/audit).
+Recoleta is a paid Klim Type Foundry face — DO NOT vendored. For production substitute Fraunces (OFL) or a similar humanist serif. Inter is SIL OFL 1.1. JetBrains Mono is OFL. The live site uses a single custom webfont (variable) with a heavy display face for headings ('Meet The Cocktail Coop', 'All Natural Cocktail Mixers', 'REAL Ingredients Only', 'Made with real ingredients', 'Easy to use and even easier to enjoy', 'Crafted by Bartenders') and a humanist sans for body. Use a serif display + neutral sans pairing to honor the 'real / crafted / simple' feel without copying the proprietary display face. Avoid 100% Inter everywhere — that is the agency-website look the brand is NOT.
 
 Review these notes before vendoring or redistributing any font files. Paid or
 restricted fonts remain external until the project has the required license.
@@ -36,7 +36,7 @@ request is emitted for it.
 
 | Role | Original (paid) | Substitute (OFL) | Reason |
 |---|---|---|---|
-| display | Switzer | Inter | license_notes flagged restricted licensing; substituted 'Switzer' with OFL substitute 'Inter' |
-| body | Poppins | Poppins | license_notes flag restricted licensing, but the brief explicitly names 'Poppins' as OFL; brand family kept |
+| display | Recoleta | Inter | license_notes flagged restricted licensing; substituted 'Recoleta' with OFL substitute 'Inter' |
+| body | Inter | Inter | license_notes flagged restricted licensing; substituted 'Inter' with OFL substitute 'Inter' |
 | mono | JetBrains Mono | JetBrains Mono | license_notes flag restricted licensing, but the brief explicitly names 'JetBrains Mono' as OFL; brand family kept |
 

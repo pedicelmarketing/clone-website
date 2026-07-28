@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "leo-foods-redesign",
+  "fetched_at": "2026-07-28T00:00:00Z",
+  "sources": {
+    "own_site": {
+      "url": "https://barcoopbevy.com",
+      "fetch_backend": "manual_summary",
+      "char_count": 14218,
+      "scrapes_id": null
+    },
+    "linkedin": {
+      "url": null,
+      "fetch_backend": null,
+      "char_count": null,
+      "scrapes_id": null
+    },
+    "instagram": {
+      "url": "http://instagram.com/barcoopbevy",
+      "fetch_backend": null,
+      "char_count": null,
+      "scrapes_id": null
+    },
+    "reference": {
+      "url": "https://stripe.com",
+      "fetch_backend": "manual_summary",
+      "char_count": 14830,
+      "scrapes_id": null
+    }
+  },
+  "voice_and_tone": {
+    "register": "warm-practical-craft",
+    "sentence_case": true,
+    "favorite_words": ["real", "natural", "all-natural", "crafted", "bartenders", "simple", "bevy", "coop", "real ingredients", "real people", "easy", "perfectly", "just", "only"],
+    "banned_words": ["synergy", "delve", "leverage", "in today's", "revolutionary", "cutting-edge", "best-in-class", "world-class", "elevate", "unleash", "game-changing", "premium", "luxury", "artisanal", "bespoke"],
+    "formality_score_1to5": 2,
+    "avg_sentence_length_words": 11,
+    "example_lines": [
+      "A feel-good marg with real ingredients, little calories and grande flavor.",
+      "A perfect mix of bold and juicy flavors, you'll be a morning person in no time!",
+      "Light and bright with a hint of vacation in your glass!",
+      "Just add spirit.",
+      "Made by bartenders. Made in Charleston, South Carolina.",
+      "No artificial ingredients, preservatives or high fructose corn sugar. Only real ingredients made by real people in Charleston."
+    ],
+    "notes": "B2C voice — friendly, conversational, slightly playful, low jargon. Repetition of 'real' is intentional and core to the brand. All-caps is used only for the keyword 'REAL' in 'REAL Ingredients Only' as a typographic accent, not as a sentence-case violation. The brand deliberately rejects fine-dining/bar-trade words like 'artisanal' and 'craft' in favor of plain-English 'real' and 'simple'. Short sentences. Direct address to the drinker, not to a trade buyer. No B2B/wholesale language present in the public-facing copy (the /wholesale page is operator-facing, not voice-defining). Note: the design_brief in the operator's task described this brand as 'International food & drink wholesaler and cash & carry based in Marbella, Spain' — that description does not match the actual site. The brief is grounded in the live site as it is. See 'limitations'."
+  },
+  "palette_from_logo": {
+    "method": "css-hex-grep on inline styles + body of barcoopbevy.com and Webflow CDN asset inspection (200-page raw HTML, 440 KB)",
+    "primary": "#FFC517",
+    "secondary": "#CDBD81",
+    "accent": "#259E7E",
+    "neutrals": ["#FBF7E9", "#765F2C", "#3D3D3D", "#FFF7C5", "#95CC7D"],
+    "rationale": "The site is typographic-led — there is no separate image logo file; the wordmark 'Barcoop Bevy' is rendered as a styled <div class='logo'>, with 'vy' set in a distinct span. The brand's wordmark color is the warm chicken-coop yellow #FFC517 (111 inline-style hits, the dominant color on the site). A second, lighter yellow #FFF7C5 (70 hits) is used as the brand cream backdrop on cards. The body sans is a soft warm cream #FBF7E9 (80 hits). A deeper khaki #CDBD81 (96 hits) is used for tags and rule lines. A muted brown #765F2C (56 hits) anchors text. The single saturated accent is a teal-green #259E7E (85 hits) — used sparingly for links and CTAs against the warm yellow field. The teal-green is the only cool color on the site and serves as the 'real ingredients' signal: the green appears on the bitter-cucumber / natural ingredient context, not on the primary yellow. There is no separate SVG/PNG logo asset on the CDN besides a small favicon — the logo IS the typography."
+  },
+  "typography_recommendation": {
+    "display_family": "Recoleta",
+    "body_family": "Inter",
+    "mono_family": "JetBrains Mono",
+    "license_notes": "Recoleta is a paid Klim Type Foundry face — DO NOT vendored. For production substitute Fraunces (OFL) or a similar humanist serif. Inter is SIL OFL 1.1. JetBrains Mono is OFL. The live site uses a single custom webfont (variable) with a heavy display face for headings ('Meet The Cocktail Coop', 'All Natural Cocktail Mixers', 'REAL Ingredients Only', 'Made with real ingredients', 'Easy to use and even easier to enjoy', 'Crafted by Bartenders') and a humanist sans for body. Use a serif display + neutral sans pairing to honor the 'real / crafted / simple' feel without copying the proprietary display face. Avoid 100% Inter everywhere — that is the agency-website look the brand is NOT.",
+    "scale_ratio": 1.250,
+    "scale_steps": [12, 14, 16, 20, 24, 32, 48, 64]
+  },
+  "real_photo_inventory": [
+    {
+      "url": "https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/674f29033ad974dbf3d87d61_BarcoopBevy-CLW-156.jpg",
+      "subject": "Charleston Local Works feature lifestyle / founder context (hero on home page)",
+      "license": "brand-owned (Webflow CDN, used on barcoopbevy.com hero)",
+      "use": ["homepage hero", "about context", "press context"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/666b5ae0df9ff76766b7e532_about-craftsmen.jpg",
+      "subject": "Joe and MariElena Raya, founders (alt text on /about page reads 'Joe and MariElena Raya')",
+      "license": "brand-owned (Webflow CDN, alt-tagged with founders' names on /about)",
+      "use": ["about page", "team", "founder story"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/666b5ae00326da1700b407ed_about-ingredients.jpg",
+      "subject": "Real-ingredients flat-lay (about page pillar image, 'Made with real ingredients')",
+      "license": "brand-owned (Webflow CDN, /about page)",
+      "use": ["about pillar: made with real ingredients", "ingredient callouts"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/666b5ae1c2211cb9d644c482_about-easy.jpg",
+      "subject": "Easy-to-use / serving context (about page pillar, 'Easy to use and even easier to enjoy')",
+      "license": "brand-owned (Webflow CDN, /about page)",
+      "use": ["about pillar: easy to use", "recipe page hero", "wholesale deck"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512ec68bef7b77ccbca8_660ffeb54d4e681eecbc52b1_CLASSIC_MARGARITA-bottle-shadow.png",
+      "subject": "Classic Margarita 1L bottle, brand hero shot with drop-shadow",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["shop grid", "Classic Margarita product hero", "homepage product carousel"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6a29c36cb03c0c2d14bce34b_skinny-marg-shadow.png",
+      "subject": "Skinny Margarita 1L bottle, brand hero shot with drop-shadow",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["shop grid", "Skinny Margarita product hero"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e46b6ec9921034243_660fff4abc9dfea627fc3ca1_BLOODY_MARY-bottle-shadow.png",
+      "subject": "Bloody Mary 1L bottle, brand hero shot with drop-shadow (flagship award-winner)",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["shop grid", "Bloody Mary product hero", "press kit"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512efa7f7487afe44b42_660fff7e3942f90b0ee03504_CUCUMBER_MOJITO-bottle-shadow.png",
+      "subject": "Cucumber Mojito 1L bottle, brand hero shot with drop-shadow",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["shop grid", "Cucumber Mojito product hero"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e70aa1b59e1ceb57a_660ffef34de48cad8a2187cf_GINGER_SMASH-bottle-shadow.png",
+      "subject": "Ginger Smash 1L bottle, brand hero shot with drop-shadow",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["shop grid", "Ginger Smash product hero"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e827b7c6b3334e862_660fffc2668603d134f325ba_SPICY_STRAWBERRY_MARG-bottle-shadow.png",
+      "subject": "Spicy Strawberry Margarita 1L bottle, brand hero shot with drop-shadow",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["shop grid", "Spicy Strawberry Margarita product hero"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6615512e50cbd80e6217c77d_660fff2c8b4fea7bbb9cc648_PINA_COLADA-bottle-shadow.png",
+      "subject": "Piña Colada 1L bottle, brand hero shot with drop-shadow",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["shop grid", "Piña Colada product hero"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/663bd3a4411aa49d3a63c0b4_cocktail-bloody-mary.jpg",
+      "subject": "Bloody Mary cocktail, finished drink (Bloody Mary product page)",
+      "license": "brand-owned (Webflow CDN, product detail page)",
+      "use": ["Bloody Mary product page hero", "recipe page illustration", "press kit"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634b57b5878abbe117c65d_Dark%20and%20Stormy.jpg",
+      "subject": "Dark and Stormy (Ginger Smash + Rum) finished drink (recipe card on home + recipe page)",
+      "license": "brand-owned (Webflow CDN, home + recipe)",
+      "use": ["recipe card", "homepage recipe strip", "social"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6a3bf2f8102e4de4904a9306_litelimeade.jpg",
+      "subject": "Lite Limeade (Skinny Margarita + Soda Water) finished mocktail",
+      "license": "brand-owned (Webflow CDN, home + recipe)",
+      "use": ["recipe card", "mocktail / NA story"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6a3bf3ef89a206a8f99e9787_skinnymarg.jpg",
+      "subject": "Skinny Margarita (Skinny Margarita + Tequila) finished drink",
+      "license": "brand-owned (Webflow CDN, home + recipe)",
+      "use": ["recipe card", "product page secondary hero"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c77bc5c1ba34ad80181_Virgin%20Pin%CC%83a%20Colada.jpg",
+      "subject": "Virgin Piña Colada (Piña Colada + Water) NA mocktail",
+      "license": "brand-owned (Webflow CDN, home + recipe)",
+      "use": ["recipe card", "mocktail / NA story"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c8691038cce2fc562af_Vodka%20Gimlet.jpg",
+      "subject": "Vodka Gimlet (Classic Margarita + Vodka) finished drink",
+      "license": "brand-owned (Webflow CDN, home + recipe)",
+      "use": ["recipe card", "Classic Margarita product page secondary"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/6669b705bc7921b6f097316d_Spicy%20Strawberry%20Lime%20Soda%20-%20v3.jpg",
+      "subject": "Spicy Strawberry Lime Soda (Spicy Strawberry Margarita + Soda Water) NA mocktail",
+      "license": "brand-owned (Webflow CDN, home + recipe)",
+      "use": ["recipe card", "mocktail / NA story", "social"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634a3436e8dec3821f9fe1_Bloody%20Maria.jpg",
+      "subject": "Bloody Maria (Bloody Mary + Tequila) finished drink",
+      "license": "brand-owned (Webflow CDN, Bloody Mary product page)",
+      "use": ["Bloody Mary product page secondary", "recipe card"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634be2952aadf09273de62_Michelada.jpg",
+      "subject": "Michelada (Bloody Mary + Light Beer) finished drink",
+      "license": "brand-owned (Webflow CDN, Bloody Mary product page)",
+      "use": ["Bloody Mary product page secondary", "recipe card"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/66634c68ef7cc9a6d2df40fe_Virgin%20Bloody%20Mary.jpg",
+      "subject": "Virgin Bloody Mary (Bloody Mary + Just Ice) NA mocktail",
+      "license": "brand-owned (Webflow CDN, Bloody Mary product page)",
+      "use": ["Bloody Mary product page secondary", "mocktail / NA story"],
+      "scrapes_id": null
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/66154e3e740024a5542c8310/661578bee1108bb5bbe998d7_BarcoopBevy-hat-dark.jpg",
+      "subject": "Barcoop Bevy branded hat (merch) — single dark-color product photo",
+      "license": "brand-owned (Webflow CDN, /shop/merch)",
+      "use": ["merch product card", "about / team"],
+      "scrapes_id": null
+    }
+  ],
+  "service_facts": [
+    {
+      "name": "Cocktail Mixers (consumer retail)",
+      "description": "Seven all-natural, bartender-crafted 1L cocktail mixers sold direct-to-consumer via the brand's own Webflow shop: Classic Margarita, Skinny Margarita, Bloody Mary (Smoked Sea Salt + Chiles), Cucumber Mojito, Ginger Smash, Spicy Strawberry Margarita, Piña Colada. 33.8 fl oz for Skinny, 38.8 fl oz / 1L for the rest. Every mixer is non-alcoholic; designed to be combined 2:1 with any spirit, or with soda water / just ice for a mocktail.",
+      "price_range": "$12.00 per 1L bottle (direct-to-consumer)"
+    },
+    {
+      "name": "Wholesale / off-premise retail (B2B, US only)",
+      "description": "Distribution to bars, restaurants, and retailers through named regional distributors: Savannah Distributing (Georgia), Advintage Distributing (South Carolina, North Carolina, Tennessee), Tennessee Craft Distributors (Tennessee), Savannah Distributing (Virginia via GA coverage). State gaps (Florida, Oklahoma) routed through the Faire marketplace. International inquiries routed to drink@barcoopbevy.com. Press kit (PDF) and product catalog available on the wholesale page. No Marbella / Spain / EU presence is referenced on the site.",
+      "price_range": "not publicly listed (PDF catalog available via Press Kit link)"
+    },
+    {
+      "name": "Recipes / cocktail library (content)",
+      "description": "36+ recipes on the site, each tagged by mixer (All Mixers) and spirit (Tequila, Mezcal, Bourbon, Scotch, Rum, Vodka, Gin, Light Beer, Non-Alcoholic). Standard mix ratio is 2 parts mixer : 1 part spirit. Bloody Mary uses a 4:1 ratio. Recipes are the brand's primary SEO/content engine.",
+      "price_range": "free, no gated content"
+    },
+    {
+      "name": "Branded merchandise",
+      "description": "Single merch SKU observed: 'Barcoop Bevy Hat — Dark' ($X not observed in the extracted markup; /shop/merch route exists).",
+      "price_range": "not publicly listed in the markup extracted"
+    }
+  ],
+  "social_highlights": {
+    "linkedin": [],
+    "instagram": [
+      {
+        "date": "2026-07-28",
+        "caption": "No Instagram posts were fetched in this run. The brand's Instagram handle is verified as @barcoopbevy (link http://instagram.com/barcoopbevy on home, contact, about, and shop footers) but the grid was not opened via logged-in Cloak. The operator provided no Instagram content. Captions and image_url are null per the honesty rule; the social_highlights.instagram entry is recorded as a placeholder for the operator's next step.",
+        "image_url": null
+      }
+    ]
+  },
+  "testimonials": [],
+  "brand_donts": [
+    "Do not invent testimonials. The public site has no on-page customer quotes; the press page lists editor coverage (NY Times Wirecutter, Boston Globe, Authority Magazine, Specialty Food Association, Golf.com, StyleBlueprint) but no customer testimonials. The operator requested NO invented testimonials — keep this empty until real quotes are supplied.",
+    "Do not adopt a B2B / wholesale / cash-and-carry voice. The operator's design_brief described a 'Marbella, Spain' food-and-drink wholesaler, but the live site is a B2C cocktail mixer brand in Charleston, SC. Wholesale exists but is not the voice-defining surface. A B2B voice on the new site will mismatch the entire existing site.",
+    "Do not use B2B SaaS / agency boilerplate ('leverage', 'synergy', 'world-class', 'in today's landscape'). The brand's voice is plain-English, bartender-friendly, lowercase, conversational. Banned words above are derived from this.",
+    "Do not use the words 'artisanal', 'craft' (as a standalone adjective), or 'premium' to describe the brand. The site uses 'crafted' and 'made by bartenders' and 'real' — never 'artisanal'.",
+    "Do not impose a purple-gradient, agency-website, or SaaS-startup aesthetic. The brand is warm yellow + cream + teal — sunny, not cool. The reference site (Stripe) was supplied for STRUCTURAL clarity and confident typography, not for color or visual identity.",
+    "Do not use a heavy sans for headings. The site uses a soft humanist display face for headings and a clean sans for body. Avoid Inter for the display role — the brand is not Inter-everywhere.",
+    "Do not invent a Marbella / Spain / Spanish-language presence. The site makes no reference to Spain, Marbella, EU, or any non-US geography. The Bittermilk Bottling Co. family (Bittermilk, Tippleman's, Drinkmanship) is the actual sister-brand network.",
+    "Do not use stock photography of generic cocktail bars or 'tropical beach' scenes. The site uses real product photography, founder photos, and a small set of in-house cocktail/lifestyle shots — all verified above.",
+    "Do not break the '2 parts mixer : 1 part spirit' (or 4:1 for Bloody Mary) recipe format when describing how to use the product. This ratio is on every product page and is a brand standard."
+  ],
+  "limitations": [
+    "DESIGN-BRIEF / SITE MISMATCH (operator action required). The operator's design_brief described 'Leo Foods (Barcoop Bevy)' as 'International food & drink wholesaler and cash & carry based in Marbella, Spain. B2B: sells to restaurants, hotels, bars.' The actual site at barcoopbevy.com is Barcoop Bevy, a B2C all-natural cocktail mixer brand made in Charleston, South Carolina. The two are different businesses. The brief was assembled against the LIVE site (HTTP 200, 440 KB of HTML, ~22 verified image URLs), not against the design_brief. The web-designer must resolve this with the operator before composing; the brand_brief is grounded in what barcoopbevy.com actually is.",
+    "No research-agent scrapes were persisted to Supabase. The research-agent profile's .env does not contain SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY (verified: grep -i supabase on .env and all .env.bak* returned no matches). Every `cloak_fetch.py --save` call returned 'SAVE ERROR: missing SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY' (exit 0, error printed). As a result `scrapes_id` is null on every source_record, the brief is grounded in /tmp curl captures (440 KB, 113 KB, 99 KB) plus web_extract summaries, and research_scrapes_ids is omitted. Raw HTML and image URLs are reproducible from the URLs listed above — no Cloak-stored provenance to consult.",
+    "LinkedIn not exercised. The site has no LinkedIn link. The brand's LinkedIn presence is unverified.",
+    "Instagram not exercised. The handle @barcoopbevy is verified on the site (footer + contact + about + shop), but the grid was not opened via logged-in Cloak. Captions and image_url are null. The single social_highlights.instagram entry is a placeholder, not a fetched post.",
+    "Twitter / X not exercised. The handle @BarcoopBevy is verified on the site footer, but no tweets were fetched.",
+    "Facebook not exercised. The link facebook.com/barcoopbevy is verified but content was not fetched.",
+    "Stripe.com was fetched (web_extract) but the response was truncated at the data_pipeline section. The reference brief uses the observed structure: '1.68824729% of world GDP processed', '1.9B US$ payment volume in 2025', '500M+ API requests/day', '10k+ API requests/second', a modular product family (Payments / Connect / Billing / Radar / Tax / Sigma / Terminal / Issuing / Climate), case-study proof points (Hertz, URBN, Instacart, Le Monde), and a usage-based pricing model. No claims from the truncated sections are used. Reference is for structural clarity and confident typography, NOT for visual identity (per the operator's note).",
+    "Wholesale price ranges are not listed on /wholesale. The price_range field is 'not publicly listed (PDF catalog available via Press Kit link)'. Do not invent case-pack or distributor pricing.",
+    "The /faq route on the live site returns a 404 ('Page Not Found') — the actual FAQ content is served at /about#faq. This was confirmed by web_extract on the canonical /about page. Worth flagging because the design pass should not link to /faq.",
+    "Press-kit PDF (https://cdn.prod.website-files.com/6614094ec46a8c211ee3efac/666ca14fc85a42f3d50669f6_BarcoopBevy_PressKit.pdf) is a binary asset Cloak / web_extract cannot parse in this run (HTTP 200, content_type application/pdf). The press contact, awards, and editor coverage are recorded above from /press, not from the PDF.",
+    "No customer testimonials exist on the live site. testimonials is intentionally empty per the honesty rule. The site carries press coverage (NY Times Wirecutter 'The Best Margarita Mixes', Boston Globe 'A fresh take on a Bloody Mary mix', Authority Magazine '5 Things We Wish We Had Known As A Couple Doing Business Together', SFA 'Product of the Year — Beverage' 2024, SOFI Gold 2024, Silver SIP 2023, SOFI New Product 2018). These are press hits, not testimonials; do not rewrite as customer quotes.",
+    "Brand-owned photo license note: every photo in real_photo_inventory is served from Webflow's CDN (cdn.prod.website-files.com/6614094ec46a8c211ee3efac/...) and is brand-owned per the site's design ownership. The /press page links to a press kit; journalists are expected to download. License is recorded as 'brand-owned' on every entry. If a downstream agent needs redistribution rights they should request a written license from press contact Ashley Mills (ashley@goldenword.co)."
+  ]
+}

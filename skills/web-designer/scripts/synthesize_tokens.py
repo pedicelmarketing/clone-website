@@ -293,6 +293,26 @@ def css_family(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
+def _hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
+    h = hex_color.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))  # type: ignore[return-value]
+
+
+def _relative_luminance(hex_color: str) -> float:
+    """WCAG relative luminance. Used to pick fg/bg by measurement, not position."""
+    parts = []
+    for channel in _hex_to_rgb(hex_color):
+        c = channel / 255
+        parts.append(c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4)
+    return 0.2126 * parts[0] + 0.7152 * parts[1] + 0.0722 * parts[2]
+
+
+def _contrast_ratio(fg_hex: str, bg_hex: str) -> float:
+    a, b = _relative_luminance(fg_hex), _relative_luminance(bg_hex)
+    hi, lo = max(a, b), min(a, b)
+    return round((hi + 0.05) / (lo + 0.05), 2)
+
+
 def css_family_chain(primary: str, role: str) -> str:
     """Return a CSS `font-family` declaration value with a real fallback chain.
 
@@ -488,6 +508,30 @@ def render_css(
         lines.append(f"  --color-{name}: {colors[name]};")
     for index, value in enumerate(neutrals):
         lines.append(f"  --color-neutral-{index}: {value};")
+
+    # SEMANTIC foreground/background, chosen by MEASURED LUMINANCE.
+    #
+    # Consumers previously assumed --color-neutral-0 was the darkest neutral and
+    # used it as body text. That assumption is not safe: the brand brief's
+    # neutrals[] array has no guaranteed ordering. One brand's neutral-0 was
+    # #0b0c0d (near-black, fine); another's was #FBF7E9 (near-white cream),
+    # which rendered headings at 1.07:1 on white — effectively invisible.
+    #
+    # So derive them instead of trusting position, and guarantee WCAG AA. If the
+    # brand's own neutrals cannot reach 4.5:1, fall back to near-black/near-white
+    # and record it, rather than shipping illegible text in the brand's name.
+    _lum_sorted = sorted(neutrals, key=_relative_luminance)
+    fg, bg = _lum_sorted[0], _lum_sorted[-1]
+    fg_note = "darkest and lightest brand neutrals"
+    if _contrast_ratio(fg, bg) < 4.5:
+        fg, bg = "#111111", "#ffffff"
+        fg_note = ("brand neutrals could not reach 4.5:1 "
+                   f"(best was {_contrast_ratio(_lum_sorted[0], _lum_sorted[-1])}:1); "
+                   "substituted near-black on white")
+    lines.append(f"  --color-fg: {fg};")
+    lines.append(f"  --color-bg: {bg};")
+    lines.append(f"  /* fg/bg chosen by luminance ({fg_note}); "
+                 f"contrast {_contrast_ratio(fg, bg)}:1 */")
     lines.append("")
     # Emit each font-family token as a real fallback chain, not a bare name.
     # A single-family declaration breaks silently when the primary face fails

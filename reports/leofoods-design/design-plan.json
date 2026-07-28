@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "leo-foods-redesign",
+  "generated_at": "2026-07-28T00:10:40.822123Z",
+  "model": "MiniMax-M3",
+  "layout_thesis": {
+    "statement": "The redesign is a single long pour \u2014 a vertical scroll that reads like one continuous bartender narrative, anchored by a giant typographic wordmark in chicken-coop yellow on cream, with bottle photography and 2:1 ratio cues woven through the flow rather than stacked into a product-grid product.",
+    "audience": "American home drinkers, 28\u201355, who buy spirits and want a good cocktail without buying eight bottles of stuff. They shop online, read labels, and care about real ingredients but don't want a fine-dining lecture.",
+    "job_to_be_done": "Help a visitor decide which mixer to try tonight \u2014 and feel good about the pour \u2014 without bouncing through a generic three-column feature wall.",
+    "why_this_not_generic": "Generic cocktail sites stack a hero, a three-column 'why us' grid, a product wall, and a footer of awards. Barcoop Bevy is warmer, more bartender-confessional, and structurally more like a magazine spread than a SaaS landing page. The design leads with the founders' names and a recipe promise, not a value-prop sentence, and treats the seven mixers as seven moods, not seven SKUs."
+  },
+  "sections": [
+    {
+      "id": "wordmark-hero",
+      "order": 1,
+      "nav_label": null,
+      "in_nav": false,
+      "purpose": "Open on the brand's own typographic mark \u2014 a giant 'Barcoop Bevy' set in chicken-coop yellow against cream \u2014 instead of a stock-photo beach cocktail.",
+      "component": "full-bleed type-only hero with one-line subhead and a single recipe teaser",
+      "emphasis": "hero",
+      "source_brief_fields": [
+        "palette_from_logo.primary",
+        "palette_from_logo.neutrals",
+        "typography_recommendation.display_family",
+        "voice_and_tone.example_lines",
+        "voice_and_tone.notes"
+      ],
+      "rationale": "The brief is explicit that the logo IS the typography, not an asset. Lead with type to honor that and to reject the agency-SaaS hero pattern."
+    },
+    {
+      "id": "manifesto-pour",
+      "order": 2,
+      "nav_label": "the bev",
+      "in_nav": true,
+      "purpose": "A two-line manifesto in the brand's lowercase voice, then a 'just add spirit' command line \u2014 no icons, no feature grid.",
+      "component": "asymmetric two-column copy block, oversized display type left, supporting paragraph right",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.example_lines",
+        "voice_and_tone.notes",
+        "voice_and_tone.banned_words"
+      ],
+      "rationale": "Banned words rule out the usual value-prop sentence. The brand's own lines ('Just add spirit', 'Made by bartenders. Made in Charleston, South Carolina.') are stronger than anything a copywriter would generate \u2014 they earn the first long copy block."
+    },
+    {
+      "id": "seven-moods-bottle-rail",
+      "order": 3,
+      "nav_label": "mixers",
+      "in_nav": true,
+      "purpose": "Show all seven mixers as a horizontal bottle-rail rather than a 3-up product grid. Each bottle carries its mood, not its SKU code.",
+      "component": "horizontally scrolling bottle rail with mood labels under each (Bold, Bright, Smoky, Cool, Sharp, Juicy, Sunny)",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "service_facts",
+        "real_photo_inventory"
+      ],
+      "rationale": "The real_photo_inventory contains all seven bottle-shadow PNGs already drop-shadowed and brand-owned. A rail honors them as objects on a bar shelf, not as a faceted product wall."
+    },
+    {
+      "id": "founder-confessional",
+      "order": 4,
+      "nav_label": "who made it",
+      "in_nav": true,
+      "purpose": "Use the verified founders' portrait and a first-person paragraph so the 'made by bartenders' claim is provable, not decorative.",
+      "component": "portrait-left, narrative-right with a small signature set in the display face",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "voice_and_tone.example_lines",
+        "voice_and_tone.favorite_words"
+      ],
+      "rationale": "Brand_donts forbids invented testimonials and stock photography. The founders are real and named in the alt text \u2014 use that."
+    },
+    {
+      "id": "ratio-ritual",
+      "order": 5,
+      "nav_label": "how to pour",
+      "in_nav": true,
+      "purpose": "Teach the 2:1 (or 4:1 for Bloody Mary) ritual with a giant typographic ratio as art, not a diagram.",
+      "component": "oversized type composition: '2 parts mixer : 1 part spirit' with a bottle-to-glass suggestion drawn in type",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "service_facts",
+        "voice_and_tone.example_lines"
+      ],
+      "rationale": "The 2:1 standard is on every product page; brand_donts flags breaking it. Present it as a brand law, not instructions."
+    },
+    {
+      "id": "recipe-spread",
+      "order": 6,
+      "nav_label": "recipes",
+      "in_nav": true,
+      "purpose": "A magazine-style recipe spread with finished-drink photography from the inventory, tagged by mixer and spirit.",
+      "component": "two-page editorial layout: full-bleed drink photo on left, recipe body on right, repeating three times down the scroll",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "service_facts",
+        "real_photo_inventory"
+      ],
+      "rationale": "Recipes are the brand's primary content engine per the brief. Layout them as editorial, not a card grid."
+    },
+    {
+      "id": "real-ingredient-claim",
+      "order": 7,
+      "nav_label": "what's inside",
+      "in_nav": true,
+      "purpose": "Make the 'REAL Ingredients Only' line the typographic climax of the page \u2014 oversize, single word in all-caps as the brief specifies \u2014 over a cream-on-yellow ingredient flat-lay.",
+      "component": "full-bleed image with one-word overlay treatment",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.notes",
+        "real_photo_inventory",
+        "palette_from_logo.primary"
+      ],
+      "rationale": "voice_and_tone.notes explicitly allow ALL-CAPS on the word 'REAL' as a typographic accent. This is the moment to use it."
+    },
+    {
+      "id": "press-strip",
+      "order": 8,
+      "nav_label": "press",
+      "in_nav": true,
+      "purpose": "A horizontal press log strip: NY Times Wirecutter, Boston Globe, Authority Magazine, Specialty Food Association, Golf.com, StyleBlueprint. No invented customer quotes.",
+      "component": "single-row marquee of publication wordmarks in the muted brown neutral",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "limitations"
+      ],
+      "rationale": "limitations forbids inventing testimonials; the press list is real and was extracted from /press."
+    },
+    {
+      "id": "shop-entry",
+      "order": 9,
+      "nav_label": "shop",
+      "in_nav": true,
+      "purpose": "A single teal-green CTA panel against the warm yellow field \u2014 the only place the cool accent appears at scale.",
+      "component": "compact shop entry with bottle row and one CTA: 'pour one tonight'",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "service_facts",
+        "palette_from_logo.accent"
+      ],
+      "rationale": "The teal-green #259E7E is the only cool color on the site. The brief calls for it used 'sparingly for links and CTAs against the warm yellow field' \u2014 concentrating it here preserves that rule."
+    },
+    {
+      "id": "footer-colophon",
+      "order": 10,
+      "nav_label": null,
+      "in_nav": false,
+      "purpose": "Footer with the address (Charleston, SC), sister-brand pointer, distributor list for trade, and the press contact.",
+      "component": "compact footer, no utility nav repetition",
+      "emphasis": "minor",
+      "source_brief_fields": [
+        "service_facts",
+        "limitations"
+      ],
+      "rationale": "Trade routes exist but aren't voice-defining per the brief. List them once, in muted brown, no B2B framing."
+    }
+  ],
+  "signature_element": {
+    "name": "The Ratio Wall",
+    "description": "A single typographic composition that takes the phrase '2 parts mixer : 1 part spirit' and renders it at near-full-viewport width in the display serif, set against the chicken-coop yellow field, with the colon enlarged to the height of the numerals \u2014 turning the brand's mixing law into wall art rather than an instruction panel.",
+    "why_it_fits_brand": "Barcoop Bevy's whole product story is the pour \u2014 the 2:1 is on every product page and the brief flags it as a brand standard. Treating the ratio as a typographic monument both teaches the use and gives the page a singular visual moment that no other cocktail brand owns. It also sidesteps the forbidden three-icon-feature-grid pattern.",
+    "implementation_note": "Set in the Fraunces (OFL) substitute for Recoleta, weight ~600, optical-size axis set high so the strokes stay chunky at 18vw. Color: warm brown #765F2C on the brand yellow #FFC517. Underneath, a quiet repeating tag line in the body sans: 'or 4 parts to 1 for Bloody Mary \u2014 same rule, more punch.' No icon, no illustration."
+  },
+  "motion_vocabulary": {
+    "register": "restrained",
+    "effects": [
+      "fade-in on scroll for each section, 240ms ease-out, 12px rise",
+      "bottle rail horizontal scroll-snap on touch, free scroll on desktop",
+      "oversized display headlines hold a single subtle 6px vertical drift on idle to feel like a printed page breathing",
+      "CTA teal panel: 180ms background-color shift on hover from #259E7E to #1F8768, no scale transform",
+      "recipe spread photo: slow 1.05x scale on scroll-into-view, 800ms ease"
+    ],
+    "rationale": "The brand voice is plain and low-key; motion should match. No parallax theatrics, no bouncy easings, no gradient animations. The page reads like a magazine and moves like one."
+  },
+  "copy_blocks": [
+    {
+      "section_id": "wordmark-hero",
+      "role": "headline",
+      "text": "Barcoop Bevy",
+      "source_brief_fields": [
+        "palette_from_logo.primary",
+        "voice_and_tone.notes"
+      ]
+    },
+    {
+      "section_id": "wordmark-hero",
+      "role": "subhead",
+      "text": "all-natural cocktail mixers, made by bartenders in Charleston, South Carolina.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.notes"
+      ]
+    },
+    {
+      "section_id": "manifesto-pour",
+      "role": "headline",
+      "text": "real ingredients, real people, real easy.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.notes"
+      ]
+    },
+    {
+      "section_id": "manifesto-pour",
+      "role": "body",
+      "text": "No artificial ingredients, no preservatives, no high fructose corn sugar. Just real ingredients made by real people in Charleston. Just add spirit.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "seven-moods-bottle-rail",
+      "role": "caption",
+      "text": "Bold \u2014 Bright \u2014 Smoky \u2014 Cool \u2014 Sharp \u2014 Juicy \u2014 Sunny",
+      "source_brief_fields": [
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "founder-confessional",
+      "role": "headline",
+      "text": "made by bartenders.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "founder-confessional",
+      "role": "body",
+      "text": "We're Joe and MariElena Raya. We built these mixers behind our own bar because the bottles on the shelf weren't good enough for our regulars. Now they're yours too.",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "ratio-ritual",
+      "role": "headline",
+      "text": "2 parts mixer : 1 part spirit",
+      "source_brief_fields": [
+        "service_facts",
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "ratio-ritual",
+      "role": "caption",
+      "text": "or 4 parts to 1 for Bloody Mary \u2014 same rule, more punch.",
+      "source_brief_fields": [
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "real-ingredient-claim",
+      "role": "headline",
+      "text": "REAL",
+      "source_brief_fields": [
+        "voice_and_tone.notes",
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "real-ingredient-claim",
+      "role": "subhead",
+      "text": "ingredients only.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "press-strip",
+      "role": "caption",
+      "text": "NY Times Wirecutter \u00b7 Boston Globe \u00b7 Authority Magazine \u00b7 Specialty Food Association \u00b7 Golf.com \u00b7 StyleBlueprint",
+      "source_brief_fields": [
+        "limitations"
+      ]
+    },
+    {
+      "section_id": "shop-entry",
+      "role": "cta",
+      "text": "pour one tonight \u2014 $12 a bottle.",
+      "source_brief_fields": [
+        "service_facts",
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "footer-colophon",
+      "role": "body",
+      "text": "Made in Charleston, SC. Wholesale: drink@barcoopbevy.com. Press: Ashley Mills, ashley@goldenword.co.",
+      "source_brief_fields": [
+        "service_facts",
+        "limitations"
+      ]
+    }
+  ],
+  "skipped_sections": [
+    {
+      "id": "testimonials",
+      "reason": "The live site has no on-page customer quotes; the press list is editor coverage, not testimonials. brand_donts and the limitations field explicitly forbid inventing testimonials.",
+      "missing_brief_fields": [
+        "testimonials"
+      ]
+    },
+    {
+      "id": "instagram-grid",
+      "reason": "The social_highlights.instagram entry is a placeholder; no posts were fetched and captions are null. Cannot lay out a grid without verified image_url values.",
+      "missing_brief_fields": [
+        "social_highlights.instagram"
+      ]
+    },
+    {
+      "id": "linkedin-section",
+      "reason": "The site has no LinkedIn link and the platform was not exercised in this run.",
+      "missing_brief_fields": [
+        "social_highlights.linkedin"
+      ]
+    },
+    {
+      "id": "faq-page",
+      "reason": "The /faq route on the live site returns a 404; FAQ content lives at /about#faq. Building a standalone /faq section would link to a broken route.",
+      "missing_brief_fields": [
+        "limitations"
+      ]
+    },
+    {
+      "id": "marbella-eu-stories",
+      "reason": "The operator's design_brief referenced Marbella, Spain and EU presence. The actual site makes no reference to Spain, Marbella, the EU, or any non-US geography. Including EU stories would invent facts.",
+      "missing_brief_fields": [
+        "limitations"
+      ]
+    },
+    {
+      "id": "wholesale-pricing-table",
+      "reason": "Wholesale price ranges are not listed on /wholesale; case-pack and distributor pricing are not publicly listed.",
+      "missing_brief_fields": [
+        "service_facts"
+      ]
+    },
+    {
+      "id": "press-kit-deep-dive",
+      "reason": "The press kit PDF returned content_type application/pdf which Cloak cannot parse. Awards and editor coverage are recorded from /press but the PDF body is unknown.",
+      "missing_brief_fields": [
+        "limitations"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "Lead the page with the wordmark as a typographic composition, not a hero image.",
+      "alternatives_considered": [
+        "Bottle hero shot as a centerpiece",
+        "Founders' portrait as hero",
+        "Stock cocktail photo"
+      ],
+      "why_chosen": "Brand brief states the logo IS the typography and there is no separate image logo. brand_donts forbids stock photography. Leading with type honors the actual asset and avoids generic stock-photo layout."
+    },
+    {
+      "decision": "Replace the conventional three-icon feature grid with a manifesto + ratio wall.",
+      "alternatives_considered": [
+        "Three-column icon feature grid (real ingredients / easy / bartender-made)",
+        "Four-column variant with awards row"
+      ],
+      "why_chosen": "The forbidden-default list explicitly bans three-column feature grids with icons. The 2:1 ratio is a brand-standard that doubles as design content."
+    },
+    {
+      "decision": "Use Fraunces (OFL) as the display family instead of Recoleta (paid Klim).",
+      "alternatives_considered": [
+        "Vendoring Recoleta directly",
+        "Using Inter for display as well as body"
+      ],
+      "why_chosen": "typography_recommendation.license_notes marks Recoleta as paid and not to be vendored. Inter-for-display is explicitly called out as the agency look the brand is NOT. Fraunces is the named OFL substitute with the right humanist serif character."
+    },
+    {
+      "decision": "Lay the seven mixers as a horizontal bottle rail with mood labels, not as a faceted product grid.",
+      "alternatives_considered": [
+        "3-up responsive product grid",
+        "4-up grid mirroring the typical Shopify collection"
+      ],
+      "why_chosen": "The brief flags the seven products as seven moods in the manifesto and supplies real drop-shadowed bottle PNGs. A rail reads them as objects on a bar shelf and varies the order from a typical product wall."
+    },
+    {
+      "decision": "Use the single word 'REAL' as an all-caps typographic accent on the ingredients claim.",
+      "alternatives_considered": [
+        "A sentence-case 'real ingredients only' line consistent with the rest of the page",
+        "An icon-led ingredients badge"
+      ],
+      "why_chosen": "voice_and_tone.notes explicitly allows ALL-CAPS on the keyword 'REAL' as a typographic accent, not as a sentence-case violation. This is the one place the brand permits that flourish."
+    },
+    {
+      "decision": "Reserve teal-green #259E7E for the single shop-entry CTA panel.",
+      "alternatives_considered": [
+        "Distributing teal across links, tags, and buttons",
+        "Replacing yellow as the dominant field color"
+      ],
+      "why_chosen": "palette_from_logo.rationale states the teal is the only cool color on the site and should appear sparingly against the warm yellow field. Concentrating it at the shop entry keeps the page predominantly sunny and makes the CTA unmistakable."
+    }
+  ]
+}

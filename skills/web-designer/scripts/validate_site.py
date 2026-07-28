@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""8-gate validation harness for a composed static site directory.
+"""10-gate validation harness for a composed static site directory.
 
 Implements the gates declared in research/workflow-design.md §4 and the
 site-cloner SKILL.md, scoped to a *composed* static site (post phase-2 design
@@ -72,13 +72,18 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 
 
-SCHEMA_VERSION = "1.0"
-GATE_VERSION = "8-gate-v1.0"
+SCHEMA_VERSION = "1.1"
+GATE_VERSION = "10-gate-v1.1"
 
 # Default thresholds from research/workflow-design.md §4.
 PERF_THRESHOLDS = {"performance": 90, "accessibility": 95, "best_practices": 95, "seo": 95}
 DEFAULT_VIEWPORTS = [320, 768, 1024, 1440]
 DEFAULT_TIMEOUT = 30  # seconds per gate
+# Default JS bundle budget for the Next.js renderer (Gate 10). Measured as
+# total gzipped bytes of every .js file under _next/static/. Real-but-tight
+# ceiling matching the previous M6c-3 deliverable (373 KB gzipped → FAIL
+# until we get it under); 300 KB is the realistic 10x-over-static target.
+DEFAULT_BUNDLE_BUDGET_KB = 300
 
 
 # ---------------------------------------------------------------------------
@@ -1247,6 +1252,298 @@ def gate_8_token_discipline(server: ServerHandle, routes: list[str]) -> GateResu
 
 
 # ---------------------------------------------------------------------------
+# Renderer-build plumbing (gates 9 + 10) — only when the site dir is a Next.js
+# static export. These gates are SKIPPED (→ NOT-EXERCISED) for the static HTML
+# composer (`compose_site.py` output), which has no `_next/` and no build step.
+# ---------------------------------------------------------------------------
+
+def is_nextjs_export(site_dir: str) -> bool:
+    """True iff the site directory looks like a `next build` static export.
+
+    The Next.js renderer (renderer/) emits `out/` with `_next/static/{chunks,
+    css, media, <buildId>}/`. The static composer (compose_site.py) emits
+    plain `index.html + styles.css + tokens.css` and never has `_next/`. So a
+    direct `_next/` check is a reliable, no-config detector.
+    """
+    return os.path.isdir(os.path.join(site_dir, "_next"))
+
+
+def _next_static_dir(site_dir: str) -> str:
+    return os.path.join(site_dir, "_next", "static")
+
+
+def find_package_root_for(site_dir: str) -> str | None:
+    """Walk upward from site_dir to find a package.json. The Next.js project
+    root is the directory containing the next build setup (`next.config.ts`).
+
+    Next.js's `out/` is a sibling of `.next/`, so the renderer project root is
+    `parent(out_dir)` — i.e. the directory passed as `--out` to `next build`.
+    We accept `next.config.{js,ts,mjs,cjs}` as the canonical marker, but the
+    plain presence of `package.json` is enough for `npm run build` to work.
+    """
+    cur = os.path.abspath(site_dir)
+    for _ in range(6):  # don't walk past the root
+        if os.path.isfile(os.path.join(cur, "package.json")):
+            return cur
+        parent = os.path.dirname(cur)
+        if parent == cur:
+            return None
+        cur = parent
+    return None
+
+
+# ---------------------------------------------------------------------------
+# Gate 9 — Build (Next.js)
+# ---------------------------------------------------------------------------
+
+def gate_9_build(site_dir: str, renderer_root: str | None, timeout: float) -> GateResult:
+    """Run `npm run build` in the Next.js renderer root and check exit 0.
+
+    ONLY fires when the site dir is a Next.js static export. Otherwise returns
+    NOT-EXERCISED with a clear "site is not a Next.js export" reason — the
+    static HTML composer (compose_site.py output) doesn't have a build step
+    and gating it on `npm run build` would be a false positive.
+
+    Positive-evidence-only verdict rules:
+      - PASS:           npm run build exited 0 AND we parsed `exit_code` from
+                        the result. (We don't try to *parse* the build output;
+                        exit code is the canonical Next.js build signal.)
+      - FAIL:           npm run build exited non-zero. Stdout/stderr tails are
+                        recorded so the report shows what broke.
+      - NOT-EXERCISED:  npm not on PATH, no renderer root, or any other
+                        positive-evidence failure.
+    """
+    if not is_nextjs_export(site_dir):
+        return GateResult(
+            id="9", name="Build (Next.js)",
+            verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary="Site is not a Next.js static export (no _next/ directory); "
+                     "build gate not applicable.",
+            notes=["Gate 9 is Only-On-Exports. The static HTML composer "
+                   "(compose_site.py) has no build step.",
+                   "To run this gate, point validate_site.py at a Next.js `out/` directory."],
+            observations={"applicable": False, "site_dir": site_dir},
+        )
+
+    if renderer_root is None:
+        return GateResult(
+            id="9", name="Build (Next.js)",
+            verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary="Next.js export detected but no renderer project root found "
+                     "(no package.json within 6 levels of site_dir).",
+            notes=["Pass --renderer-root to point at the Next.js project."],
+            observations={"applicable": True, "renderer_root": None},
+        )
+
+    if shutil.which("npm") is None:
+        return GateResult(
+            id="9", name="Build (Next.js)",
+            verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary="npm not on PATH; cannot run `npm run build`.",
+            notes=["Install Node.js + npm to exercise this gate."],
+            observations={"applicable": True, "renderer_root": renderer_root, "tool": "npm missing"},
+        )
+
+    build_log = os.path.join(os.path.dirname(renderer_root), "build-stdout.log")
+    try:
+        proc = subprocess.run(
+            ["npm", "run", "build"],
+            cwd=renderer_root,
+            capture_output=True, text=True, timeout=timeout * 6,
+        )
+        # Persist the full output for the report even on success — the gated
+        # outcome is exit 0, but the bytes are useful for downstream debugging.
+        try:
+            with open(build_log, "w", encoding="utf-8") as f:
+                f.write("=== stdout ===\n" + (proc.stdout or ""))
+                f.write("\n=== stderr ===\n" + (proc.stderr or ""))
+        except OSError:
+            pass
+        if proc.returncode == 0:
+            return GateResult(
+                id="9", name="Build (Next.js)",
+                verdict="PASS",
+                evidence_basis="DOM+assets confirmed",
+                summary=f"`npm run build` exited 0 in {renderer_root}.",
+                notes=[f"Build log: {build_log}"],
+                observations={
+                    "applicable": True,
+                    "renderer_root": renderer_root,
+                    "exit_code": 0,
+                    "build_log": build_log,
+                },
+            )
+        return GateResult(
+            id="9", name="Build (Next.js)",
+            verdict="FAIL",
+            evidence_basis="DOM+assets confirmed",
+            summary=f"`npm run build` exited {proc.returncode} in {renderer_root}.",
+            notes=[
+                f"Build log: {build_log}",
+                f"stdout tail: ...{proc.stdout[-400:] if proc.stdout else ''}",
+                f"stderr tail: ...{proc.stderr[-400:] if proc.stderr else ''}",
+            ],
+            observations={
+                "applicable": True,
+                "renderer_root": renderer_root,
+                "exit_code": proc.returncode,
+                "build_log": build_log,
+            },
+            error=f"npm run build exit {proc.returncode}",
+        )
+    except subprocess.TimeoutExpired:
+        return GateResult(
+            id="9", name="Build (Next.js)",
+            verdict="FAIL",
+            evidence_basis="DOM+assets confirmed",
+            summary=f"`npm run build` timed out after {timeout * 6}s in {renderer_root}.",
+            observations={"applicable": True, "renderer_root": renderer_root,
+                          "exit_code": -1, "error": "timeout"},
+            error="npm run build timed out",
+        )
+    except Exception as e:
+        return GateResult(
+            id="9", name="Build (Next.js)",
+            verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary=f"`npm run build` could not be invoked: {e}",
+            observations={"applicable": True, "renderer_root": renderer_root,
+                          "error": str(e)},
+            error=str(e),
+        )
+
+
+# ---------------------------------------------------------------------------
+# Gate 10 — Bundle (Next.js JS budget)
+# ---------------------------------------------------------------------------
+
+def _measure_gzipped_js(static_dir: str) -> tuple[int, list[dict]]:
+    """Sum gzipped sizes of every .js file under static_dir. Returns
+    (total_gzipped_bytes, per_file_breakdown). If anything goes wrong
+    on a single file the per-file record gets an `error` key and we
+    continue — we still want as much positive evidence as we can get.
+    """
+    import gzip
+    total = 0
+    breakdown: list[dict] = []
+    if not os.path.isdir(static_dir):
+        return (0, [])
+    for root, _dirs, files in os.walk(static_dir):
+        for fname in files:
+            if not fname.endswith(".js"):
+                continue
+            path = os.path.join(root, fname)
+            try:
+                with open(path, "rb") as f:
+                    raw = f.read()
+                gz = gzip.compress(raw)
+                size_gz = len(gz)
+                total += size_gz
+                breakdown.append({
+                    "path": os.path.relpath(path, static_dir),
+                    "raw_bytes": len(raw),
+                    "gzipped_bytes": size_gz,
+                })
+            except Exception as e:
+                breakdown.append({"path": os.path.relpath(path, static_dir),
+                                  "error": str(e)})
+    breakdown.sort(key=lambda r: r.get("gzipped_bytes", 0), reverse=True)
+    return (total, breakdown)
+
+
+def gate_10_bundle(site_dir: str, bundle_budget_kb: int) -> GateResult:
+    """Total gzipped JS in _next/static must be under the budget.
+
+    Only fires on a Next.js export. Returns NOT-EXERCISED otherwise so the
+    static composer path stays green.
+
+    Positive-evidence-only rules:
+      - PASS:           we measured the bytes, summing gzipped sizes of every
+                        .js file under _next/static/, and the total is under
+                        the budget.
+      - FAIL:           we measured and the total exceeded the budget.
+                        The actual number is reported either way so the reader
+                        can see how close (or far) the page is to the target.
+      - NOT-EXERCISED:  no _next/static/ directory (or empty), so we have no
+                        numbers to report.
+    """
+    if not is_nextjs_export(site_dir):
+        return GateResult(
+            id="10", name="Bundle (Next.js)",
+            verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary="Site is not a Next.js static export; bundle gate not applicable.",
+            notes=["Gate 10 is Only-On-Exports. The static HTML composer does not "
+                   "emit a JS bundle."],
+            observations={"applicable": False, "site_dir": site_dir},
+        )
+
+    static_dir = _next_static_dir(site_dir)
+    if not os.path.isdir(static_dir):
+        return GateResult(
+            id="10", name="Bundle (Next.js)",
+            verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary=f"_next/static/ not found at {static_dir}. Nothing to measure.",
+            notes=["Re-run `npm run build` to emit the static bundle."],
+            observations={"applicable": True, "static_dir": static_dir,
+                          "file_count": 0},
+        )
+
+    total_bytes, breakdown = _measure_gzipped_js(static_dir)
+    if not breakdown:
+        return GateResult(
+            id="10", name="Bundle (Next.js)",
+            verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary=f"No .js files found under {static_dir}.",
+            notes=["If this is unexpected, re-run `npm run build`."],
+            observations={"applicable": True, "static_dir": static_dir,
+                          "file_count": 0},
+        )
+
+    budget_bytes = bundle_budget_kb * 1024
+    total_kb = total_bytes / 1024.0
+    # Top 5 biggest files for the report — the median user is not going to
+    # scroll past that, and they tell the story of which chunks dominate.
+    top = breakdown[:5]
+    observations = {
+        "applicable": True,
+        "static_dir": static_dir,
+        "file_count": len(breakdown),
+        "total_gzipped_bytes": total_bytes,
+        "total_gzipped_kb": round(total_kb, 1),
+        "budget_kb": bundle_budget_kb,
+        "top_files": top,
+    }
+    if total_bytes > budget_bytes:
+        return GateResult(
+            id="10", name="Bundle (Next.js)",
+            verdict="FAIL",
+            evidence_basis="DOM+assets confirmed",
+            summary=f"Total gzipped JS is {total_kb:.1f} KB, over the {bundle_budget_kb} KB "
+                     f"budget (by {total_bytes - budget_bytes} bytes across {len(breakdown)} file(s)).",
+            notes=[f"Top 5: " + ", ".join(
+                f"{f['path']}={f.get('gzipped_bytes', 0)//1024}KB"
+                for f in top if "gzipped_bytes" in f)],
+            observations=observations,
+            error=f"bundle {total_kb:.1f} KB > budget {bundle_budget_kb} KB",
+        )
+    return GateResult(
+        id="10", name="Bundle (Next.js)",
+        verdict="PASS",
+        evidence_basis="DOM+assets confirmed",
+        summary=f"Total gzipped JS is {total_kb:.1f} KB across {len(breakdown)} file(s), "
+                 f"under the {bundle_budget_kb} KB budget.",
+        notes=[],
+        observations=observations,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Acceptance tier
 # ---------------------------------------------------------------------------
 
@@ -1259,29 +1556,48 @@ def compute_tier(results: list[GateResult]) -> tuple[str, str]:
     that requires *every* gate PASS is `Validated`; any NOT-EXERCISED gate caps
     the tier at `Partial` so a reader can never mistake "axe crashed" for
     "axe found 0 violations".
+
+    EXCEPTION: gates 9 and 10 (Next.js build + bundle) are conditional on the
+    site being a Next.js static export. When that export is not present, the
+    gates are *not applicable* (observations.applicable == False) and report
+    NOT-EXERCISED with a clear "not a Next.js export" reason. In that case
+    the gate is excluded from the tier cap — its verdict is still visible in
+    the report (so the reader sees the gate was considered and skipped), but
+    a site that doesn't carry a JS build is not penalized for not running
+    `npm run build`. This preserves the existing invariant that the static
+    HTML composer path can still reach `Validated` even when the schema
+    bumps from 8 to 10 gates.
     """
+    # Identify which NOT-EXERCISED gates are merely "not applicable" because
+    # the site is not a Next.js export. These do NOT cap the tier.
+    def _is_inapplicable_not_exercised(r: GateResult) -> bool:
+        if r.verdict != "NOT-EXERCISED" or r.id not in ("9", "10"):
+            return False
+        return (r.observations or {}).get("applicable") is False
+
+    applicable_results = [r for r in results if not _is_inapplicable_not_exercised(r)]
     by_id = {r.id: r for r in results}
-    verdicts = [r.verdict for r in results]
-    fails = [r.id for r in results if r.verdict == "FAIL"]
-    notex = [r.id for r in results if r.verdict == "NOT-EXERCISED"]
+    verdicts = [r.verdict for r in applicable_results]
+    fails = [r.id for r in applicable_results if r.verdict == "FAIL"]
+    notex = [r.id for r in applicable_results if r.verdict == "NOT-EXERCISED"]
 
     if fails:
         return ("Partial", f"Gate(s) FAIL: {','.join(fails)}. See per-gate detail for evidence.")
 
     if not notex:
-        return ("Validated", "Every gate ran and produced positive evidence; "
+        return ("Validated", "Every applicable gate ran and produced positive evidence; "
                               "validation complete for declared scope.")
 
-    # At least one gate did not produce positive evidence. We refuse to claim
-    # "Validated" because that tier is reserved for the all-PASS case.
-    # Distinguish:
+    # At least one applicable gate did not produce positive evidence. We refuse
+    # to claim "Validated" because that tier is reserved for the all-applicable-
+    # PASS case. Distinguish:
     #  - "First-render"  : no real-browser evidence at all (a11y AND perf NOT-EXERCISED)
     #  - "Offline-validated" : DOM/CSS/HTTP checks passed, some real-browser check present
     #  - "Partial"        : a11y OR perf did not produce real numbers; the rest may have
     #                       passed, but a "Validated" label would mislead the reader
     #                       (the same trap the prior harness fell into).
-    # Per the spec: any NOT-EXERCISED caps at Partial.
-    if any(r.id in {"3", "4"} for r in results if r.verdict == "NOT-EXERCISED"):
+    # Per the spec: any NOT-EXERCISED on an applicable gate caps at Partial.
+    if any(r.id in {"3", "4"} for r in applicable_results if r.verdict == "NOT-EXERCISED"):
         return ("Partial",
                 f"Gate(s) NOT-EXERCISED: {','.join(notex)}. "
                 "A11y or perf runner did not produce positive evidence, "
@@ -1316,11 +1632,16 @@ def render_report(results: list[GateResult], site_dir: str, args: argparse.Names
     lines.append("")
     lines.append("## Declared scope")
     lines.append("")
-    lines.append(f"- Method: `validate_site.py` (8-gate harness; static Composed Site)")
+    lines.append(f"- Method: `validate_site.py` (10-gate harness; static Composed Site / Next.js export)")
     lines.append(f"- Routes: {args.routes}")
     lines.append(f"- Viewports: {args.viewports}")
     lines.append(f"- Lighthouse: {'skipped' if args.skip_lighthouse else 'enabled'}")
-    lines.append("- DOM audit settle: wait for load, then document.getAnimations() finished promises with a 3s cap")
+    lines.append("- DOM audit settle: wait for load, then document.getAnimations() finished promises with a 3s cap, then poll for two consecutive pixel-identical frames (catches JS-driven animation libraries that never register in document.getAnimations)")
+    lines.append(f"- Next.js export detected: {is_nextjs_export(site_dir)}")
+    if is_nextjs_export(site_dir):
+        lines.append(f"- Bundle budget (Gate 10): {args.bundle_budget_kb} KB gzipped JS in _next/static/")
+        renderer_root = args.renderer_root or find_package_root_for(site_dir)
+        lines.append(f"- Renderer root (Gate 9): {renderer_root or '(not found)'}")
     lines.append("")
     lines.append("## Gate results")
     lines.append("")
@@ -1500,6 +1821,17 @@ def run(args: argparse.Namespace) -> int:
         # Gate 8 — token discipline
         results.append(gate_8_token_discipline(server, routes))
 
+        # Gates 9 + 10 — Next.js renderer build + bundle budget. Only fire when
+        # the site dir is a Next.js static export (i.e. the renderer produced
+        # _next/). On the static composer path these return NOT-EXERCISED with
+        # a clear "not a Next.js export" reason so the tier math is honest.
+        renderer_root = args.renderer_root
+        if renderer_root is None and is_nextjs_export(site_dir):
+            # Default: walk upward from the site dir to find package.json.
+            renderer_root = find_package_root_for(site_dir)
+        results.append(gate_9_build(site_dir, renderer_root, args.timeout))
+        results.append(gate_10_bundle(site_dir, args.bundle_budget_kb))
+
     finally:
         server.kill()
 
@@ -1527,6 +1859,30 @@ def finalize(results: list[GateResult], site_dir: str, args: argparse.Namespace,
                     h.update(chunk)
             input_hashes[fname] = h.hexdigest()
 
+    # Next.js export: also hash the emitted JS bundle so Gate 10's measurement
+    # is protected against staleness. We hash every .js file under _next/static/
+    # and roll a single combined hash so the JSON stays small. Without this a
+    # future build that violates the budget would still be reported as a PASS
+    # if validate_site.py wasn't re-run.
+    if is_nextjs_export(site_dir):
+        static_dir = _next_static_dir(site_dir)
+        if os.path.isdir(static_dir):
+            combined = hashlib.sha256()
+            js_files = []
+            for root, _dirs, files in os.walk(static_dir):
+                for fname in files:
+                    if fname.endswith(".js"):
+                        js_files.append(os.path.join(root, fname))
+            for path in sorted(js_files):
+                combined.update(os.path.relpath(path, static_dir).encode("utf-8"))
+                with open(path, "rb") as fh:
+                    while True:
+                        chunk = fh.read(64 * 1024)
+                        if not chunk:
+                            break
+                        combined.update(chunk)
+            input_hashes["_next/static/*.js (combined)"] = combined.hexdigest()
+
     # Write gate-results.json
     with open(os.path.join(report_dir, "gate-results.json"), "w", encoding="utf-8") as f:
         json.dump({
@@ -1544,8 +1900,9 @@ def finalize(results: list[GateResult], site_dir: str, args: argparse.Namespace,
                 "input_hashes_algorithm": "sha256",
                 "input_hashes_note": (
                     "Recompute with: sha256sum <site_dir>/index.html "
-                    "<site_dir>/styles.css <site_dir>/tokens.css. If these "
-                    "change without re-running validate_site.py the gate "
+                    "<site_dir>/styles.css <site_dir>/tokens.css. If the site is a "
+                    "Next.js export, also verify the combined _next/static/*.js hash. "
+                    "If these change without re-running validate_site.py the gate "
                     "results are stale."
                 ),
             },
@@ -1577,7 +1934,7 @@ def finalize(results: list[GateResult], site_dir: str, args: argparse.Namespace,
 def parse_args(argv: list[str]) -> argparse.Namespace:
     p = argparse.ArgumentParser(
         prog="validate_site.py",
-        description="8-gate validation harness for a composed static site directory.",
+        description="10-gate validation harness for a composed static site directory.",
     )
     p.add_argument("site_dir", help="Site root directory (index.html + assets).")
     p.add_argument("-o", "--out", required=True, help="Report output directory.")
@@ -1588,6 +1945,13 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     p.add_argument("--skip-lighthouse", action="store_true", help="Skip the Lighthouse gate (and the site-wide audit that feeds it).")
     p.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT, help="Per-gate timeout in seconds (default: 30).")
     p.add_argument("--host", default="127.0.0.1", help="Bind host for the local server (default: 127.0.0.1).")
+    p.add_argument("--renderer-root", default=None,
+                   help="Path to the Next.js renderer project root (the directory containing "
+                        "package.json). Only used by Gate 9 (build). When omitted and the site "
+                        "dir is a Next.js export, validate_site.py walks upward to find package.json.")
+    p.add_argument("--bundle-budget-kb", type=int, default=DEFAULT_BUNDLE_BUDGET_KB,
+                   help=f"Gate 10 budget: total gzipped JS in _next/static/ must be under this "
+                        f"many KB (default: {DEFAULT_BUNDLE_BUDGET_KB}).")
     return p.parse_args(argv)
 
 
