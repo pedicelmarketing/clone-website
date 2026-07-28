@@ -12,6 +12,13 @@ PLAN=reports/m6-design/design-plan.json
 PLAN_OUT=reports/m6-composed-site
 FALLBACK_OUT=reports/m3-composed-site
 VALIDATION=reports/m6-validation
+# The Next.js renderer is the real deliverable; the static composer above is the
+# retired fallback path. Both get built and validated, because gates 9/10
+# (build + bundle budget) are Only-On-Exports and can ONLY be exercised against
+# a real `_next/` export — validating the composer alone left them permanently
+# NOT-EXERCISED, i.e. the renderer shipped unverified.
+RENDERER_OUT=reports/m6-renderer-site
+RENDERER_VALIDATION=reports/m6-renderer-validation
 rows=(); failures=0; warns=0
 row() { local name=$1 status=$2 detail=${3:-}; rows+=("$status|$name|$detail"); if [[ $status == FAIL ]]; then failures=$((failures+1)); elif [[ $status == WARN ]]; then warns=$((warns+1)); fi; }
 run_step() { echo; echo "==> $*"; "$@"; return $?; }
@@ -29,6 +36,53 @@ else row "pipeline: design_pass" PASS; fi
 if run_step "$PYTHON" "$SCRIPTS/compose_site.py" --brand-brief "$BRIEF" --tokens "$TOKENS" --reference-report "$REF" --design-plan "$PLAN" -o "$PLAN_OUT"; then row "pipeline: compose_site (plan)" PASS; else row "pipeline: compose_site (plan)" FAIL "command failed"; fi
 if run_step "$PYTHON" "$SCRIPTS/compose_site.py" --brand-brief "$BRIEF" --tokens "$TOKENS" --reference-report "$REF" -o "$FALLBACK_OUT"; then row "pipeline: compose_site (fallback)" PASS; else row "pipeline: compose_site (fallback)" FAIL "command failed"; fi
 if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PLAN_OUT" -o "$VALIDATION"; then row "pipeline: validate_site" PASS; else row "pipeline: validate_site" FAIL "command failed"; fi
+
+# --- Next.js renderer path -------------------------------------------------
+# Skippable via SKIP_RENDERER=1 for a fast inner loop, but skipping is recorded
+# as a WARN row rather than silently omitted: a verify run that did not build
+# the renderer must not read as one that did.
+if [[ "${SKIP_RENDERER:-0}" == "1" ]]; then
+  row "pipeline: render_nextjs" WARN "skipped (SKIP_RENDERER=1)"
+  row "pipeline: validate_site (renderer)" WARN "skipped (SKIP_RENDERER=1)"
+  row "9. Renderer gates 9/10 exercised" WARN "skipped (SKIP_RENDERER=1)"
+else
+  RENDER_OK=0
+  if run_step "$PYTHON" "$SCRIPTS/render_nextjs.py" --brand-brief "$BRIEF" --design-plan "$PLAN" --tokens "$TOKENS" -o "$RENDERER_OUT"; then
+    row "pipeline: render_nextjs" PASS; RENDER_OK=1
+  else row "pipeline: render_nextjs" FAIL "next build failed"; fi
+
+  if (( RENDER_OK )); then
+    if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$RENDERER_OUT" -o "$RENDERER_VALIDATION" --renderer-root renderer; then
+      row "pipeline: validate_site (renderer)" PASS
+    else row "pipeline: validate_site (renderer)" FAIL "command failed"; fi
+
+    if "$PYTHON" - <<'PY'
+import json,pathlib
+d=json.loads(pathlib.Path('reports/m6-renderer-validation/gate-results.json').read_text())
+rs={r.get('id'): r for r in d.get('results',[])}
+bad=[f"{i}:{r.get('verdict')}" for i,r in rs.items() if r.get('verdict')=='FAIL']
+if bad: raise SystemExit('renderer gate FAILED: '+', '.join(bad))
+# The whole point of this path: these must actually RUN against the real
+# deliverable. Each has silently reported NOT-EXERCISED here before —
+# 9/10 because verify.sh only ever validated the static composer, and 7/8
+# because root-relative <link href="/_next/..."> resolved to a nonexistent
+# filesystem path, so the gates saw "no CSS files" and skipped. Both holes
+# read as a clean report while the renderer went unchecked.
+for gid in ('7','8','9','10'):
+    r=rs.get(gid)
+    if r is None: raise SystemExit(f'gate {gid} missing from renderer gate-results.json')
+    if r.get('verdict')!='PASS':
+        raise SystemExit(f"gate {gid} ({r.get('name')}) is {r.get('verdict')} on a Next.js export: {r.get('summary')}")
+skipped=[i for i,r in rs.items() if r.get('verdict')=='NOT-EXERCISED']
+if skipped: raise SystemExit('renderer gate(s) NOT-EXERCISED: '+', '.join(map(str,skipped)))
+print('renderer gates PASS, including 7/8 (motion, tokens) and 9/10 (build, bundle)')
+PY
+    then row "9. Renderer gates 9/10 exercised" PASS; else row "9. Renderer gates 9/10 exercised" FAIL "gate 9/10 not exercised or failing"; fi
+  else
+    row "pipeline: validate_site (renderer)" FAIL "skipped — build failed"
+    row "9. Renderer gates 9/10 exercised" FAIL "skipped — build failed"
+  fi
+fi
 
 if "$PYTHON" - <<'PY'
 import importlib.util, pathlib
@@ -64,10 +118,19 @@ if "$PYTHON" - <<'PY'
 import json,pathlib
 p=pathlib.Path('reports/m6-validation/gate-results.json'); d=json.loads(p.read_text()); rs=d.get('results',[])
 if any(r.get('verdict')=='FAIL' for r in rs): raise SystemExit('gate FAILED')
-if any(r.get('verdict')=='NOT-EXERCISED' for r in rs): raise SystemExit('gate NOT-EXERCISED')
+# NOT-EXERCISED is only acceptable when the gate DECLARED itself inapplicable to
+# this artifact — gates 9/10 (Next.js build/bundle) genuinely cannot run against
+# the static composer's output. A gate that skipped without declaring
+# `applicable: false` is a silent hole and still fails here. The renderer path
+# above is what proves 9/10 actually pass somewhere.
+silent=[r.get('id') for r in rs
+        if r.get('verdict')=='NOT-EXERCISED'
+        and (r.get('observations') or {}).get('applicable') is not False]
+if silent: raise SystemExit('gate NOT-EXERCISED without declaring inapplicability: '+', '.join(map(str,silent)))
 report=pathlib.Path('reports/m6-validation/validation-report.md').read_text()
 if not any(x in report for x in ('Acceptance tier: Validated','**Acceptance tier:** `Validated`','**Acceptance tier:** Validated','Reached tier: `Validated`')): raise SystemExit('tier != Validated')
-print('8/8 gates PASS; tier Validated')
+n_skipped=len(rs)-sum(1 for r in rs if r.get('verdict')=='PASS')
+print(f'composer gates PASS ({n_skipped} declared inapplicable); tier Validated')
 PY
 then row "6. Gate table and tier" PASS; else row "6. Gate table and tier" FAIL "gate failure, NOT-EXERCISED, or tier mismatch"; fi
 if "$PYTHON" - <<'PY'

@@ -283,6 +283,42 @@ def route_to_file(site_dir: str, route: str) -> str:
     return candidate
 
 
+def resolve_local_asset(site_dir: str, html_path: str, url: str) -> "str | None":
+    """Map an href/src found in HTML to a path on disk, or None if not local.
+
+    Root-relative URLs MUST resolve against the site root, not the HTML file's
+    directory. os.path.join(dirname, "/_next/static/x.css") silently returns
+    "/_next/static/x.css" -- an absolute filesystem path that never exists --
+    because join discards everything before an absolute component. That made
+    every root-relative stylesheet invisible to the gates that walk the
+    filesystem, so Gates 7 and 8 reported NOT-EXERCISED ("no CSS files
+    observed") against a Next.js export whose CSS lives in /_next/static/css/.
+    The deliverable's token discipline went unchecked while the report looked
+    clean.
+
+    >>> import os, tempfile
+    >>> d = tempfile.mkdtemp(); sub = os.path.join(d, "_next"); os.makedirs(sub)
+    >>> _ = open(os.path.join(sub, "a.css"), "w").write("x")
+    >>> html = os.path.join(d, "index.html")
+    >>> resolve_local_asset(d, html, "/_next/a.css") == os.path.join(d, "_next/a.css")
+    True
+    >>> resolve_local_asset(d, html, "https://cdn.example.com/a.css") is None
+    True
+    >>> resolve_local_asset(d, html, "/_next/missing.css") is None
+    True
+    """
+    if is_external(url):
+        return None
+    stripped = url.split("#", 1)[0].split("?", 1)[0]
+    if not stripped or stripped.startswith(("data:", "blob:")):
+        return None
+    if stripped.startswith("/"):
+        candidate = os.path.join(site_dir, stripped.lstrip("/"))
+    else:
+        candidate = os.path.join(os.path.dirname(html_path), stripped)
+    return candidate if os.path.exists(candidate) else None
+
+
 # ---------------------------------------------------------------------------
 # Gate 1 — Boot
 # ---------------------------------------------------------------------------
@@ -458,6 +494,39 @@ base = sys.argv[1]
 routes = json.loads(sys.argv[2])
 axe_path = sys.argv[3]
 
+def _settle(page, cap_ms=8000):
+    # Wait for the page to stop changing, by PIXELS not by animation records.
+    # document.getAnimations() only reports WAAPI/CSS animations. Motion (and
+    # any other rAF-driven library) animates via requestAnimationFrame and never
+    # appears there, so awaiting it returned instantly and the audit sampled the
+    # page mid-fade. axe then measured half-opacity text against its background
+    # and reported phantom color-contrast violations that came and went between
+    # runs. Polling for consecutive pixel-identical frames catches what the
+    # animation registry cannot see.
+    import hashlib
+    info = page.evaluate(
+        "async () => { const a = document.getAnimations();"
+        " await Promise.race([Promise.all(a.map(x => x.finished.catch(() => {}))),"
+        " new Promise(r => setTimeout(r, 3000))]);"
+        " return {animation_count: a.length, settle_cap_ms: 3000}; }"
+    )
+    waited, last, stable = 0, None, 0
+    while waited < cap_ms:
+        digest = hashlib.sha256(page.screenshot(type="jpeg", quality=40)).hexdigest()
+        if digest == last:
+            stable += 1
+            if stable >= 2:
+                break
+        else:
+            stable = 0
+        last = digest
+        page.wait_for_timeout(250)
+        waited += 250
+    info["pixel_stable"] = stable >= 2
+    info["pixel_wait_ms"] = waited
+    return info
+
+
 results = []
 with sync_playwright() as p:
     browser = p.chromium.launch(args=["--no-sandbox", "--disable-dev-shm-usage"])
@@ -469,7 +538,7 @@ with sync_playwright() as p:
             try:
                 resp = page.goto(url, wait_until="domcontentloaded", timeout=20000)
                 status = resp.status if resp else 0
-                settle = page.evaluate("async () => { const animations = document.getAnimations(); await Promise.race([Promise.all(animations.map(a => a.finished.catch(() => {}))), new Promise(resolve => setTimeout(resolve, 3000))]); return {animation_count: animations.length, settle_cap_ms: 3000}; }")
+                settle = _settle(page)
                 page.add_script_tag(path=axe_path)
                 axe_result = page.evaluate(
                     "async () => await axe.run(document, { resultTypes: ['violations'] })"
@@ -1005,6 +1074,39 @@ import os; os.makedirs(out_dir, exist_ok=True)
 def viewport_pair(w):
     return (w, default_h.get(w, 900))
 
+def _settle(page, cap_ms=8000):
+    # Wait for the page to stop changing, by PIXELS not by animation records.
+    # document.getAnimations() only reports WAAPI/CSS animations. Motion (and
+    # any other rAF-driven library) animates via requestAnimationFrame and never
+    # appears there, so awaiting it returned instantly and the audit sampled the
+    # page mid-fade. axe then measured half-opacity text against its background
+    # and reported phantom color-contrast violations that came and went between
+    # runs. Polling for consecutive pixel-identical frames catches what the
+    # animation registry cannot see.
+    import hashlib
+    info = page.evaluate(
+        "async () => { const a = document.getAnimations();"
+        " await Promise.race([Promise.all(a.map(x => x.finished.catch(() => {}))),"
+        " new Promise(r => setTimeout(r, 3000))]);"
+        " return {animation_count: a.length, settle_cap_ms: 3000}; }"
+    )
+    waited, last, stable = 0, None, 0
+    while waited < cap_ms:
+        digest = hashlib.sha256(page.screenshot(type="jpeg", quality=40)).hexdigest()
+        if digest == last:
+            stable += 1
+            if stable >= 2:
+                break
+        else:
+            stable = 0
+        last = digest
+        page.wait_for_timeout(250)
+        waited += 250
+    info["pixel_stable"] = stable >= 2
+    info["pixel_wait_ms"] = waited
+    return info
+
+
 results = []
 with sync_playwright() as p:
     browser = p.chromium.launch()
@@ -1016,7 +1118,7 @@ with sync_playwright() as p:
             page = ctx.new_page()
             try:
                 page.goto(url, wait_until='domcontentloaded', timeout=15000)
-                settle = page.evaluate("async () => { const animations = document.getAnimations(); await Promise.race([Promise.all(animations.map(a => a.finished.catch(() => {}))), new Promise(resolve => setTimeout(resolve, 3000))]); return {animation_count: animations.length, settle_cap_ms: 3000}; }")
+                settle = _settle(page)
                 metrics = page.evaluate(
                     "() => ({sw: document.documentElement.scrollWidth, iw: window.innerWidth, sh: document.documentElement.scrollHeight})"
                 )
@@ -1124,10 +1226,10 @@ def gate_7_motion(server: ServerHandle, routes: list[str]) -> GateResult:
         for attr, url in parser.hrefs + parser.srcs:
             if attr != "href":
                 continue
-            if not url.lower().endswith(".css"):
+            if not url.lower().split("?", 1)[0].split("#", 1)[0].endswith(".css"):
                 continue
-            css_path = os.path.join(os.path.dirname(local_path), url)
-            if not os.path.exists(css_path):
+            css_path = resolve_local_asset(server.site_dir, local_path, url)
+            if css_path is None:
                 continue
             css_files_seen.append(css_path)
             try:
@@ -1173,6 +1275,61 @@ def gate_7_motion(server: ServerHandle, routes: list[str]) -> GateResult:
 # Gate 8 — Token discipline (re-scoped: var(--token) usage + no raw hex)
 # ---------------------------------------------------------------------------
 
+def _hex_defines_custom_property(css: str, hex_pos: int) -> bool:
+    """True when the hex at `hex_pos` is the VALUE of a `--custom-property`.
+
+    Token discipline means "colours enter the design through tokens", but the
+    rule used to be enforced by FILENAME ("anything outside tokens.css"). A
+    bundler defeats that: Next.js compiles tokens.css into a content-hashed
+    stylesheet, so all 50 legitimate token definitions suddenly read as
+    violations, while a genuinely hardcoded colour in the same file would have
+    been indistinguishable from them.
+
+    Checking the declaration instead is filename-independent and says what we
+    actually mean: `--color-fg: #111` defines a token and is fine; `color: #111`
+    bypasses the token layer and is not. `@property --tw-shadow { initial-value:
+    0 0 #0000 }` is how a registered custom property declares its default, which
+    is the same act of definition in different syntax.
+
+    >>> _hex_defines_custom_property("a{--color-fg: #111111;}", 13)
+    True
+    >>> _hex_defines_custom_property("a{color: #111111;}", 9)
+    False
+    >>> _hex_defines_custom_property("a{--x:#fff}", 6)
+    True
+    >>> _hex_defines_custom_property("@property --tw-shadow{initial-value:0 0 #0000}", 40)
+    True
+    """
+    start = max(css.rfind(";", 0, hex_pos), css.rfind("{", 0, hex_pos),
+                css.rfind("}", 0, hex_pos)) + 1
+    prop = css[start:hex_pos].split(":", 1)[0].strip()
+    return prop.startswith("--") or prop == "initial-value"
+
+
+def _is_transparent_hex(value: str) -> bool:
+    """True for fully-transparent hex, which expresses absence of colour.
+
+    `#0000` / `#00000000` is what Tailwind emits for "no shadow" and "no
+    background". An alpha of zero cannot carry a brand colour, so flagging it
+    reports noise rather than a design decision that bypassed the token layer.
+
+    >>> _is_transparent_hex("#0000")
+    True
+    >>> _is_transparent_hex("#00000000")
+    True
+    >>> _is_transparent_hex("#fff")
+    False
+    >>> _is_transparent_hex("#000000ff")
+    False
+    """
+    h = value.lstrip("#")
+    if len(h) == 4:
+        return h[3] == "0"
+    if len(h) == 8:
+        return h[6:8].lower() == "00"
+    return False
+
+
 def gate_8_token_discipline(server: ServerHandle, routes: list[str]) -> GateResult:
     """Token-discipline check (our re-scope of the workflow's vague 'source-paired 10x' gate):
         - The composed CSS uses var(--token) references.
@@ -1190,10 +1347,10 @@ def gate_8_token_discipline(server: ServerHandle, routes: list[str]) -> GateResu
         for attr, url in parser.hrefs + parser.srcs:
             if attr != "href":
                 continue
-            if not url.lower().endswith(".css"):
+            if not url.lower().split("?", 1)[0].split("#", 1)[0].endswith(".css"):
                 continue
-            css_path = os.path.join(os.path.dirname(local_path), url)
-            if not os.path.exists(css_path):
+            css_path = resolve_local_asset(server.site_dir, local_path, url)
+            if css_path is None:
                 continue
             css_files.append(css_path)
             try:
@@ -1206,8 +1363,10 @@ def gate_8_token_discipline(server: ServerHandle, routes: list[str]) -> GateResu
                 has_token_var = True
             var_uses += len(TOKEN_VAR_RE.findall(css))
             for match in HEX_RE.finditer(css):
-                # Strip the leading '#' and look at the hex. Skip short (3) or 8-digit expansions
-                # that are likely functional (e.g. transparency tokens).
+                if _hex_defines_custom_property(css, match.start()):
+                    continue
+                if _is_transparent_hex(match.group(0)):
+                    continue
                 violations_raw_hex.append(f"{css_path}: {match.group(0)}")
 
     if not css_files:

@@ -51,7 +51,14 @@ export function FadeIn({
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+      // `amount`, NOT a negative viewport margin. The previous
+      // `margin: "-10% 0px -10% 0px"` shrank the detection box by 10% at the
+      // bottom, so an element sitting at the very end of the document could
+      // never enter it once the page had scrolled as far as it goes — the
+      // colophon's text stayed at opacity 0 permanently. `amount: 0.2` reveals
+      // once a fifth of the block is visible, which is always reachable, and
+      // still delays the fade until the block is meaningfully on screen.
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.18, delay, ease: "easeOut" }}
     >
       {children}

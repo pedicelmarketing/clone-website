@@ -23,6 +23,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 from validate_site import (  # noqa: E402
     GateResult, compute_tier, GATE_VERSION,
+    resolve_local_asset, _hex_defines_custom_property, _is_transparent_hex,
 )
 
 
@@ -113,10 +114,25 @@ class TierRules(unittest.TestCase):
 class VerdictSemantics(unittest.TestCase):
     def test_settle_helper_is_invoked_before_axe(self):
         source = (SCRIPTS / "validate_site.py").read_text()
-        settle_pos = source.index("settle = page.evaluate(\"async () =>")
+        settle_pos = source.index("settle = _settle(page)")
         axe_pos = source.index("axe.run(document", settle_pos)
         self.assertLess(settle_pos, axe_pos)
-        self.assertIn("setTimeout(resolve, 3000)", source)
+
+    def test_settle_waits_on_pixels_not_just_the_animation_registry(self):
+        """document.getAnimations() cannot see rAF-driven libraries.
+
+        Motion animates via requestAnimationFrame and never registers there, so
+        awaiting the registry alone returned instantly and axe sampled the page
+        mid-fade — producing `color-contrast` violations that appeared and
+        vanished between otherwise identical runs. The settle must additionally
+        poll for consecutive pixel-identical frames.
+        """
+        source = (SCRIPTS / "validate_site.py").read_text()
+        self.assertIn("def _settle(page", source)
+        self.assertIn("page.screenshot(type=\"jpeg\"", source)
+        self.assertIn("pixel_stable", source)
+        # Both embedded Playwright scripts (axe + responsive) must use it.
+        self.assertEqual(source.count("settle = _settle(page)"), 2)
 
     def test_a11y_zero_violations_with_no_positive_evidence_must_be_not_exercised(self):
         """The exact prior-run scenario: a runner that crashed (exit 1, no JSON
@@ -215,6 +231,79 @@ class PriorRunRegression(unittest.TestCase):
         )
         self.assertIn("3", reason)
         self.assertIn("4", reason)
+
+
+class AssetResolution(unittest.TestCase):
+    """Root-relative hrefs must resolve against the SITE ROOT, not the HTML dir.
+
+    os.path.join(dirname, "/_next/x.css") returns "/_next/x.css" because join
+    discards everything before an absolute component. That silently hid every
+    Next.js stylesheet from Gates 7 and 8, which then reported NOT-EXERCISED
+    while the renderer's token discipline went unchecked.
+    """
+
+    def setUp(self):
+        import tempfile
+        self.d = tempfile.mkdtemp()
+        os.makedirs(os.path.join(self.d, "_next", "static", "css"))
+        self.css = os.path.join(self.d, "_next", "static", "css", "a.css")
+        with open(self.css, "w") as fh:
+            fh.write("body{color:red}")
+        self.html = os.path.join(self.d, "index.html")
+
+    def test_root_relative_resolves_against_site_root(self):
+        got = resolve_local_asset(self.d, self.html, "/_next/static/css/a.css")
+        self.assertEqual(got, self.css)
+
+    def test_query_and_fragment_are_stripped(self):
+        got = resolve_local_asset(self.d, self.html, "/_next/static/css/a.css?v=2#x")
+        self.assertEqual(got, self.css)
+
+    def test_relative_resolves_against_html_dir(self):
+        with open(os.path.join(self.d, "styles.css"), "w") as fh:
+            fh.write("a{}")
+        got = resolve_local_asset(self.d, self.html, "styles.css")
+        self.assertEqual(got, os.path.join(self.d, "styles.css"))
+
+    def test_external_and_missing_return_none(self):
+        self.assertIsNone(resolve_local_asset(self.d, self.html, "https://cdn.x/a.css"))
+        self.assertIsNone(resolve_local_asset(self.d, self.html, "data:text/css,a{}"))
+        self.assertIsNone(resolve_local_asset(self.d, self.html, "/_next/nope.css"))
+
+
+class TokenDisciplineSemantics(unittest.TestCase):
+    """Hex is judged by DECLARATION, not by filename.
+
+    The old rule exempted a file literally named tokens.css. Next.js compiles
+    tokens into a content-hashed stylesheet, so every real token definition read
+    as a violation while a genuinely hardcoded colour looked identical.
+    """
+
+    def test_custom_property_definition_is_allowed(self):
+        css = ":root{--color-fg: #0b0c0d;}"
+        self.assertTrue(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_plain_declaration_is_a_violation(self):
+        css = ".x{color: #0b0c0d;}"
+        self.assertFalse(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_at_property_initial_value_is_allowed(self):
+        css = "@property --tw-shadow{syntax:'*';initial-value:0 0 #0000;}"
+        self.assertTrue(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_second_declaration_in_a_block_is_judged_on_its_own(self):
+        # The rfind() scan must start at the nearest ; { or } — not the block.
+        css = ".x{--ok: #ffffff; color: #123456;}"
+        self.assertFalse(_hex_defines_custom_property(css, css.rindex("#")))
+        self.assertTrue(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_transparent_hex_is_not_a_colour_decision(self):
+        for v in ("#0000", "#00000000"):
+            self.assertTrue(_is_transparent_hex(v), v)
+
+    def test_opaque_hex_is_still_judged(self):
+        for v in ("#fff", "#000000ff", "#0b0c0d"):
+            self.assertFalse(_is_transparent_hex(v), v)
 
 
 if __name__ == "__main__":

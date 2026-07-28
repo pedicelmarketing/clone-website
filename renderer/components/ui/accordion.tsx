@@ -1,10 +1,40 @@
 "use client"
 
 import * as React from "react"
-import { Accordion as AccordionPrimitive } from "radix-ui"
+// Scoped package, NOT the `radix-ui` umbrella barrel. The barrel pulls every
+// primitive into the bundle regardless of what is used — it alone accounted for
+// a 137 KB gzipped chunk and pushed the build over the Gate 10 budget.
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils"
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
+
+/**
+ * Inline chevrons instead of `lucide-react`.
+ *
+ * The accordion is the only consumer and it needs exactly two glyphs; pulling a
+ * whole icon library into the bundle to draw two 8-byte paths is not a trade
+ * worth making when Gate 10 (bundle budget) is measured in kilobytes. These are
+ * the stock Lucide chevron paths (ISC), reproduced so the markup is identical.
+ */
+function ChevronIcon({ dir, ...props }: { dir: "down" | "up" } & React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d={dir === "down" ? "m6 9 6 6 6-6" : "m18 15-6-6-6 6"} />
+    </svg>
+  )
+}
 
 function Accordion({
   className,
@@ -48,8 +78,8 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <ChevronUpIcon data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <ChevronIcon dir="down" data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
+        <ChevronIcon dir="up" data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )

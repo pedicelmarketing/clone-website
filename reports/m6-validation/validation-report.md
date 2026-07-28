@@ -1,19 +1,20 @@
 # Validation Report
 
-Generated: 2026-07-27T22:11:47.859534+00:00
-Schema: validate_site.py v1.0 (8-gate-v1.0)
+Generated: 2026-07-28T23:12:02.133820+00:00
+Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site`
 Routes validated: /
-Local server: http://127.0.0.1:33363 (python3 -m http.server, killed on exit)
+Local server: http://127.0.0.1:56539 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/server.log
 
 ## Declared scope
 
-- Method: `validate_site.py` (8-gate harness; static Composed Site)
+- Method: `validate_site.py` (10-gate harness; static Composed Site / Next.js export)
 - Routes: /
 - Viewports: [320, 768, 1024, 1440]
 - Lighthouse: enabled
-- DOM audit settle: wait for load, then document.getAnimations() finished promises with a 3s cap
+- DOM audit settle: wait for load, then document.getAnimations() finished promises with a 3s cap, then poll for two consecutive pixel-identical frames (catches JS-driven animation libraries that never register in document.getAnimations)
+- Next.js export detected: False
 
 ## Gate results
 
@@ -27,6 +28,8 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 | 6 | Responsive | **PASS** | Observed visually | No horizontal overflow across 4 cell(s) (1 route(s) × 4 viewport(s)). |
 | 7 | Motion | **PASS** | DOM+assets confirmed | prefers-reduced-motion honored in 1 CSS file(s). |
 | 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 114 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
+| 9 | Build (Next.js) | **NOT-EXERCISED** | Not exercised | Site is not a Next.js static export (no _next/ directory); build gate not applicable. |
+| 10 | Bundle (Next.js) | **NOT-EXERCISED** | Not exercised | Site is not a Next.js static export; bundle gate not applicable. |
 
 **Verdict values:** `PASS` (evidence satisfies the gate), `FAIL` (evidence contradicts), `NOT-EXERCISED` (runner unavailable or did not run). NOT-EXERCISED does not fail the run but is visible above and downgrades the acceptance tier.
 
@@ -47,10 +50,10 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:33363/"
+      "final_url": "http://127.0.0.1:56539/"
     }
   },
-  "base_url": "http://127.0.0.1:33363"
+  "base_url": "http://127.0.0.1:56539"
 }
 ```
 
@@ -88,7 +91,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:33363/",
+      "url": "http://127.0.0.1:56539/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -202,10 +205,12 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "scrollHeight": 3692,
       "settle": {
         "animation_count": 17,
-        "settle_cap_ms": 3000
+        "settle_cap_ms": 3000,
+        "pixel_stable": true,
+        "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6609578089527396520__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/5259000360011720694__320x720.png"
     },
     {
       "route": "/",
@@ -215,10 +220,12 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "scrollHeight": 2879,
       "settle": {
         "animation_count": 17,
-        "settle_cap_ms": 3000
+        "settle_cap_ms": 3000,
+        "pixel_stable": true,
+        "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3248611250101737255__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6397401722210253344__768x1024.png"
     },
     {
       "route": "/",
@@ -228,10 +235,12 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "scrollHeight": 2879,
       "settle": {
         "animation_count": 17,
-        "settle_cap_ms": 3000
+        "settle_cap_ms": 3000,
+        "pixel_stable": true,
+        "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8658899432636325544__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6715054652645388010__1024x768.png"
     },
     {
       "route": "/",
@@ -241,10 +250,12 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "scrollHeight": 2879,
       "settle": {
         "animation_count": 17,
-        "settle_cap_ms": 3000
+        "settle_cap_ms": 3000,
+        "pixel_stable": true,
+        "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6551279247985901288__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8846781387480625223__1440x900.png"
     }
   ],
   "viewports": [
@@ -298,15 +309,46 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 }
 ```
 
+### Gate 9 — Build (Next.js)  (NOT-EXERCISED)
+
+- **Evidence basis:** Not exercised
+- **Summary:** Site is not a Next.js static export (no _next/ directory); build gate not applicable.
+- **Notes:**
+  - Gate 9 is Only-On-Exports. The static HTML composer (compose_site.py) has no build step.
+  - To run this gate, point validate_site.py at a Next.js `out/` directory.
+- **Observations (JSON):**
+
+```json
+{
+  "applicable": false,
+  "site_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site"
+}
+```
+
+### Gate 10 — Bundle (Next.js)  (NOT-EXERCISED)
+
+- **Evidence basis:** Not exercised
+- **Summary:** Site is not a Next.js static export; bundle gate not applicable.
+- **Notes:**
+  - Gate 10 is Only-On-Exports. The static HTML composer does not emit a JS bundle.
+- **Observations (JSON):**
+
+```json
+{
+  "applicable": false,
+  "site_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site"
+}
+```
+
 ## Acceptance tier
 
 **Reached tier: `Validated`**
 
-Reason: Every gate ran and produced positive evidence; validation complete for declared scope.
+Reason: Every applicable gate ran and produced positive evidence; validation complete for declared scope.
 
 - PASS gates: 1, 2, 3, 4, 5, 6, 7, 8
 - FAIL gates: none
-- NOT-EXERCISED gates: none
+- NOT-EXERCISED gates: 9, 10
 
 Tier definitions (from site-cloner SKILL.md):
 

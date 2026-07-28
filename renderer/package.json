@@ -13,10 +13,11 @@
     "test": "npm run check:licenses"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.20",
+    "@radix-ui/react-slot": "^1.3.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lenis": "^1.3.25",
-    "lucide-react": "^1.27.0",
     "motion": "^12.42.2",
     "next": "15.5.22",
     "radix-ui": "^1.6.7",
