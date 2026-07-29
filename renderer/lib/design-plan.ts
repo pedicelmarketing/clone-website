@@ -74,11 +74,20 @@ export type Layout =
   | "pull-quote"
   | "index-list"
   | "cta-band"
-  | "colophon";
+  | "colophon"
+  | "type-hero"
+  | "scroll-rail"
+  | "label-rail"
+  | "ghost-index"
+  | "card-carousel"
+  | "marquee-band"
+  | "contact-panel";
 
 const LAYOUTS: Layout[] = [
   "masthead", "split-hero", "editorial", "feature-split", "full-bleed-band",
   "card-grid", "proof-row", "pull-quote", "index-list", "cta-band", "colophon",
+  "type-hero", "scroll-rail", "label-rail", "ghost-index", "card-carousel",
+  "marquee-band", "contact-panel",
 ];
 
 /**
@@ -96,7 +105,8 @@ const LAYOUT_PATTERNS: [Layout, RegExp][] = [
   ["pull-quote", /quote|testimonial|manifesto|creed/],
   ["proof-row", /award|press|accolade|proof|stat[-s ]|logo[- ]strip/],
   ["index-list", /accordion|chapter|curriculum|faq|index/],
-  ["cta-band", /\bcta\b|call[- ]to[- ]action|shop|buy|contact|book/],
+  ["contact-panel", /contact|enquir|inquir|get[- ]in[- ]touch/],
+  ["cta-band", /\bcta\b|call[- ]to[- ]action|shop|buy|book/],
   ["card-grid", /grid|cards?|recipes?|tiles/],
   ["full-bleed-band", /full.?bleed|spread|banner/],
 ];
@@ -231,7 +241,8 @@ export function loadDesignPlan(): DesignPlan {
  * Returns sections in render order with their copy_blocks grouped by role.
  * Skipped sections are excluded.
  */
-const LIST_SHAPES: Layout[] = ["card-grid", "index-list", "proof-row"];
+const LIST_SHAPES: Layout[] = ["card-grid", "index-list", "proof-row",
+  "ghost-index", "card-carousel", "scroll-rail"];
 
 /**
  * Resolve a section's shape, accounting for REPEATED copy blocks.
@@ -312,6 +323,71 @@ export function getRenderableSections(
  * and `in_nav` previously ignored outright), plus a masthead section whose
  * headline is the brand's own wordmark.
  */
+export interface PlanPage {
+  slug: string;
+  title: string;
+  description: string;
+  nav_label: string;
+  in_nav: boolean;
+  order: number;
+  purpose: string;
+  section_ids: string[];
+}
+
+/** '' -> '/', 'elite-coaches' -> '/elite-coaches/'. Trailing slash matters:
+ *  the export emits `out/<slug>/index.html`, and a plain static file server has
+ *  no extensionless fallback. */
+export function routeForSlug(slug: string): string {
+  const s = (slug ?? "").replace(/^\/+|\/+$/g, "");
+  return s ? `/${s}/` : "/";
+}
+
+/**
+ * The site's pages, in order.
+ *
+ * Synthesises a single implicit home page when `pages[]` is absent, so every
+ * plan written before multi-page existed keeps rendering unchanged at '/'.
+ */
+export function getPages(plan: DesignPlan): PlanPage[] {
+  const pages = (plan as { pages?: PlanPage[] }).pages;
+  if (!Array.isArray(pages) || pages.length === 0) {
+    // Derive a description from the plan's own layout thesis. An empty
+    // description emits no <meta name="description"> at all, which costs real
+    // Lighthouse SEO score — and the thesis is the plan's own words, so this
+    // invents nothing.
+    const thesis = (plan as { layout_thesis?: { statement?: string } }).layout_thesis;
+    const derived = (thesis?.statement ?? "").split(/(?<=[.!?])\s/)[0]?.slice(0, 155) ?? "";
+    return [{
+      slug: "", title: String(plan.project_slug ?? "Home"), description: derived,
+      nav_label: "Home", in_nav: false, order: 0, purpose: "single-page site",
+      section_ids: plan.sections.map((s) => s.id),
+    }];
+  }
+  return pages.slice().sort((a, b) => a.order - b.order);
+}
+
+/**
+ * Site-wide navigation, built from `pages[].in_nav`.
+ *
+ * These are cross-page hrefs ('/about/'), not in-page fragments ('#about') —
+ * a multi-page site whose nav is all fragments strands the visitor on whatever
+ * route they happen to be on.
+ */
+export function getSiteNav(plan: DesignPlan): { href: string; label: string }[] {
+  const pageNav = getPages(plan)
+    .filter((p) => p.in_nav)
+    .map((p) => ({ href: routeForSlug(p.slug), label: p.nav_label }));
+  if (pageNav.length > 0) return pageNav;
+
+  // Single-page plans declare no pages[], so there is nothing to build
+  // cross-page navigation from. Fall back to the sections the plan marked
+  // in_nav, as in-page anchors — otherwise the header renders no <nav> at all
+  // and the route is unnavigable.
+  return getRenderableSections(plan)
+    .filter((s) => s.in_nav && s.nav_label && s.shape !== "masthead")
+    .map((s) => ({ href: `#${s.id}`, label: s.nav_label as string }));
+}
+
 export interface PageRegions {
   masthead: RenderableSection | null;
   body: RenderableSection[];
@@ -319,8 +395,13 @@ export interface PageRegions {
   nav: { id: string; label: string }[];
 }
 
-export function getPageRegions(plan: DesignPlan): PageRegions {
-  const sections = getRenderableSections(plan);
+export function getPageRegions(plan: DesignPlan, sectionIds?: string[]): PageRegions {
+  const all = getRenderableSections(plan);
+  // Filter to this page's sections when a page owns a subset. Filtering here
+  // rather than forking getRenderableSections keeps copy grouping, skip
+  // handling and shape resolution in exactly one place.
+  const allow = sectionIds ? new Set(sectionIds) : null;
+  const sections = allow ? all.filter((s) => allow.has(s.id)) : all;
   const masthead = sections.find((s) => s.shape === "masthead") ?? null;
   const colophons = sections.filter((s) => s.shape === "colophon");
   const body = sections.filter((s) => s.shape !== "masthead" && s.shape !== "colophon");
@@ -329,8 +410,9 @@ export function getPageRegions(plan: DesignPlan): PageRegions {
   // declares `emphasis: hero` — common when the plan's first section is a
   // masthead strip — the page otherwise opened on a mid-weight body shape and
   // had no focal point at all, which the critique repeatedly scored it down for.
-  if (body.length > 0 && !body.some((s) => s.shape === "split-hero")) {
-    body[0] = { ...body[0], shape: "split-hero" };
+  if (body.length > 0 &&
+      !body.some((s) => s.shape === "split-hero" || s.shape === "type-hero")) {
+    body[0] = { ...body[0], shape: "type-hero" };
   }
   // Navigation comes from the plan's own in_nav decision. Fall back to the
   // body sections that carry a headline, so a plan that marks nothing still

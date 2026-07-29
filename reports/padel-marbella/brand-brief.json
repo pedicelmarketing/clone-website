@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "premium-padel-academy-marbella",
+  "fetched_at": "2026-07-29T00:00:00Z",
+  "sources": {
+    "own_site": {
+      "url": "https://97jnvjsg4j.wixsite.com/riki-coach",
+      "fetch_backend": "manual_summary",
+      "char_count": 21000,
+      "scrapes_id": null
+    },
+    "linkedin": {
+      "url": null,
+      "fetch_backend": null,
+      "char_count": null,
+      "scrapes_id": null
+    },
+    "instagram": {
+      "url": null,
+      "fetch_backend": null,
+      "char_count": null,
+      "scrapes_id": null
+    },
+    "reference": {
+      "url": "https://www.jingjinghan.com/",
+      "fetch_backend": "manual_summary",
+      "char_count": 72136,
+      "scrapes_id": null
+    }
+  },
+  "voice_and_tone": {
+    "register": "precise-professional-warm",
+    "sentence_case": true,
+    "favorite_words": [
+      "programme",
+      "court",
+      "player",
+      "club",
+      "coach",
+      "session",
+      "level",
+      "tailored",
+      "Marbella",
+      "padel",
+      "tennis",
+      "training",
+      "performance"
+    ],
+    "banned_words": [
+      "world-class",
+      "best-in-class",
+      "elevate",
+      "unleash",
+      "synergy",
+      "leverage",
+      "cutting-edge",
+      "game-changing",
+      "revolutionary",
+      "bespoke",
+      "luxury",
+      "unrivalled",
+      "state-of-the-art",
+      "passion-driven",
+      "journey",
+      "elite-level"
+    ],
+    "formality_score_1to5": 3,
+    "avg_sentence_length_words": 14,
+    "example_lines": [
+      "Programmes built around the player in front of us, not a package.",
+      "Twelve years on court in Marbella.",
+      "Coaching for clubs that want their own coaches to get better, not just their members."
+    ],
+    "notes": "International B2B/B2C mix: individual players booking a training trip to Spain, and club directors booking a coach for their own facility. Plain, specific, unhurried. Numbers and place names carry the authority, so adjectives do not have to. The word 'elite' appears in the product name (Elite Coaches Program) but must not be used as a loose adjective elsewhere."
+  },
+  "palette_from_logo": {
+    "method": "Read from the client's own brand board (designer-supplied identity sheet, Assets/WhatsApp Image 2026-07-19 at 16.45.38.jpeg): a circular tennis-ball monogram in dark forest green with gold lettering, presented in four colourways with the rationale captions 'Inspiración en la pelota', 'Minimalismo y elegancia', 'Marca personal premium'.",
+    "primary": "#c9a227",
+    "secondary": "#eae7de",
+    "accent": "#a8871f",
+    "neutrals": [
+      "#2b3a33",
+      "#3d4d45",
+      "#5b6a62",
+      "#8b9790",
+      "#c3ccc6",
+      "#eae7de",
+      "#f7f5ef"
+    ],
+    "rationale": "The board pairs a dark forest green with a brass gold on an off-white ground. Forest green is treated here as the INK — body copy, headings and the inverted band — rather than as a decorative colour, because the identity is described as minimal and the gold reads as an accent, not a text colour. Gold on the off-white ground measures 2.25:1, which fails AA and also fails the 3:1 large-text threshold, so gold is used only as a fill, a rule, a marker and a hover state; text on a gold fill uses the derived contrast-safe pairing. The seven neutrals give the twelve-step opacity ladder somewhere to land."
+  },
+  "typography_recommendation": {
+    "display_family": "Outfit",
+    "body_family": "Inter",
+    "mono_family": "Inter",
+    "license_notes": "Outfit is SIL OFL 1.1 (Google Fonts). Inter is SIL OFL 1.1. Both are open licence and safe to vendor — no substitution required. The client's brand board sets its wordmark in a wide-letterspaced geometric sans; Outfit is the closest open-licence match with a tall enough x-height to survive both an 80px heading and an 11px label at 0.24em tracking, and its circular counters rhyme with the circular ball monogram. No monospace face is loaded: small uppercase labels are set in the display face via a tracking utility, which is one fewer webfont per page.",
+    "scale_ratio": 1.25,
+    "scale_steps": [
+      11,
+      14,
+      16,
+      18,
+      24,
+      32,
+      48,
+      72
+    ]
+  },
+  "real_photo_inventory": [],
+  "service_facts": [
+    {
+      "name": "Tennis & padel experiences in Spain",
+      "description": "Personalised tennis and padel training programmes in Spain for international players, groups and clubs. Each programme is built around the client's level, objectives and expectations, with access to clubs, academies and coaches across Spain. Includes personalised training programmes; intensive experiences for all levels from beginner to high performance; individual and group coaching; technical, tactical and sport-specific physical training; practice match organisation; and access to training facilities across Spain. Recommendations for accommodation, restaurants and local attractions are provided for guidance only and are not part of the service.",
+      "price_range": "not publicly listed; every programme is quoted per client"
+    },
+    {
+      "name": "Elite Coaches Program",
+      "description": "Spanish tennis and padel coaches travel to international clubs to deliver intensive coaching programmes of up to nine days. Each programme is shaped to the club's objectives and can combine player development, coach education and strategic consultancy. May include coaching sessions for players of all levels; coach education and mentoring; technical, tactical and physical training clinics; specialised masterclasses; exhibition matches; high-performance training sessions; consultancy on new club activities and services; optimisation of existing coaching programmes; development of new member experiences; and methodology and performance evaluation.",
+      "price_range": "not publicly listed; quoted per club engagement"
+    },
+    {
+      "name": "Camps in Marbella",
+      "description": "Group training camps based in Marbella for visiting players and clubs, combining daily training blocks, match play and organised group management. Complementary physical activities and local leisure information are provided alongside the training programme.",
+      "price_range": "not publicly listed"
+    }
+  ],
+  "social_highlights": {
+    "linkedin": [],
+    "instagram": []
+  },
+  "testimonials": [],
+  "brand_donts": [
+    "Do not invent testimonials, player names, club logos, results, rankings or statistics. The client's existing site carries no customer quotes and no verifiable results, and none were supplied. The only quantified claim in evidence is 'more than 12 years' of professional experience.",
+    "Do not publish a phone number or a WhatsApp link. No phone number appears anywhere in the client's source material; the number on the previous site (+34 600 000 000) is a placeholder. The only real published contact point is the email address.",
+    "Do not name affiliations beyond those in evidence: Nueva Alcántara Club (NAC), M3 Academy, and Tennis Brothers. Do not inflate the recorded role at Tennis Brothers — the source says Assistant Manager, and promoting that to Director or Head Coach would be an invented credential.",
+    "Do not use photography above the fold or full-bleed. The available images are WhatsApp-compressed phone snapshots at 1536px or less, several are stills lifted from video, and the sharpest landscape shot is dominated by third-party sponsor branding (OYSHO, Range Rover, Bullpadel) that does not belong to this brand.",
+    "Do not use the previous site's logo file. It is a teal-and-orange mark unrelated to the client's actual identity, which is a dark green and gold circular ball monogram.",
+    "Do not adopt agency or SaaS boilerplate. The voice is a coach's: specific, plain, and quantified where it can be."
+  ],
+  "limitations": [
+    "PHOTOGRAPHY IS THE BINDING CONSTRAINT. Ten WhatsApp-compressed JPEGs, maximum 1536px on the long edge, mostly portrait. There is no wide hero-resolution image, no professional portrait of the coach, no facility exterior, and no image showing the client's own branding. Two landscape candidates exist: one carries prominent third-party sponsor branding, the other has no identifiable people. The site is therefore designed to be type-led, with photography used only at small, forgiving sizes.",
+    "THE LOGO EXISTS ONLY AS A RASTER. The identity is a flattened JPEG of a designer's presentation board. There is no SVG, no transparent PNG, and no source file. The monogram used on the site is drawn from that board's geometry as inline SVG; the original vector should be requested from whoever produced the board before this goes to production.",
+    "NO CONTACT FORM ENDPOINT. The site is a static export with no server, so a form requires an external endpoint (Formspree, Basin or similar) bound to an account the client has not supplied. The contact page therefore ships the published email address as a mailto: link and records the gap rather than shipping a form that silently discards submissions.",
+    "PERSON IDENTITY UNCONFIRMED. At least two different men appear across the supplied photographs and it is not established which, if either, is the coach. No individual is named or featured as a specific person anywhere on this site.",
+    "NO LEGAL PAGES. Privacy, cookie and legal-notice content does not exist and cannot be written without knowing the operating entity, its registration details and its data processors. A Spanish/EU site needs these before launch.",
+    "THE PREVIOUS SITE'S REPORTS ARE BLANK. All four discovery/validation reports for the earlier recreation are unfilled templates, so nothing about that build's fidelity was ever recorded and none of it is treated as verified here."
+  ],
+  "credentials": {
+    "years_experience": "more than 12 years",
+    "base": "Marbella, Andalusia, Spain",
+    "affiliations": [
+      {
+        "name": "Nueva Alcántara Club (NAC)",
+        "relationship": "coaching at the club",
+        "evidence": "Named in the client's existing site copy; the NAC wordmark is visible on coaching kit in five of the ten supplied photographs."
+      },
+      {
+        "name": "M3 Academy",
+        "relationship": "training methodology developed jointly",
+        "evidence": "Named in the client's existing site copy."
+      },
+      {
+        "name": "Tennis Brothers",
+        "relationship": "Assistant Manager",
+        "evidence": "Named in the client's existing site copy. The recorded title is Assistant Manager and must not be inflated."
+      }
+    ],
+    "note": "These are the only credential claims in evidence. No rankings, certifications, player results or client names were supplied, and none may be added."
+  },
+  "contact_points": {
+    "email": "info@rikicoach.com",
+    "email_evidence": "Published as a mailto: link on the client's existing site.",
+    "phone": null,
+    "phone_evidence": "No phone number appears anywhere in the source material. The previous site showed +34 600 000 000, which is a placeholder.",
+    "form_endpoint": null,
+    "location": "Marbella, Spain"
+  }
+}

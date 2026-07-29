@@ -1,16 +1,16 @@
 # Validation Report
 
-Generated: 2026-07-29T16:54:21.962167+00:00
+Generated: 2026-07-29T19:09:45.424328+00:00
 Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site`
-Routes validated: /
-Local server: http://127.0.0.1:51525 (python3 -m http.server, killed on exit)
+Routes validated: ['/']
+Local server: http://127.0.0.1:41561 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/server.log
 
 ## Declared scope
 
 - Method: `validate_site.py` (10-gate harness; static Composed Site / Next.js export)
-- Routes: /
+- Routes: ['/']
 - Viewports: [320, 768, 1024, 1440]
 - Lighthouse: enabled
 - DOM audit settle: wait for load, then document.getAnimations() finished promises with a 3s cap, then poll for two consecutive pixel-identical frames (catches JS-driven animation libraries that never register in document.getAnimations)
@@ -51,10 +51,10 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:51525/"
+      "final_url": "http://127.0.0.1:41561/"
     }
   },
-  "base_url": "http://127.0.0.1:51525"
+  "base_url": "http://127.0.0.1:41561"
 }
 ```
 
@@ -92,7 +92,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:51525/",
+      "url": "http://127.0.0.1:41561/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -217,7 +217,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3868268770488195871__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6647112440702462090__320x720.png"
     },
     {
       "route": "/",
@@ -232,7 +232,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3204978122647168423__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/858105560508128513__768x1024.png"
     },
     {
       "route": "/",
@@ -247,7 +247,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6099157031174883951__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3637041352392915699__1024x768.png"
     },
     {
       "route": "/",
@@ -262,7 +262,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/659170345062500536__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/2051414008156209537__1440x900.png"
     }
   ],
   "viewports": [

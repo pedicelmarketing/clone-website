@@ -72,7 +72,59 @@ def validate_plan(plan, brief, assets=None):
                 f"use one of the supplied filenames verbatim (never invent or use stock)")
         if not (media.get('alt') or '').strip():
             violations.append(f"sections[{i}].media.alt is required and must describe the photo")
-    return violations + verify_source_fields(plan, brief)
+    return violations + verify_pages(plan) + verify_source_fields(plan, brief)
+
+
+def verify_pages(plan):
+    """Integrity of the pages[] -> sections[] mapping.
+
+    Sections live in one flat array and pages reference them by id, so the two
+    can drift. Each rule below corresponds to copy that silently never renders:
+
+      - a section id on no page is an ORPHAN: it exists, it has copy blocks, and
+        no route will ever draw it. That is precisely the defect Gate 11 exists
+        to catch, caught earlier and more cheaply.
+      - a section id on TWO pages renders the same copy on both routes, which
+        reads as duplicated content to a search engine and to a reader.
+      - duplicate slugs collide on disk (one export overwrites the other);
+        duplicate titles are the visible symptom of a dynamic route that forgot
+        generateMetadata().
+    """
+    pages = plan.get('pages') or []
+    if not pages:
+        return []
+    violations = []
+    section_ids = {s.get('id') for s in plan.get('sections') or []}
+    skipped = {s.get('id') for s in plan.get('skipped_sections') or []}
+
+    seen = {}
+    for i, pg in enumerate(pages):
+        for sid in pg.get('section_ids') or []:
+            if sid not in section_ids:
+                violations.append(
+                    f"pages[{i}].section_ids references '{sid}', which is not in sections[]")
+            if sid in seen:
+                violations.append(
+                    f"section '{sid}' is claimed by both pages '{seen[sid]}' and "
+                    f"'{pg.get('slug')}' — a section belongs to exactly one route")
+            seen[sid] = pg.get('slug')
+
+    orphans = sorted((section_ids - skipped) - set(seen))
+    for sid in orphans:
+        violations.append(
+            f"section '{sid}' is on no page, so nothing renders it. Add it to a page's "
+            f"section_ids, or move it to skipped_sections with a reason.")
+
+    slugs = [pg.get('slug') for pg in pages]
+    if len(set(slugs)) != len(slugs):
+        violations.append(f"duplicate page slugs: {slugs}")
+    titles = [pg.get('title') for pg in pages]
+    if len(set(titles)) != len(titles):
+        violations.append(f"page titles must be unique (they become <title>): {titles}")
+    homes = [s for s in slugs if s == '']
+    if len(homes) != 1:
+        violations.append(f"exactly one page must have slug \"\" (the home route); found {len(homes)}")
+    return violations
 
 
 def compact_reference(root):

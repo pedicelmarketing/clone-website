@@ -89,6 +89,43 @@ PY
   fi
 fi
 
+# --- Second brand track: the padel academy (multi-page) --------------------
+# A second brand is the only thing that reveals brand-lock bugs, and a
+# multi-page brand is the only thing that exercises gates 1-6 across more than
+# one route. Both tracks share renderer/out and app/_tokens.generated.css, so
+# they MUST run sequentially.
+#
+# The WEB_DESIGNER_* triple is exported rather than passed only to the render
+# child because gate_9_build re-runs `npm run build` from validate_site.py with
+# no env= — it inherits this process's environment. Without the export, gate 9
+# rebuilds whichever brand was baked in and then validates the other one, which
+# only a second brand can reveal.
+PADEL_BRIEF=reports/padel-marbella/brand-brief.json
+PADEL_TOKENS=reports/padel-tokens
+PADEL_PLAN=reports/padel-design/design-plan.json
+PADEL_OUT=reports/padel-renderer-site
+PADEL_VALIDATION=reports/padel-renderer-validation
+PADEL_ROUTES=reports/padel-design/routes.txt
+
+if [[ "${SKIP_RENDERER:-0}" == "1" ]]; then
+  row "10. Padel site: 5 routes validated" WARN "skipped (SKIP_RENDERER=1)"
+else
+  export WEB_DESIGNER_TOKENS_DIR="$ROOT/$PADEL_TOKENS"
+  export WEB_DESIGNER_DESIGN_PLAN="$ROOT/$PADEL_PLAN"
+  export WEB_DESIGNER_BRAND_BRIEF="$ROOT/$PADEL_BRIEF"
+  PADEL_OK=0
+  if run_step "$PYTHON" "$SCRIPTS/synthesize_tokens.py" --brand-brief "$PADEL_BRIEF" --reference-tokens "$REF_TOKENS" -o "$PADEL_TOKENS" \
+     && run_step "$PYTHON" "$SCRIPTS/render_nextjs.py" --brand-brief "$PADEL_BRIEF" --design-plan "$PADEL_PLAN" --tokens "$PADEL_TOKENS" --routes-out "$PADEL_ROUTES" -o "$PADEL_OUT" \
+     && run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PADEL_OUT" -o "$PADEL_VALIDATION" --renderer-root renderer --design-plan "$PADEL_PLAN" --routes "$(cat "$PADEL_ROUTES")"; then
+    PADEL_OK=1
+  fi
+  if (( PADEL_OK )) && "$PYTHON" "$ROOT/tools/check_padel_gates.py"; then
+    row "10. Padel site: 5 routes validated" PASS
+  else
+    row "10. Padel site: 5 routes validated" FAIL "multi-route validation failed"
+  fi
+fi
+
 if "$PYTHON" - <<'PY'
 import importlib.util, pathlib
 for p in sorted(pathlib.Path('skills/web-designer/scripts').glob('*.py')):

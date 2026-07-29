@@ -1,0 +1,524 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "premium-padel-academy-marbella",
+  "generated_at": "2026-07-29T00:00:00Z",
+  "provider": "anthropic",
+  "model": "claude-opus-5",
+  "site": {
+    "wordmark": "Premium Padel Academy",
+    "tagline": "Marbella",
+    "locale": "en",
+    "contact": {
+      "email": "info@rikicoach.com",
+      "form_endpoint": null,
+      "whatsapp_url": null,
+      "instagram_url": null,
+      "location": "Marbella, Spain"
+    },
+    "source_brief_fields": ["contact_points.email", "contact_points.location"]
+  },
+  "layout_thesis": {
+    "statement": "The academy sells two things that look different but are the same promise: bring a player to Spain, or take a Spanish coach to a club. So the site is built as a pair of routes from one centre, and every page opens on type rather than a photograph — a decision the available imagery forces and the brand's own 'minimalismo y elegancia' brief happens to want. Forest green is the ink, not a decoration; hierarchy comes from twelve steps of one colour rather than from a palette, and gold appears only as a rule, a marker and a fill. Photography is used at small, forgiving sizes where a phone snapshot still reads as evidence rather than as art direction.",
+    "audience": "Two readers with one question each. An international player asking whether a training week in Spain will actually be built around them, and a club director asking whether flying in a coach for nine days will leave their own coaching better than it found it.",
+    "job_to_be_done": "Make a stranger believe that a programme will be shaped around them specifically, then get them to write an email.",
+    "why_this_not_generic": "A generic academy site opens on a full-bleed action photograph, states three adjectives, and lists facilities. This one cannot use that photograph — the available images are phone snapshots and the sharpest carries another brand's sponsor livery — so it leads with the one thing that is genuinely specific: twelve years, one town, and programmes quoted per client rather than sold as packages. The two services get separate pages because they address different buyers, and the shared credibility (Marbella, NAC, M3) sits on a third."
+  },
+  "signature_element": {
+    "name": "The ball monogram",
+    "description": "A stroked circle crossed by two opposed seams — a padel ball reduced to three lines — drawn in gold and used once per page as the optical counterweight to the headline.",
+    "why_it_fits_brand": "It is the client's own identity, taken from the designer's brand board where the rationale is written as 'Inspiración en la pelota' and 'minimalismo y elegancia'. It is the only mark the brand actually owns, and it survives being drawn at any size because it is three strokes.",
+    "implementation_note": "Inline SVG in --color-primary, sized with clamp() so it scales with the headline. Not the supplied JPEG: that file is a flattened screenshot of a presentation board, and a raster of a slide is not a logo asset. The original vector should be requested before production."
+  },
+  "motion_vocabulary": {
+    "register": "restrained",
+    "effects": [
+      "fade and rise on section entry, under 200ms",
+      "one horizontally-scrolling rail per long page, pinned only while it advances",
+      "a single marquee band per page as a rule between movements"
+    ],
+    "rationale": "The brand voice is a coach's — specific and unhurried. Motion that draws attention to itself would contradict it. Everything here is either an entry fade or a direct response to scrolling; nothing loops in the reader's peripheral vision except the marquee, which is a deliberate separator and stops entirely under prefers-reduced-motion."
+  },
+  "pages": [
+    {
+      "slug": "",
+      "title": "Premium Padel Academy Marbella — tennis and padel programmes in Spain",
+      "description": "Personalised tennis and padel programmes in Marbella for visiting players, and Spanish coaches sent to international clubs. More than twelve years on court.",
+      "nav_label": "Home",
+      "in_nav": true,
+      "order": 0,
+      "purpose": "Establish what the academy is, split the reader down one of two routes, and make the twelve-year claim early.",
+      "section_ids": ["home-hero", "two-routes", "programme-index", "home-band", "home-cta", "colophon"]
+    },
+    {
+      "slug": "experiences-in-spain",
+      "title": "Experiences in Spain — Premium Padel Academy Marbella",
+      "description": "Personalised tennis and padel training programmes in Spain for international players, groups and clubs, built around level and objectives.",
+      "nav_label": "Experiences",
+      "in_nav": true,
+      "order": 1,
+      "purpose": "Convert the visiting player: show the formats, then what a programme actually contains.",
+      "section_ids": ["experiences-hero", "experience-formats", "experience-includes", "experiences-cta"]
+    },
+    {
+      "slug": "elite-coaches",
+      "title": "Elite Coaches Program — Premium Padel Academy Marbella",
+      "description": "Spanish tennis and padel coaches delivered to international clubs for programmes of up to nine days, combining player development, coach education and consultancy.",
+      "nav_label": "Elite Coaches",
+      "in_nav": true,
+      "order": 2,
+      "purpose": "Convert the club director: show how an engagement runs and exactly what a club receives.",
+      "section_ids": ["coaches-hero", "engagement-stages", "club-deliverables", "coaches-cta"]
+    },
+    {
+      "slug": "about",
+      "title": "About — Premium Padel Academy Marbella",
+      "description": "Twelve years coaching tennis and padel in Marbella, with programmes shaped around the player rather than sold as packages.",
+      "nav_label": "About",
+      "in_nav": true,
+      "order": 3,
+      "purpose": "Carry the credibility that both services depend on, and be honest about what is and is not claimed.",
+      "section_ids": ["about-hero", "about-standing", "about-principles"]
+    },
+    {
+      "slug": "contact",
+      "title": "Contact — Premium Padel Academy Marbella",
+      "description": "Enquire about a training programme in Spain or an elite coach for your club. Based in Marbella, Andalusia.",
+      "nav_label": "Contact",
+      "in_nav": true,
+      "order": 4,
+      "purpose": "Get the email written, with enough prompting that it arrives with useful detail in it.",
+      "section_ids": ["contact-hero", "contact-panel"]
+    }
+  ],
+  "sections": [
+    {
+      "id": "home-hero",
+      "order": 0,
+      "purpose": "State the proposition in one line and let the type carry it.",
+      "component": "type-led opening; oversized headline with the connective words dropped back, monogram as counterweight",
+      "emphasis": "hero",
+      "layout": "type-hero",
+      "in_nav": false,
+      "nav_label": "Marbella · Tennis & Padel",
+      "source_brief_fields": ["service_facts[0].description", "credentials.years_experience"],
+      "rationale": "No photograph can open this site — the available imagery is phone-grade and the best landscape carries another brand's sponsor livery. Type at 7.5rem cannot fail on resolution or crop, and the opacity ladder gives it hierarchy without a second colour."
+    },
+    {
+      "id": "two-routes",
+      "order": 1,
+      "purpose": "Split the reader into the two things the academy actually does.",
+      "component": "horizontal rail; one panel per route, advancing while pinned",
+      "emphasis": "primary",
+      "layout": "scroll-rail",
+      "in_nav": true,
+      "nav_label": "What we do",
+      "source_brief_fields": ["service_facts[0].description", "service_facts[1].description", "service_facts[2].description"],
+      "rationale": "Three services, one of which is a variation of another. A rail forces them into a sequence the reader moves through rather than a grid they scan and forget, and it holds only as long as there is content to show."
+    },
+    {
+      "id": "programme-index",
+      "order": 2,
+      "purpose": "List what a programme can contain, at display scale.",
+      "component": "ghosted index list at display scale, brightening on hover",
+      "emphasis": "primary",
+      "layout": "ghost-index",
+      "in_nav": true,
+      "nav_label": "Programmes",
+      "source_brief_fields": ["service_facts[0].description"],
+      "rationale": "These are the concrete deliverables and they are the most persuasive thing on the page, so they are set at display scale rather than as a bulleted list. Ghosting them until hover keeps the page calm while the reader scans."
+    },
+    {
+      "id": "home-band",
+      "order": 3,
+      "purpose": "Separate the argument from the ask.",
+      "component": "inverted marquee band, used once as a rule",
+      "emphasis": "minor",
+      "layout": "marquee-band",
+      "in_nav": false,
+      "nav_label": "Marbella",
+      "source_brief_fields": ["credentials.base", "credentials.years_experience"],
+      "rationale": "The page's only luminance inversion. It does the work of a section break while restating the two facts that matter, and it costs one element."
+    },
+    {
+      "id": "home-cta",
+      "order": 4,
+      "purpose": "Ask, on the brand's own terms.",
+      "component": "inverted call-to-action band",
+      "emphasis": "primary",
+      "layout": "cta-band",
+      "in_nav": false,
+      "nav_label": "Enquire",
+      "source_brief_fields": ["contact_points.email", "service_facts[0].price_range"],
+      "rationale": "Every programme is quoted per client, so there is no price to close on and no booking flow to enter. The honest ask is an email, and saying that plainly is stronger than a button that implies instant availability."
+    },
+    {
+      "id": "colophon",
+      "order": 5,
+      "purpose": "Record the type and colour decisions, and what is not yet in place.",
+      "component": "monospace-scale colophon strip inside the footer",
+      "emphasis": "minor",
+      "layout": "colophon",
+      "in_nav": false,
+      "nav_label": null,
+      "source_brief_fields": ["typography_recommendation.license_notes", "palette_from_logo.primary", "limitations[2]"],
+      "rationale": "The substituted faces and the missing form endpoint are real decisions with consequences. Recording them on the page keeps the deliverable honest about its own state."
+    },
+
+    {
+      "id": "experiences-hero",
+      "order": 0,
+      "purpose": "Open the visiting-player page.",
+      "component": "type-led opening",
+      "emphasis": "hero",
+      "layout": "type-hero",
+      "in_nav": false,
+      "nav_label": "Experiences in Spain",
+      "source_brief_fields": ["service_facts[0].description"],
+      "rationale": "Same opening device as the home page so the site reads as one thing, with the headline doing the differentiating."
+    },
+    {
+      "id": "experience-formats",
+      "order": 1,
+      "purpose": "Show the shapes a programme can take.",
+      "component": "single-card carousel with external controls and a tab strip",
+      "emphasis": "primary",
+      "layout": "card-carousel",
+      "in_nav": true,
+      "nav_label": "Formats",
+      "source_brief_fields": ["service_facts[0].description", "service_facts[2].description"],
+      "rationale": "Four comparable formats. A carousel gives each one the full width to be read properly, and the tab strip beneath keeps all four titles visible so nothing depends on the reader operating the control."
+    },
+    {
+      "id": "experience-includes",
+      "order": 2,
+      "purpose": "Say precisely what is included, and what is not.",
+      "component": "label rail beside a surfaced card",
+      "emphasis": "primary",
+      "layout": "label-rail",
+      "in_nav": true,
+      "nav_label": "What's included",
+      "source_brief_fields": ["service_facts[0].description"],
+      "rationale": "The exclusion — that accommodation and restaurant recommendations are guidance and not part of the service — is the sort of thing most sites bury. Putting it on the same surface as the inclusions is what makes the inclusions believable."
+    },
+    {
+      "id": "experiences-cta",
+      "order": 3,
+      "purpose": "Ask.",
+      "component": "inverted call-to-action band",
+      "emphasis": "primary",
+      "layout": "cta-band",
+      "in_nav": false,
+      "nav_label": "Enquire",
+      "source_brief_fields": ["contact_points.email", "service_facts[0].price_range"],
+      "rationale": "Quoted per client, so the ask is a conversation rather than a checkout."
+    },
+
+    {
+      "id": "coaches-hero",
+      "order": 0,
+      "purpose": "Open the club-director page.",
+      "component": "type-led opening",
+      "emphasis": "hero",
+      "layout": "type-hero",
+      "in_nav": false,
+      "nav_label": "Elite Coaches Program",
+      "source_brief_fields": ["service_facts[1].description"],
+      "rationale": "A different reader with a different question, addressed in the same voice."
+    },
+    {
+      "id": "engagement-stages",
+      "order": 1,
+      "purpose": "Show how an engagement actually runs.",
+      "component": "horizontal rail; one panel per stage",
+      "emphasis": "primary",
+      "layout": "scroll-rail",
+      "in_nav": true,
+      "nav_label": "How it runs",
+      "source_brief_fields": ["service_facts[1].description"],
+      "rationale": "A club director's real question is what nine days looks like. A rail is the one shape that reads as a sequence rather than a menu."
+    },
+    {
+      "id": "club-deliverables",
+      "order": 2,
+      "purpose": "List what the club receives, at display scale.",
+      "component": "ghosted index list at display scale",
+      "emphasis": "primary",
+      "layout": "ghost-index",
+      "in_nav": true,
+      "nav_label": "What a club gets",
+      "source_brief_fields": ["service_facts[1].description"],
+      "rationale": "Ten concrete deliverables, which is the most persuasive material on the page. Set at display scale, ghosted until approached."
+    },
+    {
+      "id": "coaches-cta",
+      "order": 3,
+      "purpose": "Ask, with the club's own objectives as the opening line.",
+      "component": "inverted call-to-action band",
+      "emphasis": "primary",
+      "layout": "cta-band",
+      "in_nav": false,
+      "nav_label": "Enquire",
+      "source_brief_fields": ["contact_points.email", "service_facts[1].price_range"],
+      "rationale": "Club engagements are quoted individually, so the first email needs to carry the club's objectives. Asking for that up front saves a round trip."
+    },
+
+    {
+      "id": "about-hero",
+      "order": 0,
+      "purpose": "Open the credibility page.",
+      "component": "type-led opening",
+      "emphasis": "hero",
+      "layout": "type-hero",
+      "in_nav": false,
+      "nav_label": "About",
+      "source_brief_fields": ["credentials.years_experience", "credentials.base"],
+      "rationale": "The strongest claim available is a number and a place. Both are verifiable, and neither needs an adjective."
+    },
+    {
+      "id": "about-standing",
+      "order": 1,
+      "purpose": "Name the affiliations, exactly as recorded.",
+      "component": "label rail beside a surfaced card",
+      "emphasis": "primary",
+      "layout": "label-rail",
+      "in_nav": true,
+      "nav_label": "Standing",
+      "source_brief_fields": ["credentials.affiliations[0].name", "credentials.affiliations[1].name", "credentials.affiliations[2].name"],
+      "rationale": "Three affiliations in evidence and no more. The recorded role at Tennis Brothers is Assistant Manager and is carried across literally — inflating it to Director would be an invented credential wearing a translation's clothes."
+    },
+    {
+      "id": "about-principles",
+      "order": 2,
+      "purpose": "State how the academy works, since results cannot be shown.",
+      "component": "card grid of working principles",
+      "emphasis": "secondary",
+      "layout": "card-grid",
+      "in_nav": true,
+      "nav_label": "How we work",
+      "source_brief_fields": ["voice_and_tone.example_lines", "service_facts[0].description"],
+      "rationale": "There are no testimonials, rankings or player results in evidence and none may be invented. Method is the honest substitute for proof, and it is also what a club director is actually buying."
+    },
+
+    {
+      "id": "contact-hero",
+      "order": 0,
+      "purpose": "Open the contact page.",
+      "component": "type-led opening",
+      "emphasis": "hero",
+      "layout": "type-hero",
+      "in_nav": false,
+      "nav_label": "Contact",
+      "source_brief_fields": ["contact_points.location"],
+      "rationale": "Short, because the page's job is a single action."
+    },
+    {
+      "id": "contact-panel",
+      "order": 1,
+      "purpose": "Get an email written, with the useful details already in it.",
+      "component": "contact panel; address, location and prompts",
+      "emphasis": "primary",
+      "layout": "contact-panel",
+      "in_nav": false,
+      "nav_label": "Enquire",
+      "source_brief_fields": ["contact_points.email", "contact_points.location", "limitations[2]"],
+      "rationale": "There is no form endpoint and no phone number in evidence, so the published email address is the whole mechanism. Prompting for level, dates and objectives makes the first message useful instead of 'hi, interested'."
+    }
+  ],
+  "copy_blocks": [
+    { "section_id": "home-hero", "role": "headline", "text": "Twelve years on court in Marbella. | Programmes built around the player, not the package.", "source_brief_fields": ["credentials.years_experience", "voice_and_tone.example_lines"] },
+    { "section_id": "home-hero", "role": "subhead", "text": "Tennis and padel programmes in Spain for visiting players, groups and clubs — and Spanish coaches sent to clubs abroad.", "source_brief_fields": ["service_facts[0].description", "service_facts[1].description"] },
+    { "section_id": "home-hero", "role": "body", "text": "Every programme is quoted per client, because a week for a improving club player and a week for a national-level junior are not the same week.", "source_brief_fields": ["service_facts[0].price_range", "service_facts[0].description"] },
+    { "section_id": "home-hero", "role": "cta", "text": "Start a conversation", "source_brief_fields": ["contact_points.email"] },
+    { "section_id": "home-hero", "role": "caption", "text": "Marbella, Andalusia", "source_brief_fields": ["credentials.base"] },
+
+    { "section_id": "two-routes", "role": "headline", "text": "Two ways in.", "source_brief_fields": ["service_facts[0].description", "service_facts[1].description"] },
+    { "section_id": "two-routes", "role": "subhead", "text": "Come to Spain and train, or have a Spanish coach come to your club. Both are built to the same brief: leave the player, or the club, better than we found them.", "source_brief_fields": ["service_facts[0].description", "service_facts[1].description"] },
+    { "section_id": "two-routes", "role": "body", "text": "Come and train with us in Spain. Personalised programmes for international players, groups and clubs, with access to clubs, academies and coaches across the country.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "two-routes", "role": "body", "text": "Bring a coach to your club. Spanish tennis and padel coaches travel to international clubs for intensive programmes of up to nine days.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "two-routes", "role": "body", "text": "Base a group in Marbella. Camps combining daily training blocks, match play and full group management.", "source_brief_fields": ["service_facts[2].description"] },
+
+    { "section_id": "programme-index", "role": "headline", "text": "What a programme contains", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "programme-index", "role": "subhead", "text": "Drawn from the same list every time, then assembled around the level and the objective in front of us.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "programme-index", "role": "body", "text": "Personalised training programmes", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "programme-index", "role": "body", "text": "Individual and group coaching", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "programme-index", "role": "body", "text": "Technical, tactical and physical training", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "programme-index", "role": "body", "text": "Practice match organisation", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "programme-index", "role": "body", "text": "Access to facilities across Spain", "source_brief_fields": ["service_facts[0].description"] },
+
+    { "section_id": "home-band", "role": "headline", "text": "Marbella", "source_brief_fields": ["credentials.base"] },
+    { "section_id": "home-band", "role": "body", "text": "Tennis and padel. Twelve years on court. Programmes quoted per client. Marbella, Andalusia.", "source_brief_fields": ["credentials.years_experience", "credentials.base", "service_facts[0].price_range"] },
+
+    { "section_id": "home-cta", "role": "headline", "text": "Tell us the level and the objective. We will tell you what the week looks like.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "home-cta", "role": "body", "text": "There is no package to pick and no price list to read. Programmes are quoted individually, so the first message matters more than the form it arrives in.", "source_brief_fields": ["service_facts[0].price_range"] },
+    { "section_id": "home-cta", "role": "cta", "text": "Email the academy", "source_brief_fields": ["contact_points.email"] },
+    { "section_id": "home-cta", "role": "caption", "text": "info@rikicoach.com", "source_brief_fields": ["contact_points.email"] },
+
+    { "section_id": "colophon", "role": "body", "text": "Display and text set in Outfit and Inter, both SIL Open Font License. Brand gold #c9a227 on forest green #2b3a33.", "source_brief_fields": ["typography_recommendation.license_notes", "palette_from_logo.primary"] },
+    { "section_id": "colophon", "role": "caption", "text": "Enquiries are handled by email; no contact form is published yet.", "source_brief_fields": ["limitations[2]"] },
+
+    { "section_id": "experiences-hero", "role": "headline", "text": "Come to Spain | and train properly.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experiences-hero", "role": "subhead", "text": "Personalised tennis and padel programmes for international players, groups and clubs, built around level, objectives and how long you have.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experiences-hero", "role": "cta", "text": "Enquire about a programme", "source_brief_fields": ["contact_points.email"] },
+
+    { "section_id": "experience-formats", "role": "headline", "text": "Four shapes a week can take", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-formats", "role": "subhead", "text": "Each is a starting point rather than a package — the balance of court time, match play and physical work moves with the player.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-formats", "role": "body", "text": "Individual intensive: one player, one coach, the whole week spent on the two or three things actually holding the game back.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-formats", "role": "body", "text": "Small group: two to four players of a similar level, sharing court time and playing each other rather than a feeding basket.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-formats", "role": "body", "text": "Club trip: a visiting group with its own coach, where we run the training and the logistics and their coach keeps the relationship.", "source_brief_fields": ["service_facts[0].description", "service_facts[2].description"] },
+    { "section_id": "experience-formats", "role": "body", "text": "Marbella camp: a group based here for a block of days, with daily training, organised match play and the week managed end to end.", "source_brief_fields": ["service_facts[2].description"] },
+    { "section_id": "experience-formats", "role": "caption", "text": "All four run for tennis, padel, or both.", "source_brief_fields": ["service_facts[0].description"] },
+
+    { "section_id": "experience-includes", "role": "headline", "text": "Included", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "subhead", "text": "A programme is court time, structure and someone paying attention — the rest is logistics we are happy to help with but do not sell.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "body", "text": "Recommendations for accommodation, restaurants and local attractions are provided for guidance only and are not part of our services. We would rather say that plainly than let it be discovered later.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "body", "text": "A written programme built to your level and objectives", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "body", "text": "Individual and group coaching sessions", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "body", "text": "Technical, tactical and sport-specific physical training", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "body", "text": "Practice matches organised against suitable opposition", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "body", "text": "Access to clubs and training facilities across Spain", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experience-includes", "role": "caption", "text": "Quoted per client, once we know the level and the dates.", "source_brief_fields": ["service_facts[0].price_range"] },
+
+    { "section_id": "experiences-cta", "role": "headline", "text": "Tell us your level, your dates, and what you want to fix.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "experiences-cta", "role": "body", "text": "That is genuinely enough to come back to you with a programme and a price.", "source_brief_fields": ["service_facts[0].price_range"] },
+    { "section_id": "experiences-cta", "role": "cta", "text": "Email the academy", "source_brief_fields": ["contact_points.email"] },
+
+    { "section_id": "coaches-hero", "role": "headline", "text": "Send a coach to your club | for up to nine days.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "coaches-hero", "role": "subhead", "text": "Spanish tennis and padel coaches, delivering intensive programmes shaped to what your club is actually trying to achieve.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "coaches-hero", "role": "body", "text": "Player development, coach education and consultancy, in whatever proportion the club needs.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "coaches-hero", "role": "cta", "text": "Request a coach", "source_brief_fields": ["contact_points.email"] },
+
+    { "section_id": "engagement-stages", "role": "headline", "text": "How nine days runs", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "engagement-stages", "role": "subhead", "text": "The proportions move with the brief, but the sequence rarely does.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "engagement-stages", "role": "body", "text": "Agree the objective. Whether the club wants stronger players, stronger coaches, or a programme it can keep running after we leave.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "engagement-stages", "role": "body", "text": "Coach on court. Sessions for players of all levels, plus technical, tactical and physical clinics.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "engagement-stages", "role": "body", "text": "Teach the coaches. Education and mentoring for the club's own staff, which is the part that outlasts the visit.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "engagement-stages", "role": "body", "text": "Show the club. Masterclasses, exhibition matches and high-performance sessions the membership can watch.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "engagement-stages", "role": "body", "text": "Leave a method. Evaluation of methodology and performance, and consultancy on what the club runs next.", "source_brief_fields": ["service_facts[1].description"] },
+
+    { "section_id": "club-deliverables", "role": "headline", "text": "What a club receives", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "subhead", "text": "Assembled from this list, in the proportions the club's objectives call for.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "Coaching sessions for all levels", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "Coach education and mentoring", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "Technical and tactical clinics", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "Specialised masterclasses", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "Exhibition matches", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "High-performance sessions", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "Consultancy on new club activities", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "club-deliverables", "role": "body", "text": "Methodology and performance evaluation", "source_brief_fields": ["service_facts[1].description"] },
+
+    { "section_id": "coaches-cta", "role": "headline", "text": "Send us your club's objectives for the season.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "coaches-cta", "role": "body", "text": "Programmes are quoted per engagement, so the more specific the objective, the more useful the first reply.", "source_brief_fields": ["service_facts[1].price_range"] },
+    { "section_id": "coaches-cta", "role": "cta", "text": "Email the academy", "source_brief_fields": ["contact_points.email"] },
+
+    { "section_id": "about-hero", "role": "headline", "text": "Twelve years, | one town.", "source_brief_fields": ["credentials.years_experience", "credentials.base"] },
+    { "section_id": "about-hero", "role": "subhead", "text": "Coaching tennis and padel in Marbella, and travelling to clubs that want the same standard at home.", "source_brief_fields": ["credentials.base", "service_facts[1].description"] },
+
+    { "section_id": "about-standing", "role": "headline", "text": "Standing", "source_brief_fields": ["credentials.affiliations[0].name"] },
+    { "section_id": "about-standing", "role": "subhead", "text": "Marbella is a town where a lot of people can hit a ball. Twelve years in it is the claim, and these are the places that can vouch for it.", "source_brief_fields": ["credentials.years_experience", "credentials.base"] },
+    { "section_id": "about-standing", "role": "body", "text": "Coaching at Nueva Alcántara Club. Training methodology developed jointly with M3 Academy. Assistant Manager at Tennis Brothers.", "source_brief_fields": ["credentials.affiliations[0].name", "credentials.affiliations[1].name", "credentials.affiliations[2].relationship"] },
+    { "section_id": "about-standing", "role": "caption", "text": "Those are the affiliations on record. We have not listed rankings or results, because none are published.", "source_brief_fields": ["credentials.note"] },
+
+    { "section_id": "about-principles", "role": "headline", "text": "How we work", "source_brief_fields": ["voice_and_tone.example_lines"] },
+    { "section_id": "about-principles", "role": "subhead", "text": "Four habits that decide what a week actually looks like.", "source_brief_fields": ["voice_and_tone.example_lines"] },
+    { "section_id": "about-principles", "role": "body", "text": "Assess before prescribing. The first session is spent watching, not fixing. A programme written before anyone has hit a ball is a package with a name on it.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "about-principles", "role": "body", "text": "Two or three things, not ten. A week is long enough to change a small number of habits properly and too short to change many badly.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "about-principles", "role": "body", "text": "Match play is training. Practice matches are organised against suitable opposition, because a technique that only survives a feeding basket has not been learned.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "about-principles", "role": "body", "text": "Leave something behind. With clubs that means teaching the coaches; with players it means going home knowing what to practise without us.", "source_brief_fields": ["service_facts[1].description"] },
+
+    { "section_id": "contact-hero", "role": "headline", "text": "Marbella, | Andalusia.", "source_brief_fields": ["credentials.base", "contact_points.location"] },
+    { "section_id": "contact-hero", "role": "subhead", "text": "Tell us who is coming, what level they play, and when.", "source_brief_fields": ["service_facts[0].description"] },
+
+    { "section_id": "contact-panel", "role": "headline", "text": "Write to the academy.", "source_brief_fields": ["contact_points.email"] },
+    { "section_id": "contact-panel", "role": "subhead", "text": "Every programme is quoted individually, so a first email with a little detail in it saves a week of back and forth.", "source_brief_fields": ["service_facts[0].price_range"] },
+    { "section_id": "contact-panel", "role": "cta", "text": "info@rikicoach.com", "source_brief_fields": ["contact_points.email"] },
+    { "section_id": "contact-panel", "role": "body", "text": "Useful things to include, if you have them:", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "contact-panel", "role": "body", "text": "Player or group, and roughly what level.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "contact-panel", "role": "body", "text": "Tennis, padel, or both.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "contact-panel", "role": "body", "text": "Dates, or the month you are thinking about.", "source_brief_fields": ["service_facts[0].description"] },
+    { "section_id": "contact-panel", "role": "body", "text": "For clubs: what you want the visit to leave behind.", "source_brief_fields": ["service_facts[1].description"] },
+    { "section_id": "contact-panel", "role": "caption", "text": "Based in Marbella, Spain. Enquiries answered by email.", "source_brief_fields": ["contact_points.location"] }
+  ],
+  "skipped_sections": [
+    {
+      "id": "contact-form",
+      "reason": "The site is a static export with no server, so a form needs an external endpoint bound to an account the client has not supplied. Inventing a Formspree or Basin ID would produce a form that silently discards every submission, which is worse than no form. A WhatsApp link is impossible for the same reason in a different direction: no phone number appears anywhere in the source material. The published email address is rendered as a mailto: link instead.",
+      "missing_brief_fields": ["contact_points.form_endpoint", "contact_points.phone"]
+    },
+    {
+      "id": "testimonials",
+      "reason": "No customer quotes exist anywhere in the client's material and the brief explicitly forbids inventing any. Method and named affiliations are used as the honest substitute for social proof.",
+      "missing_brief_fields": ["testimonials"]
+    },
+    {
+      "id": "gallery",
+      "reason": "The brief asks for a professional image gallery, but the ten supplied images are WhatsApp-compressed phone snapshots at 1536px or less, several are stills lifted from video, and the sharpest landscape is dominated by third-party sponsor branding that does not belong to this brand. A gallery presents images as the subject, which these cannot survive. They are better used small and incidental, or replaced by a commissioned shoot.",
+      "missing_brief_fields": ["real_photo_inventory"]
+    },
+    {
+      "id": "coach-profiles",
+      "reason": "The brief describes elite coaches as a service, but no individual coach is named, credentialed or photographed in the supplied material, and it is not established which person in the photographs is the principal. Profiles would require inventing people.",
+      "missing_brief_fields": ["credentials.affiliations"]
+    },
+    {
+      "id": "interactive-map",
+      "reason": "The brief asks for an interactive map, but no street address was supplied — only the town — and an embedded map would add a third-party script and a cookie banner obligation to a static site for no navigational benefit at town resolution.",
+      "missing_brief_fields": ["contact_points.location"]
+    },
+    {
+      "id": "legal-pages",
+      "reason": "Privacy policy, cookie policy and legal notice cannot be written without the operating entity's registration details, its data processors and its cookie inventory. A Spanish and EU-facing site needs all three before launch; they are a client input, not a design decision.",
+      "missing_brief_fields": ["contact_points.email"]
+    },
+    {
+      "id": "social-links",
+      "reason": "No social handles appear anywhere in the client's material. The previous site linked six platforms, every one of them to '#'.",
+      "missing_brief_fields": ["social_highlights.instagram"]
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "Open every page on type, with no photography above the fold.",
+      "alternatives_considered": [
+        "Full-bleed hero using the tennis-court sunburst image",
+        "Full-bleed hero using the padel facility image with a heavy overlay",
+        "Wait for a commissioned photo shoot before building"
+      ],
+      "why_chosen": "A hero image is the least forgiving placement on a site — full width, above the fold, held on screen for the entire first impression. The available images are phone-grade at 1536px or less; the sharpest is covered in OYSHO and Range Rover livery, which would credit those brands rather than this one. Type at display scale cannot fail on resolution, crop or colour cast, and the client's own brand board asks for minimalism, so the constraint and the brief point the same way."
+    },
+    {
+      "decision": "Split the two services onto separate pages rather than sections of one.",
+      "alternatives_considered": [
+        "One long landing page with both services as sections",
+        "One page with a toggle between the two audiences"
+      ],
+      "why_chosen": "They address different buyers with different questions — a player asking whether a week will suit them, a club director asking what nine days leaves behind. On a single page each reader has to skip half the content to find theirs."
+    },
+    {
+      "decision": "Publish the exclusion about accommodation and restaurants on the same surface as the inclusions.",
+      "alternatives_considered": ["Omit it", "Put it in a footnote or terms page"],
+      "why_chosen": "It is the client's own wording and it is the sort of thing most academy sites bury until after payment. Stating it beside the inclusions is what makes the inclusions credible, and it costs one sentence."
+    },
+    {
+      "decision": "Ship a mailto: link instead of a contact form.",
+      "alternatives_considered": [
+        "A Formspree or Basin form with a placeholder endpoint",
+        "A WhatsApp deep link",
+        "A form that posts nowhere"
+      ],
+      "why_chosen": "A static export cannot receive a POST, and every alternative required inventing something the client has not supplied — an account-bound endpoint ID or a phone number that appears nowhere in the source material. The email address is real and published. The gap is recorded in skipped_sections rather than hidden behind a form that silently drops submissions."
+    },
+    {
+      "decision": "Use forest green as the ink and gold strictly as a fill, rule and marker.",
+      "alternatives_considered": [
+        "Gold headings on the off-white ground",
+        "A dark-mode site with gold text"
+      ],
+      "why_chosen": "Gold on the off-white ground measures 2.25:1, which fails AA and also fails the 3:1 large-text threshold. Using it as text would repeat the invisible-text defect this pipeline has already shipped twice. As a fill it is unrestricted, and text on it uses the derived pairing at 4.94:1."
+    },
+    {
+      "decision": "Name no individual anywhere on the site.",
+      "alternatives_considered": ["Feature the principal coach as a personal brand", "Use the founder portrait on the About page"],
+      "why_chosen": "At least two different men appear across the supplied photographs and it is not established which, if either, is the principal. Attaching a name to the wrong face is a worse error than an impersonal About page, and the operator chose an academy brand over a personal one."
+    }
+  ]
+}

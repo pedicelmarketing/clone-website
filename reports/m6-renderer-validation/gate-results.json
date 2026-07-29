@@ -2,16 +2,18 @@
   "schema": "1.1",
   "gate_version": "10-gate-v1.1",
   "site_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site",
-  "routes": "/",
+  "routes": [
+    "/"
+  ],
   "viewports": [
     320,
     768,
     1024,
     1440
   ],
-  "generated": "2026-07-29T16:55:20.113528+00:00",
+  "generated": "2026-07-29T19:10:43.979385+00:00",
   "host": "127.0.0.1",
-  "port": 47445,
+  "port": 51911,
   "results": [
     {
       "id": "1",
@@ -26,10 +28,10 @@
         "per_route": {
           "/": {
             "status": 200,
-            "final_url": "http://127.0.0.1:47445/"
+            "final_url": "http://127.0.0.1:51911/"
           }
         },
-        "base_url": "http://127.0.0.1:47445"
+        "base_url": "http://127.0.0.1:51911"
       },
       "error": null
     },
@@ -38,10 +40,10 @@
       "name": "Dependency",
       "verdict": "PASS",
       "evidence_basis": "HTTP-200 only",
-      "summary": "All 26 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External.",
+      "summary": "All 33 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External.",
       "notes": [],
       "observations": {
-        "reference_count": 26,
+        "reference_count": 33,
         "external_count": 0,
         "external_sample": [],
         "external_hosts": []
@@ -60,7 +62,7 @@
         "per_route": {
           "/": {
             "route": "/",
-            "url": "http://127.0.0.1:47445/",
+            "url": "http://127.0.0.1:51911/",
             "status": 200,
             "exit": 0,
             "ok": true,
@@ -171,7 +173,7 @@
             "viewport": "320x720",
             "scrollWidth": 320,
             "innerWidth": 320,
-            "scrollHeight": 6370,
+            "scrollHeight": 6245,
             "settle": {
               "animation_count": 0,
               "settle_cap_ms": 3000,
@@ -179,14 +181,14 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/662862665287111552__320x720.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/5445048729679099234__320x720.png"
           },
           {
             "route": "/",
             "viewport": "768x1024",
             "scrollWidth": 768,
             "innerWidth": 768,
-            "scrollHeight": 4096,
+            "scrollHeight": 4061,
             "settle": {
               "animation_count": 0,
               "settle_cap_ms": 3000,
@@ -194,14 +196,14 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/1768841324361709892__768x1024.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/8144857279785146598__768x1024.png"
           },
           {
             "route": "/",
             "viewport": "1024x768",
             "scrollWidth": 1024,
             "innerWidth": 1024,
-            "scrollHeight": 4273,
+            "scrollHeight": 4204,
             "settle": {
               "animation_count": 0,
               "settle_cap_ms": 3000,
@@ -209,14 +211,14 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/7071755141150294871__1024x768.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/335641096607828241__1024x768.png"
           },
           {
             "route": "/",
             "viewport": "1440x900",
             "scrollWidth": 1440,
             "innerWidth": 1440,
-            "scrollHeight": 4250,
+            "scrollHeight": 4181,
             "settle": {
               "animation_count": 0,
               "settle_cap_ms": 3000,
@@ -224,7 +226,7 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/3187701628131343930__1440x900.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/6419938974786529976__1440x900.png"
           }
         ],
         "viewports": [
@@ -249,10 +251,10 @@
       "notes": [],
       "observations": {
         "css_files_seen": [
-          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
         ],
         "reduced_in": [
-          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
         ]
       },
       "error": null
@@ -262,16 +264,16 @@
       "name": "Token discipline",
       "verdict": "PASS",
       "evidence_basis": "DOM+assets confirmed",
-      "summary": "CSS uses 350 var(--token) reference(s); 0 raw hex literals outside tokens.css.",
+      "summary": "CSS uses 336 var(--token) reference(s); 0 raw hex literals outside tokens.css.",
       "notes": [
         "Gate 8 re-scoped from workflow-design.md \u00a74's 'source-paired 10x' \u2014 see report.",
         "tokens.css is the explicit source of truth; raw hex inside it is allowed."
       ],
       "observations": {
         "css_files": [
-          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
         ],
-        "var_uses": 350,
+        "var_uses": 336,
         "raw_hex": []
       },
       "error": null
@@ -298,25 +300,25 @@
       "name": "Bundle (Next.js)",
       "verdict": "PASS",
       "evidence_basis": "DOM+assets confirmed",
-      "summary": "Total gzipped JS is 295.1 KB across 15 file(s), under the 300 KB budget.",
+      "summary": "Total gzipped JS is 292.4 KB across 15 file(s), under the 300 KB budget.",
       "notes": [],
       "observations": {
         "applicable": true,
         "static_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static",
         "file_count": 15,
-        "total_gzipped_bytes": 302195,
-        "total_gzipped_kb": 295.1,
+        "total_gzipped_bytes": 299465,
+        "total_gzipped_kb": 292.4,
         "budget_kb": 300,
         "top_files": [
-          {
-            "path": "chunks/41-082a597489077dab.js",
-            "raw_bytes": 189257,
-            "gzipped_bytes": 61458
-          },
           {
             "path": "chunks/framework-acd67e14855de5a2.js",
             "raw_bytes": 182716,
             "gzipped_bytes": 57691
+          },
+          {
+            "path": "chunks/901-af741208424e3dd0.js",
+            "raw_bytes": 172737,
+            "gzipped_bytes": 56617
           },
           {
             "path": "chunks/4bd1b696-c023c6e3521b1417.js",
@@ -324,9 +326,9 @@
             "gzipped_bytes": 54228
           },
           {
-            "path": "chunks/255-300d9cc44f394368.js",
-            "raw_bytes": 173762,
-            "gzipped_bytes": 46426
+            "path": "chunks/255-2b334ff5c2ee7a81.js",
+            "raw_bytes": 173819,
+            "gzipped_bytes": 46461
           },
           {
             "path": "chunks/polyfills-42372ed130431b0a.js",
@@ -342,7 +344,7 @@
       "name": "Content fidelity",
       "verdict": "PASS",
       "evidence_basis": "DOM+assets confirmed",
-      "summary": "All 32 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.",
+      "summary": "All 32 copy block(s) reached the DOM across 1 route(s) (>=85% token coverage); no placeholder strings; navigation present.",
       "notes": [
         "weak-but-present: services/body 0.632",
         "weak-but-present: our-approach/body 0.565"
@@ -367,6 +369,13 @@
         "placeholders_found": [],
         "wants_nav": true,
         "nav_present": true,
+        "routes_without_nav": [],
+        "routes": [
+          "/"
+        ],
+        "titles": [
+          "pedicel-marketing-redesign-smoke"
+        ],
         "coverage_threshold": 0.85
       },
       "error": null
@@ -374,8 +383,8 @@
   ],
   "meta": {
     "input_hashes": {
-      "index.html": "92296d35c0affe9d0c62337c432c031e8b65fb69c0343c8a381beb15bb1658de",
-      "_next/static/*.js (combined)": "c778b1c41e34fd4667c4e2c14589a466759bc390667d8917962908754f3dbc0a"
+      "index.html": "7b554132ab89a227b9ffb60055505dbeb7acd0f6139a85686ca2a1a221a8e6bf",
+      "_next/static/*.js (combined)": "6788c70433f836875dab8dfbee277d021c8d38f1c6f230dd7168d5d433679751"
     },
     "input_hashes_algorithm": "sha256",
     "input_hashes_note": "Recompute with: sha256sum <site_dir>/index.html <site_dir>/styles.css <site_dir>/tokens.css. If the site is a Next.js export, also verify the combined _next/static/*.js hash. If these change without re-running validate_site.py the gate results are stale."

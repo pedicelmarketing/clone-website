@@ -24,7 +24,7 @@ sys.path.insert(0, str(SCRIPTS))
 from validate_site import (  # noqa: E402
     GateResult, compute_tier, GATE_VERSION,
     resolve_local_asset, _hex_defines_custom_property, _is_transparent_hex,
-    _visible_text, _PLACEHOLDER_RE,
+    _visible_text, _PLACEHOLDER_RE, _TITLE_RE, parse_str_list, parse_args,
 )
 
 
@@ -335,6 +335,54 @@ class ContentFidelityHelpers(unittest.TestCase):
         self.assertTrue(_PLACEHOLDER_RE.search("[no body in plan]"))
         self.assertTrue(_PLACEHOLDER_RE.search("[no headline in plan]"))
         self.assertFalse(_PLACEHOLDER_RE.search("our plan for the year"))
+
+
+class RouteArgParsing(unittest.TestCase):
+    """--routes was declared with no type=, so run() iterated the STRING.
+
+    `--routes '/,/about/'` became 15 single-character routes, which is why
+    multi-route validation had never actually executed and gate 5 had only ever
+    taken its `len(routes) <= 1` branch.
+    """
+
+    def test_comma_separated_routes_become_a_list(self):
+        self.assertEqual(parse_str_list("/,/about/"), ["/", "/about/"])
+
+    def test_whitespace_is_stripped_and_blanks_dropped(self):
+        self.assertEqual(parse_str_list(" /a , /b ,, "), ["/a", "/b"])
+
+    def test_argparse_yields_a_list_not_a_string(self):
+        args = parse_args(["site", "-o", "out", "--routes", "/,/experiences/,/about/"])
+        self.assertEqual(args.routes, ["/", "/experiences/", "/about/"])
+        # The original bug in one assertion: iterating the value must not
+        # produce single characters.
+        self.assertNotIn("/e", list(args.routes))
+
+    def test_default_is_a_single_root_route(self):
+        self.assertEqual(parse_args(["site", "-o", "out"]).routes, ["/"])
+
+
+class MultiRouteContentFidelity(unittest.TestCase):
+    """Gate 11 rules that only matter once a site has more than one page."""
+
+    def test_title_regex_extracts_per_route_titles(self):
+        html = "<html><head><title>Experiences | Padel</title></head><body>x</body></html>"
+        self.assertEqual(_TITLE_RE.search(html).group(1).strip(), "Experiences | Padel")
+
+    def test_title_regex_survives_attributes_and_newlines(self):
+        html = '<title\n  data-x="1">About\nUs</title>'
+        self.assertIn("About", _TITLE_RE.search(html).group(1))
+
+    def test_nav_presence_must_be_all_routes_not_any(self):
+        # Three routes, only the first carries a <nav>. `any` would pass this
+        # and strand visitors on two of the three pages.
+        raws = ["<nav>links</nav><main>a</main>", "<main>b</main>", "<main>c</main>"]
+        routes = ["/", "/about/", "/contact/"]
+        without = [r for r, raw in zip(routes, raws) if "<nav" not in raw.lower()]
+        self.assertEqual(without, ["/about/", "/contact/"])
+        self.assertTrue(bool(without), "must be treated as missing nav")
+        self.assertTrue(any("<nav" in r.lower() for r in raws),
+                        "the `any` formulation would wrongly pass here")
 
 
 if __name__ == "__main__":

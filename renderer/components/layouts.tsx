@@ -43,24 +43,24 @@ export interface LayoutProps {
 }
 
 /** Standard page gutter + max measure. */
-function Container({ children, className = "" }: { children: ReactNode; className?: string }) {
+export function Container({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div className={`mx-auto w-full max-w-[1440px] px-6 lg:px-12 ${className}`}>{children}</div>
   );
 }
 
 /** The small monospace section marker. Uses the plan's own nav_label. */
-function Eyebrow({ section }: { section: RenderableSection }) {
+export function Eyebrow({ section }: { section: RenderableSection }) {
   const label = section.nav_label ?? "";
   return (
-    <span className="font-mono text-xs uppercase tracking-[0.18em] text-primary">
+    <span className="u-label text-foreground/70">
       {String(section.order).padStart(2, "0")}
       {label ? ` / ${label}` : ""}
     </span>
   );
 }
 
-function BrandImage({
+export function BrandImage({
   file, alt, className = "",
 }: { file: string; alt: string; className?: string }) {
   // Plain <img>: the renderer builds with output:'export' + images.unoptimized,
@@ -103,12 +103,20 @@ function splitItems(text: string, max = 8): string[] {
  * strings that must not be thrown away. Falls back to splitting a single body
  * string only when no repetition exists.
  */
-function itemsFor(section: RenderableSection, max = 8): string[] {
-  const repeated = [
-    ...(section.copyList?.headline ?? []).slice(1),
-    ...(section.copyList?.body ?? []).slice(1),
-  ].filter(Boolean);
-  if (repeated.length >= 2) return repeated.slice(0, max);
+export function itemsFor(section: RenderableSection, max = 8): string[] {
+  const H = (section.copyList?.headline ?? []).filter(Boolean);
+  const B = (section.copyList?.body ?? []).filter(Boolean);
+
+  // Which role carries the items depends on how the plan wrote the section.
+  //
+  //  - Several HEADLINES => headline[0] is the section title and the rest are
+  //    the items (their bodies, if any, are the items' descriptions).
+  //  - One headline but several BODIES => the headline is the title and EVERY
+  //    body is an item. Blindly dropping body[0] here silently deleted the
+  //    first of four programme formats and the first of five engagement
+  //    stages — the exact class of defect Gate 11 exists to catch, and it did.
+  if (H.length > 1) return H.slice(1, max + 1);
+  if (B.length > 1) return B.slice(0, max);
   return splitItems(section.copy.body || "", max);
 }
 
@@ -157,7 +165,7 @@ export function SplitHero({ section }: LayoutProps) {
         </div>
       </div>
       {copy.caption && (
-        <p className="mt-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+        <p className="mt-8 u-label text-muted-foreground">
           {copy.caption}
         </p>
       )}
@@ -289,7 +297,7 @@ export function FullBleedBand({ section }: LayoutProps) {
           <p className="max-w-[65ch] font-body text-lg leading-[1.7] text-foreground">{copy.body}</p>
         )}
         {copy.caption && (
-          <p className="mt-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          <p className="mt-3 u-label text-muted-foreground">
             {copy.caption}
           </p>
         )}
@@ -343,7 +351,7 @@ export function CardGrid({ section }: LayoutProps) {
           {paired.map((card, i) => (
             <FadeIn key={i} delay={0.04 * i}>
               <div className="h-full rounded-[var(--radius-8,8px)] border border-border bg-background p-7">
-                <span className="font-mono text-xs text-primary">{String(i + 1).padStart(2, "0")}</span>
+                <span className="u-label text-foreground/70">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-3 font-display text-xl leading-snug text-foreground">{card.title}</h3>
                 {card.desc && (
                   <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
@@ -358,7 +366,7 @@ export function CardGrid({ section }: LayoutProps) {
           {items.map((item, i) => (
             <FadeIn key={i} delay={0.04 * i}>
               <div className="h-full rounded-[var(--radius-8,8px)] border border-border bg-background p-7">
-                <span className="font-mono text-xs text-primary">{String(i + 1).padStart(2, "0")}</span>
+                <span className="u-label text-foreground/70">{String(i + 1).padStart(2, "0")}</span>
                 <p className="mt-3 font-body text-base leading-relaxed text-foreground">{item}</p>
               </div>
             </FadeIn>
@@ -400,7 +408,7 @@ export function ProofRow({ section }: LayoutProps) {
       <Container className="border-y border-border py-14 lg:py-20">
         <FadeIn>
           {copy.headline && items.length > 0 && (
-            <span className="font-mono text-xs uppercase tracking-[0.18em] text-primary">
+            <span className="u-label text-foreground/70">
               {copy.headline}
             </span>
           )}
@@ -417,7 +425,7 @@ export function ProofRow({ section }: LayoutProps) {
       <FadeIn>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-baseline lg:justify-between lg:gap-10">
           {copy.headline && (
-            <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-primary lg:shrink-0">
+            <h2 className="u-label text-foreground/70 lg:shrink-0">
               {copy.headline}
             </h2>
           )}
@@ -454,7 +462,7 @@ export function PullQuote({ section }: LayoutProps) {
               {quote}
             </blockquote>
             {attribution && (
-              <p className="mt-7 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              <p className="mt-7 u-label text-muted-foreground">
                 {attribution}
               </p>
             )}
@@ -493,11 +501,11 @@ export function IndexList({ section }: LayoutProps) {
         </div>
         <div className="lg:col-span-8">
           <FadeIn delay={0.06}>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion className="w-full">
               {items.map((item, i) => (
-                <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionItem key={i}>
                   <AccordionTrigger className="font-body text-base">
-                    <span className="font-mono text-xs text-muted-foreground">
+                    <span className="u-label text-foreground/70">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="ml-4 text-left">{item}</span>
@@ -552,7 +560,7 @@ export function CtaBand({ section }: LayoutProps) {
             <FadeIn delay={0.08}>
               {copy.cta && <Button size="lg">{copy.cta}</Button>}
               {copy.caption && (
-                <p className="mt-4 font-mono text-xs uppercase tracking-[0.18em] opacity-70">
+                <p className="mt-4 u-label opacity-70">
                   {copy.caption}
                 </p>
               )}
@@ -575,7 +583,7 @@ export function Colophon({ section }: LayoutProps) {
   return (
     <div className="border-t border-border py-8">
       {lines.map((line, i) => (
-        <p key={i} className="font-mono text-xs leading-relaxed text-muted-foreground lg:text-sm">
+        <p key={i} className="u-label leading-relaxed text-foreground/70">
           {line}
         </p>
       ))}
@@ -583,8 +591,17 @@ export function Colophon({ section }: LayoutProps) {
   );
 }
 
+import { ScrollRail, GhostIndex, CardCarousel } from "@/components/layouts-interactive";
+
 export const LAYOUT_COMPONENTS = {
   "split-hero": SplitHero,
+  "type-hero": TypeHero,
+  "scroll-rail": ScrollRail,
+  "label-rail": LabelRailCard,
+  "ghost-index": GhostIndex,
+  "card-carousel": CardCarousel,
+  "marquee-band": MarqueeBand,
+  "contact-panel": ContactPanel,
   editorial: Editorial,
   "feature-split": FeatureSplit,
   "full-bleed-band": FullBleedBand,
@@ -595,3 +612,266 @@ export const LAYOUT_COMPONENTS = {
   "cta-band": CtaBand,
   colophon: Colophon,
 } as const;
+
+// ===========================================================================
+// HARVESTED LAYOUTS
+// ---------------------------------------------------------------------------
+// Geometry below was measured from a reference site and rebuilt from those
+// measurements. No markup, styling, imagery, type or colour was copied — what
+// transfers is structure, which is the part that generalises across brands.
+//
+// A THIRD rule applies to every component here, on top of the two in this
+// file's header:
+//
+//   3. NOTHING MAY BE CONDITIONALLY RENDERED OUT OF THE DOM. Gate 11 reads the
+//      exported HTML. A carousel that mounts only the active slide, or an
+//      accordion that mounts content on open, silently drops real copy from a
+//      static export. Hide inactive state with opacity/transform — never `&&`.
+// ===========================================================================
+
+/**
+ * type-hero — a full-height opening built from type alone.
+ *
+ * The harvested idea is that hierarchy can come from a 12-step opacity ladder
+ * on ONE ink rather than from a palette: the operative words sit at full
+ * strength and the connective words drop back, so a single colour does the work
+ * of three. That is what lets this carry a hero with no photograph at all —
+ * which matters, because a full-bleed image is the most unforgiving placement
+ * on a site and a weak one fails there and nowhere else.
+ *
+ * The headline is split on a `|` if the plan supplies one, so the design pass
+ * controls which words are emphasised without any markup in the copy.
+ */
+export function TypeHero({ section }: LayoutProps) {
+  const { copy } = section;
+  const parts = (copy.headline ?? "").split("|").map((t) => t.trim()).filter(Boolean);
+  return (
+    <Container className="flex min-h-[88svh] flex-col justify-center py-24 lg:py-32">
+      <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-9">
+          <FadeIn>
+            {section.nav_label && (
+              <span className="u-label text-foreground/70">{section.nav_label}</span>
+            )}
+            {parts.length > 0 && (
+              <h1 className="mt-7 font-display text-[clamp(2.5rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.03em] text-foreground">
+                {parts.map((line, i) => (
+                  <span key={i} className={i % 2 === 1 ? "block text-foreground/55" : "block"}>
+                    {line}
+                  </span>
+                ))}
+              </h1>
+            )}
+          </FadeIn>
+        </div>
+        <div className="lg:col-span-3">
+          <FadeIn delay={0.1}>
+            <SignatureMark variant="monogram" />
+          </FadeIn>
+        </div>
+      </div>
+      <FadeIn delay={0.16}>
+        <div className="mt-14 h-px w-full bg-primary/40" />
+        <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            {copy.subhead && (
+              <p className="max-w-[52ch] font-body text-lg leading-relaxed text-foreground/70 lg:text-xl">
+                {copy.subhead}
+              </p>
+            )}
+            {copy.body && (
+              <p className="mt-5 max-w-[56ch] font-body text-base leading-relaxed text-foreground/70">
+                {copy.body}
+              </p>
+            )}
+          </div>
+          <div className="flex items-start gap-3 lg:col-span-5 lg:justify-end">
+            {copy.cta && <Button size="lg">{copy.cta}</Button>}
+            {copy.caption && (
+              <span className="u-label self-center text-foreground/70">{copy.caption}</span>
+            )}
+          </div>
+        </div>
+      </FadeIn>
+    </Container>
+  );
+}
+
+/**
+ * marquee-band — the page's only luminance inversion.
+ *
+ * Harvested as a *rule*, not as content: one full-bleed inverted strip between
+ * movements does more separating work than a border ever will, and costs one
+ * element. Uses `bg-foreground text-background`, the one pair
+ * synthesize_tokens guarantees at >=4.5:1.
+ *
+ * Pure CSS, so zero JS. The animation is genuinely disabled under
+ * prefers-reduced-motion (see globals.css) — Gate 7 only checks that a
+ * reduced-motion block EXISTS, so this one has to be right by construction.
+ */
+export function MarqueeBand({ section }: LayoutProps) {
+  const { copy } = section;
+  const words = itemsFor(section, 6);
+  const line = words.length >= 2 ? words : [copy.headline ?? ""].filter(Boolean);
+  if (line.length === 0) return null;
+  const group = (
+    <div className="marquee-group flex shrink-0 items-center gap-8 pr-8" aria-hidden="true">
+      {line.map((w, i) => (
+        <span key={i} className="flex items-center gap-8 font-display text-3xl whitespace-nowrap lg:text-5xl">
+          {w}
+          <span className="text-background/40">/</span>
+        </span>
+      ))}
+    </div>
+  );
+  return (
+    <div className="w-full overflow-hidden bg-foreground py-6 text-background">
+      {/* Screen readers get the list once, as text; the duplicated visual
+       *  groups are aria-hidden so the loop is not announced twice. */}
+      <span className="sr-only">{line.join(", ")}</span>
+      <div className="marquee-track flex w-max flex-nowrap">
+        {group}
+        {group}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * label-rail — an asymmetric row: narrow label rail beside a surfaced card.
+ *
+ * The measured split is 240 / 790 inside a 1274 container with
+ * `justify-between`, which leaves ~244px of empty middle. That gap is the whole
+ * point: it makes a 19/62 split read as a deliberate composition rather than a
+ * broken thirds grid. Reproduced proportionally rather than in fixed pixels so
+ * it holds at other container widths.
+ */
+export function LabelRailCard({ section }: LayoutProps) {
+  const { copy, media } = section;
+  const items = itemsFor(section, 6);
+  return (
+    <Container className="py-20 lg:py-28">
+      <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
+        <div className="shrink-0 lg:w-[240px] lg:pt-1">
+          <FadeIn>
+            {copy.headline && (
+              <h2 className="font-display text-4xl leading-[0.95] tracking-[-0.02em] text-foreground lg:text-6xl">
+                {copy.headline}
+              </h2>
+            )}
+            {items.length > 0 && (
+              <ul className="mt-8 flex flex-col gap-0.5">
+                {items.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-baseline gap-3 border-b border-foreground/10 py-2.5 font-body text-sm text-foreground/70"
+                  >
+                    <span className="u-label text-foreground/70">{String(i + 1).padStart(2, "0")}</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </FadeIn>
+        </div>
+        <div className="w-full lg:max-w-[790px] lg:flex-1">
+          <FadeIn delay={0.08}>
+            <div className="dotted-card relative overflow-hidden rounded-[20px] p-8 md:p-11">
+              {copy.subhead && (
+                <p className="font-display text-2xl leading-[1.28] tracking-[-0.01em] text-foreground lg:text-[2.6rem]">
+                  {copy.subhead}
+                </p>
+              )}
+              {copy.body && (
+                <p className="mt-6 max-w-[60ch] font-body text-base leading-[1.7] text-foreground/70 lg:text-lg">
+                  {copy.body}
+                </p>
+              )}
+              {media && (
+                <div className="mt-8 max-w-[320px]">
+                  <BrandImage
+                    file={media.file}
+                    alt={media.alt}
+                    className="aspect-[4/3] rounded-[12px]"
+                  />
+                </div>
+              )}
+              {copy.caption && (
+                <p className="mt-5 font-body text-sm italic text-foreground/70">{copy.caption}</p>
+              )}
+              {copy.cta && <div className="mt-8"><Button>{copy.cta}</Button></div>}
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+    </Container>
+  );
+}
+
+/**
+ * contact-panel — address, location and (only with a real endpoint) a form.
+ *
+ * Under a static export there is no server to POST to, so a form needs an
+ * external endpoint. We do not have one, and there is no phone number anywhere
+ * in the client's source material either — so a `wa.me/` link would mean
+ * inventing a number. The published email address is real, so that is what
+ * ships. The gap is recorded in the plan's skipped_sections rather than papered
+ * over with a form that silently goes nowhere.
+ */
+export function ContactPanel({ section }: LayoutProps) {
+  const { copy } = section;
+  const details = itemsFor(section, 8);
+  const email = copy.cta && copy.cta.includes("@") ? copy.cta : null;
+  return (
+    <Container className="py-24 lg:py-36">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <FadeIn>
+            {copy.headline && (
+              <h2 className="max-w-[16ch] font-display text-[clamp(2.25rem,6vw,4.5rem)] leading-[0.95] tracking-[-0.03em] text-foreground">
+                {copy.headline}
+              </h2>
+            )}
+            {copy.subhead && (
+              <p className="mt-6 max-w-[50ch] font-body text-lg leading-relaxed text-foreground/70">
+                {copy.subhead}
+              </p>
+            )}
+            {email && (
+              <a
+                href={`mailto:${email}?subject=${encodeURIComponent("Enquiry from the website")}`}
+                className="mt-10 inline-block font-display text-2xl tracking-[-0.01em] text-foreground underline decoration-primary decoration-2 underline-offset-[6px] transition-opacity hover:opacity-70 lg:text-4xl"
+              >
+                {email}
+              </a>
+            )}
+          </FadeIn>
+        </div>
+        <div className="lg:col-span-5">
+          <FadeIn delay={0.08}>
+            {copy.body && (
+              <p className="max-w-[40ch] font-body text-base leading-relaxed text-foreground/70">
+                {copy.body}
+              </p>
+            )}
+            {details.length > 0 && (
+              <ul className="mt-8 flex flex-col">
+                {details.map((d, i) => (
+                  <li
+                    key={i}
+                    className="border-t border-foreground/10 py-4 font-body text-sm text-foreground/70"
+                  >
+                    {d}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {copy.caption && (
+              <p className="mt-6 u-label text-foreground/70">{copy.caption}</p>
+            )}
+          </FadeIn>
+        </div>
+      </div>
+    </Container>
+  );
+}

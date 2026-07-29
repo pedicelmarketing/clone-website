@@ -1,111 +1,66 @@
-"use client"
-
-import * as React from "react"
-// Scoped package, NOT the `radix-ui` umbrella barrel. The barrel pulls every
-// primitive into the bundle regardless of what is used — it alone accounted for
-// a 137 KB gzipped chunk and pushed the build over the Gate 10 budget.
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-
-import { cn } from "@/lib/utils"
-
 /**
- * Inline chevrons instead of `lucide-react`.
+ * Accordion — native `<details>` / `<summary>`, no Radix.
  *
- * The accordion is the only consumer and it needs exactly two glyphs; pulling a
- * whole icon library into the bundle to draw two 8-byte paths is not a trade
- * worth making when Gate 10 (bundle budget) is measured in kilobytes. These are
- * the stock Lucide chevron paths (ISC), reproduced so the markup is identical.
+ * This is a correctness change as much as a bundle change. Radix mounts
+ * `AccordionContent` only when the item is open, so on a STATIC EXPORT every
+ * closed item's content is simply absent from the emitted HTML — invisible to
+ * Gate 11 (content fidelity), invisible to search engines, and unreachable
+ * without JavaScript. `<details>` keeps its content in the DOM at all times and
+ * works with JS disabled.
+ *
+ * Keyboard behaviour, focus management and `aria-expanded` are supplied by the
+ * browser, which is the other reason this is not a downgrade.
  */
-function ChevronIcon({ dir, ...props }: { dir: "down" | "up" } & React.SVGProps<SVGSVGElement>) {
+
+import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+
+export function Accordion({ children, className }: { children: ReactNode; className?: string }) {
+  return <div className={cn("w-full", className)}>{children}</div>;
+}
+
+export function AccordionItem({
+  children, className, defaultOpen = false,
+}: { children: ReactNode; className?: string; defaultOpen?: boolean }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
+    <details
+      open={defaultOpen}
+      className={cn("group/acc border-b border-current/10", className)}
     >
-      <path d={dir === "down" ? "m6 9 6 6 6-6" : "m18 15-6-6-6 6"} />
-    </svg>
-  )
+      {children}
+    </details>
+  );
 }
 
-function Accordion({
-  className,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Root>) {
+export function AccordionTrigger({
+  children, className,
+}: { children: ReactNode; className?: string }) {
   return (
-    <AccordionPrimitive.Root
-      data-slot="accordion"
-      className={cn("flex w-full flex-col", className)}
-      {...props}
-    />
-  )
-}
-
-function AccordionItem({
-  className,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Item>) {
-  return (
-    <AccordionPrimitive.Item
-      data-slot="accordion-item"
-      className={cn("not-last:border-b", className)}
-      {...props}
-    />
-  )
-}
-
-function AccordionTrigger({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
-  return (
-    <AccordionPrimitive.Header className="flex">
-      <AccordionPrimitive.Trigger
-        data-slot="accordion-trigger"
-        className={cn(
-          "group/accordion-trigger relative flex flex-1 items-start justify-between rounded-lg border border-transparent py-2.5 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:after:border-ring disabled:pointer-events-none disabled:opacity-50 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground",
-          className
-        )}
-        {...props}
-      >
-        {children}
-        <ChevronIcon dir="down" data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <ChevronIcon dir="up" data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
-      </AccordionPrimitive.Trigger>
-    </AccordionPrimitive.Header>
-  )
-}
-
-function AccordionContent({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Content>) {
-  return (
-    <AccordionPrimitive.Content
-      data-slot="accordion-content"
-      className="overflow-hidden text-sm data-open:animate-accordion-down data-closed:animate-accordion-up"
-      {...props}
+    <summary
+      className={cn(
+        "flex cursor-pointer list-none items-center justify-between gap-6 py-5",
+        "text-left transition-opacity hover:opacity-70",
+        "outline-none focus-visible:ring-2 focus-visible:ring-primary",
+        "[&::-webkit-details-marker]:hidden",
+        className,
+      )}
     >
-      <div
-        className={cn(
-          "h-(--radix-accordion-content-height) pt-0 pb-2.5 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
-          className
-        )}
+      <span className="flex min-w-0 flex-1 items-baseline gap-4">{children}</span>
+      {/* Rotates via the parent <details open> state — no JS, no state. */}
+      <svg
+        aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+        className="shrink-0 opacity-50 transition-transform duration-200 group-open/acc:rotate-45"
       >
-        {children}
-      </div>
-    </AccordionPrimitive.Content>
-  )
+        <path d="M12 5v14M5 12h14" />
+      </svg>
+    </summary>
+  );
 }
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+export function AccordionContent({
+  children, className,
+}: { children?: ReactNode; className?: string }) {
+  if (!children) return null;
+  return <div className={cn("pb-5 pr-10", className)}>{children}</div>;
+}

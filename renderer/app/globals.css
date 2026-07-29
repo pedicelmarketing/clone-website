@@ -176,3 +176,93 @@
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
+
+/* ===========================================================================
+   Harvested-layout utilities
+   ---------------------------------------------------------------------------
+   `.u-label` replaces the monospace face that was being loaded solely to set
+   small uppercase labels. The reference gets its accent typography from
+   transform + tracking on the display face rather than from a third family,
+   which is one fewer webfont and a more coherent page.
+   =========================================================================== */
+.u-label {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+}
+
+/* The label-rail's card surface: a dotted field at a 26px tile, a soft lift,
+   and a folded corner. Colour comes from tokens only — no raw hex, so Gate 8
+   (token discipline) stays green. */
+.dotted-card {
+  background-color: color-mix(in oklab, var(--color-foreground) 4%, var(--color-background));
+  background-image: radial-gradient(
+    circle,
+    color-mix(in oklab, var(--color-foreground) 16%, transparent) 1.1px,
+    transparent 1.3px
+  );
+  background-size: 26px 26px;
+  background-position: 16px 16px;
+  box-shadow: 0 34px 70px -34px color-mix(in oklab, var(--color-foreground) 45%, transparent);
+}
+.dotted-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(
+    225deg,
+    var(--color-background) 0 43%,
+    color-mix(in oklab, var(--color-foreground) 18%, transparent) 43% 48%,
+    color-mix(in oklab, var(--color-foreground) 8%, var(--color-background)) 48%
+  );
+}
+
+/* Marquee. 22s linear loop over two duplicated groups. */
+@keyframes marquee-slide {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.marquee-track {
+  animation: marquee-slide 22s linear infinite;
+  will-change: transform;
+}
+
+/* Reduced motion, for real.
+   Gate 7 only checks that a prefers-reduced-motion BLOCK EXISTS, not that it
+   has any effect — so an animation could ignore the user's preference while the
+   gate stayed green. These rules are written to actually stop things. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   OPACITY LADDER FLOORS — measured, not guessed.
+   The harvested "hierarchy from one ink at twelve opacities" idea works on a
+   dark ground, where white at 16% still reads. On this brand's light ground
+   with a forest-green ink (10.97:1 at full strength) the ladder bottoms out
+   much earlier:
+
+       /70 -> 4.58:1   the floor for SMALL text (WCAG AA, 4.5:1)
+       /55 -> 3.08:1   the floor for DISPLAY text (WCAG AA large, 3:1)
+       /45 -> 2.42:1   fails everything
+       /16 -> 1.33:1   the reference's ghost value — unusable here
+
+   Anything below those is decorative only and must be aria-hidden. The
+   reference site itself would not pass this check; that is the point of
+   having one.
+   --------------------------------------------------------------------------- */

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "tool_version": "1.0",
+    "generated_at": "2026-07-29T19:10:44Z",
+    "evidence_basis": "DOM+assets confirmed",
+    "project_slug": "premium-padel-academy-marbella",
+    "brand_brief": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-marbella/brand-brief.json",
+    "reference_tokens": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens"
+  },
+  "font_substitutions": {
+    "display": {
+      "primary": "Outfit",
+      "original_family": "Outfit",
+      "substituted": false,
+      "reason": "license_notes clear; brand family used as-is"
+    },
+    "body": {
+      "primary": "Inter",
+      "original_family": "Inter",
+      "substituted": false,
+      "reason": "license_notes clear; brand family used as-is"
+    },
+    "mono": {
+      "primary": "Inter",
+      "original_family": "Inter",
+      "substituted": false,
+      "reason": "license_notes clear; brand family used as-is"
+    }
+  },
+  "google_fonts_requested": [
+    {
+      "role": "body",
+      "primary": "Inter",
+      "family_arg": "Inter:wght@400;500;600;700"
+    },
+    {
+      "role": "mono",
+      "primary": "Inter",
+      "family_arg": "Inter:wght@400;500;600;700"
+    }
+  ]
+}

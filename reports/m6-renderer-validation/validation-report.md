@@ -1,16 +1,16 @@
 # Validation Report
 
-Generated: 2026-07-29T16:55:20.114209+00:00
+Generated: 2026-07-29T19:10:43.980079+00:00
 Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site`
-Routes validated: /
-Local server: http://127.0.0.1:47445 (python3 -m http.server, killed on exit)
+Routes validated: ['/']
+Local server: http://127.0.0.1:51911 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/server.log
 
 ## Declared scope
 
 - Method: `validate_site.py` (10-gate harness; static Composed Site / Next.js export)
-- Routes: /
+- Routes: ['/']
 - Viewports: [320, 768, 1024, 1440]
 - Lighthouse: enabled
 - DOM audit settle: wait for load, then document.getAnimations() finished promises with a 3s cap, then poll for two consecutive pixel-identical frames (catches JS-driven animation libraries that never register in document.getAnimations)
@@ -23,16 +23,16 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 | # | Gate | Verdict | Evidence basis | Summary |
 |---|------|---------|----------------|---------|
 | 1 | Boot | **PASS** | HTTP-200 only | All 1 route(s) returned HTTP 200 via local server. |
-| 2 | Dependency | **PASS** | HTTP-200 only | All 26 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External. |
+| 2 | Dependency | **PASS** | HTTP-200 only | All 33 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External. |
 | 3 | Accessibility | **PASS** | DOM+assets confirmed | axe-core found 0 serious/critical violations across 1 route(s) (0 total). |
 | 4 | Performance | **PASS** | DOM+assets confirmed | Lighthouse met thresholds on 1 route(s). |
 | 5 | Site-wide audit | **PASS** | DOM+assets confirmed | Only one route declared; per-route vs. whole-site comparison is not applicable. Single-route Lighthouse score was emitted by gate 4. |
 | 6 | Responsive | **PASS** | Observed visually | No horizontal overflow across 4 cell(s) (1 route(s) × 4 viewport(s)). |
 | 7 | Motion | **PASS** | DOM+assets confirmed | prefers-reduced-motion honored in 1 CSS file(s). |
-| 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 350 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
+| 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 336 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
 | 9 | Build (Next.js) | **PASS** | DOM+assets confirmed | `npm run build` exited 0 in renderer. |
-| 10 | Bundle (Next.js) | **PASS** | DOM+assets confirmed | Total gzipped JS is 295.1 KB across 15 file(s), under the 300 KB budget. |
-| 11 | Content fidelity | **PASS** | DOM+assets confirmed | All 32 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present. |
+| 10 | Bundle (Next.js) | **PASS** | DOM+assets confirmed | Total gzipped JS is 292.4 KB across 15 file(s), under the 300 KB budget. |
+| 11 | Content fidelity | **PASS** | DOM+assets confirmed | All 32 copy block(s) reached the DOM across 1 route(s) (>=85% token coverage); no placeholder strings; navigation present. |
 
 **Verdict values:** `PASS` (evidence satisfies the gate), `FAIL` (evidence contradicts), `NOT-EXERCISED` (runner unavailable or did not run). NOT-EXERCISED does not fail the run but is visible above and downgrades the acceptance tier.
 
@@ -53,22 +53,22 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:47445/"
+      "final_url": "http://127.0.0.1:51911/"
     }
   },
-  "base_url": "http://127.0.0.1:47445"
+  "base_url": "http://127.0.0.1:51911"
 }
 ```
 
 ### Gate 2 — Dependency  (PASS)
 
 - **Evidence basis:** HTTP-200 only
-- **Summary:** All 26 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External.
+- **Summary:** All 33 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External.
 - **Observations (JSON):**
 
 ```json
 {
-  "reference_count": 26,
+  "reference_count": 33,
   "external_count": 0,
   "external_sample": [],
   "external_hosts": []
@@ -87,7 +87,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:47445/",
+      "url": "http://127.0.0.1:51911/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -198,7 +198,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 6370,
+      "scrollHeight": 6245,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
@@ -206,14 +206,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/662862665287111552__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/5445048729679099234__320x720.png"
     },
     {
       "route": "/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 4096,
+      "scrollHeight": 4061,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
@@ -221,14 +221,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/1768841324361709892__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/8144857279785146598__768x1024.png"
     },
     {
       "route": "/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 4273,
+      "scrollHeight": 4204,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
@@ -236,14 +236,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/7071755141150294871__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/335641096607828241__1024x768.png"
     },
     {
       "route": "/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 4250,
+      "scrollHeight": 4181,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
@@ -251,7 +251,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/3187701628131343930__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/6419938974786529976__1440x900.png"
     }
   ],
   "viewports": [
@@ -276,10 +276,10 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ```json
 {
   "css_files_seen": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
   ],
   "reduced_in": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
   ]
 }
 ```
@@ -287,7 +287,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ### Gate 8 — Token discipline  (PASS)
 
 - **Evidence basis:** DOM+assets confirmed
-- **Summary:** CSS uses 350 var(--token) reference(s); 0 raw hex literals outside tokens.css.
+- **Summary:** CSS uses 336 var(--token) reference(s); 0 raw hex literals outside tokens.css.
 - **Notes:**
   - Gate 8 re-scoped from workflow-design.md §4's 'source-paired 10x' — see report.
   - tokens.css is the explicit source of truth; raw hex inside it is allowed.
@@ -296,9 +296,9 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ```json
 {
   "css_files": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
   ],
-  "var_uses": 350,
+  "var_uses": 336,
   "raw_hex": []
 }
 ```
@@ -323,7 +323,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ### Gate 10 — Bundle (Next.js)  (PASS)
 
 - **Evidence basis:** DOM+assets confirmed
-- **Summary:** Total gzipped JS is 295.1 KB across 15 file(s), under the 300 KB budget.
+- **Summary:** Total gzipped JS is 292.4 KB across 15 file(s), under the 300 KB budget.
 - **Observations (JSON):**
 
 ```json
@@ -331,19 +331,19 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "applicable": true,
   "static_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static",
   "file_count": 15,
-  "total_gzipped_bytes": 302195,
-  "total_gzipped_kb": 295.1,
+  "total_gzipped_bytes": 299465,
+  "total_gzipped_kb": 292.4,
   "budget_kb": 300,
   "top_files": [
-    {
-      "path": "chunks/41-082a597489077dab.js",
-      "raw_bytes": 189257,
-      "gzipped_bytes": 61458
-    },
     {
       "path": "chunks/framework-acd67e14855de5a2.js",
       "raw_bytes": 182716,
       "gzipped_bytes": 57691
+    },
+    {
+      "path": "chunks/901-af741208424e3dd0.js",
+      "raw_bytes": 172737,
+      "gzipped_bytes": 56617
     },
     {
       "path": "chunks/4bd1b696-c023c6e3521b1417.js",
@@ -351,9 +351,9 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "gzipped_bytes": 54228
     },
     {
-      "path": "chunks/255-300d9cc44f394368.js",
-      "raw_bytes": 173762,
-      "gzipped_bytes": 46426
+      "path": "chunks/255-2b334ff5c2ee7a81.js",
+      "raw_bytes": 173819,
+      "gzipped_bytes": 46461
     },
     {
       "path": "chunks/polyfills-42372ed130431b0a.js",
@@ -367,7 +367,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ### Gate 11 — Content fidelity  (PASS)
 
 - **Evidence basis:** DOM+assets confirmed
-- **Summary:** All 32 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.
+- **Summary:** All 32 copy block(s) reached the DOM across 1 route(s) (>=85% token coverage); no placeholder strings; navigation present.
 - **Notes:**
   - weak-but-present: services/body 0.632
   - weak-but-present: our-approach/body 0.565
@@ -394,6 +394,13 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "placeholders_found": [],
   "wants_nav": true,
   "nav_present": true,
+  "routes_without_nav": [],
+  "routes": [
+    "/"
+  ],
+  "titles": [
+    "pedicel-marketing-redesign-smoke"
+  ],
   "coverage_threshold": 0.85
 }
 ```

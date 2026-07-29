@@ -14,8 +14,8 @@
  * intentionally NOT included.
  */
 
-import { useEffect, useRef, type ReactNode } from "react";
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { useRef, type ReactNode } from "react";
+import { motion, motion as m, useScroll, useSpring, useTransform } from "motion/react";
 
 /**
  * SmoothScroll — intentionally a plain passthrough.
@@ -92,7 +92,34 @@ export function GoldDotMarker() {
  * anchors the cover's right column, giving the hero a focal point instead
  * of dead space. Colour comes from --color-primary (never a raw hex).
  */
-export function SignatureMark() {
+export function SignatureMark({ variant = "dot" }: { variant?: "dot" | "monogram" } = {}) {
+  if (variant === "monogram") {
+    // A padel ball: one circle, two opposed seams. Drawn as SVG rather than
+    // shipped as the client's logo JPEG — that file is a flattened screenshot
+    // of a slide deck, and a raster of a presentation is not a logo asset.
+    return (
+      <div className="flex h-full items-start justify-start lg:justify-end">
+        <m.svg
+          aria-hidden="true"
+          viewBox="0 0 100 100"
+          initial={{ scale: 0.7, opacity: 0, rotate: -12 }}
+          animate={{ scale: 1, opacity: 1, rotate: 0 }}
+          transition={{ duration: 0.8, ease: [0.2, 0.7, 0.2, 1] }}
+          style={{ width: "clamp(88px, 12vw, 200px)", height: "clamp(88px, 12vw, 200px)" }}
+          fill="none"
+          stroke="var(--color-primary)"
+        >
+          <circle cx="50" cy="50" r="46" strokeWidth="2" />
+          <path d="M18 18 A 46 46 0 0 1 18 82" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M82 18 A 46 46 0 0 0 82 82" strokeWidth="1.5" strokeLinecap="round" />
+        </m.svg>
+      </div>
+    );
+  }
+  return _SignatureDot();
+}
+
+function _SignatureDot() {
   return (
     <div className="relative flex h-full min-h-[220px] items-start justify-start lg:justify-center lg:pt-6">
       <motion.div

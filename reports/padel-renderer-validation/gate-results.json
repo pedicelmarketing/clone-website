@@ -1,0 +1,868 @@
+{
+  "schema": "1.1",
+  "gate_version": "10-gate-v1.1",
+  "site_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site",
+  "routes": [
+    "/",
+    "/experiences-in-spain/",
+    "/elite-coaches/",
+    "/about/",
+    "/contact/"
+  ],
+  "viewports": [
+    320,
+    768,
+    1024,
+    1440
+  ],
+  "generated": "2026-07-29T19:13:48.534753+00:00",
+  "host": "127.0.0.1",
+  "port": 36959,
+  "results": [
+    {
+      "id": "1",
+      "name": "Boot",
+      "verdict": "PASS",
+      "evidence_basis": "HTTP-200 only",
+      "summary": "All 5 route(s) returned HTTP 200 via local server.",
+      "notes": [
+        "  / -> HTTP 200",
+        "  /experiences-in-spain/ -> HTTP 200",
+        "  /elite-coaches/ -> HTTP 200",
+        "  /about/ -> HTTP 200",
+        "  /contact/ -> HTTP 200"
+      ],
+      "observations": {
+        "per_route": {
+          "/": {
+            "status": 200,
+            "final_url": "http://127.0.0.1:36959/"
+          },
+          "/experiences-in-spain/": {
+            "status": 200,
+            "final_url": "http://127.0.0.1:36959/experiences-in-spain/"
+          },
+          "/elite-coaches/": {
+            "status": 200,
+            "final_url": "http://127.0.0.1:36959/elite-coaches/"
+          },
+          "/about/": {
+            "status": 200,
+            "final_url": "http://127.0.0.1:36959/about/"
+          },
+          "/contact/": {
+            "status": 200,
+            "final_url": "http://127.0.0.1:36959/contact/"
+          }
+        },
+        "base_url": "http://127.0.0.1:36959"
+      },
+      "error": null
+    },
+    {
+      "id": "2",
+      "name": "Dependency",
+      "verdict": "PASS",
+      "evidence_basis": "HTTP-200 only",
+      "summary": "All 179 local reference(s) resolved HTTP 200. 1 external host reference(s) classified as Kept External.",
+      "notes": [],
+      "observations": {
+        "reference_count": 179,
+        "external_count": 1,
+        "external_sample": [
+          "mailto:info@rikicoach.com?subject=Enquiry%20from%20the%20website"
+        ],
+        "external_hosts": []
+      },
+      "error": null
+    },
+    {
+      "id": "3",
+      "name": "Accessibility",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "axe-core found 0 serious/critical violations across 5 route(s) (0 total).",
+      "notes": [],
+      "observations": {
+        "engine": "in-process playwright + axe.min.js (npx cache)",
+        "per_route": {
+          "/": {
+            "route": "/",
+            "url": "http://127.0.0.1:36959/",
+            "status": 200,
+            "exit": 0,
+            "ok": true,
+            "violations": 0,
+            "serious_critical": 0,
+            "by_impact": {
+              "minor": 0,
+              "moderate": 0,
+              "serious": 0,
+              "critical": 0
+            },
+            "ids": []
+          },
+          "/experiences-in-spain/": {
+            "route": "/experiences-in-spain/",
+            "url": "http://127.0.0.1:36959/experiences-in-spain/",
+            "status": 200,
+            "exit": 0,
+            "ok": true,
+            "violations": 0,
+            "serious_critical": 0,
+            "by_impact": {
+              "minor": 0,
+              "moderate": 0,
+              "serious": 0,
+              "critical": 0
+            },
+            "ids": []
+          },
+          "/elite-coaches/": {
+            "route": "/elite-coaches/",
+            "url": "http://127.0.0.1:36959/elite-coaches/",
+            "status": 200,
+            "exit": 0,
+            "ok": true,
+            "violations": 0,
+            "serious_critical": 0,
+            "by_impact": {
+              "minor": 0,
+              "moderate": 0,
+              "serious": 0,
+              "critical": 0
+            },
+            "ids": []
+          },
+          "/about/": {
+            "route": "/about/",
+            "url": "http://127.0.0.1:36959/about/",
+            "status": 200,
+            "exit": 0,
+            "ok": true,
+            "violations": 0,
+            "serious_critical": 0,
+            "by_impact": {
+              "minor": 0,
+              "moderate": 0,
+              "serious": 0,
+              "critical": 0
+            },
+            "ids": []
+          },
+          "/contact/": {
+            "route": "/contact/",
+            "url": "http://127.0.0.1:36959/contact/",
+            "status": 200,
+            "exit": 0,
+            "ok": true,
+            "violations": 0,
+            "serious_critical": 0,
+            "by_impact": {
+              "minor": 0,
+              "moderate": 0,
+              "serious": 0,
+              "critical": 0
+            },
+            "ids": []
+          }
+        },
+        "succeeded_routes": [
+          "/",
+          "/experiences-in-spain/",
+          "/elite-coaches/",
+          "/about/",
+          "/contact/"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "4",
+      "name": "Performance",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "Lighthouse met thresholds on 5 route(s).",
+      "notes": [
+        "Thresholds: {'performance': 90, 'accessibility': 95, 'best_practices': 95, 'seo': 95}"
+      ],
+      "observations": {
+        "per_route": {
+          "/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/experiences-in-spain/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/elite-coaches/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/about/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/contact/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          }
+        },
+        "table": [
+          {
+            "route": "/",
+            "performance": 100,
+            "accessibility": 100,
+            "best_practices": 100,
+            "seo": 100,
+            "fails": []
+          },
+          {
+            "route": "/experiences-in-spain/",
+            "performance": 100,
+            "accessibility": 100,
+            "best_practices": 100,
+            "seo": 100,
+            "fails": []
+          },
+          {
+            "route": "/elite-coaches/",
+            "performance": 100,
+            "accessibility": 100,
+            "best_practices": 100,
+            "seo": 100,
+            "fails": []
+          },
+          {
+            "route": "/about/",
+            "performance": 100,
+            "accessibility": 100,
+            "best_practices": 100,
+            "seo": 100,
+            "fails": []
+          },
+          {
+            "route": "/contact/",
+            "performance": 100,
+            "accessibility": 100,
+            "best_practices": 100,
+            "seo": 100,
+            "fails": []
+          }
+        ],
+        "thresholds": {
+          "performance": 90,
+          "accessibility": 95,
+          "best_practices": 95,
+          "seo": 95
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "5",
+      "name": "Site-wide audit",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "Per-route Lighthouse table collected for 5 route(s).",
+      "notes": [
+        "Reused Lighthouse per-route loop (gate 4); unlighthouse not invoked (cheaper)."
+      ],
+      "observations": {
+        "per_route": {
+          "/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/experiences-in-spain/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/elite-coaches/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/about/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          },
+          "/contact/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          }
+        },
+        "tool": "per-route lighthouse loop",
+        "gate_4_verdict": "PASS"
+      },
+      "error": null
+    },
+    {
+      "id": "6",
+      "name": "Responsive",
+      "verdict": "PASS",
+      "evidence_basis": "Observed visually",
+      "summary": "No horizontal overflow across 20 cell(s) (5 route(s) \u00d7 4 viewport(s)).",
+      "notes": [],
+      "observations": {
+        "per_cell": [
+          {
+            "route": "/",
+            "viewport": "320x720",
+            "scrollWidth": 320,
+            "innerWidth": 320,
+            "scrollHeight": 4303,
+            "settle": {
+              "animation_count": 1,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 500
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1212059948551568141__320x720.png"
+          },
+          {
+            "route": "/",
+            "viewport": "768x1024",
+            "scrollWidth": 768,
+            "innerWidth": 768,
+            "scrollHeight": 4307,
+            "settle": {
+              "animation_count": 1,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 500
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/5828557347906523901__768x1024.png"
+          },
+          {
+            "route": "/",
+            "viewport": "1024x768",
+            "scrollWidth": 1024,
+            "innerWidth": 1024,
+            "scrollHeight": 4681,
+            "settle": {
+              "animation_count": 1,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 500
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/2932840495120012322__1024x768.png"
+          },
+          {
+            "route": "/",
+            "viewport": "1440x900",
+            "scrollWidth": 1440,
+            "innerWidth": 1440,
+            "scrollHeight": 5205,
+            "settle": {
+              "animation_count": 1,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 500
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3771884914725129229__1440x900.png"
+          },
+          {
+            "route": "/experiences-in-spain/",
+            "viewport": "320x720",
+            "scrollWidth": 320,
+            "innerWidth": 320,
+            "scrollHeight": 3665,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3388933548981243622__320x720.png"
+          },
+          {
+            "route": "/experiences-in-spain/",
+            "viewport": "768x1024",
+            "scrollWidth": 768,
+            "innerWidth": 768,
+            "scrollHeight": 3094,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/6618781569720173605__768x1024.png"
+          },
+          {
+            "route": "/experiences-in-spain/",
+            "viewport": "1024x768",
+            "scrollWidth": 1024,
+            "innerWidth": 1024,
+            "scrollHeight": 3340,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1885393444002792656__1024x768.png"
+          },
+          {
+            "route": "/experiences-in-spain/",
+            "viewport": "1440x900",
+            "scrollWidth": 1440,
+            "innerWidth": 1440,
+            "scrollHeight": 3602,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/2820843769739504738__1440x900.png"
+          },
+          {
+            "route": "/elite-coaches/",
+            "viewport": "320x720",
+            "scrollWidth": 320,
+            "innerWidth": 320,
+            "scrollHeight": 4435,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/2553795980593911663__320x720.png"
+          },
+          {
+            "route": "/elite-coaches/",
+            "viewport": "768x1024",
+            "scrollWidth": 768,
+            "innerWidth": 768,
+            "scrollHeight": 4949,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/4439946725690395020__768x1024.png"
+          },
+          {
+            "route": "/elite-coaches/",
+            "viewport": "1024x768",
+            "scrollWidth": 1024,
+            "innerWidth": 1024,
+            "scrollHeight": 5398,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/2346744313468428402__1024x768.png"
+          },
+          {
+            "route": "/elite-coaches/",
+            "viewport": "1440x900",
+            "scrollWidth": 1440,
+            "innerWidth": 1440,
+            "scrollHeight": 6426,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/7416561030893230507__1440x900.png"
+          },
+          {
+            "route": "/about/",
+            "viewport": "320x720",
+            "scrollWidth": 320,
+            "innerWidth": 320,
+            "scrollHeight": 3223,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/8592085334416219517__320x720.png"
+          },
+          {
+            "route": "/about/",
+            "viewport": "768x1024",
+            "scrollWidth": 768,
+            "innerWidth": 768,
+            "scrollHeight": 2614,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/8571811977421685323__768x1024.png"
+          },
+          {
+            "route": "/about/",
+            "viewport": "1024x768",
+            "scrollWidth": 1024,
+            "innerWidth": 1024,
+            "scrollHeight": 2510,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/707605541220416369__1024x768.png"
+          },
+          {
+            "route": "/about/",
+            "viewport": "1440x900",
+            "scrollWidth": 1440,
+            "innerWidth": 1440,
+            "scrollHeight": 2418,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/9092773004965171110__1440x900.png"
+          },
+          {
+            "route": "/contact/",
+            "viewport": "320x720",
+            "scrollWidth": 320,
+            "innerWidth": 320,
+            "scrollHeight": 1852,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/7288055758573981472__320x720.png"
+          },
+          {
+            "route": "/contact/",
+            "viewport": "768x1024",
+            "scrollWidth": 768,
+            "innerWidth": 768,
+            "scrollHeight": 1899,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/8232309949210135117__768x1024.png"
+          },
+          {
+            "route": "/contact/",
+            "viewport": "1024x768",
+            "scrollWidth": 1024,
+            "innerWidth": 1024,
+            "scrollHeight": 1499,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3443454352484514515__1024x768.png"
+          },
+          {
+            "route": "/contact/",
+            "viewport": "1440x900",
+            "scrollWidth": 1440,
+            "innerWidth": 1440,
+            "scrollHeight": 1599,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/4625095465335388231__1440x900.png"
+          }
+        ],
+        "viewports": [
+          320,
+          768,
+          1024,
+          1440
+        ],
+        "routes": [
+          "/",
+          "/experiences-in-spain/",
+          "/elite-coaches/",
+          "/about/",
+          "/contact/"
+        ],
+        "cell_count": 20
+      },
+      "error": null
+    },
+    {
+      "id": "7",
+      "name": "Motion",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "prefers-reduced-motion honored in 5 CSS file(s).",
+      "notes": [],
+      "observations": {
+        "css_files_seen": [
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css"
+        ],
+        "reduced_in": [
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "8",
+      "name": "Token discipline",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "CSS uses 1680 var(--token) reference(s); 0 raw hex literals outside tokens.css.",
+      "notes": [
+        "Gate 8 re-scoped from workflow-design.md \u00a74's 'source-paired 10x' \u2014 see report.",
+        "tokens.css is the explicit source of truth; raw hex inside it is allowed."
+      ],
+      "observations": {
+        "css_files": [
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css",
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/7977d9d1c8723c61.css"
+        ],
+        "var_uses": 1680,
+        "raw_hex": []
+      },
+      "error": null
+    },
+    {
+      "id": "9",
+      "name": "Build (Next.js)",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "`npm run build` exited 0 in renderer.",
+      "notes": [
+        "Build log: build-stdout.log"
+      ],
+      "observations": {
+        "applicable": true,
+        "renderer_root": "renderer",
+        "exit_code": 0,
+        "build_log": "build-stdout.log"
+      },
+      "error": null
+    },
+    {
+      "id": "10",
+      "name": "Bundle (Next.js)",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "Total gzipped JS is 292.4 KB across 15 file(s), under the 300 KB budget.",
+      "notes": [],
+      "observations": {
+        "applicable": true,
+        "static_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static",
+        "file_count": 15,
+        "total_gzipped_bytes": 299465,
+        "total_gzipped_kb": 292.4,
+        "budget_kb": 300,
+        "top_files": [
+          {
+            "path": "chunks/framework-acd67e14855de5a2.js",
+            "raw_bytes": 182716,
+            "gzipped_bytes": 57691
+          },
+          {
+            "path": "chunks/901-af741208424e3dd0.js",
+            "raw_bytes": 172737,
+            "gzipped_bytes": 56617
+          },
+          {
+            "path": "chunks/4bd1b696-c023c6e3521b1417.js",
+            "raw_bytes": 173019,
+            "gzipped_bytes": 54228
+          },
+          {
+            "path": "chunks/255-2b334ff5c2ee7a81.js",
+            "raw_bytes": 173819,
+            "gzipped_bytes": 46461
+          },
+          {
+            "path": "chunks/polyfills-42372ed130431b0a.js",
+            "raw_bytes": 112594,
+            "gzipped_bytes": 39373
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "11",
+      "name": "Content fidelity",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "All 94 copy block(s) reached the DOM across 5 route(s) (>=85% token coverage); no placeholder strings; navigation present.",
+      "notes": [],
+      "observations": {
+        "copy_blocks_checked": 94,
+        "missing": [],
+        "weak": [],
+        "placeholders_found": [],
+        "wants_nav": true,
+        "nav_present": true,
+        "routes_without_nav": [],
+        "routes": [
+          "/",
+          "/experiences-in-spain/",
+          "/elite-coaches/",
+          "/about/",
+          "/contact/"
+        ],
+        "titles": [
+          "Premium Padel Academy Marbella \u2014 tennis and padel programmes in Spain",
+          "Experiences in Spain \u2014 Premium Padel Academy Marbella",
+          "Elite Coaches Program \u2014 Premium Padel Academy Marbella",
+          "About \u2014 Premium Padel Academy Marbella",
+          "Contact \u2014 Premium Padel Academy Marbella"
+        ],
+        "coverage_threshold": 0.85
+      },
+      "error": null
+    }
+  ],
+  "meta": {
+    "input_hashes": {
+      "index.html": "a7ba51e6be454ddb8bb677510d0529a127ea8bc77aea4d808f0681648d2123b8",
+      "_next/static/*.js (combined)": "70a8be340fc6d4791cce8f786292d5d39cbfb5cdf8303efd3335c55197c52722"
+    },
+    "input_hashes_algorithm": "sha256",
+    "input_hashes_note": "Recompute with: sha256sum <site_dir>/index.html <site_dir>/styles.css <site_dir>/tokens.css. If the site is a Next.js export, also verify the combined _next/static/*.js hash. If these change without re-running validate_site.py the gate results are stale."
+  }
+}

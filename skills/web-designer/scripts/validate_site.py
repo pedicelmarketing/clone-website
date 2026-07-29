@@ -1936,6 +1936,7 @@ _TAG_RE = re.compile(r"<(script|style)[^>]*>.*?</\1>", re.S | re.I)
 _ANY_TAG_RE = re.compile(r"<[^>]+>")
 _WORD_RE = re.compile(r"[a-z0-9]+")
 _PLACEHOLDER_RE = re.compile(r"\[no [a-z ]+ in plan\]", re.I)
+_TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
 
 
 def _visible_text(html: str) -> str:
@@ -2004,17 +2005,34 @@ def gate_11_content_fidelity(server: "ServerHandle", routes: list, design_plan: 
                 notes=[], observations={"route": route},
             )
     haystack = " ".join(pages)
+    words_by_route = {r: set(_WORD_RE.findall(t)) for r, t in zip(routes, pages)}
     hay_words = set(_WORD_RE.findall(haystack))
+
+    # PER-ROUTE attribution. Scoring every block against the union of all routes
+    # lets a block that belongs on /about/ but leaked onto / still pass, which
+    # defeats the point on a multi-page site. When the plan declares pages[] we
+    # know which route each section belongs to, so score it there. Without
+    # pages[] the union is correct and stays — that is the single-page path.
+    route_of_section = {}
+    for pg in plan.get("pages", []) or []:
+        slug = (pg.get("slug") or "").strip("/")
+        route = "/" if not slug else f"/{slug}/"
+        for sid in pg.get("section_ids", []) or []:
+            route_of_section[sid] = route
 
     missing, weak = [], []
     for b in blocks:
         words = _WORD_RE.findall((b.get("text") or "").lower())
         if not words:
             continue
-        hits = sum(1 for w in words if w in hay_words)
+        expected = route_of_section.get(b.get("section_id"))
+        scope = words_by_route.get(expected, hay_words) if expected else hay_words
+        hits = sum(1 for w in words if w in scope)
         cov = hits / len(words)
         entry = {"section_id": b.get("section_id"), "role": b.get("role"),
                  "coverage": round(cov, 3), "text": (b.get("text") or "")[:80]}
+        if expected:
+            entry["expected_route"] = expected
         if cov < 0.5:
             missing.append(entry)
         elif cov < coverage_threshold:
@@ -2024,16 +2042,28 @@ def gate_11_content_fidelity(server: "ServerHandle", routes: list, design_plan: 
 
     # Navigation: the plan decides which sections belong in nav. If it marks any
     # and the page has no <nav>, the chrome is missing — the state the renderer
-    # shipped in for its entire life.
-    wants_nav = any(s.get("in_nav") for s in plan.get("sections", []) or [])
+    # shipped in for its entire life. EVERY route must carry it: `any` would let
+    # one navigable page vouch for four that strand the visitor.
+    wants_nav = (any(s.get("in_nav") for s in plan.get("sections", []) or [])
+                 or any(p.get("in_nav") for p in plan.get("pages", []) or []))
     # Check the RAW markup, not the tag-stripped text — _visible_text has
     # already removed every element by the time it is searched.
-    has_nav = any("<nav" in raw.lower() for raw in raw_pages)
-    nav_missing = wants_nav and not has_nav
+    routes_without_nav = [r for r, raw in zip(routes, raw_pages)
+                          if "<nav" not in raw.lower()]
+    has_nav = not routes_without_nav
+    nav_missing = wants_nav and bool(routes_without_nav)
+
+    # A shared <title> across every route is the canonical symptom of a dynamic
+    # route missing generateMetadata(). Nothing else in the harness can see it.
+    titles = [(_TITLE_RE.search(raw).group(1).strip() if _TITLE_RE.search(raw) else "")
+              for raw in raw_pages]
+    dup_titles = len(routes) > 1 and len(set(titles)) < len(titles)
 
     obs = {"copy_blocks_checked": len(blocks), "missing": missing, "weak": weak,
            "placeholders_found": placeholders, "wants_nav": wants_nav,
-           "nav_present": has_nav, "coverage_threshold": coverage_threshold}
+           "nav_present": has_nav, "routes_without_nav": routes_without_nav,
+           "routes": list(routes), "titles": titles,
+           "coverage_threshold": coverage_threshold}
 
     problems = []
     if missing:
@@ -2041,13 +2071,19 @@ def gate_11_content_fidelity(server: "ServerHandle", routes: list, design_plan: 
     if placeholders:
         problems.append(f"{len(placeholders)} placeholder string(s) rendered")
     if nav_missing:
-        problems.append("plan marks sections in_nav but the page has no <nav>")
+        problems.append(f"{len(routes_without_nav)} route(s) have no <nav>")
+    if dup_titles:
+        problems.append("routes share a <title> (dynamic route missing generateMetadata?)")
     if problems:
-        notes = [f"MISSING {m['section_id']}/{m['role']} (coverage {m['coverage']}): {m['text']}"
+        notes = [f"MISSING {m['section_id']}/{m['role']}"
+                 + (f" on {m['expected_route']}" if m.get("expected_route") else "")
+                 + f" (coverage {m['coverage']}): {m['text']}"
                  for m in missing[:12]]
         notes += [f"PLACEHOLDER rendered: {p}" for p in placeholders[:5]]
         if nav_missing:
-            notes.append("no <nav> element found in any route")
+            notes.append("no <nav> element on: " + ", ".join(routes_without_nav))
+        if dup_titles:
+            notes.append("duplicate <title> across routes: " + json.dumps(titles))
         return GateResult(
             id="11", name="Content fidelity", verdict="FAIL",
             evidence_basis="DOM+assets confirmed",
@@ -2058,7 +2094,8 @@ def gate_11_content_fidelity(server: "ServerHandle", routes: list, design_plan: 
     return GateResult(
         id="11", name="Content fidelity", verdict="PASS",
         evidence_basis="DOM+assets confirmed",
-        summary=(f"All {len(blocks)} copy block(s) reached the DOM "
+        summary=(f"All {len(blocks)} copy block(s) reached the DOM across "
+                 f"{len(routes)} route(s) "
                  f"(>={int(coverage_threshold * 100)}% token coverage); no placeholder strings; "
                  + ("navigation present." if wants_nav else "plan requests no navigation.")),
         notes=[f"weak-but-present: {w['section_id']}/{w['role']} {w['coverage']}" for w in weak[:8]],
@@ -2238,7 +2275,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     )
     p.add_argument("site_dir", help="Site root directory (index.html + assets).")
     p.add_argument("-o", "--out", required=True, help="Report output directory.")
-    p.add_argument("--routes", default="/", help="Comma-separated routes to validate (default: /).")
+    p.add_argument("--routes", type=parse_str_list, default=["/"],
+                   help="Comma-separated routes to validate (default: /).")
     p.add_argument("--entry", default="index.html", help="Default entry file for bare routes (default: index.html).")
     p.add_argument("--viewports", type=parse_int_list, default=DEFAULT_VIEWPORTS,
                    help=f"Comma-separated viewport widths (default: {','.join(str(v) for v in DEFAULT_VIEWPORTS)}).")
@@ -2260,6 +2298,25 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def parse_int_list(s: str) -> list[int]:
     return [int(x.strip()) for x in s.split(",") if x.strip()]
+
+
+def parse_str_list(s: str) -> list[str]:
+    """Split a comma-separated CLI value into a list.
+
+    `--routes` was declared with no `type=`, so argparse handed `run()` the raw
+    STRING and `[normalize_route(r) for r in args.routes]` iterated it one
+    CHARACTER at a time: `--routes '/,/about/'` became 15 single-character
+    routes. Multi-route validation has therefore never actually run — which is
+    why gate 5 has only ever taken its `len(routes) <= 1` branch.
+
+    >>> parse_str_list("/,/about/")
+    ['/', '/about/']
+    >>> parse_str_list(" /a , /b ")
+    ['/a', '/b']
+    >>> parse_str_list("/")
+    ['/']
+    """
+    return [x.strip() for x in s.split(",") if x.strip()]
 
 
 def main() -> int:
