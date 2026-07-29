@@ -55,6 +55,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import pathlib
 import re
 import shutil
 import signal
@@ -1927,6 +1928,145 @@ def render_report(results: list[GateResult], site_dir: str, args: argparse.Names
 # Main
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Gate 11 — Content fidelity (did the plan's copy actually reach the page?)
+# ---------------------------------------------------------------------------
+
+_TAG_RE = re.compile(r"<(script|style)[^>]*>.*?</\1>", re.S | re.I)
+_ANY_TAG_RE = re.compile(r"<[^>]+>")
+_WORD_RE = re.compile(r"[a-z0-9]+")
+_PLACEHOLDER_RE = re.compile(r"\[no [a-z ]+ in plan\]", re.I)
+
+
+def _visible_text(html: str) -> str:
+    html = _TAG_RE.sub(" ", html)
+    text = _ANY_TAG_RE.sub(" ", html)
+    for ent, rep in (("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"), ("&quot;", '"'),
+                     ("&#x27;", "'"), ("&#39;", "'"), ("&nbsp;", " "), ("&rsquo;", "'"),
+                     ("&ldquo;", '"'), ("&rdquo;", '"'), ("&mdash;", "-"), ("&ndash;", "-")):
+        text = text.replace(ent, rep)
+    return text.lower()
+
+
+def gate_11_content_fidelity(server: "ServerHandle", routes: list, design_plan: str | None,
+                             timeout: float, coverage_threshold: float = 0.85) -> GateResult:
+    """Every copy block the design pass wrote must actually reach the DOM.
+
+    This gate exists because nothing else could see the worst defect the
+    pipeline ever shipped. The renderer hardcoded which copy role each layout
+    read and silently dropped the others, so six of eleven sections lost their
+    headline, body or call-to-action, three sections rendered the literal debug
+    string "[no body in plan]", and one shipped an 879px empty box. Every other
+    gate passed: the page built, was accessible, met contrast, used tokens and
+    fit the bundle budget. A page can satisfy all of that and still not say what
+    it was supposed to say.
+
+    Matching is by TOKEN COVERAGE, not verbatim substring: layouts legitimately
+    reshape a block (a comma-separated services list becomes nine accordion
+    rows), so an exact-match check would fail on correct output. A block that
+    was genuinely dropped scores near zero, which is the signal we want.
+    """
+    if not design_plan:
+        return GateResult(
+            id="11", name="Content fidelity", verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary="No --design-plan supplied; cannot verify the plan's copy reached the page.",
+            notes=["Pass --design-plan <plan.json> to exercise this gate."],
+            observations={"applicable": False},
+        )
+    try:
+        plan = json.loads(pathlib.Path(design_plan).read_text())
+    except Exception as exc:  # noqa: BLE001
+        return GateResult(
+            id="11", name="Content fidelity", verdict="FAIL",
+            evidence_basis="DOM+assets confirmed",
+            summary=f"design plan could not be read: {exc}",
+            notes=[], observations={"design_plan": design_plan},
+        )
+
+    skipped = {s.get("id") for s in plan.get("skipped_sections", []) or []}
+    blocks = [b for b in plan.get("copy_blocks", []) or []
+              if b.get("section_id") not in skipped and (b.get("text") or "").strip()]
+
+    pages, raw_pages = [], []
+    for route in routes:
+        url = server.base_url() + normalize_route(route)
+        try:
+            with urlopen(url, timeout=timeout) as r:
+                raw = r.read().decode("utf-8", "replace")
+            raw_pages.append(raw)
+            pages.append(_visible_text(raw))
+        except Exception as exc:  # noqa: BLE001
+            return GateResult(
+                id="11", name="Content fidelity", verdict="NOT-EXERCISED",
+                evidence_basis="Not exercised",
+                summary=f"could not fetch {url}: {exc}",
+                notes=[], observations={"route": route},
+            )
+    haystack = " ".join(pages)
+    hay_words = set(_WORD_RE.findall(haystack))
+
+    missing, weak = [], []
+    for b in blocks:
+        words = _WORD_RE.findall((b.get("text") or "").lower())
+        if not words:
+            continue
+        hits = sum(1 for w in words if w in hay_words)
+        cov = hits / len(words)
+        entry = {"section_id": b.get("section_id"), "role": b.get("role"),
+                 "coverage": round(cov, 3), "text": (b.get("text") or "")[:80]}
+        if cov < 0.5:
+            missing.append(entry)
+        elif cov < coverage_threshold:
+            weak.append(entry)
+
+    placeholders = sorted(set(_PLACEHOLDER_RE.findall(haystack)))
+
+    # Navigation: the plan decides which sections belong in nav. If it marks any
+    # and the page has no <nav>, the chrome is missing — the state the renderer
+    # shipped in for its entire life.
+    wants_nav = any(s.get("in_nav") for s in plan.get("sections", []) or [])
+    # Check the RAW markup, not the tag-stripped text — _visible_text has
+    # already removed every element by the time it is searched.
+    has_nav = any("<nav" in raw.lower() for raw in raw_pages)
+    nav_missing = wants_nav and not has_nav
+
+    obs = {"copy_blocks_checked": len(blocks), "missing": missing, "weak": weak,
+           "placeholders_found": placeholders, "wants_nav": wants_nav,
+           "nav_present": has_nav, "coverage_threshold": coverage_threshold}
+
+    problems = []
+    if missing:
+        problems.append(f"{len(missing)} copy block(s) did not reach the page")
+    if placeholders:
+        problems.append(f"{len(placeholders)} placeholder string(s) rendered")
+    if nav_missing:
+        problems.append("plan marks sections in_nav but the page has no <nav>")
+    if problems:
+        notes = [f"MISSING {m['section_id']}/{m['role']} (coverage {m['coverage']}): {m['text']}"
+                 for m in missing[:12]]
+        notes += [f"PLACEHOLDER rendered: {p}" for p in placeholders[:5]]
+        if nav_missing:
+            notes.append("no <nav> element found in any route")
+        return GateResult(
+            id="11", name="Content fidelity", verdict="FAIL",
+            evidence_basis="DOM+assets confirmed",
+            summary="; ".join(problems) + ".",
+            notes=notes, observations=obs,
+        )
+
+    return GateResult(
+        id="11", name="Content fidelity", verdict="PASS",
+        evidence_basis="DOM+assets confirmed",
+        summary=(f"All {len(blocks)} copy block(s) reached the DOM "
+                 f"(>={int(coverage_threshold * 100)}% token coverage); no placeholder strings; "
+                 + ("navigation present." if wants_nav else "plan requests no navigation.")),
+        notes=[f"weak-but-present: {w['section_id']}/{w['role']} {w['coverage']}" for w in weak[:8]],
+        observations=obs,
+    )
+
+
+
 def run(args: argparse.Namespace) -> int:
     site_dir = os.path.abspath(args.site_dir)
     if not os.path.isdir(site_dir):
@@ -1990,6 +2130,7 @@ def run(args: argparse.Namespace) -> int:
             renderer_root = find_package_root_for(site_dir)
         results.append(gate_9_build(site_dir, renderer_root, args.timeout))
         results.append(gate_10_bundle(site_dir, args.bundle_budget_kb))
+        results.append(gate_11_content_fidelity(server, routes, args.design_plan, args.timeout))
 
     finally:
         server.kill()
@@ -2108,6 +2249,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
                    help="Path to the Next.js renderer project root (the directory containing "
                         "package.json). Only used by Gate 9 (build). When omitted and the site "
                         "dir is a Next.js export, validate_site.py walks upward to find package.json.")
+    p.add_argument("--design-plan",
+                    help="design-plan.json. Enables Gate 11 (content fidelity): verifies "
+                         "every copy block the design pass wrote actually reached the DOM.")
     p.add_argument("--bundle-budget-kb", type=int, default=DEFAULT_BUNDLE_BUDGET_KB,
                    help=f"Gate 10 budget: total gzipped JS in _next/static/ must be under this "
                         f"many KB (default: {DEFAULT_BUNDLE_BUDGET_KB}).")

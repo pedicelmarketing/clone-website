@@ -221,6 +221,22 @@
             "minor"
           ]
         },
+        "layout": {
+          "enum": [
+            "masthead",
+            "split-hero",
+            "editorial",
+            "feature-split",
+            "full-bleed-band",
+            "card-grid",
+            "proof-row",
+            "pull-quote",
+            "index-list",
+            "cta-band",
+            "colophon"
+          ],
+          "description": "The section's LAYOUT SHAPE \u2014 what it physically looks like. This is the main lever you have over how the page reads, so vary it deliberately; a page where every section uses the same layout is the templated output we are trying to avoid. `emphasis` sets scale/weight, `layout` sets structure. masthead: site header, supplies the wordmark (headline) + tagline (subhead) and is rendered as the page's <header>, not as a body section. split-hero: full-height opening, oversized headline beside the signature element or a photo. editorial: numbered index in a side column, heading + running body beside it. feature-split: photo on one side, text on the other, alternating sides down the page. Needs media. full-bleed-band: photo edge-to-edge across the viewport with a caption. Needs media. card-grid: body split into a grid of short cards (or a grid of photos). proof-row: a compact horizontal row of short proof items \u2014 awards, press, stats. Keep the text short. pull-quote: one oversized statement in a narrow measure; use for a manifesto line or testimonial. index-list: numbered, expandable list \u2014 services, chapters, an FAQ. cta-band: inverted colour band carrying the call to action. Needs a `cta` copy block. colophon: thin monospace strip; rendered inside the page's <footer>."
+        },
         "source_brief_fields": {
           "$ref": "#/$defs/sourceFields"
         },

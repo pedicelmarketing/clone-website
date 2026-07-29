@@ -166,3 +166,9 @@
     @apply font-sans;
   }
 }
+/* Native smooth scrolling, replacing the Lenis dependency (~10KB + a hijacked
+   scroll thread). The media query means users who ask for reduced motion get
+   instant jumps, which a JS scroll library has to be told to do explicitly. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

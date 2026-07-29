@@ -8,7 +8,7 @@
  *  - a fade-in-on-view hook (under 200ms)
  *  - a single gold-dot highlighter that pins to the side of the viewport
  *    while the reader scrolls
- *  - a lenis smooth-scroll wrapper for the whole page
+ *  - native smooth scrolling via CSS (no scroll library)
  *
  * Anything else (parallax, scroll-jacking, complex timelines) is
  * intentionally NOT included.
@@ -16,26 +16,18 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import Lenis from "lenis";
 
+/**
+ * SmoothScroll — intentionally a plain passthrough.
+ *
+ * This used to drive Lenis. Lenis costs ~10KB, hijacks the scroll thread, and
+ * fought the `scroll-mt` offsets that keep in-page nav links from landing under
+ * the sticky header. `scroll-behavior: smooth` in globals.css does the same job
+ * for zero bytes and honours prefers-reduced-motion for free. Kept as a
+ * component so the page structure does not churn if a scroll library is ever
+ * reintroduced deliberately.
+ */
 export function SmoothScroll({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    const lenis = new Lenis({
-      // Reading-speed: gentle easing, ~1.2s wheel duration.
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-    let raf = 0;
-    const tick = (time: number) => {
-      lenis.raf(time);
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => {
-      cancelAnimationFrame(raf);
-      lenis.destroy();
-    };
-  }, []);
   return <>{children}</>;
 }
 

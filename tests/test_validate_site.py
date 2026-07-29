@@ -24,6 +24,7 @@ sys.path.insert(0, str(SCRIPTS))
 from validate_site import (  # noqa: E402
     GateResult, compute_tier, GATE_VERSION,
     resolve_local_asset, _hex_defines_custom_property, _is_transparent_hex,
+    _visible_text, _PLACEHOLDER_RE,
 )
 
 
@@ -304,6 +305,36 @@ class TokenDisciplineSemantics(unittest.TestCase):
     def test_opaque_hex_is_still_judged(self):
         for v in ("#fff", "#000000ff", "#0b0c0d"):
             self.assertFalse(_is_transparent_hex(v), v)
+
+
+class ContentFidelityHelpers(unittest.TestCase):
+    """Gate 11 exists because nothing else could see copy being dropped.
+
+    The renderer hardcoded which copy role each layout read and silently
+    discarded the rest: six of eleven sections lost their headline, body or CTA
+    and three shipped the literal string "[no body in plan]" — while every other
+    gate passed.
+    """
+
+    def test_visible_text_strips_script_and_style_content(self):
+        # Next.js inlines the whole RSC payload in <script>. Counting that as
+        # page text would make every copy block look present no matter what
+        # actually rendered.
+        html = ("<html><head><style>.a{color:red}</style></head><body>"
+                "<script>self.__next_f.push([1,\"Pick your bottle\"])</script>"
+                "<p>Real visible copy</p></body></html>")
+        text = _visible_text(html)
+        self.assertIn("real visible copy", text)
+        self.assertNotIn("pick your bottle", text)
+        self.assertNotIn("color:red", text)
+
+    def test_visible_text_decodes_entities(self):
+        self.assertIn("bartenders & chiles", _visible_text("<p>Bartenders &amp; Chiles</p>"))
+
+    def test_placeholder_regex_matches_shipped_debug_strings(self):
+        self.assertTrue(_PLACEHOLDER_RE.search("[no body in plan]"))
+        self.assertTrue(_PLACEHOLDER_RE.search("[no headline in plan]"))
+        self.assertFalse(_PLACEHOLDER_RE.search("our plan for the year"))
 
 
 if __name__ == "__main__":

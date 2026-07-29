@@ -35,7 +35,7 @@ if [[ $DESIGN_STATUS -ne 0 ]]; then
 else row "pipeline: design_pass" PASS; fi
 if run_step "$PYTHON" "$SCRIPTS/compose_site.py" --brand-brief "$BRIEF" --tokens "$TOKENS" --reference-report "$REF" --design-plan "$PLAN" -o "$PLAN_OUT"; then row "pipeline: compose_site (plan)" PASS; else row "pipeline: compose_site (plan)" FAIL "command failed"; fi
 if run_step "$PYTHON" "$SCRIPTS/compose_site.py" --brand-brief "$BRIEF" --tokens "$TOKENS" --reference-report "$REF" -o "$FALLBACK_OUT"; then row "pipeline: compose_site (fallback)" PASS; else row "pipeline: compose_site (fallback)" FAIL "command failed"; fi
-if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PLAN_OUT" -o "$VALIDATION"; then row "pipeline: validate_site" PASS; else row "pipeline: validate_site" FAIL "command failed"; fi
+if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PLAN_OUT" -o "$VALIDATION" --design-plan "$PLAN"; then row "pipeline: validate_site" PASS; else row "pipeline: validate_site" FAIL "command failed"; fi
 
 # --- Next.js renderer path -------------------------------------------------
 # Skippable via SKIP_RENDERER=1 for a fast inner loop, but skipping is recorded
@@ -44,7 +44,7 @@ if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PLAN_OUT" -o "$VALIDATION"; 
 if [[ "${SKIP_RENDERER:-0}" == "1" ]]; then
   row "pipeline: render_nextjs" WARN "skipped (SKIP_RENDERER=1)"
   row "pipeline: validate_site (renderer)" WARN "skipped (SKIP_RENDERER=1)"
-  row "9. Renderer gates 9/10 exercised" WARN "skipped (SKIP_RENDERER=1)"
+  row "9. Renderer gates 7-11 exercised" WARN "skipped (SKIP_RENDERER=1)"
 else
   RENDER_OK=0
   if run_step "$PYTHON" "$SCRIPTS/render_nextjs.py" --brand-brief "$BRIEF" --design-plan "$PLAN" --tokens "$TOKENS" -o "$RENDERER_OUT"; then
@@ -52,7 +52,7 @@ else
   else row "pipeline: render_nextjs" FAIL "next build failed"; fi
 
   if (( RENDER_OK )); then
-    if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$RENDERER_OUT" -o "$RENDERER_VALIDATION" --renderer-root renderer; then
+    if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$RENDERER_OUT" -o "$RENDERER_VALIDATION" --renderer-root renderer --design-plan "$PLAN"; then
       row "pipeline: validate_site (renderer)" PASS
     else row "pipeline: validate_site (renderer)" FAIL "command failed"; fi
 
@@ -68,19 +68,19 @@ if bad: raise SystemExit('renderer gate FAILED: '+', '.join(bad))
 # because root-relative <link href="/_next/..."> resolved to a nonexistent
 # filesystem path, so the gates saw "no CSS files" and skipped. Both holes
 # read as a clean report while the renderer went unchecked.
-for gid in ('7','8','9','10'):
+for gid in ('7','8','9','10','11'):
     r=rs.get(gid)
     if r is None: raise SystemExit(f'gate {gid} missing from renderer gate-results.json')
     if r.get('verdict')!='PASS':
         raise SystemExit(f"gate {gid} ({r.get('name')}) is {r.get('verdict')} on a Next.js export: {r.get('summary')}")
 skipped=[i for i,r in rs.items() if r.get('verdict')=='NOT-EXERCISED']
 if skipped: raise SystemExit('renderer gate(s) NOT-EXERCISED: '+', '.join(map(str,skipped)))
-print('renderer gates PASS, including 7/8 (motion, tokens) and 9/10 (build, bundle)')
+print('renderer gates PASS, including 7/8 (motion, tokens), 9/10 (build, bundle) and 11 (content fidelity)')
 PY
-    then row "9. Renderer gates 9/10 exercised" PASS; else row "9. Renderer gates 9/10 exercised" FAIL "gate 9/10 not exercised or failing"; fi
+    then row "9. Renderer gates 7-11 exercised" PASS; else row "9. Renderer gates 7-11 exercised" FAIL "gate 7-11 not exercised or failing"; fi
   else
     row "pipeline: validate_site (renderer)" FAIL "skipped — build failed"
-    row "9. Renderer gates 9/10 exercised" FAIL "skipped — build failed"
+    row "9. Renderer gates 7-11 exercised" FAIL "skipped — build failed"
   fi
 fi
 

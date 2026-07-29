@@ -1,10 +1,10 @@
 # Validation Report
 
-Generated: 2026-07-28T23:20:45.916229+00:00
+Generated: 2026-07-29T00:23:25.265888+00:00
 Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site`
 Routes validated: /
-Local server: http://127.0.0.1:52537 (python3 -m http.server, killed on exit)
+Local server: http://127.0.0.1:57139 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/server.log
 
 ## Declared scope
@@ -30,6 +30,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 | 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 114 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
 | 9 | Build (Next.js) | **NOT-EXERCISED** | Not exercised | Site is not a Next.js static export (no _next/ directory); build gate not applicable. |
 | 10 | Bundle (Next.js) | **NOT-EXERCISED** | Not exercised | Site is not a Next.js static export; bundle gate not applicable. |
+| 11 | Content fidelity | **PASS** | DOM+assets confirmed | All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present. |
 
 **Verdict values:** `PASS` (evidence satisfies the gate), `FAIL` (evidence contradicts), `NOT-EXERCISED` (runner unavailable or did not run). NOT-EXERCISED does not fail the run but is visible above and downgrades the acceptance tier.
 
@@ -50,10 +51,10 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:52537/"
+      "final_url": "http://127.0.0.1:57139/"
     }
   },
-  "base_url": "http://127.0.0.1:52537"
+  "base_url": "http://127.0.0.1:57139"
 }
 ```
 
@@ -91,7 +92,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:52537/",
+      "url": "http://127.0.0.1:57139/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -210,7 +211,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6436687911595507638__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8658100405458208521__320x720.png"
     },
     {
       "route": "/",
@@ -225,7 +226,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8452834825682435570__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/1095553033187296354__768x1024.png"
     },
     {
       "route": "/",
@@ -240,7 +241,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/1273252722598291000__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/446546664394161755__1024x768.png"
     },
     {
       "route": "/",
@@ -255,7 +256,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8082285280563064071__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/4455530069660008736__1440x900.png"
     }
   ],
   "viewports": [
@@ -340,13 +341,31 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 }
 ```
 
+### Gate 11 — Content fidelity  (PASS)
+
+- **Evidence basis:** DOM+assets confirmed
+- **Summary:** All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.
+- **Observations (JSON):**
+
+```json
+{
+  "copy_blocks_checked": 11,
+  "missing": [],
+  "weak": [],
+  "placeholders_found": [],
+  "wants_nav": true,
+  "nav_present": true,
+  "coverage_threshold": 0.85
+}
+```
+
 ## Acceptance tier
 
 **Reached tier: `Validated`**
 
 Reason: Every applicable gate ran and produced positive evidence; validation complete for declared scope.
 
-- PASS gates: 1, 2, 3, 4, 5, 6, 7, 8
+- PASS gates: 1, 2, 3, 4, 5, 6, 7, 8, 11
 - FAIL gates: none
 - NOT-EXERCISED gates: 9, 10
 

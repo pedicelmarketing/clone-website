@@ -1,287 +1,67 @@
 /**
- * Root page: renders the brand's re-versioned site directly from the
- * design plan. Every section comes from plan.sections[], every text
- * string comes from plan.copy_blocks[]. Skipped sections are filtered
- * out (see lib/design-plan.ts).
+ * Root page: renders the brand's re-versioned site from the design plan.
  *
- * No text is fabricated here. If a section has no copy_blocks entries,
- * the section is still rendered (so the gap is visible to the auditor)
- * but with an explicit "[no copy in plan]" placeholder rather than
- * invented content.
+ * Structure comes from each section's resolved `shape` (see lib/design-plan.ts
+ * resolveLayout), NOT from `emphasis`. Emphasis only ever described scale, so
+ * driving layout from it produced one repeated shape for every section of every
+ * page — the templated output this capability exists to avoid.
+ *
+ * Every text string comes from plan.copy_blocks[]; skipped sections are
+ * filtered out. Nothing is fabricated here. A section whose plan supplies no
+ * copy for a given role simply does not render that role — the old
+ * "[no body in plan]" placeholders were shipping to the live page.
  */
 
-import { getRenderableSections, loadDesignPlan } from "@/lib/design-plan";
-import {
-  Section,
-  HeroLayout,
-  PrimaryLayout,
-  SecondaryLayout,
-  MinorLayout,
-  Cols7,
-  Cols5,
-  Cols4,
-  Cols8,
-  Cols3,
-  OffsetRight9,
-  Full,
-} from "@/components/section";
-import { FadeIn, GoldDotMarker, SignatureMark, SmoothScroll } from "@/components/motion-primitives";
-import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { getPageRegions, loadBrandWordmark, loadDesignPlan } from "@/lib/design-plan";
+import { LAYOUT_COMPONENTS } from "@/components/layouts";
+import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { GoldDotMarker, SmoothScroll } from "@/components/motion-primitives";
 
 // Server-side load. This runs at build time in Next 15 (App Router).
 const plan = loadDesignPlan();
-const sections = getRenderableSections(plan);
-
-/**
- * Brand photography. Files live in public/brand, fetched by
- * skills/web-designer/scripts/fetch_brand_assets.py from the brand brief's
- * real_photo_inventory — every one is a verified, brand-owned image with
- * recorded provenance. Never stock, never an invented filename.
- *
- * Plain <img> rather than next/image because the renderer builds with
- * output:'export' + images.unoptimized, so next/image would add machinery
- * without doing any optimisation here.
- */
-function BrandImage({
-  file, alt, treatment,
-}: { file: string; alt: string; treatment?: string }) {
-  // Aspect ratio AND a height cap. Without the cap a 1800x1800 product shot
-  // fills a whole 12-col row and the page grew from ~3.5k to ~9k px tall —
-  // photography should punctuate the page, not become it.
-  const shape =
-    treatment === "portrait" ? "aspect-[4/5] max-h-[420px]"
-    : treatment === "full-bleed" ? "aspect-[21/9] max-h-[380px]"
-    : treatment === "grid" ? "aspect-square max-h-[260px]"
-    : treatment === "side-by-side" ? "aspect-[3/2] max-h-[320px]"
-    : "aspect-[4/3] max-h-[340px]";
-  return (
-    <img
-      src={`/brand/${file}`}
-      alt={alt}
-      loading="lazy"
-      decoding="async"
-      className={`w-full ${shape} object-cover object-center rounded-[var(--radius-8,8px)]`}
-    />
-  );
-}
-
-function chooseLayout(emphasis: string) {
-  switch (emphasis) {
-    case "hero":
-      return HeroLayout;
-    case "primary":
-      return PrimaryLayout;
-    case "secondary":
-      return SecondaryLayout;
-    case "minor":
-      return MinorLayout;
-    default:
-      // Defensive: loadDesignPlan validates emphasis, so we never hit this.
-      return PrimaryLayout;
-  }
-}
-
-/**
- * Render a section's content. The variant tree is driven entirely by
- * the section's `emphasis` value so the layout primitives exercise
- * real column structure, not just font-size toggles.
- */
-function SectionContent({
-  section,
-}: {
-  section: ReturnType<typeof getRenderableSections>[number];
-}) {
-  const { emphasis, id, copy } = section;
-  const media = section.media ?? null;
-  const Layout = chooseLayout(emphasis);
-
-  // === hero (cover) ===
-  if (emphasis === "hero") {
-    return (
-      <Layout>
-        <Cols7>
-          <FadeIn>
-            <h1 className="font-display text-5xl leading-[1.05] tracking-tight text-foreground lg:text-7xl">
-              {copy.headline ?? "[no headline in plan]"}
-            </h1>
-            {copy.subhead && (
-              <p className="mt-8 max-w-prose font-body text-xl leading-relaxed text-muted-foreground lg:text-2xl">
-                {copy.subhead}
-              </p>
-            )}
-          </FadeIn>
-        </Cols7>
-        {/* Right column carries the SIGNATURE ELEMENT, not copy. The plan
-         *  supplies no third copy block for the cover, and design-plan
-         *  metadata (purpose/component/rationale) must never surface as
-         *  user-facing text — it is internal reasoning, not brand content. */}
-        <Cols5>
-          <FadeIn delay={0.08}>
-            {media ? (
-              <BrandImage file={media.file} alt={media.alt} treatment={media.treatment} />
-            ) : (
-              <SignatureMark />
-            )}
-          </FadeIn>
-        </Cols5>
-      </Layout>
-    );
-  }
-
-  // === primary (manifesto / lesson / services) ===
-  if (emphasis === "primary") {
-    // Services-as-chapters is the only primary section that needs an
-    // accordion; everything else is a wide-body editorial block with a
-    // sticky-style left index.
-    if (id === "services-as-chapters") {
-      const chapterLines = (copy.body ?? "").split(/,\s*/).filter(Boolean);
-      return (
-        <Layout>
-          <Cols4>
-            <FadeIn>
-              <h2 className="font-display text-3xl leading-tight text-foreground lg:text-4xl">
-                {copy.headline ?? "[no headline in plan]"}
-              </h2>
-            </FadeIn>
-          </Cols4>
-          <Cols8>
-            <FadeIn delay={0.06}>
-              <Accordion type="single" collapsible className="w-full">
-                {chapterLines.map((line, i) => (
-                  <AccordionItem key={i} value={`ch-${i}`}>
-                    <AccordionTrigger className="font-body text-base">
-                      <span className="font-mono text-xs text-muted-foreground">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="ml-3">{line}</span>
-                    </AccordionTrigger>
-                    {/* No per-chapter copy block exists in the plan; render
-                     *  nothing rather than leaking plan metadata. */}
-                    <AccordionContent />
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </FadeIn>
-          </Cols8>
-        </Layout>
-      );
-    }
-    // Generic primary: sticky left index + wide right body
-    return (
-      <Layout>
-        <Cols4>
-          <FadeIn>
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">
-              {String(section.order).padStart(2, "0")}{section.nav_label ? ` / ${section.nav_label}` : ""}
-            </span>
-          </FadeIn>
-        </Cols4>
-        <Cols8>
-          <FadeIn delay={0.06}>
-            <h2 className="font-display text-4xl leading-tight text-foreground lg:text-5xl">
-              {copy.headline ?? "[no headline in plan]"}
-            </h2>
-            {copy.body && (
-              <p className="mt-6 font-body text-lg leading-relaxed text-foreground lg:text-xl">
-                {copy.body}
-              </p>
-            )}
-            {copy.caption && (
-              <p className="mt-4 font-body text-base italic text-muted-foreground">
-                {copy.caption}
-              </p>
-            )}
-            {media && (
-              <div className="mt-10">
-                <BrandImage file={media.file} alt={media.alt} treatment={media.treatment} />
-              </div>
-            )}
-          </FadeIn>
-        </Cols8>
-      </Layout>
-    );
-  }
-
-  // === secondary (proof essay + CTA) ===
-  if (emphasis === "secondary") {
-    if (id === "lead-generation-cta") {
-      return (
-        <Layout>
-          <Cols3 aria-hidden="true" />
-          <OffsetRight9>
-            <FadeIn>
-              <p className="font-body text-2xl leading-snug text-foreground lg:text-3xl">
-                {copy.body ?? "[no body in plan]"}
-              </p>
-              {copy.cta && (
-                <div className="mt-10">
-                  <Button size="lg">{copy.cta}</Button>
-                </div>
-              )}
-            </FadeIn>
-          </OffsetRight9>
-        </Layout>
-      );
-    }
-    // Annotated image essay stand-in
-    return (
-      <Layout>
-        <Cols3>
-          <FadeIn>
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">
-              {section.nav_label ?? ""}
-            </span>
-          </FadeIn>
-        </Cols3>
-        <OffsetRight9>
-          <FadeIn delay={0.06}>
-            {media ? (
-              <BrandImage file={media.file} alt={media.alt} treatment={media.treatment} />
-            ) : (
-              <div className="aspect-[16/10] w-full rounded-8 border border-border bg-muted" />
-            )}
-            {copy.caption && (
-              <p className="mt-4 font-body text-base italic text-muted-foreground">
-                {copy.caption}
-              </p>
-            )}
-          </FadeIn>
-        </OffsetRight9>
-      </Layout>
-    );
-  }
-
-  // === minor (colophon) ===
-  return (
-    <Layout>
-      <Full>
-        <FadeIn>
-          <p className="font-mono text-xs leading-relaxed text-muted-foreground lg:text-sm">
-            {copy.body ?? "[no body in plan]"}
-          </p>
-        </FadeIn>
-      </Full>
-    </Layout>
-  );
-}
+const { masthead, body, colophons, nav } = getPageRegions(plan);
+// Wordmark: the masthead section's headline is the brand's own name written by
+// the design pass from brief facts. Only when no masthead exists do we fall
+// back to the brand's published domain.
+const wordmark = masthead?.copy.headline ?? loadBrandWordmark();
 
 export default function Home() {
   return (
     <SmoothScroll>
+      <div id="top" />
+      <SiteHeader wordmark={wordmark} tagline={masthead?.copy.subhead ?? null} nav={nav} />
+      <GoldDotMarker />
       <main className="min-h-screen bg-background text-foreground">
-        <GoldDotMarker />
-        {sections.map((s) => (
-          <Section key={s.id} id={s.id} emphasis={s.emphasis}>
-            <SectionContent section={s} />
-          </Section>
-        ))}
+        {body.map((section, i) => {
+          const Layout = LAYOUT_COMPONENTS[
+            section.shape as Exclude<typeof section.shape, "masthead">
+          ];
+          if (!Layout) return null;
+          return (
+            // scroll-mt clears the sticky header: without it an in-page nav
+            // link lands with the section's heading hidden underneath it.
+            <section
+              key={section.id}
+              id={section.id}
+              data-emphasis={section.emphasis}
+              data-layout={section.shape}
+              className="scroll-mt-20"
+            >
+              <Layout section={section} index={i} />
+            </section>
+          );
+        })}
       </main>
+      <SiteFooter wordmark={wordmark} nav={nav}>
+        {colophons.map((section, i) => {
+          const Layout = LAYOUT_COMPONENTS.colophon;
+          return (
+            <div key={section.id} id={section.id} data-layout="colophon">
+              <Layout section={section} index={i} />
+            </div>
+          );
+        })}
+      </SiteFooter>
     </SmoothScroll>
   );
 }

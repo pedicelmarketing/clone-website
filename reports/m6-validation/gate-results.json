@@ -9,9 +9,9 @@
     1024,
     1440
   ],
-  "generated": "2026-07-28T23:20:45.911014+00:00",
+  "generated": "2026-07-29T00:23:25.244119+00:00",
   "host": "127.0.0.1",
-  "port": 52537,
+  "port": 57139,
   "results": [
     {
       "id": "1",
@@ -26,10 +26,10 @@
         "per_route": {
           "/": {
             "status": 200,
-            "final_url": "http://127.0.0.1:52537/"
+            "final_url": "http://127.0.0.1:57139/"
           }
         },
-        "base_url": "http://127.0.0.1:52537"
+        "base_url": "http://127.0.0.1:57139"
       },
       "error": null
     },
@@ -67,7 +67,7 @@
         "per_route": {
           "/": {
             "route": "/",
-            "url": "http://127.0.0.1:52537/",
+            "url": "http://127.0.0.1:57139/",
             "status": 200,
             "exit": 0,
             "ok": true,
@@ -186,7 +186,7 @@
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6436687911595507638__320x720.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8658100405458208521__320x720.png"
           },
           {
             "route": "/",
@@ -201,7 +201,7 @@
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8452834825682435570__768x1024.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/1095553033187296354__768x1024.png"
           },
           {
             "route": "/",
@@ -216,7 +216,7 @@
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/1273252722598291000__1024x768.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/446546664394161755__1024x768.png"
           },
           {
             "route": "/",
@@ -231,7 +231,7 @@
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8082285280563064071__1440x900.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/4455530069660008736__1440x900.png"
           }
         ],
         "viewports": [
@@ -315,13 +315,31 @@
         "site_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site"
       },
       "error": null
+    },
+    {
+      "id": "11",
+      "name": "Content fidelity",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.",
+      "notes": [],
+      "observations": {
+        "copy_blocks_checked": 11,
+        "missing": [],
+        "weak": [],
+        "placeholders_found": [],
+        "wants_nav": true,
+        "nav_present": true,
+        "coverage_threshold": 0.85
+      },
+      "error": null
     }
   ],
   "meta": {
     "input_hashes": {
       "index.html": "a0f533c24d1b5fa50bcf49def638136417162dfdcc7d5280ad91be3179ed7baa",
       "styles.css": "e6d00de98ae6ec1510e9124ef2e8d5a4784b6eeee4275daecbab77264ba2e947",
-      "tokens.css": "e0ccdd26a0a81f0a0470061ee9058f826cf129d829222f8128a199290b29a9eb"
+      "tokens.css": "e7effa6abc366027afcd99bd275c3a51ce71dafcd3950a26ad70674b1d45c318"
     },
     "input_hashes_algorithm": "sha256",
     "input_hashes_note": "Recompute with: sha256sum <site_dir>/index.html <site_dir>/styles.css <site_dir>/tokens.css. If the site is a Next.js export, also verify the combined _next/static/*.js hash. If these change without re-running validate_site.py the gate results are stale."

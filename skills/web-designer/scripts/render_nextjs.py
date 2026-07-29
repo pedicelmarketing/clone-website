@@ -78,6 +78,9 @@ def main(argv: list[str] | None = None) -> int:
     env = dict(os.environ)
     env["WEB_DESIGNER_TOKENS_DIR"] = str(Path(args.tokens).resolve())
     env["WEB_DESIGNER_DESIGN_PLAN"] = str(plan)
+    # The renderer falls back to the brand's own domain for the site wordmark
+    # when the plan has no masthead section to supply one.
+    env["WEB_DESIGNER_BRAND_BRIEF"] = str(Path(args.brand_brief).resolve())
 
     # Tokens first: the renderer's Tailwind theme is generated from them.
     run(["npm", "run", "sync:tokens"], RENDERER, "sync tokens", env=env)

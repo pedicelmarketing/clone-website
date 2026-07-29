@@ -146,7 +146,7 @@ font the operator hasn't licensed.
 
 - _schema_version:_ 1.0
 - _tool_version:_ 1.0
-- _generated_at:_ 2026-07-28T23:19:50Z
+- _generated_at:_ 2026-07-29T00:22:28Z
 - _evidence_basis:_ DOM+assets confirmed
 - _project_slug:_ pedicel-marketing-redesign-smoke
 - _brand_brief:_ /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/brand-smoke/brand-brief.json
