@@ -106,6 +106,7 @@ PADEL_PLAN=reports/padel-design/design-plan.json
 PADEL_OUT=reports/padel-renderer-site
 PADEL_VALIDATION=reports/padel-renderer-validation
 PADEL_ROUTES=reports/padel-design/routes.txt
+PADEL_ASSETS=reports/padel-assets
 
 if [[ "${SKIP_RENDERER:-0}" == "1" ]]; then
   row "10. Padel site: 5 routes validated" WARN "skipped (SKIP_RENDERER=1)"
@@ -115,7 +116,7 @@ else
   export WEB_DESIGNER_BRAND_BRIEF="$ROOT/$PADEL_BRIEF"
   PADEL_OK=0
   if run_step "$PYTHON" "$SCRIPTS/synthesize_tokens.py" --brand-brief "$PADEL_BRIEF" --reference-tokens "$REF_TOKENS" -o "$PADEL_TOKENS" \
-     && run_step "$PYTHON" "$SCRIPTS/render_nextjs.py" --brand-brief "$PADEL_BRIEF" --design-plan "$PADEL_PLAN" --tokens "$PADEL_TOKENS" --routes-out "$PADEL_ROUTES" -o "$PADEL_OUT" \
+     && run_step "$PYTHON" "$SCRIPTS/render_nextjs.py" --brand-brief "$PADEL_BRIEF" --design-plan "$PADEL_PLAN" --tokens "$PADEL_TOKENS" --assets "$PADEL_ASSETS" --routes-out "$PADEL_ROUTES" -o "$PADEL_OUT" \
      && run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PADEL_OUT" -o "$PADEL_VALIDATION" --renderer-root renderer --design-plan "$PADEL_PLAN" --routes "$(cat "$PADEL_ROUTES")"; then
     PADEL_OK=1
   fi

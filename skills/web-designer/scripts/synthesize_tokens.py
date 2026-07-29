@@ -488,6 +488,7 @@ def render_css(
     *,
     meta: dict[str, Any],
     colors: dict[str, str],
+    ground: str = "light",
     neutrals: list[str],
     families: dict[str, str],
     scale_ratio: int | float,
@@ -523,6 +524,16 @@ def render_css(
     _lum_sorted = sorted(neutrals, key=_relative_luminance)
     fg, bg = _lum_sorted[0], _lum_sorted[-1]
     fg_note = "darkest and lightest brand neutrals"
+
+    # GROUND. Luminance tells us which neutral is darkest, not which one the
+    # brand sits on. A brand whose identity is gold on dark green is a dark-
+    # ground brand, and forcing it light has real consequences: its gold measures
+    # 2.22:1 as text on cream but 4.94:1 on the dark green, and the opacity
+    # ladder bottoms out at /70 instead of /55. Defaults to light so no existing
+    # brand changes.
+    if (ground or "light").lower() == "dark":
+        fg, bg = bg, fg
+        fg_note = "brand declares a DARK ground; lightest neutral is the ink"
     if _contrast_ratio(fg, bg) < 4.5:
         fg, bg = "#111111", "#ffffff"
         fg_note = ("brand neutrals could not reach 4.5:1 "
@@ -824,6 +835,9 @@ def synthesize(
     css = render_css(
         meta=meta,
         colors=colors,
+        # The brand declares which ground it sits on; luminance only tells us
+        # which neutral is darkest, not which one the identity is built on.
+        ground=(brief["palette_from_logo"].get("ground") or "light"),
         neutrals=neutrals,
         families=families,
         scale_ratio=ratio,

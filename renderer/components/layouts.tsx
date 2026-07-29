@@ -53,7 +53,7 @@ export function Container({ children, className = "" }: { children: ReactNode; c
 export function Eyebrow({ section }: { section: RenderableSection }) {
   const label = section.nav_label ?? "";
   return (
-    <span className="u-label text-foreground/70">
+    <span className="u-label text-primary">
       {String(section.order).padStart(2, "0")}
       {label ? ` / ${label}` : ""}
     </span>
@@ -351,7 +351,7 @@ export function CardGrid({ section }: LayoutProps) {
           {paired.map((card, i) => (
             <FadeIn key={i} delay={0.04 * i}>
               <div className="h-full rounded-[var(--radius-8,8px)] border border-border bg-background p-7">
-                <span className="u-label text-foreground/70">{String(i + 1).padStart(2, "0")}</span>
+                <span className="u-label text-primary">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-3 font-display text-xl leading-snug text-foreground">{card.title}</h3>
                 {card.desc && (
                   <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
@@ -366,7 +366,7 @@ export function CardGrid({ section }: LayoutProps) {
           {items.map((item, i) => (
             <FadeIn key={i} delay={0.04 * i}>
               <div className="h-full rounded-[var(--radius-8,8px)] border border-border bg-background p-7">
-                <span className="u-label text-foreground/70">{String(i + 1).padStart(2, "0")}</span>
+                <span className="u-label text-primary">{String(i + 1).padStart(2, "0")}</span>
                 <p className="mt-3 font-body text-base leading-relaxed text-foreground">{item}</p>
               </div>
             </FadeIn>
@@ -408,7 +408,7 @@ export function ProofRow({ section }: LayoutProps) {
       <Container className="border-y border-border py-14 lg:py-20">
         <FadeIn>
           {copy.headline && items.length > 0 && (
-            <span className="u-label text-foreground/70">
+            <span className="u-label text-primary">
               {copy.headline}
             </span>
           )}
@@ -425,7 +425,7 @@ export function ProofRow({ section }: LayoutProps) {
       <FadeIn>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-baseline lg:justify-between lg:gap-10">
           {copy.headline && (
-            <h2 className="u-label text-foreground/70 lg:shrink-0">
+            <h2 className="u-label text-primary lg:shrink-0">
               {copy.headline}
             </h2>
           )}
@@ -505,7 +505,7 @@ export function IndexList({ section }: LayoutProps) {
               {items.map((item, i) => (
                 <AccordionItem key={i}>
                   <AccordionTrigger className="font-body text-base">
-                    <span className="u-label text-foreground/70">
+                    <span className="u-label text-primary">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="ml-4 text-left">{item}</span>
@@ -651,12 +651,12 @@ export function TypeHero({ section }: LayoutProps) {
         <div className="lg:col-span-9">
           <FadeIn>
             {section.nav_label && (
-              <span className="u-label text-foreground/70">{section.nav_label}</span>
+              <span className="u-label text-primary">{section.nav_label}</span>
             )}
             {parts.length > 0 && (
               <h1 className="mt-7 font-display text-[clamp(2.5rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.03em] text-foreground">
                 {parts.map((line, i) => (
-                  <span key={i} className={i % 2 === 1 ? "block text-foreground/55" : "block"}>
+                  <span key={i} className={i % 2 === 1 ? "block text-foreground/45" : "block"}>
                     {line}
                   </span>
                 ))}
@@ -766,7 +766,7 @@ export function LabelRailCard({ section }: LayoutProps) {
                     key={i}
                     className="flex items-baseline gap-3 border-b border-foreground/10 py-2.5 font-body text-sm text-foreground/70"
                   >
-                    <span className="u-label text-foreground/70">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="u-label text-primary">{String(i + 1).padStart(2, "0")}</span>
                     <span>{item}</span>
                   </li>
                 ))}

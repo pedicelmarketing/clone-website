@@ -87,7 +87,8 @@
       "#eae7de",
       "#f7f5ef"
     ],
-    "rationale": "The board pairs a dark forest green with a brass gold on an off-white ground. Forest green is treated here as the INK — body copy, headings and the inverted band — rather than as a decorative colour, because the identity is described as minimal and the gold reads as an accent, not a text colour. Gold on the off-white ground measures 2.25:1, which fails AA and also fails the 3:1 large-text threshold, so gold is used only as a fill, a rule, a marker and a hover state; text on a gold fill uses the derived contrast-safe pairing. The seven neutrals give the twelve-step opacity ladder somewhere to land."
+    "rationale": "The brand board's PRIMARY colourway is gold on dark forest green; the off-white variant is secondary. Building on the dark ground is what makes the brand's own accent usable: gold measures 2.22:1 as text on the cream ground (failing AA and even the 3:1 large-text threshold) but 4.94:1 on the dark green. The opacity ladder is also deeper on dark — the floor for small text falls from /70 to /55 — which is what lets hierarchy come from one ink at many strengths rather than from a second colour.",
+    "ground": "dark"
   },
   "typography_recommendation": {
     "display_family": "Outfit",

@@ -11,9 +11,9 @@
     1024,
     1440
   ],
-  "generated": "2026-07-29T19:10:43.979385+00:00",
+  "generated": "2026-07-29T19:38:04.822008+00:00",
   "host": "127.0.0.1",
-  "port": 51911,
+  "port": 46947,
   "results": [
     {
       "id": "1",
@@ -28,10 +28,10 @@
         "per_route": {
           "/": {
             "status": 200,
-            "final_url": "http://127.0.0.1:51911/"
+            "final_url": "http://127.0.0.1:46947/"
           }
         },
-        "base_url": "http://127.0.0.1:51911"
+        "base_url": "http://127.0.0.1:46947"
       },
       "error": null
     },
@@ -62,7 +62,7 @@
         "per_route": {
           "/": {
             "route": "/",
-            "url": "http://127.0.0.1:51911/",
+            "url": "http://127.0.0.1:46947/",
             "status": 200,
             "exit": 0,
             "ok": true,
@@ -181,7 +181,7 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/5445048729679099234__320x720.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/6249940834735213097__320x720.png"
           },
           {
             "route": "/",
@@ -196,7 +196,7 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/8144857279785146598__768x1024.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/1543230547009359370__768x1024.png"
           },
           {
             "route": "/",
@@ -211,7 +211,7 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/335641096607828241__1024x768.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/444631027512773602__1024x768.png"
           },
           {
             "route": "/",
@@ -226,7 +226,7 @@
               "pixel_wait_ms": 1250
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/6419938974786529976__1440x900.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/2382404704958358082__1440x900.png"
           }
         ],
         "viewports": [
@@ -251,10 +251,10 @@
       "notes": [],
       "observations": {
         "css_files_seen": [
-          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e821fb70ca2c2184.css"
         ],
         "reduced_in": [
-          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e821fb70ca2c2184.css"
         ]
       },
       "error": null
@@ -264,16 +264,16 @@
       "name": "Token discipline",
       "verdict": "PASS",
       "evidence_basis": "DOM+assets confirmed",
-      "summary": "CSS uses 336 var(--token) reference(s); 0 raw hex literals outside tokens.css.",
+      "summary": "CSS uses 347 var(--token) reference(s); 0 raw hex literals outside tokens.css.",
       "notes": [
         "Gate 8 re-scoped from workflow-design.md \u00a74's 'source-paired 10x' \u2014 see report.",
         "tokens.css is the explicit source of truth; raw hex inside it is allowed."
       ],
       "observations": {
         "css_files": [
-          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2da69c8ec2ea2ab.css"
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e821fb70ca2c2184.css"
         ],
-        "var_uses": 336,
+        "var_uses": 347,
         "raw_hex": []
       },
       "error": null
@@ -300,14 +300,14 @@
       "name": "Bundle (Next.js)",
       "verdict": "PASS",
       "evidence_basis": "DOM+assets confirmed",
-      "summary": "Total gzipped JS is 292.4 KB across 15 file(s), under the 300 KB budget.",
+      "summary": "Total gzipped JS is 292.5 KB across 15 file(s), under the 300 KB budget.",
       "notes": [],
       "observations": {
         "applicable": true,
         "static_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static",
         "file_count": 15,
-        "total_gzipped_bytes": 299465,
-        "total_gzipped_kb": 292.4,
+        "total_gzipped_bytes": 299566,
+        "total_gzipped_kb": 292.5,
         "budget_kb": 300,
         "top_files": [
           {
@@ -383,8 +383,8 @@
   ],
   "meta": {
     "input_hashes": {
-      "index.html": "7b554132ab89a227b9ffb60055505dbeb7acd0f6139a85686ca2a1a221a8e6bf",
-      "_next/static/*.js (combined)": "6788c70433f836875dab8dfbee277d021c8d38f1c6f230dd7168d5d433679751"
+      "index.html": "105b2bb3ffda7773dc03d81ec2b5791999657593dea856adcb334201c855abd0",
+      "_next/static/*.js (combined)": "5d78103d9ddd0e2986bed9841bbb3d8ac9a06eaa5a8adf86db2b9647a6c0ed6b"
     },
     "input_hashes_algorithm": "sha256",
     "input_hashes_note": "Recompute with: sha256sum <site_dir>/index.html <site_dir>/styles.css <site_dir>/tokens.css. If the site is a Next.js export, also verify the combined _next/static/*.js hash. If these change without re-running validate_site.py the gate results are stale."

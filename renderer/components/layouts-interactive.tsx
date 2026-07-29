@@ -109,7 +109,7 @@ export function ScrollRail({ section }: LayoutProps) {
               key={i}
               className="flex flex-col justify-center border-t border-foreground/10 pt-8 md:w-[42vw] md:shrink-0 md:border-t-0 md:px-10"
             >
-              <span className="u-label text-foreground/70">{String(i + 1).padStart(2, "0")}</span>
+              <span className="u-label text-primary">{String(i + 1).padStart(2, "0")}</span>
               <p className="mt-4 max-w-[34ch] font-display text-2xl leading-[1.2] tracking-[-0.01em] text-foreground lg:text-[2rem]">
                 {item}
               </p>
@@ -192,7 +192,7 @@ export function GhostIndex({ section }: LayoutProps) {
             onMouseLeave={() => setActive(null)}
             className="group flex items-center justify-between gap-6 border-t border-foreground/10 py-6 outline-none focus-visible:ring-2 focus-visible:ring-primary lg:py-7"
           >
-            <span className="font-display text-[clamp(1.5rem,5.5vw,4.75rem)] leading-[1.05] tracking-[-0.02em] text-foreground/55 transition-colors duration-200 group-hover:text-foreground group-focus-visible:text-foreground">
+            <span className="font-display text-[clamp(1.5rem,5.5vw,4.75rem)] leading-[1.05] tracking-[-0.02em] text-foreground/45 transition-colors duration-200 group-hover:text-foreground group-focus-visible:text-foreground">
               {item}
             </span>
             <span aria-hidden="true" className="shrink-0 text-foreground/70 transition-colors group-hover:text-primary">
@@ -202,16 +202,25 @@ export function GhostIndex({ section }: LayoutProps) {
         ))}
       </div>
 
-      {/* Single preview node, moved rather than remounted. Only rendered on a
-       *  fine pointer — it carries no copy, so Gate 11 is unaffected. */}
-      {fine && media && (
+      {/* Single preview node, moved rather than remounted.
+       *
+       *  This used to be `{fine && media && …}`, which broke rule 3 of
+       *  layouts.tsx: `fine` is false during server rendering, so the <img>
+       *  was absent from the STATIC EXPORT entirely — the photograph never
+       *  shipped and Gate 2 never saw it. It is now always in the DOM and only
+       *  its visibility is conditional. */}
+      {media && (
         <div
           ref={previewRef}
           aria-hidden="true"
-          className="pointer-events-none fixed left-0 top-0 z-30 h-[300px] w-[420px] overflow-hidden rounded-[14px] shadow-2xl transition-opacity duration-300"
-          style={{ opacity: active === null ? 0 : 1 }}
+          className={[
+            "pointer-events-none fixed left-0 top-0 z-30 h-[300px] w-[420px]",
+            "overflow-hidden rounded-[14px] shadow-2xl transition-opacity duration-300",
+            fine ? "" : "invisible",
+          ].join(" ")}
+          style={{ opacity: fine && active !== null ? 1 : 0 }}
         >
-          <BrandImage file={media.file} alt="" className="h-full" />
+          <BrandImage file={media.file} alt={media.alt} className="h-full" />
         </div>
       )}
     </Container>
@@ -229,7 +238,7 @@ export function GhostIndex({ section }: LayoutProps) {
  */
 export function CardCarousel({ section }: LayoutProps) {
   const items = itemsFor(section, 6);
-  const { copy } = section;
+  const { copy, media } = section;
   const [index, setIndex] = useState(0);
   const count = items.length || 1;
   const go = (d: number) => setIndex((i) => (i + d + count) % count);
@@ -267,15 +276,32 @@ export function CardCarousel({ section }: LayoutProps) {
               <div
                 key={i}
                 aria-hidden={i !== index}
-                className="relative w-full shrink-0 bg-foreground/5 p-8 lg:aspect-[3/2] lg:p-12"
+                className="relative w-full shrink-0 overflow-hidden bg-foreground/5 p-8 lg:aspect-[3/2] lg:p-12"
               >
-                <div className="flex h-full flex-col justify-end">
+                {/* The photograph sits BEHIND the copy under a gradient, which
+                 *  is what lets a phone-grade image work here: the busy lower
+                 *  third of the frame is covered by the scrim by design rather
+                 *  than by luck. */}
+                {media && (
+                  <>
+                    <BrandImage
+                      file={media.file}
+                      alt={i === 0 ? media.alt : ""}
+                      className="absolute inset-0 h-full opacity-45"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20"
+                    />
+                  </>
+                )}
+                <div className="relative flex h-full flex-col justify-end">
                   {/* /80, not the usual /70 floor: this label sits on the
                    *  card's tinted `bg-foreground/5` surface, which lifts the
                    *  background from #f7f5ef to #edece6 and drops /70 to 4.4:1
                    *  — just under AA. The ladder's floor depends on the
                    *  surface, not only on the ink. */}
-                  <span className="u-label text-foreground/80">
+                  <span className="u-label text-primary">
                     {String(i + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
                   </span>
                   <p className="mt-4 max-w-[30ch] font-display text-2xl leading-[1.2] text-foreground lg:text-4xl">

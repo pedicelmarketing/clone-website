@@ -57,6 +57,10 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("-o", "--out", required=True)
     ap.add_argument("--reference-report")  # accepted for contract compatibility
     ap.add_argument("--project-slug")
+    ap.add_argument("--assets",
+                    help="directory containing this brand's images + ASSET-MANIFEST.json. "
+                         "Copied into renderer/public/brand for the build. Without this, "
+                         "whatever the PREVIOUS brand left there is what ships.")
     ap.add_argument("--routes-out",
                     help="write the comma-separated route list here, so callers "
                          "validate exactly the routes the plan declares instead of "
@@ -93,6 +97,24 @@ def main(argv: list[str] | None = None) -> int:
     os.environ.update({k: env[k] for k in
                        ("WEB_DESIGNER_TOKENS_DIR", "WEB_DESIGNER_DESIGN_PLAN",
                         "WEB_DESIGNER_BRAND_BRIEF")})
+
+    # Brand photography. renderer/public/brand is shared across brands, so it
+    # MUST be replaced per build — otherwise brand B ships brand A's photographs,
+    # which is both wrong and a licensing problem. Cleared even when no assets
+    # are supplied, for the same reason.
+    brand_dir = RENDERER / "public" / "brand"
+    if brand_dir.exists():
+        shutil.rmtree(brand_dir)
+    brand_dir.mkdir(parents=True, exist_ok=True)
+    if args.assets:
+        src = Path(args.assets).resolve()
+        if not src.is_dir():
+            raise SystemExit(f"[render_nextjs] --assets directory not found: {src}")
+        for item in src.iterdir():
+            if item.is_file():
+                shutil.copy2(item, brand_dir / item.name)
+        n = len(list(brand_dir.glob("*")))
+        print(f"[render_nextjs] staged {n} brand asset(s) from {src}", file=sys.stderr)
 
     # Tokens first: the renderer's Tailwind theme is generated from them.
     run(["npm", "run", "sync:tokens"], RENDERER, "sync tokens", env=env)

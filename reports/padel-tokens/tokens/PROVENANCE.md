@@ -1,7 +1,7 @@
 # Token provenance
 
 - Project: `premium-padel-academy-marbella`
-- Generated at: `2026-07-29T19:10:44Z`
+- Generated at: `2026-07-29T19:38:04Z`
 - Brand brief: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-marbella/brand-brief.json` (schema validated before use)
 - Reference tokens: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/validation/linear-app/tokens`
 - Evidence basis: `DOM+assets confirmed`
