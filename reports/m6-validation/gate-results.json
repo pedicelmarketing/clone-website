@@ -9,9 +9,9 @@
     1024,
     1440
   ],
-  "generated": "2026-07-29T00:23:25.244119+00:00",
+  "generated": "2026-07-29T16:54:21.952905+00:00",
   "host": "127.0.0.1",
-  "port": 57139,
+  "port": 51525,
   "results": [
     {
       "id": "1",
@@ -26,10 +26,10 @@
         "per_route": {
           "/": {
             "status": 200,
-            "final_url": "http://127.0.0.1:57139/"
+            "final_url": "http://127.0.0.1:51525/"
           }
         },
-        "base_url": "http://127.0.0.1:57139"
+        "base_url": "http://127.0.0.1:51525"
       },
       "error": null
     },
@@ -38,10 +38,10 @@
       "name": "Dependency",
       "verdict": "PASS",
       "evidence_basis": "HTTP-200 only",
-      "summary": "All 12 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External.",
+      "summary": "All 14 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External.",
       "notes": [],
       "observations": {
-        "reference_count": 12,
+        "reference_count": 14,
         "external_count": 3,
         "external_sample": [
           "https://fonts.googleapis.com",
@@ -67,7 +67,7 @@
         "per_route": {
           "/": {
             "route": "/",
-            "url": "http://127.0.0.1:57139/",
+            "url": "http://127.0.0.1:51525/",
             "status": 200,
             "exit": 0,
             "ok": true,
@@ -91,9 +91,9 @@
     {
       "id": "4",
       "name": "Performance",
-      "verdict": "PASS",
+      "verdict": "FAIL",
       "evidence_basis": "DOM+assets confirmed",
-      "summary": "Lighthouse met thresholds on 1 route(s).",
+      "summary": "Lighthouse below thresholds on 1 route(s).",
       "notes": [
         "Thresholds: {'performance': 90, 'accessibility': 95, 'best_practices': 95, 'seo': 95}"
       ],
@@ -105,22 +105,26 @@
             "stdout_tail": "",
             "stderr_tail": "",
             "scores": {
-              "performance": 100,
+              "performance": 85,
               "accessibility": 100,
               "best_practices": 96,
               "seo": 100
             },
-            "fails": {}
+            "fails": {
+              "performance": 85
+            }
           }
         },
         "table": [
           {
             "route": "/",
-            "performance": 100,
+            "performance": 85,
             "accessibility": 100,
             "best_practices": 96,
             "seo": 100,
-            "fails": []
+            "fails": [
+              "performance"
+            ]
           }
         ],
         "thresholds": {
@@ -149,18 +153,20 @@
             "stdout_tail": "",
             "stderr_tail": "",
             "scores": {
-              "performance": 100,
+              "performance": 85,
               "accessibility": 100,
               "best_practices": 96,
               "seo": 100
             },
-            "fails": {}
+            "fails": {
+              "performance": 85
+            }
           }
         },
         "routes": [
           "/"
         ],
-        "gate_4_verdict": "PASS"
+        "gate_4_verdict": "FAIL"
       },
       "error": null
     },
@@ -178,60 +184,60 @@
             "viewport": "320x720",
             "scrollWidth": 320,
             "innerWidth": 320,
-            "scrollHeight": 3692,
+            "scrollHeight": 4327,
             "settle": {
-              "animation_count": 17,
+              "animation_count": 19,
               "settle_cap_ms": 3000,
               "pixel_stable": true,
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8658100405458208521__320x720.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3868268770488195871__320x720.png"
           },
           {
             "route": "/",
             "viewport": "768x1024",
             "scrollWidth": 768,
             "innerWidth": 768,
-            "scrollHeight": 2879,
+            "scrollHeight": 3335,
             "settle": {
-              "animation_count": 17,
+              "animation_count": 19,
               "settle_cap_ms": 3000,
               "pixel_stable": true,
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/1095553033187296354__768x1024.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3204978122647168423__768x1024.png"
           },
           {
             "route": "/",
             "viewport": "1024x768",
             "scrollWidth": 1024,
             "innerWidth": 1024,
-            "scrollHeight": 2879,
+            "scrollHeight": 3335,
             "settle": {
-              "animation_count": 17,
+              "animation_count": 19,
               "settle_cap_ms": 3000,
               "pixel_stable": true,
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/446546664394161755__1024x768.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6099157031174883951__1024x768.png"
           },
           {
             "route": "/",
             "viewport": "1440x900",
             "scrollWidth": 1440,
             "innerWidth": 1440,
-            "scrollHeight": 2879,
+            "scrollHeight": 3335,
             "settle": {
-              "animation_count": 17,
+              "animation_count": 19,
               "settle_cap_ms": 3000,
               "pixel_stable": true,
               "pixel_wait_ms": 500
             },
             "overflow": false,
-            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/4455530069660008736__1440x900.png"
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/659170345062500536__1440x900.png"
           }
         ],
         "viewports": [
@@ -319,27 +325,23 @@
     {
       "id": "11",
       "name": "Content fidelity",
-      "verdict": "PASS",
-      "evidence_basis": "DOM+assets confirmed",
-      "summary": "All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.",
-      "notes": [],
+      "verdict": "NOT-EXERCISED",
+      "evidence_basis": "Not exercised",
+      "summary": "No --design-plan supplied; cannot verify the plan's copy reached the page.",
+      "notes": [
+        "Pass --design-plan <plan.json> to exercise this gate."
+      ],
       "observations": {
-        "copy_blocks_checked": 11,
-        "missing": [],
-        "weak": [],
-        "placeholders_found": [],
-        "wants_nav": true,
-        "nav_present": true,
-        "coverage_threshold": 0.85
+        "applicable": false
       },
       "error": null
     }
   ],
   "meta": {
     "input_hashes": {
-      "index.html": "a0f533c24d1b5fa50bcf49def638136417162dfdcc7d5280ad91be3179ed7baa",
-      "styles.css": "e6d00de98ae6ec1510e9124ef2e8d5a4784b6eeee4275daecbab77264ba2e947",
-      "tokens.css": "e7effa6abc366027afcd99bd275c3a51ce71dafcd3950a26ad70674b1d45c318"
+      "index.html": "edf5b09b8f2e16f24de0bf70806a5b335d195b9354c94a97f206309a101e1226",
+      "styles.css": "820df2b14fe0c3510a24b6446747264b6d9384caf72d1948ecae9bafb47c0ab6",
+      "tokens.css": "c503eb6238029a0d8cf68240e5569ad05643b955055f83c3cb8705c2984bc7aa"
     },
     "input_hashes_algorithm": "sha256",
     "input_hashes_note": "Recompute with: sha256sum <site_dir>/index.html <site_dir>/styles.css <site_dir>/tokens.css. If the site is a Next.js export, also verify the combined _next/static/*.js hash. If these change without re-running validate_site.py the gate results are stale."

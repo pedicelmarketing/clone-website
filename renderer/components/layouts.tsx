@@ -95,6 +95,23 @@ function splitItems(text: string, max = 8): string[] {
   return parts.slice(0, max);
 }
 
+/**
+ * Items for a list-shaped layout.
+ *
+ * Prefers REPEATED copy blocks of the same role — the design pass writes a
+ * services list as N separate `headline` blocks, and those are real authored
+ * strings that must not be thrown away. Falls back to splitting a single body
+ * string only when no repetition exists.
+ */
+function itemsFor(section: RenderableSection, max = 8): string[] {
+  const repeated = [
+    ...(section.copyList?.headline ?? []).slice(1),
+    ...(section.copyList?.body ?? []).slice(1),
+  ].filter(Boolean);
+  if (repeated.length >= 2) return repeated.slice(0, max);
+  return splitItems(section.copy.body || "", max);
+}
+
 // ---------------------------------------------------------------------------
 // split-hero — the opening statement
 // ---------------------------------------------------------------------------
@@ -286,8 +303,23 @@ export function FullBleedBand({ section }: LayoutProps) {
 // ---------------------------------------------------------------------------
 
 export function CardGrid({ section }: LayoutProps) {
-  const { copy, media } = section;
-  const items = copy.body ? splitItems(copy.body) : [];
+  const { copy, media, copyList } = section;
+  // Paired title+description cards when the plan repeats BOTH roles — that is
+  // how a services section is actually written (six names, six descriptions).
+  // Rendering only the names would drop half the authored copy.
+  const allTitles = copyList?.headline ?? [];
+  const allBodies = copyList?.body ?? [];
+  // headline[0] / body[0] are the SECTION's own title and intro; the remainder
+  // are the cards. Aligning on slice(1) of both keeps each description with its
+  // own title — slicing them differently silently dropped the last pair.
+  const titles = allTitles.slice(1);
+  const bodies = allBodies.length === allTitles.length
+    ? allBodies.slice(1)
+    : allBodies.slice(Math.max(0, allBodies.length - titles.length));
+  const paired = titles.length >= 2 && bodies.length >= titles.length
+    ? titles.map((t, i) => ({ title: t, desc: bodies[i] }))
+    : null;
+  const items = paired ? [] : itemsFor(section);
   return (
     <Container className="border-t border-border py-20 lg:py-28">
       <FadeIn>
@@ -301,11 +333,31 @@ export function CardGrid({ section }: LayoutProps) {
           <p className="mt-4 max-w-[60ch] font-body text-lg text-muted-foreground">{copy.subhead}</p>
         )}
       </FadeIn>
+      {/* Bordered cards with a real gap, NOT a `gap-px` + `bg-border` hairline
+       *  trick. That trick paints the container's background through every cell
+       *  the items do not fill: seven mixers in a three-column grid left two
+       *  empty cells rendering as solid blocks of the brand's border colour — a
+       *  green rectangle sitting in the middle of the lineup. */}
+      {paired && (
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {paired.map((card, i) => (
+            <FadeIn key={i} delay={0.04 * i}>
+              <div className="h-full rounded-[var(--radius-8,8px)] border border-border bg-background p-7">
+                <span className="font-mono text-xs text-primary">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-3 font-display text-xl leading-snug text-foreground">{card.title}</h3>
+                {card.desc && (
+                  <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
+                )}
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      )}
       {items.length > 0 && (
-        <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-[var(--radius-8,8px)] border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => (
             <FadeIn key={i} delay={0.04 * i}>
-              <div className="h-full bg-background p-7">
+              <div className="h-full rounded-[var(--radius-8,8px)] border border-border bg-background p-7">
                 <span className="font-mono text-xs text-primary">{String(i + 1).padStart(2, "0")}</span>
                 <p className="mt-3 font-body text-base leading-relaxed text-foreground">{item}</p>
               </div>
@@ -335,7 +387,8 @@ export function CardGrid({ section }: LayoutProps) {
 
 export function ProofRow({ section }: LayoutProps) {
   const { copy } = section;
-  const items = splitItems(copy.caption || copy.body || "", 5);
+  const repeated = itemsFor(section, 5);
+  const items = repeated.length >= 2 ? repeated : splitItems(copy.caption || copy.body || "", 5);
 
   // A row needs things to put in a row. When the plan supplies a single
   // sentence, the list rendering degrades into one stranded right-aligned line,
@@ -421,7 +474,7 @@ export function PullQuote({ section }: LayoutProps) {
 
 export function IndexList({ section }: LayoutProps) {
   const { copy } = section;
-  const items = splitItems(copy.body || "", 12);
+  const items = itemsFor(section, 12);
   return (
     <Container className="border-t border-border py-20 lg:py-28">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">

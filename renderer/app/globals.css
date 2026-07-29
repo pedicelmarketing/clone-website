@@ -79,7 +79,9 @@
 
   /* Brand primary: gold (signature 'i'-dot highlighter from the brief). */
   --primary: var(--color-primary);
-  --primary-foreground: var(--color-neutral-0);
+  /* Derived by contrast against --color-primary, NOT positional neutral-0:
+   * a cream neutral-0 on a yellow primary gave 1.47:1 filled buttons. */
+  --primary-foreground: var(--color-primary-text, var(--color-neutral-0));
 
   /* Secondary / muted: cool off-white + neutral-2 text. */
   --secondary: var(--color-secondary);
@@ -129,7 +131,9 @@
   --popover: var(--color-neutral-1);
   --popover-foreground: var(--color-neutral-6);
   --primary: var(--color-primary);
-  --primary-foreground: var(--color-neutral-0);
+  /* Derived by contrast against --color-primary, NOT positional neutral-0:
+   * a cream neutral-0 on a yellow primary gave 1.47:1 filled buttons. */
+  --primary-foreground: var(--color-primary-text, var(--color-neutral-0));
   --secondary: var(--color-neutral-1);
   --secondary-foreground: var(--color-neutral-6);
   --muted: var(--color-neutral-1);

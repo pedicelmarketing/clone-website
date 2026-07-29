@@ -34,6 +34,10 @@
       "type": "string",
       "minLength": 1
     },
+    "provider": {
+      "type": "string",
+      "description": "Which vendor actually answered (minimax | gemini | anthropic). design_pass.py stamps this before validating, so the schema must accept it \u2014 otherwise every run fails validation on its own provenance field."
+    },
     "layout_thesis": {
       "type": "object",
       "additionalProperties": false,

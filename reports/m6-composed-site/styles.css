@@ -8,7 +8,7 @@
  * Contrast ratio measured: 19.58:1
  * (WCAG AA for normal body text requires >= 4.5:1).
  *
- * Motion register (from design-plan.json): restrained
+ * Motion register (from design-plan.json): balanced
  */
 
 :root {
@@ -415,17 +415,17 @@ main:focus { outline: none; }
 .footer-meta { font-size: var(--typography-font-size-0, 12px); color: var(--color-neutral-2); }
 
 /* ---- Motion: chosen by the plan's motion_vocabulary.register ---- */
-/* Motion register: restrained — on-paint fades only. */
-@keyframes plan-fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+/* Motion register: balanced — fade with a small lift, mid-paced. */
+@keyframes plan-fade-lift {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-.plan-section { animation: plan-fade-in 320ms ease-out both; }
-.plan-section:nth-of-type(2) { animation-delay: 40ms; }
-.plan-section:nth-of-type(3) { animation-delay: 80ms; }
-.plan-section:nth-of-type(4) { animation-delay: 120ms; }
-.plan-section:nth-of-type(n+5) { animation-delay: 160ms; }
-.signature-dot { animation: plan-fade-in 180ms ease-out both; }
+.plan-section { animation: plan-fade-lift 420ms ease-out both; }
+.plan-section:nth-of-type(2) { animation-delay: 80ms; }
+.plan-section:nth-of-type(3) { animation-delay: 160ms; }
+.plan-section:nth-of-type(4) { animation-delay: 240ms; }
+.plan-section:nth-of-type(n+5) { animation-delay: 320ms; }
+.signature-dot { animation: plan-fade-lift 240ms ease-out both; }
 
 
 @media (prefers-reduced-motion: reduce) {

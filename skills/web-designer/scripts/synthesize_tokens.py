@@ -532,6 +532,30 @@ def render_css(
     lines.append(f"  --color-bg: {bg};")
     lines.append(f"  /* fg/bg chosen by luminance ({fg_note}); "
                  f"contrast {_contrast_ratio(fg, bg)}:1 */")
+
+    # TEXT ON A FILLED BRAND SURFACE — same derivation, same reason.
+    #
+    # `--primary-foreground` was hardwired to --color-neutral-0, i.e. the exact
+    # positional assumption fixed above, one layer up. On a brand whose
+    # neutral-0 is a cream (#FBF7E9) and whose primary is a bright yellow
+    # (#FFC517), every filled button rendered cream-on-yellow at 1.47:1 —
+    # unreadable, and brand-dependent, so it passed on the first brand tested
+    # and failed on the second.
+    #
+    # Pick whichever of the derived fg/bg contrasts better against the fill, and
+    # fall back to black/white if neither brand colour reaches AA.
+    for _role, _fill in (("primary", colors.get("primary")),
+                         ("accent", colors.get("accent"))):
+        if not _fill:
+            continue
+        _best = max((fg, bg), key=lambda c: _contrast_ratio(c, _fill))
+        _ratio = _contrast_ratio(_best, _fill)
+        if _ratio < 4.5:
+            _best = max(("#111111", "#ffffff"), key=lambda c: _contrast_ratio(c, _fill))
+            _ratio = _contrast_ratio(_best, _fill)
+        lines.append(f"  --color-{_role}-text: {_best};")
+        lines.append(f"  /* text on --color-{_role} ({_fill}); "
+                     f"contrast {_ratio}:1 */")
     lines.append("")
     # Emit each font-family token as a real fallback chain, not a bare name.
     # A single-family declaration breaks silently when the primary face fails

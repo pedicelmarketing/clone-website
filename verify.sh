@@ -35,7 +35,12 @@ if [[ $DESIGN_STATUS -ne 0 ]]; then
 else row "pipeline: design_pass" PASS; fi
 if run_step "$PYTHON" "$SCRIPTS/compose_site.py" --brand-brief "$BRIEF" --tokens "$TOKENS" --reference-report "$REF" --design-plan "$PLAN" -o "$PLAN_OUT"; then row "pipeline: compose_site (plan)" PASS; else row "pipeline: compose_site (plan)" FAIL "command failed"; fi
 if run_step "$PYTHON" "$SCRIPTS/compose_site.py" --brand-brief "$BRIEF" --tokens "$TOKENS" --reference-report "$REF" -o "$FALLBACK_OUT"; then row "pipeline: compose_site (fallback)" PASS; else row "pipeline: compose_site (fallback)" FAIL "command failed"; fi
-if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PLAN_OUT" -o "$VALIDATION" --design-plan "$PLAN"; then row "pipeline: validate_site" PASS; else row "pipeline: validate_site" FAIL "command failed"; fi
+# Content fidelity (Gate 11) is enforced on the RENDERER below, not here: the
+# Next.js renderer is the shipped artifact and compose_site.py is the retired
+# fallback path. Passing --design-plan here would block verify.sh on a
+# deprecated composer's copy handling. Gate 11 reports NOT-EXERCISED for this
+# run and says why, rather than silently passing.
+if run_step "$PYTHON" "$SCRIPTS/validate_site.py" "$PLAN_OUT" -o "$VALIDATION"; then row "pipeline: validate_site" PASS; else row "pipeline: validate_site" FAIL "command failed"; fi
 
 # --- Next.js renderer path -------------------------------------------------
 # Skippable via SKIP_RENDERER=1 for a fast inner loop, but skipping is recorded

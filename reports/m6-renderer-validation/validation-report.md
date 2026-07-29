@@ -1,10 +1,10 @@
 # Validation Report
 
-Generated: 2026-07-29T00:24:22.844229+00:00
+Generated: 2026-07-29T16:55:20.114209+00:00
 Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site`
 Routes validated: /
-Local server: http://127.0.0.1:50279 (python3 -m http.server, killed on exit)
+Local server: http://127.0.0.1:47445 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/server.log
 
 ## Declared scope
@@ -23,7 +23,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 | # | Gate | Verdict | Evidence basis | Summary |
 |---|------|---------|----------------|---------|
 | 1 | Boot | **PASS** | HTTP-200 only | All 1 route(s) returned HTTP 200 via local server. |
-| 2 | Dependency | **PASS** | HTTP-200 only | All 24 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External. |
+| 2 | Dependency | **PASS** | HTTP-200 only | All 26 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External. |
 | 3 | Accessibility | **PASS** | DOM+assets confirmed | axe-core found 0 serious/critical violations across 1 route(s) (0 total). |
 | 4 | Performance | **PASS** | DOM+assets confirmed | Lighthouse met thresholds on 1 route(s). |
 | 5 | Site-wide audit | **PASS** | DOM+assets confirmed | Only one route declared; per-route vs. whole-site comparison is not applicable. Single-route Lighthouse score was emitted by gate 4. |
@@ -32,7 +32,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 | 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 350 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
 | 9 | Build (Next.js) | **PASS** | DOM+assets confirmed | `npm run build` exited 0 in renderer. |
 | 10 | Bundle (Next.js) | **PASS** | DOM+assets confirmed | Total gzipped JS is 295.1 KB across 15 file(s), under the 300 KB budget. |
-| 11 | Content fidelity | **PASS** | DOM+assets confirmed | All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present. |
+| 11 | Content fidelity | **PASS** | DOM+assets confirmed | All 32 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present. |
 
 **Verdict values:** `PASS` (evidence satisfies the gate), `FAIL` (evidence contradicts), `NOT-EXERCISED` (runner unavailable or did not run). NOT-EXERCISED does not fail the run but is visible above and downgrades the acceptance tier.
 
@@ -53,22 +53,22 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:50279/"
+      "final_url": "http://127.0.0.1:47445/"
     }
   },
-  "base_url": "http://127.0.0.1:50279"
+  "base_url": "http://127.0.0.1:47445"
 }
 ```
 
 ### Gate 2 — Dependency  (PASS)
 
 - **Evidence basis:** HTTP-200 only
-- **Summary:** All 24 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External.
+- **Summary:** All 26 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External.
 - **Observations (JSON):**
 
 ```json
 {
-  "reference_count": 24,
+  "reference_count": 26,
   "external_count": 0,
   "external_sample": [],
   "external_hosts": []
@@ -87,7 +87,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:50279/",
+      "url": "http://127.0.0.1:47445/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -198,22 +198,22 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 3798,
+      "scrollHeight": 6370,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 750
+        "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/8730123844072503337__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/662862665287111552__320x720.png"
     },
     {
       "route": "/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 3015,
+      "scrollHeight": 4096,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
@@ -221,14 +221,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/7918456785412861006__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/1768841324361709892__768x1024.png"
     },
     {
       "route": "/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 3198,
+      "scrollHeight": 4273,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
@@ -236,14 +236,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/8033254606253624871__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/7071755141150294871__1024x768.png"
     },
     {
       "route": "/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 3374,
+      "scrollHeight": 4250,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
@@ -251,7 +251,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
         "pixel_wait_ms": 1250
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/1150403524007979508__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/3187701628131343930__1440x900.png"
     }
   ],
   "viewports": [
@@ -276,10 +276,10 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ```json
 {
   "css_files_seen": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e1cfe3dec37f233f.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
   ],
   "reduced_in": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e1cfe3dec37f233f.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
   ]
 }
 ```
@@ -296,7 +296,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ```json
 {
   "css_files": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e1cfe3dec37f233f.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e2fea51aeaa86f04.css"
   ],
   "var_uses": 350,
   "raw_hex": []
@@ -367,14 +367,30 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 ### Gate 11 — Content fidelity  (PASS)
 
 - **Evidence basis:** DOM+assets confirmed
-- **Summary:** All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.
+- **Summary:** All 32 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.
+- **Notes:**
+  - weak-but-present: services/body 0.632
+  - weak-but-present: our-approach/body 0.565
 - **Observations (JSON):**
 
 ```json
 {
-  "copy_blocks_checked": 11,
+  "copy_blocks_checked": 32,
   "missing": [],
-  "weak": [],
+  "weak": [
+    {
+      "section_id": "services",
+      "role": "body",
+      "coverage": 0.632,
+      "text": "Our comprehensive suite of services is designed to meet your specific needs, dri"
+    },
+    {
+      "section_id": "our-approach",
+      "role": "body",
+      "coverage": 0.565,
+      "text": "From initial strategy development to meticulous execution and ongoing optimizati"
+    }
+  ],
   "placeholders_found": [],
   "wants_nav": true,
   "nav_present": true,

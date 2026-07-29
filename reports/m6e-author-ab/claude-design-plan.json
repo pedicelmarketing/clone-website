@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "leo-foods-redesign",
+  "generated_at": "2026-07-29T00:00:00Z",
+  "model": "claude-opus-5",
+  "provider": "anthropic",
+  "layout_thesis": {
+    "statement": "The whole brand fits in three words — just add spirit — so the page is built as a ratio, not a brochure. A warm cream field runs top to bottom like a Charleston kitchen counter; the seven bottles are the constant object on it, and the finished drinks are the payoff. Every section answers one question a drinker actually has, in order: what is it, what's the ratio, what's in it, who made it, what can I make, and where do I buy it. Nothing is explained twice.",
+    "audience": "Home drinkers who want a good cocktail in under a minute and read ingredient labels, plus the bar and shop buyers who stock them.",
+    "job_to_be_done": "Convince someone in one scroll that a $12 bottle replaces a shelf of ingredients, then get them to the shop.",
+    "why_this_not_generic": "A generic DTC beverage page opens on a lifestyle photo and buries the product behind a mood. This one opens on the rule (2:1) because that is the brand's actual promise and its shortest sentence. The bottles are treated as a repeated typographic object rather than a carousel, and the recipe library is presented as an index of spirits rather than a grid of cards — because the brief says recipes are the SEO engine and are tagged by spirit, not by mood."
+  },
+  "signature_element": {
+    "name": "The ratio mark",
+    "description": "The figure 2:1 set in the display face at headline scale, used once as a full section and then echoed at small size beside the Bloody Mary's 4:1 exception. The colon is set in the teal accent; the numerals in the brown text colour.",
+    "why_it_fits_brand": "The mix ratio is the single most repeated fact on the live site and the entire product promise — two parts mixer, one part spirit. It is a number the brand already owns, so it needs no explanation and cannot be mistaken for another beverage brand.",
+    "implementation_note": "Rendered as text in the display family, not an image, so it inherits the type scale and stays crisp at any viewport. The teal is the brief's single saturated accent (#259E7E) and appears nowhere else on the page except links."
+  },
+  "motion_vocabulary": {
+    "register": "restrained",
+    "effects": [
+      "short fade-and-rise on section entry, under 200ms",
+      "no parallax, no scroll-jacking, no autoplaying carousels"
+    ],
+    "rationale": "The brand voice is plain and unhurried — short sentences, no showmanship. Motion that draws attention to itself would contradict 'real people, real ingredients'. Entry fades only, so the page reads at reading speed."
+  },
+  "sections": [
+    {
+      "id": "masthead",
+      "order": 0,
+      "purpose": "Site header carrying the wordmark and the brand's one-line origin.",
+      "component": "masthead strip; wordmark left, tagline beside it, section nav right",
+      "emphasis": "minor",
+      "layout": "masthead",
+      "in_nav": false,
+      "nav_label": null,
+      "source_brief_fields": ["sources.own_site.url", "voice_and_tone.example_lines"],
+      "rationale": "The live site's logo IS its typography — there is no logo asset — so the wordmark is set in the display face rather than an image."
+    },
+    {
+      "id": "the-rule",
+      "order": 1,
+      "purpose": "Open on the product promise: seven mixers, one ratio, no bar skills required.",
+      "component": "split hero; oversized headline left, the Classic Margarita bottle standing right",
+      "emphasis": "hero",
+      "layout": "split-hero",
+      "in_nav": true,
+      "nav_label": "The rule",
+      "source_brief_fields": ["service_facts[0].description", "service_facts[0].price_range"],
+      "rationale": "Leads with the ratio because it is the brand's shortest and most repeated claim, and because it answers the only real objection — that mixing a cocktail at home is fussy.",
+      "media": {
+        "file": "05-98b211f22d.png",
+        "alt": "Classic Margarita 1L bottle on its drop shadow",
+        "treatment": "portrait",
+        "rationale": "The bottle is the constant object of the brand; showing it first makes the product, not a mood, the opening image."
+      }
+    },
+    {
+      "id": "the-ratio",
+      "order": 2,
+      "purpose": "State the mix ratio as the signature element.",
+      "component": "pull quote; the ratio mark at display scale with the exception noted beneath",
+      "emphasis": "primary",
+      "layout": "pull-quote",
+      "in_nav": false,
+      "nav_label": "Ratio",
+      "source_brief_fields": ["service_facts[2].description", "service_facts[0].description"],
+      "rationale": "Given a whole section rather than a footnote because it is the signature element and the fastest thing to remember."
+    },
+    {
+      "id": "real-ingredients",
+      "order": 3,
+      "purpose": "Back the 'real' claim with what is and is not in the bottle.",
+      "component": "full-bleed ingredient flat-lay with the claim above it",
+      "emphasis": "primary",
+      "layout": "full-bleed-band",
+      "in_nav": true,
+      "nav_label": "Ingredients",
+      "source_brief_fields": ["voice_and_tone.example_lines", "voice_and_tone.favorite_words"],
+      "rationale": "The word 'real' is the brand's core repetition, so it gets the page's only edge-to-edge image — the claim is shown before it is argued.",
+      "media": {
+        "file": "03-777017bd13.jpg",
+        "alt": "Flat-lay of the real ingredients used in the mixers — citrus, cucumber, chiles and sea salt",
+        "treatment": "full-bleed",
+        "rationale": "A photograph of the actual ingredients is the only honest way to support an ingredients claim."
+      }
+    },
+    {
+      "id": "the-lineup",
+      "order": 4,
+      "purpose": "Name all seven mixers so a visitor can find theirs.",
+      "component": "card grid; one card per mixer, numbered",
+      "emphasis": "primary",
+      "layout": "card-grid",
+      "in_nav": true,
+      "nav_label": "The seven",
+      "source_brief_fields": ["service_facts[0].description"],
+      "rationale": "A grid rather than a carousel: all seven are the product range, and hiding four behind a swipe would bury the thing being sold."
+    },
+    {
+      "id": "made-by-bartenders",
+      "order": 5,
+      "purpose": "Say who makes it and where, with the founders shown.",
+      "component": "feature split; founders photograph one side, origin copy the other",
+      "emphasis": "primary",
+      "layout": "feature-split",
+      "in_nav": true,
+      "nav_label": "Who made it",
+      "source_brief_fields": ["voice_and_tone.example_lines", "sources.own_site.url"],
+      "rationale": "'Made by real people' is a claim that needs faces. The founders' own photograph does the work a paragraph cannot.",
+      "media": {
+        "file": "02-8f25a4d944.jpg",
+        "alt": "Joe and MariElena Raya, the founders of Barcoop Bevy",
+        "treatment": "portrait",
+        "rationale": "The brief's only founder photograph, and the brand's claim is specifically about real people in Charleston."
+      }
+    },
+    {
+      "id": "recipes",
+      "order": 6,
+      "purpose": "Show the range of drinks by spirit, which is how the recipes are actually tagged.",
+      "component": "index list; one expandable row per spirit",
+      "emphasis": "primary",
+      "layout": "index-list",
+      "in_nav": true,
+      "nav_label": "Recipes",
+      "source_brief_fields": ["service_facts[2].description"],
+      "rationale": "The brief says recipes are tagged by spirit and are the brand's SEO engine, so the index is organised by spirit rather than by mood or occasion."
+    },
+    {
+      "id": "bloody-mary",
+      "order": 7,
+      "purpose": "Give the flagship award-winner its own moment and note its different ratio.",
+      "component": "feature split; the Bloody Mary bottle beside its exception copy",
+      "emphasis": "secondary",
+      "layout": "feature-split",
+      "in_nav": false,
+      "nav_label": "Bloody Mary",
+      "source_brief_fields": ["service_facts[0].description", "service_facts[2].description"],
+      "rationale": "It is the one product with a different rule (4:1), and stating the exception plainly is more trustworthy than pretending every bottle behaves the same.",
+      "media": {
+        "file": "07-b642f34f8f.png",
+        "alt": "Bloody Mary 1L bottle, smoked sea salt and chiles",
+        "treatment": "portrait",
+        "rationale": "The flagship bottle shot, matching the treatment used for the opening bottle so the range reads as one family."
+      }
+    },
+    {
+      "id": "no-spirit",
+      "order": 8,
+      "purpose": "Cover the non-alcoholic use, which is a real product capability.",
+      "component": "feature split; finished mocktail photograph beside short copy",
+      "emphasis": "secondary",
+      "layout": "feature-split",
+      "in_nav": true,
+      "nav_label": "No spirit",
+      "source_brief_fields": ["service_facts[0].description"],
+      "rationale": "Every mixer is non-alcoholic on its own, which doubles the audience; the brief states it explicitly, so it earns a section rather than an asterisk.",
+      "media": {
+        "file": "21-6a68726df8.jpg",
+        "alt": "Virgin Bloody Mary served over ice, made with the mixer and no spirit",
+        "treatment": "side-by-side",
+        "rationale": "A finished mocktail is the proof that the bottle works without alcohol."
+      }
+    },
+    {
+      "id": "press",
+      "order": 9,
+      "purpose": "List the publications that have covered the brand.",
+      "component": "proof row; outlet names in a single horizontal band",
+      "emphasis": "minor",
+      "layout": "proof-row",
+      "in_nav": false,
+      "nav_label": "Press",
+      "source_brief_fields": ["brand_donts[0]"],
+      "rationale": "Editor coverage is the only third-party proof the brand actually has — there are no customer testimonials — so it is presented plainly as a list of names, with no invented quotes."
+    },
+    {
+      "id": "wholesale",
+      "order": 10,
+      "purpose": "Route trade buyers to the right distributor without changing the consumer voice.",
+      "component": "editorial column; distributors named in running copy",
+      "emphasis": "secondary",
+      "layout": "editorial",
+      "in_nav": true,
+      "nav_label": "Wholesale",
+      "source_brief_fields": ["service_facts[1].description"],
+      "rationale": "Wholesale exists but the brief is explicit that it must not become the voice of the site, so it sits low on the page in the same plain register as everything else."
+    },
+    {
+      "id": "shop",
+      "order": 11,
+      "purpose": "Close on the price and a single call to action.",
+      "component": "inverted call-to-action band",
+      "emphasis": "primary",
+      "layout": "cta-band",
+      "in_nav": true,
+      "nav_label": "Shop",
+      "source_brief_fields": ["service_facts[0].price_range", "service_facts[0].description"],
+      "rationale": "The price is the strongest closing argument — one bottle at $12 replaces a shelf of ingredients — so it is stated rather than hidden behind the click."
+    },
+    {
+      "id": "colophon",
+      "order": 12,
+      "purpose": "Type, colour and contact disclosure.",
+      "component": "colophon strip in monospace",
+      "emphasis": "minor",
+      "layout": "colophon",
+      "in_nav": false,
+      "nav_label": null,
+      "source_brief_fields": ["typography_recommendation.license_notes", "palette_from_logo.primary", "service_facts[1].description"],
+      "rationale": "Records the substituted display face and the contact route, so the licensing decision is visible rather than buried."
+    }
+  ],
+  "copy_blocks": [
+    {
+      "section_id": "masthead",
+      "role": "headline",
+      "text": "Barcoop Bevy",
+      "source_brief_fields": ["sources.own_site.url"]
+    },
+    {
+      "section_id": "masthead",
+      "role": "subhead",
+      "text": "Made by bartenders. Made in Charleston.",
+      "source_brief_fields": ["voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "the-rule",
+      "role": "headline",
+      "text": "Seven mixers. One rule: just add spirit.",
+      "source_brief_fields": ["service_facts[0].description", "voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "the-rule",
+      "role": "subhead",
+      "text": "All-natural cocktail mixers, made by bartenders in Charleston, South Carolina. Two parts mixer, one part whatever you have.",
+      "source_brief_fields": ["service_facts[0].description", "voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "the-rule",
+      "role": "body",
+      "text": "One 1L bottle is about eight drinks. No shaking a dozen ingredients, no bar cart, no measuring spoons you own for exactly one reason. Pour, add, stir.",
+      "source_brief_fields": ["service_facts[0].description", "service_facts[2].description"]
+    },
+    {
+      "section_id": "the-rule",
+      "role": "cta",
+      "text": "Shop the seven",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "the-rule",
+      "role": "caption",
+      "text": "$12.00 per 1L bottle, direct from us.",
+      "source_brief_fields": ["service_facts[0].price_range"]
+    },
+    {
+      "section_id": "the-ratio",
+      "role": "body",
+      "text": "Two parts mixer. One part spirit. That is the whole method.",
+      "source_brief_fields": ["service_facts[2].description"]
+    },
+    {
+      "section_id": "the-ratio",
+      "role": "headline",
+      "text": "The ratio",
+      "source_brief_fields": ["service_facts[2].description"]
+    },
+    {
+      "section_id": "the-ratio",
+      "role": "caption",
+      "text": "Bloody Mary is the one exception — four parts mixer to one part spirit.",
+      "source_brief_fields": ["service_facts[2].description"]
+    },
+    {
+      "section_id": "real-ingredients",
+      "role": "headline",
+      "text": "REAL Ingredients Only.",
+      "source_brief_fields": ["voice_and_tone.example_lines", "voice_and_tone.notes"]
+    },
+    {
+      "section_id": "real-ingredients",
+      "role": "subhead",
+      "text": "No artificial ingredients, no preservatives, no high fructose corn sugar.",
+      "source_brief_fields": ["voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "real-ingredients",
+      "role": "body",
+      "text": "Real citrus. Real cucumber. Real ginger. Real chiles. Real cane sugar. Real sea salt. The list is short on purpose, and you can read all of it on the back of the bottle.",
+      "source_brief_fields": ["voice_and_tone.favorite_words", "voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "real-ingredients",
+      "role": "caption",
+      "text": "Only real ingredients, made by real people in Charleston.",
+      "source_brief_fields": ["voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "the-lineup",
+      "role": "headline",
+      "text": "Seven bottles. Pick yours.",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "the-lineup",
+      "role": "subhead",
+      "text": "Every one is non-alcoholic on its own, and every one is 1L except Skinny, which is 33.8 fl oz.",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "the-lineup",
+      "role": "body",
+      "text": "Classic Margarita, Skinny Margarita, Bloody Mary with smoked sea salt and chiles, Cucumber Mojito, Ginger Smash, Spicy Strawberry Margarita, Piña Colada",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "the-lineup",
+      "role": "cta",
+      "text": "See all seven",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "made-by-bartenders",
+      "role": "headline",
+      "text": "Made by bartenders. Made in Charleston, South Carolina.",
+      "source_brief_fields": ["voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "made-by-bartenders",
+      "role": "body",
+      "text": "Joe and MariElena Raya started this behind a bar, which is why the ratio is simple and the ingredient list is short. Everything is still mixed in Charleston.",
+      "source_brief_fields": ["sources.own_site.url", "voice_and_tone.example_lines"]
+    },
+    {
+      "section_id": "made-by-bartenders",
+      "role": "caption",
+      "text": "Joe and MariElena Raya, founders.",
+      "source_brief_fields": ["sources.own_site.url"]
+    },
+    {
+      "section_id": "recipes",
+      "role": "headline",
+      "text": "36 recipes, sorted by what is already in your cabinet.",
+      "source_brief_fields": ["service_facts[2].description"]
+    },
+    {
+      "section_id": "recipes",
+      "role": "subhead",
+      "text": "Pick the spirit you have. The mixer does the rest.",
+      "source_brief_fields": ["service_facts[2].description"]
+    },
+    {
+      "section_id": "recipes",
+      "role": "body",
+      "text": "Tequila, Mezcal, Bourbon, Scotch, Rum, Vodka, Gin, Light Beer, Non-Alcoholic",
+      "source_brief_fields": ["service_facts[2].description"]
+    },
+    {
+      "section_id": "recipes",
+      "role": "caption",
+      "text": "Free to read. Nothing gated.",
+      "source_brief_fields": ["service_facts[2].price_range"]
+    },
+    {
+      "section_id": "bloody-mary",
+      "role": "headline",
+      "text": "Bloody Mary, smoked sea salt and chiles.",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "bloody-mary",
+      "role": "body",
+      "text": "The one bottle that breaks the rule: four parts mixer to one part vodka. Add tequila instead and it is a Bloody Maria. Add light beer and it is a Michelada.",
+      "source_brief_fields": ["service_facts[2].description", "service_facts[0].description"]
+    },
+    {
+      "section_id": "no-spirit",
+      "role": "headline",
+      "text": "Skip the spirit. Keep the drink.",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "no-spirit",
+      "role": "body",
+      "text": "Every mixer is non-alcoholic before you add anything. Soda water, or just ice, and it is a finished drink rather than a consolation prize.",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "no-spirit",
+      "role": "caption",
+      "text": "Virgin Bloody Mary — mixer and ice, nothing else.",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "press",
+      "role": "headline",
+      "text": "Written up in",
+      "source_brief_fields": ["brand_donts[0]"]
+    },
+    {
+      "section_id": "press",
+      "role": "caption",
+      "text": "NY Times Wirecutter. Boston Globe. Authority Magazine. Specialty Food Association. Golf.com. StyleBlueprint.",
+      "source_brief_fields": ["brand_donts[0]"]
+    },
+    {
+      "section_id": "wholesale",
+      "role": "headline",
+      "text": "Stocking it, not just drinking it.",
+      "source_brief_fields": ["service_facts[1].description"]
+    },
+    {
+      "section_id": "wholesale",
+      "role": "body",
+      "text": "Bars, restaurants and shops order through Savannah Distributing in Georgia and Virginia, Advintage Distributing in South Carolina, North Carolina and Tennessee, and Tennessee Craft Distributors in Tennessee. Florida and Oklahoma go through Faire.",
+      "source_brief_fields": ["service_facts[1].description"]
+    },
+    {
+      "section_id": "wholesale",
+      "role": "caption",
+      "text": "Anywhere else, including outside the US: drink@barcoopbevy.com",
+      "source_brief_fields": ["service_facts[1].description"]
+    },
+    {
+      "section_id": "shop",
+      "role": "headline",
+      "text": "One bottle. Eight drinks. Twelve dollars.",
+      "source_brief_fields": ["service_facts[0].price_range", "service_facts[0].description"]
+    },
+    {
+      "section_id": "shop",
+      "role": "body",
+      "text": "That is less than one cocktail costs out, and you already have the spirit.",
+      "source_brief_fields": ["service_facts[0].price_range"]
+    },
+    {
+      "section_id": "shop",
+      "role": "cta",
+      "text": "Shop all seven",
+      "source_brief_fields": ["service_facts[0].description"]
+    },
+    {
+      "section_id": "shop",
+      "role": "caption",
+      "text": "Ships direct. $12.00 per 1L bottle.",
+      "source_brief_fields": ["service_facts[0].price_range"]
+    },
+    {
+      "section_id": "colophon",
+      "role": "body",
+      "text": "Display type is set in Fraunces, an open-licence substitute for the brand's paid Recoleta. Brand yellow #FFC517, cream #FFF7C5, teal #259E7E.",
+      "source_brief_fields": ["typography_recommendation.license_notes", "palette_from_logo.primary"]
+    },
+    {
+      "section_id": "colophon",
+      "role": "caption",
+      "text": "Wholesale and international enquiries: drink@barcoopbevy.com",
+      "source_brief_fields": ["service_facts[1].description"]
+    }
+  ],
+  "skipped_sections": [
+    {
+      "id": "testimonials",
+      "reason": "The brand has no customer quotes anywhere on the live site, and the operator explicitly forbade inventing any. Editor coverage exists and is used instead, as a plain list of outlet names in the press section — never rewritten into a quote.",
+      "missing_brief_fields": ["testimonials"]
+    },
+    {
+      "id": "instagram-wall",
+      "reason": "The Instagram handle is verified but no posts were fetched, so there is no real image or caption to show. A social wall built from nothing would be fabricated content.",
+      "missing_brief_fields": ["social_highlights.instagram"]
+    },
+    {
+      "id": "merch",
+      "reason": "A single hat SKU exists but its price was never observed in the extracted markup, so a shop section for it would have to invent the price or omit the one fact a shopper needs.",
+      "missing_brief_fields": ["service_facts[3].price_range"]
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "Open on the mix ratio rather than a lifestyle photograph.",
+      "alternatives_considered": [
+        "Full-bleed lifestyle hero with the wordmark overlaid",
+        "Founders' story as the opening section"
+      ],
+      "why_chosen": "The ratio is the brand's shortest sentence and its actual promise. A lifestyle hero would look like every other beverage site and delay the one fact that removes the objection to making a cocktail at home."
+    },
+    {
+      "decision": "Organise the recipe section by spirit, not by occasion or mixer.",
+      "alternatives_considered": [
+        "Grid of recipe cards with finished-drink photography",
+        "Filter by mixer"
+      ],
+      "why_chosen": "The brief states recipes are tagged by spirit and are the brand's SEO engine. Sorting by what the visitor already owns matches how someone actually decides what to drink."
+    },
+    {
+      "decision": "State the Bloody Mary's 4:1 exception in its own section instead of a footnote.",
+      "alternatives_considered": [
+        "Asterisk on the ratio section",
+        "Omit it and keep one clean rule"
+      ],
+      "why_chosen": "Hiding the exception would make the headline rule wrong for the flagship product. Saying it plainly costs one section and buys trust."
+    },
+    {
+      "decision": "Use the price as the closing headline.",
+      "alternatives_considered": [
+        "Newsletter capture",
+        "Generic 'shop now' band"
+      ],
+      "why_chosen": "$12 for roughly eight drinks is the strongest argument the brand has, and the brief lists it as a published fact. Withholding it until checkout wastes it."
+    },
+    {
+      "decision": "No customer testimonials anywhere, despite the conversion value.",
+      "alternatives_considered": [
+        "Paraphrase editor coverage into quote form",
+        "Generic star rating"
+      ],
+      "why_chosen": "The brand has none, and the operator forbade inventing them. Editor coverage is listed as bare outlet names so nothing is attributed to anyone who did not say it."
+    }
+  ]
+}

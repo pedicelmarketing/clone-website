@@ -231,8 +231,44 @@ export function loadDesignPlan(): DesignPlan {
  * Returns sections in render order with their copy_blocks grouped by role.
  * Skipped sections are excluded.
  */
+const LIST_SHAPES: Layout[] = ["card-grid", "index-list", "proof-row"];
+
+/**
+ * Resolve a section's shape, accounting for REPEATED copy blocks.
+ *
+ * A section carrying several blocks of the same role is a list by
+ * construction — one plan wrote six services as six `headline` + six `body`
+ * pairs. If such a section resolves to a prose shape, that shape reads only the
+ * first of each role and every remaining block is silently dropped. Steering it
+ * to a list shape is what makes those blocks renderable at all.
+ *
+ * An explicit `layout` in the plan is still authoritative; this only overrides
+ * an inferred one.
+ */
+function shapeFor(s: PlanSection, lists: Record<string, string[]>): Layout {
+  const shape = resolveLayout(s);
+  if (s.layout) return shape;
+  const repeated = Math.max(
+    (lists.headline?.length ?? 0),
+    (lists.body?.length ?? 0),
+  );
+  if (repeated >= 3 && !LIST_SHAPES.includes(shape)) return "card-grid";
+  return shape;
+}
+
 export interface RenderableSection extends PlanSection {
+  /** FIRST value per role — the section's own headline/body/etc. */
   copy: Record<string, string>;
+  /**
+   * EVERY value per role, in plan order.
+   *
+   * The schema permits repeated (section_id, role) pairs and the design pass
+   * uses that to express lists: one plan wrote a services section as seven
+   * separate `headline` blocks. Keying copy by role alone silently collapsed
+   * all seven into the last one, dropping six real strings — which is exactly
+   * the defect Gate 11 exists to catch, and it caught this one.
+   */
+  copyList: Record<string, string[]>;
   /** Resolved layout — always set, never undefined, so no consumer has to guess. */
   shape: Layout;
 }
@@ -242,10 +278,17 @@ export function getRenderableSections(
 ): RenderableSection[] {
   const skippedIds = new Set(plan.skipped_sections.map((s) => s.id));
   const copyBySection: Record<string, Record<string, string>> = {};
+  const listBySection: Record<string, Record<string, string[]>> = {};
   for (const cb of plan.copy_blocks) {
     if (skippedIds.has(cb.section_id)) continue;
     if (!copyBySection[cb.section_id]) copyBySection[cb.section_id] = {};
-    copyBySection[cb.section_id][cb.role] = cb.text;
+    if (!listBySection[cb.section_id]) listBySection[cb.section_id] = {};
+    // First value wins for the scalar map so a section's own headline is not
+    // replaced by the last item of a list that shares its role.
+    if (copyBySection[cb.section_id][cb.role] === undefined) {
+      copyBySection[cb.section_id][cb.role] = cb.text;
+    }
+    (listBySection[cb.section_id][cb.role] ??= []).push(cb.text);
   }
   return plan.sections
     .filter((s) => !skippedIds.has(s.id))
@@ -254,7 +297,8 @@ export function getRenderableSections(
     .map((s) => ({
       ...s,
       copy: copyBySection[s.id] ?? {},
-      shape: resolveLayout(s),
+      copyList: listBySection[s.id] ?? {},
+      shape: shapeFor(s, listBySection[s.id] ?? {}),
     }));
 }
 

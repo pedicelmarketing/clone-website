@@ -1,10 +1,10 @@
 # Validation Report
 
-Generated: 2026-07-29T00:23:25.265888+00:00
+Generated: 2026-07-29T16:54:21.962167+00:00
 Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-composed-site`
 Routes validated: /
-Local server: http://127.0.0.1:57139 (python3 -m http.server, killed on exit)
+Local server: http://127.0.0.1:51525 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/server.log
 
 ## Declared scope
@@ -21,16 +21,16 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 | # | Gate | Verdict | Evidence basis | Summary |
 |---|------|---------|----------------|---------|
 | 1 | Boot | **PASS** | HTTP-200 only | All 1 route(s) returned HTTP 200 via local server. |
-| 2 | Dependency | **PASS** | HTTP-200 only | All 12 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External. |
+| 2 | Dependency | **PASS** | HTTP-200 only | All 14 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External. |
 | 3 | Accessibility | **PASS** | DOM+assets confirmed | axe-core found 0 serious/critical violations across 1 route(s) (0 total). |
-| 4 | Performance | **PASS** | DOM+assets confirmed | Lighthouse met thresholds on 1 route(s). |
+| 4 | Performance | **FAIL** | DOM+assets confirmed | Lighthouse below thresholds on 1 route(s). |
 | 5 | Site-wide audit | **PASS** | DOM+assets confirmed | Only one route declared; per-route vs. whole-site comparison is not applicable. Single-route Lighthouse score was emitted by gate 4. |
 | 6 | Responsive | **PASS** | Observed visually | No horizontal overflow across 4 cell(s) (1 route(s) × 4 viewport(s)). |
 | 7 | Motion | **PASS** | DOM+assets confirmed | prefers-reduced-motion honored in 1 CSS file(s). |
 | 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 114 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
 | 9 | Build (Next.js) | **NOT-EXERCISED** | Not exercised | Site is not a Next.js static export (no _next/ directory); build gate not applicable. |
 | 10 | Bundle (Next.js) | **NOT-EXERCISED** | Not exercised | Site is not a Next.js static export; bundle gate not applicable. |
-| 11 | Content fidelity | **PASS** | DOM+assets confirmed | All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present. |
+| 11 | Content fidelity | **NOT-EXERCISED** | Not exercised | No --design-plan supplied; cannot verify the plan's copy reached the page. |
 
 **Verdict values:** `PASS` (evidence satisfies the gate), `FAIL` (evidence contradicts), `NOT-EXERCISED` (runner unavailable or did not run). NOT-EXERCISED does not fail the run but is visible above and downgrades the acceptance tier.
 
@@ -51,22 +51,22 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:57139/"
+      "final_url": "http://127.0.0.1:51525/"
     }
   },
-  "base_url": "http://127.0.0.1:57139"
+  "base_url": "http://127.0.0.1:51525"
 }
 ```
 
 ### Gate 2 — Dependency  (PASS)
 
 - **Evidence basis:** HTTP-200 only
-- **Summary:** All 12 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External.
+- **Summary:** All 14 local reference(s) resolved HTTP 200. 3 external host reference(s) classified as Kept External.
 - **Observations (JSON):**
 
 ```json
 {
-  "reference_count": 12,
+  "reference_count": 14,
   "external_count": 3,
   "external_sample": [
     "https://fonts.googleapis.com",
@@ -92,7 +92,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:57139/",
+      "url": "http://127.0.0.1:51525/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -113,10 +113,10 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 }
 ```
 
-### Gate 4 — Performance  (PASS)
+### Gate 4 — Performance  (FAIL)
 
 - **Evidence basis:** DOM+assets confirmed
-- **Summary:** Lighthouse met thresholds on 1 route(s).
+- **Summary:** Lighthouse below thresholds on 1 route(s).
 - **Notes:**
   - Thresholds: {'performance': 90, 'accessibility': 95, 'best_practices': 95, 'seo': 95}
 - **Observations (JSON):**
@@ -130,22 +130,26 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "stdout_tail": "",
       "stderr_tail": "",
       "scores": {
-        "performance": 100,
+        "performance": 85,
         "accessibility": 100,
         "best_practices": 96,
         "seo": 100
       },
-      "fails": {}
+      "fails": {
+        "performance": 85
+      }
     }
   },
   "table": [
     {
       "route": "/",
-      "performance": 100,
+      "performance": 85,
       "accessibility": 100,
       "best_practices": 96,
       "seo": 100,
-      "fails": []
+      "fails": [
+        "performance"
+      ]
     }
   ],
   "thresholds": {
@@ -174,18 +178,20 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "stdout_tail": "",
       "stderr_tail": "",
       "scores": {
-        "performance": 100,
+        "performance": 85,
         "accessibility": 100,
         "best_practices": 96,
         "seo": 100
       },
-      "fails": {}
+      "fails": {
+        "performance": 85
+      }
     }
   },
   "routes": [
     "/"
   ],
-  "gate_4_verdict": "PASS"
+  "gate_4_verdict": "FAIL"
 }
 ```
 
@@ -203,60 +209,60 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 3692,
+      "scrollHeight": 4327,
       "settle": {
-        "animation_count": 17,
+        "animation_count": 19,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/8658100405458208521__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3868268770488195871__320x720.png"
     },
     {
       "route": "/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 2879,
+      "scrollHeight": 3335,
       "settle": {
-        "animation_count": 17,
+        "animation_count": 19,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/1095553033187296354__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/3204978122647168423__768x1024.png"
     },
     {
       "route": "/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 2879,
+      "scrollHeight": 3335,
       "settle": {
-        "animation_count": 17,
+        "animation_count": 19,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/446546664394161755__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/6099157031174883951__1024x768.png"
     },
     {
       "route": "/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 2879,
+      "scrollHeight": 3335,
       "settle": {
-        "animation_count": 17,
+        "animation_count": 19,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/4455530069660008736__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-validation/responsive_shots/659170345062500536__1440x900.png"
     }
   ],
   "viewports": [
@@ -341,33 +347,29 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-
 }
 ```
 
-### Gate 11 — Content fidelity  (PASS)
+### Gate 11 — Content fidelity  (NOT-EXERCISED)
 
-- **Evidence basis:** DOM+assets confirmed
-- **Summary:** All 11 copy block(s) reached the DOM (>=85% token coverage); no placeholder strings; navigation present.
+- **Evidence basis:** Not exercised
+- **Summary:** No --design-plan supplied; cannot verify the plan's copy reached the page.
+- **Notes:**
+  - Pass --design-plan <plan.json> to exercise this gate.
 - **Observations (JSON):**
 
 ```json
 {
-  "copy_blocks_checked": 11,
-  "missing": [],
-  "weak": [],
-  "placeholders_found": [],
-  "wants_nav": true,
-  "nav_present": true,
-  "coverage_threshold": 0.85
+  "applicable": false
 }
 ```
 
 ## Acceptance tier
 
-**Reached tier: `Validated`**
+**Reached tier: `Partial`**
 
-Reason: Every applicable gate ran and produced positive evidence; validation complete for declared scope.
+Reason: Gate(s) FAIL: 4. See per-gate detail for evidence.
 
-- PASS gates: 1, 2, 3, 4, 5, 6, 7, 8, 11
-- FAIL gates: none
-- NOT-EXERCISED gates: 9, 10
+- PASS gates: 1, 2, 3, 5, 6, 7, 8
+- FAIL gates: 4
+- NOT-EXERCISED gates: 9, 10, 11
 
 Tier definitions (from site-cloner SKILL.md):
 
@@ -394,4 +396,14 @@ If a future run needs the source-paired comparison, gate 8 can be re-added behin
 
 ## Project status
 
-`Complete for declared scope and evidence — every gate exercised and produced positive evidence.`
+`Partial — Gate(s) FAIL: 4. See per-gate detail for evidence.`
+
+**Gates that did not produce positive evidence** (runner crashed, timed out, or returned no result document):
+  - Gate 9 (Build (Next.js)): Site is not a Next.js static export (no _next/ directory); build gate not applicable.
+  - Gate 10 (Bundle (Next.js)): Site is not a Next.js static export; bundle gate not applicable.
+  - Gate 11 (Content fidelity): No --design-plan supplied; cannot verify the plan's copy reached the page.
+
+**Gates that FAILed** (runner ran, thresholds genuinely missed):
+  - Gate 4 (Performance): Lighthouse below thresholds on 1 route(s).
+
+A truthful Partial beats a fabricated Validated. Re-run after fixing the runner(s) above (Chrome sandbox, HOME, network) to upgrade the tier.
