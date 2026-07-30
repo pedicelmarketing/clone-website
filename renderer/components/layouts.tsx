@@ -27,6 +27,7 @@
 import type { ReactNode } from "react";
 import type { RenderableSection } from "@/lib/design-plan";
 import { FadeIn, SignatureMark } from "@/components/motion-primitives";
+import { BallMark } from "@/components/brand-mark";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -666,7 +667,10 @@ export function TypeHero({ section }: LayoutProps) {
         </div>
         <div className="lg:col-span-3">
           <FadeIn delay={0.1}>
-            <SignatureMark variant="monogram" />
+            <div className="flex h-full items-start justify-start lg:justify-end">
+              <BallMark className="text-primary" initial="R"
+                        size="clamp(88px, 12vw, 190px)" />
+            </div>
           </FadeIn>
         </div>
       </div>
@@ -865,6 +869,15 @@ export function ContactPanel({ section }: LayoutProps) {
                   </li>
                 ))}
               </ul>
+            )}
+            {section.media && (
+              <div className="mt-8 max-w-[360px]">
+                <BrandImage
+                  file={section.media.file}
+                  alt={section.media.alt}
+                  className="aspect-[4/3] rounded-[12px]"
+                />
+              </div>
             )}
             {copy.caption && (
               <p className="mt-6 u-label text-foreground/70">{copy.caption}</p>

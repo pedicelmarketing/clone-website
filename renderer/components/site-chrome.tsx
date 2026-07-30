@@ -19,6 +19,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { BallMark } from "@/components/brand-mark";
 
 export interface NavItem {
   href: string;
@@ -53,15 +54,21 @@ export function PillNav({
         ].join(" ")}
       >
         {wordmark && (
-          <Link
-            href="/"
-            className="font-display text-[15px] tracking-[-0.01em] whitespace-nowrap text-foreground"
-          >
-            {wordmark}
+          <Link href="/" className="flex shrink-0 items-center gap-3">
+            {/* The client's own mark, redrawn from their designer's brand board. */}
+            <BallMark className="h-8 w-8 shrink-0 text-primary" initial="R" />
+            <span className="font-display text-[13px] font-light uppercase tracking-[0.22em] whitespace-nowrap text-foreground">
+              {wordmark}
+            </span>
           </Link>
         )}
         {tagline && !scrolled && (
-          <span className="u-label hidden text-foreground/70 xl:inline">{tagline}</span>
+          // The board flanks its middle line with gold rules; kept at small
+          // scale here so the header reads as the same identity.
+          <span className="hidden items-center gap-3 xl:flex">
+            <span aria-hidden="true" className="h-px w-8 bg-primary/70" />
+            <span className="u-label whitespace-nowrap text-foreground/70">{tagline}</span>
+          </span>
         )}
 
         {nav.length > 0 && (
@@ -142,9 +149,18 @@ export function SiteFooter({
         <div className="grid grid-cols-1 gap-8 border-t border-foreground/15 py-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
             {wordmark && (
-              <p className="font-display text-2xl tracking-[-0.01em] text-foreground lg:text-3xl">
-                {wordmark}
-              </p>
+              <div className="flex items-start gap-5">
+                <BallMark className="h-16 w-16 shrink-0 text-primary" initial="R" />
+                <div>
+                  <p className="font-display text-lg font-light uppercase leading-tight tracking-[0.24em] text-foreground">
+                    {wordmark}
+                  </p>
+                  <span className="mt-3 flex items-center gap-3">
+                    <span aria-hidden="true" className="h-px w-10 bg-primary/70" />
+                    <span className="u-label text-foreground/70">Tennis &amp; Padel</span>
+                  </span>
+                </div>
+              </div>
             )}
           </div>
           {nav.length > 0 && (

@@ -1,0 +1,97 @@
+[
+  {
+    "scores": {
+      "visual_hierarchy": {
+        "score": 8,
+        "justification": "The primary headline is immediately dominant, and key supportive information follows a clear reading path, though some secondary elements could be more distinctly framed.",
+        "observation": "The `home-hero` headline uses two distinct gray shades (white and darker gray) to create an immediate internal hierarchy, making 'Twelve years on court in Marbella' stand out as the primary statement."
+      },
+      "use_of_space": {
+        "score": 7,
+        "justification": "Ample whitespace contributes to a premium feel, but significant unused space on desktop's right side could be subtly leveraged for brand reinforcement or secondary content.",
+        "observation": "On desktop, the `home-hero` content block occupies approximately 60% of the viewport width on the left, leaving a substantial empty area on the right."
+      },
+      "typographic_contrast": {
+        "score": 9,
+        "justification": "The contrast between headline and body text, and within the headline itself, is strong and effective, clearly establishing visual importance.",
+        "observation": "The `home-hero` headline (`h1`) is estimated at ~96px, while the introductory paragraph text is around ~18px, providing a strong ratio of approximately 5:1."
+      },
+      "focal_point": {
+        "score": 9,
+        "justification": "The large, high-contrast headline is an undeniable primary focal point, effectively capturing attention and immediately conveying the core message.",
+        "observation": "The `home-hero` headline 'Twelve years on court in Marbella. Programmes built around the player, not the package.' is the immediate and dominant focal point due to its size, contrast, and central placement."
+      },
+      "brand_fit": {
+        "score": 9,
+        "justification": "The design strongly aligns with the brand's layout thesis, signature element, and voice register, particularly in its precise language and use of the monogram.",
+        "observation": "The `home-hero` sub-headline explicitly details the 'two routes' offering ('programmes in Spain... and Spanish coaches sent to clubs abroad'), directly fulfilling the brand's core layout thesis."
+      },
+      "motion_restraint": {
+        "score": 10,
+        "justification": "Based on the static screenshots, there is no visible motion, which perfectly aligns with the 'precise-professional-warm' and 'unhurried' voice register.",
+        "observation": "No visible animations or interactive transitions are present in the provided static screenshots, indicating a composed and static visual experience."
+      },
+      "looks_templated": {
+        "score": 9,
+        "justification": "The unique color palette, bespoke typography, and specific application of the signature element make the design feel highly tailored to the brand's identity.",
+        "observation": "The distinctive dark green and gold color scheme, combined with the unique two-tone headline and the custom 'R' monogram, creates a bespoke aesthetic not found in generic templates."
+      }
+    },
+    "total": 61,
+    "revisions": [
+      {
+        "section_id": "home-hero",
+        "change": "In the `home-hero` section on desktop, introduce a subtle, large-scale, ghosted graphic element (e.g., a faint outline of a padel court or a pattern derived from the ball monogram) in the right 40% of the screen.",
+        "rationale": "This change leverages the significant empty space on the desktop `home-hero` without introducing prohibited photography, subtly reinforcing brand identity and adding visual depth.",
+        "addressed_observation": "On desktop, the `home-hero` content block occupies approximately 60% of the viewport width on the left, leaving a substantial empty area on the right."
+      },
+      {
+        "section_id": "home-hero",
+        "change": "Elevate the paragraph starting 'Every programme is quoted per client...' by styling it as a distinct pull-quote or 'manifesto' block, using a slightly larger font size and perhaps an indent, clearly separated from any subsequent general body text.",
+        "rationale": "This crucial statement directly supports the core thesis of customization and needs to be visually elevated to ensure it is read as a key differentiator, rather than blending into less prominent content.",
+        "addressed_observation": "The paragraph 'Every programme is quoted per client, because a week for a improving club player and a week for a national-level junior are not the same week.' (below `home-hero` and 'MARBELLA, ANDALUSIA') feels like a continuation of the hero content but lacks specific visual framing or hierarchy to stand out as a key differentiator."
+      },
+      {
+        "section_id": "home-hero",
+        "change": "Relocate the 'MARBELLA, ANDALUSIA' text from its current position at the bottom right of the `home-hero` to a dedicated, subtle, and consistent footer area, or integrate it as a smaller, less prominent contextual label directly adjacent to the 'Start a conversation' button.",
+        "rationale": "Its current placement feels visually detached and inconsistent across desktop and mobile, sometimes appearing prematurely as a footer, and the new placement would improve flow and legibility.",
+        "addressed_observation": "The small text 'MARBELLA, ANDALUSIA' at the bottom right of the desktop hero feels a bit like a footer element placed prematurely, and on mobile, it's vertically squashed between the CTA and the body text."
+      },
+      {
+        "section_id": "home-hero",
+        "change": "Differentiate the 'MARBELLA \u00b7 TENNIS & PADEL' tagline in the `home-hero` section from the main navigation by using a lighter text weight or a slightly smaller font size, or by integrating it as a sub-text directly within the primary headline block rather than a standalone element above it.",
+        "rationale": "The current styling and placement of this tagline make it visually similar to main navigation items, potentially causing confusion and detracting from the immediate impact of the primary headline.",
+        "addressed_observation": "The breadcrumb/tagline 'MARBELLA \u00b7 TENNIS & PADEL' at the top of the `home-hero` section is visually quite similar in size and weight to the header navigation, potentially creating a slight visual conflict or redundancy with the site's main navigation."
+      },
+      {
+        "section_id": "top",
+        "change": "In the `top` navigation bar, apply a subtle visual distinction (e.g., a slightly bolder weight, a small accent underline, or a more prominent highlight on hover) to the 'EXPERIENCES' and 'ELITE COACHES' links.",
+        "rationale": "The brand thesis emphasizes 'a pair of routes from one centre,' and visually distinguishing these navigation items would reinforce this core structural argument, helping guide the two target audiences more directly.",
+        "addressed_observation": "The desktop header navigation items ('HOME', 'EXPERIENCES', 'ELITE COACHES', 'ABOUT', 'CONTACT', 'MENU') are all uppercase and quite closely spaced, giving them a uniform appearance that doesn't immediately highlight 'experiences' or 'elite coaches' as distinct pathways, which is central to the 'two routes' thesis."
+      }
+    ],
+    "rubric_self_check": {
+      "every_score_has_observation": true,
+      "every_revision_names_section_and_change": true,
+      "no_vague_advice_given": true
+    },
+    "generated_at": "2026-07-30T10:51:17.653680Z",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "iteration": 1,
+    "outcome": "ok",
+    "attempts": [
+      {
+        "attempt": 1,
+        "outcome": "ok",
+        "provider": "gemini",
+        "model": "gemini-2.5-flash"
+      }
+    ],
+    "viewports": [
+      "1440x900",
+      "375x812"
+    ],
+    "plan_snapshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-design/design-plan.json"
+  }
+]

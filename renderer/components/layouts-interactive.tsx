@@ -115,6 +115,15 @@ export function ScrollRail({ section }: LayoutProps) {
               </p>
             </div>
           ))}
+          {section.media && (
+            <div className="flex flex-col justify-center md:w-[32vw] md:shrink-0 md:px-10">
+              <BrandImage
+                file={section.media.file}
+                alt={section.media.alt}
+                className="aspect-[4/3] rounded-[12px]"
+              />
+            </div>
+          )}
           <div className="hidden md:block md:w-[8vw] md:shrink-0" aria-hidden="true" />
         </motion.div>
       </div>

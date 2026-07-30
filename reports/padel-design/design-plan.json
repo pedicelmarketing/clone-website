@@ -150,7 +150,13 @@
         "service_facts[1].description",
         "service_facts[2].description"
       ],
-      "rationale": "Three services, one of which is a variation of another. A rail forces them into a sequence the reader moves through rather than a grid they scan and forget, and it holds only as long as there is content to show."
+      "rationale": "Three services, one of which is a variation of another. A rail forces them into a sequence the reader moves through rather than a grid they scan and forget, and it holds only as long as there is content to show.",
+      "media": {
+        "file": "07-9f87b357d9.jpg",
+        "alt": "Outdoor padel courts at a Marbella club seen from the viewing deck",
+        "treatment": "side-by-side",
+        "rationale": "Client-supplied photograph, placed small. Phone-grade imagery only survives at a forgiving size."
+      }
     },
     {
       "id": "programme-index",
@@ -314,7 +320,13 @@
       "source_brief_fields": [
         "service_facts[1].description"
       ],
-      "rationale": "A club director's real question is what nine days looks like. A rail is the one shape that reads as a sequence rather than a menu."
+      "rationale": "A club director's real question is what nine days looks like. A rail is the one shape that reads as a sequence rather than a menu.",
+      "media": {
+        "file": "08-28e5b36a63.jpg",
+        "alt": "Group of players with their coach at the net after a padel session",
+        "treatment": "side-by-side",
+        "rationale": "Client-supplied photograph, placed small. Phone-grade imagery only survives at a forgiving size."
+      }
     },
     {
       "id": "club-deliverables",
@@ -401,7 +413,13 @@
         "voice_and_tone.example_lines",
         "service_facts[0].description"
       ],
-      "rationale": "There are no testimonials, rankings or player results in evidence and none may be invented. Method is the honest substitute for proof, and it is also what a club director is actually buying."
+      "rationale": "There are no testimonials, rankings or player results in evidence and none may be invented. Method is the honest substitute for proof, and it is also what a club director is actually buying.",
+      "media": {
+        "file": "09-89218365ca.jpg",
+        "alt": "Coach on court in front of a club event banner",
+        "treatment": "grid",
+        "rationale": "Client-supplied photograph, placed small. Phone-grade imagery only survives at a forgiving size."
+      }
     },
     {
       "id": "contact-hero",
@@ -431,7 +449,13 @@
         "contact_points.location",
         "limitations[2]"
       ],
-      "rationale": "There is no form endpoint and no phone number in evidence, so the published email address is the whole mechanism. Prompting for level, dates and objectives makes the first message useful instead of 'hi, interested'."
+      "rationale": "There is no form endpoint and no phone number in evidence, so the published email address is the whole mechanism. Prompting for level, dates and objectives makes the first message useful instead of 'hi, interested'.",
+      "media": {
+        "file": "04-578c5ad097.jpg",
+        "alt": "Low-angle view down the centre line of an outdoor tennis court into the sun",
+        "treatment": "side-by-side",
+        "rationale": "Client-supplied photograph, placed small. Phone-grade imagery only survives at a forgiving size."
+      }
     },
     {
       "in_nav": false,

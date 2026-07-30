@@ -1,10 +1,10 @@
 # Validation Report
 
-Generated: 2026-07-29T19:41:20.953962+00:00
+Generated: 2026-07-30T10:50:29.757463+00:00
 Schema: validate_site.py v1.1 (10-gate-v1.1)
 Site directory: `/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site`
 Routes validated: ['/', '/experiences-in-spain/', '/elite-coaches/', '/about/', '/contact/']
-Local server: http://127.0.0.1:53893 (python3 -m http.server, killed on exit)
+Local server: http://127.0.0.1:54953 (python3 -m http.server, killed on exit)
 Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/server.log
 
 ## Declared scope
@@ -23,15 +23,15 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
 | # | Gate | Verdict | Evidence basis | Summary |
 |---|------|---------|----------------|---------|
 | 1 | Boot | **PASS** | HTTP-200 only | All 5 route(s) returned HTTP 200 via local server. |
-| 2 | Dependency | **PASS** | HTTP-200 only | All 187 local reference(s) resolved HTTP 200. 1 external host reference(s) classified as Kept External. |
+| 2 | Dependency | **PASS** | HTTP-200 only | All 191 local reference(s) resolved HTTP 200. 1 external host reference(s) classified as Kept External. |
 | 3 | Accessibility | **PASS** | DOM+assets confirmed | axe-core found 0 serious/critical violations across 5 route(s) (0 total). |
 | 4 | Performance | **PASS** | DOM+assets confirmed | Lighthouse met thresholds on 5 route(s). |
 | 5 | Site-wide audit | **PASS** | DOM+assets confirmed | Per-route Lighthouse table collected for 5 route(s). |
 | 6 | Responsive | **PASS** | Observed visually | No horizontal overflow across 20 cell(s) (5 route(s) × 4 viewport(s)). |
 | 7 | Motion | **PASS** | DOM+assets confirmed | prefers-reduced-motion honored in 5 CSS file(s). |
-| 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 1735 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
+| 8 | Token discipline | **PASS** | DOM+assets confirmed | CSS uses 1790 var(--token) reference(s); 0 raw hex literals outside tokens.css. |
 | 9 | Build (Next.js) | **PASS** | DOM+assets confirmed | `npm run build` exited 0 in renderer. |
-| 10 | Bundle (Next.js) | **PASS** | DOM+assets confirmed | Total gzipped JS is 292.5 KB across 15 file(s), under the 300 KB budget. |
+| 10 | Bundle (Next.js) | **PASS** | DOM+assets confirmed | Total gzipped JS is 293.0 KB across 15 file(s), under the 300 KB budget. |
 | 11 | Content fidelity | **PASS** | DOM+assets confirmed | All 100 copy block(s) reached the DOM across 5 route(s) (>=85% token coverage); no placeholder strings; navigation present. |
 
 **Verdict values:** `PASS` (evidence satisfies the gate), `FAIL` (evidence contradicts), `NOT-EXERCISED` (runner unavailable or did not run). NOT-EXERCISED does not fail the run but is visible above and downgrades the acceptance tier.
@@ -57,38 +57,38 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
   "per_route": {
     "/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:53893/"
+      "final_url": "http://127.0.0.1:54953/"
     },
     "/experiences-in-spain/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:53893/experiences-in-spain/"
+      "final_url": "http://127.0.0.1:54953/experiences-in-spain/"
     },
     "/elite-coaches/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:53893/elite-coaches/"
+      "final_url": "http://127.0.0.1:54953/elite-coaches/"
     },
     "/about/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:53893/about/"
+      "final_url": "http://127.0.0.1:54953/about/"
     },
     "/contact/": {
       "status": 200,
-      "final_url": "http://127.0.0.1:53893/contact/"
+      "final_url": "http://127.0.0.1:54953/contact/"
     }
   },
-  "base_url": "http://127.0.0.1:53893"
+  "base_url": "http://127.0.0.1:54953"
 }
 ```
 
 ### Gate 2 — Dependency  (PASS)
 
 - **Evidence basis:** HTTP-200 only
-- **Summary:** All 187 local reference(s) resolved HTTP 200. 1 external host reference(s) classified as Kept External.
+- **Summary:** All 191 local reference(s) resolved HTTP 200. 1 external host reference(s) classified as Kept External.
 - **Observations (JSON):**
 
 ```json
 {
-  "reference_count": 187,
+  "reference_count": 191,
   "external_count": 1,
   "external_sample": [
     "mailto:info@rikicoach.com?subject=Enquiry%20from%20the%20website"
@@ -109,7 +109,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
   "per_route": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:53893/",
+      "url": "http://127.0.0.1:54953/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -125,7 +125,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
     },
     "/experiences-in-spain/": {
       "route": "/experiences-in-spain/",
-      "url": "http://127.0.0.1:53893/experiences-in-spain/",
+      "url": "http://127.0.0.1:54953/experiences-in-spain/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -141,7 +141,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
     },
     "/elite-coaches/": {
       "route": "/elite-coaches/",
-      "url": "http://127.0.0.1:53893/elite-coaches/",
+      "url": "http://127.0.0.1:54953/elite-coaches/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -157,7 +157,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
     },
     "/about/": {
       "route": "/about/",
-      "url": "http://127.0.0.1:53893/about/",
+      "url": "http://127.0.0.1:54953/about/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -173,7 +173,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
     },
     "/contact/": {
       "route": "/contact/",
-      "url": "http://127.0.0.1:53893/contact/",
+      "url": "http://127.0.0.1:54953/contact/",
       "status": 200,
       "exit": 0,
       "ok": true,
@@ -422,7 +422,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 4303,
+      "scrollHeight": 4618,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -430,14 +430,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/6640918675769220339__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/5264100592582958690__320x720.png"
     },
     {
       "route": "/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 4307,
+      "scrollHeight": 4585,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -445,14 +445,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/5040498304025559307__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1043157161832074809__768x1024.png"
     },
     {
       "route": "/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 4681,
+      "scrollHeight": 5021,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -460,14 +460,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3813015904476179288__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/2263526295795659579__1024x768.png"
     },
     {
       "route": "/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 5205,
+      "scrollHeight": 5670,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -475,14 +475,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3063799256813153356__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/7859312259328369275__1440x900.png"
     },
     {
       "route": "/experiences-in-spain/",
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 3949,
+      "scrollHeight": 4012,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -490,14 +490,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3370026311908484829__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/7247981349556598854__320x720.png"
     },
     {
       "route": "/experiences-in-spain/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 3426,
+      "scrollHeight": 3458,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -505,14 +505,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1803548851921333277__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3992019457245815307__768x1024.png"
     },
     {
       "route": "/experiences-in-spain/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 3660,
+      "scrollHeight": 3672,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -520,14 +520,14 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1366662302252437843__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1093991963825579381__1024x768.png"
     },
     {
       "route": "/experiences-in-spain/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 3838,
+      "scrollHeight": 3842,
       "settle": {
         "animation_count": 1,
         "settle_cap_ms": 3000,
@@ -535,135 +535,135 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
         "pixel_wait_ms": 500
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/4056179987431385190__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/7759569675655407982__1440x900.png"
     },
     {
       "route": "/elite-coaches/",
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 4682,
+      "scrollHeight": 4997,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/6536168109873278643__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/6277739151159662029__320x720.png"
     },
     {
       "route": "/elite-coaches/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 5195,
+      "scrollHeight": 5473,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/5777084010949934792__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1674145232374206934__768x1024.png"
     },
     {
       "route": "/elite-coaches/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 5591,
+      "scrollHeight": 5931,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1840909298568751779__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/8420542396268718765__1024x768.png"
     },
     {
       "route": "/elite-coaches/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 6560,
+      "scrollHeight": 7024,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/2505380257453654568__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/1878070172411881982__1440x900.png"
     },
     {
       "route": "/about/",
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 3976,
+      "scrollHeight": 4196,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/6338731307687259876__320x720.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/965937378531260320__320x720.png"
     },
     {
       "route": "/about/",
       "viewport": "768x1024",
       "scrollWidth": 768,
       "innerWidth": 768,
-      "scrollHeight": 3322,
+      "scrollHeight": 3702,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/2231578875813404960__768x1024.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/5545454933664478764__768x1024.png"
     },
     {
       "route": "/about/",
       "viewport": "1024x768",
       "scrollWidth": 1024,
       "innerWidth": 1024,
-      "scrollHeight": 3363,
+      "scrollHeight": 3796,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/3530139534840826426__1024x768.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/185014824503025304__1024x768.png"
     },
     {
       "route": "/about/",
       "viewport": "1440x900",
       "scrollWidth": 1440,
       "innerWidth": 1440,
-      "scrollHeight": 3356,
+      "scrollHeight": 3780,
       "settle": {
         "animation_count": 0,
         "settle_cap_ms": 3000,
         "pixel_stable": true,
-        "pixel_wait_ms": 1250
+        "pixel_wait_ms": 1000
       },
       "overflow": false,
-      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/4952736800488508144__1440x900.png"
+      "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-validation/responsive_shots/6268427518340964351__1440x900.png"
     },
     {
       "route": "/contact/",
       "viewport": "320x720",
       "scrollWidth": 320,
       "innerWidth": 320,
-      "scrollHeight": 1852,
-      "settl
+      "scrollHeight": 2127,
+      "settle"
 ```
 
 ### Gate 7 — Motion  (PASS)
@@ -675,18 +675,18 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
 ```json
 {
   "css_files_seen": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css"
   ],
   "reduced_in": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css"
   ]
 }
 ```
@@ -694,7 +694,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
 ### Gate 8 — Token discipline  (PASS)
 
 - **Evidence basis:** DOM+assets confirmed
-- **Summary:** CSS uses 1735 var(--token) reference(s); 0 raw hex literals outside tokens.css.
+- **Summary:** CSS uses 1790 var(--token) reference(s); 0 raw hex literals outside tokens.css.
 - **Notes:**
   - Gate 8 re-scoped from workflow-design.md §4's 'source-paired 10x' — see report.
   - tokens.css is the explicit source of truth; raw hex inside it is allowed.
@@ -703,13 +703,13 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
 ```json
 {
   "css_files": [
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css",
-    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/97feb054ea5f9372.css"
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css",
+    "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static/css/da14dd55933c481a.css"
   ],
-  "var_uses": 1735,
+  "var_uses": 1790,
   "raw_hex": []
 }
 ```
@@ -734,7 +734,7 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
 ### Gate 10 — Bundle (Next.js)  (PASS)
 
 - **Evidence basis:** DOM+assets confirmed
-- **Summary:** Total gzipped JS is 292.5 KB across 15 file(s), under the 300 KB budget.
+- **Summary:** Total gzipped JS is 293.0 KB across 15 file(s), under the 300 KB budget.
 - **Observations (JSON):**
 
 ```json
@@ -742,8 +742,8 @@ Server log: /home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/pad
   "applicable": true,
   "static_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/padel-renderer-site/_next/static",
   "file_count": 15,
-  "total_gzipped_bytes": 299566,
-  "total_gzipped_kb": 292.5,
+  "total_gzipped_bytes": 300001,
+  "total_gzipped_kb": 293.0,
   "budget_kb": 300,
   "top_files": [
     {
