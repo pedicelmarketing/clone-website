@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
   // Next output can go through the same 8 gates and the same vision critique
   // as the static composer. It is also the deployable artifact.
   output: "export",
+  // Emit `out/<slug>/index.html` rather than `out/<slug>.html`. The gates serve
+  // the export with a plain static file server, which has no extensionless
+  // fallback — without this, every non-home route 404s during validation and
+  // route_to_file() cannot resolve the file for the CSS-walking gates either.
+  trailingSlash: true,
   images: { unoptimized: true },
 };
 

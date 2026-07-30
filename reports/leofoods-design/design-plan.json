@@ -1,298 +1,409 @@
 {
   "schema_version": "1.0",
   "project_slug": "leo-foods-redesign",
-  "generated_at": "2026-07-28T00:10:40.822123Z",
+  "generated_at": "2026-07-28T00:45:56.005406Z",
   "model": "MiniMax-M3",
   "layout_thesis": {
-    "statement": "The redesign is a single long pour \u2014 a vertical scroll that reads like one continuous bartender narrative, anchored by a giant typographic wordmark in chicken-coop yellow on cream, with bottle photography and 2:1 ratio cues woven through the flow rather than stacked into a product-grid product.",
-    "audience": "American home drinkers, 28\u201355, who buy spirits and want a good cocktail without buying eight bottles of stuff. They shop online, read labels, and care about real ingredients but don't want a fine-dining lecture.",
-    "job_to_be_done": "Help a visitor decide which mixer to try tonight \u2014 and feel good about the pour \u2014 without bouncing through a generic three-column feature wall.",
-    "why_this_not_generic": "Generic cocktail sites stack a hero, a three-column 'why us' grid, a product wall, and a footer of awards. Barcoop Bevy is warmer, more bartender-confessional, and structurally more like a magazine spread than a SaaS landing page. The design leads with the founders' names and a recipe promise, not a value-prop sentence, and treats the seven mixers as seven moods, not seven SKUs."
+    "statement": "A coop-shelf editorial: every section reads like a slat on a tasting counter under warm yellow light, with the bottle lineup treated as the shelf, the founders as the chalkboard above, and recipes as small hand-written cards pinned between. The page earns the word 'real' by showing it \u2014 ingredient flat-lays, bottle drop-shadows, finished drinks \u2014 rather than centering a slogan over a stock sunset.",
+    "audience": "Home drinkers shopping DTC, mixed with the bartender curious about a small Charleston label; secondarily the trade buyer checking the line at a glance.",
+    "job_to_be_done": "Convince a shopper in under 30 seconds that these mixers are made by real bartenders with real ingredients, and let them pick a bottle or pick a recipe without a tour of pages.",
+    "why_this_not_generic": "Most cocktail-mixer brand sites open with a saturated bottle dead-center on a sunset gradient, then a 3-up feature grid (real / natural / easy). We refuse both. The shelf runs the page vertically, the yellow is the page color (not a hero band), and the founder chalkboard replaces the feature grid. Type pairing is Fraunces over Inter (not Inter-everywhere), with the wordmark's tail letters rendered in a contrast weight as the recurring signature."
   },
   "sections": [
     {
-      "id": "wordmark-hero",
-      "order": 1,
+      "id": "masthead",
       "nav_label": null,
       "in_nav": false,
-      "purpose": "Open on the brand's own typographic mark \u2014 a giant 'Barcoop Bevy' set in chicken-coop yellow against cream \u2014 instead of a stock-photo beach cocktail.",
-      "component": "full-bleed type-only hero with one-line subhead and a single recipe teaser",
-      "emphasis": "hero",
+      "order": 0,
+      "purpose": "Set the wordmark and the page temperature (yellow field, Charleston dateline). It is not a hero with a CTA \u2014 it is a tasting-room header that shows where you are before you scroll.",
+      "component": "Wordmark + dateline strip across a #FFC517 band, with a thin #CDBD81 rule under it; wordmark spelled out 'Barcoop Bevy' with 'vy' set in the contrasting tail weight as the recurring signature.",
+      "emphasis": "minor",
       "source_brief_fields": [
         "palette_from_logo.primary",
+        "palette_from_logo.secondary",
         "palette_from_logo.neutrals",
-        "typography_recommendation.display_family",
-        "voice_and_tone.example_lines",
-        "voice_and_tone.notes"
-      ],
-      "rationale": "The brief is explicit that the logo IS the typography, not an asset. Lead with type to honor that and to reject the agency-SaaS hero pattern."
-    },
-    {
-      "id": "manifesto-pour",
-      "order": 2,
-      "nav_label": "the bev",
-      "in_nav": true,
-      "purpose": "A two-line manifesto in the brand's lowercase voice, then a 'just add spirit' command line \u2014 no icons, no feature grid.",
-      "component": "asymmetric two-column copy block, oversized display type left, supporting paragraph right",
-      "emphasis": "primary",
-      "source_brief_fields": [
         "voice_and_tone.favorite_words",
-        "voice_and_tone.example_lines",
-        "voice_and_tone.notes",
-        "voice_and_tone.banned_words"
+        "typography_recommendation.display_family"
       ],
-      "rationale": "Banned words rule out the usual value-prop sentence. The brand's own lines ('Just add spirit', 'Made by bartenders. Made in Charleston, South Carolina.') are stronger than anything a copywriter would generate \u2014 they earn the first long copy block."
+      "rationale": "The live site's wordmark IS the logo. We honor that by letting the wordmark carry the masthead instead of inventing a separate glyph. The chicken-coop yellow is the page background, not an accent band.",
+      "media": null
     },
     {
-      "id": "seven-moods-bottle-rail",
-      "order": 3,
-      "nav_label": "mixers",
+      "id": "shelf-lineup",
+      "nav_label": "the lineup",
       "in_nav": true,
-      "purpose": "Show all seven mixers as a horizontal bottle-rail rather than a 3-up product grid. Each bottle carries its mood, not its SKU code.",
-      "component": "horizontally scrolling bottle rail with mood labels under each (Bold, Bright, Smoky, Cool, Sharp, Juicy, Sunny)",
+      "order": 1,
+      "purpose": "Show all seven 1L bottles together on one shelf so the shopper can read the line at a glance \u2014 the way a bartender sees a back-bar. Each bottle is clickable, no copy walls, no carousel.",
+      "component": "Vertical shelf: seven PNG bottle drop-shadows in a single horizontal row on a #FFF7C5 counter. Bottle name and single-line descriptor sit on a chalkboard card laid flat under each bottle (no icon, no price badge).",
       "emphasis": "primary",
       "source_brief_fields": [
         "service_facts",
         "real_photo_inventory"
       ],
-      "rationale": "The real_photo_inventory contains all seven bottle-shadow PNGs already drop-shadowed and brand-owned. A rail honors them as objects on a bar shelf, not as a faceted product wall."
+      "rationale": "Bottles are the brand's most powerful owned asset. Showing all seven together (instead of a single feature bottle) is the structural alternative to the 'single hero bottle' pattern. The shelf itself becomes the navigation.",
+      "media": {
+        "file": "05-98b211f22d.png",
+        "alt": "Classic Margarita 1L bottle on its drop-shadow, center of a seven-bottle lineup",
+        "treatment": "inset",
+        "rationale": "Use the Classic Margarita as the visual anchor of the row because it is the brand's flagship; remaining bottles sit to either side at the same scale."
+      }
     },
     {
-      "id": "founder-confessional",
-      "order": 4,
-      "nav_label": "who made it",
+      "id": "chalkboard-story",
+      "nav_label": "made in charleston",
       "in_nav": true,
-      "purpose": "Use the verified founders' portrait and a first-person paragraph so the 'made by bartenders' claim is provable, not decorative.",
-      "component": "portrait-left, narrative-right with a small signature set in the display face",
+      "order": 2,
+      "purpose": "Replace the founders' bio with a chalkboard strip: who made it, where, and the single hardest sentence about ingredients. This is the trust section, written like a chalkboard above a bar pass.",
+      "component": "Two-column: left half is a portrait of the founders (square crop, no overlay), right half is Fraunces-set copy on a chalkboard black (#3D3D3D) panel with a single thin yellow rule. No 'meet the team' icon, no timeline.",
       "emphasis": "primary",
       "source_brief_fields": [
-        "real_photo_inventory",
+        "voice_and_tone",
         "voice_and_tone.example_lines",
-        "voice_and_tone.favorite_words"
+        "service_facts",
+        "real_photo_inventory"
       ],
-      "rationale": "Brand_donts forbids invented testimonials and stock photography. The founders are real and named in the alt text \u2014 use that."
+      "rationale": "Founders photo is brand-owned and alt-tagged with their names. Putting their faces next to the chalkboard statement answers 'made by real people' before the shopper has to ask.",
+      "media": {
+        "file": "02-8f25a4d944.jpg",
+        "alt": "Joe and MariElena Raya, founders of Barcoop Bevy",
+        "treatment": "portrait",
+        "rationale": "Square crop suits a side-by-side with the chalkboard panel and avoids any tilt-shift or gallery treatment."
+      }
     },
     {
-      "id": "ratio-ritual",
-      "order": 5,
-      "nav_label": "how to pour",
+      "id": "real-ingredients-spread",
+      "nav_label": "real ingredients",
       "in_nav": true,
-      "purpose": "Teach the 2:1 (or 4:1 for Bloody Mary) ritual with a giant typographic ratio as art, not a diagram.",
-      "component": "oversized type composition: '2 parts mixer : 1 part spirit' with a bottle-to-glass suggestion drawn in type",
+      "order": 3,
+      "purpose": "Show the actual ingredients in one flat-lay so the word 'real' stops being a claim and becomes a photo. Below it, the four ingredient rules the brand repeats (no HFCS, no preservatives, no artificial anything) sit as four rule-lines, not as four icon cards.",
+      "component": "Full-bleed ingredient flat-lay on the #FBF7E9 cream body. Under it, four typographic rules stacked vertically with thin #CDBD81 dividers \u2014 copy only, no icons, no rounded badges.",
+      "emphasis": "primary",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.example_lines",
+        "real_photo_inventory"
+      ],
+      "rationale": "This is the single section where the banned 'artisanal / craft' language gets replaced by plain English. Flat-lay is the brand's own shot, not stock.",
+      "media": {
+        "file": "03-777017bd13.jpg",
+        "alt": "Flat-lay of real cocktail ingredients \u2014 citrus, cucumbers, strawberries, herbs, chilies, sea salt",
+        "treatment": "full-bleed",
+        "rationale": "Full-bleed gives the flat-lay room to be read like a market photo; this is the single most 'real' image the brand owns."
+      }
+    },
+    {
+      "id": "the-ratio",
+      "nav_label": "just add spirit",
+      "in_nav": true,
+      "order": 4,
+      "purpose": "Teach the 2:1 mixing rule (and the 4:1 Bloody Mary rule) without writing a tutorial page. This is the brand's most repeated sentence across all product pages; it deserves a section of its own.",
+      "component": "Oversized Fraunces numerals in the page yellow \u2014 '2 : 1' rendered as a typographic poster, with the Bloody Mary '4 : 1' set smaller beneath. No bottle, no illustration.",
       "emphasis": "secondary",
       "source_brief_fields": [
         "service_facts",
-        "voice_and_tone.example_lines"
+        "voice_and_tone.example_lines",
+        "brand_donts"
       ],
-      "rationale": "The 2:1 standard is on every product page; brand_donts flags breaking it. Present it as a brand law, not instructions."
+      "rationale": "Branding a numeric ratio in type is the structural alternative to the 'three easy steps' infographic. This is one rule the brand owns.",
+      "media": null
     },
     {
-      "id": "recipe-spread",
-      "order": 6,
+      "id": "flagship-bottle",
+      "nav_label": null,
+      "in_nav": false,
+      "order": 5,
+      "purpose": "Feature the award-winning Bloody Mary alone \u2014 but on a flat counter (a regular surface, not a pedestal), so it reads as one bottle you can reach for, not a luxury product.",
+      "component": "Single oversized bottle render left, copy right. Bottle stands on the same #FFF7C5 cream counter the lineup sits on. Press hit (SOFI Gold 2024) sits as a small caption line below the product name.",
+      "emphasis": "secondary",
+      "source_brief_fields": [
+        "real_photo_inventory",
+        "limitations"
+      ],
+      "rationale": "Awards are press hits, not testimonials \u2014 they earn a caption, not a banner. One bottle + one paragraph is the right scale for this brand.",
+      "media": {
+        "file": "07-b642f34f8f.png",
+        "alt": "Bloody Mary 1L bottle on its drop-shadow, the brand's flagship award-winner",
+        "treatment": "inset",
+        "rationale": "Inset leaves room for the award caption and ingredient origin note without crowding the bottle."
+      }
+    },
+    {
+      "id": "recipe-cards",
       "nav_label": "recipes",
       "in_nav": true,
-      "purpose": "A magazine-style recipe spread with finished-drink photography from the inventory, tagged by mixer and spirit.",
-      "component": "two-page editorial layout: full-bleed drink photo on left, recipe body on right, repeating three times down the scroll",
+      "order": 6,
+      "purpose": "Six recipe cards pinned between the bottle section and the press section, written in the brand's short lines ('light and bright with a hint of vacation in your glass'). Mix of cocktail and mocktail to surface the NA story without naming it.",
+      "component": "A 2x3 asymmetric grid of square drink photos. Each card has the drink name in Fraunces, the mixer + spirit in the muted brown #765F2C, no body copy, no badges.",
       "emphasis": "primary",
       "source_brief_fields": [
         "service_facts",
+        "voice_and_tone.example_lines",
         "real_photo_inventory"
       ],
-      "rationale": "Recipes are the brand's primary content engine per the brief. Layout them as editorial, not a card grid."
+      "rationale": "Six cards (four cocktails + two NA) is enough to show range without becoming a recipe library. Cards beat a carousel because every drink is photographable.",
+      "media": {
+        "file": "15-5293adffc4.jpg",
+        "alt": "Skinny Margarita finished drink in a rocks glass with salted rim",
+        "treatment": "grid",
+        "rationale": "Skinny Margarita anchors the grid because it bridges cocktail and NA (also used as Lite Limeade mocktail elsewhere) and gives the strongest yellow tone against the cream page."
+      }
     },
     {
-      "id": "real-ingredient-claim",
+      "id": "mocktail-room",
+      "nav_label": null,
+      "in_nav": false,
       "order": 7,
-      "nav_label": "what's inside",
-      "in_nav": true,
-      "purpose": "Make the 'REAL Ingredients Only' line the typographic climax of the page \u2014 oversize, single word in all-caps as the brief specifies \u2014 over a cream-on-yellow ingredient flat-lay.",
-      "component": "full-bleed image with one-word overlay treatment",
-      "emphasis": "primary",
+      "purpose": "Surface the NA / mocktail story in two photo cards so the brand doesn't have to invent a whole NA line \u2014 the mixers themselves do the work, paired with soda water or just ice.",
+      "component": "Two square NA drink photos in a tight 1x2 strip on the cream body, with one typographic line per card reading 'just ice' or 'just soda water'.",
+      "emphasis": "secondary",
       "source_brief_fields": [
-        "voice_and_tone.favorite_words",
-        "voice_and_tone.notes",
-        "real_photo_inventory",
-        "palette_from_logo.primary"
+        "service_facts",
+        "voice_and_tone.example_lines",
+        "real_photo_inventory"
       ],
-      "rationale": "voice_and_tone.notes explicitly allow ALL-CAPS on the word 'REAL' as a typographic accent. This is the moment to use it."
+      "rationale": "NA is half the use-case across the recipes; giving it a section is the alternative to burying it under 'mix with any spirit' copy.",
+      "media": {
+        "file": "16-9c8c68d806.jpg",
+        "alt": "Virgin Pi\u00f1a Colada mocktail with toasted coconut garnish",
+        "treatment": "side-by-side",
+        "rationale": "Pi\u00f1a Colada in NA form is the brand's most 'vacation in your glass' image; pairing with the limeade gives one sweet, one tart."
+      }
     },
     {
       "id": "press-strip",
+      "nav_label": null,
+      "in_nav": false,
       "order": 8,
-      "nav_label": "press",
-      "in_nav": true,
-      "purpose": "A horizontal press log strip: NY Times Wirecutter, Boston Globe, Authority Magazine, Specialty Food Association, Golf.com, StyleBlueprint. No invented customer quotes.",
-      "component": "single-row marquee of publication wordmarks in the muted brown neutral",
-      "emphasis": "secondary",
+      "purpose": "Show editor coverage as a single horizontal log line strip \u2014 Wirecutter, Boston Globe, Authority Magazine, SFA \u2014 not as press logos on cards.",
+      "component": "Single typographic strip on #FFF7C5 cream with four publication names set in Fraunces small caps separated by thin #CDBD81 pipes. No logos, no card backgrounds.",
+      "emphasis": "minor",
       "source_brief_fields": [
         "limitations"
       ],
-      "rationale": "limitations forbids inventing testimonials; the press list is real and was extracted from /press."
+      "rationale": "Press coverage is verified (NY Times Wirecutter, Boston Globe, Authority Magazine, SFA), but there are no customer testimonials. A log line respects the honesty rule and keeps the visual quiet.",
+      "media": null
     },
     {
-      "id": "shop-entry",
-      "order": 9,
+      "id": "shop-cta",
       "nav_label": "shop",
       "in_nav": true,
-      "purpose": "A single teal-green CTA panel against the warm yellow field \u2014 the only place the cool accent appears at scale.",
-      "component": "compact shop entry with bottle row and one CTA: 'pour one tonight'",
+      "order": 9,
+      "purpose": "Send the shopper to the cart with the lineup repeated at small scale so they can pick a bottle without scrolling back up. No 'subscribe and save' sidebar.",
+      "component": "A condensed repeat of the lineup strip rendered as clickable thumbnails (no full bottles) with the headline 'pick your bottle' and a single teal #259E7E 'shop the lineup' affordance.",
       "emphasis": "secondary",
       "source_brief_fields": [
         "service_facts",
         "palette_from_logo.accent"
       ],
-      "rationale": "The teal-green #259E7E is the only cool color on the site. The brief calls for it used 'sparingly for links and CTAs against the warm yellow field' \u2014 concentrating it here preserves that rule."
+      "rationale": "Shop CTA on a single bottle would default to 'single hero + buy now' \u2014 repeating the lineup makes the decision structural, not promotional.",
+      "media": {
+        "file": "05-98b211f22d.png",
+        "alt": "Classic Margarita 1L bottle thumbnail repeated with the rest of the lineup",
+        "treatment": "grid",
+        "rationale": "Re-use the flagship bottle at thumbnail scale so the repeat-strip reads as the same lineup rather than a new image set."
+      }
     },
     {
-      "id": "footer-colophon",
-      "order": 10,
+      "id": "footer",
       "nav_label": null,
       "in_nav": false,
-      "purpose": "Footer with the address (Charleston, SC), sister-brand pointer, distributor list for trade, and the press contact.",
-      "component": "compact footer, no utility nav repetition",
+      "order": 10,
+      "purpose": "Quietly close with the four operator-facing touch points (wholesale, press, contact, FAQ at /about#faq) and the Charleston dateline. No newsletter signup, no stock-location widget.",
+      "component": "Single-row footer in #3D3D3D on the yellow field. Small Fraunces for the wordmark repeat, Inter for the four links separated by thin rules.",
       "emphasis": "minor",
       "source_brief_fields": [
         "service_facts",
         "limitations"
       ],
-      "rationale": "Trade routes exist but aren't voice-defining per the brief. List them once, in muted brown, no B2B framing."
+      "rationale": "FAQ lives at /about#faq, not /faq (the /faq route is a 404 \u2014 flagged in limitations). Footer keeps links truthful.",
+      "media": null
     }
   ],
   "signature_element": {
-    "name": "The Ratio Wall",
-    "description": "A single typographic composition that takes the phrase '2 parts mixer : 1 part spirit' and renders it at near-full-viewport width in the display serif, set against the chicken-coop yellow field, with the colon enlarged to the height of the numerals \u2014 turning the brand's mixing law into wall art rather than an instruction panel.",
-    "why_it_fits_brand": "Barcoop Bevy's whole product story is the pour \u2014 the 2:1 is on every product page and the brief flags it as a brand standard. Treating the ratio as a typographic monument both teaches the use and gives the page a singular visual moment that no other cocktail brand owns. It also sidesteps the forbidden three-icon-feature-grid pattern.",
-    "implementation_note": "Set in the Fraunces (OFL) substitute for Recoleta, weight ~600, optical-size axis set high so the strokes stay chunky at 18vw. Color: warm brown #765F2C on the brand yellow #FFC517. Underneath, a quiet repeating tag line in the body sans: 'or 4 parts to 1 for Bloody Mary \u2014 same rule, more punch.' No icon, no illustration."
+    "name": "The Coop Tail",
+    "description": "The last two letters of the wordmark ('vy') are set in a high-contrast Fraunces weight against the page's chicken-coop yellow \u2014 a single ligature that reads as a chicken's tail feather at full size. The same 'vy' is echoed as the URL slug, the social handle suffix, and as a repeated corner mark on the recipe cards.",
+    "why_it_fits_brand": "The wordmark IS the logo on the live site (no SVG/PNG asset exists). Honoring that by treating its last two letters as the brand's repeating motif \u2014 instead of inventing a chicken icon we cannot license \u2014 keeps the asset surface honest and gives the page a recognizable micro-detail without becoming an iconographic system.",
+    "implementation_note": "Render the wordmark with 'Barcoop Be' in Fraunces 500 / yellow field / dark text, then 'vy' in Fraunces 800 italic at ~1.4x size with the final descender clipped into the rule below. On cards, draw the same clipped descender as a 12px corner mark in #765F2C. No SVG chicken, no clip-art."
   },
   "motion_vocabulary": {
     "register": "restrained",
     "effects": [
-      "fade-in on scroll for each section, 240ms ease-out, 12px rise",
-      "bottle rail horizontal scroll-snap on touch, free scroll on desktop",
-      "oversized display headlines hold a single subtle 6px vertical drift on idle to feel like a printed page breathing",
-      "CTA teal panel: 180ms background-color shift on hover from #259E7E to #1F8768, no scale transform",
-      "recipe spread photo: slow 1.05x scale on scroll-into-view, 800ms ease"
+      "wordmark 'vy' tail nudges 4px left on hover, no other motion on the masthead",
+      "shelf lineup bottles lift 8px on individual hover with a soft 250ms ease-out, no parallax, no shimmer",
+      "recipe cards fade-stagger 60ms on first viewport entry, no bouncing, no zoom",
+      "numeric ratio '2 : 1' does a single type-set swap to '4 : 1' on scroll into the Bloody Mary section",
+      "no scroll-jacking, no marquee, no video background"
     ],
-    "rationale": "The brand voice is plain and low-key; motion should match. No parallax theatrics, no bouncy easings, no gradient animations. The page reads like a magazine and moves like one."
+    "rationale": "The brand's voice is plain and low-jargon ('just add spirit', 'made by real people'); motion must match. Anything cinematic would over-perform the copy and slip toward the 'luxury / artisanal' feel the brand explicitly bans."
   },
   "copy_blocks": [
     {
-      "section_id": "wordmark-hero",
+      "section_id": "masthead",
       "role": "headline",
       "text": "Barcoop Bevy",
       "source_brief_fields": [
         "palette_from_logo.primary",
-        "voice_and_tone.notes"
+        "typography_recommendation.display_family"
       ]
     },
     {
-      "section_id": "wordmark-hero",
+      "section_id": "masthead",
       "role": "subhead",
-      "text": "all-natural cocktail mixers, made by bartenders in Charleston, South Carolina.",
+      "text": "Charleston, South Carolina \u2014 just add spirit.",
       "source_brief_fields": [
-        "voice_and_tone.example_lines",
-        "voice_and_tone.notes"
-      ]
-    },
-    {
-      "section_id": "manifesto-pour",
-      "role": "headline",
-      "text": "real ingredients, real people, real easy.",
-      "source_brief_fields": [
-        "voice_and_tone.favorite_words",
-        "voice_and_tone.notes"
-      ]
-    },
-    {
-      "section_id": "manifesto-pour",
-      "role": "body",
-      "text": "No artificial ingredients, no preservatives, no high fructose corn sugar. Just real ingredients made by real people in Charleston. Just add spirit.",
-      "source_brief_fields": [
-        "voice_and_tone.example_lines",
-        "voice_and_tone.favorite_words"
-      ]
-    },
-    {
-      "section_id": "seven-moods-bottle-rail",
-      "role": "caption",
-      "text": "Bold \u2014 Bright \u2014 Smoky \u2014 Cool \u2014 Sharp \u2014 Juicy \u2014 Sunny",
-      "source_brief_fields": [
-        "service_facts"
-      ]
-    },
-    {
-      "section_id": "founder-confessional",
-      "role": "headline",
-      "text": "made by bartenders.",
-      "source_brief_fields": [
-        "voice_and_tone.favorite_words",
         "voice_and_tone.example_lines"
       ]
     },
     {
-      "section_id": "founder-confessional",
-      "role": "body",
-      "text": "We're Joe and MariElena Raya. We built these mixers behind our own bar because the bottles on the shelf weren't good enough for our regulars. Now they're yours too.",
+      "section_id": "shelf-lineup",
+      "role": "headline",
+      "text": "Seven bottles. One shelf.",
       "source_brief_fields": [
-        "real_photo_inventory",
+        "service_facts",
         "voice_and_tone.favorite_words"
       ]
     },
     {
-      "section_id": "ratio-ritual",
-      "role": "headline",
-      "text": "2 parts mixer : 1 part spirit",
+      "section_id": "shelf-lineup",
+      "role": "caption",
+      "text": "1L bottles, all-natural, made in Charleston.",
       "source_brief_fields": [
         "service_facts",
         "voice_and_tone.example_lines"
       ]
     },
     {
-      "section_id": "ratio-ritual",
-      "role": "caption",
-      "text": "or 4 parts to 1 for Bloody Mary \u2014 same rule, more punch.",
+      "section_id": "chalkboard-story",
+      "role": "headline",
+      "text": "Made by bartenders. Made in Charleston, South Carolina.",
       "source_brief_fields": [
-        "service_facts"
+        "voice_and_tone.example_lines"
       ]
     },
     {
-      "section_id": "real-ingredient-claim",
+      "section_id": "chalkboard-story",
+      "role": "body",
+      "text": "No artificial ingredients, preservatives or high fructose corn sugar. Only real ingredients made by real people in Charleston.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "real-ingredients-spread",
       "role": "headline",
-      "text": "REAL",
+      "text": "REAL Ingredients Only.",
       "source_brief_fields": [
         "voice_and_tone.notes",
         "voice_and_tone.favorite_words"
       ]
     },
     {
-      "section_id": "real-ingredient-claim",
-      "role": "subhead",
-      "text": "ingredients only.",
+      "section_id": "real-ingredients-spread",
+      "role": "body",
+      "text": "Real citrus. Real cucumber. Real strawberry. Real ginger. Real cane sugar. Real sea salt. Real peppers. Real herbs. Just real.",
       "source_brief_fields": [
-        "voice_and_tone.favorite_words"
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.example_lines"
       ]
     },
     {
-      "section_id": "press-strip",
+      "section_id": "the-ratio",
+      "role": "headline",
+      "text": "2 : 1",
+      "source_brief_fields": [
+        "service_facts",
+        "brand_donts"
+      ]
+    },
+    {
+      "section_id": "the-ratio",
+      "role": "body",
+      "text": "Two parts mixer. One part spirit. (Bloody Mary: four parts mixer, one part spirit.) Just add spirit.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "flagship-bottle",
+      "role": "headline",
+      "text": "Bloody Mary \u2014 Smoked Sea Salt + Chiles.",
+      "source_brief_fields": [
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "flagship-bottle",
       "role": "caption",
-      "text": "NY Times Wirecutter \u00b7 Boston Globe \u00b7 Authority Magazine \u00b7 Specialty Food Association \u00b7 Golf.com \u00b7 StyleBlueprint",
+      "text": "SOFI Gold 2024. Silver SIP 2023. SFA Product of the Year \u2014 Beverage 2024.",
       "source_brief_fields": [
         "limitations"
       ]
     },
     {
-      "section_id": "shop-entry",
-      "role": "cta",
-      "text": "pour one tonight \u2014 $12 a bottle.",
+      "section_id": "recipe-cards",
+      "role": "headline",
+      "text": "Just pour. Just stir. Just enjoy.",
       "source_brief_fields": [
-        "service_facts",
+        "voice_and_tone.example_lines",
         "voice_and_tone.favorite_words"
       ]
     },
     {
-      "section_id": "footer-colophon",
+      "section_id": "recipe-cards",
+      "role": "caption",
+      "text": "A perfect mix of bold and juicy flavors.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "mocktail-room",
+      "role": "headline",
+      "text": "Skip the spirit. Keep the bev.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words",
+        "voice_and_tone.example_lines"
+      ]
+    },
+    {
+      "section_id": "mocktail-room",
       "role": "body",
-      "text": "Made in Charleston, SC. Wholesale: drink@barcoopbevy.com. Press: Ashley Mills, ashley@goldenword.co.",
+      "text": "Soda water or just ice. Same bottle. Same real ingredients.",
+      "source_brief_fields": [
+        "voice_and_tone.example_lines",
+        "service_facts"
+      ]
+    },
+    {
+      "section_id": "press-strip",
+      "role": "caption",
+      "text": "As featured in NY Times Wirecutter, Boston Globe, Authority Magazine, Specialty Food Association.",
+      "source_brief_fields": [
+        "limitations"
+      ]
+    },
+    {
+      "section_id": "shop-cta",
+      "role": "headline",
+      "text": "Pick your bottle.",
+      "source_brief_fields": [
+        "voice_and_tone.favorite_words"
+      ]
+    },
+    {
+      "section_id": "shop-cta",
+      "role": "cta",
+      "text": "Shop the lineup \u2014 $12 per 1L bottle.",
+      "source_brief_fields": [
+        "service_facts",
+        "palette_from_logo.accent"
+      ]
+    },
+    {
+      "section_id": "footer",
+      "role": "caption",
+      "text": "Wholesale \u00b7 Press \u00b7 Contact \u00b7 FAQ \u2014 made in Charleston.",
       "source_brief_fields": [
         "service_facts",
         "limitations"
@@ -302,103 +413,103 @@
   "skipped_sections": [
     {
       "id": "testimonials",
-      "reason": "The live site has no on-page customer quotes; the press list is editor coverage, not testimonials. brand_donts and the limitations field explicitly forbid inventing testimonials.",
+      "reason": "There are no customer testimonials on the live site; press coverage exists but is editor-led, not quote-led. Brand donts forbid inventing testimonials.",
       "missing_brief_fields": [
-        "testimonials"
-      ]
-    },
-    {
-      "id": "instagram-grid",
-      "reason": "The social_highlights.instagram entry is a placeholder; no posts were fetched and captions are null. Cannot lay out a grid without verified image_url values.",
-      "missing_brief_fields": [
+        "testimonials",
         "social_highlights.instagram"
       ]
     },
     {
-      "id": "linkedin-section",
-      "reason": "The site has no LinkedIn link and the platform was not exercised in this run.",
+      "id": "newsletter-signup",
+      "reason": "The brand's voice is conversational and B2C; no email capture exists on the live site and adding one would change the commercial surface.",
+      "missing_brief_fields": []
+    },
+    {
+      "id": "store-locator",
+      "reason": "No retail locator component exists on the live site; off-premise distribution is documented on /wholesale but is operator-facing, not consumer-facing.",
       "missing_brief_fields": [
-        "social_highlights.linkedin"
+        "service_facts.wholesale price_range"
       ]
     },
     {
-      "id": "faq-page",
-      "reason": "The /faq route on the live site returns a 404; FAQ content lives at /about#faq. Building a standalone /faq section would link to a broken route.",
+      "id": "b2b-marketing",
+      "reason": "The operator's design_brief described a Marbella, Spain wholesaler; the live site is a Charleston DTC mixer brand with a B2B tier that has no public pricing. The B2B surface cannot be designed without resolving the brief mismatch with the operator first.",
       "missing_brief_fields": [
-        "limitations"
+        "service_facts.wholesale.price_range"
       ]
     },
     {
-      "id": "marbella-eu-stories",
-      "reason": "The operator's design_brief referenced Marbella, Spain and EU presence. The actual site makes no reference to Spain, Marbella, the EU, or any non-US geography. Including EU stories would invent facts.",
+      "id": "instagram-grid",
+      "reason": "Instagram handle (@barcoopbevy) is verified on the site but no posts were fetched; image_url is null and captions are null per the honesty rule.",
       "missing_brief_fields": [
-        "limitations"
-      ]
-    },
-    {
-      "id": "wholesale-pricing-table",
-      "reason": "Wholesale price ranges are not listed on /wholesale; case-pack and distributor pricing are not publicly listed.",
-      "missing_brief_fields": [
-        "service_facts"
-      ]
-    },
-    {
-      "id": "press-kit-deep-dive",
-      "reason": "The press kit PDF returned content_type application/pdf which Cloak cannot parse. Awards and editor coverage are recorded from /press but the PDF body is unknown.",
-      "missing_brief_fields": [
-        "limitations"
+        "social_highlights.instagram.captions",
+        "social_highlights.instagram.image_url"
       ]
     }
   ],
   "decisions": [
     {
-      "decision": "Lead the page with the wordmark as a typographic composition, not a hero image.",
+      "decision": "Treat the wordmark 'vy' tail as the signature element rather than introduce a separate chicken or coop icon.",
       "alternatives_considered": [
-        "Bottle hero shot as a centerpiece",
-        "Founders' portrait as hero",
-        "Stock cocktail photo"
+        "A literal illustrated chicken mark",
+        "A stamped coop-wood texture",
+        "A colored monogram on a circular badge"
       ],
-      "why_chosen": "Brand brief states the logo IS the typography and there is no separate image logo. brand_donts forbids stock photography. Leading with type honors the actual asset and avoids generic stock-photo layout."
+      "why_chosen": "The live site has no separate logo asset \u2014 the wordmark IS the logo. Introducing a new icon would create an asset that does not exist in the brand's owned image set; reusing the wordmark's terminal letters keeps the signature inside verified evidence."
     },
     {
-      "decision": "Replace the conventional three-icon feature grid with a manifesto + ratio wall.",
+      "decision": "Show all seven bottles together on one shelf rather than hero a single bottle.",
       "alternatives_considered": [
-        "Three-column icon feature grid (real ingredients / easy / bartender-made)",
-        "Four-column variant with awards row"
+        "Single oversized bottle + 'shop now'",
+        "Carousel with one bottle per slide",
+        "Three featured bottles in a row"
       ],
-      "why_chosen": "The forbidden-default list explicitly bans three-column feature grids with icons. The 2:1 ratio is a brand-standard that doubles as design content."
+      "why_chosen": "Seven bottles is the actual product range. A carousel hides five products; a single hero compresses the brand to one SKU. The shelf-as-navigation is the structural alternative to the standard DTC hero."
     },
     {
-      "decision": "Use Fraunces (OFL) as the display family instead of Recoleta (paid Klim).",
+      "decision": "Use Fraunces over Inter everywhere for headings, with Inter only at body sizes.",
       "alternatives_considered": [
-        "Vendoring Recoleta directly",
-        "Using Inter for display as well as body"
+        "All-Inter (agency default)",
+        "Recoleta paid Klim face as briefed",
+        "A slab serif like Roboto Slab"
       ],
-      "why_chosen": "typography_recommendation.license_notes marks Recoleta as paid and not to be vendored. Inter-for-display is explicitly called out as the agency look the brand is NOT. Fraunces is the named OFL substitute with the right humanist serif character."
+      "why_chosen": "Recoleta is paid and cannot be vendored; Fraunces (OFL) is the briefed substitute. All-Inter is explicitly the aesthetic the brand is NOT. A slab serif would push toward the banned 'artisanal' territory."
     },
     {
-      "decision": "Lay the seven mixers as a horizontal bottle rail with mood labels, not as a faceted product grid.",
+      "decision": "Pair the founder portrait with a chalkboard typography panel rather than 'meet the team' icon cards.",
       "alternatives_considered": [
-        "3-up responsive product grid",
-        "4-up grid mirroring the typical Shopify collection"
+        "Three-up team grid with role icons",
+        "Timeline of brand milestones",
+        "Photo collage on warm yellow"
       ],
-      "why_chosen": "The brief flags the seven products as seven moods in the manifesto and supplies real drop-shadowed bottle PNGs. A rail reads them as objects on a bar shelf and varies the order from a typical product wall."
+      "why_chosen": "The brand owns one founder portrait; inventing more would breach the brand's owned asset list. A chalkboard aligns with the 'made by bartenders' line and keeps the section to one photograph plus one paragraph."
     },
     {
-      "decision": "Use the single word 'REAL' as an all-caps typographic accent on the ingredients claim.",
+      "decision": "Surface the 2:1 ratio as a typographic poster rather than a 'how to use' three-step block.",
       "alternatives_considered": [
-        "A sentence-case 'real ingredients only' line consistent with the rest of the page",
-        "An icon-led ingredients badge"
+        "Three-step instructional block",
+        "Illustrated shaker diagram",
+        "Video loop of a bartender shaking"
       ],
-      "why_chosen": "voice_and_tone.notes explicitly allows ALL-CAPS on the keyword 'REAL' as a typographic accent, not as a sentence-case violation. This is the one place the brand permits that flourish."
+      "why_chosen": "The brand repeats 'just add spirit' across every product page; the ratio IS the instruction. One oversized numeral teaches the standard faster than three paragraphs and stays on-brand."
     },
     {
-      "decision": "Reserve teal-green #259E7E for the single shop-entry CTA panel.",
+      "decision": "Skip a customer-testimonials section entirely.",
       "alternatives_considered": [
-        "Distributing teal across links, tags, and buttons",
-        "Replacing yellow as the dominant field color"
+        "Invent two-three 'real home drinker' quotes",
+        "Rewrite press hits as customer testimonials",
+        "Pull quotes from Instagram (unfetched)"
       ],
-      "why_chosen": "palette_from_logo.rationale states the teal is the only cool color on the site and should appear sparingly against the warm yellow field. Concentrating it at the shop entry keeps the page predominantly sunny and makes the CTA unmistakable."
+      "why_chosen": "Brand donts forbid inventing testimonials; press coverage cannot be paraphrased as quotes without misrepresenting the source. Empty is correct here."
+    },
+    {
+      "decision": "Leave the FAQ at /about#faq and do not link to /faq in the footer.",
+      "alternatives_considered": [
+        "Link to /faq for cleaner URLs",
+        "Build a standalone FAQ page",
+        "Inline the FAQs as an accordion"
+      ],
+      "why_chosen": "The /faq route returns a 404. Linking to it would ship a broken footer. The /about#faq anchor is the verified working path per the brief's limitations."
     }
   ]
 }

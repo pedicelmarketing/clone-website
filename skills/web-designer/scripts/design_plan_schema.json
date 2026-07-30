@@ -4,36 +4,479 @@
   "title": "Web Designer Design Plan",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "project_slug", "generated_at", "model", "layout_thesis", "sections", "signature_element", "motion_vocabulary", "copy_blocks", "skipped_sections", "decisions"],
+  "required": [
+    "schema_version",
+    "project_slug",
+    "generated_at",
+    "model",
+    "layout_thesis",
+    "sections",
+    "signature_element",
+    "motion_vocabulary",
+    "copy_blocks",
+    "skipped_sections",
+    "decisions"
+  ],
   "properties": {
-    "schema_version": {"type": "string", "const": "1.0"},
-    "project_slug": {"type": "string", "minLength": 1},
-    "generated_at": {"type": "string", "minLength": 1},
-    "model": {"type": "string", "minLength": 1},
-    "layout_thesis": {
-      "type": "object", "additionalProperties": false,
-      "required": ["statement", "audience", "job_to_be_done", "why_this_not_generic"],
-      "properties": {"statement": {"type": "string", "minLength": 1}, "audience": {"type": "string", "minLength": 1}, "job_to_be_done": {"type": "string", "minLength": 1}, "why_this_not_generic": {"type": "string", "minLength": 1}}
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
     },
-    "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}},
+    "project_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "type": "string",
+      "description": "Which vendor actually answered (minimax | gemini | anthropic). design_pass.py stamps this before validating, so the schema must accept it \u2014 otherwise every run fails validation on its own provenance field."
+    },
+    "layout_thesis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statement",
+        "audience",
+        "job_to_be_done",
+        "why_this_not_generic"
+      ],
+      "properties": {
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audience": {
+          "type": "string",
+          "minLength": 1
+        },
+        "job_to_be_done": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_this_not_generic": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    },
     "signature_element": {
-      "type": "object", "additionalProperties": false,
-      "required": ["name", "description", "why_it_fits_brand", "implementation_note"],
-      "properties": {"name": {"type": "string", "minLength": 1}, "description": {"type": "string", "minLength": 1}, "why_it_fits_brand": {"type": "string", "minLength": 1}, "implementation_note": {"type": "string", "minLength": 1}}
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "description",
+        "why_it_fits_brand",
+        "implementation_note"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_it_fits_brand": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementation_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
     },
     "motion_vocabulary": {
-      "type": "object", "additionalProperties": false,
-      "required": ["register", "effects", "rationale"],
-      "properties": {"register": {"enum": ["restrained", "balanced", "cinematic"]}, "effects": {"type": "array", "items": {"type": "string"}}, "rationale": {"type": "string", "minLength": 1}}
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "register",
+        "effects",
+        "rationale"
+      ],
+      "properties": {
+        "register": {
+          "enum": [
+            "restrained",
+            "balanced",
+            "cinematic"
+          ]
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
     },
-    "copy_blocks": {"type": "array", "items": {"$ref": "#/$defs/copyBlock"}},
-    "skipped_sections": {"type": "array", "items": {"$ref": "#/$defs/skipped"}},
-    "decisions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["decision", "alternatives_considered", "why_chosen"], "properties": {"decision": {"type": "string", "minLength": 1}, "alternatives_considered": {"type": "array", "items": {"type": "string"}}, "why_chosen": {"type": "string", "minLength": 1}}}}
+    "copy_blocks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/copyBlock"
+      }
+    },
+    "skipped_sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/skipped"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision",
+          "alternatives_considered",
+          "why_chosen"
+        ],
+        "properties": {
+          "decision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "alternatives_considered": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "why_chosen": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "description": "The site's routes. Sections stay in the flat `sections[]` array and are assigned to a page by id, so copy_blocks[].section_id and skipped_sections[].id keep working unchanged. When `pages` is absent the whole plan renders as a single page at '/'.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slug",
+          "title",
+          "description",
+          "nav_label",
+          "in_nav",
+          "order",
+          "purpose",
+          "section_ids"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^$|^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "description": "'' is the home route '/'. Otherwise 'elite-coaches' -> '/elite-coaches/'."
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "description": "<title>. MUST be unique across pages."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "<meta name=description>."
+          },
+          "nav_label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "in_nav": {
+            "type": "boolean"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "section_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "wordmark",
+        "locale",
+        "source_brief_fields"
+      ],
+      "properties": {
+        "wordmark": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tagline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 2
+        },
+        "contact": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Only fields the brand has actually published. A missing field means the matching UI is not rendered and a skipped_sections entry records why. NEVER invent a phone number, form endpoint or social handle.",
+          "properties": {
+            "email": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "form_endpoint": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "External POST endpoint. null -> the mailto: path is rendered instead."
+            },
+            "whatsapp_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "instagram_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "location": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "source_brief_fields": {
+          "$ref": "#/$defs/sourceFields"
+        }
+      }
+    }
   },
   "$defs": {
-    "sourceFields": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
-    "section": {"type": "object", "additionalProperties": false, "required": ["id", "order", "purpose", "component", "emphasis", "source_brief_fields", "rationale", "in_nav"], "properties": {"id": {"type": "string", "minLength": 1}, "nav_label": {"type": ["string", "null"]}, "in_nav": {"type": "boolean"}, "order": {"type": "integer", "minimum": 0}, "purpose": {"type": "string", "minLength": 1}, "component": {"type": "string", "minLength": 1}, "emphasis": {"enum": ["hero", "primary", "secondary", "minor"]}, "source_brief_fields": {"$ref": "#/$defs/sourceFields"}, "rationale": {"type": "string", "minLength": 1}}},
-    "copyBlock": {"type": "object", "additionalProperties": false, "required": ["section_id", "role", "text", "source_brief_fields"], "properties": {"section_id": {"type": "string", "minLength": 1}, "role": {"enum": ["headline", "subhead", "body", "cta", "caption"]}, "text": {"type": "string", "minLength": 1}, "source_brief_fields": {"$ref": "#/$defs/sourceFields"}}},
-    "skipped": {"type": "object", "additionalProperties": false, "required": ["id", "reason", "missing_brief_fields"], "properties": {"id": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}, "missing_brief_fields": {"type": "array", "items": {"type": "string", "minLength": 1}}}}
+    "sourceFields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "order",
+        "purpose",
+        "component",
+        "emphasis",
+        "source_brief_fields",
+        "rationale",
+        "in_nav"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nav_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "in_nav": {
+          "type": "boolean"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "component": {
+          "type": "string",
+          "minLength": 1
+        },
+        "emphasis": {
+          "enum": [
+            "hero",
+            "primary",
+            "secondary",
+            "minor"
+          ]
+        },
+        "layout": {
+          "enum": [
+            "masthead",
+            "split-hero",
+            "editorial",
+            "feature-split",
+            "full-bleed-band",
+            "card-grid",
+            "proof-row",
+            "pull-quote",
+            "index-list",
+            "cta-band",
+            "colophon",
+            "type-hero",
+            "scroll-rail",
+            "label-rail",
+            "ghost-index",
+            "card-carousel",
+            "marquee-band",
+            "contact-panel"
+          ],
+          "description": "The section's LAYOUT SHAPE \u2014 what it physically looks like. This is the main lever you have over how the page reads, so vary it deliberately; a page where every section uses the same layout is the templated output we are trying to avoid. `emphasis` sets scale/weight, `layout` sets structure. masthead: site header, supplies the wordmark (headline) + tagline (subhead) and is rendered as the page's <header>, not as a body section. split-hero: full-height opening, oversized headline beside the signature element or a photo. editorial: numbered index in a side column, heading + running body beside it. feature-split: photo on one side, text on the other, alternating sides down the page. Needs media. full-bleed-band: photo edge-to-edge across the viewport with a caption. Needs media. card-grid: body split into a grid of short cards (or a grid of photos). proof-row: a compact horizontal row of short proof items \u2014 awards, press, stats. Keep the text short. pull-quote: one oversized statement in a narrow measure; use for a manifesto line or testimonial. index-list: numbered, expandable list \u2014 services, chapters, an FAQ. cta-band: inverted colour band carrying the call to action. Needs a `cta` copy block. colophon: thin monospace strip; rendered inside the page's <footer>. type-hero: a full-height opening built from TYPE ALONE \u2014 no photograph. The headline carries weight by setting its operative words at full ink and its connective words at a lower opacity of the SAME ink; a brand monogram acts as optical counterweight. Use when the brand has no hero-resolution photography, or when type is stronger than the imagery. scroll-rail: a horizontally-scrolling rail of panels, pinned while it advances; collapses to a vertical column on mobile. Good for an ordered sequence (stages, steps, ways to work). label-rail: an asymmetric row \u2014 a narrow left rail carrying a short display word and a stacked list, beside a wide surfaced card holding the substance. The empty middle is deliberate. ghost-index: a list whose rows are set at DISPLAY scale in low-opacity ink and brighten on hover, with an image preview that follows the cursor. Use for an index of programmes, coaches or deliverables. card-carousel: one large card at a time with circular controls outside it and a tab strip beneath. Use for a small set of comparable formats. marquee-band: a full-bleed inverted strip of repeating words that scrolls sideways. Use ONCE per page as a rule between movements, never as content. contact-panel: the contact surface \u2014 address, location and, only if an endpoint exists, a form."
+        },
+        "source_brief_fields": {
+          "$ref": "#/$defs/sourceFields"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "media": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "description": "Optional brand photograph for this section. MUST reference a file present in the fetched ASSET-MANIFEST.json. Never invent a filename and never point at a stock image \u2014 if no suitable brand photo exists, omit this or set it null and design the section without imagery.",
+          "required": [
+            "file",
+            "alt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "description": "filename from ASSET-MANIFEST.json assets[].file"
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 3,
+              "description": "real alt text describing the photo (use the asset's subject)"
+            },
+            "treatment": {
+              "type": "string",
+              "enum": [
+                "full-bleed",
+                "inset",
+                "side-by-side",
+                "grid",
+                "background",
+                "portrait"
+              ],
+              "description": "how the image sits in the section's layout"
+            },
+            "rationale": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "copyBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section_id",
+        "role",
+        "text",
+        "source_brief_fields"
+      ],
+      "properties": {
+        "section_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "headline",
+            "subhead",
+            "body",
+            "cta",
+            "caption"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_brief_fields": {
+          "$ref": "#/$defs/sourceFields"
+        }
+      }
+    },
+    "skipped": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "reason",
+        "missing_brief_fields"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missing_brief_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
   }
 }

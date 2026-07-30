@@ -8,34 +8,26 @@
  *  - a fade-in-on-view hook (under 200ms)
  *  - a single gold-dot highlighter that pins to the side of the viewport
  *    while the reader scrolls
- *  - a lenis smooth-scroll wrapper for the whole page
+ *  - native smooth scrolling via CSS (no scroll library)
  *
  * Anything else (parallax, scroll-jacking, complex timelines) is
  * intentionally NOT included.
  */
 
-import { useEffect, useRef, type ReactNode } from "react";
-import { motion, useScroll, useSpring, useTransform } from "motion/react";
-import Lenis from "lenis";
+import { useRef, type ReactNode } from "react";
+import { motion, motion as m, useScroll, useSpring, useTransform } from "motion/react";
 
+/**
+ * SmoothScroll — intentionally a plain passthrough.
+ *
+ * This used to drive Lenis. Lenis costs ~10KB, hijacks the scroll thread, and
+ * fought the `scroll-mt` offsets that keep in-page nav links from landing under
+ * the sticky header. `scroll-behavior: smooth` in globals.css does the same job
+ * for zero bytes and honours prefers-reduced-motion for free. Kept as a
+ * component so the page structure does not churn if a scroll library is ever
+ * reintroduced deliberately.
+ */
 export function SmoothScroll({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    const lenis = new Lenis({
-      // Reading-speed: gentle easing, ~1.2s wheel duration.
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-    let raf = 0;
-    const tick = (time: number) => {
-      lenis.raf(time);
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => {
-      cancelAnimationFrame(raf);
-      lenis.destroy();
-    };
-  }, []);
   return <>{children}</>;
 }
 
@@ -51,7 +43,14 @@ export function FadeIn({
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+      // `amount`, NOT a negative viewport margin. The previous
+      // `margin: "-10% 0px -10% 0px"` shrank the detection box by 10% at the
+      // bottom, so an element sitting at the very end of the document could
+      // never enter it once the page had scrolled as far as it goes — the
+      // colophon's text stayed at opacity 0 permanently. `amount: 0.2` reveals
+      // once a fifth of the block is visible, which is always reachable, and
+      // still delays the fade until the block is meaningfully on screen.
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.18, delay, ease: "easeOut" }}
     >
       {children}
@@ -93,7 +92,34 @@ export function GoldDotMarker() {
  * anchors the cover's right column, giving the hero a focal point instead
  * of dead space. Colour comes from --color-primary (never a raw hex).
  */
-export function SignatureMark() {
+export function SignatureMark({ variant = "dot" }: { variant?: "dot" | "monogram" } = {}) {
+  if (variant === "monogram") {
+    // A padel ball: one circle, two opposed seams. Drawn as SVG rather than
+    // shipped as the client's logo JPEG — that file is a flattened screenshot
+    // of a slide deck, and a raster of a presentation is not a logo asset.
+    return (
+      <div className="flex h-full items-start justify-start lg:justify-end">
+        <m.svg
+          aria-hidden="true"
+          viewBox="0 0 100 100"
+          initial={{ scale: 0.7, opacity: 0, rotate: -12 }}
+          animate={{ scale: 1, opacity: 1, rotate: 0 }}
+          transition={{ duration: 0.8, ease: [0.2, 0.7, 0.2, 1] }}
+          style={{ width: "clamp(88px, 12vw, 200px)", height: "clamp(88px, 12vw, 200px)" }}
+          fill="none"
+          stroke="var(--color-primary)"
+        >
+          <circle cx="50" cy="50" r="46" strokeWidth="2" />
+          <path d="M18 18 A 46 46 0 0 1 18 82" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M82 18 A 46 46 0 0 0 82 82" strokeWidth="1.5" strokeLinecap="round" />
+        </m.svg>
+      </div>
+    );
+  }
+  return _SignatureDot();
+}
+
+function _SignatureDot() {
   return (
     <div className="relative flex h-full min-h-[220px] items-start justify-start lg:justify-center lg:pt-6">
       <motion.div

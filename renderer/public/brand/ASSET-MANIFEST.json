@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "brand_brief": "reports/padel-marbella/brand-brief.json",
+  "counts": {
+    "requested": 9,
+    "fetched": 9,
+    "failed": 0
+  },
+  "not_brand_owned": [],
+  "assets": [
+    {
+      "file": "01-74e0300bef.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.24.jpeg",
+      "subject": "Coach in a low ready position mid-rally on an outdoor padel court at golden hour, Marbella rooftops behind",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 207685,
+      "width": 1170,
+      "height": 1538,
+      "sha256": "74e0300bef14dc1009714d84c3422c08f278fff6aa1d88f9f9092124b3c9c273"
+    },
+    {
+      "file": "02-73df60b3d3.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.24 (1).jpeg",
+      "subject": "Coach half-turned during a padel session at golden hour, a second player running behind",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 210329,
+      "width": 1170,
+      "height": 1546,
+      "sha256": "73df60b3d3ae3af286671f5cec93cad68752a83f2a3970edb12f9232271711f2"
+    },
+    {
+      "file": "03-69efbe7f6d.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.24 (2).jpeg",
+      "subject": "Two players mid-point on an outdoor padel court at golden hour",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 233728,
+      "width": 1170,
+      "height": 1544,
+      "sha256": "69efbe7f6d444ff0931ae025809389ab5f55b7d7852c27900c505563f74617fe"
+    },
+    {
+      "file": "04-578c5ad097.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.24 (5).jpeg",
+      "subject": "Low-angle view down the centre line of an outdoor tennis court into the sun, floodlights and palms behind",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 195187,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "578c5ad09729c9fee6b6bc937bc459251de5fc2219b3f719845e6a570c6447b9"
+    },
+    {
+      "file": "05-2b87ffe89f.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.24 (6).jpeg",
+      "subject": "Elevated dusk view over a multi-court tennis club under floodlights, Andalusian hillside behind",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 177810,
+      "width": 1170,
+      "height": 1144,
+      "sha256": "2b87ffe89f3b1daf8c34e9acc39b7839de899f0002e417a079b435201a0a7f44"
+    },
+    {
+      "file": "06-b33f189780.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.23.jpeg",
+      "subject": "Coach explaining a drill to a group of adult players on an outdoor padel court",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 315585,
+      "width": 1170,
+      "height": 1949,
+      "sha256": "b33f18978034c609f372db0118a34b3d98cb564687602d63d7eb5d81d2ee159d"
+    },
+    {
+      "file": "07-9f87b357d9.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.24 (3).jpeg",
+      "subject": "Outdoor padel courts at a Marbella club seen from the viewing deck",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 338047,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "9f87b357d9c4e2923ee5e72746dbed640868af963c056ff19b28da27891986cb",
+      "caveat": "Third-party sponsor livery (OYSHO, Range Rover, Bullpadel) is visible on the court surrounds. Included at operator instruction; it is only ever shown small and under a scrim, never full-bleed."
+    },
+    {
+      "file": "08-28e5b36a63.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.23 (1).jpeg",
+      "subject": "Group of players with their coach at the net after a padel session",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 251854,
+      "width": 1170,
+      "height": 1994,
+      "sha256": "28e5b36a638e596fe40804b2e3b87ebd33bc89ce7f14817fa160590475c29f4a",
+      "caveat": "The leftmost person is cropped by the frame edge; object-position favours the centre of the group."
+    },
+    {
+      "file": "09-89218365ca.jpg",
+      "source_url": "client-supplied:WhatsApp Image 2026-07-19 at 16.48.24 (4).jpeg",
+      "subject": "Coach on court in front of a club event banner",
+      "license": "brand-owned (client-supplied)",
+      "brand_owned": true,
+      "format": "jpeg",
+      "bytes": 212793,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "89218365ca862bd6bd054baabab3a570ebb282a16437b29792c168c9885299ee",
+      "caveat": "Posed snapshot. No individual is named anywhere on the site, so this is used as context rather than as a portrait of a specific person."
+    }
+  ],
+  "failed": [],
+  "excluded": [
+    {
+      "file": "WhatsApp Image 2026-07-19 at 16.45.38.jpeg",
+      "reason": "Not a photograph \u2014 a flattened JPEG of the designer's brand board. Used as the source for the SVG monogram, never shipped as an image."
+    }
+  ],
+  "note": "Client-supplied WhatsApp-compressed photographs, max 1536px on the long edge. Every placement is small and none is full-bleed or above the fold. Three carry caveats recorded per-asset (third-party sponsor livery, a cropped subject, a posed snapshot) and are included at operator instruction. The brand board is still excluded: it is a slide, not a photograph, and is the source for the SVG mark instead."
+}

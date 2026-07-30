@@ -57,6 +57,14 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("-o", "--out", required=True)
     ap.add_argument("--reference-report")  # accepted for contract compatibility
     ap.add_argument("--project-slug")
+    ap.add_argument("--assets",
+                    help="directory containing this brand's images + ASSET-MANIFEST.json. "
+                         "Copied into renderer/public/brand for the build. Without this, "
+                         "whatever the PREVIOUS brand left there is what ships.")
+    ap.add_argument("--routes-out",
+                    help="write the comma-separated route list here, so callers "
+                         "validate exactly the routes the plan declares instead of "
+                         "hardcoding them.")
     args = ap.parse_args(argv)
 
     if not RENDERER.is_dir():
@@ -78,6 +86,35 @@ def main(argv: list[str] | None = None) -> int:
     env = dict(os.environ)
     env["WEB_DESIGNER_TOKENS_DIR"] = str(Path(args.tokens).resolve())
     env["WEB_DESIGNER_DESIGN_PLAN"] = str(plan)
+    # The renderer falls back to the brand's own domain for the site wordmark
+    # when the plan has no masthead section to supply one.
+    env["WEB_DESIGNER_BRAND_BRIEF"] = str(Path(args.brand_brief).resolve())
+    # Gate 9 re-runs `npm run build` from validate_site.py WITHOUT passing env,
+    # so it inherits the parent process's environment. Exporting here as well as
+    # into the child means a later gate rebuild uses this brand's plan and
+    # tokens rather than whatever was baked in — otherwise, with two brands in
+    # one harness run, Gate 9 silently rebuilds brand A while validating brand B.
+    os.environ.update({k: env[k] for k in
+                       ("WEB_DESIGNER_TOKENS_DIR", "WEB_DESIGNER_DESIGN_PLAN",
+                        "WEB_DESIGNER_BRAND_BRIEF")})
+
+    # Brand photography. renderer/public/brand is shared across brands, so it
+    # MUST be replaced per build — otherwise brand B ships brand A's photographs,
+    # which is both wrong and a licensing problem. Cleared even when no assets
+    # are supplied, for the same reason.
+    brand_dir = RENDERER / "public" / "brand"
+    if brand_dir.exists():
+        shutil.rmtree(brand_dir)
+    brand_dir.mkdir(parents=True, exist_ok=True)
+    if args.assets:
+        src = Path(args.assets).resolve()
+        if not src.is_dir():
+            raise SystemExit(f"[render_nextjs] --assets directory not found: {src}")
+        for item in src.iterdir():
+            if item.is_file():
+                shutil.copy2(item, brand_dir / item.name)
+        n = len(list(brand_dir.glob("*")))
+        print(f"[render_nextjs] staged {n} brand asset(s) from {src}", file=sys.stderr)
 
     # Tokens first: the renderer's Tailwind theme is generated from them.
     run(["npm", "run", "sync:tokens"], RENDERER, "sync tokens", env=env)
@@ -89,6 +126,24 @@ def main(argv: list[str] | None = None) -> int:
             "[render_nextjs] build reported success but renderer/out/index.html is "
             "missing — refusing to report success without the artifact"
         )
+
+    # EVERY declared route must have emitted a file, not just the root. A plan
+    # can declare five pages and a build can quietly produce one; checking only
+    # index.html would call that a success.
+    plan_doc = json.loads(plan.read_text(encoding="utf-8"))
+    slugs = [pg.get("slug", "") for pg in (plan_doc.get("pages") or [{"slug": ""}])]
+    missing = [s for s in slugs if not (out_src / s / "index.html").is_file()]
+    if missing:
+        raise SystemExit(
+            "[render_nextjs] build succeeded but these routes emitted no index.html: "
+            + ", ".join(repr(s) for s in missing)
+        )
+    routes = ",".join("/" if not s else f"/{s}/" for s in slugs)
+    if args.routes_out:
+        rp = Path(args.routes_out)
+        rp.parent.mkdir(parents=True, exist_ok=True)
+        rp.write_text(routes + "\n")
+    print(f"[render_nextjs] {len(slugs)} route(s) emitted: {routes}", file=sys.stderr)
 
     dest = Path(args.out).resolve()
     # The improve loop passes -o renderer/out, i.e. the build's OWN output dir.

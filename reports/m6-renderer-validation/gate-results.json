@@ -1,0 +1,392 @@
+{
+  "schema": "1.1",
+  "gate_version": "10-gate-v1.1",
+  "site_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site",
+  "routes": [
+    "/"
+  ],
+  "viewports": [
+    320,
+    768,
+    1024,
+    1440
+  ],
+  "generated": "2026-07-29T19:38:04.822008+00:00",
+  "host": "127.0.0.1",
+  "port": 46947,
+  "results": [
+    {
+      "id": "1",
+      "name": "Boot",
+      "verdict": "PASS",
+      "evidence_basis": "HTTP-200 only",
+      "summary": "All 1 route(s) returned HTTP 200 via local server.",
+      "notes": [
+        "  / -> HTTP 200"
+      ],
+      "observations": {
+        "per_route": {
+          "/": {
+            "status": 200,
+            "final_url": "http://127.0.0.1:46947/"
+          }
+        },
+        "base_url": "http://127.0.0.1:46947"
+      },
+      "error": null
+    },
+    {
+      "id": "2",
+      "name": "Dependency",
+      "verdict": "PASS",
+      "evidence_basis": "HTTP-200 only",
+      "summary": "All 33 local reference(s) resolved HTTP 200. 0 external host reference(s) classified as Kept External.",
+      "notes": [],
+      "observations": {
+        "reference_count": 33,
+        "external_count": 0,
+        "external_sample": [],
+        "external_hosts": []
+      },
+      "error": null
+    },
+    {
+      "id": "3",
+      "name": "Accessibility",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "axe-core found 0 serious/critical violations across 1 route(s) (0 total).",
+      "notes": [],
+      "observations": {
+        "engine": "in-process playwright + axe.min.js (npx cache)",
+        "per_route": {
+          "/": {
+            "route": "/",
+            "url": "http://127.0.0.1:46947/",
+            "status": 200,
+            "exit": 0,
+            "ok": true,
+            "violations": 0,
+            "serious_critical": 0,
+            "by_impact": {
+              "minor": 0,
+              "moderate": 0,
+              "serious": 0,
+              "critical": 0
+            },
+            "ids": []
+          }
+        },
+        "succeeded_routes": [
+          "/"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "4",
+      "name": "Performance",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "Lighthouse met thresholds on 1 route(s).",
+      "notes": [
+        "Thresholds: {'performance': 90, 'accessibility': 95, 'best_practices': 95, 'seo': 95}"
+      ],
+      "observations": {
+        "per_route": {
+          "/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          }
+        },
+        "table": [
+          {
+            "route": "/",
+            "performance": 100,
+            "accessibility": 100,
+            "best_practices": 100,
+            "seo": 100,
+            "fails": []
+          }
+        ],
+        "thresholds": {
+          "performance": 90,
+          "accessibility": 95,
+          "best_practices": 95,
+          "seo": 95
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "5",
+      "name": "Site-wide audit",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "Only one route declared; per-route vs. whole-site comparison is not applicable. Single-route Lighthouse score was emitted by gate 4.",
+      "notes": [
+        "Re-run with --routes /,/about to see a multi-route table."
+      ],
+      "observations": {
+        "per_route": {
+          "/": {
+            "exit": 0,
+            "ok": true,
+            "stdout_tail": "",
+            "stderr_tail": "",
+            "scores": {
+              "performance": 100,
+              "accessibility": 100,
+              "best_practices": 100,
+              "seo": 100
+            },
+            "fails": {}
+          }
+        },
+        "routes": [
+          "/"
+        ],
+        "gate_4_verdict": "PASS"
+      },
+      "error": null
+    },
+    {
+      "id": "6",
+      "name": "Responsive",
+      "verdict": "PASS",
+      "evidence_basis": "Observed visually",
+      "summary": "No horizontal overflow across 4 cell(s) (1 route(s) \u00d7 4 viewport(s)).",
+      "notes": [],
+      "observations": {
+        "per_cell": [
+          {
+            "route": "/",
+            "viewport": "320x720",
+            "scrollWidth": 320,
+            "innerWidth": 320,
+            "scrollHeight": 6245,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/6249940834735213097__320x720.png"
+          },
+          {
+            "route": "/",
+            "viewport": "768x1024",
+            "scrollWidth": 768,
+            "innerWidth": 768,
+            "scrollHeight": 4061,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/1543230547009359370__768x1024.png"
+          },
+          {
+            "route": "/",
+            "viewport": "1024x768",
+            "scrollWidth": 1024,
+            "innerWidth": 1024,
+            "scrollHeight": 4204,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/444631027512773602__1024x768.png"
+          },
+          {
+            "route": "/",
+            "viewport": "1440x900",
+            "scrollWidth": 1440,
+            "innerWidth": 1440,
+            "scrollHeight": 4181,
+            "settle": {
+              "animation_count": 0,
+              "settle_cap_ms": 3000,
+              "pixel_stable": true,
+              "pixel_wait_ms": 1250
+            },
+            "overflow": false,
+            "screenshot": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-validation/responsive_shots/2382404704958358082__1440x900.png"
+          }
+        ],
+        "viewports": [
+          320,
+          768,
+          1024,
+          1440
+        ],
+        "routes": [
+          "/"
+        ],
+        "cell_count": 4
+      },
+      "error": null
+    },
+    {
+      "id": "7",
+      "name": "Motion",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "prefers-reduced-motion honored in 1 CSS file(s).",
+      "notes": [],
+      "observations": {
+        "css_files_seen": [
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e821fb70ca2c2184.css"
+        ],
+        "reduced_in": [
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e821fb70ca2c2184.css"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "8",
+      "name": "Token discipline",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "CSS uses 347 var(--token) reference(s); 0 raw hex literals outside tokens.css.",
+      "notes": [
+        "Gate 8 re-scoped from workflow-design.md \u00a74's 'source-paired 10x' \u2014 see report.",
+        "tokens.css is the explicit source of truth; raw hex inside it is allowed."
+      ],
+      "observations": {
+        "css_files": [
+          "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static/css/e821fb70ca2c2184.css"
+        ],
+        "var_uses": 347,
+        "raw_hex": []
+      },
+      "error": null
+    },
+    {
+      "id": "9",
+      "name": "Build (Next.js)",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "`npm run build` exited 0 in renderer.",
+      "notes": [
+        "Build log: build-stdout.log"
+      ],
+      "observations": {
+        "applicable": true,
+        "renderer_root": "renderer",
+        "exit_code": 0,
+        "build_log": "build-stdout.log"
+      },
+      "error": null
+    },
+    {
+      "id": "10",
+      "name": "Bundle (Next.js)",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "Total gzipped JS is 292.5 KB across 15 file(s), under the 300 KB budget.",
+      "notes": [],
+      "observations": {
+        "applicable": true,
+        "static_dir": "/home/openclaw/Coding/clone-website-wt/feat-web-designer/reports/m6-renderer-site/_next/static",
+        "file_count": 15,
+        "total_gzipped_bytes": 299566,
+        "total_gzipped_kb": 292.5,
+        "budget_kb": 300,
+        "top_files": [
+          {
+            "path": "chunks/framework-acd67e14855de5a2.js",
+            "raw_bytes": 182716,
+            "gzipped_bytes": 57691
+          },
+          {
+            "path": "chunks/901-af741208424e3dd0.js",
+            "raw_bytes": 172737,
+            "gzipped_bytes": 56617
+          },
+          {
+            "path": "chunks/4bd1b696-c023c6e3521b1417.js",
+            "raw_bytes": 173019,
+            "gzipped_bytes": 54228
+          },
+          {
+            "path": "chunks/255-2b334ff5c2ee7a81.js",
+            "raw_bytes": 173819,
+            "gzipped_bytes": 46461
+          },
+          {
+            "path": "chunks/polyfills-42372ed130431b0a.js",
+            "raw_bytes": 112594,
+            "gzipped_bytes": 39373
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "11",
+      "name": "Content fidelity",
+      "verdict": "PASS",
+      "evidence_basis": "DOM+assets confirmed",
+      "summary": "All 32 copy block(s) reached the DOM across 1 route(s) (>=85% token coverage); no placeholder strings; navigation present.",
+      "notes": [
+        "weak-but-present: services/body 0.632",
+        "weak-but-present: our-approach/body 0.565"
+      ],
+      "observations": {
+        "copy_blocks_checked": 32,
+        "missing": [],
+        "weak": [
+          {
+            "section_id": "services",
+            "role": "body",
+            "coverage": 0.632,
+            "text": "Our comprehensive suite of services is designed to meet your specific needs, dri"
+          },
+          {
+            "section_id": "our-approach",
+            "role": "body",
+            "coverage": 0.565,
+            "text": "From initial strategy development to meticulous execution and ongoing optimizati"
+          }
+        ],
+        "placeholders_found": [],
+        "wants_nav": true,
+        "nav_present": true,
+        "routes_without_nav": [],
+        "routes": [
+          "/"
+        ],
+        "titles": [
+          "pedicel-marketing-redesign-smoke"
+        ],
+        "coverage_threshold": 0.85
+      },
+      "error": null
+    }
+  ],
+  "meta": {
+    "input_hashes": {
+      "index.html": "105b2bb3ffda7773dc03d81ec2b5791999657593dea856adcb334201c855abd0",
+      "_next/static/*.js (combined)": "5d78103d9ddd0e2986bed9841bbb3d8ac9a06eaa5a8adf86db2b9647a6c0ed6b"
+    },
+    "input_hashes_algorithm": "sha256",
+    "input_hashes_note": "Recompute with: sha256sum <site_dir>/index.html <site_dir>/styles.css <site_dir>/tokens.css. If the site is a Next.js export, also verify the combined _next/static/*.js hash. If these change without re-running validate_site.py the gate results are stale."
+  }
+}

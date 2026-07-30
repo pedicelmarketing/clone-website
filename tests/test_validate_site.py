@@ -23,6 +23,8 @@ sys.path.insert(0, str(SCRIPTS))
 
 from validate_site import (  # noqa: E402
     GateResult, compute_tier, GATE_VERSION,
+    resolve_local_asset, _hex_defines_custom_property, _is_transparent_hex,
+    _visible_text, _PLACEHOLDER_RE, _TITLE_RE, parse_str_list, parse_args,
 )
 
 
@@ -113,10 +115,25 @@ class TierRules(unittest.TestCase):
 class VerdictSemantics(unittest.TestCase):
     def test_settle_helper_is_invoked_before_axe(self):
         source = (SCRIPTS / "validate_site.py").read_text()
-        settle_pos = source.index("settle = page.evaluate(\"async () =>")
+        settle_pos = source.index("settle = _settle(page)")
         axe_pos = source.index("axe.run(document", settle_pos)
         self.assertLess(settle_pos, axe_pos)
-        self.assertIn("setTimeout(resolve, 3000)", source)
+
+    def test_settle_waits_on_pixels_not_just_the_animation_registry(self):
+        """document.getAnimations() cannot see rAF-driven libraries.
+
+        Motion animates via requestAnimationFrame and never registers there, so
+        awaiting the registry alone returned instantly and axe sampled the page
+        mid-fade — producing `color-contrast` violations that appeared and
+        vanished between otherwise identical runs. The settle must additionally
+        poll for consecutive pixel-identical frames.
+        """
+        source = (SCRIPTS / "validate_site.py").read_text()
+        self.assertIn("def _settle(page", source)
+        self.assertIn("page.screenshot(type=\"jpeg\"", source)
+        self.assertIn("pixel_stable", source)
+        # Both embedded Playwright scripts (axe + responsive) must use it.
+        self.assertEqual(source.count("settle = _settle(page)"), 2)
 
     def test_a11y_zero_violations_with_no_positive_evidence_must_be_not_exercised(self):
         """The exact prior-run scenario: a runner that crashed (exit 1, no JSON
@@ -215,6 +232,157 @@ class PriorRunRegression(unittest.TestCase):
         )
         self.assertIn("3", reason)
         self.assertIn("4", reason)
+
+
+class AssetResolution(unittest.TestCase):
+    """Root-relative hrefs must resolve against the SITE ROOT, not the HTML dir.
+
+    os.path.join(dirname, "/_next/x.css") returns "/_next/x.css" because join
+    discards everything before an absolute component. That silently hid every
+    Next.js stylesheet from Gates 7 and 8, which then reported NOT-EXERCISED
+    while the renderer's token discipline went unchecked.
+    """
+
+    def setUp(self):
+        import tempfile
+        self.d = tempfile.mkdtemp()
+        os.makedirs(os.path.join(self.d, "_next", "static", "css"))
+        self.css = os.path.join(self.d, "_next", "static", "css", "a.css")
+        with open(self.css, "w") as fh:
+            fh.write("body{color:red}")
+        self.html = os.path.join(self.d, "index.html")
+
+    def test_root_relative_resolves_against_site_root(self):
+        got = resolve_local_asset(self.d, self.html, "/_next/static/css/a.css")
+        self.assertEqual(got, self.css)
+
+    def test_query_and_fragment_are_stripped(self):
+        got = resolve_local_asset(self.d, self.html, "/_next/static/css/a.css?v=2#x")
+        self.assertEqual(got, self.css)
+
+    def test_relative_resolves_against_html_dir(self):
+        with open(os.path.join(self.d, "styles.css"), "w") as fh:
+            fh.write("a{}")
+        got = resolve_local_asset(self.d, self.html, "styles.css")
+        self.assertEqual(got, os.path.join(self.d, "styles.css"))
+
+    def test_external_and_missing_return_none(self):
+        self.assertIsNone(resolve_local_asset(self.d, self.html, "https://cdn.x/a.css"))
+        self.assertIsNone(resolve_local_asset(self.d, self.html, "data:text/css,a{}"))
+        self.assertIsNone(resolve_local_asset(self.d, self.html, "/_next/nope.css"))
+
+
+class TokenDisciplineSemantics(unittest.TestCase):
+    """Hex is judged by DECLARATION, not by filename.
+
+    The old rule exempted a file literally named tokens.css. Next.js compiles
+    tokens into a content-hashed stylesheet, so every real token definition read
+    as a violation while a genuinely hardcoded colour looked identical.
+    """
+
+    def test_custom_property_definition_is_allowed(self):
+        css = ":root{--color-fg: #0b0c0d;}"
+        self.assertTrue(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_plain_declaration_is_a_violation(self):
+        css = ".x{color: #0b0c0d;}"
+        self.assertFalse(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_at_property_initial_value_is_allowed(self):
+        css = "@property --tw-shadow{syntax:'*';initial-value:0 0 #0000;}"
+        self.assertTrue(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_second_declaration_in_a_block_is_judged_on_its_own(self):
+        # The rfind() scan must start at the nearest ; { or } — not the block.
+        css = ".x{--ok: #ffffff; color: #123456;}"
+        self.assertFalse(_hex_defines_custom_property(css, css.rindex("#")))
+        self.assertTrue(_hex_defines_custom_property(css, css.index("#")))
+
+    def test_transparent_hex_is_not_a_colour_decision(self):
+        for v in ("#0000", "#00000000"):
+            self.assertTrue(_is_transparent_hex(v), v)
+
+    def test_opaque_hex_is_still_judged(self):
+        for v in ("#fff", "#000000ff", "#0b0c0d"):
+            self.assertFalse(_is_transparent_hex(v), v)
+
+
+class ContentFidelityHelpers(unittest.TestCase):
+    """Gate 11 exists because nothing else could see copy being dropped.
+
+    The renderer hardcoded which copy role each layout read and silently
+    discarded the rest: six of eleven sections lost their headline, body or CTA
+    and three shipped the literal string "[no body in plan]" — while every other
+    gate passed.
+    """
+
+    def test_visible_text_strips_script_and_style_content(self):
+        # Next.js inlines the whole RSC payload in <script>. Counting that as
+        # page text would make every copy block look present no matter what
+        # actually rendered.
+        html = ("<html><head><style>.a{color:red}</style></head><body>"
+                "<script>self.__next_f.push([1,\"Pick your bottle\"])</script>"
+                "<p>Real visible copy</p></body></html>")
+        text = _visible_text(html)
+        self.assertIn("real visible copy", text)
+        self.assertNotIn("pick your bottle", text)
+        self.assertNotIn("color:red", text)
+
+    def test_visible_text_decodes_entities(self):
+        self.assertIn("bartenders & chiles", _visible_text("<p>Bartenders &amp; Chiles</p>"))
+
+    def test_placeholder_regex_matches_shipped_debug_strings(self):
+        self.assertTrue(_PLACEHOLDER_RE.search("[no body in plan]"))
+        self.assertTrue(_PLACEHOLDER_RE.search("[no headline in plan]"))
+        self.assertFalse(_PLACEHOLDER_RE.search("our plan for the year"))
+
+
+class RouteArgParsing(unittest.TestCase):
+    """--routes was declared with no type=, so run() iterated the STRING.
+
+    `--routes '/,/about/'` became 15 single-character routes, which is why
+    multi-route validation had never actually executed and gate 5 had only ever
+    taken its `len(routes) <= 1` branch.
+    """
+
+    def test_comma_separated_routes_become_a_list(self):
+        self.assertEqual(parse_str_list("/,/about/"), ["/", "/about/"])
+
+    def test_whitespace_is_stripped_and_blanks_dropped(self):
+        self.assertEqual(parse_str_list(" /a , /b ,, "), ["/a", "/b"])
+
+    def test_argparse_yields_a_list_not_a_string(self):
+        args = parse_args(["site", "-o", "out", "--routes", "/,/experiences/,/about/"])
+        self.assertEqual(args.routes, ["/", "/experiences/", "/about/"])
+        # The original bug in one assertion: iterating the value must not
+        # produce single characters.
+        self.assertNotIn("/e", list(args.routes))
+
+    def test_default_is_a_single_root_route(self):
+        self.assertEqual(parse_args(["site", "-o", "out"]).routes, ["/"])
+
+
+class MultiRouteContentFidelity(unittest.TestCase):
+    """Gate 11 rules that only matter once a site has more than one page."""
+
+    def test_title_regex_extracts_per_route_titles(self):
+        html = "<html><head><title>Experiences | Padel</title></head><body>x</body></html>"
+        self.assertEqual(_TITLE_RE.search(html).group(1).strip(), "Experiences | Padel")
+
+    def test_title_regex_survives_attributes_and_newlines(self):
+        html = '<title\n  data-x="1">About\nUs</title>'
+        self.assertIn("About", _TITLE_RE.search(html).group(1))
+
+    def test_nav_presence_must_be_all_routes_not_any(self):
+        # Three routes, only the first carries a <nav>. `any` would pass this
+        # and strand visitors on two of the three pages.
+        raws = ["<nav>links</nav><main>a</main>", "<main>b</main>", "<main>c</main>"]
+        routes = ["/", "/about/", "/contact/"]
+        without = [r for r, raw in zip(routes, raws) if "<nav" not in raw.lower()]
+        self.assertEqual(without, ["/about/", "/contact/"])
+        self.assertTrue(bool(without), "must be treated as missing nav")
+        self.assertTrue(any("<nav" in r.lower() for r in raws),
+                        "the `any` formulation would wrongly pass here")
 
 
 if __name__ == "__main__":

@@ -1,67 +1,70 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-import { Slot } from "radix-ui"
+/**
+ * Button — dependency-free.
+ *
+ * This was a shadcn/cva component carrying 7 variants and 8 sizes, of which the
+ * renderer uses exactly one variant and two sizes across five call sites. It
+ * pulled in `class-variance-authority` and `@radix-ui/react-slot` for that,
+ * against a 300 KB gzipped bundle budget with under 5 KB of headroom.
+ *
+ * Colour note: the filled variant uses `text-primary-foreground`, which
+ * resolves through `--color-primary-text` — derived by measured contrast
+ * against the brand's primary, NOT a positional neutral. On a brand whose
+ * neutral-0 was a cream and whose primary was a yellow, the positional version
+ * rendered every button at 1.47:1.
+ */
 
-import { cn } from "@/lib/utils"
+import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
-const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-  {
-    variants: {
-      variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/80",
-        outline:
-          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
-        ghost:
-          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
-        destructive:
-          "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
-      size: {
-        default:
-          "h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
-        xs: "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        sm: "h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
-        lg: "h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
-        icon: "size-8",
-        "icon-xs":
-          "size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3",
-        "icon-sm":
-          "size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg",
-        "icon-lg": "size-9",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  }
-)
+const BASE =
+  "inline-flex shrink-0 items-center justify-center gap-2 rounded-full font-medium " +
+  "whitespace-nowrap transition-colors outline-none select-none " +
+  "focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary " +
+  "disabled:pointer-events-none disabled:opacity-50";
 
-function Button({
-  className,
-  variant = "default",
-  size = "default",
-  asChild = false,
-  ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
-  const Comp = asChild ? Slot.Root : "button"
+const VARIANTS = {
+  default: "bg-primary text-primary-foreground hover:bg-primary/85",
+  outline: "border border-current/25 bg-transparent hover:border-current/60",
+} as const;
 
-  return (
-    <Comp
-      data-slot="button"
-      data-variant={variant}
-      data-size={size}
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
-  )
+const SIZES = {
+  default: "h-10 px-5 text-sm",
+  lg: "h-12 px-7 text-base",
+} as const;
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: keyof typeof VARIANTS;
+  size?: keyof typeof SIZES;
+  children?: ReactNode;
 }
 
-export { Button, buttonVariants }
+export function Button({
+  className, variant = "default", size = "default", type = "button", ...props
+}: ButtonProps) {
+  return (
+    <button
+      type={type}
+      data-slot="button"
+      className={cn(BASE, VARIANTS[variant], SIZES[size], className)}
+      {...props}
+    />
+  );
+}
+
+/** Anchor styled as a button — for real navigation, which a <button> is not. */
+export function ButtonLink({
+  className, variant = "default", size = "default", ...props
+}: React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  variant?: keyof typeof VARIANTS;
+  size?: keyof typeof SIZES;
+}) {
+  return (
+    <a
+      data-slot="button"
+      className={cn(BASE, VARIANTS[variant], SIZES[size], className)}
+      {...props}
+    />
+  );
+}
+
+export default Button;

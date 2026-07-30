@@ -55,6 +55,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import pathlib
 import re
 import shutil
 import signal
@@ -283,6 +284,42 @@ def route_to_file(site_dir: str, route: str) -> str:
     return candidate
 
 
+def resolve_local_asset(site_dir: str, html_path: str, url: str) -> "str | None":
+    """Map an href/src found in HTML to a path on disk, or None if not local.
+
+    Root-relative URLs MUST resolve against the site root, not the HTML file's
+    directory. os.path.join(dirname, "/_next/static/x.css") silently returns
+    "/_next/static/x.css" -- an absolute filesystem path that never exists --
+    because join discards everything before an absolute component. That made
+    every root-relative stylesheet invisible to the gates that walk the
+    filesystem, so Gates 7 and 8 reported NOT-EXERCISED ("no CSS files
+    observed") against a Next.js export whose CSS lives in /_next/static/css/.
+    The deliverable's token discipline went unchecked while the report looked
+    clean.
+
+    >>> import os, tempfile
+    >>> d = tempfile.mkdtemp(); sub = os.path.join(d, "_next"); os.makedirs(sub)
+    >>> _ = open(os.path.join(sub, "a.css"), "w").write("x")
+    >>> html = os.path.join(d, "index.html")
+    >>> resolve_local_asset(d, html, "/_next/a.css") == os.path.join(d, "_next/a.css")
+    True
+    >>> resolve_local_asset(d, html, "https://cdn.example.com/a.css") is None
+    True
+    >>> resolve_local_asset(d, html, "/_next/missing.css") is None
+    True
+    """
+    if is_external(url):
+        return None
+    stripped = url.split("#", 1)[0].split("?", 1)[0]
+    if not stripped or stripped.startswith(("data:", "blob:")):
+        return None
+    if stripped.startswith("/"):
+        candidate = os.path.join(site_dir, stripped.lstrip("/"))
+    else:
+        candidate = os.path.join(os.path.dirname(html_path), stripped)
+    return candidate if os.path.exists(candidate) else None
+
+
 # ---------------------------------------------------------------------------
 # Gate 1 — Boot
 # ---------------------------------------------------------------------------
@@ -458,6 +495,39 @@ base = sys.argv[1]
 routes = json.loads(sys.argv[2])
 axe_path = sys.argv[3]
 
+def _settle(page, cap_ms=8000):
+    # Wait for the page to stop changing, by PIXELS not by animation records.
+    # document.getAnimations() only reports WAAPI/CSS animations. Motion (and
+    # any other rAF-driven library) animates via requestAnimationFrame and never
+    # appears there, so awaiting it returned instantly and the audit sampled the
+    # page mid-fade. axe then measured half-opacity text against its background
+    # and reported phantom color-contrast violations that came and went between
+    # runs. Polling for consecutive pixel-identical frames catches what the
+    # animation registry cannot see.
+    import hashlib
+    info = page.evaluate(
+        "async () => { const a = document.getAnimations();"
+        " await Promise.race([Promise.all(a.map(x => x.finished.catch(() => {}))),"
+        " new Promise(r => setTimeout(r, 3000))]);"
+        " return {animation_count: a.length, settle_cap_ms: 3000}; }"
+    )
+    waited, last, stable = 0, None, 0
+    while waited < cap_ms:
+        digest = hashlib.sha256(page.screenshot(type="jpeg", quality=40)).hexdigest()
+        if digest == last:
+            stable += 1
+            if stable >= 2:
+                break
+        else:
+            stable = 0
+        last = digest
+        page.wait_for_timeout(250)
+        waited += 250
+    info["pixel_stable"] = stable >= 2
+    info["pixel_wait_ms"] = waited
+    return info
+
+
 results = []
 with sync_playwright() as p:
     browser = p.chromium.launch(args=["--no-sandbox", "--disable-dev-shm-usage"])
@@ -469,7 +539,7 @@ with sync_playwright() as p:
             try:
                 resp = page.goto(url, wait_until="domcontentloaded", timeout=20000)
                 status = resp.status if resp else 0
-                settle = page.evaluate("async () => { const animations = document.getAnimations(); await Promise.race([Promise.all(animations.map(a => a.finished.catch(() => {}))), new Promise(resolve => setTimeout(resolve, 3000))]); return {animation_count: animations.length, settle_cap_ms: 3000}; }")
+                settle = _settle(page)
                 page.add_script_tag(path=axe_path)
                 axe_result = page.evaluate(
                     "async () => await axe.run(document, { resultTypes: ['violations'] })"
@@ -1005,6 +1075,39 @@ import os; os.makedirs(out_dir, exist_ok=True)
 def viewport_pair(w):
     return (w, default_h.get(w, 900))
 
+def _settle(page, cap_ms=8000):
+    # Wait for the page to stop changing, by PIXELS not by animation records.
+    # document.getAnimations() only reports WAAPI/CSS animations. Motion (and
+    # any other rAF-driven library) animates via requestAnimationFrame and never
+    # appears there, so awaiting it returned instantly and the audit sampled the
+    # page mid-fade. axe then measured half-opacity text against its background
+    # and reported phantom color-contrast violations that came and went between
+    # runs. Polling for consecutive pixel-identical frames catches what the
+    # animation registry cannot see.
+    import hashlib
+    info = page.evaluate(
+        "async () => { const a = document.getAnimations();"
+        " await Promise.race([Promise.all(a.map(x => x.finished.catch(() => {}))),"
+        " new Promise(r => setTimeout(r, 3000))]);"
+        " return {animation_count: a.length, settle_cap_ms: 3000}; }"
+    )
+    waited, last, stable = 0, None, 0
+    while waited < cap_ms:
+        digest = hashlib.sha256(page.screenshot(type="jpeg", quality=40)).hexdigest()
+        if digest == last:
+            stable += 1
+            if stable >= 2:
+                break
+        else:
+            stable = 0
+        last = digest
+        page.wait_for_timeout(250)
+        waited += 250
+    info["pixel_stable"] = stable >= 2
+    info["pixel_wait_ms"] = waited
+    return info
+
+
 results = []
 with sync_playwright() as p:
     browser = p.chromium.launch()
@@ -1016,7 +1119,7 @@ with sync_playwright() as p:
             page = ctx.new_page()
             try:
                 page.goto(url, wait_until='domcontentloaded', timeout=15000)
-                settle = page.evaluate("async () => { const animations = document.getAnimations(); await Promise.race([Promise.all(animations.map(a => a.finished.catch(() => {}))), new Promise(resolve => setTimeout(resolve, 3000))]); return {animation_count: animations.length, settle_cap_ms: 3000}; }")
+                settle = _settle(page)
                 metrics = page.evaluate(
                     "() => ({sw: document.documentElement.scrollWidth, iw: window.innerWidth, sh: document.documentElement.scrollHeight})"
                 )
@@ -1124,10 +1227,10 @@ def gate_7_motion(server: ServerHandle, routes: list[str]) -> GateResult:
         for attr, url in parser.hrefs + parser.srcs:
             if attr != "href":
                 continue
-            if not url.lower().endswith(".css"):
+            if not url.lower().split("?", 1)[0].split("#", 1)[0].endswith(".css"):
                 continue
-            css_path = os.path.join(os.path.dirname(local_path), url)
-            if not os.path.exists(css_path):
+            css_path = resolve_local_asset(server.site_dir, local_path, url)
+            if css_path is None:
                 continue
             css_files_seen.append(css_path)
             try:
@@ -1173,6 +1276,61 @@ def gate_7_motion(server: ServerHandle, routes: list[str]) -> GateResult:
 # Gate 8 — Token discipline (re-scoped: var(--token) usage + no raw hex)
 # ---------------------------------------------------------------------------
 
+def _hex_defines_custom_property(css: str, hex_pos: int) -> bool:
+    """True when the hex at `hex_pos` is the VALUE of a `--custom-property`.
+
+    Token discipline means "colours enter the design through tokens", but the
+    rule used to be enforced by FILENAME ("anything outside tokens.css"). A
+    bundler defeats that: Next.js compiles tokens.css into a content-hashed
+    stylesheet, so all 50 legitimate token definitions suddenly read as
+    violations, while a genuinely hardcoded colour in the same file would have
+    been indistinguishable from them.
+
+    Checking the declaration instead is filename-independent and says what we
+    actually mean: `--color-fg: #111` defines a token and is fine; `color: #111`
+    bypasses the token layer and is not. `@property --tw-shadow { initial-value:
+    0 0 #0000 }` is how a registered custom property declares its default, which
+    is the same act of definition in different syntax.
+
+    >>> _hex_defines_custom_property("a{--color-fg: #111111;}", 13)
+    True
+    >>> _hex_defines_custom_property("a{color: #111111;}", 9)
+    False
+    >>> _hex_defines_custom_property("a{--x:#fff}", 6)
+    True
+    >>> _hex_defines_custom_property("@property --tw-shadow{initial-value:0 0 #0000}", 40)
+    True
+    """
+    start = max(css.rfind(";", 0, hex_pos), css.rfind("{", 0, hex_pos),
+                css.rfind("}", 0, hex_pos)) + 1
+    prop = css[start:hex_pos].split(":", 1)[0].strip()
+    return prop.startswith("--") or prop == "initial-value"
+
+
+def _is_transparent_hex(value: str) -> bool:
+    """True for fully-transparent hex, which expresses absence of colour.
+
+    `#0000` / `#00000000` is what Tailwind emits for "no shadow" and "no
+    background". An alpha of zero cannot carry a brand colour, so flagging it
+    reports noise rather than a design decision that bypassed the token layer.
+
+    >>> _is_transparent_hex("#0000")
+    True
+    >>> _is_transparent_hex("#00000000")
+    True
+    >>> _is_transparent_hex("#fff")
+    False
+    >>> _is_transparent_hex("#000000ff")
+    False
+    """
+    h = value.lstrip("#")
+    if len(h) == 4:
+        return h[3] == "0"
+    if len(h) == 8:
+        return h[6:8].lower() == "00"
+    return False
+
+
 def gate_8_token_discipline(server: ServerHandle, routes: list[str]) -> GateResult:
     """Token-discipline check (our re-scope of the workflow's vague 'source-paired 10x' gate):
         - The composed CSS uses var(--token) references.
@@ -1190,10 +1348,10 @@ def gate_8_token_discipline(server: ServerHandle, routes: list[str]) -> GateResu
         for attr, url in parser.hrefs + parser.srcs:
             if attr != "href":
                 continue
-            if not url.lower().endswith(".css"):
+            if not url.lower().split("?", 1)[0].split("#", 1)[0].endswith(".css"):
                 continue
-            css_path = os.path.join(os.path.dirname(local_path), url)
-            if not os.path.exists(css_path):
+            css_path = resolve_local_asset(server.site_dir, local_path, url)
+            if css_path is None:
                 continue
             css_files.append(css_path)
             try:
@@ -1206,8 +1364,10 @@ def gate_8_token_discipline(server: ServerHandle, routes: list[str]) -> GateResu
                 has_token_var = True
             var_uses += len(TOKEN_VAR_RE.findall(css))
             for match in HEX_RE.finditer(css):
-                # Strip the leading '#' and look at the hex. Skip short (3) or 8-digit expansions
-                # that are likely functional (e.g. transparency tokens).
+                if _hex_defines_custom_property(css, match.start()):
+                    continue
+                if _is_transparent_hex(match.group(0)):
+                    continue
                 violations_raw_hex.append(f"{css_path}: {match.group(0)}")
 
     if not css_files:
@@ -1768,6 +1928,182 @@ def render_report(results: list[GateResult], site_dir: str, args: argparse.Names
 # Main
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Gate 11 — Content fidelity (did the plan's copy actually reach the page?)
+# ---------------------------------------------------------------------------
+
+_TAG_RE = re.compile(r"<(script|style)[^>]*>.*?</\1>", re.S | re.I)
+_ANY_TAG_RE = re.compile(r"<[^>]+>")
+_WORD_RE = re.compile(r"[a-z0-9]+")
+_PLACEHOLDER_RE = re.compile(r"\[no [a-z ]+ in plan\]", re.I)
+_TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
+
+
+def _visible_text(html: str) -> str:
+    html = _TAG_RE.sub(" ", html)
+    text = _ANY_TAG_RE.sub(" ", html)
+    for ent, rep in (("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"), ("&quot;", '"'),
+                     ("&#x27;", "'"), ("&#39;", "'"), ("&nbsp;", " "), ("&rsquo;", "'"),
+                     ("&ldquo;", '"'), ("&rdquo;", '"'), ("&mdash;", "-"), ("&ndash;", "-")):
+        text = text.replace(ent, rep)
+    return text.lower()
+
+
+def gate_11_content_fidelity(server: "ServerHandle", routes: list, design_plan: str | None,
+                             timeout: float, coverage_threshold: float = 0.85) -> GateResult:
+    """Every copy block the design pass wrote must actually reach the DOM.
+
+    This gate exists because nothing else could see the worst defect the
+    pipeline ever shipped. The renderer hardcoded which copy role each layout
+    read and silently dropped the others, so six of eleven sections lost their
+    headline, body or call-to-action, three sections rendered the literal debug
+    string "[no body in plan]", and one shipped an 879px empty box. Every other
+    gate passed: the page built, was accessible, met contrast, used tokens and
+    fit the bundle budget. A page can satisfy all of that and still not say what
+    it was supposed to say.
+
+    Matching is by TOKEN COVERAGE, not verbatim substring: layouts legitimately
+    reshape a block (a comma-separated services list becomes nine accordion
+    rows), so an exact-match check would fail on correct output. A block that
+    was genuinely dropped scores near zero, which is the signal we want.
+    """
+    if not design_plan:
+        return GateResult(
+            id="11", name="Content fidelity", verdict="NOT-EXERCISED",
+            evidence_basis="Not exercised",
+            summary="No --design-plan supplied; cannot verify the plan's copy reached the page.",
+            notes=["Pass --design-plan <plan.json> to exercise this gate."],
+            observations={"applicable": False},
+        )
+    try:
+        plan = json.loads(pathlib.Path(design_plan).read_text())
+    except Exception as exc:  # noqa: BLE001
+        return GateResult(
+            id="11", name="Content fidelity", verdict="FAIL",
+            evidence_basis="DOM+assets confirmed",
+            summary=f"design plan could not be read: {exc}",
+            notes=[], observations={"design_plan": design_plan},
+        )
+
+    skipped = {s.get("id") for s in plan.get("skipped_sections", []) or []}
+    blocks = [b for b in plan.get("copy_blocks", []) or []
+              if b.get("section_id") not in skipped and (b.get("text") or "").strip()]
+
+    pages, raw_pages = [], []
+    for route in routes:
+        url = server.base_url() + normalize_route(route)
+        try:
+            with urlopen(url, timeout=timeout) as r:
+                raw = r.read().decode("utf-8", "replace")
+            raw_pages.append(raw)
+            pages.append(_visible_text(raw))
+        except Exception as exc:  # noqa: BLE001
+            return GateResult(
+                id="11", name="Content fidelity", verdict="NOT-EXERCISED",
+                evidence_basis="Not exercised",
+                summary=f"could not fetch {url}: {exc}",
+                notes=[], observations={"route": route},
+            )
+    haystack = " ".join(pages)
+    words_by_route = {r: set(_WORD_RE.findall(t)) for r, t in zip(routes, pages)}
+    hay_words = set(_WORD_RE.findall(haystack))
+
+    # PER-ROUTE attribution. Scoring every block against the union of all routes
+    # lets a block that belongs on /about/ but leaked onto / still pass, which
+    # defeats the point on a multi-page site. When the plan declares pages[] we
+    # know which route each section belongs to, so score it there. Without
+    # pages[] the union is correct and stays — that is the single-page path.
+    route_of_section = {}
+    for pg in plan.get("pages", []) or []:
+        slug = (pg.get("slug") or "").strip("/")
+        route = "/" if not slug else f"/{slug}/"
+        for sid in pg.get("section_ids", []) or []:
+            route_of_section[sid] = route
+
+    missing, weak = [], []
+    for b in blocks:
+        words = _WORD_RE.findall((b.get("text") or "").lower())
+        if not words:
+            continue
+        expected = route_of_section.get(b.get("section_id"))
+        scope = words_by_route.get(expected, hay_words) if expected else hay_words
+        hits = sum(1 for w in words if w in scope)
+        cov = hits / len(words)
+        entry = {"section_id": b.get("section_id"), "role": b.get("role"),
+                 "coverage": round(cov, 3), "text": (b.get("text") or "")[:80]}
+        if expected:
+            entry["expected_route"] = expected
+        if cov < 0.5:
+            missing.append(entry)
+        elif cov < coverage_threshold:
+            weak.append(entry)
+
+    placeholders = sorted(set(_PLACEHOLDER_RE.findall(haystack)))
+
+    # Navigation: the plan decides which sections belong in nav. If it marks any
+    # and the page has no <nav>, the chrome is missing — the state the renderer
+    # shipped in for its entire life. EVERY route must carry it: `any` would let
+    # one navigable page vouch for four that strand the visitor.
+    wants_nav = (any(s.get("in_nav") for s in plan.get("sections", []) or [])
+                 or any(p.get("in_nav") for p in plan.get("pages", []) or []))
+    # Check the RAW markup, not the tag-stripped text — _visible_text has
+    # already removed every element by the time it is searched.
+    routes_without_nav = [r for r, raw in zip(routes, raw_pages)
+                          if "<nav" not in raw.lower()]
+    has_nav = not routes_without_nav
+    nav_missing = wants_nav and bool(routes_without_nav)
+
+    # A shared <title> across every route is the canonical symptom of a dynamic
+    # route missing generateMetadata(). Nothing else in the harness can see it.
+    titles = [(_TITLE_RE.search(raw).group(1).strip() if _TITLE_RE.search(raw) else "")
+              for raw in raw_pages]
+    dup_titles = len(routes) > 1 and len(set(titles)) < len(titles)
+
+    obs = {"copy_blocks_checked": len(blocks), "missing": missing, "weak": weak,
+           "placeholders_found": placeholders, "wants_nav": wants_nav,
+           "nav_present": has_nav, "routes_without_nav": routes_without_nav,
+           "routes": list(routes), "titles": titles,
+           "coverage_threshold": coverage_threshold}
+
+    problems = []
+    if missing:
+        problems.append(f"{len(missing)} copy block(s) did not reach the page")
+    if placeholders:
+        problems.append(f"{len(placeholders)} placeholder string(s) rendered")
+    if nav_missing:
+        problems.append(f"{len(routes_without_nav)} route(s) have no <nav>")
+    if dup_titles:
+        problems.append("routes share a <title> (dynamic route missing generateMetadata?)")
+    if problems:
+        notes = [f"MISSING {m['section_id']}/{m['role']}"
+                 + (f" on {m['expected_route']}" if m.get("expected_route") else "")
+                 + f" (coverage {m['coverage']}): {m['text']}"
+                 for m in missing[:12]]
+        notes += [f"PLACEHOLDER rendered: {p}" for p in placeholders[:5]]
+        if nav_missing:
+            notes.append("no <nav> element on: " + ", ".join(routes_without_nav))
+        if dup_titles:
+            notes.append("duplicate <title> across routes: " + json.dumps(titles))
+        return GateResult(
+            id="11", name="Content fidelity", verdict="FAIL",
+            evidence_basis="DOM+assets confirmed",
+            summary="; ".join(problems) + ".",
+            notes=notes, observations=obs,
+        )
+
+    return GateResult(
+        id="11", name="Content fidelity", verdict="PASS",
+        evidence_basis="DOM+assets confirmed",
+        summary=(f"All {len(blocks)} copy block(s) reached the DOM across "
+                 f"{len(routes)} route(s) "
+                 f"(>={int(coverage_threshold * 100)}% token coverage); no placeholder strings; "
+                 + ("navigation present." if wants_nav else "plan requests no navigation.")),
+        notes=[f"weak-but-present: {w['section_id']}/{w['role']} {w['coverage']}" for w in weak[:8]],
+        observations=obs,
+    )
+
+
+
 def run(args: argparse.Namespace) -> int:
     site_dir = os.path.abspath(args.site_dir)
     if not os.path.isdir(site_dir):
@@ -1831,6 +2167,7 @@ def run(args: argparse.Namespace) -> int:
             renderer_root = find_package_root_for(site_dir)
         results.append(gate_9_build(site_dir, renderer_root, args.timeout))
         results.append(gate_10_bundle(site_dir, args.bundle_budget_kb))
+        results.append(gate_11_content_fidelity(server, routes, args.design_plan, args.timeout))
 
     finally:
         server.kill()
@@ -1938,7 +2275,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     )
     p.add_argument("site_dir", help="Site root directory (index.html + assets).")
     p.add_argument("-o", "--out", required=True, help="Report output directory.")
-    p.add_argument("--routes", default="/", help="Comma-separated routes to validate (default: /).")
+    p.add_argument("--routes", type=parse_str_list, default=["/"],
+                   help="Comma-separated routes to validate (default: /).")
     p.add_argument("--entry", default="index.html", help="Default entry file for bare routes (default: index.html).")
     p.add_argument("--viewports", type=parse_int_list, default=DEFAULT_VIEWPORTS,
                    help=f"Comma-separated viewport widths (default: {','.join(str(v) for v in DEFAULT_VIEWPORTS)}).")
@@ -1949,6 +2287,9 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
                    help="Path to the Next.js renderer project root (the directory containing "
                         "package.json). Only used by Gate 9 (build). When omitted and the site "
                         "dir is a Next.js export, validate_site.py walks upward to find package.json.")
+    p.add_argument("--design-plan",
+                    help="design-plan.json. Enables Gate 11 (content fidelity): verifies "
+                         "every copy block the design pass wrote actually reached the DOM.")
     p.add_argument("--bundle-budget-kb", type=int, default=DEFAULT_BUNDLE_BUDGET_KB,
                    help=f"Gate 10 budget: total gzipped JS in _next/static/ must be under this "
                         f"many KB (default: {DEFAULT_BUNDLE_BUDGET_KB}).")
@@ -1957,6 +2298,25 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def parse_int_list(s: str) -> list[int]:
     return [int(x.strip()) for x in s.split(",") if x.strip()]
+
+
+def parse_str_list(s: str) -> list[str]:
+    """Split a comma-separated CLI value into a list.
+
+    `--routes` was declared with no `type=`, so argparse handed `run()` the raw
+    STRING and `[normalize_route(r) for r in args.routes]` iterated it one
+    CHARACTER at a time: `--routes '/,/about/'` became 15 single-character
+    routes. Multi-route validation has therefore never actually run — which is
+    why gate 5 has only ever taken its `len(routes) <= 1` branch.
+
+    >>> parse_str_list("/,/about/")
+    ['/', '/about/']
+    >>> parse_str_list(" /a , /b ")
+    ['/a', '/b']
+    >>> parse_str_list("/")
+    ['/']
+    """
+    return [x.strip() for x in s.split(",") if x.strip()]
 
 
 def main() -> int:

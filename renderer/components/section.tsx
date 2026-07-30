@@ -15,6 +15,20 @@
  *
  * Below 1024px every variant collapses to a single stacked column so the
  * design is still legible on mobile.
+ *
+ * GUTTER SIZING — why the large gutters live at `xl:`, not `lg:`
+ * -------------------------------------------------------------
+ * A 12-column grid pays its gutter 11 times. `lg:` starts at 1024px, where the
+ * container is only ~928px wide after padding, so a 96px (`gap-24`) gutter cost
+ * 11 x 96 = 1056px of gutter inside a 928px box. Tailwind's `grid-cols-12` is
+ * `repeat(12, minmax(0, 1fr))`, so the columns did not shrink gracefully — they
+ * floored at literally 0px and the content punched out of the viewport. The
+ * whole 1024-1279px band was structurally broken while looking fine at 1440px,
+ * which is why it survived until the responsive gate ran against a real build.
+ *
+ * Rule of thumb encoded below: keep `lg:` gutters <= 32px (11 x 32 = 352px,
+ * leaving ~48px per column at 1024px) and only widen at `xl:` where there is
+ * room to pay for it. Gate 6 (Responsive) is what enforces this now.
  */
 
 import type { ReactNode } from "react";
@@ -61,7 +75,7 @@ export function HeroLayout({ children }: { children: ReactNode }) {
     <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
       <div
         className={cn(
-          "grid gap-12 lg:gap-16",
+          "grid gap-12 lg:gap-8 xl:gap-12",
           // >=1024px: 12-col explicit grid; left 7, right 5.
           "grid-cols-1 lg:grid-cols-12",
           "items-start",
@@ -81,7 +95,7 @@ export function PrimaryLayout({ children }: { children: ReactNode }) {
     <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
       <div
         className={cn(
-          "grid gap-8 lg:gap-24",
+          "grid gap-8 lg:gap-8 xl:gap-12",
           "grid-cols-1 lg:grid-cols-12",
           "items-start",
         )}
@@ -101,7 +115,7 @@ export function SecondaryLayout({ children }: { children: ReactNode }) {
     <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
       <div
         className={cn(
-          "grid gap-8 lg:gap-12",
+          "grid gap-8 lg:gap-8 xl:gap-12",
           "grid-cols-1 lg:grid-cols-12",
           "items-start",
         )}
@@ -119,7 +133,7 @@ export function MinorLayout({ children }: { children: ReactNode }) {
     <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
       <div
         className={cn(
-          "grid gap-6 lg:gap-8",
+          "grid gap-6 lg:gap-6 xl:gap-8",
           "grid-cols-1 lg:grid-cols-12",
           "items-baseline",
         )}

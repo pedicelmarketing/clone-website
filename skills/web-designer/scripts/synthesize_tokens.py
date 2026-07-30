@@ -488,6 +488,7 @@ def render_css(
     *,
     meta: dict[str, Any],
     colors: dict[str, str],
+    ground: str = "light",
     neutrals: list[str],
     families: dict[str, str],
     scale_ratio: int | float,
@@ -523,6 +524,16 @@ def render_css(
     _lum_sorted = sorted(neutrals, key=_relative_luminance)
     fg, bg = _lum_sorted[0], _lum_sorted[-1]
     fg_note = "darkest and lightest brand neutrals"
+
+    # GROUND. Luminance tells us which neutral is darkest, not which one the
+    # brand sits on. A brand whose identity is gold on dark green is a dark-
+    # ground brand, and forcing it light has real consequences: its gold measures
+    # 2.22:1 as text on cream but 4.94:1 on the dark green, and the opacity
+    # ladder bottoms out at /70 instead of /55. Defaults to light so no existing
+    # brand changes.
+    if (ground or "light").lower() == "dark":
+        fg, bg = bg, fg
+        fg_note = "brand declares a DARK ground; lightest neutral is the ink"
     if _contrast_ratio(fg, bg) < 4.5:
         fg, bg = "#111111", "#ffffff"
         fg_note = ("brand neutrals could not reach 4.5:1 "
@@ -532,6 +543,30 @@ def render_css(
     lines.append(f"  --color-bg: {bg};")
     lines.append(f"  /* fg/bg chosen by luminance ({fg_note}); "
                  f"contrast {_contrast_ratio(fg, bg)}:1 */")
+
+    # TEXT ON A FILLED BRAND SURFACE — same derivation, same reason.
+    #
+    # `--primary-foreground` was hardwired to --color-neutral-0, i.e. the exact
+    # positional assumption fixed above, one layer up. On a brand whose
+    # neutral-0 is a cream (#FBF7E9) and whose primary is a bright yellow
+    # (#FFC517), every filled button rendered cream-on-yellow at 1.47:1 —
+    # unreadable, and brand-dependent, so it passed on the first brand tested
+    # and failed on the second.
+    #
+    # Pick whichever of the derived fg/bg contrasts better against the fill, and
+    # fall back to black/white if neither brand colour reaches AA.
+    for _role, _fill in (("primary", colors.get("primary")),
+                         ("accent", colors.get("accent"))):
+        if not _fill:
+            continue
+        _best = max((fg, bg), key=lambda c: _contrast_ratio(c, _fill))
+        _ratio = _contrast_ratio(_best, _fill)
+        if _ratio < 4.5:
+            _best = max(("#111111", "#ffffff"), key=lambda c: _contrast_ratio(c, _fill))
+            _ratio = _contrast_ratio(_best, _fill)
+        lines.append(f"  --color-{_role}-text: {_best};")
+        lines.append(f"  /* text on --color-{_role} ({_fill}); "
+                     f"contrast {_ratio}:1 */")
     lines.append("")
     # Emit each font-family token as a real fallback chain, not a bare name.
     # A single-family declaration breaks silently when the primary face fails
@@ -800,6 +835,9 @@ def synthesize(
     css = render_css(
         meta=meta,
         colors=colors,
+        # The brand declares which ground it sits on; luminance only tells us
+        # which neutral is darkest, not which one the identity is built on.
+        ground=(brief["palette_from_logo"].get("ground") or "light"),
         neutrals=neutrals,
         families=families,
         scale_ratio=ratio,

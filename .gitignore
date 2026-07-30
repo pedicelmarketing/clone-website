@@ -11,3 +11,15 @@ node_modules/
 gateway.pid
 gateway_state.json
 response_store.db*
+
+# Fetched brand photography — regenerate with fetch_brand_assets.py.
+# Brand-owned imagery is not redistributed through this repo.
+renderer/public/brand/*
+!renderer/public/brand/ASSET-MANIFEST.json
+
+# Next.js renderer build output produced by verify.sh (render_nextjs.py -o).
+# Regenerable in one command, and it embeds a COPY of renderer/public/brand —
+# committing it would smuggle brand-owned photography into git through the back
+# door after we deliberately gitignored the originals. The validation report and
+# gate-results.json for this build ARE tracked; the build artifact is not.
+reports/m6-renderer-site/
