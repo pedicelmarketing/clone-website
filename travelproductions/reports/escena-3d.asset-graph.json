@@ -1,0 +1,4385 @@
+{
+  "schema_version": "1.3",
+  "capture_tool_version": "1.3",
+  "page": "https://travelproductions.film/es/escena-3d/",
+  "requested_page": "https://travelproductions.film/es/escena-3d/",
+  "canonical_origin": "https://travelproductions.film",
+  "navigation": {
+    "requested_url": "https://travelproductions.film/es/escena-3d/",
+    "initial_url": "https://travelproductions.film/es/escena-3d/",
+    "initial_status": 200,
+    "final_url": "https://travelproductions.film/es/escena-3d/",
+    "final_status": 200,
+    "redirects": [],
+    "navigation_events": [
+      {
+        "url": "https://travelproductions.film/es/escena-3d/",
+        "status": 200,
+        "phase": "desktop:load",
+        "kind": "initial"
+      }
+    ],
+    "navigation_error": null,
+    "unauthorized_redirects": [],
+    "title": "Escena 3D ES | Travel Productions",
+    "access": {
+      "state": "ok",
+      "blocked": false,
+      "title": "Escena 3D ES | Travel Productions",
+      "final_url": "https://travelproductions.film/es/escena-3d/",
+      "evidence": {
+        "http_status": 200,
+        "url_challenge_markers": [],
+        "title_challenge_markers": [],
+        "body_challenge_markers": [],
+        "selector_markers": [],
+        "url_login_markers": [],
+        "title_login_markers": [],
+        "body_login_markers": [],
+        "visible_password_fields": 0,
+        "title_error_markers": [],
+        "body_error_markers": [],
+        "consent_overlay_coverage": 0,
+        "root_overflow_locked": false
+      }
+    }
+  },
+  "access_result": "ok",
+  "blocked_by_challenge": false,
+  "allowed_navigation_origins": [
+    "https://travelproductions.film"
+  ],
+  "capture_started_at": "2026-07-30T12:09:55Z",
+  "captured_at": "2026-07-30T12:10:16Z",
+  "capture_passes": [
+    {
+      "viewport": "desktop",
+      "size": {
+        "width": 1440,
+        "height": 900
+      },
+      "fresh_isolated_context": true,
+      "service_worker_mode": "allow",
+      "navigation": {
+        "requested_url": "https://travelproductions.film/es/escena-3d/",
+        "initial_url": "https://travelproductions.film/es/escena-3d/",
+        "initial_status": 200,
+        "final_url": "https://travelproductions.film/es/escena-3d/",
+        "final_status": 200,
+        "redirects": [],
+        "navigation_events": [
+          {
+            "url": "https://travelproductions.film/es/escena-3d/",
+            "status": 200,
+            "phase": "desktop:load",
+            "kind": "initial"
+          }
+        ],
+        "navigation_error": null,
+        "unauthorized_redirects": [],
+        "title": "Escena 3D ES | Travel Productions",
+        "access": {
+          "state": "ok",
+          "blocked": false,
+          "title": "Escena 3D ES | Travel Productions",
+          "final_url": "https://travelproductions.film/es/escena-3d/",
+          "evidence": {
+            "http_status": 200,
+            "url_challenge_markers": [],
+            "title_challenge_markers": [],
+            "body_challenge_markers": [],
+            "selector_markers": [],
+            "url_login_markers": [],
+            "title_login_markers": [],
+            "body_login_markers": [],
+            "visible_password_fields": 0,
+            "title_error_markers": [],
+            "body_error_markers": [],
+            "consent_overlay_coverage": 0,
+            "root_overflow_locked": false
+          }
+        }
+      },
+      "settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 8000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 4,
+        "elapsed_ms": 1016,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 249,
+          "resourceCount": 103,
+          "scrollHeight": 1542,
+          "pendingImages": 0,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "scroll": {
+        "mechanism": "window_scroll",
+        "steps_requested": 18,
+        "steps_completed": 18,
+        "returned_to_start": true,
+        "profile": {
+          "scrollHeight": 1542,
+          "innerHeight": 900,
+          "windowScrollY": 0,
+          "windowRange": 642,
+          "rootOverflowHidden": false,
+          "internalContainer": null,
+          "virtualSignals": []
+        },
+        "observations": {
+          "window_scroll_y_max": 642,
+          "window_scroll_y_after_return": 0
+        },
+        "warnings": []
+      },
+      "service_worker": {
+        "api_available": true,
+        "controller": null,
+        "registrations": [],
+        "cache_names": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "errors": []
+      },
+      "service_worker_validation": {
+        "required": false
+      },
+      "route_inventory": [
+        {
+          "url": "https://travelproductions.film/campo-de-golf/",
+          "path": "/campo-de-golf/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/es/contacto/",
+          "path": "/es/contacto/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/es/escena-3d/",
+          "path": "/es/escena-3d/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/es/inicio/",
+          "path": "/es/inicio/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/es/servicios/",
+          "path": "/es/servicios/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/es/sobre-nosotros/",
+          "path": "/es/sobre-nosotros/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/es/trabajos/",
+          "path": "/es/trabajos/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/pruebas-3d-ermita-san-jose-de-los-llanos/",
+          "path": "/pruebas-3d-ermita-san-jose-de-los-llanos/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/pruebas-3d-esculturas/",
+          "path": "/pruebas-3d-esculturas/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/pruebas-3d-iglesia-los-realejos-v2/",
+          "path": "/pruebas-3d-iglesia-los-realejos-v2/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://travelproductions.film/pruebas-3d-museo-tenerife/",
+          "path": "/pruebas-3d-museo-tenerife/",
+          "source": "anchor",
+          "url_redacted": false
+        }
+      ],
+      "metadata_references": [
+        {
+          "url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "open_graph_image",
+          "source": "meta[og:image]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "final_url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-32x32.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=icon]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/png",
+            "final_url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-32x32.png",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-192x192.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=icon]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/png",
+            "final_url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-192x192.png",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-180x180.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=apple-touch-icon]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/png",
+            "final_url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-180x180.png",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "json_ld_logo",
+          "source": "json-ld:@graph.3.logo.url",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "final_url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "json_ld_logo",
+          "source": "json-ld:@graph.3.logo.contentUrl",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "final_url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "desktop"
+          ]
+        }
+      ],
+      "post_scroll_settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 8000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 3,
+        "elapsed_ms": 760,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 249,
+          "resourceCount": 107,
+          "scrollHeight": 1542,
+          "pendingImages": 0,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "post_scroll_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Escena 3D ES | Travel Productions",
+        "final_url": "https://travelproductions.film/es/escena-3d/",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "post_metadata_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Escena 3D ES | Travel Productions",
+        "final_url": "https://travelproductions.film/es/escena-3d/",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "final_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Escena 3D ES | Travel Productions",
+        "final_url": "https://travelproductions.film/es/escena-3d/",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_requests": 102,
+    "total_responses": 102,
+    "same_origin": 75,
+    "external": 27,
+    "loaded_during_scroll": 4,
+    "automatically_acquirable_static_get_head": 98,
+    "metadata_references": 6,
+    "by_resource_type": {
+      "media": 3,
+      "document": 22,
+      "script": 23,
+      "stylesheet": 43,
+      "image": 4,
+      "font": 4,
+      "fetch": 2,
+      "ping": 1
+    },
+    "by_request_class": {
+      "static": 76,
+      "document": 22,
+      "non_replayable": 3,
+      "telemetry": 1
+    },
+    "providers_detected": [
+      "Vimeo"
+    ],
+    "recorder_errors": 0
+  },
+  "same_site_routes_from_anchors": [
+    "/campo-de-golf/",
+    "/es/contacto/",
+    "/es/escena-3d/",
+    "/es/inicio/",
+    "/es/servicios/",
+    "/es/sobre-nosotros/",
+    "/es/trabajos/",
+    "/pruebas-3d-ermita-san-jose-de-los-llanos/",
+    "/pruebas-3d-esculturas/",
+    "/pruebas-3d-iglesia-los-realejos-v2/",
+    "/pruebas-3d-museo-tenerife/"
+  ],
+  "route_inventory": [
+    {
+      "url": "https://travelproductions.film/campo-de-golf/",
+      "path": "/campo-de-golf/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/es/contacto/",
+      "path": "/es/contacto/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/es/escena-3d/",
+      "path": "/es/escena-3d/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/es/inicio/",
+      "path": "/es/inicio/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/es/servicios/",
+      "path": "/es/servicios/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/es/sobre-nosotros/",
+      "path": "/es/sobre-nosotros/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/es/trabajos/",
+      "path": "/es/trabajos/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/pruebas-3d-ermita-san-jose-de-los-llanos/",
+      "path": "/pruebas-3d-ermita-san-jose-de-los-llanos/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/pruebas-3d-esculturas/",
+      "path": "/pruebas-3d-esculturas/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/pruebas-3d-iglesia-los-realejos-v2/",
+      "path": "/pruebas-3d-iglesia-los-realejos-v2/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://travelproductions.film/pruebas-3d-museo-tenerife/",
+      "path": "/pruebas-3d-museo-tenerife/",
+      "source": "anchor",
+      "url_redacted": false
+    }
+  ],
+  "metadata_references": [
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-180x180.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=apple-touch-icon]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "HEAD",
+        "metadata_only": true,
+        "status": 200,
+        "content_type": "image/png",
+        "final_url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-180x180.png",
+        "redirect_target": null,
+        "redirect_authorized": null
+      },
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-192x192.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=icon]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "HEAD",
+        "metadata_only": true,
+        "status": 200,
+        "content_type": "image/png",
+        "final_url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-192x192.png",
+        "redirect_target": null,
+        "redirect_authorized": null
+      },
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-32x32.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=icon]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "HEAD",
+        "metadata_only": true,
+        "status": 200,
+        "content_type": "image/png",
+        "final_url": "https://travelproductions.film/wp-content/uploads/2024/08/cropped-logo-travel-productions_v2-1-32x32.png",
+        "redirect_target": null,
+        "redirect_authorized": null
+      },
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_logo",
+      "source": "json-ld:@graph.3.logo.url",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "HEAD",
+        "metadata_only": true,
+        "status": 200,
+        "content_type": "image/jpeg",
+        "final_url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+        "redirect_target": null,
+        "redirect_authorized": null
+      },
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_logo",
+      "source": "json-ld:@graph.3.logo.contentUrl",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "HEAD",
+        "metadata_only": true,
+        "status": 200,
+        "content_type": "image/jpeg",
+        "final_url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+        "redirect_target": null,
+        "redirect_authorized": null
+      },
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "open_graph_image",
+      "source": "meta[og:image]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "HEAD",
+        "metadata_only": true,
+        "status": 200,
+        "content_type": "image/jpeg",
+        "final_url": "https://travelproductions.film/wp-content/uploads/2024/05/logo-login.jpg",
+        "redirect_target": null,
+        "redirect_authorized": null
+      },
+      "passes": [
+        "desktop"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://travelproductions.film//wp-content/uploads/2025/01/Esculturas.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9e2b785324b0a0e1fc1871e46218e9eca7fd686f4f9feae72d40860d7b4ce655",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 4251269,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 3,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/es/escena-3d/",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "833187c902bd1ac01f649f46c2fdccd16c4701d6ea181ae520d7c787ba13136b",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets//lib/instant-page/instant-page.min.js?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c2c61ed9432cdf00e2cdbb3ee09a8f146ce0fda1de665ef98f985935f5efae00",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 1046,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9743bfc87f42615bfca62a73a89f47e8b8305e3f4b28ee811e38d74e6dc8f884",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 328,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/css/modules/motion-fx.min.css?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9a24f701371f298d6699bae116352a07b4c65a86bb66fc741508cd53e7fbe491",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 240,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ec80522368e4496aa66e66264ae5c427dbc0f53233dc0f97bee884e899e20d65",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 162,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9b138d6ae2ee3b039cb134f088653d3b3b7c0c23ca02df24779eacc64eaa8321",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 10019,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0e6815f8d4cf3db7d1e4853c728492ca6dbce98a8567c497afbdc624fc954bb6",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 6164,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/js/page-transitions.min.js?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5b81e81c1746a2ded30ebd911e874fa2455453b2de001e735a0c4fee3c90ffb3",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 10944,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c8d58963797af8c8b3342af57670bc4ba68cc44f3ed048ddbbbbd7322584f282",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 2609,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=4.2.0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1973017c79c7fd01723b171c4b5766a420de36178bd0aad3c29ba0d61886137d",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 1442,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0af1c8a265902c6abe6bc4d17cc03657b3219515548465917aa00f72251bae14",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 126,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1d18205649281db02d4cc09ae12df18ffeaaf321fd245c6d3864feaa970f1297",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 214,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/css/widget-video.min.css?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7e3bb05d76c0424d8013eea43c3448b2408601d9eed0d30183391fad54241d16",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 328,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fb117106166001d7fe1523e16021c96c9ebff53a54b55014dc37d039b030fed9",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 15261,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f74072365eedb0ee03825d0fe900dfbdf2843a4b6c730498196bafb1ba4f243b",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 10078,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9814b08252dbcab7d465c00b618a001776b6a2cd248e3903f93aff4bd42dcf63",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 2496,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/js/text-editor.45609661e409413f1cef.bundle.min.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f297e1d19e3c3ab1e840c081ff131608ccd6e045983361b43748343e5723eb44",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 592,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c33e60cc013b4293cd665a5f93ce8144bee71ac2c8c14cd6765c23b891431ebc",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 2331,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f065bf58dae2bededfa3285b284f23060a075b1265c24260a824bd84388c6027",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 77,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "164597fa5050c55853c0ce86658ece0cc00129c0d2cf5a0d9b225d5900cfd228",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 137,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=4.2.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bbd9a45400d0ad20af2af6b2c6faf63f14adc22088a2403e1cdee276773dcfcb",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 130,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.3",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "64862c4d88129be422ebc50d9e52e10191b162f08132be0f20560434a218758f",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 3582,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/plugins/mousewheel-smooth-scroll/js/lenis.min.js?ver=1.1.19",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "052ea9960133d901b343190878e0ab4d9cb63af31f4be786332e0dfd07194bcf",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 3765,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.9",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "38234bfde6e5ab06da57af7ee2daccb8fbeadd2680d5a96d334db659db9a3ba4",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 1259,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.9",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3b79cf1ac8f75faac9effdc9a0a843ba04827b9325a1b6028b19af34bb5cd4be",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 1584,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.9",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bb007858dfd9612a7a394bc49af9e28277257580c8273d9014f2143a4103c2ca",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 1127,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.9",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ec945c5eaf0608bb7dd73b8d7f5733fb4fadf79cce79711038bdd319a6a56912",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 493,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/04/Logo-Travel-web_blanco.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "029ca0793f1badda44effe24a0bc545dc440e9b0458c58845ee73ff5af04039e",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": 2392,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/05/safiro-medium-webfont.woff2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cf8c9e1059dcb963e010bdcbd979d9f2125654c1465eb183fc0465ed5fe07412",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 14816,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/05/safiro-semibold-webfont.woff2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2eb6e1aef11ea2f99898d66be08c266e1486008c78d7c999608742dfdb73bfcd",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 14884,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2024/11/Iglesia_Los_Relajos_with_background.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2ab06f66fd5a552a1cf570f548b5c9bdc56be3afd88ebca300971906315b1901",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 5694730,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 3,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2025/05/Iglesia_San_Jose_de_los_L_with_background.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9c51422040b59b3a57c91e48e50155deafdd1785b3932946f9db852976f5935e",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 4892729,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 3,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2025/07/Captura-de-pantalla-2025-07-29-a-las-10.02.33-1024x508.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "332c3a87c46a64ab1de2bb049f895b167649d4e89b6f01891c2294f4276c7399",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 112212,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/2025/07/Captura-de-pantalla-2025-07-29-a-las-10.03.37-scaled.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "90d71aeffd8fe99b753f14af54c3f3a3b189c5fa2ead81a9d99a1d83c981ba19",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 427810,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e1be7544f5af5adeb6b8df26cf6ee6aaf5655e5c6f05137cc517b0eac2af9691",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 6554,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/custom-widget-icon-box.min.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5a0bf58724a9198c3880833e83e6fed54ca5c56e8a1b0516fcd25417a259fee3",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 354,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-1002.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8cbd66dc10e7d24cb909528e61b95fbf1386da93cd9272c1fd63ef38f4215cca",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 598,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-1005.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "28f33fa43497ca2085b0e774392a3f700ebd784bb5b61ee973583fce27a373a6",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 598,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-1104.css?ver=1785413375",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5cb9c62044a83c97a2965adbb0f3004807a2661b037464451051442cb9654f0b",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 297,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-261.css?ver=1785400968",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5fc527648eb9d82ba6111aee978c5a4e0dfb772560a3759b69bbc3475f769e53",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 1234,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-3456.css?ver=1785413396",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6c69937ac2ccabada9d99ce5a8e419c523f6d103a40f8a665a8cb29854ed4f12",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-671.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4b039085c748c3cda510e00b8676690830ee27e25457992ebb81fcec7631707b",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 1286,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-773.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c420ee3cff4838f1e633791a4a53920d3813df41978a80024053814f7ae31992",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-778.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "17f3fe9f5b94cb5016eff4fa04492d48400ea8c5530c90b251ab8c2765c002a9",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-783.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3324fe65434b2559d493d44853f996dbfbc74c5036db1ea263dbcb4459159350",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-787.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e3595bb2e2aeb1ac6287b61de9ee36c43a2add67a8769ec6d901e1320fc9e9ef",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-798.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0a8bfd2f43c3651a4ccb7e8c04928a04937ab24c08832d7ef3a74fbc3a68627e",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 602,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-8.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2dfb63b5219d6a759f5c3c83b8e9c313167fda6483d2169e9c14fbbb2a3d5154",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 525,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-809.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "faaa19bf1018b82097818c7666ea13a4dc4aea902cd8e16f60f78d0eae8aedaa",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-822.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "54e85d4aae44d0e01e161856eb23b1d7748947af2f0ba36d2632f2afb125d349",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-827.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "75d1d80d89a5c48ba26b98a8e3eabb4e4c103660824551724b990e8a24e3ba93",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-864.css?ver=1785400729",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "eb3cf1a9c00bbf7e4a8aa4f88c230a43e3aa85f7f2bde7c12d12e76458f8b32b",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-874.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "17ade91ab258a7c6d0497d901f86a6f09425a1e5113293429be25bf4793700e6",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-883.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "eb7d7b89b785cd5dffce4c556617f95a9e264d8a9654299c0aea6d5d0d676c89",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-918.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bbdb59d725214d20b7cb795ffeea336ad6711abca32bd91059816337d56bf855",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-923.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b1b58b521e23477eb26a5f5278eb057c39eedb85efc13a6f7dee65f16c436224",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-931.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "40fec52e23ccd092cf5908e57a9e3838da2036575675e00427ec0c0ff01df037",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-935.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b5f175f7bed807d07ccc7bec20030ddbfe53f59fb50b9a170422f03e0ab661c2",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-938.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "28e35aec6eb1eddd7d4e4f688d89eb6f4966c0bf03407a7a00f27507a8b1c10c",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-991.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "71fb6042902c297f4764569602f027e96a4a354ba7fe6f856a4cac95e3f1b570",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-996.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f519895a83786e77d96f29a23dd60517e95500d9c6d19f46014f3ddf6c5522c3",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/css/post-999.css?ver=1785400728",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9f5fcfda1cdcd5ed044af6d3ffbb5a4c8d28b23e6b80eabf49b5a9aba9eb0bea",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/google-fonts/css/antonio.css?ver=1742253170",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c944cd3b8c720cfec861b2600fb12c3409f65bc6430d182667d67156308eabe3",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 387,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/google-fonts/css/opensans.css?ver=1742253201",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4001c0196353e646822d66994a216a0183c0ffdd95be392ed27b4003ac790295",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 1830,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742253246",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f38a6e72a0dcdc14ce2f026187321f40fa6f62e29aacd193cf6e2171f442a341",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": 1871,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/google-fonts/fonts/antonio-gnmew3nwsyq_9wd3yhqifq.woff2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0c7c362d6536d5b21ce323c75edb8583bb38340030dda56f1a168508c0a0ea25",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 26668,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3yuba.woff2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7dc504b9dc36e95878f39a5400ff0cd2184ca8ae9ae5bd35328d37ff046e9b3c",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 40128,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-content/uploads/wpmss/lenis-init.min.js?ver=1753956844",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ebdca69e4472252265fdf3dcce37e65f10309b4934e9c457d097986004e38a7d",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 132,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "33ac7dfe1b5b75cf435d8d09dfacf705f1947f46ed5b1221d359b4d543dd075e",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 1735,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1e4a464916ffc874f45a245baa1f0a00dcb1d37de7c2744f2df6e2991b41c372",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 2352,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0f0dd5ecf8599904343bee000d821417defa373348dbbad5ff5936add2aa691d",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 4671,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5bfe8c60328c1225e6a6a0fb84041024283bb5e2a73c0b7157c75b9828ce63bc",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 29531,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "75be37222a60c98f59afe6a510761a7c347e348291de6a7125293e21d1765f94",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 6784,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://travelproductions.film/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d7707b6e441a55174533e39162fbf62771303559385f0d2fec656ba6fe541b21",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript",
+      "content_length": 4916,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://travelproductions.film",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f1891c9efe11c8580ead6a35cbfdfb3fa6efe29ea53ab6eaee7a19555f06354a",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": 22890,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdnjs.cloudflare.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4e0d642ce57b0466fc86b3e56733c75d900cec23667a862869e170bee326046b",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d5000b634e338be4aac898fb34e1c2bb4ab2385e1fa59c280aaed13d362d80b4",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "706b0093b0be7cad8590308c4a404e13e9259f9df4348dfff7ae98f3f763f93e",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6fc05be9587346ea87ff270e20b552e16ccd9e4c2fbf6cbf206edad1a27e97e2",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c1c2c7ed6ee6c3536700f56ebdc774464f7324260470d140904a36b913cbe92d",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1f9e4ab8d6f00a15660a10c1b00e21d2c72d7ee139b426bce13c1f252a5efc36",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ae014fc276b82060ae1282be2c04c65421612db12c1637f89a9f4a5be9b11671",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "70c1b42d75370ec7934a37e260dc1411c1deff68bcce48e0e0f99fd7bc12fd9e",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1a9f71c26fe4a8fc042e5a8c0c8169b4190b2a175b8dd7a03e4ba9d14ce61b87",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6176361d0a2f1ccd3558a4c9a264c2fc744769b59d9db598f19a249b7a0cd761",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1b5bc057eec0b8fbe484f7e044a1d3ae73515b51b5b7e672fa991a2438e118a2",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "25c7c62a9cff9c4e100f6b7702e510bc4a5e32fe95939bc6b9c51c0dde3e3105",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c33cea2e4c3c974261be62d4e69b5d23b33cb2859a2d9a13d6518dc6492b075b",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "123c79d88cd46679840bd2b9450f9fd775eb58012ce943e331dd505f248821ff",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f9eabfea5b3d7feda67836b329f9448911146567e921b63e388e6bf165c39ee1",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9d8b50b638a21074f60af7f3691615d21bab89c512884928a0d6f4d44284adbf",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "14a5fa2d4af2a579ecd4e27436cb2c0de4a9590af4b2db1c516270731bdf7aa7",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4f550111dbd3f02f9513ededdeef61fb0a96c538801f139c648e7395f5cab8ad",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "552f805b10bcda31907b15a218c6182de58307461a6285577effb7ab2006f0ac",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9eb98d82141eb0e8f1def83acde87cdf6eacc5a80688055da48d8c065c83c9dd",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ea0f1b3a8dff13adbfca12227e7e391b027ecdc7d2ece52bb9dfe34d916c3cd6",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 403,
+      "status_history": [
+        403
+      ],
+      "content_type": "text/html; charset=UTF-8",
+      "content_length": null,
+      "provider": "Vimeo",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://player.vimeo.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785413396809&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=698719884.1785413397&frm=0&pscdl=noapi&rcb=18&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119896803&sid=1785413397&sct=1&seg=0&dl=https%3A%2F%2Ftravelproductions.film%2Fes%2Fescena-3d%2F&dt=Escena%203D%20ES%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=1236",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6f92faf43c5138d3b89e4a0ee1ca7cd442fb2b79b16fda71e1923ec20b5683b3",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://region1.analytics.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785413396809&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AEAAAGQC&ae=a&are=1&cid=698719884.1785413397&frm=0&pscdl=noapi&rcb=18&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119896803&sid=1785413397&sct=1&seg=1&dl=https%3A%2F%2Ftravelproductions.film%2Fes%2Fescena-3d%2F&dt=Escena%203D%20ES%20%7C%20Travel%20Productions&en=scroll&ep.googlesitekit_post_type=page&epn.percent_scrolled=90&_et=12848&tfd=19087",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9d08a8077138fb8bb06548d7614a443e9db2071eb3282b9365bfad0268cf4255",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://region1.analytics.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-T5Q0TX0MC4&cid=698719884.1785413397&gtm=45je67s1v878290975za200zd878290975&rcb=18&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~119896803",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "48f8bd69e9850434baf5d9bbd7a102fd6256cb18368bb860954491cbecedab77",
+      "method": "POST",
+      "resource_type": "ping",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://stats.g.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.fr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-T5Q0TX0MC4&cid=698719884.1785413397&gtm=45je67s1v878290975za200zd878290975&rcb=18&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115938466~115938468~118897920~118897930~119896803&z=1587840742",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "36b7cd227e8a8f3ad279e943303c51141e2883c8f6cb06518e6ea15ebea42c0c",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.fr",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-T5Q0TX0MC4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bf4f5b6d920f8e762bfb2fed2d0755e2a91f98b3c6b0cc347591a9bc9e6cab3c",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 180862,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    }
+  ],
+  "recorder_errors": []
+}
