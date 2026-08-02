@@ -114,6 +114,9 @@ def main() -> int:
     ap.add_argument("domain")
     ap.add_argument("--apply", action="store_true", help="perform the write")
     ap.add_argument("--verify", action="store_true", help="propagation check only")
+    ap.add_argument("--repair-apex", action="store_true",
+                    help="force the apex A set to hold exactly --ip "
+                         "(delete-then-add; use when a merge left a stale address)")
     ap.add_argument("--ip", default=TARGET_IP)
     args = ap.parse_args()
 
@@ -150,6 +153,22 @@ def main() -> int:
     mail_before = mail_fingerprint(zone)
     print(f"==> {len(mail_before)} non-web record set(s) that must not change "
           f"(MX/TXT/DKIM/etc.)")
+
+    if args.repair_apex:
+        apex_a = {r.get("content") for rec in zone
+                  if rec.get("name") == "@" and rec.get("type") == "A"
+                  for r in rec.get("records", [])}
+        print(f"\n==> apex A currently {sorted(apex_a)}; forcing to exactly ['{args.ip}']")
+        if not args.apply:
+            print("DRY RUN — nothing sent. Add --apply to perform it.")
+            return 0
+        ok = repair_apex(args.domain, args.ip, mail_before)
+        if ok:
+            _, after = call("GET", args.domain)
+            (dns_dir / f"{args.domain}-zone-after-{stamp}.json").write_text(
+                json.dumps(after, indent=2) + "\n")
+            print(f"\n    then: bash deploy/install_vhost.sh {args.domain}")
+        return 0 if ok else 1
 
     # www is usually already a CNAME to the apex, in which case it follows the
     # apex automatically and must be left alone: a name cannot hold both a CNAME
@@ -211,16 +230,78 @@ def main() -> int:
               if rec.get("name") == "@" and rec.get("type") == "A"
               for r in rec.get("records", [])}
     if apex_a != {args.ip}:
-        print(f"\n!!! apex A is {sorted(apex_a)}, expected exactly ['{args.ip}']")
-        print("    The merge kept the previous address; traffic would alternate hosts.")
-        print("    Fix: remove the stale A record in hPanel -> DNS Zone Editor, or re-run")
-        print("    this with --apply once more, then re-verify.")
-        return 1
-    print(f"    ok — apex A is exactly {args.ip}")
+        print(f"\n==> apex A is {sorted(apex_a)}, expected exactly ['{args.ip}']")
+        print("    Hostinger merged rather than replaced, so the previous address is still")
+        print("    there and traffic would alternate between hosts. Repairing.")
+        if not repair_apex(args.domain, args.ip, mail_before):
+            return 1
+    else:
+        print(f"    ok — apex A is exactly {args.ip}")
 
     print("\n==> DNS updated. Propagation typically 5-60 min at TTL 3600.")
     print(f"    then: bash deploy/install_vhost.sh {args.domain}")
     return 0
+
+
+def repair_apex(domain: str, ip: str, mail_before: dict) -> bool:
+    """Make the apex A record hold exactly `ip`.
+
+    Hostinger's PUT with overwrite=false appends to an existing name+type set
+    rather than replacing it, so the previous address survives the cutover. The
+    obvious fix — PUT with overwrite=true — is not used here: if that flag means
+    "replace the zone" rather than "replace this record set", a body containing
+    only an A record would take MX, SPF, DKIM and DMARC with it. Not a gamble
+    worth taking on a domain with live mail.
+
+    So: delete the apex A set by filter (a type-scoped operation that cannot
+    touch MX or TXT), then add the one record back. The window where the apex
+    has no A record is seconds, and the site is not serving on it yet anyway.
+    """
+    print("    deleting the apex A record set (type-scoped; cannot touch MX/TXT)")
+    status, resp = call("DELETE", domain, {"filters": [{"name": "@", "type": "A"}]})
+    print(f"      HTTP {status}")
+    if status not in (200, 201, 204):
+        print(json.dumps(resp, indent=2)[:800] if not isinstance(resp, str) else resp[:800])
+        print("    FAILED to delete. Zone still has both addresses — fix in hPanel.")
+        return False
+
+    print(f"    re-adding @ A -> {ip}")
+    status, resp = call("PUT", domain, {
+        "overwrite": False,
+        "zone": [{"name": "@", "type": "A", "ttl": 3600,
+                  "records": [{"content": ip}]}],
+    })
+    print(f"      HTTP {status}")
+    if status not in (200, 201, 204):
+        print(json.dumps(resp, indent=2)[:800] if not isinstance(resp, str) else resp[:800])
+        print("    FAILED to re-add. THE APEX MAY HAVE NO A RECORD — fix in hPanel now.")
+        return False
+
+    status, zone = call("GET", domain)
+    if status != 200 or not isinstance(zone, list):
+        print("    FAILED to re-read the zone. Verify manually.")
+        return False
+
+    apex_a = {r.get("content") for rec in zone
+              if rec.get("name") == "@" and rec.get("type") == "A"
+              for r in rec.get("records", [])}
+    mail_now = mail_fingerprint(zone)
+
+    if mail_now != mail_before:
+        print("\n!!! NON-WEB RECORDS CHANGED DURING REPAIR — restore from the snapshot !!!")
+        for key in sorted(set(mail_before) | set(mail_now)):
+            if mail_before.get(key) != mail_now.get(key):
+                print(f"    {key}\n      before: {mail_before.get(key)}"
+                      f"\n      after:  {mail_now.get(key)}")
+        return False
+
+    if apex_a != {ip}:
+        print(f"    apex A is still {sorted(apex_a)} — fix in hPanel -> DNS Zone Editor.")
+        return False
+
+    print(f"    ok — apex A is now exactly {ip}, and all "
+          f"{len(mail_now)} non-web record sets are unchanged")
+    return True
 
 
 def verify(domain: str, ip: str) -> int:

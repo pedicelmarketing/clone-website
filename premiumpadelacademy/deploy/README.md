@@ -31,7 +31,8 @@ bash deploy/publish.sh           # rsync build/ -> /var/www/premiumpadelacademy
 
 ## Going live on a domain
 
-**Both steps are still pending — see "Domain" below.**
+**Done on 2026-08-02 — the site is live at https://nexumpadel.es.** The commands,
+for reference and for the next domain:
 
 ```sh
 python3 deploy/dns_cutover.py <domain>            # dry run, prints the exact request body
@@ -53,31 +54,56 @@ afterwards. The vhost file installs as `premiumpadel.conf`, which sorts *after*
 `pedicelmarketing.conf`, so pedicelmarketing stays the default server for the
 address exactly as it is today.
 
-## Domain — blocked
+## Domain — live
 
-`nexumpadel.com` **cannot be connected.** Established 2026-08-02:
+`nexumpadel.es`, in the client's own Hostinger account (token stored as
+`HOSTINGER_API_TOKEN_NEXUMPADEL_ES` in `~/.config/secrets.env`, never in this repo).
 
-| Fact | Evidence |
-|---|---|
-| Not in this Hostinger account | portfolio API returns only `pedicelmarketing.com`, `pedicelfinance.com` |
-| Owned by a third party | RDAP: registered 2025-06-13, registrar Namefinger.com LLC |
-| Listed for sale | nameservers `ns1/ns2.afternic.com` |
-| Expired, in **redemption period** | RDAP status; expired 2026-06-13 |
-| Unregisterable right now | Hostinger availability API: `is_available: false` |
+`nexumpadel.com` was the original request but is **not the client's**: RDAP shows it
+registered 2025-06-13 to a third party via Namefinger.com LLC, parked on
+`ns1/ns2.afternic.com` (listed for sale), expired 2026-06-13 and in redemption.
+Hostinger's availability API returns `is_available: false`.
 
-`nexumpadel.es` **is** registered, parked on Hostinger's own nameservers
-(`byte/pixel.dns-parking.com` → `2.57.91.91`), with Hostinger mail live (MX +
-SPF). But it sits in a **different Hostinger account**: this token gets
-`403 [DNS:4002] Customer does not own nexumpadel.es`. An API token generated in
-*that* account makes `dns_cutover.py` work unchanged.
+Two things the cutover had to handle, both now automatic:
 
-Available to register in this account right now: `nexumpadel.net`,
-`nexumpadel.academy`, `nexumpadel.club`, and `premiumpadelacademy.com`
-(unregistered — no DNS at all).
+* **`www` is a CNAME to the apex**, so it is left alone — a name cannot hold both a
+  CNAME and an A record. It follows the apex for free.
+* **Hostinger's `overwrite=false` appends rather than replaces.** The first write left
+  the apex holding both `2.57.91.91` (the old parking address) and the new one, which
+  would have alternated traffic between hosts. `--repair-apex` fixes it by deleting the
+  apex A *set* by filter — a type-scoped operation that cannot touch MX or TXT — then
+  re-adding the single record. `overwrite=true` is deliberately never used: if it means
+  "replace the zone" rather than "replace this record set", a body containing only an A
+  record would take the mail configuration with it.
+
+Mail was verified untouched at every step: all 9 non-web record sets (Hostinger MX,
+SPF, DMARC, 3 DKIM CNAMEs, autoconfig/autodiscover) byte-identical before and after.
+
+## Draft state — read this before launch
+
+The site is live but **marked `noindex` on every page**, because it is not yet client-
+approved and the reviews on it are examples rather than real ones. The two are coupled
+on purpose:
+
+* `build_public.sh --keep-demo` forces the draft marker on
+* `--keep-demo` together with `--allow-index` is refused outright
+* `publish.sh` independently refuses any tree containing demo blocks unless every page
+  carries `noindex`
+
+At launch, once real reviews replace the examples:
+
+```sh
+bash deploy/build_public.sh --keep-slots --allow-index
+bash deploy/publish.sh
+```
 
 ## Current state
 
-Files are published to `/var/www/premiumpadelacademy` (23 files) and pass the full
-layout audit **served from that web root**, not just from source. No vhost is
-installed and no DNS has been touched, so nothing is publicly reachable yet — the
-site goes live the moment a domain is settled and the two commands above run.
+**Live at https://nexumpadel.es** since 2026-08-02.
+
+* TLS via Let's Encrypt, expires 2026-10-31, `snap.certbot.renew.timer` handles renewal
+* `www` and plain `http` both 301 to `https://nexumpadel.es` in a single hop
+* clean URLs work (`/clubs`, `/camps`, `/contacto`)
+* `pedicelmarketing.com` verified unaffected — still 200, still the default server for
+  the address (`premiumpadel.conf` sorts after `pedicelmarketing.conf`)
+* layout audit run against the live public site, not just the web root

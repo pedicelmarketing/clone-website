@@ -1,7 +1,7 @@
 # Premium Padel Academy - static site on spire (Scaleway, 62.210.212.199).
 #
 # Rendered from this template by deploy/install_vhost.sh, which substitutes
-# __DOMAIN__. Do not install this file directly.
+# nexumpadel.es. Do not install this file directly.
 #
 # Bound to the PUBLIC IP only, so it cannot collide with Tailscale's :443 on
 # 100.76.51.58 or the internal core-oss vhost on 127.0.0.1:8088 — the same
@@ -25,7 +25,7 @@ map $sent_http_content_type $padel_cache {
 
 server {
     listen 62.210.212.199:80;
-    server_name __DOMAIN__ www.__DOMAIN__;
+    server_name nexumpadel.es www.nexumpadel.es;
 
     root /var/www/premiumpadelacademy;
     index index.html;
@@ -35,8 +35,8 @@ server {
 
     # www -> apex. The site is authored with root-relative asset paths, so either
     # host works; collapsing to one keeps canonical URLs and analytics clean.
-    if ($host = www.__DOMAIN__) {
-        return 301 https://__DOMAIN__$request_uri;
+    if ($host = www.nexumpadel.es) {
+        return 301 http://nexumpadel.es$request_uri;
     }
 
     gzip on;
