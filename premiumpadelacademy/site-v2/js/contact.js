@@ -9,7 +9,7 @@
 (function () {
   "use strict";
 
-  var TO = "Infopremiumpadelacademy@gmail.com";
+  var TO = "info@nexumpadel.es";
   var form = document.getElementById("contact-form");
   if (!form) return;
 

@@ -109,10 +109,24 @@ for pattern in 'rikicoach' '600 000 000' 'WIX Harmony' 'tenis' 'tennis'; do
   require_absent "$pattern"
 done
 
-# ...and the contact address he asked for, on every page.
-n="$(count 'Infopremiumpadelacademy@gmail.com')"
-if [ "$n" -ge 4 ]; then echo "  ok: contact email present ($n refs)"
-else echo "  FAIL: contact email only $n refs"; fail=1; fi
+# ...and exactly one contact address, present on every page. Asserting the count
+# rather than a literal address means the gate survives a change of address, but
+# still catches a half-finished swap where the visible text and the mailto:
+# disagree, or a page that lost its footer address entirely.
+mapfile -t addrs < <(grep -rhoE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' \
+                       "$OUT" --include='*.html' --include='*.js' | sort -uf)
+if [ "${#addrs[@]}" -ne 1 ]; then
+  echo "  FAIL: expected one contact address, found ${#addrs[@]}: ${addrs[*]}"
+  fail=1
+else
+  pages_with="$(grep -rlF "${addrs[0]}" "$OUT" --include='*.html' | wc -l)"
+  n_html="$(find "$OUT" -maxdepth 1 -name '*.html' | wc -l)"
+  if [ "$pages_with" -eq "$n_html" ]; then
+    echo "  ok: ${addrs[0]} on all $n_html page(s)"
+  else
+    echo "  FAIL: ${addrs[0]} on only $pages_with/$n_html page(s)"; fail=1
+  fi
+fi
 
 # Gate 4 - every local asset the markup references exists on disk.
 if python3 - "$OUT" <<'PY'
