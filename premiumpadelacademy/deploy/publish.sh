@@ -18,14 +18,32 @@ DEST="/var/www/premiumpadelacademy/"
 [ -f "$PD/build/index.html" ] || {
   echo "FATAL: build/ not built — run: bash deploy/build_public.sh"; exit 1; }
 
-# Re-assert the two gates that matter most, against the exact tree about to ship.
+# Re-assert the gates against the exact tree about to ship, so rsyncing site-v2/
+# by hand cannot route around build_public.sh.
 echo "==> pre-publish gates (on build/, the tree that actually ships)"
-python3 "$PD/tools/strip_demo_reviews.py" --check build
-for pattern in 'data-demo="true"' 'rikicoach' '600 000 000' 'WIX Harmony'; do
-  n="$({ grep -rFi "$pattern" "$PD/build" --include='*.html' -c 2>/dev/null || true; } \
-        | awk -F: '{s+=$2} END{print s+0}')"
+count() { { grep -rFi "$1" "$PD/build" --include='*.html' -c 2>/dev/null || true; } \
+            | awk -F: '{s+=$2} END{print s+0}'; }
+
+for pattern in 'rikicoach' '600 000 000' 'WIX Harmony'; do
+  n="$(count "$pattern")"
   [ "$n" -eq 0 ] || { echo "FATAL: '$pattern' present in build/ ($n) — refusing"; exit 1; }
 done
+
+# The example reviews may ship — the client's call — but only while the site is
+# held back from search engines. Indexed invented reviews on a live commercial
+# site are a different thing from an unapproved draft, so the two move together.
+n_demo="$(count 'data-demo="true"')"
+n_pages="$(find "$PD/build" -maxdepth 1 -name '*.html' | wc -l)"
+n_noindex="$(count 'name="robots"')"
+if [ "$n_demo" -gt 0 ]; then
+  if [ "$n_noindex" -ne "$n_pages" ]; then
+    echo "FATAL: $n_demo example review block(s) present but only $n_noindex/$n_pages"
+    echo "       page(s) carry noindex. Rebuild with --keep-demo (which forces noindex),"
+    echo "       or replace the examples with real reviews before allowing indexing."
+    exit 1
+  fi
+  echo "    $n_demo example review block(s) shipping, noindex on all $n_pages page(s)"
+fi
 echo "    ok"
 
 echo "==> publishing $SRC -> $DEST"

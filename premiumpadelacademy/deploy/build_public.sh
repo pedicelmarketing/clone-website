@@ -23,10 +23,14 @@ OUT="$PD/build"
 
 KEEP_REVIEWS=0
 KEEP_SLOTS=0
+KEEP_DEMO=0
+NOINDEX=1          # default on: the site is live before the client has approved it
 for arg in "$@"; do
   case "$arg" in
     --keep-reviews) KEEP_REVIEWS=1 ;;
     --keep-slots)   KEEP_SLOTS=1 ;;
+    --keep-demo)    KEEP_DEMO=1; KEEP_REVIEWS=1 ;;   # ship the example reviews as-is
+    --allow-index)  NOINDEX=0 ;;                     # launch: let search engines in
     *) echo "unknown flag: $arg" >&2; exit 2 ;;
   esac
 done
@@ -37,12 +41,24 @@ echo "==> staging $SRC -> $OUT"
 rm -rf "$OUT"
 cp -a "$SRC" "$OUT"
 
-echo "==> reverting fabricated demo reviews"
-python3 "$PD/tools/strip_demo_reviews.py" "$(basename "$OUT")"
+if [ "$KEEP_DEMO" -eq 1 ]; then
+  echo "==> KEEPING the example reviews (--keep-demo), at the client's direction"
+else
+  echo "==> reverting fabricated demo reviews"
+  python3 "$PD/tools/strip_demo_reviews.py" "$(basename "$OUT")"
 
-if [ "$KEEP_REVIEWS" -eq 0 ]; then
-  echo "==> removing the now-empty reviews section"
-  python3 "$PD/tools/hide_empty_reviews.py" --root "$(basename "$OUT")"
+  if [ "$KEEP_REVIEWS" -eq 0 ]; then
+    echo "==> removing the now-empty reviews section"
+    python3 "$PD/tools/hide_empty_reviews.py" --root "$(basename "$OUT")"
+  fi
+fi
+
+if [ "$NOINDEX" -eq 1 ]; then
+  echo "==> marking as an unapproved draft (noindex)"
+  python3 "$PD/tools/draft_noindex.py" --root "$(basename "$OUT")" --on
+else
+  echo "==> LAUNCH build — search engines allowed"
+  python3 "$PD/tools/draft_noindex.py" --root "$(basename "$OUT")" --off
 fi
 
 echo "==> rendering partner band"
@@ -68,11 +84,21 @@ require_absent() {
 }
 
 # Gate 1 - no fabricated review content survived.
-python3 "$PD/tools/strip_demo_reviews.py" --check "$(basename "$OUT")"
+if [ "$KEEP_DEMO" -eq 1 ]; then
+  n_demo="$(count 'data-demo="true"')"
+  echo "  SKIPPED: example reviews retained on purpose ($n_demo block(s))."
+  echo "           They are invented, not real customer reviews. Publishing"
+  echo "           invented reviews as genuine is prohibited under EU/ES"
+  echo "           consumer law once the site is presented as live and approved."
+  echo "           Held back from search engines by the noindex gate below."
+  [ "$NOINDEX" -eq 1 ] || { echo "  FAIL: --keep-demo with --allow-index is not permitted"; fail=1; }
+else
+  python3 "$PD/tools/strip_demo_reviews.py" --check "$(basename "$OUT")"
+  require_absent 'data-demo="true"'
+fi
 
 # Gate 2 - no placeholder content of any kind reached the public build.
-require_absent 'data-demo="true"'
-[ "$KEEP_REVIEWS" -eq 1 ] || require_absent 'Pendiente'
+{ [ "$KEEP_REVIEWS" -eq 1 ] || [ "$KEEP_DEMO" -eq 1 ]; } || require_absent 'Pendiente'
 if [ "$KEEP_SLOTS" -eq 0 ]; then
   require_absent 'data-placeholder="true"'
   require_absent 'Espacio disponible'
@@ -104,6 +130,19 @@ sys.exit(1 if bad else 0)
 PY
 then echo "  ok: all local asset references resolve"
 else fail=1; fi
+
+# Gate 5 - the draft/launch indexing state is what was actually asked for.
+n_noindex="$(count 'name="robots"')"
+n_pages="$(find "$OUT" -maxdepth 1 -name '*.html' | wc -l)"
+if [ "$NOINDEX" -eq 1 ]; then
+  [ "$n_noindex" -eq "$n_pages" ] \
+    && echo "  ok: noindex on all $n_pages page(s) (unapproved draft)" \
+    || { echo "  FAIL: noindex on $n_noindex/$n_pages page(s)"; fail=1; }
+else
+  [ "$n_noindex" -eq 0 ] \
+    && echo "  ok: no noindex — indexable launch build" \
+    || { echo "  FAIL: $n_noindex page(s) still carry noindex"; fail=1; }
+fi
 
 echo
 if [ "$fail" -ne 0 ]; then

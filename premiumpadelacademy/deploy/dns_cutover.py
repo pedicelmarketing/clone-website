@@ -42,17 +42,30 @@ TARGET_IP = "62.210.212.199"
 WEB_NAMES = {"@", "www"}
 
 
-def token() -> str:
-    value = os.environ.get("HOSTINGER_API_TOKEN")
-    if not value and SECRETS.exists():
-        for line in SECRETS.read_text().splitlines():
-            m = re.match(r"^(?:export\s+)?HOSTINGER_API_TOKEN=(.*)$", line.strip())
-            if m:
-                value = m.group(1).strip().strip('"').strip("'")
-                break
-    if not value:
-        sys.exit(f"FATAL: HOSTINGER_API_TOKEN not in env or {SECRETS}")
-    return value
+def token(domain: str) -> str:
+    """Domain-specific token first, falling back to the generic one.
+
+    Domains here live in more than one Hostinger account, and a token only ever
+    sees its own account's zones. So nexumpadel.es reads
+    HOSTINGER_API_TOKEN_NEXUMPADEL_ES before HOSTINGER_API_TOKEN.
+    """
+    names = [f"HOSTINGER_API_TOKEN_{re.sub(r'[^A-Z0-9]', '_', domain.upper())}",
+             "HOSTINGER_API_TOKEN"]
+    text = SECRETS.read_text() if SECRETS.exists() else ""
+
+    # Each name is resolved fully — environment, then file — before falling back
+    # to the next. Checking the whole environment first would let a generic
+    # HOSTINGER_API_TOKEN exported by the shell profile silently outrank the
+    # domain-specific token sitting in secrets.env, and the request would go out
+    # authenticated as the wrong account.
+    for name in names:
+        if os.environ.get(name):
+            return os.environ[name]
+        m = re.search(rf"^(?:export\s+)?{name}=(.*)$", text, re.M)
+        if m:
+            return m.group(1).strip().strip('"').strip("'")
+
+    sys.exit(f"FATAL: none of {names} found in env or {SECRETS}")
 
 
 def call(method: str, domain: str, body: dict | None = None) -> tuple[int, object]:
@@ -60,7 +73,7 @@ def call(method: str, domain: str, body: dict | None = None) -> tuple[int, objec
         f"{API}/{domain}", method=method,
         data=json.dumps(body).encode() if body is not None else None,
         headers={
-            "Authorization": f"Bearer {token()}",
+            "Authorization": f"Bearer {token(domain)}",
             "Accept": "application/json",
             "Content-Type": "application/json",
             # developers.hostinger.com sits behind Cloudflare, which rejects the
@@ -138,15 +151,25 @@ def main() -> int:
     print(f"==> {len(mail_before)} non-web record set(s) that must not change "
           f"(MX/TXT/DKIM/etc.)")
 
-    payload = {
-        "overwrite": False,          # merge; never replace the zone
-        "zone": [
-            {"name": "@",   "type": "A", "ttl": 3600,
-             "records": [{"content": args.ip}]},
-            {"name": "www", "type": "A", "ttl": 3600,
-             "records": [{"content": args.ip}]},
-        ],
-    }
+    # www is usually already a CNAME to the apex, in which case it follows the
+    # apex automatically and must be left alone: a name cannot hold both a CNAME
+    # and an A record, and writing one would either be rejected or produce a
+    # conflicting set.
+    www_cname = next((rec for rec in zone
+                      if rec.get("name") == "www" and rec.get("type") == "CNAME"), None)
+    www_targets = {r.get("content", "").rstrip(".").lower()
+                   for r in (www_cname or {}).get("records", [])}
+    www_follows_apex = bool(www_targets & {args.domain.lower(), "@"})
+
+    records = [{"name": "@", "type": "A", "ttl": 3600,
+                "records": [{"content": args.ip}]}]
+    if www_follows_apex:
+        print(f"\n==> www is a CNAME to the apex — leaving it untouched, it will follow")
+    else:
+        records.append({"name": "www", "type": "A", "ttl": 3600,
+                        "records": [{"content": args.ip}]})
+
+    payload = {"overwrite": False, "zone": records}   # merge; never replace the zone
 
     print("\n==> planned write (this is the ENTIRE request body):")
     print(json.dumps(payload, indent=2))
@@ -181,6 +204,20 @@ def main() -> int:
 
     print(f"    ok — all {len(mail_after)} non-web record sets byte-identical")
     show([r for r in after_zone if r.get("name") in WEB_NAMES])
+
+    # "merge" must not have left the old parking IP alongside the new one, or the
+    # domain would round-robin between this server and the old host.
+    apex_a = {r.get("content") for rec in after_zone
+              if rec.get("name") == "@" and rec.get("type") == "A"
+              for r in rec.get("records", [])}
+    if apex_a != {args.ip}:
+        print(f"\n!!! apex A is {sorted(apex_a)}, expected exactly ['{args.ip}']")
+        print("    The merge kept the previous address; traffic would alternate hosts.")
+        print("    Fix: remove the stale A record in hPanel -> DNS Zone Editor, or re-run")
+        print("    this with --apply once more, then re-verify.")
+        return 1
+    print(f"    ok — apex A is exactly {args.ip}")
+
     print("\n==> DNS updated. Propagation typically 5-60 min at TTL 3600.")
     print(f"    then: bash deploy/install_vhost.sh {args.domain}")
     return 0
