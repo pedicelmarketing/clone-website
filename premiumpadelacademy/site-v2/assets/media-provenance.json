@@ -222,5 +222,14 @@
       231
     ],
     "exif_stripped": true
+  },
+  "logo-pedicel.svg": {
+    "slot": "partners-band",
+    "classification": "Recreated",
+    "acquired_from": "clone-website/pedicelmarketing/mirror/_external/cdn.prod.website-files.com/64a2995238dba40820b37689/64a52e82805f80ff256b96e6_Logo-Pedicel.svg",
+    "source_sha256_16": "ac9c69a018353693",
+    "modification": "wordmark fill #f0f8ff -> #2F3E3A (--ink). The captured logo is the dark-navbar variant, whose wordmark is white and therefore invisible on this site's light --soft-2 band. The leaf mark keeps Pedicel's own gold #efad2b and is not pulled into this site's palette.",
+    "note": "Replace with Pedicel's official light-background logo if one exists.",
+    "exif_stripped": null
   }
 }

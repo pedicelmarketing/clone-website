@@ -1,0 +1,20 @@
+{
+  "_comment": [
+    "Source of truth for the 'Colaboradores' logo band at the bottom of every page.",
+    "Edit this file (or use tools/partner_logos.py --add) and re-render; never hand-edit",
+    "the band markup in the HTML, because all four pages must stay identical.",
+    "",
+    "slots = total tiles rendered. Any slot beyond the logos listed renders as a marked",
+    "empty placeholder, which is what reserves the space. Keep slots <= 6: the .stagger",
+    "entrance in css/styles.css defines transition delays for six children."
+  ],
+  "slots": 6,
+  "logos": [
+    {
+      "name": "Pedicel Marketing",
+      "file": "logo-pedicel.svg",
+      "url": "https://www.pedicelmarketing.com/",
+      "height": 26
+    }
+  ]
+}

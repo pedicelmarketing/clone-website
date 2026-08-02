@@ -428,6 +428,71 @@ p:last-child { margin-bottom: 0; }
 .form-note { font-size: var(--t-meta); margin-top: 1rem; }
 
 /* ============================================================
+   Colaboradores — logo band
+
+   Sits as the last section of <main>, directly above the footer.
+   Generated from assets/partners.json by tools/partner_logos.py, so
+   all four pages carry the identical band.
+
+   Empty slots are the point: they reserve space for logos the client
+   has not supplied yet, and are visibly marked rather than blank.
+   ============================================================ */
+.partners {
+  padding-block: clamp(40px, 5vw, 72px);
+  background: var(--soft-2);
+  border-top: 1px solid var(--line);
+}
+.partners-head { text-align: center; margin-bottom: clamp(24px, 3vw, 40px); }
+.partners-head .eyebrow { margin-bottom: 0; }
+.partners-head .rule { margin: 1rem auto 0; }
+
+/* Flex rather than grid: the band has to look deliberate at any count, and
+   auto-fit columns stretch a single logo across the full width. Centred wrap
+   keeps one logo, four, or six all reading as an intentional row. */
+.partners-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: clamp(14px, 1.8vw, 26px);
+}
+.partner {
+  flex: 1 1 150px; max-width: 220px;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 78px; padding: 16px 18px;
+}
+.partner a { display: flex; align-items: center; justify-content: center; }
+
+/* Fixed height + width:auto, matching .footer-logo img. Logos arrive at wildly
+   different intrinsic sizes, so height is what makes a row of them read evenly. */
+.partner img {
+  height: 26px; width: auto; max-width: 100%;
+  opacity: .8;
+  transition: opacity .6s var(--ease-out-soft), transform .6s var(--ease-out-soft);
+}
+.partner a:hover img,
+.partner a:focus-visible img { opacity: 1; transform: translateY(-3px); }
+
+.partner.is-empty {
+  border: 1px dashed var(--line);
+  border-radius: calc(var(--radius) / 2);
+  background: var(--white);
+}
+.partner.is-empty span {
+  font-size: var(--t-meta);        /* 15px floor — the client's "letras pequeñas" fix */
+  color: var(--muted);
+  text-align: center;
+  opacity: .75;
+}
+
+@media (max-width: 560px) {
+  /* Two per row rather than one: a single 150px logo on a 390px screen leaves the
+     band looking like a stack of empty cards. */
+  .partner {
+    flex: 0 0 calc(50% - clamp(14px, 1.8vw, 26px) / 2);
+    max-width: none; min-height: 68px; padding: 12px;
+  }
+}
+
+/* ============================================================
    Footer
    ============================================================ */
 .site-footer { background: var(--white); border-top: 1px solid var(--line); }

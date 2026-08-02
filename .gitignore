@@ -14,3 +14,6 @@ response_store.db*
 # Viewport evidence: full-page screenshots run to ~320 MB and are regenerable
 # from viewports.py. The machine-readable results are kept.
 **/viewports-*/*.png
+
+# Generated publishable build — derived from site-v2/ by deploy/build_public.sh
+premiumpadelacademy/build/
