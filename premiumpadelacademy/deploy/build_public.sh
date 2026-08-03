@@ -41,6 +41,12 @@ echo "==> staging $SRC -> $OUT"
 rm -rf "$OUT"
 cp -a "$SRC" "$OUT"
 
+# The English pages are GENERATED from the Spanish ones. Drop them now and
+# rebuild them at the end, so they inherit every transform below (stripped
+# reviews, rendered partner band, noindex marker) instead of requiring each of
+# those tools to be taught about the /en/ subtree and its ../ asset depth.
+rm -rf "$OUT/en"
+
 if [ "$KEEP_DEMO" -eq 1 ]; then
   echo "==> KEEPING the example reviews (--keep-demo), at the client's direction"
 else
@@ -67,6 +73,43 @@ if [ "$KEEP_SLOTS" -eq 1 ]; then
 else
   python3 "$PD/tools/partner_logos.py" --root "$(basename "$OUT")" --render --no-placeholders
 fi
+
+echo "==> regenerating the English build from the transformed Spanish pages"
+python3 "$PD/tools/build_en.py" --root "$(basename "$OUT")" --build
+
+# Content-addressed CSS/JS filenames. nginx serves these immutable for a year,
+# which is only safe once a changed file means a changed URL — otherwise a
+# returning visitor pairs new HTML with a year-old stylesheet. That exact
+# combination put a 387px black square in the footer on 2026-08-03. Runs after
+# every other transform so the hash covers the final bytes.
+echo "==> content-hashing css/js"
+python3 "$PD/tools/hash_assets.py" --root "$(basename "$OUT")"
+
+# Since the pages went responsive, every <img> resolves to assets/r/<name>-<w>.jpg
+# and the full-size masters in assets/ are no longer requested by anything. They
+# are the quality source for regenerating derivatives, not a deliverable, so they
+# do not belong on the web server. Pruned BEFORE the gates run, so gate 4 below
+# is what proves nothing still references them.
+echo "==> pruning unreferenced image masters"
+python3 - "$OUT" <<'PY'
+import re, sys, pathlib
+root = pathlib.Path(sys.argv[1]).resolve()
+referenced = set()
+for page in root.rglob("*.html"):
+    html = page.read_text(encoding="utf-8")
+    refs = re.findall(r'(?:src|href)="((?!https?:|mailto:|tel:|#)[^"]+)"', html)
+    for entry in re.findall(r'srcset="([^"]*)"', html):
+        refs += [c.strip().split()[0] for c in entry.split(",") if c.strip()]
+    for ref in refs:
+        referenced.add((page.parent / ref.split("?")[0].split("#")[0]).resolve())
+
+freed = 0
+for img in sorted((root / "assets").glob("*.jpg")):
+    if img.resolve() not in referenced:
+        freed += img.stat().st_size
+        img.unlink()
+print(f"  pruned {freed/1e6:.1f} MB of unreferenced masters")
+PY
 
 echo
 echo "==> gates"
@@ -109,6 +152,10 @@ for pattern in 'rikicoach' '600 000 000' 'WIX Harmony' 'tenis' 'tennis'; do
   require_absent "$pattern"
 done
 
+# Gate 3b - every css/js reference is content-addressed. Without this the year-long
+# immutable cache lets a returning visitor pair new markup with an old stylesheet.
+python3 "$PD/tools/hash_assets.py" --root "$(basename "$OUT")" --check || fail=1
+
 # ...and exactly one contact address, present on every page. Asserting the count
 # rather than a literal address means the gate survives a change of address, but
 # still catches a half-finished swap where the visible text and the mailto:
@@ -119,8 +166,10 @@ if [ "${#addrs[@]}" -ne 1 ]; then
   echo "  FAIL: expected one contact address, found ${#addrs[@]}: ${addrs[*]}"
   fail=1
 else
+  # Counted across the whole tree, not just the top level — the English pages
+  # under en/ must carry the address too.
   pages_with="$(grep -rlF "${addrs[0]}" "$OUT" --include='*.html' | wc -l)"
-  n_html="$(find "$OUT" -maxdepth 1 -name '*.html' | wc -l)"
+  n_html="$(find "$OUT" -name '*.html' | wc -l)"
   if [ "$pages_with" -eq "$n_html" ]; then
     echo "  ok: ${addrs[0]} on all $n_html page(s)"
   else
@@ -131,14 +180,24 @@ fi
 # Gate 4 - every local asset the markup references exists on disk.
 if python3 - "$OUT" <<'PY'
 import re, sys, pathlib
-root = pathlib.Path(sys.argv[1])
+root = pathlib.Path(sys.argv[1]).resolve()
 bad = 0
-for page in sorted(root.glob("*.html")):
+# Walks the whole tree, including en/. References are resolved relative to the
+# page that makes them, because the English pages reach shared assets with ../,
+# and they must not be able to escape the build root.
+for page in sorted(root.rglob("*.html")):
     html = page.read_text(encoding="utf-8")
-    for ref in re.findall(r'(?:src|href)="((?!https?:|mailto:|tel:|#)[^"]+)"', html):
-        target = root / ref.split("?")[0].split("#")[0]
+    refs = re.findall(r'(?:src|href)="((?!https?:|mailto:|tel:|#)[^"]+)"', html)
+    for entry in re.findall(r'srcset="([^"]*)"', html):
+        refs += [c.strip().split()[0] for c in entry.split(",") if c.strip()]
+    for ref in refs:
+        target = (page.parent / ref.split("?")[0].split("#")[0]).resolve()
+        rel = page.relative_to(root)
         if not target.exists():
-            print(f"  FAIL: {page.name} -> {ref} (missing)")
+            print(f"  FAIL: {rel} -> {ref} (missing)")
+            bad += 1
+        elif root != target and root not in target.parents:
+            print(f"  FAIL: {rel} -> {ref} (escapes the build root)")
             bad += 1
 sys.exit(1 if bad else 0)
 PY
@@ -147,7 +206,7 @@ else fail=1; fi
 
 # Gate 5 - the draft/launch indexing state is what was actually asked for.
 n_noindex="$(count 'name="robots"')"
-n_pages="$(find "$OUT" -maxdepth 1 -name '*.html' | wc -l)"
+n_pages="$(find "$OUT" -name '*.html' | wc -l)"
 if [ "$NOINDEX" -eq 1 ]; then
   [ "$n_noindex" -eq "$n_pages" ] \
     && echo "  ok: noindex on all $n_pages page(s) (unapproved draft)" \

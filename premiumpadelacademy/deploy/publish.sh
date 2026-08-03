@@ -33,7 +33,9 @@ done
 # held back from search engines. Indexed invented reviews on a live commercial
 # site are a different thing from an unapproved draft, so the two move together.
 n_demo="$(count 'data-demo="true"')"
-n_pages="$(find "$PD/build" -maxdepth 1 -name '*.html' | wc -l)"
+# Whole tree, not just the top level: the English pages under en/ carry the same
+# example reviews and must be held back from indexing on the same terms.
+n_pages="$(find "$PD/build" -name '*.html' | wc -l)"
 n_noindex="$(count 'name="robots"')"
 if [ "$n_demo" -gt 0 ]; then
   if [ "$n_noindex" -ne "$n_pages" ]; then

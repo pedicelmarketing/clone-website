@@ -12,3 +12,16 @@ reports/viewports/*.png
 # Convenience symlink so v2 is reachable under the v1 tunnel path.
 # Serving-only; not part of the deliverable.
 site/v2
+
+# 2x upscale intermediates: full-size PNGs straight out of Comfy Cloud (~124 MB).
+# They are the input to tools/upscale_ingest.py, not a deliverable, and the
+# installed JPEGs plus upscale/originals/ are enough to audit or roll back.
+# Comfy's output URLs are short-lived, so re-running the jobs means re-submitting
+# the graphs recorded in reports/feedback-20260803.md.
+upscale/staging/
+
+# Pre-upscale originals ARE versioned — they are the rollback path.
+!upscale/originals/
+
+# Dated viewport screenshot runs.
+reports/viewports-*/*.png

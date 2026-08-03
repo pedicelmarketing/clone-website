@@ -231,5 +231,123 @@
     "modification": "wordmark fill #f0f8ff -> #2F3E3A (--ink). The captured logo is the dark-navbar variant, whose wordmark is white and therefore invisible on this site's light --soft-2 band. The leaf mark keeps Pedicel's own gold #efad2b and is not pulled into this site's palette.",
     "note": "Replace with Pedicel's official light-background logo if one exists.",
     "exif_stripped": null
+  },
+  "upscale_2x": {
+    "date": "2026-08-03",
+    "reason": "Client feedback 2026-08-03: 'Resolucion de fotos y logo'.",
+    "pipeline": "Comfy Cloud: LoadImage -> ImageUpscaleWithModel (4x) -> ImageScale lanczos to 2x -> SaveImage; re-encoded here as progressive JPEG q88.",
+    "models": {
+      "photographs": "4x-UltraSharp.safetensors",
+      "coach portraits": "4x-ClearRealityV1.pth"
+    },
+    "verification": "Each output checked against its original for strictly larger dimensions and difference-hash distance <= 80/1024 before install.",
+    "originals_kept_in": "upscale/originals/",
+    "classification": "Original (same photograph, resampled) — not regenerated content.",
+    "assets": [
+      {
+        "asset": "camps-band.jpg",
+        "original_size": "1170x1552",
+        "upscaled_size": "2340x3104",
+        "scale": 2.0,
+        "phash_distance": 16,
+        "installed_bytes": 1470957
+      },
+      {
+        "asset": "camps-method.jpg",
+        "original_size": "1170x1994",
+        "upscaled_size": "2340x3988",
+        "scale": 2.0,
+        "phash_distance": 26,
+        "installed_bytes": 1033355
+      },
+      {
+        "asset": "club-1.jpg",
+        "original_size": "1170x1538",
+        "upscaled_size": "2340x3076",
+        "scale": 2.0,
+        "phash_distance": 20,
+        "installed_bytes": 979879
+      },
+      {
+        "asset": "club-2.jpg",
+        "original_size": "1170x1949",
+        "upscaled_size": "2340x3898",
+        "scale": 2.0,
+        "phash_distance": 21,
+        "installed_bytes": 1632193
+      },
+      {
+        "asset": "club-3.jpg",
+        "original_size": "1334x2000",
+        "upscaled_size": "2668x4000",
+        "scale": 2.0,
+        "phash_distance": 37,
+        "installed_bytes": 821828
+      },
+      {
+        "asset": "coach-juampi.jpg",
+        "original_size": "1060x1484",
+        "upscaled_size": "2120x2968",
+        "scale": 2.0,
+        "phash_distance": 32,
+        "installed_bytes": 698890
+      },
+      {
+        "asset": "coach-riki.jpg",
+        "original_size": "1086x1448",
+        "upscaled_size": "2172x2896",
+        "scale": 2.0,
+        "phash_distance": 79,
+        "installed_bytes": 838679
+      },
+      {
+        "asset": "elite-inset.jpg",
+        "original_size": "1170x1949",
+        "upscaled_size": "2340x3898",
+        "scale": 2.0,
+        "phash_distance": 21,
+        "installed_bytes": 1632193
+      },
+      {
+        "asset": "elite.jpg",
+        "original_size": "1334x2000",
+        "upscaled_size": "2668x4000",
+        "scale": 2.0,
+        "phash_distance": 29,
+        "installed_bytes": 822071
+      },
+      {
+        "asset": "expect-2.jpg",
+        "original_size": "1170x1546",
+        "upscaled_size": "2340x3092",
+        "scale": 2.0,
+        "phash_distance": 25,
+        "installed_bytes": 984285
+      },
+      {
+        "asset": "expect.jpg",
+        "original_size": "1170x1544",
+        "upscaled_size": "2340x3088",
+        "scale": 2.0,
+        "phash_distance": 31,
+        "installed_bytes": 1086656
+      },
+      {
+        "asset": "hero-camps.jpg",
+        "original_size": "1170x1170",
+        "upscaled_size": "2340x2340",
+        "scale": 2.0,
+        "phash_distance": 30,
+        "installed_bytes": 1744404
+      },
+      {
+        "asset": "hero-home.jpg",
+        "original_size": "2000x1125",
+        "upscaled_size": "4000x2250",
+        "scale": 2.0,
+        "phash_distance": 17,
+        "installed_bytes": 2045707
+      }
+    ]
   }
 }

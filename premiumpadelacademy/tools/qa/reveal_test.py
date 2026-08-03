@@ -6,7 +6,7 @@ with sync_playwright() as p:
     br=p.chromium.launch()
     for vn,w,h in [("desktop",1440,900),("mobile",390,844)]:
         ctx=br.new_context(viewport={"width":w,"height":h}); pg=ctx.new_page()
-        for f in ["index.html","clubs.html","camps.html","contacto.html"]:
+        for f in ["index.html","clubs.html","camps.html","contacto.html","en/index.html","en/clubs.html","en/camps.html","en/contact.html"]:
             pg.goto(f"{B}/{f}", wait_until="networkidle"); pg.wait_for_timeout(300)
             n=pg.eval_on_selector_all("[data-anim], .stagger","els=>els.length")
             bad=[]

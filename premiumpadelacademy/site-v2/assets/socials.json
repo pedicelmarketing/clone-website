@@ -1,0 +1,18 @@
+{
+  "_comment": [
+    "Source of truth for the social links in the footer of every page.",
+    "Edit this file and re-render with tools/social_links.py --render; never",
+    "hand-edit the block markup, because all four pages must stay identical.",
+    "",
+    "Each network needs a matching glyph in the ICONS map in tools/social_links.py.",
+    "Handles are shown to visitors verbatim, so keep the dot in nexum.padel."
+  ],
+  "networks": [
+    {
+      "network": "instagram",
+      "handle": "@nexum.padel",
+      "url": "https://www.instagram.com/nexum.padel/",
+      "label": "Instagram de Nexum Padel"
+    }
+  ]
+}

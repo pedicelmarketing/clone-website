@@ -2,7 +2,8 @@ from playwright.sync_api import sync_playwright
 import collections, json, sys
 import os
 B=os.environ.get("QA_BASE","http://127.0.0.1:8713")
-PAGES=["index.html","clubs.html","camps.html","contacto.html"]
+PAGES=["index.html","clubs.html","camps.html","contacto.html",
+       "en/index.html","en/clubs.html","en/camps.html","en/contact.html"]
 JS = """() => {
   const out={small:[], overflow:[], overlap:[], docScroll:0};
   const vw=document.documentElement.clientWidth;

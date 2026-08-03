@@ -42,7 +42,7 @@ def main() -> int:
     if not root.is_dir():
         sys.exit(f"FATAL: {root} is not a directory")
 
-    pages = sorted(root.glob("*.html"))
+    pages = sorted(root.rglob("*.html"))
     if not pages:
         sys.exit(f"FATAL: no pages in {root}")
 

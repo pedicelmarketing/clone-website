@@ -76,7 +76,7 @@ def main() -> int:
     root = PROJECT / (args[0] if args else "site-v2")
 
     total = 0
-    for page in sorted(root.glob("*.html")):
+    for page in sorted(root.rglob("*.html")):
         src = page.read_text(encoding="utf-8")
         out, n = strip(src)
         total += n

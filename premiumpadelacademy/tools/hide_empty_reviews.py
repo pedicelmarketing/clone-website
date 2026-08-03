@@ -53,7 +53,7 @@ def main() -> int:
         sys.exit(f"FATAL: {root} is not a directory")
 
     total = 0
-    for page in sorted(root.glob("*.html")):
+    for page in sorted(root.rglob("*.html")):
         html = page.read_text(encoding="utf-8")
         match = SECTION.search(html)
 

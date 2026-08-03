@@ -1,10 +1,34 @@
-# HANDOFF — Premium Padel Academy
+# HANDOFF — Nexum Padel (formerly Premium Padel Academy)
 
 Written 2026-08-01 to hand this session to another agent (Kimi Code). No handoff
 document existed before; this is the first.
 
 **Read this whole file before touching anything.** The traps section at the end
 covers several things that will waste hours if rediscovered the hard way.
+
+---
+
+## 0. Update — 2026-08-03 (client feedback round)
+
+Full write-up: `reports/feedback-20260803.md`. Headlines:
+
+- **The site is now "Nexum Padel".** The old working name survives nowhere in
+  `site-v2/`. Enforce with `python3 tools/set_brand.py --check`.
+- **There is an English build** at `site-v2/en/` (4 pages, `contacto.html` →
+  `contact.html`), generated from the Spanish pages by `tools/build_en.py`.
+  **Never hand-edit `site-v2/en/`** — change the Spanish page or the translation
+  map and re-run `--build`. `--check` fails if any Spanish string survives.
+- **All 12 unique photos were upscaled 2×** and are now served responsively from
+  `assets/r/` via `srcset`. The `assets/*.jpg` masters are the quality source,
+  not what ships. Regenerate derivatives with `tools/responsive_images.py`.
+- **The QA gates now cover all 8 routes**, and `tools/qa/nojs.py` had a real bug
+  fixed (its FAIL label used a threshold that never fed the exit status).
+- **Still on the old logo.** Riki supplied the Nexum artwork only as a photo of a
+  wall-mounted mockup. `assets/logo-mark.png` is still the old "R" monogram.
+
+New tools this round, all stdlib-only unless noted, all with `--check`:
+`set_brand.py`, `social_links.py`, `build_en.py`, `upscale_ingest.py` (Pillow),
+`responsive_images.py` (Pillow + Playwright).
 
 ---
 
@@ -298,10 +322,14 @@ discipline; do not upgrade a claim the evidence does not support.
 | Item | Needs |
 | --- | --- |
 | ~~**Commit blocked**~~ | **Resolved 2026-08-02** — hook rewritten to skip absent gates; work committed as `0b13412` |
+| **Logo artwork** | **2026-08-03:** Riki sent the Nexum Padel logo as a *photo of a concrete-wall mockup*, not a usable file. Header, footer and favicon still carry the old "R" monogram. Need the flat source — SVG preferred, else PNG with transparency. Do not trace the mockup and pass it off as his logo |
 | **Fabricated reviews live** | Real reviews, or run `strip_demo_reviews.py` before launch |
 | **Juampi's bio** | Two sentences from him; placeholder in place |
 | **Coach name spelling** | Client wrote "juanmi"; his site says "Juampi Vanella". Site spelling used — confirm |
-| **Hero photography** | Only one 2000px landscape image exists for three hero slots; the rest are 1170px **at source**. Needs full-res originals from his camera roll |
+| **Duplicate photo** | `club-2.jpg` and `elite-inset.jpg` are byte-identical (md5 `7fec65ab…`) — the same shot is published in two places. Replace one |
+| **"Foto de grupo por foto de pista"** | Riki wants a group photo swapped for a court photo; which one is unconfirmed. Candidates: `expect.jpg`, `expect-2.jpg` |
+| **Feedback item 1** | The 2026-08-03 recording starts mid-scroll; items 2 and 3 of his list are visible, item 1 is not. Ask him |
+| ~~**Hero photography**~~ | **Partly addressed 2026-08-03** — 2× ESRGAN upscale raised every asset. Genuine full-res originals from his camera roll would still beat an upscale |
 | **Contact form backend** | Currently composes a `mailto:`. Wire Formspree/Brevo/serverless if real submissions wanted; markup does not change |
 | **Logo artwork** | Client's own file misspells "Aacademy". Worked around by using only the monogram + typeset wordmark. Original artwork still wrong |
 | **Stable URL** | Quick tunnels are ephemeral and unauthenticated. A named tunnel on a real domain would stop the URL churn |
