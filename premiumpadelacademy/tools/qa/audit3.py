@@ -3,7 +3,8 @@ import collections, json, sys
 import os
 B=os.environ.get("QA_BASE","http://127.0.0.1:8713")
 PAGES=["index.html","clubs.html","camps.html","contacto.html",
-       "en/index.html","en/clubs.html","en/camps.html","en/contact.html"]
+       "en/index.html","en/clubs.html","en/camps.html","en/contact.html",
+       "privacidad.html","en/privacy.html"]
 JS = """() => {
   const out={small:[], overflow:[], overlap:[], docScroll:0};
   const vw=document.documentElement.clientWidth;

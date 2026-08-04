@@ -24,8 +24,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html" aria-label="Nexum Padel — inicio">
-      <img src="assets/logo-mark.png" alt="" width="512" height="512" />
-      <span class="brand-word">Nexum Padel</span>
+      <img src="assets/logo.svg" alt="" width="1521" height="1250" />
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
       <span></span>
@@ -35,7 +34,7 @@
       <a class="nav-link" href="clubs.html">Clubs</a>
       <a class="nav-link" href="camps.html">Camps</a>
       <a class="nav-link" href="contacto.html" aria-current="page">Contacto</a>
-      <a class="nav-link nav-lang" href="en/contact.html" hreflang="en" lang="en">EN</a>
+      <a class="nav-link nav-lang" href="en/contact.html" hreflang="en" lang="en"><svg class="flag" viewBox="0 0 24 16" aria-hidden="true" focusable="false"><rect width="24" height="16" fill="#012169"/><path d="M0 0 24 16M24 0 0 16" stroke="#FFF" stroke-width="3.2"/><path d="M0 0 24 16M24 0 0 16" stroke="#C8102E" stroke-width="1.7"/><path d="M12 0v16M0 8h24" stroke="#FFF" stroke-width="5.4"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="3.2"/></svg><span>EN</span></a>
     </nav>
   </div>
 </header>
@@ -112,17 +111,24 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-logo">
-      <img src="assets/logo-mark.png" alt="Nexum Padel" width="512" height="512" loading="lazy" />
-      <p>Academia de pádel en Marbella, España.</p>
+      <img src="assets/logo.svg" alt="Nexum Padel" width="1521" height="1250" loading="lazy" />
+      <p>Academia de pádel para todos los niveles.</p>
     </div>
-    <div class="footer-col">
-      <h2>Ubicación</h2>
-      <p>Marbella, España</p>
-    </div>
+    <nav class="footer-col" aria-label="Pie de página">
+      <h2>Navegación</h2>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="camps.html">Camps</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
     <div class="footer-col">
       <h2>Contacto</h2>
       <ul>
         <li><a href="mailto:info@nexumpadel.es">info@nexumpadel.es</a></li>
+        <li>Marbella, España</li>
+      </ul>
       <!-- social:start -->
       <!-- Redes. Generated from assets/socials.json by tools/social_links.py
            — do not hand-edit; re-render instead. -->
@@ -135,11 +141,11 @@
         </li>
       </ul>
       <!-- social:end -->
-      </ul>
     </div>
   </div>
   <div class="container footer-bottom">
     <span>© 2026 Nexum Padel. Todos los derechos reservados.</span>
+    <a class="footer-legal-link" href="privacidad.html">Política de Privacidad</a>
   </div>
 </footer>
 

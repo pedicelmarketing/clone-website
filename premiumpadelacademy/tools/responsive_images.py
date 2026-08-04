@@ -52,6 +52,21 @@ JPEG_QUALITY = 82   # derivatives are viewed at their native size, so they can
                     # sit below the master's 88 without visible loss
 
 
+def master_name(src: str) -> str:
+    """Map an <img> src back to the master filename in assets/.
+
+    Once a page has been through --build its images point at derivatives
+    (assets/r/hero-home-3110.jpg). Recording that name instead of the master
+    breaks the next --build: nothing matches assets/*.jpg, so it plans zero
+    rungs and still reports success. Strip the -<width> suffix for anything
+    served out of assets/r/.
+    """
+    name = src.split("/")[-1]
+    if "/r/" in src:
+        name = re.sub(r"-\d+(\.jpg)$", r"\1", name)
+    return name
+
+
 def measure() -> dict:
     from playwright.sync_api import sync_playwright
 
@@ -73,7 +88,7 @@ def measure() -> dict:
                 for src, css_width in rows:
                     if not src or ".jpg" not in src:
                         continue
-                    name = src.split("/")[-1]
+                    name = master_name(src)
                     slot = peak.setdefault(name, {})
                     slot[label] = max(slot.get(label, 0), css_width)
             page.close()
@@ -119,6 +134,15 @@ def build(peak: dict) -> dict:
 
     VARIANTS.mkdir(parents=True, exist_ok=True)
     plan: dict[str, dict] = {}
+
+    # Loud failure beats a silent no-op: if masters exist that measurement never
+    # saw, the measurements file is stale or was captured against derivative
+    # filenames, and building would quietly skip them.
+    masters = {p.name for p in ASSETS.glob("*.jpg")}
+    unmeasured = sorted(masters - set(peak))
+    if unmeasured:
+        sys.exit("FATAL: no measurement for " + ", ".join(unmeasured) +
+                 "\n  re-run --measure with the site served on 8713")
 
     for name, widths in sorted(peak.items()):
         master = ASSETS / name

@@ -4,9 +4,14 @@
     "mobile": 421,
     "tablet": 829
   },
-  "camps-method.jpg": {
-    "desktop": 529,
+  "camps-court.jpg": {
+    "desktop": 479,
     "mobile": 350,
+    "tablet": 408
+  },
+  "camps-method.jpg": {
+    "desktop": 249,
+    "mobile": 348,
     "tablet": 518
   },
   "club-1.jpg": {
@@ -36,7 +41,7 @@
   },
   "elite-inset.jpg": {
     "desktop": 220,
-    "mobile": 0,
+    "mobile": 350,
     "tablet": 272
   },
   "elite.jpg": {
@@ -45,9 +50,14 @@
     "tablet": 408
   },
   "expect-2.jpg": {
-    "desktop": 479,
+    "desktop": 529,
     "mobile": 350,
     "tablet": 408
+  },
+  "expect-inset.jpg": {
+    "desktop": 243,
+    "mobile": 350,
+    "tablet": 272
   },
   "expect.jpg": {
     "desktop": 529,

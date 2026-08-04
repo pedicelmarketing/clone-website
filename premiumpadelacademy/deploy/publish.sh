@@ -18,6 +18,21 @@ DEST="/var/www/premiumpadelacademy/"
 [ -f "$PD/build/index.html" ] || {
   echo "FATAL: build/ not built — run: bash deploy/build_public.sh"; exit 1; }
 
+# Refuse a tree whose build did not run to completion. build_public.sh writes
+# .build-complete as its very last act, so a stamp that is absent — or older
+# than something in the tree — means the build aborted partway or the tree was
+# edited afterwards. Publishing a half-built tree once cost this site its
+# noindex marker and its entire /en/ subtree.
+STAMP="$PD/build/.build-complete"
+[ -f "$STAMP" ] || {
+  echo "FATAL: build/ has no completion stamp — the build aborted or was never run."
+  echo "       Re-run: bash deploy/build_public.sh   (and check its exit status)"; exit 1; }
+NEWER="$(find "$PD/build" -type f -newer "$STAMP" ! -name '.build-complete' -print -quit)"
+[ -z "$NEWER" ] || {
+  echo "FATAL: build/ changed after the build completed (e.g. $NEWER)."
+  echo "       Re-run: bash deploy/build_public.sh"; exit 1; }
+echo "==> build stamp ok ($(cat "$STAMP"))"
+
 # Re-assert the gates against the exact tree about to ship, so rsyncing site-v2/
 # by hand cannot route around build_public.sh.
 echo "==> pre-publish gates (on build/, the tree that actually ships)"
@@ -51,8 +66,10 @@ echo "    ok"
 echo "==> publishing $SRC -> $DEST"
 sudo mkdir -p "$DEST"
 sudo rsync -a --delete \
+  --exclude '.build-complete' \
   --exclude 'assets/partners.json' \
   --exclude 'assets/media-provenance.json' \
+  --exclude 'assets/reviews.json' \
   "$SRC" "$DEST"
 
 sudo chown -R www-data:www-data "$DEST"

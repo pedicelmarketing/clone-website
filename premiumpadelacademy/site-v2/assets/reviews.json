@@ -1,0 +1,118 @@
+{
+  "_comment": [
+    "REAL customer reviews, supplied by the client on 2026-08-03. These replaced",
+    "the six fabricated demo reviews that previously populated the design.",
+    "",
+    "Nothing here may be invented. The aggregate score shown on the page is",
+    "COMPUTED from these ratings by tools/reviews.py — never typed by hand — so",
+    "it cannot drift from the reviews it claims to summarise.",
+    "",
+    "text_en is the wording as the client supplied it. text_es is the Spanish",
+    "rendering shown on the Spanish pages; tools/build_en.py maps one to the",
+    "other so /en/ always shows the original English.",
+    "",
+    "Edit this file, then: python3 tools/reviews.py --render"
+  ],
+  "reviews": [
+    {
+      "name": "Carlos M.", "country": "es", "rating": 5,
+      "text_en": "Started completely from zero six months ago and now I'm playing proper matches. Juampi has this way of breaking down every shot so it finally clicks. Best decision I've made all year.",
+      "text_es": "Empecé desde cero hace seis meses y ya juego partidos de verdad. Juampi tiene una forma de desmenuzar cada golpe hasta que por fin te encaja. La mejor decisión que he tomado en todo el año."
+    },
+    {
+      "name": "Ingrid Halvorsen", "country": "no", "rating": 5,
+      "text_en": "Came in thinking I'd just have fun and get some exercise — left actually knowing how to play. The coaching here is on another level.",
+      "text_es": "Vine pensando que solo iba a pasarlo bien y hacer algo de ejercicio, y me he ido sabiendo jugar de verdad. El nivel de los entrenadores aquí es otra cosa."
+    },
+    {
+      "name": "Emma Whitaker", "country": "gb", "rating": 4,
+      "text_en": "Riki is incredibly patient. I'm not naturally sporty and he never once made me feel like I was falling behind. My bandeja is finally starting to look like a bandeja.",
+      "text_es": "Riki tiene una paciencia increíble. No soy nada deportista y en ningún momento me hizo sentir que me estaba quedando atrás. Mi bandeja por fin empieza a parecer una bandeja."
+    },
+    {
+      "name": "Javier Ruiz", "country": "es", "rating": 5,
+      "text_en": "Fantastic club. Great courts, friendly people, and coaches who genuinely care whether you improve. Highly recommend for anyone thinking about starting.",
+      "text_es": "Club fantástico. Muy buenas pistas, gente maja y entrenadores a los que de verdad les importa que mejores. Muy recomendable para cualquiera que se esté planteando empezar."
+    },
+    {
+      "name": "Sophie L.", "country": "ie", "rating": 4,
+      "text_en": "My whole group of friends signed up together and we've all noticed how much sharper our game has gotten. The classes are demanding but never boring.",
+      "text_es": "Nos apuntamos todo el grupo de amigas juntas y todas hemos notado lo mucho que ha mejorado nuestro juego. Las clases son exigentes pero nunca aburridas."
+    },
+    {
+      "name": "Andrés Gómez", "country": "es", "rating": 5,
+      "text_en": "I've taken lessons at a few clubs around the area and this is easily the best. The difference is they actually correct your technique instead of just feeding you balls.",
+      "text_es": "He dado clases en varios clubes de la zona y este es sin duda el mejor. La diferencia es que aquí te corrigen la técnica de verdad, no se limitan a echarte bolas."
+    },
+    {
+      "name": "Lukas Weber", "country": "de", "rating": 5,
+      "text_en": "Juampi turned my terrible backhand into something I'm no longer embarrassed about. Worth every euro.",
+      "text_es": "Juampi convirtió mi revés horrible en algo que ya no me da vergüenza. Vale cada euro."
+    },
+    {
+      "name": "Thomas Berg", "country": "se", "rating": 4,
+      "text_en": "Lovely atmosphere and a real sense of community. You feel welcome from the first session, whether you're a total beginner or been playing for years.",
+      "text_es": "Ambiente estupendo y una sensación real de comunidad. Te sientes bienvenido desde la primera sesión, seas principiante total o lleves años jugando."
+    },
+    {
+      "name": "Cristina P.", "country": "es", "rating": 5,
+      "text_en": "My kids do the junior classes and look forward to it every single week. They've learned so much and made great friends too.",
+      "text_es": "Mis hijos van a las clases de iniciación y esperan toda la semana a que llegue el día. Han aprendido muchísimo y además han hecho muy buenos amigos."
+    },
+    {
+      "name": "Daniel Ortega", "country": "es", "rating": 5,
+      "text_en": "Booked a private lesson to fix a few bad habits and walked away with a completely different serve. The coaches really know what they're doing.",
+      "text_es": "Reservé una clase particular para quitarme un par de vicios y salí con un saque completamente distinto. Los entrenadores saben perfectamente lo que hacen."
+    },
+    {
+      "name": "Isabel Moreno", "country": "es", "rating": 4,
+      "text_en": "Honestly one of the highlights of my week. Great exercise, great people, and I keep improving every session.",
+      "text_es": "Sinceramente, uno de los mejores momentos de mi semana. Buen ejercicio, buena gente, y no dejo de mejorar en cada sesión."
+    },
+    {
+      "name": "James Cooper", "country": "gb", "rating": 5,
+      "text_en": "Riki explains the why behind everything — court positioning, when to lob, how to read your opponent. It's not just drills, it's actually teaching you the game.",
+      "text_es": "Riki te explica el porqué de todo: la colocación en pista, cuándo globear, cómo leer al rival. No son solo ejercicios, es enseñarte a entender el juego."
+    },
+    {
+      "name": "Paula Navarro", "country": "es", "rating": 5,
+      "text_en": "Went from being scared of the back glass to using it as a weapon. Can't recommend the classes enough.",
+      "text_es": "He pasado de tenerle miedo al cristal del fondo a usarlo como arma. No puedo recomendar más las clases."
+    },
+    {
+      "name": "Andreas Meier", "country": "ch", "rating": 4,
+      "text_en": "Well-organised, always on time, and the coaching is genuinely excellent. You can tell they love padel and want you to love it too.",
+      "text_es": "Todo muy bien organizado, siempre puntuales, y el nivel de los entrenadores es excelente de verdad. Se nota que les encanta el pádel y que quieren que a ti también."
+    },
+    {
+      "name": "Linda Andersson", "country": "se", "rating": 5,
+      "text_en": "I was nervous about joining as an older beginner but everyone here is so encouraging. Six weeks in and I'm hooked.",
+      "text_es": "Me daba respeto apuntarme siendo principiante y ya mayor, pero aquí todo el mundo te anima muchísimo. Seis semanas y estoy enganchada."
+    },
+    {
+      "name": "Roberto Díaz", "country": "es", "rating": 5,
+      "text_en": "Juampi and Riki make a brilliant team. Between the two of them they've fixed things in my game I didn't even know were wrong.",
+      "text_es": "Juampi y Riki hacen un equipo buenísimo. Entre los dos me han corregido cosas del juego que ni sabía que estaba haciendo mal."
+    },
+    {
+      "name": "Nadia El Amrani", "country": "ma", "rating": 4,
+      "text_en": "Great value for the quality of coaching. My technique has come on massively and my matches with friends are way more competitive now.",
+      "text_es": "Muy buena relación calidad-precio para el nivel de entrenamiento que hay. Mi técnica ha mejorado una barbaridad y los partidos con amigos son mucho más competidos."
+    },
+    {
+      "name": "Alejandro Vega", "country": "es", "rating": 5,
+      "text_en": "The group classes strike the perfect balance — enough correction to actually learn, enough play to stay fun. Never want to miss one.",
+      "text_es": "Las clases en grupo tienen el equilibrio perfecto: corrección suficiente para aprender de verdad y juego suficiente para que sea divertido. No quiero perderme ninguna."
+    },
+    {
+      "name": "Claire Dubois", "country": "fr", "rating": 5,
+      "text_en": "What sets this place apart is how much they care. They remember what you struggled with last week and build on it. That's rare.",
+      "text_es": "Lo que diferencia a este sitio es lo mucho que se implican. Se acuerdan de con qué te costó la semana anterior y construyen sobre eso. Eso es poco común."
+    },
+    {
+      "name": "Fernando Castro", "country": "es", "rating": 4,
+      "text_en": "Best padel club in the area, no question. Learned more here in a few months than I did in two years of just playing casually. If you're serious about improving, this is where you go.",
+      "text_es": "El mejor club de pádel de la zona, sin discusión. He aprendido más aquí en unos meses que en dos años jugando por mi cuenta. Si vas en serio con mejorar, es aquí."
+    }
+  ]
+}

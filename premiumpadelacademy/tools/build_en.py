@@ -23,6 +23,7 @@ Stdlib only, to match the rest of the tooling in this repo.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -44,10 +45,13 @@ ROUTES = {
     "clubs.html": "clubs.html",
     "camps.html": "camps.html",
     "contacto.html": "contact.html",
+    "privacidad.html": "privacy.html",
 }
 
-# Attributes whose values are prose and must be translated.
-TRANSLATED_ATTRS = ("alt", "title", "aria-label", "content", "placeholder")
+# Attributes whose values are prose and must be translated. data-label-less is
+# the collapsed-state label js/reviews.js swaps in, so it is visitor-visible too.
+TRANSLATED_ATTRS = ("alt", "title", "aria-label", "content", "placeholder",
+                    "data-label-less")
 
 # Text-node and attribute translations. Every visible string on the Spanish
 # site appears here; --check enforces that.
@@ -66,6 +70,120 @@ TEXT = {
     "Ubicación": "Location",
     "Marbella, España": "Marbella, Spain",
     "Academia de pádel en Marbella, España.": "Padel academy in Marbella, Spain.",
+    # Footer, reorganised 2026-08-03: the tagline no longer repeats the location,
+    # which now appears once under Contacto.
+    "Academia de pádel para todos los niveles.": "Padel academy for every level.",
+    "Navegación": "Navigation",
+    "Pie de página": "Footer",
+    "Política de Privacidad": "Privacy Policy",
+    "EN": "EN",
+
+    # --- privacy page -------------------------------------------------------
+    "Privacidad | Nexum Padel": "Privacy | Nexum Padel",
+    "Política de privacidad de Nexum Padel: qué datos tratamos, con qué finalidad y cómo "
+    "ejercer tus derechos.":
+        "Nexum Padel's privacy policy: what data we handle, why, and how to exercise your rights.",
+    "Legal": "Legal",
+    "Última actualización: 3 de agosto de 2026": "Last updated: 3 August 2026",
+    "Esta web trata la mínima cantidad de datos posible. No usamos cookies, no hay analítica, "
+    "no hay publicidad y no creamos perfiles de nadie.":
+        "This site handles as little data as possible. We use no cookies, there is no analytics, "
+        "no advertising, and we build no profiles of anyone.",
+    "1. Quién es el responsable": "1. Who is responsible",
+    "Titular:": "Legal entity:",
+    "PENDIENTE — nombre o razón social": "PENDING — name or registered company name",
+    "NIF:": "Tax ID (NIF):",
+    "PENDIENTE": "PENDING",
+    "Domicilio:": "Registered address:",
+    "PENDIENTE — dirección fiscal": "PENDING — registered address",
+    # Street and town stay as they are — only the country name is localised.
+    "Av. de Barcelona, 8, 29670 San Pedro Alcántara, Málaga, España":
+        "Av. de Barcelona, 8, 29670 San Pedro Alcántara, Málaga, Spain",
+    "Email:": "Email:",
+    "Web:": "Website:",
+    "nexumpadel.es": "nexumpadel.es",
+    "2. Qué datos tratamos y para qué": "2. What data we handle, and why",
+    "Solo tratamos los datos que nos envías tú por tu propia iniciativa cuando nos escribes: tu "
+    "nombre, tu dirección de correo y lo que nos cuentes en el mensaje. Los usamos únicamente "
+    "para responderte y, si procede, prepararte una propuesta.":
+        "We only handle what you send us yourself when you write to us: your name, your email "
+        "address and whatever you tell us in the message. We use it solely to reply and, where "
+        "relevant, to put a proposal together for you.",
+    "El formulario de contacto de esta web no envía nada por sí solo: abre tu propio programa de "
+    "correo con el mensaje ya escrito, y eres tú quien decide enviarlo. Es decir, tus datos "
+    "llegan a nuestro buzón como un email normal y corriente, y esta web no los guarda en ningún "
+    "momento.":
+        "The contact form on this site sends nothing by itself: it opens your own mail app with "
+        "the message pre-written, and you decide whether to send it. Your details reach our inbox "
+        "as an ordinary email, and this website never stores them at any point.",
+    "3. Con qué legitimación": "3. Legal basis",
+    "Tu consentimiento, que das al escribirnos voluntariamente (RGPD art. 6.1.a), y la aplicación "
+    "de medidas precontractuales cuando nos pides información sobre un programa o una reserva "
+    "(RGPD art. 6.1.b).":
+        "Your consent, given when you choose to write to us (GDPR art. 6.1.a), and pre-contractual "
+        "steps when you ask about a programme or a booking (GDPR art. 6.1.b).",
+    "4. Cuánto tiempo los conservamos": "4. How long we keep it",
+    "Conservamos tu correo el tiempo necesario para atender tu consulta y, si acabas siendo "
+    "cliente, durante los plazos que exige la normativa fiscal y mercantil. Si no llegamos a "
+    "tener relación, borramos la conversación cuando deja de tener sentido mantenerla.":
+        "We keep your email for as long as it takes to deal with your enquiry and, if you become "
+        "a client, for the periods tax and commercial law require. If nothing comes of it, we "
+        "delete the exchange once there is no reason to keep it.",
+    "5. Quién más puede ver tus datos": "5. Who else can see your data",
+    "No vendemos ni cedemos tus datos a nadie. Solo intervienen los proveedores que hacen falta "
+    "para que la web y el correo funcionen:":
+        "We do not sell or hand your data to anyone. The only third parties involved are the "
+        "providers needed to run the website and the mailbox:",
+    "Alojamiento web:": "Web hosting:",
+    "servidor propio en Scaleway (Francia, Unión Europea).":
+        "our own server at Scaleway (France, European Union).",
+    "Correo electrónico:": "Email:",
+    "Hostinger, proveedor del buzón info@nexumpadel.es.":
+        "Hostinger, provider of the info@nexumpadel.es mailbox.",
+    "Google Fonts:": "Google Fonts:",
+    "las tipografías de la web se cargan desde servidores de Google, lo que implica que tu "
+    "dirección IP les es comunicada al abrir la página. No se instala ninguna cookie por este "
+    "motivo.":
+        "the site's typefaces load from Google's servers, which means your IP address is disclosed "
+        "to them when the page opens. No cookie is set as a result.",
+    "6. Cookies": "6. Cookies",
+    "Esta web no instala cookies, ni propias ni de terceros, y tampoco usa almacenamiento local "
+    "del navegador. No hay Google Analytics, ni píxeles de redes sociales, ni herramientas de "
+    "seguimiento de ningún tipo. Por eso no verás ningún aviso de cookies: sencillamente no hay "
+    "nada que consentir.":
+        "This site sets no cookies, neither its own nor third-party, and uses no browser local "
+        "storage. There is no Google Analytics, no social media pixels and no tracking tools of "
+        "any kind. That is why you will see no cookie banner: there is simply nothing to consent "
+        "to.",
+    "7. Enlaces a otras webs": "7. Links to other sites",
+    "Desde aquí enlazamos a perfiles y páginas de terceros, como nuestro Instagram. Cuando sales "
+    "de esta web, la política de privacidad que se te aplica es la de ese sitio, no la nuestra.":
+        "We link out to third-party pages and profiles, such as our Instagram. Once you leave this "
+        "site, the privacy policy that applies to you is theirs, not ours.",
+    "8. Tus derechos": "8. Your rights",
+    "Puedes pedirnos en cualquier momento acceder a tus datos, rectificarlos, suprimirlos, "
+    "oponerte al tratamiento, limitarlo o solicitar su portabilidad. Basta con escribirnos a":
+        "You may ask us at any time to access your data, correct it, delete it, object to or "
+        "restrict its processing, or request its portability. Just write to",
+    "indicando qué derecho quieres ejercer.": "telling us which right you wish to exercise.",
+    "Si consideras que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia "
+    "Española de Protección de Datos (":
+        "If you feel we have not handled your request properly, you may complain to the Spanish "
+        "Data Protection Agency (",
+    "aepd.es": "aepd.es",
+    "9. Seguridad": "9. Security",
+    "La web se sirve íntegramente por conexión cifrada (HTTPS). Aun así, ningún sistema es "
+    "infalible: te recomendamos no enviarnos por correo información sensible que no sea necesaria "
+    "para lo que nos pides.":
+        "The whole site is served over an encrypted connection (HTTPS). Even so, no system is "
+        "infallible: we recommend not emailing us sensitive information beyond what your request "
+        "actually needs.",
+    "10. Cambios en esta política": "10. Changes to this policy",
+    "Si cambiamos la forma de tratar los datos —por ejemplo, si algún día añadimos un formulario "
+    "que sí guarde la información o alguna herramienta de medición— actualizaremos esta página y "
+    "la fecha que aparece arriba.":
+        "If we change how we handle data — say we one day add a form that does store what you "
+        "type, or any measurement tool — we will update this page and the date shown above.",
     "© 2026 Nexum Padel. Todos los derechos reservados.":
         "© 2026 Nexum Padel. All rights reserved.",
 
@@ -385,6 +503,8 @@ ATTR = {
     "Instagram de Nexum Padel": "Nexum Padel on Instagram",
     "Pedicel Marketing": "Pedicel Marketing",
     "Nexum Padel": "Nexum Padel",
+    "Vista aérea del club de pádel en Marbella, con el mar de fondo":
+        "Aerial view of the padel club in Marbella, with the sea behind",
     "Pista de pádel de la academia en Marbella, con palmeras al fondo":
         "The academy's padel court in Marbella, with palm trees behind",
     "Riki Padrón, Head Coach de la academia": "Riki Padrón, Head Coach at the academy",
@@ -394,8 +514,14 @@ ATTR = {
         "A player striking the ball during training",
     "Pistas de pádel de la academia en Marbella, con La Concha al fondo":
         "The academy's padel courts in Marbella, with La Concha mountain behind",
-    "Grupo entrenando con uno de los coaches de la academia":
-        "A group training with one of the academy coaches",
+    "Pistas de pádel en Marbella con La Concha al fondo":
+        "Padel courts in Marbella with La Concha mountain behind",
+    "Pista de pádel del club bajo un cielo despejado en Marbella":
+        "The club's padel court under clear skies in Marbella",
+    "Tres jugadores posando junto a la red de la pista":
+        "Three players by the net on court",
+    "Tres jugadores con sus palas al final de un entrenamiento":
+        "Three players with their rackets at the end of a session",
     "Entrenamiento de grupo en pista": "Group training on court",
     "Vista aérea del complejo de pistas de pádel en Marbella":
         "Aerial view of the padel court complex in Marbella",
@@ -404,6 +530,8 @@ ATTR = {
         "The coaching team after a training session",
     "Evento y masterclass en el club": "An event and masterclass at the club",
     "Sesión de grupo organizada en pista": "An organised group session on court",
+    "Vista aérea de las pistas del club, con jugadores en partido":
+        "Aerial view of the club's courts, with players mid-match",
     "Avenida de palmeras en Marbella al atardecer":
         "A palm-lined avenue in Marbella at sunset",
     "Jugadores entrenando durante un camp en Marbella":
@@ -430,7 +558,52 @@ ATTR = {
         "Request information about padel training in Marbella or international programmes for "
         "players and clubs.",
 }
+
+def _load_review_translations() -> dict:
+    """Spanish review text -> the client's original English wording.
+
+    The reviews arrived in English and are rendered in Spanish on the ES pages,
+    so /en/ must show the ORIGINAL words back, not a re-translation of a
+    translation. Pulled from assets/reviews.json so the pair stays in one place;
+    adding a review needs no edit here.
+    """
+    path = PROJECT / "site-v2" / "assets" / "reviews.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    reviews = data.get("reviews") or []
+    out = {}
+    for r in reviews:
+        out[r["text_es"]] = r["text_en"]
+
+    if reviews:
+        # Spain writes 4,7 and the UK writes 4.7. Derived from the ratings, not
+        # hardcoded, so it stays correct when a review is added or changed.
+        avg = sum(int(r["rating"]) for r in reviews) / len(reviews)
+        es = f"{avg:.1f}".replace(".", ",")
+        en = f"{avg:.1f}"
+        out[es] = en
+        out[f"{es} de 5 estrellas"] = f"{en} out of 5 stars"
+        out[f"Ver las {len(reviews)} reseñas"] = f"See all {len(reviews)} reviews"
+    return out
+
+
+# Country labels used by the review cards, and the review-section chrome.
+TEXT.update({
+    "España": "Spain", "Noruega": "Norway", "Suecia": "Sweden",
+    "Reino Unido": "United Kingdom", "Irlanda": "Ireland", "Alemania": "Germany",
+    "Francia": "France", "Suiza": "Switzerland", "Marruecos": "Morocco",
+    "Ver menos": "Show fewer",
+    "Ver las 20 reseñas": "See all 20 reviews",
+})
+TEXT.update(_load_review_translations())
+
 ATTR.update({k: v for k, v in TEXT.items()})
+# Star aria-labels are generated per rating, so cover the range rather than
+# listing whichever values happen to appear today.
+ATTR.update({f"{n} de 5 estrellas": f"{n} out of 5 stars" for n in range(0, 6)})
+ATTR["4,7 de 5 estrellas"] = "4.7 out of 5 stars"
+ATTR["Ver menos"] = "Show fewer"
 
 TAG_RE = re.compile(r"<[^>]*>", re.S)
 ATTR_RE = re.compile(r'\b(' + "|".join(TRANSLATED_ATTRS) + r')="([^"]*)"')
@@ -544,10 +717,57 @@ def build() -> None:
     print("  Spanish pages: EN switcher + hreflang added")
 
 
+def untranslated_sources() -> dict[str, list[str]]:
+    """Spanish strings on the ES pages that have no entry in TEXT/ATTR.
+
+    This is the gate that actually matters. Checking only that *known* Spanish
+    strings disappeared from /en/ proves nothing about strings nobody mapped:
+    privacidad.html was added with zero entries and --check reported a single
+    problem while the entire English page was still in Spanish.
+
+    So instead of asking "did the strings I know about get translated?", ask
+    "is there anything on the Spanish page I never gave a translation for?".
+    """
+    missing: dict[str, list[str]] = {}
+    for es_route in ROUTES:
+        page = ROOT / es_route
+        if not page.exists():
+            continue
+        html = page.read_text(encoding="utf-8")
+        html = re.sub(r"<!--.*?-->", "", html, flags=re.S)
+        html = re.sub(r"<(script|style|svg)\b.*?</\1>", "", html, flags=re.S)
+        # translate="no" is an explicit instruction that the content is not
+        # copy — reviewer names, avatar initials. Nothing to define there.
+        html = re.sub(r'<(\w+)[^>]*\btranslate="no"[^>]*>.*?</\1>', "", html, flags=re.S)
+
+        found = []
+        for chunk in TAG_RE.split(html):
+            s = " ".join(chunk.split())
+            # Skip anything with no letters: bare numerals like "01" and lone
+            # punctuation need no translation and would only add noise.
+            if s and any(c.isalpha() for c in s) and s not in TEXT:
+                found.append(s)
+        for tag in TAG_RE.findall(html):
+            for name, value in ATTR_RE.findall(tag):
+                v = value.strip()
+                if v and any(c.isalpha() for c in v) and v not in ATTR:
+                    found.append(f"@{name}={v}")
+        if found:
+            missing[es_route] = sorted(set(found), key=len, reverse=True)
+    return missing
+
+
 def check() -> int:
     """Fail if any Spanish string survived into the English build."""
     spanish = {s for s in TEXT if TEXT[s] != s} | {s for s in ATTR if ATTR[s] != s}
     problems = 0
+
+    gaps = untranslated_sources()
+    for route, items in gaps.items():
+        print(f"  {route:16} {len(items)} string(s) with NO translation defined")
+        for s in items[:6]:
+            print(f"      missing: {s[:96]}")
+        problems += len(items)
     for es_route, en_route in ROUTES.items():
         page = EN / en_route
         if not page.exists():

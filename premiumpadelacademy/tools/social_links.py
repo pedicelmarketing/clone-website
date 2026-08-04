@@ -25,15 +25,17 @@ import sys
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parent.parent
-PAGES = ("index.html", "clubs.html", "camps.html", "contacto.html")
+PAGES = ("index.html", "clubs.html", "camps.html", "contacto.html",
+         "privacidad.html")
 
 START = "      <!-- social:start -->"
 END = "      <!-- social:end -->"
 
-# Anchor: the footer contact list closes right before the block goes in. This
-# exact markup is on all four pages (verified by --check).
-ANCHOR = """      </ul>
-    </div>
+# Anchor: the close of the footer's last column. The block lands AFTER the
+# contact <ul>, not inside it — the previous anchor started at "</ul>" and so
+# inserted <ul class="socials"> as a direct child of another <ul>, which is
+# invalid HTML. This exact markup is on all four pages (verified by --check).
+ANCHOR = """    </div>
   </div>
   <div class="container footer-bottom">"""
 

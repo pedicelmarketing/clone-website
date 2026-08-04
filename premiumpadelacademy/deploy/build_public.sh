@@ -53,9 +53,16 @@ else
   echo "==> reverting fabricated demo reviews"
   python3 "$PD/tools/strip_demo_reviews.py" "$(basename "$OUT")"
 
+  # Only strip the section when it is genuinely empty. Since the client supplied
+  # real reviews (2026-08-03) this step no longer applies, and hide_empty_reviews
+  # rightly refuses to delete real content — which used to abort the whole build.
   if [ "$KEEP_REVIEWS" -eq 0 ]; then
-    echo "==> removing the now-empty reviews section"
-    python3 "$PD/tools/hide_empty_reviews.py" --root "$(basename "$OUT")"
+    if python3 "$PD/tools/reviews.py" --root "$(basename "$OUT")" --check >/dev/null 2>&1; then
+      echo "==> keeping the reviews section — it holds real reviews"
+    else
+      echo "==> removing the now-empty reviews section"
+      python3 "$PD/tools/hide_empty_reviews.py" --root "$(basename "$OUT")"
+    fi
   fi
 fi
 
@@ -82,6 +89,16 @@ python3 "$PD/tools/build_en.py" --root "$(basename "$OUT")" --build
 # returning visitor pairs new HTML with a year-old stylesheet. That exact
 # combination put a 387px black square in the footer on 2026-08-03. Runs after
 # every other transform so the hash covers the final bytes.
+# robots.txt / sitemap.xml, generated from the routes and tied to the indexing
+# state: a draft disallows crawling outright, a launch build allows it and ships
+# a sitemap with hreflang pairs. Emitted before the gates so gate 4 sees them.
+echo "==> robots.txt / sitemap.xml"
+if [ "$NOINDEX" -eq 1 ]; then
+  python3 "$PD/tools/seo_files.py" --root "$(basename "$OUT")" --lastmod "$(date -u +%F)"
+else
+  python3 "$PD/tools/seo_files.py" --root "$(basename "$OUT")" --launch --lastmod "$(date -u +%F)"
+fi
+
 echo "==> content-hashing css/js"
 python3 "$PD/tools/hash_assets.py" --root "$(basename "$OUT")"
 
@@ -140,8 +157,22 @@ else
   require_absent 'data-demo="true"'
 fi
 
-# Gate 2 - no placeholder content of any kind reached the public build.
-{ [ "$KEEP_REVIEWS" -eq 1 ] || [ "$KEEP_DEMO" -eq 1 ]; } || require_absent 'Pendiente'
+# Gate 2 - unfilled placeholders. Coupled to the indexing state exactly like the
+# example reviews: an unapproved draft may carry visibly-marked blanks, a launch
+# build may not. The privacy policy's legal identifiers (titular, NIF, domicilio)
+# are the current case — RGPD art. 13.1.a requires them, and only the client can
+# supply them, so the launch build must refuse until they are filled in.
+n_pending="$(count 'Pendiente')"
+if [ "$n_pending" -gt 0 ]; then
+  if [ "$NOINDEX" -eq 1 ]; then
+    echo "  DRAFT: $n_pending unfilled placeholder(s) present."
+    echo "         Allowed only because this build is noindex. --allow-index will refuse."
+  else
+    echo "  FAIL: $n_pending placeholder(s) still unfilled — not fit to launch."
+    echo "        Fill the privacy policy's legal identifiers before allowing indexing."
+    fail=1
+  fi
+fi
 if [ "$KEEP_SLOTS" -eq 0 ]; then
   require_absent 'data-placeholder="true"'
   require_absent 'Espacio disponible'
@@ -222,6 +253,14 @@ if [ "$fail" -ne 0 ]; then
   echo "BUILD FAILED - not fit to publish."
   exit 1
 fi
+# Completion stamp, written only here — after every transform and every gate.
+# publish.sh refuses to ship a tree without a stamp newer than its own contents.
+# On 2026-08-03 a build aborted midway (hide_empty_reviews refusing to delete
+# real reviews) and the half-finished tree was published: noindex missing and
+# /en/ absent. The content gates all passed, because they only ever inspected
+# what was there, never whether the build had finished putting it there.
+date -u +%Y-%m-%dT%H:%M:%SZ > "$OUT/.build-complete"
+
 echo "==> build ok"
 echo "    files: $(find "$OUT" -type f | wc -l)   size: $(du -sh "$OUT" | cut -f1)"
 echo "    next:  bash deploy/publish.sh"

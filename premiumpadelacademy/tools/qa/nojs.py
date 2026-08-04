@@ -3,7 +3,8 @@ import sys
 import os
 B=os.environ.get("QA_BASE","http://127.0.0.1:8713"); ok=True
 PAGES=["index.html","clubs.html","camps.html","contacto.html",
-       "en/index.html","en/clubs.html","en/camps.html","en/contact.html"]
+       "en/index.html","en/clubs.html","en/camps.html","en/contact.html",
+       "privacidad.html","en/privacy.html"]
 # Floor for "the page actually rendered something" with JS off. contacto.html
 # is a short contact form and legitimately sits at ~580 chars, so an 800 floor
 # mislabels it. This threshold now feeds the verdict instead of only the label —

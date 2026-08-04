@@ -70,18 +70,20 @@
     "exif_stripped": true
   },
   "expect.jpg": {
-    "slot": "expect",
-    "wix_media_id": "b99928_d3004220c4fb42cf902e0a5cafd4e503~mv2.jpeg",
-    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_d3004220c4fb42cf902e0a5cafd4e503~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "slot": "img-main",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/Puños.jpeg",
+    "source_sha256_16": "607214c739f80081",
     "source_pixels": [
-      1170,
-      1544
+      1536,
+      2048
     ],
     "shipped_pixels": [
-      1170,
-      1544
+      1536,
+      2048
     ],
-    "exif_stripped": true
+    "exif_stripped": true,
+    "note": "Requested 2026-08-04: 'grande la de los puños y pequeña la chica'."
   },
   "expect-2.jpg": {
     "slot": "expect-2",
@@ -349,5 +351,21 @@
         "installed_bytes": 2045707
       }
     ]
+  },
+  "expect-inset.jpg": {
+    "slot": "img-inset",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/chica replacement.jpeg",
+    "source_sha256_16": "e702dd5e13f3f3a3",
+    "source_pixels": [
+      995,
+      999
+    ],
+    "shipped_pixels": [
+      995,
+      999
+    ],
+    "exif_stripped": true,
+    "note": "Requested 2026-08-04: 'grande la de los puños y pequeña la chica'."
   }
 }

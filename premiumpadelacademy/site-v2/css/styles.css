@@ -140,21 +140,19 @@ p:last-child { margin-bottom: 0; }
   backdrop-filter: saturate(150%) blur(8px);
   border-bottom: 1px solid var(--line);
 }
+/* The brand mark is the client's stacked lockup (ball over NEXUM / PADEL),
+   supplied as SVG so it stays sharp at any size. The "MARBELLA - SPAIN" arc is
+   deliberately not used on the site: at header size it rendered ~5px tall and
+   read as a smudge. Without it the wordmark fills the same box, so this needs
+   less height than the full lockup did. */
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 24px; min-height: 78px;
+  gap: 24px; min-height: 88px;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; flex: 0 0 auto; }
-.brand img { height: 34px; width: auto; }
-/* The supplied logo artwork misspells the name ("Aacademy"). Only the monogram
-   is used as an image; the wordmark is set in type, so it is correct, crisp at
-   any size and readable by screen readers. */
-.brand-word {
-  font-family: var(--sans);
-  font-size: clamp(.9375rem, .91rem + .12vw, 1rem);
-  font-weight: 600; letter-spacing: .04em; line-height: 1.1;
-  color: var(--ink); text-transform: uppercase; max-width: 8.5em;
-}
+/* The lockup already contains the wordmark, so no type sits beside it — that
+   would print the name twice. */
+.brand img { height: 58px; width: auto; }
 
 .main-nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 46px); }
 .nav-link {
@@ -177,15 +175,16 @@ p:last-child { margin-bottom: 0; }
   padding: 5px 11px; border: 1px solid var(--line); border-radius: 999px;
   transition: color .18s ease, border-color .18s ease, background .18s ease;
 }
-/* The flag is the fastest thing to recognise in the nav, so it leads. Sized in
-   px rather than em: it must stay a crisp rectangle, not scale with the label.
-   The inset ring keeps the white of the Union Jack from bleeding into the
-   header background at its edge. */
-.nav-lang .flag {
+/* Flags are inline SVG, never emoji: emoji flags are absent on Windows and
+   unstylable everywhere. Sized in px rather than em so they stay crisp
+   rectangles, with an inset ring so a white-edged flag (Union Jack, Ireland)
+   doesn't bleed into a light background. */
+.flag {
   width: 19px; height: 13px; flex: 0 0 auto;
   border-radius: 2px;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .12);
 }
+.review-where .flag { width: 17px; height: 11.5px; }
 .nav-lang:hover, .nav-lang:focus-visible {
   color: var(--white); background: var(--ink); border-color: var(--ink);
 }
@@ -286,7 +285,14 @@ p:last-child { margin-bottom: 0; }
 /* ---------- split: copy + stacked photos ---------- */
 .split { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .split-media { position: relative; }
-.split-media img { width: 100%; border-radius: var(--radius); object-fit: cover; }
+/* object-position biased above centre: these slots have a fixed aspect-ratio, so
+   a photo that is not the same shape gets cropped, and a centred crop takes the
+   difference off the top — which is where the faces are. Supplied photos have
+   ranged from 3:4 to square, so the slot cannot assume a shape. */
+.split-media img {
+  width: 100%; border-radius: var(--radius);
+  object-fit: cover; object-position: 50% 32%;
+}
 .split-media .img-main  { aspect-ratio: 4/5; }
 
 /* The source overlaps a small inset photo over the main one. Kept on desktop,
@@ -524,7 +530,7 @@ p:last-child { margin-bottom: 0; }
   display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: clamp(28px, 4vw, 56px);
   padding-block: clamp(44px, 5vw, 72px);
 }
-.footer-logo img { height: 36px; width: auto; margin-bottom: 1rem; }
+.footer-logo img { height: 78px; width: auto; margin-bottom: 1rem; }
 .footer-col h2 {
   font-family: var(--sans);
   font-size: var(--t-eyebrow); font-weight: 600;
@@ -533,7 +539,42 @@ p:last-child { margin-bottom: 0; }
 }
 .footer-col p, .footer-col a { font-size: var(--t-meta); color: var(--muted); }
 .footer-col a:hover { color: var(--ink); }
-.footer-col li { margin-bottom: .5rem; }
+/* li carries the size too: the location is plain text, not a link, and would
+   otherwise sit a size larger than the address above it. */
+.footer-col li { margin-bottom: .5rem; font-size: var(--t-meta); color: var(--muted); }
+.footer-col li:last-child { margin-bottom: 0; }
+/* The brand column is the widest; its blurb shouldn't run the full width. */
+.footer-logo p { max-width: 26ch; }
+.footer-legal-link { font-size: var(--t-meta); color: var(--muted); }
+.footer-legal-link:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- legal / prose pages ----------
+   Narrow measure and a plain vertical rhythm: these pages are read, not
+   scanned, so they drop the marketing layout entirely. */
+.legal-inner { max-width: 760px; }
+.legal-title { font-size: var(--t-h2); margin-bottom: .4rem; }
+.legal-updated { font-size: var(--t-meta); color: var(--muted); margin-bottom: 2rem; }
+.legal h2 {
+  font-family: var(--sans);
+  font-size: clamp(1.06rem, 1rem + .3vw, 1.24rem);
+  font-weight: 600; color: var(--ink);
+  margin: 2.4rem 0 .7rem;
+}
+.legal p { color: var(--muted); }
+.legal-list { margin: 0 0 1.15em; padding-left: 1.1em; list-style: disc; }
+.legal-list li { margin-bottom: .5rem; color: var(--muted); }
+.legal-list strong { color: var(--ink); font-weight: 600; }
+.legal a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.legal a:hover { color: var(--gold); }
+/* Unfilled legal identifiers must be impossible to mistake for real ones —
+   same rule the build applies to placeholder reviews and partner slots. */
+.legal-pending {
+  display: inline-block;
+  font-family: var(--sans); font-size: var(--t-meta); font-weight: 600;
+  color: #A8762B; background: #FBF0DC;
+  border: 1px dashed #D9B46A; border-radius: 4px;
+  padding: 1px 7px;
+}
 
 /* Social links. Generated by tools/social_links.py; the chip is an outlined
    circle that fills with the brand ink on hover, so the icon reads at the same
@@ -664,37 +705,106 @@ p:last-child { margin-bottom: 0; }
 .rating-meta p { margin: .35rem 0 0; font-size: var(--t-meta); color: var(--muted); }
 
 /* stars */
+/* Rounded-tip star (path lives in tools/reviews.py). Round joins stop the five
+   points reading as clip-art at 19px, and the empty state is the same outline
+   rather than a different shape, so a 4/5 row still scans as one set. */
 .stars { display: inline-flex; gap: 3px; }
-.stars svg { width: 19px; height: 19px; fill: var(--gold); }
-.stars svg.is-empty { fill: none; stroke: var(--gold); stroke-width: 1.4; opacity: .45; }
-.stars-lg svg { width: 26px; height: 26px; }
+.stars svg {
+  width: 19px; height: 19px;
+  fill: var(--gold); stroke: var(--gold);
+  stroke-width: .6; stroke-linejoin: round;
+}
+.stars svg.is-empty { fill: none; stroke-width: 1.5; opacity: .38; }
+.stars-lg svg { width: 27px; height: 27px; }
 
-/* cards */
-.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.4vw, 30px); }
+/* ---------- marquee ----------
+   Three rows drifting in alternating directions. Each track holds its cards
+   twice and travels exactly -50%, so the second copy arrives where the first
+   started and the loop has no visible seam.
+
+   Full-bleed: the rows break out of .container so cards run off both edges
+   rather than stopping at the text column. overflow:hidden on the row is what
+   keeps that off the document's scroll width — without it audit3.py would
+   (correctly) fail the page for horizontal scroll. */
+.reviews-marquee {
+  display: flex; flex-direction: column;
+  gap: clamp(14px, 1.6vw, 22px);
+  margin-top: clamp(34px, 4vw, 56px);
+  /* Cards fade out at both edges instead of being chopped by a hard border. */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+.marquee-row { overflow: hidden; }
+.marquee-track {
+  display: flex; align-items: flex-start;
+  gap: clamp(14px, 1.6vw, 22px);
+  width: max-content;
+  animation: marquee-left var(--dur, 80s) linear infinite;
+}
+.marquee-row[data-dir="right"] .marquee-track { animation-name: marquee-right; }
+
+/* Rows start at different offsets so the columns never line up into a grid —
+   the misalignment is the point. */
+.marquee-row:nth-child(2) .marquee-track { margin-left: -7%; }
+.marquee-row:nth-child(3) .marquee-track { margin-left: -3%; }
+
+@keyframes marquee-left  { from { transform: translate3d(0,0,0); }
+                           to   { transform: translate3d(-50%,0,0); } }
+@keyframes marquee-right { from { transform: translate3d(-50%,0,0); }
+                           to   { transform: translate3d(0,0,0); } }
+
+/* Hovering anywhere in the band holds every row, so a quote can be read
+   without chasing it across the screen. */
+.reviews-marquee:hover .marquee-track,
+.reviews-marquee:focus-within .marquee-track { animation-play-state: paused; }
+
+/* cards — rectangular and flatter than the old grid tiles, with smaller type */
 .review {
+  flex: 0 0 auto;
+  width: clamp(268px, 25vw, 340px);
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: clamp(28px, 3vw, 40px);
-  display: flex; flex-direction: column; gap: 1.1rem;
-  transition: transform .5s var(--ease-out-soft), box-shadow .5s var(--ease-out-soft);
+  border-radius: 14px;
+  padding: clamp(18px, 1.7vw, 24px);
+  display: flex; flex-direction: column; gap: .75rem;
+  transition: border-color .35s var(--ease-out-soft), box-shadow .35s var(--ease-out-soft);
 }
-.review:hover { transform: translateY(-4px); box-shadow: 0 22px 48px rgba(20,30,26,.10); }
+.review:hover { border-color: #D9D5C9; box-shadow: 0 14px 34px rgba(20,30,26,.09); }
 .review blockquote {
   margin: 0; flex: 1;
-  font-size: clamp(1rem, .97rem + .2vw, 1.12rem);
-  line-height: 1.6; color: var(--ink);
+  /* 15px floor: the client's original complaint was tiny text on mobile, and
+     audit3.py fails anything under 15px. This is as small as it may go. */
+  font-size: var(--t-meta);
+  line-height: 1.55; color: var(--ink);
 }
-.review-author { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: .5rem; }
+.review-author { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: .35rem; }
 .review-avatar {
-  flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%;
+  flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
   background: var(--ink); color: #fff;
   display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--sans); font-weight: 600; font-size: 1rem;
+  /* 15px, not 14: the "nothing under 15px" floor is a client fix, and audit3.py
+     enforces it on every text node — an avatar initial is no exception. */
+  font-family: var(--sans); font-weight: 600; font-size: .9375rem;
 }
 .review-author > span:last-child { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .review-who   { display: block; font-weight: 600; color: var(--ink); font-size: var(--t-meta); line-height: 1.3; }
-.review-where { display: block; font-size: var(--t-meta); color: var(--muted); line-height: 1.3; }
+.review-where {
+  display: flex; align-items: center; gap: 7px;
+  font-size: var(--t-meta); color: var(--muted); line-height: 1.3;
+}
+
+/* Reduced motion: no drifting. The band becomes a normal horizontally
+   scrollable row so every review is still reachable — stopping the animation
+   without this would strand most of them off-screen with no way to get there.
+   The duplicate half is hidden so nothing reads twice. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-row { overflow-x: auto; scrollbar-width: thin; }
+  .marquee-track { animation: none; margin-left: 0 !important; }
+  .marquee-track .review[aria-hidden="true"] { display: none; }
+  .reviews-marquee { -webkit-mask-image: none; mask-image: none; }
+}
+
+/* No scripting is fine — the marquee is pure CSS and needs no JS at all. */
 
 /* Unfilled state. Deliberately unmistakable: a real review must never be
    confused with a slot waiting for one. */
@@ -750,7 +860,6 @@ p:last-child { margin-bottom: 0; }
   .steps        { grid-template-columns: repeat(2, 1fr); }
   .statements   { grid-template-columns: repeat(2, 1fr); }
   .testimonials { grid-template-columns: repeat(2, 1fr); }
-  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .features     { grid-template-columns: repeat(2, 1fr); }
   .footer-grid  { grid-template-columns: 1fr 1fr; }
 }
@@ -810,7 +919,6 @@ p:last-child { margin-bottom: 0; }
   .features     { grid-template-columns: 1fr; gap: 30px; }
   .statements   { grid-template-columns: 1fr; }
   .testimonials { grid-template-columns: 1fr; }
-  .reviews-grid { grid-template-columns: 1fr; }
   .rating-summary { flex-direction: column; text-align: center; }
   .rating-meta { text-align: center; }
 
@@ -830,13 +938,23 @@ p:last-child { margin-bottom: 0; }
 }
 
 @media (max-width: 560px) {
-  .header-inner { min-height: 66px; }
-  .brand img    { height: 28px; }
+  /* Sized for the stacked lockup, not the old monogram it replaced. */
+  .header-inner { min-height: 74px; }
+  .brand img    { height: 50px; }
   .cards, .media-cards { max-width: none; }
   .footer-grid  { grid-template-columns: 1fr; gap: 30px; }
   .footer-bottom { flex-direction: column; gap: 8px; }
-  .split-media  { grid-template-columns: 1fr; }
-  .split-media .img-inset { display: none; }  /* one strong image beats two cramped ones */
+  /* Both images stay on phones, stacked. They used to collapse to one here
+     ("one strong image beats two cramped ones"), but that made the page show
+     different photographs on desktop and mobile — which Riki spotted on
+     2026-08-03. Consistency across devices matters more than the tighter crop:
+     stacked full-width they are not cramped anyway. */
+  .split-media  { grid-template-columns: 1fr; gap: 14px; }
+  /* Stacked full-width, so there is no neighbour to line up with and no reason
+     to force a shape. Letting the photo keep its own ratio means zero cropping —
+     a fixed 4/3 here took 25% off a square photo's height, which is exactly
+     where faces are. */
+  .split-media .img-inset { aspect-ratio: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
