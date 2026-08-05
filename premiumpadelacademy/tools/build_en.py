@@ -503,8 +503,8 @@ ATTR = {
     "Instagram de Nexum Padel": "Nexum Padel on Instagram",
     "Pedicel Marketing": "Pedicel Marketing",
     "Nexum Padel": "Nexum Padel",
-    "Vista aérea del club de pádel en Marbella, con el mar de fondo":
-        "Aerial view of the padel club in Marbella, with the sea behind",
+    "Club de playa en Marbella con una pista de pádel sobre la arena y el mar al fondo":
+        "A beach club in Marbella with a padel court on the sand and the sea behind",
     "Pista de pádel de la academia en Marbella, con palmeras al fondo":
         "The academy's padel court in Marbella, with palm trees behind",
     "Riki Padrón, Head Coach de la academia": "Riki Padrón, Head Coach at the academy",
@@ -530,8 +530,8 @@ ATTR = {
         "The coaching team after a training session",
     "Evento y masterclass en el club": "An event and masterclass at the club",
     "Sesión de grupo organizada en pista": "An organised group session on court",
-    "Vista aérea de las pistas del club, con jugadores en partido":
-        "Aerial view of the club's courts, with players mid-match",
+    "Sesión de consultoría con un club, con las pistas al fondo":
+        "A consulting session with a club, courts visible behind",
     "Avenida de palmeras en Marbella al atardecer":
         "A palm-lined avenue in Marbella at sunset",
     "Jugadores entrenando durante un camp en Marbella":

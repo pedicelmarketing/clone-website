@@ -1,17 +1,19 @@
 {
   "hero-home.jpg": {
     "slot": "hero-home",
-    "wix_media_id": "b99928_5a996a196dfa41f08433f14a789e99fd~mv2.jpg",
-    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_5a996a196dfa41f08433f14a789e99fd~mv2.jpg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/Foto Playa .jpeg",
+    "source_sha256_16": "b8cfa57be12186ac",
     "source_pixels": [
-      2048,
-      1152
+      1408,
+      768
     ],
     "shipped_pixels": [
-      2000,
-      1125
+      1408,
+      768
     ],
-    "exif_stripped": true
+    "exif_stripped": true,
+    "note": "Pedido 2026-08-04."
   },
   "coach-riki.jpg": {
     "slot": "coach-riki",
@@ -128,18 +130,20 @@
     "exif_stripped": true
   },
   "club-2.jpg": {
-    "slot": "club-2",
-    "wix_media_id": "b99928_80a668776fb84ff9919d49cba1394994~mv2.jpeg",
-    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_80a668776fb84ff9919d49cba1394994~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "slot": "consultoria",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/Consultoria.jpeg",
+    "source_sha256_16": "ec4fea79c08bb4b5",
     "source_pixels": [
-      1170,
-      1949
+      1536,
+      1024
     ],
     "shipped_pixels": [
-      1170,
-      1949
+      1536,
+      1024
     ],
-    "exif_stripped": true
+    "exif_stripped": true,
+    "note": "Pedido 2026-08-04."
   },
   "club-3.jpg": {
     "slot": "club-3",

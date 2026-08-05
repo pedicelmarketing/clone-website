@@ -232,6 +232,20 @@ p:last-child { margin-bottom: 0; }
 .hero-card h1 { margin-bottom: .5rem; }
 .hero-card .lead { color: var(--muted); font-size: var(--t-body); }
 
+/* Strapline under the wordmark: "Your international Padel Partner". English on
+   a Spanish page on purpose — it is the brand line, not body copy — so it is
+   marked lang="en" for screen readers and translators. Set in the sans at a
+   weight the serif h1 above it does not compete with. */
+.hero-tagline {
+  font-family: var(--sans);
+  font-size: clamp(1.0625rem, .99rem + .42vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 .55rem;
+}
+.hero-on-image .hero-tagline { color: #fff; }
+
 /* Hero variant with the copy directly on the image (Clubs) */
 .hero-on-image { color: #fff; }
 .hero-on-image::after {
@@ -271,6 +285,21 @@ p:last-child { margin-bottom: 0; }
 .coach-photo { border-radius: var(--radius); overflow: hidden; background: var(--soft-2); }
 .coach-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
 .coach .eyebrow { margin: 1.25rem 0 .3rem; }
+/* Instagram link on a coach card. min-height 44px for the touch target, as with
+   the footer social link. */
+.coach-ig {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; margin-top: .35rem;
+  font-size: var(--t-meta); color: var(--muted);
+  transition: color .2s ease;
+}
+.coach-ig svg {
+  width: 17px; height: 17px; flex: 0 0 auto;
+  fill: none; stroke: currentColor; stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.coach-ig:hover, .coach-ig:focus-visible { color: var(--ink); }
+.coach-ig:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
 .coach-name {
   display: flex; align-items: center; gap: .55em; flex-wrap: wrap;
   font-family: var(--serif); font-weight: 400;
@@ -913,6 +942,13 @@ p:last-child { margin-bottom: 0; }
   .coach-grid   { grid-template-columns: 1fr; gap: 44px; }
   .coach-creds  { grid-template-columns: 1fr; gap: 14px; }
   .split        { grid-template-columns: 1fr; gap: 36px; }
+  /* Sections alternate on desktop, so every other one puts .split-media first in
+     the DOM to sit on the left. Stacked, that order puts a section's photos above
+     its own heading — and two such sections back to back ran four images together
+     with nothing between them, which is what the client flagged
+     ("salen 4 imágenes seguidas, deberían ser máx 2"). Forcing the media after
+     the copy gives text, 2 photos, text, 2 photos. */
+  .split-media  { order: 2; }
   .contact-grid { grid-template-columns: 1fr; }
   .media-cards  { grid-template-columns: 1fr; max-width: 520px; }
   .steps        { grid-template-columns: 1fr; gap: 30px; }
