@@ -509,7 +509,8 @@ ATTR = {
         "The academy's padel court in Marbella, with palm trees behind",
     "Riki Padrón, Head Coach de la academia": "Riki Padrón, Head Coach at the academy",
     "Juampi Vanella, Head Coach de la academia": "Juampi Vanella, Head Coach at the academy",
-    "Sesión de entrenamiento en pista": "A training session on court",
+    "Entrenador dando indicaciones a un grupo de jugadores en pista":
+        "A coach giving instructions to a group of players on court",
     "Jugador ejecutando un golpe durante un entrenamiento":
         "A player striking the ball during training",
     "Pistas de pádel de la academia en Marbella, con La Concha al fondo":
@@ -526,8 +527,8 @@ ATTR = {
     "Vista aérea del complejo de pistas de pádel en Marbella":
         "Aerial view of the padel court complex in Marbella",
     "Sesión de coaching en pista": "A coaching session on court",
-    "Equipo de entrenadores tras una sesión de formación":
-        "The coaching team after a training session",
+    "Grupo de jugadores con sus palas junto a la red tras una sesión":
+        "A group of players with their rackets by the net after a session",
     "Evento y masterclass en el club": "An event and masterclass at the club",
     "Sesión de grupo organizada en pista": "An organised group session on court",
     "Sesión de consultoría con un club, con las pistas al fondo":

@@ -44,18 +44,20 @@
     "exif_stripped": true
   },
   "elite.jpg": {
-    "slot": "elite",
-    "wix_media_id": "b99928_e60aaa6fdaa944728dc3fe0a61908b77~mv2.jpeg",
-    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_e60aaa6fdaa944728dc3fe0a61908b77~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "slot": "elite-img-main",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/Grupo 2.jpeg",
+    "source_sha256_16": "2fe88d7443380631",
     "source_pixels": [
-      1366,
-      2048
+      960,
+      1600
     ],
     "shipped_pixels": [
-      1334,
-      2000
+      960,
+      1600
     ],
-    "exif_stripped": true
+    "exif_stripped": true,
+    "note": "Riki: 'cambiar foto más de 15 años debajo de Juampi por la foto mía'. La misma toma ocupaba este bloque en la v1 (site/assets/elite-inset.jpg)."
   },
   "elite-inset.jpg": {
     "slot": "elite-inset",
@@ -206,14 +208,20 @@
     "exif_stripped": true
   },
   "camps-method.jpg": {
-    "slot": "camps-method",
-    "source": "static.wixstatic.com original (client's own upload)",
-    "note": "kept the Wix original: the supplied 'riqui upscaled.jpeg' is the same photograph at 600x1024 (0.61 MP) versus 1170x1994 (2.33 MP) here — a downgrade, not an upscale. Rejected on resolution grounds.",
-    "shipped_pixels": [
-      1170,
-      1994
+    "slot": "formacion-entrenadores",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/Grupo 1.jpeg",
+    "source_sha256_16": "12ceeb0d4472d0d0",
+    "source_pixels": [
+      1402,
+      1122
     ],
-    "exif_stripped": true
+    "shipped_pixels": [
+      1402,
+      1122
+    ],
+    "exif_stripped": true,
+    "note": "Sustituye un escalado 2340x3988 de la MISMA foto. Menos píxeles pero 75% más detalle real (nitidez 39.8 vs 22.8); el hueco sólo pide 1036px."
   },
   "logo.png": {
     "slot": "logo",
