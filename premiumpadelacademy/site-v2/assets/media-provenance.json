@@ -379,5 +379,29 @@
     ],
     "exif_stripped": true,
     "note": "Requested 2026-08-04: 'grande la de los puños y pequeña la chica'."
+  },
+  "logo-mark.png": {
+    "slot": "marca",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/WhatsApp Image 2026-08-05 at 13.38.08.jpeg",
+    "source_sha256_16": "cab85691bb559694",
+    "shipped_pixels": [
+      512,
+      512
+    ],
+    "exif_stripped": true,
+    "note": "Pelota recortada del logo nuevo. Se usa sola en cabecera y favicon porque el texto curvo del lockup es ilegible a 58px."
+  },
+  "logo-full.png": {
+    "slot": "marca",
+    "classification": "User-Supplied Baseline Asset",
+    "acquired_from": "Assets/Feedback/Feedback 4 Aug/WhatsApp Image 2026-08-05 at 13.38.08.jpeg",
+    "source_sha256_16": "cab85691bb559694",
+    "shipped_pixels": [
+      900,
+      881
+    ],
+    "exif_stripped": true,
+    "note": "Lockup completo con 'INTERNATIONAL PADEL SERVICES'. Fondo blanco del JPEG convertido a alfa por luminancia, conservando el degradado plateado de las costuras."
   }
 }

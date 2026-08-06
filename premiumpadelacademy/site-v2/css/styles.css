@@ -140,11 +140,16 @@ p:last-child { margin-bottom: 0; }
   backdrop-filter: saturate(150%) blur(8px);
   border-bottom: 1px solid var(--line);
 }
-/* The brand mark is the client's stacked lockup (ball over NEXUM / PADEL),
-   supplied as SVG so it stays sharp at any size. The "MARBELLA - SPAIN" arc is
-   deliberately not used on the site: at header size it rendered ~5px tall and
-   read as a smudge. Without it the wordmark fills the same box, so this needs
-   less height than the full lockup did. */
+/* The brand mark is the client's stacked lockup: ball over NEXUM / PADEL, with
+   "INTERNATIONAL PADEL SERVICES" on a curved baseline (supplied 2026-08-05,
+   replacing the earlier "MARBELLA - SPAIN" version).
+
+   An earlier build dropped the curved strapline because at 58px it rendered
+   around 5px tall and read as a smudge. The client has now asked for the full
+   lockup, so it stays — and the header grew instead. At 72px the wordmark is
+   legible and the strapline reads as fine detail rather than broken text, which
+   is how a strapline is meant to behave at small sizes. Height is what governs
+   this, not width: the lockup is square, so a wider header buys nothing. */
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; min-height: 88px;
@@ -152,7 +157,8 @@ p:last-child { margin-bottom: 0; }
 .brand { display: inline-flex; align-items: center; gap: 10px; flex: 0 0 auto; }
 /* The lockup already contains the wordmark, so no type sits beside it — that
    would print the name twice. */
-.brand img { height: 58px; width: auto; }
+.brand img { height: 72px; width: auto; }   /* stacked lockup: height drives
+     legibility of the wordmark, not width. 58px left it unreadable. */
 
 .main-nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 46px); }
 .nav-link {
@@ -975,8 +981,8 @@ p:last-child { margin-bottom: 0; }
 
 @media (max-width: 560px) {
   /* Sized for the stacked lockup, not the old monogram it replaced. */
-  .header-inner { min-height: 74px; }
-  .brand img    { height: 50px; }
+  .header-inner { min-height: 78px; }
+  .brand img    { height: 58px; }
   .cards, .media-cards { max-width: none; }
   .footer-grid  { grid-template-columns: 1fr; gap: 30px; }
   .footer-bottom { flex-direction: column; gap: 8px; }
