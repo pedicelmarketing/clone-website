@@ -1,0 +1,15 @@
+[Unit]
+Description=Pedicel website form relay (audit + contact -> Hub CRM lead + Brevo email)
+After=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/home/openclaw/.config/pedicel-forms.env
+ExecStart=/usr/bin/python3 "/home/openclaw/Coding/ Cloning Sites/clone-website/pedicelmarketing/deploy/form_handler.py"
+Restart=on-failure
+RestartSec=5s
+StandardOutput=append:/home/openclaw/.hermes/logs/pedicel-forms.log
+StandardError=append:/home/openclaw/.hermes/logs/pedicel-forms.log
+
+[Install]
+WantedBy=default.target

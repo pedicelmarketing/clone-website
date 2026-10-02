@@ -1,0 +1,45 @@
+[Unit]
+Description=Pedicel Marketing website form relay (audit + contact -> Brevo)
+Documentation=file:///opt/pedicel-forms/form_handler.py
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pedicel-forms
+Group=pedicel-forms
+
+# BREVO_API_KEY lives here, chmod 600, root-owned, NOT in the git repo.
+# Also set FORM_TO / FORM_FROM here if they ever change.
+EnvironmentFile=/etc/pedicel-forms.env
+Environment=FORM_BIND=127.0.0.1
+Environment=FORM_PORT=8081
+Environment=FORM_LOG=/var/lib/pedicel-forms/submissions.jsonl
+
+ExecStart=/usr/bin/python3 /opt/pedicel-forms/form_handler.py
+Restart=on-failure
+RestartSec=5s
+
+# The lead ledger must survive a crash, so it lives in StateDirectory rather than /tmp.
+StateDirectory=pedicel-forms
+StateDirectoryMode=0750
+
+# This service parses untrusted input from the public internet, so lock it down.
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+CapabilityBoundingSet=
+
+[Install]
+WantedBy=multi-user.target
