@@ -91,6 +91,8 @@ FORMS = {
         # form field -> CRM field (sales_inbound_form keys)
         "crm": {"Name": "name", "Email": "email", "Phone-Number": "phone", "Company-Name": "company",
                 "Company-Website": "website", "Position": "title", "Marketing-Goals": "goals"},
+        # the free audit: also queue a pitch (AI audit + proposal + video) for the new lead
+        "pitch": True,
     },
     "/api/forms/contact": {
         "label": "Contact form",
@@ -176,6 +178,46 @@ def push_to_crm(spec: dict, fields: dict, external_id: str) -> tuple[bool, str]:
         return False, f"crm error: {exc}"
 
 
+def pitch_payload(spec: dict, fields: dict, crm_detail: str) -> dict | None:
+    """A free-audit request with a website → the pitch to build for that new lead (or None).
+
+    crm_detail is push_to_crm's "crm 200 {json}" text; the json carries the contact id.
+    """
+    if spec.get("pitch") is not True:
+        return None
+    website = next((fields.get(k, "").strip() for k, crm in spec["crm"].items() if crm == "website" and fields.get(k, "").strip()), "")
+    if not website:
+        return None
+    try:
+        contact = json.loads(crm_detail.split(" ", 2)[2]).get("contact_id")
+    except (IndexError, ValueError, AttributeError):
+        return None
+    if not contact:
+        return None
+    return {"p_url": website, "p_contact_id": contact, "p_depth": "light", "p_origin": "inbound"}
+
+
+def request_pitch(payload: dict) -> tuple[bool, str]:
+    """Queue the free AI audit + proposal for this lead (built by the pitch worker, sent after a manager's OK)."""
+    url = os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        return False, "crm not configured"
+    request = urllib.request.Request(
+        f"{url.rstrip('/')}/rest/v1/rpc/pitch_request",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"apikey": key, "authorization": f"Bearer {key}", "content-type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            return True, f"pitch {response.status} {response.read()[:80].decode('utf-8', 'replace')}"
+    except urllib.error.HTTPError as exc:
+        return False, f"pitch HTTP {exc.code}: {exc.read()[:200].decode('utf-8', 'replace')}"
+    except Exception as exc:  # network, DNS, timeout
+        return False, f"pitch error: {exc}"
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = "pedicel-forms"
 
@@ -242,6 +284,10 @@ class Handler(BaseHTTPRequestHandler):
             f"{spec['label']}|{submitter.lower()}|{entry['at'][:19]}".encode("utf-8")).hexdigest()[:32]
         crm_ok, crm_detail = push_to_crm(spec, fields, external_id)
         log.info("crm: %s", crm_detail) if crm_ok else log.error("crm failed (lead IS in the ledger): %s", crm_detail)
+        pitch = pitch_payload(spec, fields, crm_detail) if crm_ok else None
+        if pitch:
+            p_ok, p_detail = request_pitch(pitch)
+            log.info("pitch: %s", p_detail) if p_ok else log.error("pitch request failed: %s", p_detail)
 
         rows = "".join(
             f"<tr><td style='padding:4px 12px 4px 0;vertical-align:top'><strong>{html.escape(label)}</strong></td>"
