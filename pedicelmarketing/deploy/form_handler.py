@@ -49,6 +49,37 @@ BREVO_ENDPOINT = "https://api.brevo.com/v3/smtp/email"
 MAX_BODY = 64 * 1024
 HONEYPOT = "website_url_hp"  # bots fill it; humans never see it
 
+# Content check for bots that skip the honeypot. Seen on 2 and 4 Oct 2026: random-string
+# names ("MdSGXradLGdlqwLFCULIRu"), dotted Gmail addresses ("u.x.i.xe.w.a.778@gmail.com") and
+# random-string messages. Two signs together = spam: ledger only, no CRM lead, no email.
+_VOWELS = set("aeiouyáéíóúàèìòùäëïöü")
+
+
+def _random_token(t: str) -> bool:
+    if len(t) < 12 or not t.isalpha():
+        return False
+    vowels = sum(ch.lower() in _VOWELS for ch in t) / len(t)
+    flips = sum(1 for a, b in zip(t, t[1:]) if a.isupper() != b.isupper())
+    run = max((len(r) for r in "".join(" " if ch.lower() in _VOWELS else ch for ch in t).split()), default=0)
+    return vowels < 0.25 or flips >= 6 or run >= 7
+
+
+def spam_signs(fields: dict, spec: dict) -> list[str]:
+    """Which bot signs a submission shows (empty for real people)."""
+    by_label = {label.lower(): (fields.get(key) or "").strip() for key, label in spec["fields"]}
+    signs = []
+    name = by_label.get("name", "")
+    if any(_random_token(t) for t in name.replace("-", " ").split()):
+        signs.append("random name")
+    local = by_label.get("email", "").split("@")[0]
+    if local.count(".") >= 4:
+        signs.append("dotted email")
+    for label in ("message", "position", "marketing goals"):
+        v = by_label.get(label, "")
+        if v and " " not in v and (_random_token(v) or v.isdigit()):
+            signs.append(f"random {label}")
+    return signs
+
 FORMS = {
     "/api/forms/audit": {
         "label": "Website Audit request",
@@ -185,6 +216,14 @@ class Handler(BaseHTTPRequestHandler):
         # Honeypot: report success so the bot does not retry or adapt.
         if fields.get(HONEYPOT):
             log.info("honeypot triggered from %s", self.client_address[0])
+            return self._json(200, {"ok": True})
+
+        signs = spam_signs(fields, spec)
+        if len(signs) >= 2:
+            record({"at": datetime.now(timezone.utc).isoformat(), "form": spec["label"], "spam": signs,
+                    "ip": self.headers.get("X-Real-IP") or self.client_address[0],
+                    "fields": {label: fields.get(key, "") for key, label in spec["fields"]}})
+            log.info("spam dropped (%s) from %s", ", ".join(signs), self.client_address[0])
             return self._json(200, {"ok": True})
 
         submitter = next((fields.get(key, "") for key, _ in spec["fields"]
