@@ -9,7 +9,8 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 FORBIDDEN = ["ß", "10.8%", "10,8%", "250%", "300+", "Vanguard Medical", "Benahavis Bistro",
-             "Marianna Levchenko", "Leo Grant", "Lorem ipsum"]
+             "Marianna Levchenko", "Leo Grant", "Lorem ipsum",
+             "1000+", "60%+", "80+", "100% of", "30 years"]   # unsourced old-site stats (offering.md §6)
 PRICE = re.compile(
     r"\b(?:CHF|EUR)\b\s?\d|\d\s?\b(?:CHF|EUR)\b"   # CHF 900, 900 EUR (word-bounded: not "2 Europäer")
     r"|[€₦]\s?\d|\d\s?[€₦]"

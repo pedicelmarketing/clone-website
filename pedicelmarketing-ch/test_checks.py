@@ -57,6 +57,12 @@ class Checks(unittest.TestCase):
                 found = [p for p in problems(site({"/": OK.replace("x<", text + "<"), "/services": OK})) if "price" in p]
                 self.assertEqual(bool(found), flagged, text)
 
+    def test_unsourced_old_site_stats_are_forbidden(self):
+        for text in ["1000+ leads", "60%+ awareness", "80+ projects", "100% of the brands", "over 30 years"]:
+            with self.subTest(text):
+                found = problems(site({"/": OK.replace("x<", text + "<"), "/services": OK}))
+                self.assertTrue(any("forbidden" in p for p in found), f"{text}: {found}")
+
     def test_script_and_style_text_is_not_visible_text(self):
         html = OK.replace("<body>", "<body><style>.a{width:250%}</style><script>var x='Vanguard Medical'</script>")
         self.assertEqual(problems(site({"/": html, "/services": OK})), [])
