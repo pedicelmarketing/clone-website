@@ -104,9 +104,27 @@ FORMS = {
     },
 }
 
-# pedicelmarketing.ch posts to its own paths so its leads are tagged in the Hub CRM.
-FORMS["/api/forms/ch-audit"] = {**FORMS["/api/forms/audit"], "label": "Website Audit request (CH)"}
-FORMS["/api/forms/ch-contact"] = {**FORMS["/api/forms/contact"], "label": "Contact form (CH)"}
+# pedicelmarketing.ch posts to its own paths so its leads are tagged in the Hub CRM. Its form
+# shim also sends the page language ("lang" = de/fr/en), which goes into the label: "(CH-FR)".
+FORMS["/api/forms/ch-audit"] = {**FORMS["/api/forms/audit"], "label": "Website Audit request (CH)",
+                                "site": "pedicelmarketing.ch", "langs": ("de", "fr", "en")}
+FORMS["/api/forms/ch-contact"] = {**FORMS["/api/forms/contact"], "label": "Contact form (CH)",
+                                  "site": "pedicelmarketing.ch", "langs": ("de", "fr", "en")}
+
+
+def form_lang(spec: dict, fields: dict) -> str | None:
+    """The page language a form declares it accepts (de/fr/en for the .ch), else None."""
+    lang = (fields.get("lang") or "").strip().split("-")[0].lower()
+    return lang if lang in spec.get("langs", ()) else None
+
+
+def form_label(spec: dict, fields: dict) -> str:
+    """CRM/email label: "Contact form (CH)" -> "Contact form (CH-DE)" when the language is known.
+    Forms without "langs" (the .com) keep their label unchanged."""
+    lang = form_lang(spec, fields)
+    if lang and spec["label"].endswith(")"):
+        return f"{spec['label'][:-1]}-{lang.upper()})"
+    return spec["label"]
 
 log = logging.getLogger("pedicel-forms")
 
@@ -155,7 +173,7 @@ def send_via_brevo(subject: str, body_html: str, reply_to: str | None) -> tuple[
         return False, f"brevo error: {exc}"
 
 
-def push_to_crm(spec: dict, fields: dict, external_id: str) -> tuple[bool, str]:
+def push_to_crm(spec: dict, fields: dict, external_id: str, label: str | None = None) -> tuple[bool, str]:
     """Create the lead in the Hub CRM. Skipped (not failed) when the CRM isn't configured."""
     url = os.environ.get("SUPABASE_URL")
     key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
@@ -163,7 +181,7 @@ def push_to_crm(spec: dict, fields: dict, external_id: str) -> tuple[bool, str]:
         return False, "crm not configured"
     payload = {
         "p_client_slug": os.environ.get("CRM_CLIENT", "pedicel"),
-        "p_form": spec["label"],
+        "p_form": label or spec["label"],
         "p_fields": {crm: fields.get(src, "").strip() for src, crm in spec["crm"].items() if fields.get(src, "").strip()},
         "p_external_id": external_id,
     }
@@ -198,7 +216,11 @@ def pitch_payload(spec: dict, fields: dict, crm_detail: str) -> dict | None:
         return None
     if not contact:
         return None
-    return {"p_url": website, "p_contact_id": contact, "p_depth": "light", "p_origin": "inbound"}
+    payload = {"p_url": website, "p_contact_id": contact, "p_depth": "light", "p_origin": "inbound"}
+    lang = form_lang(spec, fields)   # pitch_request(p_lang) builds the audit in the visitor's language
+    if lang:
+        payload["p_lang"] = lang
+    return payload
 
 
 def request_pitch(payload: dict) -> tuple[bool, str]:
@@ -220,6 +242,15 @@ def request_pitch(payload: dict) -> tuple[bool, str]:
         return False, f"pitch HTTP {exc.code}: {exc.read()[:200].decode('utf-8', 'replace')}"
     except Exception as exc:  # network, DNS, timeout
         return False, f"pitch error: {exc}"
+
+
+def notification_html(spec: dict, label: str, rows: str, entry: dict) -> str:
+    """Owner email body; names the site the form is on (.com unless the spec says otherwise)."""
+    return (
+        f"<p>New submission from the <strong>{html.escape(label)}</strong> "
+        f"on {spec.get('site', 'pedicelmarketing.com')}.</p><table>{rows}</table>"
+        f"<p style='color:#888;font-size:12px'>Received {entry['at']} from {html.escape(entry['ip'])}</p>"
+    )
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -264,9 +295,10 @@ class Handler(BaseHTTPRequestHandler):
             log.info("honeypot triggered from %s", self.client_address[0])
             return self._json(200, {"ok": True})
 
+        form_name = form_label(spec, fields)   # e.g. "Contact form (CH-FR)"; the .com label as is
         signs = spam_signs(fields, spec)
         if len(signs) >= 2:
-            record({"at": datetime.now(timezone.utc).isoformat(), "form": spec["label"], "spam": signs,
+            record({"at": datetime.now(timezone.utc).isoformat(), "form": form_name, "spam": signs,
                     "ip": self.headers.get("X-Real-IP") or self.client_address[0],
                     "fields": {label: fields.get(key, "") for key, label in spec["fields"]}})
             log.info("spam dropped (%s) from %s", ", ".join(signs), self.client_address[0])
@@ -277,7 +309,7 @@ class Handler(BaseHTTPRequestHandler):
 
         entry = {
             "at": datetime.now(timezone.utc).isoformat(),
-            "form": spec["label"],
+            "form": form_name,
             "ip": self.headers.get("X-Real-IP") or self.client_address[0],
             "fields": {label: fields.get(key, "") for key, label in spec["fields"]},
         }
@@ -285,8 +317,8 @@ class Handler(BaseHTTPRequestHandler):
 
         # Same form + email + second = same submission (a double click or a retry).
         external_id = hashlib.sha256(
-            f"{spec['label']}|{submitter.lower()}|{entry['at'][:19]}".encode("utf-8")).hexdigest()[:32]
-        crm_ok, crm_detail = push_to_crm(spec, fields, external_id)
+            f"{form_name}|{submitter.lower()}|{entry['at'][:19]}".encode("utf-8")).hexdigest()[:32]
+        crm_ok, crm_detail = push_to_crm(spec, fields, external_id, form_name)
         log.info("crm: %s", crm_detail) if crm_ok else log.error("crm failed (lead IS in the ledger): %s", crm_detail)
         pitch = pitch_payload(spec, fields, crm_detail) if crm_ok else None
         if pitch:
@@ -298,12 +330,8 @@ class Handler(BaseHTTPRequestHandler):
             f"<td style='padding:4px 0'>{html.escape(fields.get(key, '') or '-')}</td></tr>"
             for key, label in spec["fields"]
         )
-        body = (
-            f"<p>New submission from the <strong>{html.escape(spec['label'])}</strong> "
-            f"on pedicelmarketing.com.</p><table>{rows}</table>"
-            f"<p style='color:#888;font-size:12px'>Received {entry['at']} from {html.escape(entry['ip'])}</p>"
-        )
-        subject = f"[Website] {spec['label']}" + (f" - {submitter}" if submitter else "")
+        body = notification_html(spec, form_name, rows, entry)
+        subject = f"[Website] {form_name}" + (f" - {submitter}" if submitter else "")
 
         mail_ok, detail = send_via_brevo(subject, body, submitter)
         if mail_ok:

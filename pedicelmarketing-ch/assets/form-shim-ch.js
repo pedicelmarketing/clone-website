@@ -64,7 +64,10 @@
       button.disabled = true;
     }
 
-    var body = new URLSearchParams(new FormData(form)).toString();
+    var data = new FormData(form);
+    // Page language (<html lang="de-CH|fr-CH|en"> -> de|fr|en): the relay tags the CRM lead with it.
+    data.append("lang", (document.documentElement.lang || "").split("-")[0].toLowerCase());
+    var body = new URLSearchParams(data).toString();
 
     fetch(endpoint, {
       method: "POST",
