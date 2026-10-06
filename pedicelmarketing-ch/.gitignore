@@ -1,0 +1,4 @@
+dist/
+shots/
+strings/todo-*.json
+__pycache__/
