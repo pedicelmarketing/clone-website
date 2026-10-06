@@ -6,12 +6,18 @@ import json
 from build import PAGES, STRINGS, routes, tmap
 from textlayer import strings_in
 
-for lang in ("de", "fr"):
-    have, todo = tmap(lang), {}
-    for _, f in routes():
-        for s in strings_in(f.read_text(encoding="utf-8")):
-            if not have.get(s):
-                todo.setdefault(s, "")
-    STRINGS.mkdir(exist_ok=True)
-    (STRINGS / f"todo-{lang}.json").write_text(json.dumps(todo, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{lang}: {len(todo)} strings to translate")
+
+def main() -> None:
+    for lang in ("de", "fr"):
+        have, todo = tmap(lang), {}
+        for _, f in routes():
+            for s in strings_in(f.read_text(encoding="utf-8")):
+                if not have.get(s):
+                    todo.setdefault(s, "")
+        STRINGS.mkdir(exist_ok=True)
+        (STRINGS / f"todo-{lang}.json").write_text(json.dumps(todo, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"{lang}: {len(todo)} strings to translate")
+
+
+if __name__ == "__main__":
+    main()

@@ -5,8 +5,9 @@ from textlayer import strings_in, localize, MissingTranslation, prefix
 
 PAGE = """<!DOCTYPE html><html data-wf-domain="www.pedicelmarketing.com"><head><title>Home</title>
 <meta name="description" content="We grow you"><meta property="og:title" content="Home">
+<meta property="og:image" content="/_external/preview.jpg"><meta name="twitter:image" content="/_external/preview.jpg">
 <link rel="stylesheet" href="/_external/x.css"></head><body>
-<nav><a href="/">Home</a><a href="/services">Services</a><div data-lang-switch></div></nav>
+<nav><a href="/">Home</a><a href="/services">Services</a><a href="/projects/coeo#results">Coeo</a><div data-lang-switch></div></nav>
 <p>Hello <b>world</b></p><p>&nbsp;</p><p>‍</p><p>   </p>
 <img src="/_external/a.webp" alt="Team at work">
 <form><input type="submit" value="Send" data-wait="Please wait..."><input placeholder="Your email"></form>
@@ -17,7 +18,7 @@ PAGE = """<!DOCTYPE html><html data-wf-domain="www.pedicelmarketing.com"><head><
 DE = {"Home": "Startseite", "We grow you": "Wir lassen Sie wachsen", "Services": "Leistungen",
       "Hello": "Hallo", "world": "Welt", "Team at work": "Team bei der Arbeit", "Send": "Senden",
       "Please wait...": "Bitte warten...", "Your email": "Ihre E-Mail", "PDF": "PDF", "Mail": "E-Mail",
-      "Top": "Nach oben", "LinkedIn": "LinkedIn", "api": "api"}
+      "Top": "Nach oben", "LinkedIn": "LinkedIn", "api": "api", "Coeo": "Coeo"}
 
 
 class Strings(unittest.TestCase):
@@ -44,7 +45,7 @@ class Strings(unittest.TestCase):
 class Localize(unittest.TestCase):
     def test_translates_and_sets_lang(self):
         out = localize(PAGE, "de", "/", DE)
-        self.assertRegex(out, r'<html[^>]*\blang="de"')
+        self.assertRegex(out, r'<html[^>]*\blang="de-CH"')
         self.assertIn("Hallo", out)
         self.assertIn('content="Wir lassen Sie wachsen"', out)
         self.assertIn('value="Senden"', out)
@@ -61,7 +62,8 @@ class Localize(unittest.TestCase):
     def test_links_prefixed_only_when_internal(self):
         out = localize(PAGE, "fr", "/", {k: k for k in DE})
         self.assertIn('href="/fr/"', out)
-        self.assertIn('href="/fr/services"', out)
+        self.assertIn('href="/fr/services/"', out)
+        self.assertIn('href="/fr/projects/coeo/#results"', out)
         for kept in ['href="/_external/f.pdf"', 'href="mailto:info@x.ch"', 'href="#top"',
                      'href="https://linkedin.com/x"', 'href="/api/forms/ch-contact"', 'href="/_external/x.css"']:
             self.assertIn(kept, out)
@@ -73,13 +75,54 @@ class Localize(unittest.TestCase):
         self.assertEqual([l["href"] for l in soup.find_all("link", rel="canonical")],
                          ["https://pedicelmarketing.ch/fr/services/"])
         alt = {l["hreflang"]: l["href"] for l in soup.find_all("link", rel="alternate")}
-        self.assertEqual(alt, {"de": "https://pedicelmarketing.ch/services/",
-                               "fr": "https://pedicelmarketing.ch/fr/services/",
+        self.assertEqual(alt, {"de-CH": "https://pedicelmarketing.ch/services/",
+                               "fr-CH": "https://pedicelmarketing.ch/fr/services/",
                                "en": "https://pedicelmarketing.ch/en/services/",
                                "x-default": "https://pedicelmarketing.ch/services/"})
         self.assertIn('class="lang-switch"', out)
         self.assertIn('aria-current="true"', out)          # FR marked current
         self.assertIn('data-wf-domain="pedicelmarketing.ch"', out)
+        self.assertEqual(soup.html["lang"], "fr-CH")
+        self.assertEqual([a["hreflang"] for a in soup.select(".lang-switch a")], ["de-CH", "fr-CH", "en"])
+
+
+class Links(unittest.TestCase):
+    def test_page_links_get_a_trailing_slash_files_and_suffixes_handled(self):
+        for href, de, fr in [
+            ("/services", "/services/", "/fr/services/"),
+            ("/services/", "/services/", "/fr/services/"),
+            ("/", "/", "/fr/"),
+            ("/projects/coeo#results", "/projects/coeo/#results", "/fr/projects/coeo/#results"),
+            ("/audit?ref=nav", "/audit/?ref=nav", "/fr/audit/?ref=nav"),
+            ("/#top", "/#top", "/fr/#top"),
+            ("/sitemap.xml", "/sitemap.xml", "/sitemap.xml"),
+            ("/assets/a.css", "/assets/a.css", "/assets/a.css"),
+        ]:
+            page = f'<html><head><title>T</title></head><body><a href="{href}">T</a></body></html>'
+            for lang, want in (("de", de), ("fr", fr)):
+                with self.subTest(href=href, lang=lang):
+                    got = BeautifulSoup(localize(page, lang, "/", {"T": "T"}), "lxml").body.a["href"]
+                    self.assertEqual(got, want)
+
+
+class Social(unittest.TestCase):
+    def test_absolute_images_og_url_and_locale(self):
+        for lang, route, url, locale in [("de", "/", "https://pedicelmarketing.ch/", "de_CH"),
+                                         ("fr", "/services/", "https://pedicelmarketing.ch/fr/services/", "fr_CH"),
+                                         ("en", "/services/", "https://pedicelmarketing.ch/en/services/", "en")]:
+            with self.subTest(lang):
+                soup = BeautifulSoup(localize(PAGE, lang, route, {k: k for k in DE}), "lxml")
+                meta = lambda **kw: [m["content"] for m in soup.find_all("meta", attrs=kw)]
+                self.assertEqual(meta(property="og:image"), ["https://pedicelmarketing.ch/_external/preview.jpg"])
+                self.assertEqual(meta(name="twitter:image"), ["https://pedicelmarketing.ch/_external/preview.jpg"])
+                self.assertEqual(meta(property="og:url"), [url])
+                self.assertEqual(meta(property="og:url"), [soup.find("link", rel="canonical")["href"]])
+                self.assertEqual(meta(property="og:locale"), [locale])
+                self.assertEqual(meta(name="robots"), [])
+
+    def test_404_route_is_noindex(self):
+        soup = BeautifulSoup(localize(PAGE, "fr", "/404/", {k: k for k in DE}), "lxml")
+        self.assertEqual([m["content"] for m in soup.find_all("meta", attrs={"name": "robots"})], ["noindex"])
 
 
 if __name__ == "__main__":

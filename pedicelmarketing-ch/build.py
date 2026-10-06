@@ -5,8 +5,10 @@ python3 build.py            # all languages; exit 1 listing untranslated strings
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -28,6 +30,26 @@ def routes() -> list[tuple[str, Path]]:
     return out
 
 
+# /assets/* is served "immutable" for a year (the .com's $pedicel_cache map), so every
+# reference carries a content hash: a changed file gets a new URL and browsers refetch it.
+ASSET_REF = re.compile(r'((?:href|src)=")(/assets/[^"?#]+)(")')
+
+
+def version_assets(html: str, assets: Path, cache: dict[str, str] | None = None) -> str:
+    """href/src="/assets/x" -> "/assets/x?v=<8 hex of x's sha256>". Unknown files are left as they are."""
+    cache = {} if cache is None else cache
+
+    def sub(m: re.Match) -> str:
+        path = m.group(2)
+        if path not in cache:
+            f = assets / path[len("/assets/"):]
+            cache[path] = hashlib.sha256(f.read_bytes()).hexdigest()[:8] if f.is_file() else ""
+        v = cache[path]
+        return f"{m.group(1)}{path}?v={v}{m.group(3)}" if v else m.group(0)
+
+    return ASSET_REF.sub(sub, html)
+
+
 def tmap(lang: str) -> dict[str, str]:
     f = STRINGS / f"{lang}.json"
     return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
@@ -41,6 +63,7 @@ def main(argv: list[str] | None = None) -> int:
     shutil.rmtree(DIST, ignore_errors=True)
     DIST.mkdir()
     failed = 0
+    hashes: dict[str, str] = {}
     for lang in build_langs:
         m = tmap(lang)
         for route, src in routes():
@@ -52,7 +75,7 @@ def main(argv: list[str] | None = None) -> int:
                 continue
             dest = DIST / prefix(lang).lstrip("/") / route.strip("/") / "index.html"
             dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_text(html, encoding="utf-8")
+            dest.write_text(version_assets(html, ASSETS, hashes), encoding="utf-8")
     if (DIST / "404" / "index.html").exists():
         shutil.copy(DIST / "404" / "index.html", DIST / "404.html")
     if ASSETS.is_dir():

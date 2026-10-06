@@ -12,6 +12,10 @@ LANGS = ("de", "fr", "en")
 DEFAULT = "de"
 HOST = "https://pedicelmarketing.ch"
 LABELS = {"de": "DE", "fr": "FR", "en": "EN"}
+# BCP 47 codes for <html lang>, hreflang and the switcher: Swiss German/French, generic English.
+HREFLANG = {"de": "de-CH", "fr": "fr-CH", "en": "en"}
+OG_LOCALE = {"de": "de_CH", "fr": "fr_CH", "en": "en"}
+NOINDEX_ROUTES = {"/404/"}
 SKIP_TAGS = {"script", "style", "noscript", "code"}
 TEXT_ATTRS = ("alt", "placeholder", "title", "aria-label", "data-wait")
 META_KEYS = {"description", "og:title", "og:description", "twitter:title", "twitter:description"}
@@ -83,14 +87,26 @@ def _url(lang: str, route: str) -> str:
     return f"{HOST}{prefix(lang)}{route}"
 
 
+def _is_file(href: str) -> bool:
+    path = href.split("#")[0].split("?")[0]
+    return "." in path.rsplit("/", 1)[-1]
+
+
+def _slash(href: str) -> str:
+    """Page link -> trailing-slash form (/services -> /services/, /services#x -> /services/#x)."""
+    cut = min((i for i in (href.find("?"), href.find("#")) if i >= 0), default=len(href))
+    path, rest = href[:cut], href[cut:]
+    return href if path.endswith("/") else path + "/" + rest
+
+
 def _relink(soup, lang: str) -> None:
+    """Internal page links: trailing slash + language prefix. Files (last segment has an
+    extension, e.g. /robots.txt) exist once at the root, so they keep their path."""
     p = prefix(lang)
-    if not p:
-        return
     for el in soup.find_all(href=True):
         h = el["href"]
-        if h.startswith("/") and not h.startswith(KEEP_PREFIXES):
-            el["href"] = p + h if h != "/" else p + "/"
+        if h.startswith("/") and not h.startswith(KEEP_PREFIXES) and not _is_file(h):
+            el["href"] = p + _slash(h)
 
 
 def _head_links(soup, lang: str, route: str) -> None:
@@ -99,9 +115,31 @@ def _head_links(soup, lang: str, route: str) -> None:
         old.decompose()
     canon = soup.new_tag("link", rel="canonical", href=_url(lang, route))
     head.append(canon)
-    for code in LANGS + ("x-default",):
-        target = DEFAULT if code == "x-default" else code
-        head.append(soup.new_tag("link", rel="alternate", hreflang=code, href=_url(target, route)))
+    for code in LANGS:
+        head.append(soup.new_tag("link", rel="alternate", hreflang=HREFLANG[code], href=_url(code, route)))
+    head.append(soup.new_tag("link", rel="alternate", hreflang="x-default", href=_url(DEFAULT, route)))
+
+
+def _meta(soup, attr: str, key: str, content: str) -> None:
+    """Set <meta attr=key content=...>, adding it to <head> when the page has none."""
+    m = soup.head.find("meta", attrs={attr: key})
+    if m is None:
+        m = soup.new_tag("meta")
+        m[attr] = key
+        soup.head.append(m)
+    m["content"] = content
+
+
+def _social(soup, lang: str, route: str) -> None:
+    """Share-card tags: absolute image URLs (crawlers do not resolve relative ones), og:url, og:locale."""
+    for m in soup.head.find_all("meta"):
+        if (m.get("property") == "og:image" or m.get("name") == "twitter:image") \
+                and m.get("content", "").startswith("/") and not m["content"].startswith("//"):
+            m["content"] = HOST + m["content"]
+    _meta(soup, "property", "og:url", _url(lang, route))
+    _meta(soup, "property", "og:locale", OG_LOCALE[lang])
+    if route in NOINDEX_ROUTES:
+        _meta(soup, "name", "robots", "noindex")
 
 
 def _switcher(soup, lang: str, route: str) -> None:
@@ -109,7 +147,7 @@ def _switcher(soup, lang: str, route: str) -> None:
         slot.clear()
         slot["class"] = "lang-switch"
         for code in LANGS:
-            a = soup.new_tag("a", href=f"{prefix(code)}{route}", hreflang=code, lang=code)
+            a = soup.new_tag("a", href=f"{prefix(code)}{route}", hreflang=HREFLANG[code], lang=HREFLANG[code])
             a.string = LABELS[code]
             if code == lang:
                 a["aria-current"] = "true"
@@ -130,9 +168,10 @@ def localize(html: str, lang: str, route: str, tmap: dict[str, str]) -> str:
                 missing.setdefault(s, None)
         if missing:
             raise MissingTranslation(list(missing))
-    soup.html["lang"] = lang
+    soup.html["lang"] = HREFLANG[lang]
     soup.html["data-wf-domain"] = "pedicelmarketing.ch"
     _relink(soup, lang)
     _head_links(soup, lang, route)
+    _social(soup, lang, route)
     _switcher(soup, lang, route)
     return str(soup)

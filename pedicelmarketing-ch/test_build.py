@@ -1,5 +1,5 @@
 """python3 -m unittest test_build -v"""
-import tempfile, unittest
+import hashlib, tempfile, unittest
 from pathlib import Path
 import build
 
@@ -36,6 +36,48 @@ class Lang(unittest.TestCase):
             build.main(["--lang", "xx"])
         with self.assertRaises(SystemExit):
             build.main(["--bogus"])
+
+
+class AssetVersions(unittest.TestCase):
+    """/assets/* is cached immutable for a year, so each reference must change when the file does."""
+
+    def setUp(self):
+        self.assets = Path(tempfile.mkdtemp())
+        (self.assets / "img").mkdir()
+        (self.assets / "a.css").write_text("body{}")
+        (self.assets / "img" / "x.webp").write_bytes(b"RIFF")
+
+    def v(self, rel: str) -> str:
+        return hashlib.sha256((self.assets / rel).read_bytes()).hexdigest()[:8]
+
+    def test_href_and_src_get_content_hash(self):
+        html = ('<link href="/assets/a.css" rel="stylesheet"><img src="/assets/img/x.webp">'
+                '<a href="/_external/y.css">e</a><a href="/services/">s</a>')
+        out = build.version_assets(html, self.assets)
+        self.assertIn(f'href="/assets/a.css?v={self.v("a.css")}"', out)
+        self.assertIn(f'src="/assets/img/x.webp?v={self.v("img/x.webp")}"', out)
+        self.assertIn('href="/_external/y.css"', out)
+        self.assertIn('href="/services/"', out)
+
+    def test_changed_file_changes_url_missing_file_untouched(self):
+        html = '<link href="/assets/a.css"><script src="/assets/gone.js"></script>'
+        before = build.version_assets(html, self.assets)
+        (self.assets / "a.css").write_text("body{color:red}")
+        after = build.version_assets(html, self.assets)
+        self.assertNotEqual(before, after)
+        self.assertIn('src="/assets/gone.js"', after)
+
+    def test_build_output_is_versioned(self):
+        root = Path(tempfile.mkdtemp())
+        (root / "pages").mkdir()
+        (root / "pages" / "index.html").write_text(PAGE.replace("<head>", '<head><link href="/assets/a.css" rel="stylesheet">'))
+        build.PAGES, build.STRINGS, build.DIST, build.ASSETS = (
+            root / "pages", root / "strings", root / "dist", self.assets)
+        build.MIRROR = root / "no-mirror"
+        self.assertEqual(build.main(["--lang", "en"]), 0)
+        out = (root / "dist" / "en" / "index.html").read_text()
+        self.assertIn(f'/assets/a.css?v={self.v("a.css")}', out)
+        self.assertTrue((root / "dist" / "assets" / "a.css").is_file())
 
 
 if __name__ == "__main__":
