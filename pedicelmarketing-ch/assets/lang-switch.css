@@ -27,3 +27,46 @@
 #w-node-c4b8cf5d-be4f-287e-eea2-6099fc340683-3d691f57-t6 { grid-area: span 2 / span 1 / span 2 / span 1; place-self: auto end; }
 #w-node-c4b8cf5d-be4f-287e-eea2-6099fc340685-3d691f57-t6 { grid-area: span 1 / span 1 / span 1 / span 1; align-self: start; }
 #w-node-c4b8cf5d-be4f-287e-eea2-6099fc34068f-3d691f57-t6 { grid-area: 2 / 2 / 3 / 3; }
+
+/* Task 7: page-hero H1s must show on load. Webflow IX2 starts them at opacity:0 and reveals them
+   with SCROLL_INTO_VIEW at a 25% offset, which only fires once the element's bottom edge is more
+   than 25% of the viewport height from the top. A short H1 near the top of a tall viewport
+   (e.g. the 2-line EN/FR home H1 at 390x900: bottom 224px < 225px) never qualifies at scrollY 0,
+   so it stayed invisible. Pin them visible; keep a small CSS-only rise instead of the IX slide. */
+html .mega-h1[data-w-id]{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion:no-preference){
+  .mega-h1[data-w-id]{animation:ch-hero-rise .6s ease-out both}
+  @keyframes ch-hero-rise{from{translate:0 24px}to{translate:0 0}}
+}
+
+/* Task 7: project cards have a fixed height (438px, 100vw on phones) and bottom-align their text,
+   so longer DE/FR titles ran out of the top edge (clipped by overflow:hidden) at 390 and in the
+   two-column grid at 768-991. Let the card grow with its text, keeping the old height as minimum. */
+.project-card{height:auto;min-height:438px}
+.project-card>.project-content{height:auto;flex:1 0 auto}
+@media (max-width:479px){.project-card{height:auto;min-height:100vw}}
+
+/* Task 7: the stacked CTA pair in the audit tile is capped at 250px, which broke
+   "Kostenloses KI-Audit anfordern" onto two lines. */
+.cta-tile-copy{max-width:min(300px,100%)}
+.cta-tile-copy>.cta{padding-left:16px;padding-right:16px;text-align:center}
+/* Same label in the service-page hero (capped at 305px; 18px text at desktop). */
+.cta-wrapper.header-a{max-width:340px}
+.cta-wrapper.header-a>.cta{padding-left:20px;padding-right:20px}
+/* "Mehr erfahren" / "En savoir plus" in the tab strip wrapped at tablet widths. */
+.tab-row .button{white-space:nowrap}
+
+/* Task 7: balance hero heading lines (avoids a lone "KMU" on the DE home H1 at 1440). */
+.mega-h1{text-wrap:balance}
+
+/* Task 7: six service tabs in one row overflowed the page at 768-830px (page scrollWidth 801-823)
+   and wrapped their labels onto two lines up to ~1340px. Between tablet and small desktop, lay them
+   out as two rows of three. */
+@media (min-width:768px) and (max-width:1365px){
+  .tabs-menu{flex-wrap:wrap}
+  .tabs-menu>.tab-link{flex:1 1 calc(33.333% - 16px);padding-left:12px;padding-right:12px}
+}
+/* Task 7: a single long word in a feature tile (min-content) widened the 3-column grid past the
+   viewport at 768. Let the columns shrink and hyphenate as a fallback. */
+.grid-features-thirds>*{min-width:0}
+.feature-tile .text-heading-3{hyphens:auto;overflow-wrap:break-word}
