@@ -1,0 +1,2195 @@
+{
+  "allowed_navigation_origins": [
+    "http://127.0.0.1:8713"
+  ],
+  "allowed_telemetry_urls": [],
+  "generated_at": "2026-08-01T19:04:39Z",
+  "requested_urls": [
+    "http://127.0.0.1:8713/index.html",
+    "http://127.0.0.1:8713/clubs.html",
+    "http://127.0.0.1:8713/camps.html",
+    "http://127.0.0.1:8713/contacto.html"
+  ],
+  "requested_viewports": [
+    "desktop",
+    "tablet",
+    "mobile"
+  ],
+  "results": [
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/index.html",
+      "finished_at": "2026-08-01T19:04:50Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/index.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/index.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/index.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/index.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_index.html__612c29d1c2__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 2976,
+          "window_scroll_y_max": 6699
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 7602,
+          "virtualSignals": [],
+          "windowRange": 6702,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 766,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 288,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 12,
+          "scrollHeight": 7602
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:04:39Z",
+      "status": 200,
+      "success": true,
+      "title": "Inicio | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/index.html",
+      "finished_at": "2026-08-01T19:04:58Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/index.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/index.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/index.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/index.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_index.html__612c29d1c2__tablet__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 4945,
+          "window_scroll_y_max": 9344
+        },
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 10394,
+          "virtualSignals": [],
+          "windowRange": 9370,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 288,
+          "fontStatus": "loaded",
+          "pendingImages": 2,
+          "readyState": "complete",
+          "resourceCount": 10,
+          "scrollHeight": 10394
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:04:50Z",
+      "status": 200,
+      "success": true,
+      "title": "Inicio | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/index.html",
+      "finished_at": "2026-08-01T19:05:05Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/index.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/index.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/index.html",
+        "state": "ok",
+        "title": "Inicio | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/index.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/index.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_index.html__612c29d1c2__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 5561,
+          "window_scroll_y_max": 9740
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 10608,
+          "virtualSignals": [],
+          "windowRange": 9764,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 288,
+          "fontStatus": "loaded",
+          "pendingImages": 2,
+          "readyState": "complete",
+          "resourceCount": 10,
+          "scrollHeight": 10608
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:04:58Z",
+      "status": 200,
+      "success": true,
+      "title": "Inicio | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/clubs.html",
+      "finished_at": "2026-08-01T19:05:13Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/clubs.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/clubs.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/clubs.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/clubs.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_clubs.html__02cc532b39__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 763,
+          "window_scroll_y_max": 3252
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 4152,
+          "virtualSignals": [],
+          "windowRange": 3252,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 765,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 135,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 10,
+          "scrollHeight": 4152
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:05Z",
+      "status": 200,
+      "success": true,
+      "title": "Clubs | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/clubs.html",
+      "finished_at": "2026-08-01T19:05:21Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/clubs.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/clubs.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/clubs.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/clubs.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_clubs.html__02cc532b39__tablet__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1996,
+          "window_scroll_y_max": 5236
+        },
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 6260,
+          "virtualSignals": [],
+          "windowRange": 5236,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 135,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 10,
+          "scrollHeight": 6260
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:13Z",
+      "status": 200,
+      "success": true,
+      "title": "Clubs | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/clubs.html",
+      "finished_at": "2026-08-01T19:05:27Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/clubs.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/clubs.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/clubs.html",
+        "state": "ok",
+        "title": "Clubs | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/clubs.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/clubs.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_clubs.html__02cc532b39__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1928,
+          "window_scroll_y_max": 5145
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 5989,
+          "virtualSignals": [],
+          "windowRange": 5145,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 135,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 10,
+          "scrollHeight": 5989
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:21Z",
+      "status": 200,
+      "success": true,
+      "title": "Clubs | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/camps.html",
+      "finished_at": "2026-08-01T19:05:36Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/camps.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/camps.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/camps.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/camps.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_camps.html__16b5d345a8__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1204,
+          "window_scroll_y_max": 4059
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 4959,
+          "virtualSignals": [],
+          "windowRange": 4059,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 762,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 147,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 8,
+          "scrollHeight": 4959
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:27Z",
+      "status": 200,
+      "success": true,
+      "title": "Camps | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/camps.html",
+      "finished_at": "2026-08-01T19:05:43Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/camps.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/camps.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/camps.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/camps.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_camps.html__16b5d345a8__tablet__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1387,
+          "window_scroll_y_max": 4356
+        },
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 5380,
+          "virtualSignals": [],
+          "windowRange": 4356,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 147,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 8,
+          "scrollHeight": 5380
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:36Z",
+      "status": 200,
+      "success": true,
+      "title": "Camps | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/camps.html",
+      "finished_at": "2026-08-01T19:05:49Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/camps.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/camps.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/camps.html",
+        "state": "ok",
+        "title": "Camps | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/camps.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/camps.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_camps.html__16b5d345a8__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1679,
+          "window_scroll_y_max": 4796
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 5640,
+          "virtualSignals": [],
+          "windowRange": 4796,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 765,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 147,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 8,
+          "scrollHeight": 5640
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:43Z",
+      "status": 200,
+      "success": true,
+      "title": "Camps | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/contacto.html",
+      "finished_at": "2026-08-01T19:05:55Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/contacto.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/contacto.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/contacto.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/contacto.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_contacto.html__102033c13d__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 357
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1257,
+          "virtualSignals": [],
+          "windowRange": 357,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 74,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 6,
+          "scrollHeight": 1257
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:49Z",
+      "status": 200,
+      "success": true,
+      "title": "Contacto | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/contacto.html",
+      "finished_at": "2026-08-01T19:06:00Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/contacto.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/contacto.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/contacto.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/contacto.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_contacto.html__102033c13d__tablet__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 516
+        },
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1540,
+          "virtualSignals": [],
+          "windowRange": 516,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 74,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 6,
+          "scrollHeight": 1540
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:05:55Z",
+      "status": 200,
+      "success": true,
+      "title": "Contacto | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8713"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "final_url": "http://127.0.0.1:8713/contacto.html",
+      "finished_at": "2026-08-01T19:06:06Z",
+      "http_errors": [],
+      "initial_response_url": "http://127.0.0.1:8713/contacto.html",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8713/contacto.html"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8713/contacto.html",
+        "state": "ok",
+        "title": "Contacto | Premium Padel Academy"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "http://127.0.0.1:8713/contacto.html",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8713/contacto.html",
+      "screenshot": "reports/viewports-v2/127.0.0.1-8713_contacto.html__102033c13d__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 6,
+          "window_scroll_y_max": 850
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1694,
+          "virtualSignals": [],
+          "windowRange": 850,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 74,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 6,
+          "scrollHeight": 1694
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T19:06:00Z",
+      "status": 200,
+      "success": true,
+      "title": "Contacto | Premium Padel Academy",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    }
+  ],
+  "schema_version": "1.3",
+  "service_worker_policy": "auto",
+  "settle_policy": {
+    "max_settle_ms": 5000,
+    "navigation": "domcontentloaded",
+    "networkidle_used": false
+  },
+  "source_baseline_exceptions": [],
+  "source_local_pair": null,
+  "summary": {
+    "complete_matrix": true,
+    "expected": 12,
+    "failed": 0,
+    "passed": 12,
+    "produced": 12,
+    "source_evidence_produced": 0
+  },
+  "url_contexts": [
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8713/index.html"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8713/clubs.html"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8713/camps.html"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8713/contacto.html"
+    }
+  ]
+}

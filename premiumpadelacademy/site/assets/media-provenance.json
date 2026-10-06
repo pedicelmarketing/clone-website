@@ -1,0 +1,226 @@
+{
+  "hero-home.jpg": {
+    "slot": "hero-home",
+    "wix_media_id": "b99928_5a996a196dfa41f08433f14a789e99fd~mv2.jpg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_5a996a196dfa41f08433f14a789e99fd~mv2.jpg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      2048,
+      1152
+    ],
+    "shipped_pixels": [
+      2000,
+      1125
+    ],
+    "exif_stripped": true
+  },
+  "coach-riki.jpg": {
+    "slot": "coach-riki",
+    "wix_media_id": "b99928_d2622b2a02fc4f6f971b3a70e0c63802~mv2.png",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_d2622b2a02fc4f6f971b3a70e0c63802~mv2.png/v1/fit/w_2400,h_2400,q_90/hi.png",
+    "source_pixels": [
+      1086,
+      1448
+    ],
+    "shipped_pixels": [
+      1086,
+      1448
+    ],
+    "exif_stripped": true
+  },
+  "coach-juampi.jpg": {
+    "slot": "coach-juampi",
+    "wix_media_id": "b99928_29a4cf960a4e4a0283a80fd6562ac0cd~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_29a4cf960a4e4a0283a80fd6562ac0cd~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1060,
+      1484
+    ],
+    "shipped_pixels": [
+      1060,
+      1484
+    ],
+    "exif_stripped": true
+  },
+  "elite.jpg": {
+    "slot": "elite",
+    "wix_media_id": "b99928_e60aaa6fdaa944728dc3fe0a61908b77~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_e60aaa6fdaa944728dc3fe0a61908b77~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1366,
+      2048
+    ],
+    "shipped_pixels": [
+      1334,
+      2000
+    ],
+    "exif_stripped": true
+  },
+  "elite-inset.jpg": {
+    "slot": "elite-inset",
+    "wix_media_id": "b99928_80a668776fb84ff9919d49cba1394994~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_80a668776fb84ff9919d49cba1394994~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      1949
+    ],
+    "shipped_pixels": [
+      1170,
+      1949
+    ],
+    "exif_stripped": true
+  },
+  "expect.jpg": {
+    "slot": "expect",
+    "wix_media_id": "b99928_d3004220c4fb42cf902e0a5cafd4e503~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_d3004220c4fb42cf902e0a5cafd4e503~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      1544
+    ],
+    "shipped_pixels": [
+      1170,
+      1544
+    ],
+    "exif_stripped": true
+  },
+  "expect-2.jpg": {
+    "slot": "expect-2",
+    "wix_media_id": "b99928_e08bd1de02784259b337db0fcc65fc61~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_e08bd1de02784259b337db0fcc65fc61~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      1546
+    ],
+    "shipped_pixels": [
+      1170,
+      1546
+    ],
+    "exif_stripped": true
+  },
+  "hero-clubs.jpg": {
+    "slot": "hero-clubs",
+    "wix_media_id": "11062b_ff94e7c41c3c475b933c8d7835c67ed2~mv2.jpg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/11062b_ff94e7c41c3c475b933c8d7835c67ed2~mv2.jpg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      2400,
+      1599
+    ],
+    "shipped_pixels": [
+      2000,
+      1333
+    ],
+    "exif_stripped": true
+  },
+  "club-1.jpg": {
+    "slot": "club-1",
+    "wix_media_id": "b99928_ce35c6530d9f466aaec7c24ed4b6cef5~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_ce35c6530d9f466aaec7c24ed4b6cef5~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      1538
+    ],
+    "shipped_pixels": [
+      1170,
+      1538
+    ],
+    "exif_stripped": true
+  },
+  "club-2.jpg": {
+    "slot": "club-2",
+    "wix_media_id": "b99928_80a668776fb84ff9919d49cba1394994~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_80a668776fb84ff9919d49cba1394994~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      1949
+    ],
+    "shipped_pixels": [
+      1170,
+      1949
+    ],
+    "exif_stripped": true
+  },
+  "club-3.jpg": {
+    "slot": "club-3",
+    "wix_media_id": "b99928_1701cb938dc0418b8f8ddffc9d10f3ac~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_1701cb938dc0418b8f8ddffc9d10f3ac~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1366,
+      2048
+    ],
+    "shipped_pixels": [
+      1334,
+      2000
+    ],
+    "exif_stripped": true
+  },
+  "club-4.jpg": {
+    "slot": "club-4",
+    "wix_media_id": "11062b_a7fd41d75482484ca10a04dd7e5b0c63~mv2.jpg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/11062b_a7fd41d75482484ca10a04dd7e5b0c63~mv2.jpg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      2400,
+      1600
+    ],
+    "shipped_pixels": [
+      2000,
+      1333
+    ],
+    "exif_stripped": true
+  },
+  "hero-camps.jpg": {
+    "slot": "hero-camps",
+    "wix_media_id": "b99928_b3772c2ecd1c4adf97425f0b23fb948e~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_b3772c2ecd1c4adf97425f0b23fb948e~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      656
+    ],
+    "shipped_pixels": [
+      1170,
+      656
+    ],
+    "exif_stripped": true
+  },
+  "camps-band.jpg": {
+    "slot": "camps-band",
+    "wix_media_id": "b99928_befb0959142e40289a7ccbde2cbe95a7~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_befb0959142e40289a7ccbde2cbe95a7~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      1552
+    ],
+    "shipped_pixels": [
+      1170,
+      1552
+    ],
+    "exif_stripped": true
+  },
+  "camps-method.jpg": {
+    "slot": "camps-method",
+    "wix_media_id": "b99928_665f8b4a036742b59896ab25b10dfa8a~mv2.jpeg",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_665f8b4a036742b59896ab25b10dfa8a~mv2.jpeg/v1/fit/w_2400,h_2400,q_90/hi.jpg",
+    "source_pixels": [
+      1170,
+      1994
+    ],
+    "shipped_pixels": [
+      1170,
+      1994
+    ],
+    "exif_stripped": true
+  },
+  "logo.png": {
+    "slot": "logo",
+    "wix_media_id": "b99928_610058862ab541dfaaa7b12ead80c5a7~mv2.png",
+    "acquired_from": "mirror/_external/static.wixstatic.com/media/b99928_610058862ab541dfaaa7b12ead80c5a7~mv2.png/v1/fit/w_2400,h_2400,q_90/hi.png",
+    "source_pixels": [
+      1884,
+      544
+    ],
+    "shipped_pixels": [
+      800,
+      231
+    ],
+    "exif_stripped": true
+  }
+}

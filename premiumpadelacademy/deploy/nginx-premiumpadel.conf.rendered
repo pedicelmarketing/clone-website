@@ -1,0 +1,64 @@
+# Premium Padel Academy - static site on spire (Scaleway, 62.210.212.199).
+#
+# Rendered from this template by deploy/install_vhost.sh, which substitutes
+# nexumpadel.es. Do not install this file directly.
+#
+# Bound to the PUBLIC IP only, so it cannot collide with Tailscale's :443 on
+# 100.76.51.58 or the internal core-oss vhost on 127.0.0.1:8088 — the same
+# containment the pedicelmarketing vhost uses.
+#
+# Filename note: this lands in sites-enabled/ as premiumpadel.conf, which sorts
+# AFTER pedicelmarketing.conf. nginx treats the first server block defined for
+# an address:port as that address's default, so ordering keeps pedicelmarketing
+# the catch-all for unmatched Host headers, exactly as it is today.
+#
+# certbot --nginx adds the TLS bits and the :443 server block on first issue.
+
+map $sent_http_content_type $padel_cache {
+    default                     "public, max-age=300";
+    ~image/                     "public, max-age=31536000, immutable";
+    ~font/                      "public, max-age=31536000, immutable";
+    ~application/javascript     "public, max-age=31536000, immutable";
+    ~text/css                   "public, max-age=31536000, immutable";
+    ~image/svg                  "public, max-age=31536000, immutable";
+}
+
+server {
+    listen 62.210.212.199:80;
+    server_name nexumpadel.es www.nexumpadel.es;
+
+    root /var/www/premiumpadelacademy;
+    index index.html;
+
+    access_log /var/log/nginx/premiumpadel.access.log;
+    error_log  /var/log/nginx/premiumpadel.error.log;
+
+    # www -> apex. The site is authored with root-relative asset paths, so either
+    # host works; collapsing to one keeps canonical URLs and analytics clean.
+    if ($host = www.nexumpadel.es) {
+        return 301 http://nexumpadel.es$request_uri;
+    }
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css text/xml application/javascript
+               application/json image/svg+xml;
+
+    # Never serve build bookkeeping.
+    location ~ ^/(assets/partners\.json|assets/media-provenance\.json)$ {
+        return 404;
+    }
+
+    # Extensionless clean URLs: /contacto -> contacto.html.
+    location / {
+        try_files $uri $uri.html $uri/ =404;
+        add_header Cache-Control $padel_cache always;
+        add_header X-Content-Type-Options  "nosniff"        always;
+        add_header X-Frame-Options         "SAMEORIGIN"     always;
+        add_header Referrer-Policy         "strict-origin-when-cross-origin" always;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html { internal; }
+}

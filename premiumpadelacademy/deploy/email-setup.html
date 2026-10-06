@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Nexum Padel — Configuración del correo info@nexumpadel.es</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm 16mm; }
+
+  :root {
+    --ink:   #2F3E3A;
+    --muted: #6F7F78;
+    --gold:  #C2A46A;
+    --soft:  #FAF9F6;
+    --line:  #E6E4DD;
+    --ok:    #3F7D52;
+    --warn:  #A8762B;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10pt; line-height: 1.55; color: var(--ink);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+
+  h1 { font-size: 21pt; margin: 0 0 4pt; letter-spacing: -.01em; }
+  h2 {
+    font-size: 12.5pt; margin: 20pt 0 7pt; padding-bottom: 4pt;
+    border-bottom: 1px solid var(--line);
+    page-break-after: avoid;
+  }
+  h3 { font-size: 10.5pt; margin: 12pt 0 4pt; page-break-after: avoid; }
+  p  { margin: 0 0 7pt; }
+
+  .eyebrow {
+    font-size: 8pt; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--gold); font-weight: 700; margin-bottom: 6pt;
+  }
+  .sub { color: var(--muted); margin-bottom: 2pt; }
+
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 10pt; margin-bottom: 4pt;
+  }
+  .meta {
+    font-size: 8.5pt; color: var(--muted);
+    display: flex; gap: 18pt; margin-top: 8pt;
+  }
+
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 8.8pt; }
+  th, td {
+    text-align: left; padding: 5pt 7pt;
+    border-bottom: 1px solid var(--line); vertical-align: top;
+  }
+  th { background: var(--soft); font-size: 7.8pt; letter-spacing: .09em;
+       text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  td.mono, .mono { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 8.2pt; }
+  tr { page-break-inside: avoid; }
+
+  .tag {
+    display: inline-block; font-size: 7.4pt; font-weight: 700;
+    letter-spacing: .06em; text-transform: uppercase;
+    padding: 1.5pt 5pt; border-radius: 3pt; white-space: nowrap;
+  }
+  .tag-ok   { background: #E6F0E8; color: var(--ok); }
+  .tag-todo { background: #FBF0DC; color: var(--warn); }
+
+  ol, ul { margin: 0 0 8pt; padding-left: 16pt; }
+  li { margin-bottom: 4pt; }
+
+  .callout {
+    background: var(--soft); border-left: 3px solid var(--gold);
+    padding: 8pt 11pt; margin: 10pt 0; page-break-inside: avoid;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout strong { color: var(--ink); }
+
+  .note { font-size: 8.5pt; color: var(--muted); }
+  code { font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+         background: var(--soft); padding: .5pt 3pt; border-radius: 2pt; font-size: 8.6pt; }
+
+  footer {
+    margin-top: 22pt; padding-top: 8pt; border-top: 1px solid var(--line);
+    font-size: 7.8pt; color: var(--muted);
+  }
+  .avoid-break { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Nexum Padel · Marbella</p>
+  <h1>Configuración del correo</h1>
+  <p class="sub">Cómo dejar funcionando <strong>info@nexumpadel.es</strong></p>
+  <div class="meta">
+    <span>Dominio: <strong>nexumpadel.es</strong></span>
+    <span>Proveedor de correo: <strong>Hostinger</strong></span>
+    <span>Fecha: <strong>3 de agosto de 2026</strong></span>
+  </div>
+</header>
+
+<h2>1. Resumen: qué está hecho y qué falta</h2>
+
+<p>El <strong>DNS ya está completo</strong>. Todos los registros que necesita el correo
+(MX, SPF, DKIM, DMARC y autoconfiguración) están publicados y resolviendo correctamente.
+Lo único que falta es <strong>crear el buzón</strong> dentro del panel de Hostinger y
+conectarlo en el móvil y el ordenador.</p>
+
+<table>
+  <thead>
+    <tr><th style="width:34%">Paso</th><th style="width:16%">Estado</th><th>Detalle</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Dominio registrado y activo</td><td><span class="tag tag-ok">Hecho</span></td><td>nexumpadel.es apunta a la web</td></tr>
+    <tr><td>Registros MX (recepción)</td><td><span class="tag tag-ok">Hecho</span></td><td>mx1 / mx2.hostinger.com</td></tr>
+    <tr><td>SPF (antifalsificación)</td><td><span class="tag tag-ok">Hecho</span></td><td>Autoriza a Hostinger a enviar en tu nombre</td></tr>
+    <tr><td>DKIM (firma digital)</td><td><span class="tag tag-ok">Hecho</span></td><td>3 claves publicadas</td></tr>
+    <tr><td>DMARC (política)</td><td><span class="tag tag-ok">Hecho</span></td><td>En modo observación — ver punto 5</td></tr>
+    <tr><td>Autoconfiguración de clientes</td><td><span class="tag tag-ok">Hecho</span></td><td>autodiscover / autoconfig</td></tr>
+    <tr><td><strong>Crear el buzón info@</strong></td><td><span class="tag tag-todo">Pendiente</span></td><td>Punto 3 de este documento</td></tr>
+    <tr><td><strong>Conectar móvil y ordenador</strong></td><td><span class="tag tag-todo">Pendiente</span></td><td>Punto 4 de este documento</td></tr>
+    <tr><td><strong>Enviar correo de prueba</strong></td><td><span class="tag tag-todo">Pendiente</span></td><td>Punto 6 de este documento</td></tr>
+  </tbody>
+</table>
+
+<h2>2. Registros DNS publicados</h2>
+
+<p class="note">Verificado por consulta DNS pública el 3 de agosto de 2026. No hay que tocar nada
+de esta tabla: está aquí como referencia por si algún día hay que revisarlo o migrar de proveedor.</p>
+
+<table>
+  <thead>
+    <tr><th style="width:11%">Tipo</th><th style="width:27%">Nombre</th><th>Valor</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>MX</td><td class="mono">@</td><td class="mono">5 mx1.hostinger.com</td></tr>
+    <tr><td>MX</td><td class="mono">@</td><td class="mono">10 mx2.hostinger.com</td></tr>
+    <tr><td>TXT</td><td class="mono">@</td><td class="mono">v=spf1 include:_spf.mail.hostinger.com ~all</td></tr>
+    <tr><td>TXT</td><td class="mono">_dmarc</td><td class="mono">v=DMARC1; p=none</td></tr>
+    <tr><td>CNAME</td><td class="mono">hostingermail-a._domainkey</td><td class="mono">hostingermail-a.dkim.mail.hostinger.com</td></tr>
+    <tr><td>CNAME</td><td class="mono">hostingermail-b._domainkey</td><td class="mono">hostingermail-b.dkim.mail.hostinger.com</td></tr>
+    <tr><td>CNAME</td><td class="mono">hostingermail-c._domainkey</td><td class="mono">hostingermail-c.dkim.mail.hostinger.com</td></tr>
+    <tr><td>CNAME</td><td class="mono">autodiscover</td><td class="mono">autodiscover.mail.hostinger.com</td></tr>
+    <tr><td>CNAME</td><td class="mono">autoconfig</td><td class="mono">autoconfig.mail.hostinger.com</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <p><strong>Qué significan en una línea.</strong> El <strong>MX</strong> dice a Internet a qué
+  servidor entregar el correo dirigido a nexumpadel.es. El <strong>SPF</strong> y el
+  <strong>DKIM</strong> demuestran que un correo enviado desde esa dirección es realmente tuyo,
+  y son lo que evita que tus mensajes caigan en spam. El <strong>DMARC</strong> le dice al
+  receptor qué hacer si esa comprobación falla.</p>
+</div>
+
+<h2>3. Crear el buzón info@nexumpadel.es</h2>
+
+<ol>
+  <li>Entra en <span class="mono">hpanel.hostinger.com</span> con la cuenta propietaria del dominio.</li>
+  <li>Menú <strong>Correos</strong> → selecciona <strong>nexumpadel.es</strong>.</li>
+  <li>Si aún no hay ningún plan de correo activo en el dominio, actívalo primero
+      (Hostinger incluye un plan básico con la mayoría de los alojamientos; si no,
+      hay que contratar <em>Email</em> aparte).</li>
+  <li>Pulsa <strong>Crear cuenta de correo</strong>.</li>
+  <li>Nombre de la cuenta: <code>info</code> — el dominio se añade solo.</li>
+  <li>Genera una <strong>contraseña larga</strong> (16 caracteres o más) y guárdala en un gestor
+      de contraseñas. No la envíes por WhatsApp.</li>
+  <li>Confirma. El buzón queda operativo en pocos minutos.</li>
+</ol>
+
+<h3>Alias recomendados (opcional, sin coste adicional)</h3>
+<p>Un alias es una dirección que entrega en el mismo buzón. Útil para separar tipos de consulta
+sin gestionar varias contraseñas:</p>
+<ul>
+  <li><span class="mono">camps@nexumpadel.es</span> → info@</li>
+  <li><span class="mono">clubs@nexumpadel.es</span> → info@</li>
+</ul>
+
+<h2>4. Conectar el correo</h2>
+
+<h3>Opción rápida — webmail</h3>
+<p>Sin instalar nada: <span class="mono">mail.hostinger.com</span>, entrando con la dirección
+completa <span class="mono">info@nexumpadel.es</span> y su contraseña.</p>
+
+<h3>Móvil y ordenador</h3>
+<p>En iPhone, Android, Outlook y Apple Mail basta con elegir «Otra cuenta» e introducir la
+dirección y la contraseña: los registros <span class="mono">autodiscover</span> y
+<span class="mono">autoconfig</span> ya publicados hacen que el resto se rellene solo.
+Si algún programa pide los datos a mano, son estos:</p>
+
+<table class="avoid-break">
+  <thead>
+    <tr><th style="width:26%">Ajuste</th><th style="width:37%">Entrante (IMAP)</th><th>Saliente (SMTP)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Servidor</td><td class="mono">imap.hostinger.com</td><td class="mono">smtp.hostinger.com</td></tr>
+    <tr><td>Puerto</td><td class="mono">993</td><td class="mono">465</td></tr>
+    <tr><td>Seguridad</td><td>SSL / TLS</td><td>SSL / TLS</td></tr>
+    <tr><td>Usuario</td><td class="mono">info@nexumpadel.es</td><td class="mono">info@nexumpadel.es</td></tr>
+    <tr><td>Contraseña</td><td>La del buzón</td><td>La misma</td></tr>
+    <tr><td>Autenticación</td><td>Contraseña normal</td><td>Sí, requerida</td></tr>
+  </tbody>
+</table>
+
+<p class="note">Estos valores son los estándar de Hostinger. El panel los muestra en
+<strong>Correos → Configurar dispositivo</strong>; conviene comprobarlos ahí antes de teclearlos,
+por si el proveedor los cambia.</p>
+
+<div class="callout">
+  <p><strong>Usa IMAP, no POP3.</strong> Con IMAP el correo vive en el servidor y se ve igual en
+  el móvil y en el ordenador. Con POP3 los mensajes se descargan a un único aparato y
+  desaparecen del resto.</p>
+</div>
+
+<h2>5. Endurecer DMARC cuando el correo ya funcione</h2>
+
+<p>Hoy la política está en <span class="mono">p=none</span>, que significa «vigila pero no
+bloquees nada». Es lo correcto al empezar, porque no rompe nada mientras se ajusta la
+configuración. Una vez que lleves dos o tres semanas enviando y recibiendo con normalidad,
+conviene subirla — así nadie puede suplantar la dirección de la academia:</p>
+
+<table>
+  <thead><tr><th style="width:22%">Fase</th><th style="width:44%">Valor del TXT en <span class="mono">_dmarc</span></th><th>Efecto</th></tr></thead>
+  <tbody>
+    <tr><td>Hoy</td><td class="mono">v=DMARC1; p=none</td><td>Solo observa</td></tr>
+    <tr><td>A las 2–3 semanas</td><td class="mono">v=DMARC1; p=quarantine; pct=100</td><td>Lo sospechoso va a spam</td></tr>
+    <tr><td>Cuando esté estable</td><td class="mono">v=DMARC1; p=reject; pct=100</td><td>Lo suplantado se rechaza</td></tr>
+  </tbody>
+</table>
+
+<p class="note">Se puede añadir <span class="mono">rua=mailto:info@nexumpadel.es</span> al final
+para recibir informes semanales de quién está enviando en nombre del dominio.</p>
+
+<h2>6. Comprobar que todo funciona</h2>
+
+<ol>
+  <li><strong>Recepción:</strong> desde una cuenta personal (Gmail, por ejemplo) envía un mensaje
+      a <span class="mono">info@nexumpadel.es</span> y comprueba que llega.</li>
+  <li><strong>Envío y reputación:</strong> desde info@ envía un correo a
+      <span class="mono">check-auth@verifier.port25.com</span>. Responde automáticamente con un
+      informe; debe indicar <strong>PASS</strong> en SPF, DKIM y DMARC.</li>
+  <li><strong>Alternativa visual:</strong> <span class="mono">mail-tester.com</span> da una
+      dirección temporal, le envías un correo y devuelve una puntuación sobre 10.
+      Por debajo de 8 conviene revisar.</li>
+  <li><strong>Desde la web:</strong> abre nexumpadel.es, pulsa el enlace de correo del pie de
+      página y confirma que abre un mensaje nuevo dirigido a info@nexumpadel.es.</li>
+</ol>
+
+<h2>7. Nota sobre el formulario de la web</h2>
+
+<p>El formulario de <strong>Contacto</strong> no envía nada por su cuenta: abre el programa de
+correo del visitante con el mensaje ya escrito, y es el visitante quien pulsa enviar. Funciona,
+pero se pierden los visitantes que no tengan configurado un cliente de correo en ese dispositivo.</p>
+
+<p>Cuando el buzón esté activo se puede conectar el formulario a un servicio de envío real
+(Formspree, Brevo o similar) para que los mensajes lleguen solos a info@nexumpadel.es. El diseño
+del formulario no cambia; es solo trabajo interno.</p>
+
+<footer>
+  Nexum Padel · nexumpadel.es · Documento generado el 3 de agosto de 2026.<br />
+  Los registros DNS del punto 2 fueron verificados por consulta pública en esa fecha. Los valores
+  IMAP/SMTP del punto 4 son los estándar documentados por Hostinger y deben confirmarse en el panel.
+</footer>
+
+</body>
+</html>
