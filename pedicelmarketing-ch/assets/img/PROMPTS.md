@@ -13,14 +13,14 @@ Rendered sizes measured with Playwright at 1440 px wide (`/en/`, `/en/about/`).
 | Page / slot | Before | Rendered | After | File size px | Seed | Intent |
 |---|---|---|---|---|---|---|
 | about `/about/` — "The team" tile 1 (Strategy & ads) | `Team 3.webp (600x660 stock portrait)` | 361x397 | `team-strategy-whiteboard.webp` | 720x796 | 101 | Strategy work at a whiteboard |
-| about — "The team" tile 2 (Content & motion video) | `Team 4.webp (600x660 stock portrait)` | 361x397 | `team-content-video-shoot.webp` | 720x796 | 201 | Small video shoot, camera on tripod |
-| about — "The team" tile 3 (Web, search & data) | `Team 5.webp (600x660 stock portrait)` | 361x397 | `team-web-data-review.webp` | 720x796 | 201 | Reviewing performance charts on a screen |
-| about — "How it all started" gallery left | `image 30.png (blurred person, brand gradient)` | 566x547 | `about-remote-video-call.webp` | 1024x992 | 201 | 2020: companies move online — video call from home office |
+| about — "Three disciplines, one Hub" tile 2 (Content & motion video) | `Team 4.webp (600x660 stock portrait)` | 361x397 | `team-content-video-shoot.webp` | 720x796 | 201 | Small video shoot, camera on tripod |
+| about — "Three disciplines, one Hub" tile 3 (Web, search & data) | `Team 5.webp (600x660 stock portrait)` | 361x397 | `team-web-data-review.webp` | 720x796 | 201 | Reviewing performance charts on a screen |
+| about — "How it all started" gallery left | `image 30.png (blurred person, brand gradient)` | 566x547 | `about-remote-video-call.webp` (v2, fix round 1) | 1024x992 | 401 (homeoffice-v2) | 2020: companies move online — video call from home office |
 | about — "How it all started" gallery right | `image 31.png (street billboard, passer-by)` | 566x547 | `about-wireframe-sketching.webp` | 1024x992 | 201 | Early days: two people sketching wireframes |
 | about — "Today ... Swiss SMEs" gallery left | `image 27.webp (two women with a phone)` | 566x451 | `about-client-meeting.webp` | 1132x906 | 302 | Client meeting at a table |
 | about — "Today ... Swiss SMEs" gallery right | `image 26.webp (hands on laptop)` | 566x451 | `about-content-review.webp` | 1132x906 | 201 | Reviewing content on a screen |
-| about — "Giving back" gallery left | `pexels-cottonbro-studio-5082575 1.webp (stock: people with food)` | 566 wide (grid half, cover) | `about-volunteers-school-supplies.webp` | 1132x906 | 201 | Illustrative: volunteers packing school supplies (no children) |
-| about — "Giving back" gallery right | `dwq.webp (classroom of children)` | 566 wide (grid half, cover) | `about-community-evening.webp` | 1132x906 | 201 | Illustrative: informal community evening |
+| about — "Giving back" gallery left | `pexels-cottonbro-studio-5082575 1.webp (stock: people with food)` | 566 wide (grid half, cover) | `about-still-school-supplies.webp` (fix round 1, objects only) | 1132x906 | 501 (still-school-supplies) | Still life, no people |
+| about — "Giving back" gallery right | `dwq.webp (classroom of children)` | 566 wide (grid half, cover) | `about-still-tea-notebook.webp` (fix round 1, objects only) | 1132x906 | 401 (still-tea-notebook) | Still life, no people |
 | home `/` — services tab "Outbound" (also `/services/` same tab) | `new ones-29.png (man with headphones)` | 473x487 (home), 574 max (services) | `home-outbound-desk.webp` | 946x976 | 201 | Outreach: reading a reply on a laptop |
 
 Skipped on purpose: brand mockups and client work (`first section-19..23`, Yiza billboard), process/tab images that show only hands, the brand-film thumbnail (`lightbox-pedicel`), logos, icons. Audit and contact pages have no people photos.
@@ -80,3 +80,79 @@ Notes on prompt versions:
 |---|---|
 | today-client-meeting, seed 201 | Apple-style logo on the laptop lid |
 | today-client-meeting, seed 301 | faint logo on the laptop lid again |
+
+## Fix round 1 (review rulings, 2026-10-06)
+
+Same model and workflow (Z-Image Turbo, 8 steps, cfg 1). Service-page scenes use a stronger Swiss style suffix (Central-European features, varied clothing, Zurich/Lausanne interiors and rooftops).
+
+### New service-page slots
+
+| Page(s) / slot | Before | Slot ratio | After | px | Seed |
+|---|---|---|---|---|---|
+| paid-ads — intro image (`.image`, max 600 px) | `Ebooks-5.webp` | 1200x1360 | `svc-paid-ads-cards.webp` | 960x1088 | 401 |
+| paid-ads — wide image (`.image-project-big`) | `pexels-monstera-5273652-2-4.webp` (picnic) | 1404x800 | `svc-paid-ads-team-screen.webp` | 1404x804 | 401 (laptop-lid logo blurred out) |
+| outbound + seo-ai-visibility — intro image | `image-26-3.webp` | 1200x1360 | `svc-outbound-headset.webp` | 960x1088 | 401 |
+| ai-content-video + hub — intro image | `Ebooks.webp` | 1200x1360 | `svc-content-phone-gimbal.webp` | 960x1088 | 401 |
+| ai-content-video + hub — wide image | `pexels-monstera-5273652 3.webp` | 1404x800 | `svc-content-video-edit.webp` | 1404x804 | 501 (monitor-bezel mark blurred out) |
+| web-tracking — intro image | `Ebooks-4.webp` | 1200x1360 | `svc-web-tracking-screens.webp` | 960x1088 | 401 |
+
+Kept as they are (per ruling): images showing only hands, the Oyiza billboard, the brand-film thumbnail, `new-26`, and the hands-on-laptop `pexels-monstera-5273667-*` wide images on outbound, SEO and web-tracking.
+
+### Style suffix for service scenes
+
+> Photorealistic candid editorial photograph, natural soft daylight, calm neutral colour grade with cool whites and a subtle lavender accent, 35mm lens, shallow depth of field, natural skin texture, relaxed genuine expressions, nobody looks at the camera. The people have Central-European features. Laptops, phones and screens are plain and unbranded and show only abstract shapes. No text, no lettering, no logos, no signs, no flags.
+
+### Style suffix for still lifes
+
+> Photorealistic still-life photograph, no people, no hands. Natural light, calm colour grade with cool whites and a subtle lavender accent, shallow depth of field. No text, no lettering, no logos, no labels.
+
+### Prompts (final versions)
+
+#### homeoffice-v2 — 1024x992
+
+> A woman in her mid thirties with dark brown hair tied back, wearing a soft lavender sweater, sits at a light wood table in a bright home office during a video call. The camera is behind her laptop, so only the back of the plain laptop lid is visible, and we see her face from the front-left as she listens and smiles slightly, looking at her screen. Plants on the windowsill, a mug on the table. Through the window behind her, a distant view of green Alpine foothills.
+
+#### still-school-supplies — 1280x1024
+
+> A neat stack of new school exercise books with plain solid blue, green and yellow covers without any printing, sharpened pencils in a glass jar, a few erasers and a small plain navy backpack on a light oak table by a window, soft morning daylight.
+
+#### still-tea-notebook — 1280x1024
+
+> Two ceramic cups of tea, a simple glass teapot and an open notebook with blank pages and a pen on a wooden table, warm late-afternoon light through a window, a green plant softly blurred in the background.
+
+#### svc-paid-ads — 960x1088
+
+> A marketing manager in her early forties with short ash-blonde hair, wearing a navy blazer over a white t-shirt, stands at a high table by a large window in a Zurich office and compares two printed cards with colourful abstract ad designs, a laptop open beside her. Through the window, Zurich old-town rooftops with green copper roofs and church spires, softly out of focus.
+
+#### svc-outbound-seo — 960x1088
+
+> A man in his mid thirties with short light-brown hair and a neat beard, in a light grey button-down shirt, sits at a light oak desk in a bright Lausanne office wearing a small headset and writes notes in a notebook, a laptop open beside him. Behind him a large window with a view over terracotta rooftops down to Lake Geneva and distant mountains, softly blurred.
+
+#### svc-content-hub — 960x1088
+
+> A young woman with long straight dark-blonde hair, wearing a rust-coloured overshirt over a black top, films a ceramic coffee cup on a light wood table with a smartphone on a small handheld gimbal, in a bright Zurich studio with white-painted brick walls and a soft LED light panel at the side.
+
+#### svc-web-tracking — 960x1088
+
+> A woman in her fifties with a grey bob and round glasses, in a dark green linen shirt, stands at a standing desk with two monitors showing abstract website layouts and simple coloured charts and points at one screen, while a young man with a dark-blond undercut in a white t-shirt and denim jacket looks on. Modern office with an exposed concrete ceiling and large windows over Zurich rooftops.
+
+#### svc-paid-ads-wide — 1536x880
+
+> Three colleagues in a bright Zurich meeting room with floor-to-ceiling windows overlooking the city rooftops and a hint of the lake: a woman with red hair in a mustard blouse, a tall man in his forties with a shaved head in a black polo shirt and a young woman with brown curly hair in a blue striped shirt stand around a large wall screen showing abstract colourful tiles and bar charts and discuss them, all three looking at each other or at the screen; nobody holds a laptop and there are no laptops in the room.
+
+#### svc-content-wide — 1536x880
+
+> A video editing session in a creative studio in Lausanne: a man in his late twenties with tousled blond hair and a black t-shirt sits at a desk in front of a large monitor showing an abstract video timeline of coloured blocks, and a woman in her thirties with chestnut hair in a crisp white shirt leans in beside him and points at the screen, both of them looking at the monitor. The monitor shows only coloured blocks, no people and no video frames. A window shows rooftops sloping down toward Lake Geneva.
+
+### Rejected in fix round 1
+
+| Image | Why |
+|---|---|
+| svc-paid-ads-wide, seed 401 (original prompt) | Apple-style logo on a laptop. Kept anyway and blurred the logo out, after both retries were worse |
+| svc-paid-ads-wide, seed 501 | the same man appears twice, plus laptop logos |
+| svc-paid-ads-wide, seed 502 | laptop-lid logos on two laptops |
+| svc-content-wide, seed 401 (original prompt) | woman stares into the camera; monitor shows people in the video preview |
+| svc-content-wide, seed 502 | figure visible in the monitor preview |
+| still-school-supplies, seed 401 (original prompt) | ruler with garbled digits; 'exercise books' read as printer paper |
+| homeoffice-v2, seed 402 | fine, but seed 401 fits the slot better (front view, plain lid) |
+| about-remote-video-call v1 (seed 201) | a second face looked out from the laptop screen (review ruling) |
