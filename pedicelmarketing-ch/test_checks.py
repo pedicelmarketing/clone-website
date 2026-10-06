@@ -58,7 +58,8 @@ class Checks(unittest.TestCase):
                 self.assertEqual(bool(found), flagged, text)
 
     def test_unsourced_old_site_stats_are_forbidden(self):
-        for text in ["1000+ leads", "60%+ awareness", "80+ projects", "100% of the brands", "over 30 years"]:
+        for text in ["1000+ leads", "60%+ awareness", "80+ projects", "100% of the brands", "over 30 years",
+                     "#3 SEO", "100 % Zielerreichung", "über 30 Jahre", "plus de 30 ans", "100 % des marques"]:
             with self.subTest(text):
                 found = problems(site({"/": OK.replace("x<", text + "<"), "/services": OK}))
                 self.assertTrue(any("forbidden" in p for p in found), f"{text}: {found}")

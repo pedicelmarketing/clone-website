@@ -10,7 +10,9 @@ from bs4 import BeautifulSoup
 
 FORBIDDEN = ["ß", "10.8%", "10,8%", "250%", "300+", "Vanguard Medical", "Benahavis Bistro",
              "Marianna Levchenko", "Leo Grant", "Lorem ipsum",
-             "1000+", "60%+", "80+", "100% of", "30 years"]   # unsourced old-site stats (offering.md §6)
+             # unsourced old-site stats (offering.md §6), in EN and the DE/FR forms a translation would produce
+             "1000+", "60%+", "80+", "100%", "100 %", "#3", "30 years", "30 Jahre", "30 ans",
+             "1000+ Leads", "100 % der", "100 % des"]
 PRICE = re.compile(
     r"\b(?:CHF|EUR)\b\s?\d|\d\s?\b(?:CHF|EUR)\b"   # CHF 900, 900 EUR (word-bounded: not "2 Europäer")
     r"|[€₦]\s?\d|\d\s?[€₦]"
