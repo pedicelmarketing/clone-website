@@ -21,5 +21,15 @@ class PitchPayload(unittest.TestCase):
         self.assertIsNone(pitch_payload(AUDIT, {"Company-Website": "x.es"}, "crm 200 not-json"))
 
 
+class SwissForms(unittest.TestCase):
+    def test_ch_specs_mirror_com_with_ch_label(self):
+        for com, ch in [("/api/forms/audit", "/api/forms/ch-audit"), ("/api/forms/contact", "/api/forms/ch-contact")]:
+            self.assertEqual(FORMS[ch]["crm"], FORMS[com]["crm"])
+            self.assertEqual(FORMS[ch]["fields"], FORMS[com]["fields"])
+            self.assertTrue(FORMS[ch]["label"].endswith("(CH)"))
+        self.assertTrue(FORMS["/api/forms/ch-audit"]["pitch"])
+        self.assertNotIn("(CH)", FORMS["/api/forms/audit"]["label"])
+
+
 if __name__ == "__main__":
     unittest.main()

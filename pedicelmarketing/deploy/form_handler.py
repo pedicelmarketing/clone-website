@@ -104,6 +104,10 @@ FORMS = {
     },
 }
 
+# pedicelmarketing.ch posts to its own paths so its leads are tagged in the Hub CRM.
+FORMS["/api/forms/ch-audit"] = {**FORMS["/api/forms/audit"], "label": "Website Audit request (CH)"}
+FORMS["/api/forms/ch-contact"] = {**FORMS["/api/forms/contact"], "label": "Contact form (CH)"}
+
 log = logging.getLogger("pedicel-forms")
 
 
