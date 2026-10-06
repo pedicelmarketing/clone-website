@@ -1,0 +1,34 @@
+# Third-party content from the captured source. This is a LOCAL baseline only;
+# none of it is ours to redistribute, so it stays out of the repo.
+#
+# Everything excluded here is reproducible: mirror-manifest.json records each
+# file's source URL and sha256, so a fresh `mirror_assets.py --resume` rebuilds
+# the tree byte-for-byte. What we version is the *record*, not the payload.
+#
+# See reports/asset-preservation-table.md for the per-asset reasoning.
+
+# The source's own commercial footage of named third-party clients (78.5 MB).
+mirror/**/*.mp4
+mirror-pristine/**/*.mp4
+
+# Safiro — a licensed retail typeface self-hosted by the source under its own
+# licence. That licence does not transfer to us or to a derived site.
+mirror/**/safiro-*.woff2
+mirror/**/safiro-*.woff
+mirror/**/safiro-*.ttf
+mirror/**/safiro-*.otf
+
+# Case-study stills, staff photography, the source wordmark, and the client
+# logo band (other companies' trademarks).
+mirror/wp-content/uploads/**/*.jpg
+mirror/wp-content/uploads/**/*.jpeg
+mirror/wp-content/uploads/**/*.png
+mirror/wp-content/uploads/**/*.webp
+mirror/wp-content/uploads/**/*.avif
+mirror/wp-content/uploads/**/*.svg
+
+# Playwright screenshots reproduce the source's imagery at full page height.
+# Match every viewport output directory, not just the ones that exist today —
+# a new `--out reports/viewports-<something>` must not leak the source's photos.
+reports/viewports*/**/*.png
+reports/**/*.png

@@ -1,0 +1,2646 @@
+{
+  "allowed_navigation_origins": [
+    "http://127.0.0.1:8412",
+    "https://travelproductions.film"
+  ],
+  "allowed_telemetry_urls": [],
+  "generated_at": "2026-07-30T12:46:28Z",
+  "requested_urls": [
+    "https://travelproductions.film/es/inicio/",
+    "http://127.0.0.1:8412/es/inicio/"
+  ],
+  "requested_viewports": [
+    "desktop"
+  ],
+  "results": [
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://travelproductions.film/es/inicio/",
+        "state": "ok",
+        "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "source",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://travelproductions.film"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://travelproductions.film/es/inicio/",
+        "state": "ok",
+        "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions"
+      },
+      "final_url": "https://travelproductions.film/es/inicio/",
+      "finished_at": "2026-07-30T12:46:56Z",
+      "http_errors": [],
+      "initial_response_url": "https://travelproductions.film/es/inicio/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://travelproductions.film/es/inicio/"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "source_baseline_issue",
+          "console_message": null,
+          "context": "source",
+          "data_type": "page_error",
+          "event_type": "page_error",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "paired_local_url": "http://127.0.0.1:8412/es/inicio/",
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": "mouseleaveHandler is not defined",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://travelproductions.film/es/inicio/"
+          ],
+          "url": "https://travelproductions.film/es/inicio/"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_baseline_issue",
+          "console_message": null,
+          "context": "source",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "method": "GET",
+          "paired_local_url": "http://127.0.0.1:8412/es/inicio/",
+          "request_chain_urls": [
+            "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+          ],
+          "url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_baseline_issue",
+          "console_message": null,
+          "context": "source",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "method": "GET",
+          "paired_local_url": "http://127.0.0.1:8412/es/inicio/",
+          "request_chain_urls": [
+            "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+          ],
+          "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415590133&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=2026617810.1785415591&frm=0&pscdl=noapi&rcb=7&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395334~118897920~118897930~119527019~119896803~120084214&sid=1785415590&sct=1&seg=0&dl=https%3A%2F%2Ftravelproductions.film%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=1439",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415590133&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=2026617810.1785415591&frm=0&pscdl=noapi&rcb=7&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395334~118897920~118897930~119527019~119896803~120084214&sid=1785415590&sct=1&seg=0&dl=https%3A%2F%2Ftravelproductions.film%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=1439",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415590133&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=2026617810.1785415591&frm=0&pscdl=noapi&rcb=7&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395334~118897920~118897930~119527019~119896803~120084214&sid=1785415590&sct=1&seg=0&dl=https%3A%2F%2Ftravelproductions.film%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=1439"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415590133&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=2026617810.1785415591&frm=0&pscdl=noapi&rcb=7&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395334~118897920~118897930~119527019~119896803~120084214&sid=1785415590&sct=1&seg=0&dl=https%3A%2F%2Ftravelproductions.film%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=1439"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_baseline_issue",
+          "console_message": null,
+          "context": "source",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "method": "GET",
+          "paired_local_url": "http://127.0.0.1:8412/es/inicio/",
+          "request_chain_urls": [
+            "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+          ],
+          "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        }
+      ],
+      "page_errors": [
+        "mouseleaveHandler is not defined"
+      ],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://travelproductions.film/es/inicio/",
+        "state": "ok",
+        "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415590133&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=2026617810.1785415591&frm=0&pscdl=noapi&rcb=7&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395334~118897920~118897930~119527019~119896803~120084214&sid=1785415590&sct=1&seg=0&dl=https%3A%2F%2Ftravelproductions.film%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=1439"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        }
+      ],
+      "requested_url": "https://travelproductions.film/es/inicio/",
+      "requested_url_redacted": false,
+      "required": false,
+      "required_failures": [],
+      "required_reason": "explicit_paired_source_evidence",
+      "response_url": "https://travelproductions.film/es/inicio/",
+      "screenshot": "reports/viewports-retry-inicio/travelproductions.film_es_inicio__dcad5e0a81__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 424,
+          "window_scroll_y_max": 5744
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 6644,
+          "virtualSignals": [],
+          "windowRange": 5744,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 14,
+        "steps_requested": 14,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1277,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 876,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 132,
+          "scrollHeight": 6644
+        },
+        "max_ms": 9000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 5,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T12:46:29Z",
+      "status": 200,
+      "success": true,
+      "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8412/es/inicio/",
+        "state": "ok",
+        "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions"
+      },
+      "allowed_exceptions": [
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "page_error",
+          "event_type": "page_error",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": "mouseleaveHandler is not defined",
+          "required": true,
+          "resource_type": "document",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/es/inicio/"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": null,
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": null,
+            "request_chain_urls": null,
+            "request_failure": "mouseleaveHandler is not defined",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "document",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/es/inicio/",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/es/inicio/"
+        },
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+            "request_chain_urls": [
+              "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+            ],
+            "request_failure": "net::ERR_ABORTED",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "media",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        },
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+            "request_chain_urls": [
+              "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+            ],
+            "request_failure": "net::ERR_ABORTED",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "media",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        },
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+            "request_chain_urls": [
+              "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+            ],
+            "request_failure": "net::ERR_ABORTED",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "media",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        }
+      ],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "http://127.0.0.1:8412"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8412/es/inicio/",
+        "state": "ok",
+        "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions"
+      },
+      "final_url": "http://127.0.0.1:8412/es/inicio/",
+      "finished_at": "2026-07-30T12:47:23Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "document",
+          "status": 403,
+          "url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8412/es/inicio/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8412/es/inicio/"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "page_error",
+          "event_type": "page_error",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": "mouseleaveHandler is not defined",
+          "required": true,
+          "resource_type": "document",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/es/inicio/"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": null,
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": null,
+            "request_chain_urls": null,
+            "request_failure": "mouseleaveHandler is not defined",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "document",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/es/inicio/",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/es/inicio/"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": 403,
+          "http_status_history": [
+            403
+          ],
+          "initial_request_url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "html_document",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b"
+          ],
+          "request_class": "document",
+          "request_classification_reason": "classified_static_document_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "document",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b"
+        },
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+            "request_chain_urls": [
+              "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+            ],
+            "request_failure": "net::ERR_ABORTED",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "media",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        },
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+            "request_chain_urls": [
+              "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+            ],
+            "request_failure": "net::ERR_ABORTED",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "media",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4"
+          ],
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=844",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=844",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=844"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=844"
+        },
+        {
+          "allowed_exception": true,
+          "classification": "allowed_source_baseline_exception",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+          ],
+          "source_evidence": {
+            "console_message": null,
+            "context": "source",
+            "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+            "final_url": "https://travelproductions.film/es/inicio/",
+            "http_status": null,
+            "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+            "request_chain_urls": [
+              "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+            ],
+            "request_failure": "net::ERR_ABORTED",
+            "requested_url": "https://travelproductions.film/es/inicio/",
+            "resource_type": "media",
+            "same_origin": true,
+            "service_worker_mode": "allow",
+            "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+            "viewport_name": "desktop"
+          },
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AEAAAGQC&ae=a&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=scroll&ep.googlesitekit_post_type=page&epn.percent_scrolled=90&_et=18347&tfd=24195",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AEAAAGQC&ae=a&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=scroll&ep.googlesitekit_post_type=page&epn.percent_scrolled=90&_et=18347&tfd=24195",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AEAAAGQC&ae=a&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=scroll&ep.googlesitekit_post_type=page&epn.percent_scrolled=90&_et=18347&tfd=24195"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AEAAAGQC&ae=a&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=scroll&ep.googlesitekit_post_type=page&epn.percent_scrolled=90&_et=18347&tfd=24195"
+        }
+      ],
+      "page_errors": [
+        "mouseleaveHandler is not defined"
+      ],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8412/es/inicio/",
+        "state": "ok",
+        "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/392099500?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/393359382?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/395310207?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/467432856?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/472770344?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823620?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823297?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823462?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823809?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/377823727?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/717469467?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/717467026?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/717468296?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/848871100?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=7d66e728d8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844643254?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=ad2e1a0890"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/849475797?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=e0d200e668"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/849486700?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c8c64dfbbe"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844568783?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=3d724baa99"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844568461?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=c0e12ffb1d"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/844568218?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=d2acb87329"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "document",
+          "url": "https://player.vimeo.com/video/848377174?autoplay=1&color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0&h=91800ac19b"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AAAAAGAC&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.googlesitekit_post_type=page&tfd=844"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-T5Q0TX0MC4&gtm=45je67s1v878290975za200zd878290975&_p=1785415616993&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZTNiMT&_eu=AEAAAGQC&ae=a&are=1&cid=1744841421.1785415618&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938465~115938469~118897920~118897930~119896802&sid=1785415617&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Fes%2Finicio%2F&dt=Productora%20Audiovisual%20y%20Marketing%20Tur%C3%ADstico%20%7C%20Travel%20Productions&en=scroll&ep.googlesitekit_post_type=page&epn.percent_scrolled=90&_et=18347&tfd=24195"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8412/es/inicio/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "media",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4"
+          ],
+          "url": "http://127.0.0.1:8412/wp-content/uploads/2025/01/peniscola_-_cover-720p.mp4"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8412/es/inicio/",
+      "screenshot": "reports/viewports-retry-inicio/127.0.0.1-8412_es_inicio__855d560c03__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 358,
+          "window_scroll_y_max": 5744
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 6644,
+          "virtualSignals": [],
+          "windowRange": 5744,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 14,
+        "steps_requested": 14,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1291,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 876,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 131,
+          "scrollHeight": 6644
+        },
+        "max_ms": 9000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 5,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T12:46:56Z",
+      "status": 200,
+      "success": false,
+      "title": "Productora Audiovisual y Marketing Tur\u00edstico | Travel Productions",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    }
+  ],
+  "schema_version": "1.3",
+  "service_worker_policy": "auto",
+  "settle_policy": {
+    "max_settle_ms": 9000,
+    "navigation": "domcontentloaded",
+    "networkidle_used": false
+  },
+  "source_baseline_exceptions": [
+    {
+      "local_failure": {
+        "allowed_exception": true,
+        "classification": "allowed_source_baseline_exception",
+        "console_message": null,
+        "context": "local",
+        "data_type": "page_error",
+        "event_type": "page_error",
+        "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+        "http_status": null,
+        "http_status_history": [],
+        "method": null,
+        "request_class": null,
+        "request_classification_reason": null,
+        "request_failure": "mouseleaveHandler is not defined",
+        "required": true,
+        "resource_type": "document",
+        "same_origin": true,
+        "same_origin_basis_urls": [
+          "http://127.0.0.1:8412/es/inicio/"
+        ],
+        "source_evidence": {
+          "console_message": null,
+          "context": "source",
+          "final_request_url": null,
+          "final_url": "https://travelproductions.film/es/inicio/",
+          "http_status": null,
+          "initial_request_url": null,
+          "request_chain_urls": null,
+          "request_failure": "mouseleaveHandler is not defined",
+          "requested_url": "https://travelproductions.film/es/inicio/",
+          "resource_type": "document",
+          "same_origin": true,
+          "service_worker_mode": "allow",
+          "url": "https://travelproductions.film/es/inicio/",
+          "viewport_name": "desktop"
+        },
+        "url": "http://127.0.0.1:8412/es/inicio/"
+      },
+      "local_url": "http://127.0.0.1:8412/es/inicio/",
+      "service_worker_mode": "allow",
+      "source_evidence": {
+        "console_message": null,
+        "context": "source",
+        "final_request_url": null,
+        "final_url": "https://travelproductions.film/es/inicio/",
+        "http_status": null,
+        "initial_request_url": null,
+        "request_chain_urls": null,
+        "request_failure": "mouseleaveHandler is not defined",
+        "requested_url": "https://travelproductions.film/es/inicio/",
+        "resource_type": "document",
+        "same_origin": true,
+        "service_worker_mode": "allow",
+        "url": "https://travelproductions.film/es/inicio/",
+        "viewport_name": "desktop"
+      },
+      "source_url": "https://travelproductions.film/es/inicio/",
+      "viewport_name": "desktop"
+    },
+    {
+      "local_failure": {
+        "allowed_exception": true,
+        "classification": "allowed_source_baseline_exception",
+        "console_message": null,
+        "context": "local",
+        "data_type": "media",
+        "event_type": "network",
+        "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+        "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+        "http_status": null,
+        "http_status_history": [],
+        "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+        "method": "GET",
+        "request_chain_urls": [
+          "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        ],
+        "request_class": "static",
+        "request_classification_reason": "classified_static_get_head",
+        "request_failure": "net::ERR_ABORTED",
+        "required": true,
+        "resource_type": "media",
+        "same_origin": true,
+        "same_origin_basis_urls": [
+          "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        ],
+        "source_evidence": {
+          "console_message": null,
+          "context": "source",
+          "final_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "final_url": "https://travelproductions.film/es/inicio/",
+          "http_status": null,
+          "initial_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "request_chain_urls": [
+            "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+          ],
+          "request_failure": "net::ERR_ABORTED",
+          "requested_url": "https://travelproductions.film/es/inicio/",
+          "resource_type": "media",
+          "same_origin": true,
+          "service_worker_mode": "allow",
+          "url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+          "viewport_name": "desktop"
+        },
+        "url": "http://127.0.0.1:8412/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+      },
+      "local_url": "http://127.0.0.1:8412/es/inicio/",
+      "service_worker_mode": "allow",
+      "source_evidence": {
+        "console_message": null,
+        "context": "source",
+        "final_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+        "final_url": "https://travelproductions.film/es/inicio/",
+        "http_status": null,
+        "initial_request_url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+        "request_chain_urls": [
+          "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4"
+        ],
+        "request_failure": "net::ERR_ABORTED",
+        "requested_url": "https://travelproductions.film/es/inicio/",
+        "resource_type": "media",
+        "same_origin": true,
+        "service_worker_mode": "allow",
+        "url": "https://travelproductions.film/wp-content/uploads/2026/01/Playas-de-jandia-Cover_comprimido.mp4",
+        "viewport_name": "desktop"
+      },
+      "source_url": "https://travelproductions.film/es/inicio/",
+      "viewport_name": "desktop"
+    },
+    {
+      "local_failure": {
+        "allowed_exception": true,
+        "classification": "allowed_source_baseline_exception",
+        "console_message": null,
+        "context": "local",
+        "data_type": "media",
+        "event_type": "network",
+        "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+        "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+        "http_status": null,
+        "http_status_history": [],
+        "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+        "method": "GET",
+        "request_chain_urls": [
+          "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        ],
+        "request_class": "static",
+        "request_classification_reason": "classified_static_get_head",
+        "request_failure": "net::ERR_ABORTED",
+        "required": true,
+        "resource_type": "media",
+        "same_origin": true,
+        "same_origin_basis_urls": [
+          "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        ],
+        "source_evidence": {
+          "console_message": null,
+          "context": "source",
+          "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "final_url": "https://travelproductions.film/es/inicio/",
+          "http_status": null,
+          "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "request_chain_urls": [
+            "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+          ],
+          "request_failure": "net::ERR_ABORTED",
+          "requested_url": "https://travelproductions.film/es/inicio/",
+          "resource_type": "media",
+          "same_origin": true,
+          "service_worker_mode": "allow",
+          "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+          "viewport_name": "desktop"
+        },
+        "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+      },
+      "local_url": "http://127.0.0.1:8412/es/inicio/",
+      "service_worker_mode": "allow",
+      "source_evidence": {
+        "console_message": null,
+        "context": "source",
+        "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+        "final_url": "https://travelproductions.film/es/inicio/",
+        "http_status": null,
+        "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+        "request_chain_urls": [
+          "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4"
+        ],
+        "request_failure": "net::ERR_ABORTED",
+        "requested_url": "https://travelproductions.film/es/inicio/",
+        "resource_type": "media",
+        "same_origin": true,
+        "service_worker_mode": "allow",
+        "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025_mobile-720p.mp4",
+        "viewport_name": "desktop"
+      },
+      "source_url": "https://travelproductions.film/es/inicio/",
+      "viewport_name": "desktop"
+    },
+    {
+      "local_failure": {
+        "allowed_exception": true,
+        "classification": "allowed_source_baseline_exception",
+        "console_message": null,
+        "context": "local",
+        "data_type": "media",
+        "event_type": "network",
+        "exception_reason": "exact_failure_matched_explicit_source_local_pair",
+        "final_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+        "http_status": null,
+        "http_status_history": [],
+        "initial_request_url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+        "method": "GET",
+        "request_chain_urls": [
+          "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        ],
+        "request_class": "static",
+        "request_classification_reason": "classified_static_get_head",
+        "request_failure": "net::ERR_ABORTED",
+        "required": true,
+        "resource_type": "media",
+        "same_origin": true,
+        "same_origin_basis_urls": [
+          "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        ],
+        "source_evidence": {
+          "console_message": null,
+          "context": "source",
+          "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "final_url": "https://travelproductions.film/es/inicio/",
+          "http_status": null,
+          "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "request_chain_urls": [
+            "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+          ],
+          "request_failure": "net::ERR_ABORTED",
+          "requested_url": "https://travelproductions.film/es/inicio/",
+          "resource_type": "media",
+          "same_origin": true,
+          "service_worker_mode": "allow",
+          "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+          "viewport_name": "desktop"
+        },
+        "url": "http://127.0.0.1:8412/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+      },
+      "local_url": "http://127.0.0.1:8412/es/inicio/",
+      "service_worker_mode": "allow",
+      "source_evidence": {
+        "console_message": null,
+        "context": "source",
+        "final_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+        "final_url": "https://travelproductions.film/es/inicio/",
+        "http_status": null,
+        "initial_request_url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+        "request_chain_urls": [
+          "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4"
+        ],
+        "request_failure": "net::ERR_ABORTED",
+        "requested_url": "https://travelproductions.film/es/inicio/",
+        "resource_type": "media",
+        "same_origin": true,
+        "service_worker_mode": "allow",
+        "url": "https://travelproductions.film/wp-content/uploads/2024/12/travel_productions_reel_web_2025-1080p.mp4",
+        "viewport_name": "desktop"
+      },
+      "source_url": "https://travelproductions.film/es/inicio/",
+      "viewport_name": "desktop"
+    }
+  ],
+  "source_local_pair": {
+    "local_url": "http://127.0.0.1:8412/es/inicio/",
+    "source_url": "https://travelproductions.film/es/inicio/"
+  },
+  "summary": {
+    "complete_matrix": false,
+    "expected": 1,
+    "failed": 1,
+    "passed": 0,
+    "produced": 1,
+    "source_evidence_produced": 1
+  },
+  "url_contexts": [
+    {
+      "context": "source",
+      "required": false,
+      "url": "https://travelproductions.film/es/inicio/"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8412/es/inicio/"
+    }
+  ]
+}

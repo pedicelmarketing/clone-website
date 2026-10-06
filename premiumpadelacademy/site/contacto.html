@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contacto | Premium Padel Academy</title>
+<meta name="description" content="Solicita información sobre entrenamiento de alto rendimiento en Marbella o programas internacionales para jugadores y clubes." />
+<meta property="og:title" content="Contacto | Premium Padel Academy" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Premium Padel Academy — inicio">
+      <img src="assets/logo.png" alt="Premium Padel Academy" width="800" height="231" />
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+      <span></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Principal">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="clubs.html">Clubs</a>
+      <a class="nav-link" href="camps.html">Camps</a>
+      <a class="nav-link" href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div>
+        <p class="eyebrow">Premium Padel Academy · Marbella</p>
+        <h2>Solicita Información</h2>
+        <span class="rule"></span>
+        <p class="lead">Cuéntanos tu proyecto de entrenamiento de alto rendimiento en Marbella o programas internacionales para jugadores y clubes.</p>
+
+        <div class="contact-detail">
+          <span class="contact-label">Email</span>
+          <a class="contact-email" style="color:var(--ink);border-color:var(--line)" href="mailto:Infopremiumpadelacademy@gmail.com">Infopremiumpadelacademy@gmail.com</a>
+        </div>
+
+        <div class="contact-detail">
+          <span class="contact-label">Ubicación</span>
+          <p style="color:var(--ink)">Marbella, España</p>
+        </div>
+      </div>
+
+      <div class="contact-panel" style="background:var(--soft);border:1px solid var(--line)">
+        <h3>Cuéntanos tu proyecto</h3>
+        <!-- No form backend is wired up. The submit handler opens the visitor's
+             mail client with the message pre-filled, so the form always leads
+             somewhere instead of silently failing. -->
+        <form id="contact-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span>Mensaje</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Solicitar programa</button>
+          <p class="form-note">Se abrirá tu aplicación de correo con el mensaje listo para enviar.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-logo">
+      <img src="assets/logo.png" alt="Premium Padel Academy" width="800" height="231" loading="lazy" />
+      <p>Academia de pádel de alto rendimiento con sede en Marbella.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Ubicación</h2>
+      <p>Marbella, España</p>
+    </div>
+    <div class="footer-col">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a href="mailto:Infopremiumpadelacademy@gmail.com">Infopremiumpadelacademy@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Premium Padel Academy. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
