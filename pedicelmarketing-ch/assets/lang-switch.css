@@ -4,6 +4,7 @@
 @media (max-width:991px){.lang-switch{margin:1rem 0 0;justify-content:center}}
 
 /* pedicelmarketing.ch structural additions (Task 3) */
+.w-webflow-badge{display:none!important}
 @media (min-width:992px){.w-nav-menu>.lang-switch{display:inline-flex;vertical-align:middle}}
 .section.legal .legal-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1.5rem}
 .legal-links{display:flex;gap:1.25rem}

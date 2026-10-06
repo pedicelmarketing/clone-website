@@ -2,6 +2,7 @@
 
 python3 restructure.py normalize   # bs4/lxml round-trip, one top-level block per line (render-neutral)
 python3 restructure.py apply       # routes, nav/footer, removals, page-specific edits
+python3 restructure.py fix1        # review round 1: Webflow badge, site-verification meta, Calendly CTAs
 
 Kept in the repo as the record of what was changed against the raw mirror import; it is not
 part of the build. Copy is not rewritten here beyond placeholder headings (Task 4 owns copy).
@@ -381,5 +382,37 @@ def apply() -> None:
                                 encoding="utf-8")
 
 
+# ---------------------------------------------------------------- review fix round 1
+
+CALENDLY = re.compile(r"^https?://calendly\.com/ikedinachi/meeting")
+
+
+def fix1() -> None:
+    """Review round 1: no Webflow badge, no .com site-verification meta, consultation CTAs -> /contact.
+
+    Idempotent: re-running changes nothing once applied.
+    """
+    for route, f in pages():
+        soup = load(f)
+        log = []
+        if soup.html.has_attr("data-wf-status"):         # Webflow's brand module adds the badge when set
+            del soup.html["data-wf-status"]
+            log.append("wf-status")
+        for m in soup.find_all("meta", attrs={"name": "google-site-verification"}):
+            prev = m.previous_sibling
+            if isinstance(prev, NavigableString) and not prev.strip():
+                prev.extract()
+            m.decompose()
+            log.append("site-verification")
+        for a in soup.find_all("a", href=CALENDLY):
+            a["href"] = "/contact"
+            if a.get("target") == "_blank":
+                del a["target"]
+            log.append("calendly")
+        if log:
+            save(f, soup)
+        print(f"{route}: " + (", ".join(log) or "unchanged"))
+
+
 if __name__ == "__main__":
-    {"normalize": normalize, "apply": apply}[sys.argv[1] if len(sys.argv) > 1 else "apply"]()
+    {"normalize": normalize, "apply": apply, "fix1": fix1}[sys.argv[1] if len(sys.argv) > 1 else "apply"]()
