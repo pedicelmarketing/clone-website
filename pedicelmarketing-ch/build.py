@@ -56,7 +56,7 @@ def main(argv: list[str] | None = None) -> int:
     if (DIST / "404" / "index.html").exists():
         shutil.copy(DIST / "404" / "index.html", DIST / "404.html")
     if ASSETS.is_dir():
-        shutil.copytree(ASSETS, DIST / "assets", dirs_exist_ok=True)
+        shutil.copytree(ASSETS, DIST / "assets", dirs_exist_ok=True, ignore=shutil.ignore_patterns("*.md"))
     if (MIRROR / "_external").exists():
         (DIST / "_external").symlink_to(MIRROR / "_external")
     else:
