@@ -4,6 +4,7 @@ python3 build.py            # all languages; exit 1 listing untranslated strings
 """
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import shutil
@@ -32,11 +33,15 @@ def tmap(lang: str) -> dict[str, str]:
     return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--lang", choices=[*LANGS, "all"], default="all", help="language to build (default all)")
+    args = ap.parse_args(argv)
+    build_langs = LANGS if args.lang == "all" else (args.lang,)
     shutil.rmtree(DIST, ignore_errors=True)
     DIST.mkdir()
     failed = 0
-    for lang in LANGS:
+    for lang in build_langs:
         m = tmap(lang)
         for route, src in routes():
             try:
@@ -61,7 +66,7 @@ def main() -> int:
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {HOST}/sitemap.xml\n")
-    print(f"build: {len(routes())} pages x {len(LANGS)} languages" + (f", {failed} untranslated" if failed else ""))
+    print(f"build: {len(routes())} pages x {len(build_langs)} languages" + (f", {failed} untranslated" if failed else ""))
     return 1 if failed else 0
 
 

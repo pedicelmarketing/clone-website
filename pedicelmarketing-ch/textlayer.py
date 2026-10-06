@@ -25,8 +25,12 @@ class MissingTranslation(Exception):
         self.missing = missing
 
 
+_ZERO_WIDTH = dict.fromkeys(map(ord, "​‌‍﻿"))   # U+200B/C/D, U+FEFF
+
+
 def _norm(s: str) -> str:
-    return " ".join(s.split())
+    """Key form of a string: invisible zero-width chars dropped, whitespace collapsed."""
+    return " ".join(s.translate(_ZERO_WIDTH).split())
 
 
 def _real(s: str) -> bool:

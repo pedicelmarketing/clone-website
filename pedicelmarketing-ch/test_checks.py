@@ -22,18 +22,40 @@ class Checks(unittest.TestCase):
         self.assertEqual(problems(site({"/": OK, "/services": OK})), [])
 
     def test_each_rule_fires(self):
-        bad = {
-            "eszett": OK.replace("x<", "Strasse Straße<"),
-            "price": OK.replace("x<", "ab CHF 2'900<"),
-            "fake number": OK.replace("x<", "10.8% engagement<"),
-            "leftover name": OK.replace("x<", "Vanguard Medical Solutions<"),
-            "blog link": OK.replace('href="/services"', 'href="/blog"'),
-            "broken link": OK.replace('href="/services"', 'href="/nope"'),
-            "no canonical": OK.replace('rel="canonical"', 'rel="x"'),
+        bad = {   # name -> (html, keyword the problem line must contain)
+            "eszett": (OK.replace("x<", "Strasse Straße<"), "forbidden"),
+            "price": (OK.replace("x<", "ab CHF 2'900<"), "price"),
+            "fake number": (OK.replace("x<", "10.8% engagement<"), "forbidden"),
+            "leftover name": (OK.replace("x<", "Vanguard Medical Solutions<"), "forbidden"),
+            "blog link": (OK.replace('href="/services"', 'href="/blog"'), "blog link"),
+            "broken link": (OK.replace('href="/services"', 'href="/nope"'), "broken link"),
+            "no canonical": (OK.replace('rel="canonical"', 'rel="x"'), "no canonical"),
+            "no hreflang": (OK.replace('hreflang="de"', 'data-x="de"'), "no hreflang"),
         }
-        for name, html in bad.items():
+        for name, (html, keyword) in bad.items():
+            with self.subTest(name):
+                found = problems(site({"/": html, "/services": OK}))
+                self.assertTrue(found, name)
+                self.assertTrue(any(keyword in p for p in found), f"{name}: {found}")
+
+    def test_attribute_values_are_scanned(self):
+        for name, html in {
+            "eszett in meta": OK.replace("</head>", '<meta name="description" content="Grüsse ß"></head>'),
+            "name in meta": OK.replace("</head>", '<meta property="og:title" content="Vanguard Medical"></head>'),
+            "name in alt": OK.replace("x<", '<img src="/a.webp" alt="Vanguard Medical"><'),
+            "number in alt": OK.replace("x<", '<img src="/a.webp" alt="10.8% more"><'),
+            "price in placeholder": OK.replace("x<", '<input placeholder="CHF 900"><'),
+        }.items():
             with self.subTest(name):
                 self.assertTrue(problems(site({"/": html, "/services": OK})), name)
+
+    def test_price_rule_word_boundaries_and_swiss_forms(self):
+        for text, flagged in [("2 Europäer", False), ("Der Eurostar", False), ("Fr 5 Gruppen", False),
+                              ("ab CHF 2'900", True), ("Fr. 900", True), ("2'900.–", True),
+                              ("900 EUR", True), ("€ 5", True), ("5 €", True)]:
+            with self.subTest(text):
+                found = [p for p in problems(site({"/": OK.replace("x<", text + "<"), "/services": OK})) if "price" in p]
+                self.assertEqual(bool(found), flagged, text)
 
     def test_script_and_style_text_is_not_visible_text(self):
         html = OK.replace("<body>", "<body><style>.a{width:250%}</style><script>var x='Vanguard Medical'</script>")

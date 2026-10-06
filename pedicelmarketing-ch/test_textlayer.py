@@ -33,6 +33,14 @@ class Strings(unittest.TestCase):
         self.assertFalse(any(not x.strip("‍  \n\t") for x in s))
 
 
+    def test_zero_width_chars_stripped_from_keys(self):
+        html = "<html><head><title>T</title></head><body><p>Hello\u200d</p><p>\ufeffWor\u200bld\u200c</p></body></html>"
+        self.assertEqual(strings_in(html), ["T", "Hello", "World"])
+        out = localize(html, "de", "/", {"T": "T", "Hello": "Hallo", "World": "Welt"})
+        self.assertIn("Hallo", out)
+        self.assertIn("Welt", out)
+
+
 class Localize(unittest.TestCase):
     def test_translates_and_sets_lang(self):
         out = localize(PAGE, "de", "/", DE)

@@ -10,7 +10,13 @@ from bs4 import BeautifulSoup
 
 FORBIDDEN = ["ß", "10.8%", "10,8%", "250%", "300+", "Vanguard Medical", "Benahavis Bistro",
              "Marianna Levchenko", "Leo Grant", "Lorem ipsum"]
-PRICE = re.compile(r"(CHF|EUR|€|₦)\s?\d|\d\s?(CHF|EUR|€)", re.I)
+PRICE = re.compile(
+    r"\b(?:CHF|EUR)\b\s?\d|\d\s?\b(?:CHF|EUR)\b"   # CHF 900, 900 EUR (word-bounded: not "2 Europäer")
+    r"|[€₦]\s?\d|\d\s?[€₦]"
+    r"|\bFr\.\s?\d"                                   # Swiss: Fr. 900
+    r"|\d['’.,]?\d*\.[–-]",                           # Swiss: 2'900.–
+    re.I)
+ATTRS = ("alt", "title", "placeholder", "aria-label", "value", "data-wait")
 SKIP_DIRS = {"_external"}      # symlink to the 122 MB Webflow mirror: not ours to check, slow to walk
 
 
@@ -33,9 +39,12 @@ def problems(dist: Path) -> list[str]:
         rel = f.relative_to(dist)
         html = f.read_text(encoding="utf-8")
         soup = BeautifulSoup(html, "lxml")
-        for tag in soup.find_all(["script", "style"]):   # visible text only: Webflow CSS/JS contain "250%" etc.
+        for tag in soup.find_all(["script", "style"]):   # visible: Webflow CSS/JS contain "250%" etc.
             tag.decompose()
         text = soup.get_text(" ")
+        attrs = [str(el[a]) for el in soup.find_all(True) for a in ATTRS if el.get(a)]
+        attrs += [str(m["content"]) for m in soup.find_all("meta") if m.get("content")]
+        text = " ".join([text, *attrs])      # visible text + attribute values (alt, meta description, ...)
         for bad in FORBIDDEN:
             if bad in text:
                 out.append(f"{rel}: forbidden '{bad}'")
