@@ -1,0 +1,112 @@
+{
+ "desktop_menu_opened": true,
+ "nav_click_reached_target": true,
+ "nav_url": "http://127.0.0.1:8100/en/residences",
+ "nav_mode": "client_side_soft_nav",
+ "nav_dest_title": "Residences | Belgrade Arbor",
+ "nav_dest_heading_count": 2,
+ "home_console_errors_non_telemetry": [
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)"
+ ],
+ "home_rsc_prefetch_errors": 0,
+ "videos_total": 7,
+ "videos_with_source": 3,
+ "videos_advancing": 3,
+ "videos_decoded_dimensions": 3,
+ "videos_detail": [
+  {
+   "src": "hero.mp4",
+   "readyState": 4,
+   "currentTime": 8.47,
+   "paused": false,
+   "w": 2560,
+   "h": 1440
+  },
+  {
+   "src": "",
+   "readyState": 0,
+   "currentTime": 0,
+   "paused": true,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "interior.mp4",
+   "readyState": 4,
+   "currentTime": 1.32,
+   "paused": false,
+   "w": 1920,
+   "h": 1080
+  },
+  {
+   "src": "",
+   "readyState": 0,
+   "currentTime": 0,
+   "paused": true,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "image1.mp4",
+   "readyState": 4,
+   "currentTime": 0.04,
+   "paused": false,
+   "w": 834,
+   "h": 1112
+  },
+  {
+   "src": "",
+   "readyState": 0,
+   "currentTime": 0,
+   "paused": true,
+   "w": 0,
+   "h": 0
+  },
+  {
+   "src": "",
+   "readyState": 0,
+   "currentTime": 0,
+   "paused": true,
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "webgl": {
+  "canvas": true,
+  "w": 2160,
+  "h": 1350,
+  "context": true,
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "drawingBufferWidth": 2160
+ },
+ "webgl_canvas_pixels": {
+  "distinct_colours": 1
+ },
+ "3d_local_404s": [
+  "/glb/test2/ljudi.glb"
+ ],
+ "3d_external_failed": [
+  "https://ad.doubleclick.net/ccm/s/collect?auid=816229199.1786703840&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+  "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786703838434&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=865217998&_eu=AAAAAGAC&are=1&cid=1651717786.1786703844&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786703842&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=5416",
+  "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786703838434&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=865217998&_eu=AEAAAGQC&ae=a&are=1&cid=1651717786.1786703844&frm=0&pscdl=noapi&rcb=0&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786703842&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=5&tfd=30038",
+  "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=0&auid=816229199.1786703840&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1437528388.1786703840&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118395335~118897920~118897930~119367802~119367810~119527020~120125304~120385422&tft=1786703842518&tfd=4184&tids=AW-17823718150&fmt=8",
+  "https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=1&ae=g&auid=816229199.1786703840&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1437528388.1786703840&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119527019~120385422&tft=1786703840301&tfd=1967&fmt=8",
+  "https://www.google.com/rmkt/collect/17823718150/?random=1786703842490&cv=11&fst=1786703842490&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118395335~118897920~118897930~119367802~119367810~119527020~120125304~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=15&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=816229199.1786703840&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+ ],
+ "3d_console_errors_non_telemetry": [
+  "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "Failed to load resource: the server responded with a status of 404 (File not found)"
+ ],
+ "mobile_menu_button_clicked": true,
+ "mobile_nav_links_before": 9,
+ "mobile_nav_links_after": 9
+}

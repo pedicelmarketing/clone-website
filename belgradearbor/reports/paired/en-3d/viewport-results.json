@@ -1,0 +1,2896 @@
+{
+  "allowed_navigation_origins": [
+    "http://127.0.0.1:8100",
+    "https://belgradearbor.rs"
+  ],
+  "allowed_telemetry_urls": [],
+  "generated_at": "2026-08-14T11:41:57Z",
+  "requested_urls": [
+    "https://belgradearbor.rs/en/3d",
+    "http://127.0.0.1:8100/en/3d"
+  ],
+  "requested_viewports": [
+    "desktop",
+    "tablet",
+    "mobile"
+  ],
+  "results": [
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": false,
+      "capture_mode": "viewport_only",
+      "console_errors": [],
+      "context": "source",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://belgradearbor.rs"
+      ],
+      "error": "Page.screenshot: Timeout 90000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+      "failure_reason": "browser_or_capture_failure",
+      "final_url": "https://belgradearbor.rs/en/3d",
+      "finished_at": "2026-08-14T11:52:11Z",
+      "http_errors": [],
+      "initial_response_url": "https://belgradearbor.rs/en/3d",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://belgradearbor.rs/en/3d"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385422&tft=1786707720535&tfd=2507&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385422&tft=1786707720535&tfd=2507&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385422&tft=1786707720535&tfd=2507&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385422&tft=1786707720535&tfd=2507&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1904443983.1786707721&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1904443983.1786707721&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1904443983.1786707721&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1904443983.1786707721&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786707735770&tfd=17742&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786707735770&tfd=17742&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786707735770&tfd=17742&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786707735770&tfd=17742&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786707735753&cv=11&fst=1786707735753&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=4&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1904443983.1786707721&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786707735753&cv=11&fst=1786707735753&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=4&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1904443983.1786707721&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786707735753&cv=11&fst=1786707735753&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=4&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1904443983.1786707721&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786707735753&cv=11&fst=1786707735753&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=4&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1904443983.1786707721&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786707718496&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AAAAAGAC&are=1&cid=306734940.1786707750&ec_mode=a&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=32237",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786707718496&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AAAAAGAC&are=1&cid=306734940.1786707750&ec_mode=a&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=32237",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786707718496&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AAAAAGAC&are=1&cid=306734940.1786707750&ec_mode=a&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=32237"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786707718496&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AAAAAGAC&are=1&cid=306734940.1786707750&ec_mode=a&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=32237"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786707718496&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AEAAAGQC&ae=a&are=1&cid=306734940.1786707750&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=4&tfd=46223",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786707718496&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AEAAAGQC&ae=a&are=1&cid=306734940.1786707750&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=4&tfd=46223",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786707718496&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AEAAAGQC&ae=a&are=1&cid=306734940.1786707750&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=4&tfd=46223"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786707718496&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AEAAAGQC&ae=a&are=1&cid=306734940.1786707750&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=4&tfd=46223"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385422&tft=1786707720535&tfd=2507&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1904443983.1786707721&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=1904443983.1786707721&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=901614275.1786707721&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786707735770&tfd=17742&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786707735753&cv=11&fst=1786707735753&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=4&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1904443983.1786707721&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786707718496&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AAAAAGAC&are=1&cid=306734940.1786707750&ec_mode=a&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=32237"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786707718496&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=419931311&_eu=AEAAAGQC&ae=a&are=1&cid=306734940.1786707750&frm=0&pscdl=noapi&rcb=12&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786707740&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=4&tfd=46223"
+        }
+      ],
+      "requested_url": "https://belgradearbor.rs/en/3d",
+      "requested_url_redacted": false,
+      "required": false,
+      "required_failures": [],
+      "required_reason": "explicit_paired_source_evidence",
+      "response_url": "https://belgradearbor.rs/en/3d",
+      "screenshot": null,
+      "scroll": {
+        "mechanism": "wheel_virtual_scroll",
+        "observations": {},
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 900,
+          "virtualSignals": [
+            "virtual_scroll_marker"
+          ],
+          "windowRange": 0,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": [
+          "Wheel events were exercised, but virtual-scroll coverage and return to the initial state cannot be proven from document position alone."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 17091,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 474,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "interactive",
+          "resourceCount": 61,
+          "scrollHeight": 900
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 8,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T11:41:57Z",
+      "status": 200,
+      "success": false,
+      "title": "3D Experience | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "viewport_only",
+      "console_errors": [],
+      "context": "source",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://belgradearbor.rs"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "final_url": "https://belgradearbor.rs/en/3d",
+      "finished_at": "2026-08-14T11:55:46Z",
+      "http_errors": [],
+      "initial_response_url": "https://belgradearbor.rs/en/3d",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://belgradearbor.rs/en/3d"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&ae=g&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1h1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119527020~120125304~120385422&tft=1786708332217&tfd=899&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&ae=g&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1h1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119527020~120125304~120385422&tft=1786708332217&tfd=899&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&ae=g&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1h1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119527020~120125304~120385422&tft=1786708332217&tfd=899&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&ae=g&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1h1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119527020~120125304~120385422&tft=1786708332217&tfd=899&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=846171714.1786708332&gtm=45He68c1h1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=846171714.1786708332&gtm=45He68c1h1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=846171714.1786708332&gtm=45He68c1h1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=846171714.1786708332&gtm=45He68c1h1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708345574&cv=11&fst=1786708345574&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=12&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=846171714.1786708332&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708345574&cv=11&fst=1786708345574&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=12&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=846171714.1786708332&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786708345574&cv=11&fst=1786708345574&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=12&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=846171714.1786708332&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708345574&cv=11&fst=1786708345574&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=12&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=846171714.1786708332&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=0&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786708345597&tfd=14280&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=0&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786708345597&tfd=14280&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=0&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786708345597&tfd=14280&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=0&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786708345597&tfd=14280&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "telemetry",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.377&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20blocked%20-%20pixel_id%3A%20881461921059348&ue=0&rs=stable&rqm=FGET",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.377&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20blocked%20-%20pixel_id%3A%20881461921059348&ue=0&rs=stable&rqm=FGET",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.377&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20blocked%20-%20pixel_id%3A%20881461921059348&ue=0&rs=stable&rqm=FGET"
+          ],
+          "request_class": "telemetry",
+          "request_classification_reason": "telemetry_is_not_part_of_local_fidelity",
+          "request_failure": "net::ERR_BLOCKED_BY_ORB",
+          "required": false,
+          "resource_type": "image",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.377&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20blocked%20-%20pixel_id%3A%20881461921059348&ue=0&rs=stable&rqm=FGET"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708331664&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AAAAAGAC&are=1&cid=735767721.1786708346&ec_mode=a&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15052",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708331664&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AAAAAGAC&are=1&cid=735767721.1786708346&ec_mode=a&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15052",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708331664&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AAAAAGAC&are=1&cid=735767721.1786708346&ec_mode=a&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15052"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708331664&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AAAAAGAC&are=1&cid=735767721.1786708346&ec_mode=a&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15052"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232za20gzb9240485851zd9240485851&_p=1786708331664&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AEAAAGQC&ae=a&are=1&cid=735767721.1786708346&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=38244",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232za20gzb9240485851zd9240485851&_p=1786708331664&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AEAAAGQC&ae=a&are=1&cid=735767721.1786708346&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=38244",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232za20gzb9240485851zd9240485851&_p=1786708331664&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AEAAAGQC&ae=a&are=1&cid=735767721.1786708346&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=38244"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232za20gzb9240485851zd9240485851&_p=1786708331664&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AEAAAGQC&ae=a&are=1&cid=735767721.1786708346&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=38244"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=6&frm=0&apvc=1&ae=g&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1h1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119527020~120125304~120385422&tft=1786708332217&tfd=899&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=846171714.1786708332&gtm=45He68c1h1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708345574&cv=11&fst=1786708345574&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=12&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=846171714.1786708332&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&auid=846171714.1786708332&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1477304609.1786708332&navt=n&npa=0&gtm=45be68c1h1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118012008~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786708345597&tfd=14280&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_BLOCKED_BY_ORB",
+          "method": "GET",
+          "resource_type": "image",
+          "url": "https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.377&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20blocked%20-%20pixel_id%3A%20881461921059348&ue=0&rs=stable&rqm=FGET"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708331664&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AAAAAGAC&are=1&cid=735767721.1786708346&ec_mode=a&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15052"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1h1v9240488232za20gzb9240485851zd9240485851&_p=1786708331664&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=738901359&_eu=AEAAAGQC&ae=a&are=1&cid=735767721.1786708346&frm=0&pscdl=noapi&rcb=6&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786708345&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=38244"
+        }
+      ],
+      "requested_url": "https://belgradearbor.rs/en/3d",
+      "requested_url_redacted": false,
+      "required": false,
+      "required_failures": [],
+      "required_reason": "explicit_paired_source_evidence",
+      "response_url": "https://belgradearbor.rs/en/3d",
+      "screenshot": "reports/paired/en-3d/belgradearbor.rs_en_3d__60e885c583__tablet__sw-allow__viewport-only.png",
+      "scroll": {
+        "mechanism": "wheel_virtual_scroll",
+        "observations": {},
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1024,
+          "virtualSignals": [
+            "virtual_scroll_marker"
+          ],
+          "windowRange": 0,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": [
+          "Wheel events were exercised, but virtual-scroll coverage and return to the initial state cannot be proven from document position alone."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 13759,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 372,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "interactive",
+          "resourceCount": 53,
+          "scrollHeight": 1024
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 4,
+        "stable": false,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": true
+      },
+      "started_at": "2026-08-14T11:52:11Z",
+      "status": 200,
+      "success": true,
+      "title": "3D Experience | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "viewport_only",
+      "console_errors": [],
+      "context": "source",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://belgradearbor.rs"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "final_url": "https://belgradearbor.rs/en/3d",
+      "finished_at": "2026-08-14T12:01:11Z",
+      "http_errors": [],
+      "initial_response_url": "https://belgradearbor.rs/en/3d",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://belgradearbor.rs/en/3d"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&ae=g&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~117776795~118012009~118897920~118897930~119527019~120385423&tft=1786708548207&tfd=1814&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&ae=g&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~117776795~118012009~118897920~118897930~119527019~120385423&tft=1786708548207&tfd=1814&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&ae=g&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~117776795~118012009~118897920~118897930~119527019~120385423&tft=1786708548207&tfd=1814&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&ae=g&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~117776795~118012009~118897920~118897930~119527019~120385423&tft=1786708548207&tfd=1814&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1305974198.1786708548&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1305974198.1786708548&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1305974198.1786708548&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1305974198.1786708548&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786708572028&tfd=25636&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786708572028&tfd=25636&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786708572028&tfd=25636&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786708572028&tfd=25636&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708572011&cv=11&fst=1786708572011&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=14&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1305974198.1786708548&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708572011&cv=11&fst=1786708572011&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=14&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1305974198.1786708548&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786708572011&cv=11&fst=1786708572011&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=14&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1305974198.1786708548&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708572011&cv=11&fst=1786708572011&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=14&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1305974198.1786708548&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708546746&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AAAAAGAC&are=1&cid=1788695097.1786708590&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=44044",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708546746&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AAAAAGAC&are=1&cid=1788695097.1786708590&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=44044",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708546746&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AAAAAGAC&are=1&cid=1788695097.1786708590&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=44044"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708546746&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AAAAAGAC&are=1&cid=1788695097.1786708590&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=44044"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708546746&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AEAAAGQC&ae=a&are=1&cid=1788695097.1786708590&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=54428",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708546746&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AEAAAGQC&ae=a&are=1&cid=1788695097.1786708590&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=54428",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708546746&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AEAAAGQC&ae=a&are=1&cid=1788695097.1786708590&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=54428"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708546746&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AEAAAGQC&ae=a&are=1&cid=1788695097.1786708590&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=54428"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=0&frm=0&apvc=1&ae=g&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938468~117776795~118012009~118897920~118897930~119527019~120385423&tft=1786708548207&tfd=1814&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1305974198.1786708548&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=1305974198.1786708548&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=699207867.1786708548&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786708572028&tfd=25636&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708572011&cv=11&fst=1786708572011&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776795~118897920~118897930~119367802~119367810~119527019~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&rcb=14&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1305974198.1786708548&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708546746&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AAAAAGAC&are=1&cid=1788695097.1786708590&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=44044"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708546746&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1189725630&_eu=AEAAAGQC&ae=a&are=1&cid=1788695097.1786708590&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786708579&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=54428"
+        }
+      ],
+      "requested_url": "https://belgradearbor.rs/en/3d",
+      "requested_url_redacted": false,
+      "required": false,
+      "required_failures": [],
+      "required_reason": "explicit_paired_source_evidence",
+      "response_url": "https://belgradearbor.rs/en/3d",
+      "screenshot": "reports/paired/en-3d/belgradearbor.rs_en_3d__60e885c583__mobile__sw-allow__viewport-only.png",
+      "scroll": {
+        "mechanism": "wheel_virtual_scroll",
+        "observations": {},
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 844,
+          "virtualSignals": [
+            "virtual_scroll_marker"
+          ],
+          "windowRange": 0,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": [
+          "Wheel events were exercised, but virtual-scroll coverage and return to the initial state cannot be proven from document position alone."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 17234,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 372,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "interactive",
+          "resourceCount": 58,
+          "scrollHeight": 844
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 7,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T11:55:46Z",
+      "status": 200,
+      "success": true,
+      "title": "3D Experience | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": false,
+      "capture_mode": "viewport_only",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8100"
+      ],
+      "error": "Page.screenshot: Timeout 90000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+      "failure_reason": "browser_or_capture_failure",
+      "final_url": "http://127.0.0.1:8100/en/3d",
+      "finished_at": "2026-08-14T12:07:43Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8100/en/3d",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8100/en/3d"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "static_asset",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/glb/test2/ljudi.glb",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8100/glb/test2/ljudi.glb",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/glb/test2/ljudi.glb"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "xhr_fetch_has_classified_static_identity",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/glb/test2/ljudi.glb"
+          ],
+          "url": "http://127.0.0.1:8100/glb/test2/ljudi.glb"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1261054676.1786708873&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1261054676.1786708873&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1261054676.1786708873&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1261054676.1786708873&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&ae=g&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119527019~120385423&tft=1786708873226&tfd=1303&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&ae=g&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119527019~120385423&tft=1786708873226&tfd=1303&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&ae=g&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119527019~120385423&tft=1786708873226&tfd=1303&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&ae=g&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119527019~120385423&tft=1786708873226&tfd=1303&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786708877666&tfd=5744&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786708877666&tfd=5744&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786708877666&tfd=5744&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786708877666&tfd=5744&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708877650&cv=11&fst=1786708877650&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1261054676.1786708873&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708877650&cv=11&fst=1786708877650&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1261054676.1786708873&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786708877650&cv=11&fst=1786708877650&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1261054676.1786708873&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708877650&cv=11&fst=1786708877650&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1261054676.1786708873&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708872010&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AAAAAGAC&are=1&cid=374246093.1786708878&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6328",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708872010&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AAAAAGAC&are=1&cid=374246093.1786708878&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6328",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708872010&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AAAAAGAC&are=1&cid=374246093.1786708878&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6328"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708872010&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AAAAAGAC&are=1&cid=374246093.1786708878&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6328"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708872010&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AEAAAGQC&ae=a&are=1&cid=374246093.1786708878&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=42847",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708872010&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AEAAAGQC&ae=a&are=1&cid=374246093.1786708878&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=42847",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708872010&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AEAAAGQC&ae=a&are=1&cid=374246093.1786708878&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=42847"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708872010&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AEAAAGQC&ae=a&are=1&cid=374246093.1786708878&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=42847"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/glb/test2/ljudi.glb"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1261054676.1786708873&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&ae=g&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119527019~120385423&tft=1786708873226&tfd=1303&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=1261054676.1786708873&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=735177156.1786708873&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786708877666&tfd=5744&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786708877650&cv=11&fst=1786708877650&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938466~115938469~117776795~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1261054676.1786708873&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786708872010&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AAAAAGAC&are=1&cid=374246093.1786708878&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=6328"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786708872010&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=553546412&_eu=AEAAAGQC&ae=a&are=1&cid=374246093.1786708878&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786708877&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=42847"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8100/en/3d",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "static_asset",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/glb/test2/ljudi.glb",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8100/glb/test2/ljudi.glb",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/glb/test2/ljudi.glb"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "xhr_fetch_has_classified_static_identity",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/glb/test2/ljudi.glb"
+          ],
+          "url": "http://127.0.0.1:8100/glb/test2/ljudi.glb"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8100/en/3d",
+      "screenshot": null,
+      "scroll": {
+        "mechanism": "wheel_virtual_scroll",
+        "observations": {},
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 900,
+          "virtualSignals": [
+            "virtual_scroll_marker"
+          ],
+          "windowRange": 0,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": [
+          "Wheel events were exercised, but virtual-scroll coverage and return to the initial state cannot be proven from document position alone."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 5519,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 474,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "interactive",
+          "resourceCount": 53,
+          "scrollHeight": 900
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 5,
+        "stable": false,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": true
+      },
+      "started_at": "2026-08-14T12:01:11Z",
+      "status": 200,
+      "success": false,
+      "title": "3D Experience | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "viewport_only",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8100"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "final_url": "http://127.0.0.1:8100/en/3d",
+      "finished_at": "2026-08-14T12:12:05Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8100/en/3d",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8100/en/3d"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1716631977.1786709265&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1716631977.1786709265&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1716631977.1786709265&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1716631977.1786709265&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119527020~120385422&tft=1786709265200&tfd=1531&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119527020~120385422&tft=1786709265200&tfd=1531&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119527020~120385422&tft=1786709265200&tfd=1531&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119527020~120385422&tft=1786709265200&tfd=1531&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709278247&tfd=14577&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709278247&tfd=14577&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709278247&tfd=14577&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709278247&tfd=14577&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709278229&cv=11&fst=1786709278229&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=1&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1716631977.1786709265&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709278229&cv=11&fst=1786709278229&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=1&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1716631977.1786709265&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709278229&cv=11&fst=1786709278229&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=1&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1716631977.1786709265&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709278229&cv=11&fst=1786709278229&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=1&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1716631977.1786709265&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709263761&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AAAAAGAC&are=1&cid=2126097283.1786709279&ec_mode=a&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15214",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709263761&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AAAAAGAC&are=1&cid=2126097283.1786709279&ec_mode=a&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15214",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709263761&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AAAAAGAC&are=1&cid=2126097283.1786709279&ec_mode=a&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15214"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709263761&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AAAAAGAC&are=1&cid=2126097283.1786709279&ec_mode=a&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15214"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709263761&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AEAAAGQC&ae=a&are=1&cid=2126097283.1786709279&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=36960",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709263761&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AEAAAGQC&ae=a&are=1&cid=2126097283.1786709279&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=36960",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709263761&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AEAAAGQC&ae=a&are=1&cid=2126097283.1786709279&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=36960"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709263761&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AEAAAGQC&ae=a&are=1&cid=2126097283.1786709279&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=36960"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1716631977.1786709265&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119527020~120385422&tft=1786709265200&tfd=1531&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=1716631977.1786709265&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=1198140808.1786709265&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709278247&tfd=14577&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709278229&cv=11&fst=1786709278229&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=1&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1716631977.1786709265&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709263761&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AAAAAGAC&are=1&cid=2126097283.1786709279&ec_mode=a&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=15214"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709263761&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1641796733&_eu=AEAAAGQC&ae=a&are=1&cid=2126097283.1786709279&frm=0&pscdl=noapi&rcb=13&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786709278&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=36960"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8100/en/3d",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8100/en/3d",
+      "screenshot": "reports/paired/en-3d/127.0.0.1-8100_en_3d__9e0dde9398__tablet__sw-allow__viewport-only.png",
+      "scroll": {
+        "mechanism": "wheel_virtual_scroll",
+        "observations": {},
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1024,
+          "virtualSignals": [
+            "virtual_scroll_marker"
+          ],
+          "windowRange": 0,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": [
+          "Wheel events were exercised, but virtual-scroll coverage and return to the initial state cannot be proven from document position alone."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 14336,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 372,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "interactive",
+          "resourceCount": 53,
+          "scrollHeight": 1024
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 5,
+        "stable": false,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": true
+      },
+      "started_at": "2026-08-14T12:07:43Z",
+      "status": 200,
+      "success": false,
+      "title": "3D Experience | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "viewport_only",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8100"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "final_url": "http://127.0.0.1:8100/en/3d",
+      "finished_at": "2026-08-14T12:16:04Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8100/en/3d",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8100/en/3d"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "static_asset",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/glb/test2/zgrada.glb",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8100/glb/test2/zgrada.glb",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/glb/test2/zgrada.glb"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "xhr_fetch_has_classified_static_identity",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/glb/test2/zgrada.glb"
+          ],
+          "url": "http://127.0.0.1:8100/glb/test2/zgrada.glb"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=704704370.1786709526&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=704704370.1786709526&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=704704370.1786709526&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=704704370.1786709526&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118012008~118897920~118897930~119527020~120385423&tft=1786709526481&tfd=1252&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118012008~118897920~118897930~119527020~120385423&tft=1786709526481&tfd=1252&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118012008~118897920~118897930~119527020~120385423&tft=1786709526481&tfd=1252&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118012008~118897920~118897930~119527020~120385423&tft=1786709526481&tfd=1252&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&tft=1786709533128&tfd=7899&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&tft=1786709533128&tfd=7899&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&tft=1786709533128&tfd=7899&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&tft=1786709533128&tfd=7899&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709533103&cv=11&fst=1786709533103&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=704704370.1786709526&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709533103&cv=11&fst=1786709533103&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=704704370.1786709526&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709533103&cv=11&fst=1786709533103&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=704704370.1786709526&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709533103&cv=11&fst=1786709533103&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=704704370.1786709526&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "static_asset",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/glb/test2/grad-fin.glb",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8100/glb/test2/grad-fin.glb",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/glb/test2/grad-fin.glb"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "xhr_fetch_has_classified_static_identity",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/glb/test2/grad-fin.glb"
+          ],
+          "url": "http://127.0.0.1:8100/glb/test2/grad-fin.glb"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709525326&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AAAAAGAC&are=1&cid=1951692476.1786709542&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=17166",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709525326&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AAAAAGAC&are=1&cid=1951692476.1786709542&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=17166",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709525326&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AAAAAGAC&are=1&cid=1951692476.1786709542&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=17166"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709525326&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AAAAAGAC&are=1&cid=1951692476.1786709542&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=17166"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709525326&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AEAAAGQC&ae=a&are=1&cid=1951692476.1786709542&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=47399",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709525326&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AEAAAGQC&ae=a&are=1&cid=1951692476.1786709542&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=47399",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709525326&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AEAAAGQC&ae=a&are=1&cid=1951692476.1786709542&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=47399"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709525326&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AEAAAGQC&ae=a&are=1&cid=1951692476.1786709542&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=47399"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/3d",
+        "state": "ok",
+        "title": "3D Experience | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/glb/test2/zgrada.glb"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=704704370.1786709526&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118012008~118897920~118897930~119527020~120385423&tft=1786709526481&tfd=1252&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=704704370.1786709526&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&scrsrc=www.googletagmanager.com&rnd=887258321.1786709526&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&tft=1786709533128&tfd=7899&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709533103&cv=11&fst=1786709533103&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~119527020~120125305~120385422&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2F3d&rcb=19&frm=0&tiba=3D%20Experience%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=704704370.1786709526&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/glb/test2/grad-fin.glb"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709525326&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AAAAAGAC&are=1&cid=1951692476.1786709542&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=17166"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232za20gzb9240485851zd9240485851&_p=1786709525326&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1499423351&_eu=AEAAAGQC&ae=a&are=1&cid=1951692476.1786709542&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709533&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2F3d&dt=3D%20Experience%20%7C%20Belgrade%20Arbor&en=scroll&epn.percent_scrolled=90&_et=3&tfd=47399"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8100/en/3d",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "static_asset",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/glb/test2/zgrada.glb",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8100/glb/test2/zgrada.glb",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/glb/test2/zgrada.glb"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "xhr_fetch_has_classified_static_identity",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/glb/test2/zgrada.glb"
+          ],
+          "url": "http://127.0.0.1:8100/glb/test2/zgrada.glb"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=-S3bLINrN1aDAmnH"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_request_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "static_asset",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/glb/test2/grad-fin.glb",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "http://127.0.0.1:8100/glb/test2/grad-fin.glb",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/glb/test2/grad-fin.glb"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "xhr_fetch_has_classified_static_identity",
+          "request_failure": "net::ERR_ABORTED",
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/glb/test2/grad-fin.glb"
+          ],
+          "url": "http://127.0.0.1:8100/glb/test2/grad-fin.glb"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8100/en/3d",
+      "screenshot": "reports/paired/en-3d/127.0.0.1-8100_en_3d__9e0dde9398__mobile__sw-allow__viewport-only.png",
+      "scroll": {
+        "mechanism": "wheel_virtual_scroll",
+        "observations": {},
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 844,
+          "virtualSignals": [
+            "virtual_scroll_marker"
+          ],
+          "windowRange": 0,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": [
+          "Wheel events were exercised, but virtual-scroll coverage and return to the initial state cannot be proven from document position alone."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 7556,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 371,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "interactive",
+          "resourceCount": 52,
+          "scrollHeight": 844
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 6,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T12:12:05Z",
+      "status": 200,
+      "success": false,
+      "title": "3D Experience | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    }
+  ],
+  "schema_version": "1.3",
+  "service_worker_policy": "auto",
+  "settle_policy": {
+    "max_settle_ms": 5000,
+    "navigation": "domcontentloaded",
+    "networkidle_used": false
+  },
+  "source_baseline_exceptions": [],
+  "source_local_pair": {
+    "local_url": "http://127.0.0.1:8100/en/3d",
+    "source_url": "https://belgradearbor.rs/en/3d"
+  },
+  "summary": {
+    "complete_matrix": false,
+    "expected": 3,
+    "failed": 3,
+    "passed": 0,
+    "produced": 3,
+    "source_evidence_produced": 3
+  },
+  "url_contexts": [
+    {
+      "context": "source",
+      "required": false,
+      "url": "https://belgradearbor.rs/en/3d"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8100/en/3d"
+    }
+  ]
+}

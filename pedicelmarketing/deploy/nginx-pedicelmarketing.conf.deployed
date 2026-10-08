@@ -1,0 +1,108 @@
+# pedicelmarketing.com - static mirror on spire (Scaleway Dedibox 62.210.212.199).
+#
+# Bound to the PUBLIC IP only, so it cannot collide with:
+#   - Tailscale's :443 on 100.76.51.58
+#   - the existing internal core-oss vhost on 127.0.0.1:8088
+# and it exposes ONLY this static site; every other service on the box stays on
+# Tailscale/localhost behind ufw.
+#
+# certbot --nginx adds the TLS bits and the :443 server block on first issue.
+
+limit_req_zone $binary_remote_addr zone=pedicel_forms:10m rate=5r/m;
+
+map $sent_http_content_type $pedicel_cache {
+    default                     "public, max-age=300";
+    ~image/                     "public, max-age=31536000, immutable";
+    ~font/                      "public, max-age=31536000, immutable";
+    ~application/font           "public, max-age=31536000, immutable";
+    ~application/javascript     "public, max-age=31536000, immutable";
+    ~text/css                   "public, max-age=31536000, immutable";
+}
+
+server {
+    server_name pedicelmarketing.com www.pedicelmarketing.com;
+    root /var/www/pedicelmarketing;
+    index index.html;
+
+    access_log /var/log/nginx/pedicelmarketing.access.log;
+    error_log  /var/log/nginx/pedicelmarketing.error.log;
+
+    # Apex -> www. The captured markup carries data-wf-domain="www.pedicelmarketing.com".
+    if ($host = pedicelmarketing.com) {
+        return 301 https://www.pedicelmarketing.com$request_uri;
+    }
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css text/xml application/javascript
+               application/json image/svg+xml font/otf application/font-sfnt;
+
+    # The mirror stores the site root at _/index.html (collision-safe naming for "/").
+    location = / {
+        try_files /_/index.html =404;
+        include snippets/pedicel-security.conf;
+        add_header Cache-Control $pedicel_cache always;
+    }
+
+    # Never serve mirror bookkeeping (excluded from the web root anyway; defense in depth).
+    location ~ ^/(_ntsm|mirror-manifest\.json|serve-contract\.json|serve-local\.py) {
+        return 404;
+    }
+
+    # Content-hashed captured assets are immutable.
+    location /_external/ {
+        add_header Cache-Control $pedicel_cache always;
+        try_files $uri =404;
+    }
+
+    # Form relay (Phase D - deferred until the Brevo key lands; nginx block ready).
+    location /api/forms/ {
+        limit_req zone=pedicel_forms burst=3 nodelay;
+        proxy_pass http://127.0.0.1:8081;
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 20s;
+    }
+
+    # Directory-index clean URLs: /audit -> audit/index.html.
+    location / {
+        try_files $uri $uri/ =404;
+        add_header Cache-Control $pedicel_cache always;
+        include snippets/pedicel-security.conf;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html { internal; }
+
+    listen 62.210.212.199:443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/pedicelmarketing.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/pedicelmarketing.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+
+
+server {
+    if ($host = www.pedicelmarketing.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = pedicelmarketing.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 62.210.212.199:80;
+    server_name pedicelmarketing.com www.pedicelmarketing.com;
+    return 404; # managed by Certbot
+
+
+
+
+}

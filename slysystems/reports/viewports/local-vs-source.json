@@ -1,0 +1,3157 @@
+{
+  "allowed_navigation_origins": [
+    "http://127.0.0.1:8200",
+    "https://sly.systems"
+  ],
+  "allowed_telemetry_urls": [],
+  "generated_at": "2026-08-15T21:27:10Z",
+  "requested_urls": [
+    "http://127.0.0.1:8200/",
+    "https://sly.systems/"
+  ],
+  "requested_viewports": [
+    "desktop",
+    "mobile"
+  ],
+  "results": [
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8200/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          },
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          },
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 7969,
+            "line_number": 611,
+            "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          },
+          "message": "App state check failed: Base44Error: Request failed with status code 404\n    at http://127.0.0.1:8200/assets/index-C--Jvz_w.js:586:12220\n    at async Rc.request (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:582:2143\n    at async v (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:612:7845",
+          "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8200"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8200/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "final_url": "http://127.0.0.1:8200/",
+      "finished_at": "2026-08-15T21:27:23Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "method": "POST",
+          "resource_type": "fetch",
+          "status": 501,
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "context": "local",
+          "method": "POST",
+          "resource_type": "xhr",
+          "status": 501,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8200/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8200/"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "unclassified_console_error",
+          "console_location": {
+            "column_number": 7969,
+            "line_number": 611,
+            "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          },
+          "console_message": "App state check failed: Base44Error: Request failed with status code 404\n    at http://127.0.0.1:8200/assets/index-C--Jvz_w.js:586:12220\n    at async Rc.request (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:582:2143\n    at async v (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:612:7845",
+          "context": "local",
+          "data_type": "console_error",
+          "event_type": "console",
+          "exception_reason": null,
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": null,
+          "required": true,
+          "resource_type": "console",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          ],
+          "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=1700236986.1786829233&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=398780132.1786829233&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829233176&tfd=2085&tids=AW-18384236785&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=1700236986.1786829233&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=398780132.1786829233&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829233176&tfd=2085&tids=AW-18384236785&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=1700236986.1786829233&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=398780132.1786829233&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829233176&tfd=2085&tids=AW-18384236785&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=1700236986.1786829233&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=398780132.1786829233&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829233176&tfd=2085&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1700236986.1786829233&gtm=45be68d0h2za200xec&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1700236986.1786829233&gtm=45be68d0h2za200xec&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1700236986.1786829233&gtm=45be68d0h2za200xec&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1700236986.1786829233&gtm=45be68d0h2za200xec&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8200/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&auid=1700236986.1786829233&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=398780132.1786829233&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829233176&tfd=2085&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1700236986.1786829233&gtm=45be68d0h2za200xec&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8200/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "unclassified_console_error",
+          "console_location": {
+            "column_number": 7969,
+            "line_number": 611,
+            "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          },
+          "console_message": "App state check failed: Base44Error: Request failed with status code 404\n    at http://127.0.0.1:8200/assets/index-C--Jvz_w.js:586:12220\n    at async Rc.request (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:582:2143\n    at async v (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:612:7845",
+          "context": "local",
+          "data_type": "console_error",
+          "event_type": "console",
+          "exception_reason": null,
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": null,
+          "required": true,
+          "resource_type": "console",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          ],
+          "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8200/",
+      "screenshot": "reports/viewports/127.0.0.1-8200__30a1c06dba__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 11223
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 12123,
+          "virtualSignals": [],
+          "windowRange": 11223,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 3099,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 1060,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 40,
+          "scrollHeight": 12123
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 8,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-15T21:27:11Z",
+      "status": 200,
+      "success": false,
+      "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8200/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          },
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          },
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 7969,
+            "line_number": 611,
+            "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          },
+          "message": "App state check failed: Base44Error: Request failed with status code 404\n    at http://127.0.0.1:8200/assets/index-C--Jvz_w.js:586:12220\n    at async Rc.request (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:582:2143\n    at async v (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:612:7845",
+          "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "xhr",
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8200"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8200/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "final_url": "http://127.0.0.1:8200/",
+      "finished_at": "2026-08-15T21:27:31Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "method": "POST",
+          "resource_type": "fetch",
+          "status": 501,
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "context": "local",
+          "method": "POST",
+          "resource_type": "xhr",
+          "status": 501,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 404,
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8200/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8200/"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "unclassified_console_error",
+          "console_location": {
+            "column_number": 7969,
+            "line_number": 611,
+            "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          },
+          "console_message": "App state check failed: Base44Error: Request failed with status code 404\n    at http://127.0.0.1:8200/assets/index-C--Jvz_w.js:586:12220\n    at async Rc.request (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:582:2143\n    at async v (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:612:7845",
+          "context": "local",
+          "data_type": "console_error",
+          "event_type": "console",
+          "exception_reason": null,
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": null,
+          "required": true,
+          "resource_type": "console",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          ],
+          "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=1795044230.1786829245&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=311581499.1786829245&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118395334~118897920~118897930~119259605~119367802~119367810~119527020~120125305~120385423&tft=1786829245289&tfd=1675&tids=AW-18384236785&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=1795044230.1786829245&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=311581499.1786829245&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118395334~118897920~118897930~119259605~119367802~119367810~119527020~120125305~120385423&tft=1786829245289&tfd=1675&tids=AW-18384236785&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=1795044230.1786829245&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=311581499.1786829245&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118395334~118897920~118897930~119259605~119367802~119367810~119527020~120125305~120385423&tft=1786829245289&tfd=1675&tids=AW-18384236785&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=1795044230.1786829245&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=311581499.1786829245&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118395334~118897920~118897930~119259605~119367802~119367810~119527020~120125305~120385423&tft=1786829245289&tfd=1675&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1795044230.1786829245&gtm=45be68d0h2za200xec&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1795044230.1786829245&gtm=45be68d0h2za200xec&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1795044230.1786829245&gtm=45be68d0h2za200xec&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1795044230.1786829245&gtm=45be68d0h2za200xec&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8200/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&auid=1795044230.1786829245&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8200%2F&scrsrc=www.googletagmanager.com&rnd=311581499.1786829245&navt=n&npa=1&gtm=45be68d0h2za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118395334~118897920~118897930~119259605~119367802~119367810~119527020~120125305~120385423&tft=1786829245289&tfd=1675&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1795044230.1786829245&gtm=45be68d0h2za200xec&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8200/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+          ],
+          "url": "http://127.0.0.1:8200/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "http_status": 501,
+          "http_status_history": [
+            501
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+          "method": "POST",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/analytics/track/batch"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "unclassified_console_error",
+          "console_location": {
+            "column_number": 7969,
+            "line_number": 611,
+            "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          },
+          "console_message": "App state check failed: Base44Error: Request failed with status code 404\n    at http://127.0.0.1:8200/assets/index-C--Jvz_w.js:586:12220\n    at async Rc.request (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:582:2143\n    at async v (http://127.0.0.1:8200/assets/index-C--Jvz_w.js:612:7845",
+          "context": "local",
+          "data_type": "console_error",
+          "event_type": "console",
+          "exception_reason": null,
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": null,
+          "required": true,
+          "resource_type": "console",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+          ],
+          "url": "http://127.0.0.1:8200/assets/index-C--Jvz_w.js"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+          ],
+          "url": "http://127.0.0.1:8200/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8200/",
+      "screenshot": "reports/viewports/127.0.0.1-8200__30a1c06dba__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 10025
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 10869,
+          "virtualSignals": [],
+          "windowRange": 10025,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 2106,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 1048,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 41,
+          "scrollHeight": 10869
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 5,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-15T21:27:23Z",
+      "status": 200,
+      "success": false,
+      "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://sly.systems/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "network_resource_type": "xhr",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "network_resource_type": "xhr",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "document_origins": [
+        "https://sly.systems"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://sly.systems/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "final_url": "https://sly.systems/",
+      "finished_at": "2026-08-15T21:27:45Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 401,
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 401,
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "initial_response_url": "https://sly.systems/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://sly.systems/"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 401 ()",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 401,
+          "http_status_history": [
+            401
+          ],
+          "initial_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=489198729.1786829254&gtm=45be68c1za200xec&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=489198729.1786829254&gtm=45be68c1za200xec&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=489198729.1786829254&gtm=45be68c1za200xec&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=489198729.1786829254&gtm=45be68c1za200xec&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=489198729.1786829254&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=592809618.1786829254&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829254100&tfd=2069&tids=AW-18384236785&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=489198729.1786829254&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=592809618.1786829254&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829254100&tfd=2069&tids=AW-18384236785&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=489198729.1786829254&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=592809618.1786829254&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829254100&tfd=2069&tids=AW-18384236785&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=489198729.1786829254&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=592809618.1786829254&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829254100&tfd=2069&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://sly.systems/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=489198729.1786829254&gtm=45be68c1za200xec&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=489198729.1786829254&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=592809618.1786829254&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786829254100&tfd=2069&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        }
+      ],
+      "requested_url": "https://sly.systems/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 401 ()",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 401,
+          "http_status_history": [
+            401
+          ],
+          "initial_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://sly.systems/",
+      "screenshot": "reports/viewports/sly.systems__ff153e7023__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 11223
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 12123,
+          "virtualSignals": [],
+          "windowRange": 11223,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 2221,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 1061,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 42,
+          "scrollHeight": 12123
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 6,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-15T21:27:31Z",
+      "status": 200,
+      "success": false,
+      "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://sly.systems/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "network_resource_type": "xhr",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 401 ()",
+          "network_resource_type": "xhr",
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "document_origins": [
+        "https://sly.systems"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://sly.systems/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "final_url": "https://sly.systems/",
+      "finished_at": "2026-08-15T21:27:54Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 401,
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "xhr",
+          "status": 401,
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "initial_response_url": "https://sly.systems/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://sly.systems/"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 401 ()",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 401,
+          "http_status_history": [
+            401
+          ],
+          "initial_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=469221298.1786829268&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=590201373.1786829268&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786829267710&tfd=2475&tids=AW-18384236785&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=469221298.1786829268&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=590201373.1786829268&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786829267710&tfd=2475&tids=AW-18384236785&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=469221298.1786829268&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=590201373.1786829268&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786829267710&tfd=2475&tids=AW-18384236785&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=469221298.1786829268&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=590201373.1786829268&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786829267710&tfd=2475&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=469221298.1786829268&gtm=45be68c1za200xec&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=469221298.1786829268&gtm=45be68c1za200xec&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=469221298.1786829268&gtm=45be68c1za200xec&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=469221298.1786829268&gtm=45be68c1za200xec&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "media",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+          ],
+          "request_class": "static",
+          "request_classification_reason": "classified_static_get_head",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "media",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://sly.systems/",
+        "state": "ok",
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&auid=469221298.1786829268&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=590201373.1786829268&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786829267710&tfd=2475&tids=AW-18384236785&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=469221298.1786829268&gtm=45be68c1za200xec&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "GET",
+          "resource_type": "media",
+          "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4"
+        }
+      ],
+      "requested_url": "https://sly.systems/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 401 ()",
+          "context": "local",
+          "data_type": "api_data",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "http_status": 401,
+          "http_status_history": [
+            401
+          ],
+          "initial_request_url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+          "method": "GET",
+          "request_chain_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "request_class": "personalized_data",
+          "request_classification_reason": "personalized_or_api_response",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "xhr",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+          ],
+          "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://sly.systems/",
+      "screenshot": "reports/viewports/sly.systems__ff153e7023__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 10025
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 10869,
+          "virtualSignals": [],
+          "windowRange": 10025,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 2134,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 1048,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 42,
+          "scrollHeight": 10869
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 5,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-15T21:27:45Z",
+      "status": 200,
+      "success": false,
+      "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    }
+  ],
+  "schema_version": "1.3",
+  "service_worker_policy": "auto",
+  "settle_policy": {
+    "max_settle_ms": 5000,
+    "navigation": "domcontentloaded",
+    "networkidle_used": false
+  },
+  "source_baseline_exceptions": [],
+  "source_local_pair": null,
+  "summary": {
+    "complete_matrix": false,
+    "expected": 4,
+    "failed": 4,
+    "passed": 0,
+    "produced": 4,
+    "source_evidence_produced": 0
+  },
+  "url_contexts": [
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8200/"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://sly.systems/"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# Client-supplied source media for the padel build.
+#
+# The top-level Assets/ files (the academy's own photographs and the brand
+# sheet) ARE versioned — they are the input to tools/ingest_media.py in
+# travelproductions-padel, and the build cannot be reproduced without them.
+
+# Assets/Marbella Photos/ is held back (~74 MB). The filenames of several of
+# these — 2220_puerto-banus-2_introfull.jpg, 2236_bulevar-san-pedro-alcantara,
+# 2246_aloha-golf, and siblings — match the naming convention of the Marbella
+# tourism office's professional-area galleries. This project already carries a
+# drafted, UNSENT authorisation request for exactly that material
+# (travelproductions-padel/architecture/PERMISSION-REQUEST.md), whose own terms
+# state that the general licence is personal/private use only and that nothing
+# will be used until the council replies.
+#
+# So these stay out of the repo and out of the build until provenance is
+# confirmed. If they turn out to be the academy's own photography, delete this
+# rule — several are high-resolution landscape frames that would suit the wide
+# background bands better than the portrait phone shots currently in those slots.
+Assets/Marbella Photos/
+
+# Playwright screenshots of the source site.
+recreation/self-check/*.png

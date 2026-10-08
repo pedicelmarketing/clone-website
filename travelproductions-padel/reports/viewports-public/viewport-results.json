@@ -1,0 +1,2205 @@
+{
+  "allowed_navigation_origins": [
+    "https://immigrants-energy-marine-abstract.trycloudflare.com"
+  ],
+  "allowed_telemetry_urls": [],
+  "generated_at": "2026-07-30T21:39:20Z",
+  "requested_urls": [
+    "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+    "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+    "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+    "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+    "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+    "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/"
+  ],
+  "requested_viewports": [
+    "desktop",
+    "mobile"
+  ],
+  "results": [
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+        "state": "ok",
+        "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+        "state": "ok",
+        "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "finished_at": "2026-07-30T21:39:34Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+        "state": "ok",
+        "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com__3be1610059__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1308,
+          "window_scroll_y_max": 4415
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 5315,
+          "virtualSignals": [],
+          "windowRange": 4415,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 559,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 86,
+          "scrollHeight": 5315
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:39:21Z",
+      "status": 200,
+      "success": true,
+      "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+        "state": "ok",
+        "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+        "state": "ok",
+        "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "finished_at": "2026-07-30T21:39:41Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+        "state": "ok",
+        "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com__3be1610059__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1069,
+          "window_scroll_y_max": 3827
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 4671,
+          "virtualSignals": [],
+          "windowRange": 3827,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 571,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 86,
+          "scrollHeight": 4671
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:39:34Z",
+      "status": 200,
+      "success": true,
+      "title": "Premium Padel Academy Marbella | Padel coaching in Marbella and programmes worldwide",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+        "state": "ok",
+        "title": "How we coach | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+        "state": "ok",
+        "title": "How we coach | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "finished_at": "2026-07-30T21:39:50Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+        "state": "ok",
+        "title": "How we coach | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_coaching__c390b088a7__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1223,
+          "window_scroll_y_max": 4270
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 5170,
+          "virtualSignals": [],
+          "windowRange": 4270,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 707,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 79,
+          "scrollHeight": 5170
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:39:41Z",
+      "status": 200,
+      "success": true,
+      "title": "How we coach | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+        "state": "ok",
+        "title": "How we coach | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+        "state": "ok",
+        "title": "How we coach | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "finished_at": "2026-07-30T21:39:57Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+        "state": "ok",
+        "title": "How we coach | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_coaching__c390b088a7__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 1944,
+          "window_scroll_y_max": 5166
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 6010,
+          "virtualSignals": [],
+          "windowRange": 5166,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 696,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 79,
+          "scrollHeight": 6010
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:39:50Z",
+      "status": 200,
+      "success": true,
+      "title": "How we coach | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+        "state": "ok",
+        "title": "Programmes | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+        "state": "ok",
+        "title": "Programmes | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "finished_at": "2026-07-30T21:40:05Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+        "state": "ok",
+        "title": "Programmes | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_programmes__83587e1818__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 26,
+          "window_scroll_y_max": 961
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1861,
+          "virtualSignals": [],
+          "windowRange": 961,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 528,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 81,
+          "scrollHeight": 1861
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:39:57Z",
+      "status": 200,
+      "success": true,
+      "title": "Programmes | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+        "state": "ok",
+        "title": "Programmes | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+        "state": "ok",
+        "title": "Programmes | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "finished_at": "2026-07-30T21:40:12Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+        "state": "ok",
+        "title": "Programmes | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_programmes__83587e1818__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 113,
+          "window_scroll_y_max": 1466
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 2310,
+          "virtualSignals": [],
+          "windowRange": 1466,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 540,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 81,
+          "scrollHeight": 2310
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:40:05Z",
+      "status": 200,
+      "success": true,
+      "title": "Programmes | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+        "state": "ok",
+        "title": "Marbella & the club | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+        "state": "ok",
+        "title": "Marbella & the club | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "finished_at": "2026-07-30T21:40:19Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+        "state": "ok",
+        "title": "Marbella & the club | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_marbella__76fa2dce56__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 3,
+          "window_scroll_y_max": 672
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1572,
+          "virtualSignals": [],
+          "windowRange": 672,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 765,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 226,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 73,
+          "scrollHeight": 1572
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:40:12Z",
+      "status": 200,
+      "success": true,
+      "title": "Marbella & the club | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+        "state": "ok",
+        "title": "Marbella & the club | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+        "state": "ok",
+        "title": "Marbella & the club | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "finished_at": "2026-07-30T21:40:26Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+        "state": "ok",
+        "title": "Marbella & the club | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_marbella__76fa2dce56__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 16,
+          "window_scroll_y_max": 856
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1700,
+          "virtualSignals": [],
+          "windowRange": 856,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 238,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 73,
+          "scrollHeight": 1700
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:40:19Z",
+      "status": 200,
+      "success": true,
+      "title": "Marbella & the club | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+        "state": "ok",
+        "title": "Contact | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+        "state": "ok",
+        "title": "Contact | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "finished_at": "2026-07-30T21:40:33Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+        "state": "ok",
+        "title": "Contact | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_contact__4a7ab15462__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 616
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1516,
+          "virtualSignals": [],
+          "windowRange": 616,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 258,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 74,
+          "scrollHeight": 1516
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:40:26Z",
+      "status": 200,
+      "success": true,
+      "title": "Contact | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+        "state": "ok",
+        "title": "Contact | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+        "state": "ok",
+        "title": "Contact | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "finished_at": "2026-07-30T21:40:39Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+        "state": "ok",
+        "title": "Contact | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_contact__4a7ab15462__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 218
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1062,
+          "virtualSignals": [],
+          "windowRange": 218,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 270,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 74,
+          "scrollHeight": 1062
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:40:33Z",
+      "status": 200,
+      "success": true,
+      "title": "Contact | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+        "state": "ok",
+        "title": "The coaches | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+        "state": "ok",
+        "title": "The coaches | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "finished_at": "2026-07-30T21:40:41Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+        "state": "ok",
+        "title": "The coaches | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_coaches__d607048839__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "none",
+        "observations": {},
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 909,
+          "virtualSignals": [],
+          "windowRange": 9,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 0,
+        "steps_requested": 10,
+        "warnings": [
+          "No scrollable range or virtual-scroll signal was detected."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 764,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 31,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 0,
+          "scrollHeight": 909
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:40:39Z",
+      "status": 200,
+      "success": true,
+      "title": "The coaches | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+        "state": "ok",
+        "title": "The coaches | Premium Padel Academy Marbella"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "local",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://immigrants-energy-marine-abstract.trycloudflare.com"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+        "state": "ok",
+        "title": "The coaches | Premium Padel Academy Marbella"
+      },
+      "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "finished_at": "2026-07-30T21:40:47Z",
+      "http_errors": [],
+      "initial_response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/"
+        }
+      ],
+      "observed_failures": [],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+        "state": "ok",
+        "title": "The coaches | Premium Padel Academy Marbella"
+      },
+      "redirects": [],
+      "request_failures": [],
+      "requested_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/",
+      "screenshot": "reports/viewports-public/immigrants-energy-marine-abstract.trycloudflare.com_coaches__d607048839__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 319
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1163,
+          "virtualSignals": [],
+          "windowRange": 319,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 763,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 31,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 0,
+          "scrollHeight": 1163
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 3,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-07-30T21:40:41Z",
+      "status": 200,
+      "success": true,
+      "title": "The coaches | Premium Padel Academy Marbella",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    }
+  ],
+  "schema_version": "1.3",
+  "service_worker_policy": "auto",
+  "settle_policy": {
+    "max_settle_ms": 5000,
+    "navigation": "domcontentloaded",
+    "networkidle_used": false
+  },
+  "source_baseline_exceptions": [],
+  "source_local_pair": null,
+  "summary": {
+    "complete_matrix": true,
+    "expected": 12,
+    "failed": 0,
+    "passed": 12,
+    "produced": 12,
+    "source_evidence_produced": 0
+  },
+  "url_contexts": [
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaching/"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/programmes/"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/marbella/"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/contact/"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://immigrants-energy-marine-abstract.trycloudflare.com/coaches/"
+    }
+  ]
+}

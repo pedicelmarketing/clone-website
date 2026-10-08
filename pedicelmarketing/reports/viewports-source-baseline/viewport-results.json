@@ -1,0 +1,357 @@
+{
+  "allowed_navigation_origins": [
+    "https://new-pedicel-website.webflow.io"
+  ],
+  "allowed_telemetry_urls": [],
+  "generated_at": "2026-08-01T01:30:29Z",
+  "requested_urls": [
+    "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing"
+  ],
+  "requested_viewports": [
+    "desktop"
+  ],
+  "results": [
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing",
+        "state": "ok",
+        "title": "What is Digital Marketing? A Complete Guide"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03"
+          },
+          "message": "Failed to load resource: the server responded with a status of 400 ()",
+          "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 400 ()",
+          "network_resource_type": "fetch",
+          "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03"
+        }
+      ],
+      "document_origins": [
+        "https://new-pedicel-website.webflow.io"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing",
+        "state": "ok",
+        "title": "What is Digital Marketing? A Complete Guide"
+      },
+      "final_url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing",
+      "finished_at": "2026-08-01T01:30:39Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "POST",
+          "resource_type": "fetch",
+          "status": 400,
+          "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03"
+        }
+      ],
+      "initial_response_url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "page_error",
+          "console_message": null,
+          "context": "local",
+          "data_type": "page_error",
+          "event_type": "page_error",
+          "exception_reason": null,
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": "Unexpected token ')'",
+          "required": true,
+          "resource_type": "document",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing"
+          ],
+          "url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-YRE3WMB728&gtm=45g92e67t1v894012350za200zd894012350&_p=1785547829940&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZGVlNj.dYWYxNW.dNzQzZD&_eu=AAAAACAC&_uip=%3A%3A&are=1&cid=264691414.1785547830&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=16&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=FR-IDF&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~119527019~119896802&sid=1785547830&sct=1&seg=0&dl=https%3A%2F%2Fnew-pedicel-website.webflow.io%2Fblog%2Fwhat-is-digital-marketing&dt=What%20is%20Digital%20Marketing%3F%20A%20Complete%20Guide&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=312",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-YRE3WMB728&gtm=45g92e67t1v894012350za200zd894012350&_p=1785547829940&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZGVlNj.dYWYxNW.dNzQzZD&_eu=AAAAACAC&_uip=%3A%3A&are=1&cid=264691414.1785547830&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=16&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=FR-IDF&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~119527019~119896802&sid=1785547830&sct=1&seg=0&dl=https%3A%2F%2Fnew-pedicel-website.webflow.io%2Fblog%2Fwhat-is-digital-marketing&dt=What%20is%20Digital%20Marketing%3F%20A%20Complete%20Guide&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=312",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-YRE3WMB728&gtm=45g92e67t1v894012350za200zd894012350&_p=1785547829940&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZGVlNj.dYWYxNW.dNzQzZD&_eu=AAAAACAC&_uip=%3A%3A&are=1&cid=264691414.1785547830&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=16&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=FR-IDF&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~119527019~119896802&sid=1785547830&sct=1&seg=0&dl=https%3A%2F%2Fnew-pedicel-website.webflow.io%2Fblog%2Fwhat-is-digital-marketing&dt=What%20is%20Digital%20Marketing%3F%20A%20Complete%20Guide&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=312"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-YRE3WMB728&gtm=45g92e67t1v894012350za200zd894012350&_p=1785547829940&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZGVlNj.dYWYxNW.dNzQzZD&_eu=AAAAACAC&_uip=%3A%3A&are=1&cid=264691414.1785547830&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=16&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=FR-IDF&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~119527019~119896802&sid=1785547830&sct=1&seg=0&dl=https%3A%2F%2Fnew-pedicel-website.webflow.io%2Fblog%2Fwhat-is-digital-marketing&dt=What%20is%20Digital%20Marketing%3F%20A%20Complete%20Guide&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=312"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 400 ()",
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03",
+          "http_status": 400,
+          "http_status_history": [
+            400
+          ],
+          "initial_request_url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": null,
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03"
+        }
+      ],
+      "page_errors": [
+        "Unexpected token ')'"
+      ],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing",
+        "state": "ok",
+        "title": "What is Digital Marketing? A Complete Guide"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-YRE3WMB728&gtm=45g92e67t1v894012350za200zd894012350&_p=1785547829940&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZGVlNj.dYWYxNW.dNzQzZD&_eu=AAAAACAC&_uip=%3A%3A&are=1&cid=264691414.1785547830&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=16&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=FR-IDF&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~119527019~119896802&sid=1785547830&sct=1&seg=0&dl=https%3A%2F%2Fnew-pedicel-website.webflow.io%2Fblog%2Fwhat-is-digital-marketing&dt=What%20is%20Digital%20Marketing%3F%20A%20Complete%20Guide&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=312"
+        }
+      ],
+      "requested_url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "page_error",
+          "console_message": null,
+          "context": "local",
+          "data_type": "page_error",
+          "event_type": "page_error",
+          "exception_reason": null,
+          "http_status": null,
+          "http_status_history": [],
+          "method": null,
+          "request_class": null,
+          "request_classification_reason": null,
+          "request_failure": "Unexpected token ')'",
+          "required": true,
+          "resource_type": "document",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing"
+          ],
+          "url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing",
+      "screenshot": "/home/openclaw/Coding/ Cloning Sites/clone-website/pedicelmarketing/reports/viewports-source-baseline/new-pedicel-website.webflow.io_blog_what-is-digital-marketing__cb61f556d3__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 11006
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 11906,
+          "virtualSignals": [],
+          "windowRange": 11006,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 10,
+        "steps_requested": 10,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1529,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 369,
+          "fontStatus": "loaded",
+          "pendingImages": 9,
+          "readyState": "complete",
+          "resourceCount": 29,
+          "scrollHeight": 11906
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 6,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-01T01:30:29Z",
+      "status": 200,
+      "success": false,
+      "title": "What is Digital Marketing? A Complete Guide",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    }
+  ],
+  "schema_version": "1.3",
+  "service_worker_policy": "auto",
+  "settle_policy": {
+    "max_settle_ms": 5000,
+    "navigation": "domcontentloaded",
+    "networkidle_used": false
+  },
+  "source_baseline_exceptions": [],
+  "source_local_pair": null,
+  "summary": {
+    "complete_matrix": false,
+    "expected": 1,
+    "failed": 1,
+    "passed": 0,
+    "produced": 1,
+    "source_evidence_produced": 0
+  },
+  "url_contexts": [
+    {
+      "context": "local",
+      "required": true,
+      "url": "https://new-pedicel-website.webflow.io/blog/what-is-digital-marketing"
+    }
+  ]
+}

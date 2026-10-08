@@ -1,0 +1,2110 @@
+{
+  "schema_version": "1.3",
+  "capture_tool_version": "1.3",
+  "page": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+  "requested_page": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+  "canonical_origin": "https://new-pedicel-website.webflow.io",
+  "navigation": {
+    "requested_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+    "initial_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+    "initial_status": 200,
+    "final_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+    "final_status": 200,
+    "redirects": [],
+    "navigation_events": [
+      {
+        "url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+        "status": 200,
+        "phase": "desktop:load",
+        "kind": "initial"
+      }
+    ],
+    "navigation_error": null,
+    "unauthorized_redirects": [],
+    "title": "How to Leverage Instagram Reels for Business Growth in Nigeria",
+    "access": {
+      "state": "ok",
+      "blocked": false,
+      "title": "How to Leverage Instagram Reels for Business Growth in Nigeria",
+      "final_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+      "evidence": {
+        "http_status": 200,
+        "url_challenge_markers": [],
+        "title_challenge_markers": [],
+        "body_challenge_markers": [],
+        "selector_markers": [],
+        "url_login_markers": [],
+        "title_login_markers": [],
+        "body_login_markers": [],
+        "visible_password_fields": 0,
+        "title_error_markers": [],
+        "body_error_markers": [],
+        "consent_overlay_coverage": 0,
+        "root_overflow_locked": false
+      }
+    }
+  },
+  "access_result": "ok",
+  "blocked_by_challenge": false,
+  "allowed_navigation_origins": [
+    "https://new-pedicel-website.webflow.io"
+  ],
+  "capture_started_at": "2026-08-01T01:01:13Z",
+  "captured_at": "2026-08-01T01:01:26Z",
+  "capture_passes": [
+    {
+      "viewport": "desktop",
+      "size": {
+        "width": 1440,
+        "height": 900
+      },
+      "fresh_isolated_context": true,
+      "service_worker_mode": "allow",
+      "navigation": {
+        "requested_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+        "initial_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+        "initial_status": 200,
+        "final_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+        "final_status": 200,
+        "redirects": [],
+        "navigation_events": [
+          {
+            "url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+            "status": 200,
+            "phase": "desktop:load",
+            "kind": "initial"
+          }
+        ],
+        "navigation_error": null,
+        "unauthorized_redirects": [],
+        "title": "How to Leverage Instagram Reels for Business Growth in Nigeria",
+        "access": {
+          "state": "ok",
+          "blocked": false,
+          "title": "How to Leverage Instagram Reels for Business Growth in Nigeria",
+          "final_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+          "evidence": {
+            "http_status": 200,
+            "url_challenge_markers": [],
+            "title_challenge_markers": [],
+            "body_challenge_markers": [],
+            "selector_markers": [],
+            "url_login_markers": [],
+            "title_login_markers": [],
+            "body_login_markers": [],
+            "visible_password_fields": 0,
+            "title_error_markers": [],
+            "body_error_markers": [],
+            "consent_overlay_coverage": 0,
+            "root_overflow_locked": false
+          }
+        }
+      },
+      "settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 5000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 7,
+        "elapsed_ms": 1780,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 310,
+          "resourceCount": 31,
+          "scrollHeight": 10332,
+          "pendingImages": 11,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "scroll": {
+        "mechanism": "window_scroll",
+        "steps_requested": 12,
+        "steps_completed": 12,
+        "returned_to_start": true,
+        "profile": {
+          "scrollHeight": 10332,
+          "innerHeight": 900,
+          "windowScrollY": 0,
+          "windowRange": 9432,
+          "rootOverflowHidden": false,
+          "internalContainer": null,
+          "virtualSignals": []
+        },
+        "observations": {
+          "window_scroll_y_max": 9432,
+          "window_scroll_y_after_return": 0
+        },
+        "warnings": []
+      },
+      "service_worker": {
+        "api_available": true,
+        "controller": null,
+        "registrations": [],
+        "cache_names": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "errors": []
+      },
+      "service_worker_validation": {
+        "required": false
+      },
+      "route_inventory": [
+        {
+          "url": "https://new-pedicel-website.webflow.io/",
+          "path": "/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/about-our-marketing-agency",
+          "path": "/about-our-marketing-agency",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/audit",
+          "path": "/audit",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/blog",
+          "path": "/blog",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/blog/email-marketing-campaigns-guide",
+          "path": "/blog/email-marketing-campaigns-guide",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/blog/facebook-ads-nigeria-guide",
+          "path": "/blog/facebook-ads-nigeria-guide",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+          "path": "/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/blog/social-media-management-skills",
+          "path": "/blog/social-media-management-skills",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/blog/what-is-social-media-management",
+          "path": "/blog/what-is-social-media-management",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/contact-us",
+          "path": "/contact-us",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/our-marketing-portfolio",
+          "path": "/our-marketing-portfolio",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/services",
+          "path": "/services",
+          "source": "anchor",
+          "url_redacted": false
+        }
+      ],
+      "metadata_references": [
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "open_graph_image",
+          "source": "meta[og:image]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "GET",
+            "metadata_only": false,
+            "status": 200,
+            "content_type": "image/webp",
+            "final_url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp"
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "twitter_image",
+          "source": "meta[twitter:image]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "GET",
+            "metadata_only": false,
+            "status": 200,
+            "content_type": "image/webp",
+            "final_url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp"
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e831c2e900a97071429_pedicelfavicon.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=shortcut icon]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e8ca2f6cc43c7d94977_pedicelwebclip.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=apple-touch-icon]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        }
+      ],
+      "post_scroll_settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 5000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 3,
+        "elapsed_ms": 761,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 310,
+          "resourceCount": 42,
+          "scrollHeight": 11235,
+          "pendingImages": 0,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "post_scroll_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "How to Leverage Instagram Reels for Business Growth in Nigeria",
+        "final_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "post_metadata_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "How to Leverage Instagram Reels for Business Growth in Nigeria",
+        "final_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "final_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "How to Leverage Instagram Reels for Business Growth in Nigeria",
+        "final_url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_requests": 43,
+    "total_responses": 43,
+    "same_origin": 2,
+    "external": 41,
+    "loaded_during_scroll": 11,
+    "automatically_acquirable_static_get_head": 35,
+    "metadata_references": 4,
+    "by_resource_type": {
+      "document": 1,
+      "script": 13,
+      "fetch": 3,
+      "font": 5,
+      "image": 19,
+      "stylesheet": 1,
+      "ping": 1
+    },
+    "by_request_class": {
+      "document": 1,
+      "personalized_data": 2,
+      "non_replayable": 3,
+      "static": 34,
+      "telemetry": 3
+    },
+    "providers_detected": [],
+    "recorder_errors": 0
+  },
+  "same_site_routes_from_anchors": [
+    "/",
+    "/about-our-marketing-agency",
+    "/audit",
+    "/blog",
+    "/blog/email-marketing-campaigns-guide",
+    "/blog/facebook-ads-nigeria-guide",
+    "/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+    "/blog/social-media-management-skills",
+    "/blog/what-is-social-media-management",
+    "/contact-us",
+    "/our-marketing-portfolio",
+    "/services"
+  ],
+  "route_inventory": [
+    {
+      "url": "https://new-pedicel-website.webflow.io/",
+      "path": "/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/about-our-marketing-agency",
+      "path": "/about-our-marketing-agency",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/audit",
+      "path": "/audit",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog",
+      "path": "/blog",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog/email-marketing-campaigns-guide",
+      "path": "/blog/email-marketing-campaigns-guide",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog/facebook-ads-nigeria-guide",
+      "path": "/blog/facebook-ads-nigeria-guide",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+      "path": "/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog/social-media-management-skills",
+      "path": "/blog/social-media-management-skills",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog/what-is-social-media-management",
+      "path": "/blog/what-is-social-media-management",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/contact-us",
+      "path": "/contact-us",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/our-marketing-portfolio",
+      "path": "/our-marketing-portfolio",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/services",
+      "path": "/services",
+      "source": "anchor",
+      "url_redacted": false
+    }
+  ],
+  "metadata_references": [
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e831c2e900a97071429_pedicelfavicon.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=shortcut icon]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e8ca2f6cc43c7d94977_pedicelwebclip.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=apple-touch-icon]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "open_graph_image",
+      "source": "meta[og:image]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "GET",
+        "metadata_only": false,
+        "status": 200,
+        "content_type": "image/webp",
+        "final_url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp"
+      },
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "twitter_image",
+      "source": "meta[twitter:image]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "GET",
+        "metadata_only": false,
+        "status": 200,
+        "content_type": "image/webp",
+        "final_url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp"
+      },
+      "passes": [
+        "desktop"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog/how-to-leverage-instagram-reels-for-business-growth-in-nigeria",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "351aad5f4a98e1f17150bb76587633320aa0b9a42bacca182a7608899dc85c8b",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://new-pedicel-website.webflow.io",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/g0lnomhfn3mgNjRhMjk5NTIzOGRiYTQwODIwYjM3Njg5/X6ikKNoSjUdV3Hbxva6WJ1BvQjI",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fdb945e6a2bd6506184ccdce2f31a127acf4ce03afcec250136dae0f8caf9556",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 191560,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://new-pedicel-website.webflow.io",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://aplo-evnt.com/api/v1/intent_pixel/can_track_visitor?x_app_id=663143ad6c4a6401c7441d03",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "57f6c7fea023bb36b0131fef17cdfbd810dbe52d5e93fabe76cadbde3db3887f",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json; charset=utf-8",
+      "content_length": 19,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://aplo-evnt.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b98371a7c683c21182fe967333924c6b6c147a9d43260f0b802eb0141891eb13",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 400,
+      "status_history": [
+        400
+      ],
+      "content_type": "application/json; charset=utf-8",
+      "content_length": 146,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://aplo-evnt.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=70ks9h",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "75997f5f139f3d76f2879c26357b7c3ed2666acbde049d673f985a2b7d2d2c4c",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://assets.apollo.io",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b376f7_Poppins-Bold.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "128130e24c2ede696b7b3385edd32e5e1ae46a2a4f32a55dbc42c57f031444e2",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 26664,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b37701_Poppins-Regular.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b7517470ed78e657ac54c6fbbfc99f1e0138c571a6d6acb3f545d715cb594d3f",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 26576,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b37715_Switzer-Light.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "166ac164cd13aef1e82e27a609765a8c455271aac04fa7ac1199da6a98fdb86d",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 36628,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b3772d_Switzer-Medium.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b2b010e4156acfbc627028ce7d5b18dbeef437672915245d1df56360f79283fd",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 48248,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b3772e_Switzer-Regular.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a195bb8bfe76b271b9881be00c67ff4ada35c25869488d049c9da219e54d1086",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 34560,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a52e82805f80ff256b96e6_Logo-Pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cc2ad5193a1aa872365cbed7ebac357fcb42e7b82d1c0fb9e773f9fbb65f11f8",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a530102f1fc7debc305d21_Blur%20Background.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fda6828e64d8be2ec4ea0e1171bc4d0188d8c0485a27e1b50948f5fea7dc7b94",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 34260,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f71a3f1388dab79abcefed_pedicel-instagramsvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "67f9d7094b58699b4ce2b5254545ffdbf72e74eaa2dafcddfb768c9569433dec",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f71a545357a405f501a5b3_pedicel-facebooksvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8eeea1d5f483265a19208469ccb450fee7501f326bfa149587f5e36b86ebcbeb",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f71a6ab4b4e0723ac65475_pedicel-linkedinsvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b6d5c2210b3a4be6514214dc5c2fedf6fb5117590328a3034197e5dd997aefe8",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f9e2ecc3e4c7cb7d878877_pedicel-Xsvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a20bb69c4efce6e07c9f86c5f49d098f270b8f2ec5240b41e7f0d9aa30850ceb",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/css/new-pedicel-website.webflow.shared.061801715.css",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4e045e90ef1b1622a52d36ad7f0ab9e1f5d999e952fd2e0e21925bae8a65e73c",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/js/webflow.39125603.1f88b03acc8698eb.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "293a0bcfcdf6cf3354dc373ee7abad1b8d86f94bb00830991f2454589695e637",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/js/webflow.schunk.1a807f015b216e46.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2e2b5502209ca26158dfe4b1c52819758f3778e03e1ce0d46104c984eb79c1cf",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/js/webflow.schunk.6391d2cba3b7bb4a.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "05552babb5d60b751bc1eb616053098b4f9741c243cac5e5156ca1013b0d24ab",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/667a5e1cfe964f04c6947105_blog-add-captions-to-reels.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c9a73ebc09d592ffdd45a78e8f0d2efbfc35863459a0c34c5714ccf4271ba3f5",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 34732,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/66db12fccc51ffd2d922b405_65f1a2116a12ceacb245d386_64edef4c2bb2b2f3e7c9d433_first%2520section-19.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c39e8582cf20a17835ed1cf2b34a7a7321b0301684d48e3b92c5b4f778442565",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 107286,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/66e9aa16f0bdf1869b082520_667a627630ed20f7bdc9f0b4_Instagram-hashtags-how-to-find-and-use-the-best-hashtags-Final.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "427a99187cf14415b6ea978afb5c6ee02682a76367c613fc0dea8a3714ed3af8",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 12820,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/66e9aa16f0bdf1869b082524_667a696123cab594a0efff3f_Content-Blog-Banner_Q2-2024_1125x600_031_Instagram-Reels-Insights-1.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bfa14a35442e17d6f78da13e7f8b1112c9ad14d43ee31b35f588066b58eccb10",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 56684,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/66e9aa16f0bdf1869b082527_667a69ee732a5978a9cdc3df_1687973554036.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e1dbf56599dd6d4873566d467461f273512ef2f020d1841f4dddf5c34b1dcf36",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 67762,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/66e9aa16f0bdf1869b08252a_667a64dc804845aa4631f17b_1661449407132.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c6f52d5f3764d4b60b54c9448d6aca62db0749b2ce4e4393f3254c5a5b944b9b",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 41528,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/6705fb7af97515d10c78e9ef_Facebook-Ads-p-500.jpeg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "37a605a81b1017be0aef6e30d0e8aef89c656e808c790c21478ee9b68516f4fb",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 21766,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/67298a9ee000ef9fec5cde57_Social-media-management-p-500.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "96bb3bc6fa3290dfe80b52fda6c1b684098ca0b1ff378fd543b2ff1b574437d9",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 23076,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/672b73fea6206a1bd25e759f_Social-media-management-skills-p-500.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "819939f088166d332d311e294197216cbfdf105c4df420757f35b7c8e745bfd4",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 28596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/672ddc462e3bec3621df8ad5_email-campaign-p-500.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1a279b0785763d7e70dd6276f262ecb1536a7185b206fab550c94679b7a796e5",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 29015,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c40b6c24f89857ed072a19f44b4043faeffaf47e2abf488e66c737de5c5f42da",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript; charset=utf-8",
+      "content_length": 106186,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://connect.facebook.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://connect.facebook.net/signals/config/1425664789280056?v=2.9.368&r=stable&domain=new-pedicel-website.webflow.io&hme=78c3d709c6e52779dc9d6e8b8770857bb5dfd27159797805bacb5f93b9e7568a&ex_m=108%2C210%2C160%2C22%2C73%2C74%2C151%2C69%2C68%2C11%2C169%2C93%2C16%2C143%2C131%2C39%2C76%2C81%2C139%2C165%2C171%2C26%2C27%2C28%2C30%2C48%2C152%2C78%2C116%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C114%2C150%2C153%2C46%2C115%2C24%2C21%2C123%2C70%2C36%2C155%2C154%2C156%2C147%2C145%2C25%2C35%2C59%2C113%2C167%2C71%2C17%2C158%2C118%2C84%2C67%2C19%2C88%2C89%2C120%2C87%2C141%2C140%2C144%2C100%2C166%2C34%2C49%2C117%2C47%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C105%2C172%2C177%2C224%2C75%2C237%2C236%2C235%2C23%2C33%2C55%2C107%2C61%2C10%2C64%2C101%2C102%2C103%2C109%2C134%2C31%2C29%2C136%2C137%2C138%2C133%2C132%2C161%2C77%2C164%2C162%2C163%2C50%2C60%2C127%2C15%2C168%2C45%2C281%2C282%2C280%2C295%2C313%2C217%2C206%2C62%2C207%2C205%2C316%2C307%2C52%2C218%2C111%2C135%2C83%2C125%2C54%2C124%2C130%2C129%2C58%2C65%2C63%2C157%2C79%2C80%2C119%2C37%2C32%2C53%2C56%2C104%2C170%2C1%2C128%2C14%2C126%2C12%2C2%2C57%2C96%2C66%2C122%2C92%2C91%2C173%2C174%2C97%2C98%2C9%2C106%2C51%2C148%2C90%2C82%2C72%2C121%2C110%2C43%2C149%2C0%2C85%2C142%2C146%2C159%2C38%2C112%2C13%2C175",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "57a679bfd878e41e8fe2de3b6c3ca0f0c9542120db9fa20e6689606d3177dd7b",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript; charset=utf-8",
+      "content_length": 62575,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://connect.facebook.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "29f01c0948ebbcd2fc715355be9437549f8b9b14b67e588b328c0dd990b3a3a5",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": 421,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://d3e54v103j8qbb.cloudfront.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0e4df4089771727618eae5831f9248b57b8f934ae8d658b6938236f645996f8d",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://d3e54v103j8qbb.cloudfront.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64a2995238dba40820b37689",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7180565e1365a5b869a1d1774645be97158af4b0c091fea376ae2b9c789cc2f8",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": 89476,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://d3e54v103j8qbb.cloudfront.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-YRE3WMB728&gtm=45g92e67u0h2v894012350za200zd894012350&_p=1785546074166&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZGVlNj.dYWYxNW.dNzQzZD&_eu=AAAAACAC&_uip=%3A%3A&are=1&cid=818353474.1785546074&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=14&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=FR-IDF&_s=1&tag_exp=115616986~115938466~115938468~118395335~118897920~118897930~119527019~119896802&sid=1785546074&sct=1&seg=0&dl=https%3A%2F%2Fnew-pedicel-website.webflow.io%2Fblog%2Fhow-to-leverage-instagram-reels-for-business-growth-in-nigeria&dt=How%20to%20Leverage%20Instagram%20Reels%20for%20Business%20Growth%20in%20Nigeria&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=328",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a381b8907e1d399d445e8f442cb1bdaf0421340b4be817eef342c330388c163e",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://region1.analytics.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect?v=2&ngs=1&ibt=1&tid=G-YRE3WMB728&cid=818353474.1785546074&gtm=45g92e67u0h2v894012350za200zd894012350&rcb=14&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938466~115938468~118395335~118897920~118897930~119527019~119896802",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "50f449c0199f1835d87a90fa9f2661c6ba399a61592c5c90e971d6bf3e056e30",
+      "method": "POST",
+      "resource_type": "ping",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://stats.g.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/array/phc_CoJfThYneBcnEpr7BhqZSDq8594ipjfAGlgubw5mgnt/config.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7b4349af0b05ff77ba2e44184d7c11052551e11c6faefc1e32be1f57a9357eeb",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/static/array.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b5c4b780a8181d3bf36ea64e40851893184b1df4e8bb0fc41e7f9e98f0fa63ed",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/static/posthog-recorder.js?v=1.409.5",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ccd56cea0ef6db90053cbc26e9f9304667fab2cf76a6df08db489c8cd5effc37",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/static/surveys.js?v=1.409.5",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9bb173ee2b6d8c6c6411d1897863b3fb678283c24cca2e9fca6a370a34a2d151",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.fr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&ngs=1&ibt=1&tid=G-YRE3WMB728&cid=818353474.1785546074&gtm=45g92e67u0h2v894012350za200zd894012350&rcb=14&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938466~115938468~118395335~118897920~118897930~119527019~119896802&z=957983031",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "619de6d27c1d042cf7d560f7ef595b9060a38c017f844ea9b3e746c493012535",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.fr",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-YRE3WMB728&gtg_health=1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d18a10b7beb81c40b9dec97e34f4d6674f227c74458619b7dbf316275984c9a6",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 137,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    }
+  ],
+  "recorder_errors": []
+}

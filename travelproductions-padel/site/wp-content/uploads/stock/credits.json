@@ -1,0 +1,163 @@
+{
+  "provenance": "All imagery on this site is supplied by the client (Premium Padel Academy) and is client-owned.",
+  "attribution_required": false,
+  "replaces": "The Wikimedia Commons stock set used in the first media pass, which carried CC BY and CC BY-SA obligations.",
+  "images": {
+    "camps": {
+      "file": "camps.jpg",
+      "width": 1170,
+      "height": 1138,
+      "bytes": 272011,
+      "sha256_16": "19ea22adb1d5e948",
+      "shows": "Courts with La Concha rising behind them",
+      "source_file": "WhatsApp Image 2026-07-31 at 11.13.53 (1).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "club": {
+      "file": "club.jpg",
+      "width": 1170,
+      "height": 1158,
+      "bytes": 217840,
+      "sha256_16": "8ba165a007b285e5",
+      "shows": "Aerial of the courts with the mountains behind",
+      "source_file": "WhatsApp Image 2026-07-31 at 11.13.53 (2).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "coaches": {
+      "file": "coaches.jpg",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 193633,
+      "sha256_16": "c52e003888fa150f",
+      "shows": "Coach portrait, full length",
+      "source_file": "WhatsApp Image 2026-07-19 at 16.48.24 (4).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "contact": {
+      "file": "contact.jpg",
+      "width": 1170,
+      "height": 1552,
+      "bytes": 346966,
+      "sha256_16": "90060da7fc19a639",
+      "shows": "Palm-lined avenue at sunset",
+      "source_file": "WhatsApp Image 2026-07-31 at 11.13.53 (3).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "courts": {
+      "file": "courts.jpg",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 300014,
+      "sha256_16": "c1a875c62f8fbf20",
+      "shows": "Empty indoor courts, landscape framing",
+      "source_file": "WhatsApp Image 2026-07-19 at 16.48.24 (3).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "group": {
+      "file": "group.jpg",
+      "width": 1170,
+      "height": 1994,
+      "bytes": 248470,
+      "sha256_16": "5cfab8c62ad6896a",
+      "shows": "Four players at the net with paddles",
+      "source_file": "WhatsApp Image 2026-07-19 at 16.48.23 (1).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "hero": {
+      "file": "hero.jpg",
+      "width": 1170,
+      "height": 656,
+      "bytes": 176747,
+      "sha256_16": "ac24a4ebe6e96cf4",
+      "shows": "Wide aerial of the padel complex with the coastline behind",
+      "source_file": "WhatsApp Image 2026-07-31 at 11.13.53 (4).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "lessons": {
+      "file": "lessons.jpg",
+      "width": 1170,
+      "height": 1949,
+      "bytes": 317468,
+      "sha256_16": "1f5e10f404ae82e5",
+      "shows": "Coach working with a group on a blue padel court",
+      "source_file": "WhatsApp Image 2026-07-19 at 16.48.23.jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "marbella": {
+      "file": "marbella.jpg",
+      "width": 1170,
+      "height": 1556,
+      "bytes": 297023,
+      "sha256_16": "b0739abfa7355eba",
+      "shows": "Puerto Banús — yachts, white facades, mountain behind",
+      "source_file": "WhatsApp Image 2026-07-31 at 11.13.54 (3).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "match": {
+      "file": "match.jpg",
+      "width": 1462,
+      "height": 2048,
+      "bytes": 276763,
+      "sha256_16": "e22a5a6e906c29da",
+      "shows": "Competitive match play, lunging to reach the ball",
+      "source_file": "WhatsApp Image 2026-07-30 at 12.39.29 (3).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "physical": {
+      "file": "physical.jpg",
+      "width": 1170,
+      "height": 1544,
+      "bytes": 230539,
+      "sha256_16": "06a00e7ef3b2c10e",
+      "shows": "Player moving to the ball, coach alongside",
+      "source_file": "WhatsApp Image 2026-07-19 at 16.48.24 (2).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "programmes": {
+      "file": "programmes.jpg",
+      "width": 1144,
+      "height": 1173,
+      "bytes": 349120,
+      "sha256_16": "422985acf3787453",
+      "shows": "Aerial of the club with players across several courts",
+      "source_file": "WhatsApp Image 2026-07-31 at 11.13.52.jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    },
+    "technical": {
+      "file": "technical.jpg",
+      "width": 1170,
+      "height": 1546,
+      "bytes": 207267,
+      "sha256_16": "dfde54e0d6b37d8a",
+      "shows": "Coach and junior player mid-rally",
+      "source_file": "WhatsApp Image 2026-07-19 at 16.48.24 (1).jpeg",
+      "provider": "Client-supplied",
+      "licence": "Client-owned — supplied by the academy for this build",
+      "attribution_required": false
+    }
+  }
+}

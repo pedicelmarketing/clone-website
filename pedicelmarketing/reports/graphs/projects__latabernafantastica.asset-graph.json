@@ -1,0 +1,2371 @@
+{
+  "schema_version": "1.3",
+  "capture_tool_version": "1.3",
+  "page": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+  "requested_page": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+  "canonical_origin": "https://new-pedicel-website.webflow.io",
+  "navigation": {
+    "requested_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+    "initial_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+    "initial_status": 200,
+    "final_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+    "final_status": 200,
+    "redirects": [],
+    "navigation_events": [
+      {
+        "url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+        "status": 200,
+        "phase": "desktop:load",
+        "kind": "initial"
+      }
+    ],
+    "navigation_error": null,
+    "unauthorized_redirects": [],
+    "title": "Crafting Culinary Excellence",
+    "access": {
+      "state": "ok",
+      "blocked": false,
+      "title": "Crafting Culinary Excellence",
+      "final_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+      "evidence": {
+        "http_status": 200,
+        "url_challenge_markers": [],
+        "title_challenge_markers": [],
+        "body_challenge_markers": [],
+        "selector_markers": [],
+        "url_login_markers": [],
+        "title_login_markers": [],
+        "body_login_markers": [],
+        "visible_password_fields": 0,
+        "title_error_markers": [],
+        "body_error_markers": [],
+        "consent_overlay_coverage": 0,
+        "root_overflow_locked": false
+      }
+    }
+  },
+  "access_result": "ok",
+  "blocked_by_challenge": false,
+  "allowed_navigation_origins": [
+    "https://new-pedicel-website.webflow.io"
+  ],
+  "capture_started_at": "2026-08-01T01:06:52Z",
+  "captured_at": "2026-08-01T01:07:03Z",
+  "capture_passes": [
+    {
+      "viewport": "desktop",
+      "size": {
+        "width": 1440,
+        "height": 900
+      },
+      "fresh_isolated_context": true,
+      "service_worker_mode": "allow",
+      "navigation": {
+        "requested_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+        "initial_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+        "initial_status": 200,
+        "final_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+        "final_status": 200,
+        "redirects": [],
+        "navigation_events": [
+          {
+            "url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+            "status": 200,
+            "phase": "desktop:load",
+            "kind": "initial"
+          }
+        ],
+        "navigation_error": null,
+        "unauthorized_redirects": [],
+        "title": "Crafting Culinary Excellence",
+        "access": {
+          "state": "ok",
+          "blocked": false,
+          "title": "Crafting Culinary Excellence",
+          "final_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+          "evidence": {
+            "http_status": 200,
+            "url_challenge_markers": [],
+            "title_challenge_markers": [],
+            "body_challenge_markers": [],
+            "selector_markers": [],
+            "url_login_markers": [],
+            "title_login_markers": [],
+            "body_login_markers": [],
+            "visible_password_fields": 0,
+            "title_error_markers": [],
+            "body_error_markers": [],
+            "consent_overlay_coverage": 0,
+            "root_overflow_locked": false
+          }
+        }
+      },
+      "settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 5000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 4,
+        "elapsed_ms": 1021,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 364,
+          "resourceCount": 42,
+          "scrollHeight": 8848,
+          "pendingImages": 11,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "scroll": {
+        "mechanism": "window_scroll",
+        "steps_requested": 12,
+        "steps_completed": 12,
+        "returned_to_start": true,
+        "profile": {
+          "scrollHeight": 8848,
+          "innerHeight": 900,
+          "windowScrollY": 0,
+          "windowRange": 7948,
+          "rootOverflowHidden": false,
+          "internalContainer": null,
+          "virtualSignals": []
+        },
+        "observations": {
+          "window_scroll_y_max": 7948,
+          "window_scroll_y_after_return": 0
+        },
+        "warnings": []
+      },
+      "service_worker": {
+        "api_available": true,
+        "controller": null,
+        "registrations": [],
+        "cache_names": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "errors": []
+      },
+      "service_worker_validation": {
+        "required": false
+      },
+      "route_inventory": [
+        {
+          "url": "https://new-pedicel-website.webflow.io/",
+          "path": "/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/about-our-marketing-agency",
+          "path": "/about-our-marketing-agency",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/audit",
+          "path": "/audit",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/blog",
+          "path": "/blog",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/contact-us",
+          "path": "/contact-us",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/our-marketing-portfolio",
+          "path": "/our-marketing-portfolio",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/projects/coeo",
+          "path": "/projects/coeo",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+          "path": "/projects/latabernafantastica",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/projects/sana",
+          "path": "/projects/sana",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://new-pedicel-website.webflow.io/services",
+          "path": "/services",
+          "source": "anchor",
+          "url_redacted": false
+        }
+      ],
+      "metadata_references": [
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/64f097b88af9f6e69c47fb62_project-LTF(2).jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "open_graph_image",
+          "source": "meta[og:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/64f097b88af9f6e69c47fb62_project-LTF(2).jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "twitter_image",
+          "source": "meta[twitter:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e831c2e900a97071429_pedicelfavicon.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=shortcut icon]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e8ca2f6cc43c7d94977_pedicelwebclip.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=apple-touch-icon]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        }
+      ],
+      "post_scroll_settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 5000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 3,
+        "elapsed_ms": 761,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 364,
+          "resourceCount": 51,
+          "scrollHeight": 9951,
+          "pendingImages": 2,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "post_scroll_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Crafting Culinary Excellence",
+        "final_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "post_metadata_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Crafting Culinary Excellence",
+        "final_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "final_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Crafting Culinary Excellence",
+        "final_url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_requests": 52,
+    "total_responses": 52,
+    "same_origin": 2,
+    "external": 50,
+    "loaded_during_scroll": 9,
+    "automatically_acquirable_static_get_head": 44,
+    "metadata_references": 4,
+    "by_resource_type": {
+      "script": 13,
+      "document": 1,
+      "fetch": 3,
+      "font": 4,
+      "image": 29,
+      "stylesheet": 1,
+      "ping": 1
+    },
+    "by_request_class": {
+      "personalized_data": 2,
+      "document": 1,
+      "non_replayable": 3,
+      "static": 43,
+      "telemetry": 3
+    },
+    "providers_detected": [],
+    "recorder_errors": 0
+  },
+  "same_site_routes_from_anchors": [
+    "/",
+    "/about-our-marketing-agency",
+    "/audit",
+    "/blog",
+    "/contact-us",
+    "/our-marketing-portfolio",
+    "/projects/coeo",
+    "/projects/latabernafantastica",
+    "/projects/sana",
+    "/services"
+  ],
+  "route_inventory": [
+    {
+      "url": "https://new-pedicel-website.webflow.io/",
+      "path": "/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/about-our-marketing-agency",
+      "path": "/about-our-marketing-agency",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/audit",
+      "path": "/audit",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/blog",
+      "path": "/blog",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/contact-us",
+      "path": "/contact-us",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/our-marketing-portfolio",
+      "path": "/our-marketing-portfolio",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/projects/coeo",
+      "path": "/projects/coeo",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+      "path": "/projects/latabernafantastica",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/projects/sana",
+      "path": "/projects/sana",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/services",
+      "path": "/services",
+      "source": "anchor",
+      "url_redacted": false
+    }
+  ],
+  "metadata_references": [
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e831c2e900a97071429_pedicelfavicon.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=shortcut icon]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/65601e8ca2f6cc43c7d94977_pedicelwebclip.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=apple-touch-icon]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/64f097b88af9f6e69c47fb62_project-LTF(2).jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "open_graph_image",
+      "source": "meta[og:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/64f097b88af9f6e69c47fb62_project-LTF(2).jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "twitter_image",
+      "source": "meta[twitter:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://new-pedicel-website.webflow.io/g0lnomhfn3mgNjRhMjk5NTIzOGRiYTQwODIwYjM3Njg5/X6ikKNoSjUdV3Hbxva6WJ1BvQjI",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fdb945e6a2bd6506184ccdce2f31a127acf4ce03afcec250136dae0f8caf9556",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 191534,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://new-pedicel-website.webflow.io",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://new-pedicel-website.webflow.io/projects/latabernafantastica",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "aca39e207537f5f4363ff8fa1ba5938a1d68c2d682164c2d802fb8f068637ad5",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://new-pedicel-website.webflow.io",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://aplo-evnt.com/api/v1/intent_pixel/can_track_visitor?x_app_id=663143ad6c4a6401c7441d03",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "57f6c7fea023bb36b0131fef17cdfbd810dbe52d5e93fabe76cadbde3db3887f",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json; charset=utf-8",
+      "content_length": 19,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://aplo-evnt.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=663143ad6c4a6401c7441d03",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b98371a7c683c21182fe967333924c6b6c147a9d43260f0b802eb0141891eb13",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 400,
+      "status_history": [
+        400
+      ],
+      "content_type": "application/json; charset=utf-8",
+      "content_length": 107,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://aplo-evnt.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=mezcm",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "877f7e54b02e7f775cd51f0f9dff90190383a29a330b62fbb6ff42fbcccf15af",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://assets.apollo.io",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b37701_Poppins-Regular.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b7517470ed78e657ac54c6fbbfc99f1e0138c571a6d6acb3f545d715cb594d3f",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 26576,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b37715_Switzer-Light.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "166ac164cd13aef1e82e27a609765a8c455271aac04fa7ac1199da6a98fdb86d",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 36628,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b3772d_Switzer-Medium.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b2b010e4156acfbc627028ce7d5b18dbeef437672915245d1df56360f79283fd",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 48248,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a2995238dba40820b3772e_Switzer-Regular.otf",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a195bb8bfe76b271b9881be00c67ff4ada35c25869488d049c9da219e54d1086",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-font-otf",
+      "content_length": 34560,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a52e82805f80ff256b96e6_Logo-Pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cc2ad5193a1aa872365cbed7ebac357fcb42e7b82d1c0fb9e773f9fbb65f11f8",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64a530102f1fc7debc305d21_Blur%20Background.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fda6828e64d8be2ec4ea0e1171bc4d0188d8c0485a27e1b50948f5fea7dc7b94",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 34260,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f6342b8b5145d264762c74_boltsvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "17f26b0c8b0ff8ba981a6321137fe9aadaa31f574e093a3dcf5dfc8c11b8b5e4",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f6351f7926d792ea8b9abb_checksvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b45e16f72715e5fa3e3a8c0490bc29a38e1a850110e07dee733dd81067ca3fc9",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f71a3f1388dab79abcefed_pedicel-instagramsvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "67f9d7094b58699b4ce2b5254545ffdbf72e74eaa2dafcddfb768c9569433dec",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f71a545357a405f501a5b3_pedicel-facebooksvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8eeea1d5f483265a19208469ccb450fee7501f326bfa149587f5e36b86ebcbeb",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f71a6ab4b4e0723ac65475_pedicel-linkedinsvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b6d5c2210b3a4be6514214dc5c2fedf6fb5117590328a3034197e5dd997aefe8",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/64f9e2ecc3e4c7cb7d878877_pedicel-Xsvg%20pedicel.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a20bb69c4efce6e07c9f86c5f49d098f270b8f2ec5240b41e7f0d9aa30850ceb",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/css/new-pedicel-website.webflow.shared.061801715.css",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4e045e90ef1b1622a52d36ad7f0ab9e1f5d999e952fd2e0e21925bae8a65e73c",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/js/webflow.39125603.1f88b03acc8698eb.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "293a0bcfcdf6cf3354dc373ee7abad1b8d86f94bb00830991f2454589695e637",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/js/webflow.schunk.1a807f015b216e46.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2e2b5502209ca26158dfe4b1c52819758f3778e03e1ce0d46104c984eb79c1cf",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b37689/js/webflow.schunk.6391d2cba3b7bb4a.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "05552babb5d60b751bc1eb616053098b4f9741c243cac5e5156ca1013b0d24ab",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/64f09311733b8fb62636b635_Project-SANA.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "60f259e71186a2dff6d1cb73566d5f21ec98596afcb98850ea594f2407d6e686",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 805621,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/64f097b88af9f6e69c47fb62_project-LTF(2)-p-1600.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e246e1abbb761d1a66b15834f5a7f23c9da2c7528799a3406e6f116220bd2e7f",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 129060,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad7cee7bfc94aabd7077f_LTF-3.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "05ce9478b81669d8403655b16e724d9c3f389a325724c912a5a27f17070663c2",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 789170,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad7d55447349cd07f948c_LTF-2-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4198090bf323fb29d264707a1da67da7f2b5e53a46cfedcee25823c957c87404",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 60617,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad7d69d9e05d00b6b473e_LTF-4-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "feb9a9a04a5ad9b251fa51065c69a37f5ab42c10d54984af1a07a3018f3074e3",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 79792,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad871a02ae0cb2cfc8718_LTF-8-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a362ea0142404a6f7ddf83d5997a4e519e2018e9de424f9ce2cc6259d2fbe4f3",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 32589,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad872492afa9215f77f70_LTF-6-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1ef64c4ee13c7d4e556b9fc62ad81f016ec91c748153bb1438ba1fcea335220d",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 93758,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad87257765d2b5afdd656_LTF-7-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "610c5f61d0deaf58dbbc9b13996bc65e5570c0d32b5844fbb5fce5027d599e70",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 71589,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad8735e2e0c0e2925c7f4_LTF-5-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e58c3ce69b0702573415f983ee2e357874086f8c15187fda21a1b5a73bf22ce7",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 103287,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad8ce6655043fcdcdcebb_LTF-12-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "eb0bbe4556f70b400884bc9f10a1a452a02d27fd08fa210ddce8a2dc04718950",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 39390,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad8cf1ef272974e53fcba_LTF-11-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b7fc6d4ebb0af2f57c3e41cafaac99abf1aee22e1030857658c0e353e9d556e2",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 57263,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad8cfb03267771dcf9cc5_LTF-10-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "655640201e36c1df6225fe124fac0708377de75e25804eb03feac02b3af11770",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 83253,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad8d00becf79294e0709b_LTF-9-p-800.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a6b2ff5260f6267ec76862a2d83636897963c32a916ff8f69b22d18bc7833c35",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpg",
+      "content_length": 66007,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad93497699fdc8a223d8c_LTF-13.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "338a8727be37367f6348e5838955e59b15486856b47efff3dd08e916f5882a0b",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 515576,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad93f0b72e49c968d1823_LTF-15.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e4c4da93a7d8b8282336a2b6348e4d328fe020085e9e8dfc44484b03c843c030",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 281147,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad93f46c3e457ab2ebdec_LTF-14.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9b7c51419e675a51c0078b75a9a86d264e4168d26b24f4fab34565038cfb153f",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 308143,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fad93f5cf0ce160fbee904_LTF-16.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d349b099bfb1a7f996861cb8ca483c9912a235047587fee2ac5a8b2455a7d4b4",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 311091,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/64a2995238dba40820b376ee/65fadb73eb87c229a653f8ba_coeo-1.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5d3af3eeae6559025c66d36280600801db7b336d421ca6bc8d0e32b5d1740941",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/jpeg",
+      "content_length": 1007683,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://cdn.prod.website-files.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c40b6c24f89857ed072a19f44b4043faeffaf47e2abf488e66c737de5c5f42da",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript; charset=utf-8",
+      "content_length": 106186,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://connect.facebook.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://connect.facebook.net/signals/config/1425664789280056?v=2.9.368&r=stable&domain=new-pedicel-website.webflow.io&hme=78c3d709c6e52779dc9d6e8b8770857bb5dfd27159797805bacb5f93b9e7568a&ex_m=108%2C210%2C160%2C22%2C73%2C74%2C151%2C69%2C68%2C11%2C169%2C93%2C16%2C143%2C131%2C39%2C76%2C81%2C139%2C165%2C171%2C26%2C27%2C28%2C30%2C48%2C152%2C78%2C116%2C18%2C20%2C44%2C40%2C42%2C41%2C86%2C95%2C99%2C114%2C150%2C153%2C46%2C115%2C24%2C21%2C123%2C70%2C36%2C155%2C154%2C156%2C147%2C145%2C25%2C35%2C59%2C113%2C167%2C71%2C17%2C158%2C118%2C84%2C67%2C19%2C88%2C89%2C120%2C87%2C141%2C140%2C144%2C100%2C166%2C34%2C49%2C117%2C47%2C8%2C4%2C5%2C7%2C6%2C3%2C94%2C105%2C172%2C177%2C224%2C75%2C237%2C236%2C235%2C23%2C33%2C55%2C107%2C61%2C10%2C64%2C101%2C102%2C103%2C109%2C134%2C31%2C29%2C136%2C137%2C138%2C133%2C132%2C161%2C77%2C164%2C162%2C163%2C50%2C60%2C127%2C15%2C168%2C45%2C281%2C282%2C280%2C295%2C313%2C217%2C206%2C62%2C207%2C205%2C316%2C307%2C52%2C218%2C111%2C135%2C83%2C125%2C54%2C124%2C130%2C129%2C58%2C65%2C63%2C157%2C79%2C80%2C119%2C37%2C32%2C53%2C56%2C104%2C170%2C1%2C128%2C14%2C126%2C12%2C2%2C57%2C96%2C66%2C122%2C92%2C91%2C173%2C174%2C97%2C98%2C9%2C106%2C51%2C148%2C90%2C82%2C72%2C121%2C110%2C43%2C149%2C0%2C85%2C142%2C146%2C159%2C38%2C112%2C13%2C175",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "57a679bfd878e41e8fe2de3b6c3ca0f0c9542120db9fa20e6689606d3177dd7b",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript; charset=utf-8",
+      "content_length": 62575,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://connect.facebook.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "29f01c0948ebbcd2fc715355be9437549f8b9b14b67e588b328c0dd990b3a3a5",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": 421,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://d3e54v103j8qbb.cloudfront.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0e4df4089771727618eae5831f9248b57b8f934ae8d658b6938236f645996f8d",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://d3e54v103j8qbb.cloudfront.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64a2995238dba40820b37689",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7180565e1365a5b869a1d1774645be97158af4b0c091fea376ae2b9c789cc2f8",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": 89476,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://d3e54v103j8qbb.cloudfront.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-YRE3WMB728&gtm=45g92e67t1v894012350za200zd894012350&_p=1785546412700&_gaz=1&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&gdid=dZGVlNj.dYWYxNW.dNzQzZD&_eu=AAAAACAC&_uip=%3A%3A&are=1&cid=462697951.1785546413&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=15&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&ur=FR-IDF&_s=1&tag_exp=115616986~115938466~115938469~118395335~118897920~118897930~119527020~119896803~120222307&sid=1785546412&sct=1&seg=0&dl=https%3A%2F%2Fnew-pedicel-website.webflow.io%2Fprojects%2Flatabernafantastica&dt=Crafting%20Culinary%20Excellence&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&gap.gtb=1&tfd=301",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c7a999abe5cc3ba7d5b007a0ec4ec5c9210dd9e37719901d01d614ca8ef78559",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://region1.analytics.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect?v=2&ngs=1&ibt=1&tid=G-YRE3WMB728&cid=462697951.1785546413&gtm=45g92e67t1v894012350za200zd894012350&rcb=15&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938466~115938469~118395335~118897920~118897930~119527020~119896803~120222307",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2be0d7a1f522a73a7e465a2111cd0f7d8f6d2c550ed70e01eabe9ca3caf27db3",
+      "method": "POST",
+      "resource_type": "ping",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://stats.g.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/array/phc_CoJfThYneBcnEpr7BhqZSDq8594ipjfAGlgubw5mgnt/config.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7b4349af0b05ff77ba2e44184d7c11052551e11c6faefc1e32be1f57a9357eeb",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/static/array.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b5c4b780a8181d3bf36ea64e40851893184b1df4e8bb0fc41e7f9e98f0fa63ed",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/static/posthog-recorder.js?v=1.409.5",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ccd56cea0ef6db90053cbc26e9f9304667fab2cf76a6df08db489c8cd5effc37",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://us-assets.i.posthog.com/static/surveys.js?v=1.409.5",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9bb173ee2b6d8c6c6411d1897863b3fb678283c24cca2e9fca6a370a34a2d151",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://us-assets.i.posthog.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.fr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&ngs=1&ibt=1&tid=G-YRE3WMB728&cid=462697951.1785546413&gtm=45g92e67t1v894012350za200zd894012350&rcb=15&aip=1&dma=1&dma_cps=a&gcd=13l3l3l2l1l1&npa=1&frm=0&tag_exp=115616986~115938466~115938469~118395335~118897920~118897930~119527020~119896803~120222307&z=1215134748",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b9b5067dd6012dde8771f09e3823463e675141d4c585cce35c8437101bac42b0",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.fr",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-YRE3WMB728&gtg_health=1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d18a10b7beb81c40b9dec97e34f4d6674f227c74458619b7dbf316275984c9a6",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 137,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    }
+  ],
+  "recorder_errors": []
+}

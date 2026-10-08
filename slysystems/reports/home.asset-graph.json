@@ -1,0 +1,2694 @@
+{
+  "schema_version": "1.3",
+  "capture_tool_version": "1.3",
+  "page": "https://sly.systems/",
+  "requested_page": "https://sly.systems/",
+  "canonical_origin": "https://sly.systems",
+  "navigation": {
+    "requested_url": "https://sly.systems/",
+    "initial_url": "https://sly.systems/",
+    "initial_status": 200,
+    "final_url": "https://sly.systems/",
+    "final_status": 200,
+    "redirects": [],
+    "navigation_events": [
+      {
+        "url": "https://sly.systems/",
+        "status": 200,
+        "phase": "desktop:load",
+        "kind": "initial"
+      }
+    ],
+    "navigation_error": null,
+    "unauthorized_redirects": [],
+    "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+    "access": {
+      "state": "ok",
+      "blocked": false,
+      "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+      "final_url": "https://sly.systems/",
+      "evidence": {
+        "http_status": 200,
+        "url_challenge_markers": [],
+        "title_challenge_markers": [],
+        "body_challenge_markers": [],
+        "selector_markers": [],
+        "url_login_markers": [],
+        "title_login_markers": [],
+        "body_login_markers": [
+          "login"
+        ],
+        "visible_password_fields": 0,
+        "title_error_markers": [],
+        "body_error_markers": [],
+        "consent_overlay_coverage": 0,
+        "root_overflow_locked": false
+      }
+    }
+  },
+  "access_result": "ok",
+  "blocked_by_challenge": false,
+  "allowed_navigation_origins": [
+    "https://sly.systems"
+  ],
+  "capture_started_at": "2026-08-15T21:23:34Z",
+  "captured_at": "2026-08-15T21:23:50Z",
+  "capture_passes": [
+    {
+      "viewport": "desktop",
+      "size": {
+        "width": 1440,
+        "height": 900
+      },
+      "fresh_isolated_context": true,
+      "service_worker_mode": "allow",
+      "navigation": {
+        "requested_url": "https://sly.systems/",
+        "initial_url": "https://sly.systems/",
+        "initial_status": 200,
+        "final_url": "https://sly.systems/",
+        "final_status": 200,
+        "redirects": [],
+        "navigation_events": [
+          {
+            "url": "https://sly.systems/",
+            "status": 200,
+            "phase": "desktop:load",
+            "kind": "initial"
+          }
+        ],
+        "navigation_error": null,
+        "unauthorized_redirects": [],
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+        "access": {
+          "state": "ok",
+          "blocked": false,
+          "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+          "final_url": "https://sly.systems/",
+          "evidence": {
+            "http_status": 200,
+            "url_challenge_markers": [],
+            "title_challenge_markers": [],
+            "body_challenge_markers": [],
+            "selector_markers": [],
+            "url_login_markers": [],
+            "title_login_markers": [],
+            "body_login_markers": [
+              "login"
+            ],
+            "visible_password_fields": 0,
+            "title_error_markers": [],
+            "body_error_markers": [],
+            "consent_overlay_coverage": 0,
+            "root_overflow_locked": false
+          }
+        }
+      },
+      "settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 5000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 7,
+        "elapsed_ms": 2643,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 1060,
+          "resourceCount": 41,
+          "scrollHeight": 12123,
+          "pendingImages": 0,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "scroll": {
+        "mechanism": "window_scroll",
+        "steps_requested": 12,
+        "steps_completed": 12,
+        "returned_to_start": true,
+        "profile": {
+          "scrollHeight": 12123,
+          "innerHeight": 900,
+          "windowScrollY": 0,
+          "windowRange": 11223,
+          "rootOverflowHidden": false,
+          "internalContainer": null,
+          "virtualSignals": []
+        },
+        "observations": {
+          "window_scroll_y_max": 11223,
+          "window_scroll_y_after_return": 0
+        },
+        "warnings": []
+      },
+      "service_worker": {
+        "api_available": true,
+        "controller": null,
+        "registrations": [],
+        "cache_names": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "errors": []
+      },
+      "service_worker_validation": {
+        "required": false
+      },
+      "route_inventory": [
+        {
+          "url": "https://sly.systems/",
+          "path": "/",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/about",
+          "path": "/about",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/base44",
+          "path": "/base44",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/contact",
+          "path": "/contact",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/engine",
+          "path": "/engine",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/idea",
+          "path": "/idea",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/newsletter",
+          "path": "/newsletter",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/review",
+          "path": "/review",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://sly.systems/work/gonzo",
+          "path": "/work/gonzo",
+          "source": "anchor",
+          "url_redacted": false
+        }
+      ],
+      "metadata_references": [
+        {
+          "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png/v1/fill/w_1200,h_630/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "open_graph_image",
+          "source": "meta[og:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png/v1/fill/w_1200,h_630/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "twitter_image",
+          "source": "meta[twitter:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://media.base44.com/images/public/69f1a258fba70dbfa61e4a23/e6201a5a5_brand_upload_logo.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=icon]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://sly.systems/manifest.json",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "web_manifest",
+          "source": "link[rel=manifest]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "status": 0,
+            "content_type": "",
+            "final_url": "https://sly.systems/manifest.json",
+            "method": "GET",
+            "metadata_only": true,
+            "response_type": "opaqueredirect",
+            "redirected": false,
+            "redirect_mode": "manual",
+            "declared_length": null,
+            "actual_bytes": null,
+            "skipped_reason": "manual_redirect_not_followed"
+          },
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/4e2c52326_ChatGPTImageJun21202612_26_13AM.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "json_ld_logo",
+          "source": "json-ld:logo",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/f80c2e04f_generated_image.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "json_ld_image",
+          "source": "json-ld:image",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/212e11dbc_logo.png",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "json_ld_logo",
+          "source": "json-ld:logo",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        }
+      ],
+      "post_scroll_settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 5000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 3,
+        "elapsed_ms": 805,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 1080,
+          "resourceCount": 67,
+          "scrollHeight": 12123,
+          "pendingImages": 0,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "post_scroll_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+        "final_url": "https://sly.systems/",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "post_metadata_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+        "final_url": "https://sly.systems/",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "final_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+        "final_url": "https://sly.systems/",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_requests": 57,
+    "total_responses": 56,
+    "same_origin": 9,
+    "external": 48,
+    "loaded_during_scroll": 17,
+    "automatically_acquirable_static_get_head": 41,
+    "metadata_references": 7,
+    "by_resource_type": {
+      "document": 2,
+      "fetch": 4,
+      "xhr": 9,
+      "stylesheet": 4,
+      "script": 9,
+      "image": 10,
+      "font": 3,
+      "media": 16
+    },
+    "by_request_class": {
+      "document": 2,
+      "non_replayable": 6,
+      "personalized_data": 8,
+      "static": 39,
+      "data_api": 1,
+      "telemetry": 1
+    },
+    "providers_detected": [
+      "Google Fonts (openly licensed)"
+    ],
+    "recorder_errors": 0
+  },
+  "same_site_routes_from_anchors": [
+    "/",
+    "/about",
+    "/base44",
+    "/contact",
+    "/engine",
+    "/idea",
+    "/newsletter",
+    "/review",
+    "/work/gonzo"
+  ],
+  "route_inventory": [
+    {
+      "url": "https://sly.systems/",
+      "path": "/",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/about",
+      "path": "/about",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/base44",
+      "path": "/base44",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/contact",
+      "path": "/contact",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/engine",
+      "path": "/engine",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/idea",
+      "path": "/idea",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/newsletter",
+      "path": "/newsletter",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/review",
+      "path": "/review",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://sly.systems/work/gonzo",
+      "path": "/work/gonzo",
+      "source": "anchor",
+      "url_redacted": false
+    }
+  ],
+  "metadata_references": [
+    {
+      "url": "https://media.base44.com/images/public/69f1a258fba70dbfa61e4a23/e6201a5a5_brand_upload_logo.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=icon]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/f80c2e04f_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_image",
+      "source": "json-ld:image",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/212e11dbc_logo.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_logo",
+      "source": "json-ld:logo",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/4e2c52326_ChatGPTImageJun21202612_26_13AM.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_logo",
+      "source": "json-ld:logo",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png/v1/fill/w_1200,h_630/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "open_graph_image",
+      "source": "meta[og:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png/v1/fill/w_1200,h_630/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "twitter_image",
+      "source": "meta[twitter:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ]
+    },
+    {
+      "url": "https://sly.systems/manifest.json",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "web_manifest",
+      "source": "link[rel=manifest]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "status": 0,
+        "content_type": "",
+        "final_url": "https://sly.systems/manifest.json",
+        "method": "GET",
+        "metadata_only": true,
+        "response_type": "opaqueredirect",
+        "redirected": false,
+        "redirect_mode": "manual",
+        "declared_length": null,
+        "actual_bytes": null,
+        "skipped_reason": "manual_redirect_not_followed"
+      },
+      "passes": [
+        "desktop"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://sly.systems/",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9ccbcd6312de4bb94e596122fb87c78d366df2878e63b42168c24d0a74e5eff1",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://sly.systems/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b6d032ddd432621466b483fed2341875d8a177994b62dee5aca5b2dc23727e3c",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json",
+      "content_length": 20,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "38774b1b64cd9c0d404c94dacfe79b9de0d6e7a704767d839923aa0bd76c9fcd",
+      "method": "POST",
+      "resource_type": "xhr",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json",
+      "content_length": 18,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8d39b42a3f54fe8c3d58c6b79ac7af4fa7457a2e1cbae0a3398bce5f54b7d7c2",
+      "method": "GET",
+      "resource_type": "xhr",
+      "data_type": "api_data",
+      "request_class": "personalized_data",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f36745bbea72854f03cba67b50d832f21de5393e3c513a6b6a4f53139a3d91a1",
+      "method": "GET",
+      "resource_type": "xhr",
+      "data_type": "api_data",
+      "request_class": "personalized_data",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 401,
+      "status_history": [
+        401
+      ],
+      "content_type": "application/json",
+      "content_length": 122,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://sly.systems/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1b3529e1c304b7aa51155a5dd8b21dc4410b8a270d9a4c725e73d78dd211724c",
+      "method": "GET",
+      "resource_type": "xhr",
+      "data_type": "api_data",
+      "request_class": "personalized_data",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json",
+      "content_length": 62,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://sly.systems/assets/index-BfiDsVd2.css",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1282532e32d30f8e2c12af457e34d87dc4aa19dbac0db1c3d83e4f70bf4a7078",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://sly.systems/assets/index-C--Jvz_w.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fc264b260a0519a9fee12a69835b2fa06166960a86f463958d40955948489e6c",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://sly.systems/manifest.json",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4e2cb2dbf8fe938f2645f325c4ff121e1dfbad60727adc38a33513dba4dba574",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "web_manifest",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "xhr_fetch_has_classified_static_identity"
+      },
+      "status": null,
+      "status_history": [],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:metadata",
+      "phases": [
+        "desktop:metadata"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://sly.systems",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1971793499.1786829018&gtm=45be68c1za200xec&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "db5623760040a2139b4efa15d97a6f29dbd9faa86dd131c4823ef16440a456a3",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://ad.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://api-widget.soundcloud.com/me?client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "850564a8824350b8c8892f40716240428620fa524f72ad9ad0b4ff834c74d151",
+      "method": "POST",
+      "resource_type": "xhr",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json;charset=utf-8",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://api-widget.soundcloud.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://api-widget.soundcloud.com/resolve?url=https%3A//api.soundcloud.com/tracks/1426838842&format=json&client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu&app_version=1786605687",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6040f30a60f0b7b646868a2f48e760dedda0c019571043676203804c9acb6ce7",
+      "method": "GET",
+      "resource_type": "xhr",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json; charset=utf-8",
+      "content_length": 1685,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://api-widget.soundcloud.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://api-widget.soundcloud.com/resolve?url=https%3A//soundcloud.com/intelligentsoundua/gals-yellow-last-pines-remix-1&format=json&client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu&app_version=1786605687",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0c318c3b80b897cea34193bc5d4d9c0885128668672c8ada439c1df1a6ff29e9",
+      "method": "GET",
+      "resource_type": "xhr",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json; charset=utf-8",
+      "content_length": 1685,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://api-widget.soundcloud.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://api.motion.dev/score/badge?url=sly.clubop.site",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f2a70ffadd7817236250f068cdf20e22bd583a43840c04750cb498640a1fbd12",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/svg+xml; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://api.motion.dev",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://dwt.soundcloud.com/js/",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4f1522d7c14d2f8239017e1876388e10c10f03e7cab76f55745a2c1919689934",
+      "method": "POST",
+      "resource_type": "xhr",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json;charset=utf-8",
+      "content_length": 235,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://dwt.soundcloud.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://dwt.soundcloud.com/tags.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "642368873971b82d388a8a112d34ae6cec1c6e87195cb62a9b7d5489d4180f11",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://dwt.soundcloud.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e6d098af657e7978d6bfe88a451c507675a52a6d211fdc43c96aa875c4d74d2b",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": null,
+      "provider": "Google Fonts (openly licensed)",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://fonts.googleapis.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a7eec433c15484ecaf295b1821b69683e2df6638cc6dfec82e1191930ab009a5",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": null,
+      "provider": "Google Fonts (openly licensed)",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://fonts.googleapis.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8a112735355da1ff1a95f0834c4a97664fe3c44eeb9a5d6d021308bacaa2d1f6",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": null,
+      "provider": "Google Fonts (openly licensed)",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://fonts.googleapis.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b5d0275d0b9321389497a417221aefd104f0b9fe32a962ecb726ad8f5299846e",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 25904,
+      "provider": "Google Fonts (openly licensed)",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://fonts.gstatic.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "13c69485b4d91e2e4a197977eb6370ebbed0134ce03dc886a95244fb111bdea3",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 48256,
+      "provider": "Google Fonts (openly licensed)",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://fonts.gstatic.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "950a330ff81d2dcb13d9ac95913907f2de3aaa56a0e320af9a40cfb0083093d6",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 22288,
+      "provider": "Google Fonts (openly licensed)",
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://fonts.gstatic.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/10c4e0c0f_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "73ffe665cd5f6dc851772f1b05e3c5bac126b0e3e3576b43449cfe6b97a89f41",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 216371,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/338b2227d_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "402cd2406c31519563adb7dc8616bcbe3091965bf3556dcd012c7e7db39a1226",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 116131,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/38ed793cb_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "273e0831ead2dd64ecc43e8e3c34dd5f7ac8a2e2500985bb2fa4befe9684752d",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 48798,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/5e4f14ab2_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e500f3260b62bd6b1791c25011da427e5b67cea2ce8f39e66d8f39290c2d5912",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 76942,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/66e8e7997_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0e2a951776c8eb24e54d0dcc2e6a22b0860456b105f264b36ac20e6bd665a0c8",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 64603,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/aa01ac71b_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "50f9efb2a79d57ff9b0fbbe0ccc9f69e9054421903e043c295f5d57aa01b240c",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 171964,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/cb211c8be_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b691cd96091f8270cb90d91d3d61af1dec9fb1f4ef87d9513f602ac21006fbcb",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 161651,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/cb8fbcc2b_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3bbc808ac6886b841dfaa4990b2105f3d16f26bc924d980d17d091b54310f99d",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 32962,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2868f98869626202eccaea692cc5fed1a384bce2afb530b87e18555973dff06a",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 3723714,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d6586db60ac61c9472760989bdee5e640de15855b4946db24eeea9fe2bb5c127",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 3540681,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 4,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/14b1921fd_02-hero-letter-L-1280x720.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5834603f260f61d5f7df739db5b1461e1f971716f6d620e17ef5e742bfb36687",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 2800155,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/2e068e838_03-hero-letter-Y-1280x720.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "001d9c97a59ccc4c5560064cf493e8206b1ba197e828dc46ab13955997785065",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 3726596,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/38243bc4d_bailar-sly-showcase-6s.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "482f7a038f815247db0b332213bdd40a9a7f8954ea09fa8ce9786a62e00d77f9",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 455374,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 3,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6162b2ff0efff6e6ec6b45ef1b4606b0b0d3bc029f59d9b4c1ca222951088d08",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 4212592,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/4b0bc8e01_Jeremy-Gardner-SLY-8s-1600x1200.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fd8508a826ce90479e018280896ed8ddd7188aad653901624e98cf61898d6d8a",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 4983709,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "960b0b82c0e3d26f351f1909387c2f1ee738286b68958f4f73105f523fdd241e",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 6128861,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/5bf36ae83_12-feature-DCFdash-1280x720.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "01cf790610ae750166ba9d1964fb4f0f2146752d5379174b806cc85290cf4ec9",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 82722,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 3,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/5d1f6e23e_25-inline-Cover-clip-1-960x540.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "dfb35604dab30e361fa0a3392314ef3a8bb087505962a055595f3d8509b695b0",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 1923888,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 3,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e7a5c4f7e54f05bdb3fbe89d6ccd8ca638279a53c99ebef692ad90afb3bae9e0",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 13276225,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 12,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/7a6f0ba06_GEMFLOW-hero-8s.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "52534aa5316389e0bfa1467d57b9535430899a0d6c35f2cf87a111fea5c5776c",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 475448,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/d69164240_DosPinos-hero-8s.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7521b3f155209690c9330d399fbc80e24146ed5b1adcb96f8bf6ca6fffc92430",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 1271554,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/eff3e53ec_01-hero-letter-S-1280x720.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d36a2420b62965048181211444ea60b5f395219cde9acd8dc388a4458d52dbda",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 2657193,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/f26382a8a_VUEintro01_WEB.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a93fa8341b6cb2db69f7f3c97502deb3a519323a510f318ecd257bc261e21870",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 2822565,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/f7beea690_ONE44-hero-7s.mp4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8028fe25565080935d1d5d237fd00e3be2f1ab3a0ae7bdae80b964c577e63771",
+      "method": "GET",
+      "resource_type": "media",
+      "data_type": "media",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 206,
+      "status_history": [
+        206
+      ],
+      "content_type": "video/mp4",
+      "content_length": 1037824,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "desktop:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://media.base44.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fintelligentsoundua%2Fgals-yellow-last-pines-remix-1&auto_play=false&show_artwork=false&visual=false",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "15d88dae11f80ef491ffc45100b3aa5a38844f07ced703f99cdc5f98af5e80d0",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "html_document",
+      "request_class": "document",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_document_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/html",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://w.soundcloud.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://w.soundcloud.com/player/api.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2ce7983ff0d7070da6bd458f29d5bb52b43c1808779610d150a8e1287030b04c",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://w.soundcloud.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://wave.sndcdn.com/CppSGDo1GmsD_m.json",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bc0947f936956b2e1ef45cd57561272535de6dfe11cbfdbae44f1d8580382c35",
+      "method": "GET",
+      "resource_type": "xhr",
+      "data_type": "unknown_xhr_fetch",
+      "request_class": "data_api",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "unknown_xhr_fetch_is_not_static"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/json",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://wave.sndcdn.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://widget.sndcdn.com/assets/images/logo-200x120-3190df52.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bed4cf5ab7bd723b35ac9fbeb4b32ff6fbc5611a4e93ed4ecd46c8e9e68187e6",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/png",
+      "content_length": 3745,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://widget.sndcdn.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-0-a61c0e7211ef.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "89ef2a6ce877dea46577ae8f899bee5e3e1677a51fc46a34e7f032b0a59247ec",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://widget.sndcdn.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-1-2a294ec9db9c.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "372caf61bb46662af5ae3e487424b8a90a9151824952aed7f3a98deab693141a",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://widget.sndcdn.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-5-cd8b86ff1046.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "30401f78b3844d9137952a3400b62bc13007e81722ec148c92e3cdb8600c5053",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://widget.sndcdn.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-8-b64870f16fec.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4cc518e6762961ffd41c71ac3e2be3f417a9bf07c99ce7213e502b7741cab16f",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://widget.sndcdn.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-9-a34f7755ab5e.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6aac9789b63c92ee8664cbcc6afd91adc270548a93270c1ebbfbdb95322023e4",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://widget.sndcdn.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=1&auid=1971793499.1786829018&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=679871583.1786829018&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118131810~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786829017863&tfd=2782&tids=AW-18384236785&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1e505af0c24924a0697519e733e76b69594d380981f219149365041e4f0b0ea8",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=AW-18384236785",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "333a108fd83ff20a24fbab4a461059e7237575015dccefaadd2a9194866b5bb8",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 146941,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    }
+  ],
+  "recorder_errors": []
+}

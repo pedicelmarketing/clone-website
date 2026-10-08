@@ -1,0 +1,1117 @@
+{
+  "schema_version": "1.3",
+  "created_at": "2026-08-15T21:24:24Z",
+  "updated_at": "2026-08-15T21:25:13Z",
+  "authorization_contexts": [
+    {
+      "context": "inspiration / non-commercial reference",
+      "recorded_at": "2026-08-15T21:24:24Z"
+    }
+  ],
+  "authorization_context": "inspiration / non-commercial reference",
+  "allowed_external_hosts": [
+    "fonts.googleapis.com",
+    "fonts.gstatic.com"
+  ],
+  "pages": [
+    {
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8",
+      "requested_url": "https://sly.systems/",
+      "final_url": "https://sly.systems/",
+      "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+      "initial_status": 200,
+      "final_status": 200,
+      "redirects": [],
+      "access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "SLY \u2014 Custom AI Software & Automation for Growing Businesses | Miami AI Product Group",
+        "final_url": "https://sly.systems/",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [
+            "login"
+          ],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      }
+    }
+  ],
+  "capture_graphs": [
+    {
+      "path": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8",
+      "schema_version": "1.3",
+      "requested_url": "https://sly.systems/",
+      "final_url": "https://sly.systems/",
+      "captured_at": "2026-08-15T21:23:50Z",
+      "recorded_at": "2026-08-15T21:24:24Z"
+    }
+  ],
+  "route_map": {
+    "/": {
+      "local_path": "_/index.html",
+      "content_type": "text/html; charset=utf-8",
+      "source_url": "https://sly.systems/",
+      "sha256": "ee432bad7fe2a3b7878921efc78b6afb357fdb5e854b8b8674f6fa8d4ae1acd5"
+    },
+    "/assets/index-BfiDsVd2.css": {
+      "local_path": "assets/index-BfiDsVd2.css",
+      "content_type": "text/css; charset=utf-8",
+      "source_url": "https://sly.systems/assets/index-BfiDsVd2.css",
+      "sha256": "8c7bf4df0b6160f4a3f981ba2de00b15fc499f2a1a4204738047a908f8675074"
+    },
+    "/assets/index-C--Jvz_w.js": {
+      "local_path": "assets/index-C--Jvz_w.js",
+      "content_type": "application/javascript",
+      "source_url": "https://sly.systems/assets/index-C--Jvz_w.js",
+      "sha256": "b5a8fa5a1f29a78eac39277fef0349d691f23187823b7a6426b7ef089f8e6636"
+    },
+    "/manifest.json": {
+      "local_path": "manifest.json",
+      "content_type": "application/json",
+      "source_url": "https://sly.systems/manifest.json",
+      "sha256": "9e22e0ab682d80077e9130103f4aadb6aabe825feb2f8e7ddd43765a732ef4ef"
+    },
+    "/api/apps/manifests/6a38b9e683468637b6118425/manifest.json": {
+      "local_path": "manifest.json",
+      "content_type": "application/json",
+      "source_url": "https://sly.systems/manifest.json",
+      "sha256": "9e22e0ab682d80077e9130103f4aadb6aabe825feb2f8e7ddd43765a732ef4ef"
+    }
+  },
+  "source_url_map": {
+    "https://sly.systems/": {
+      "local_path": "_/index.html",
+      "content_type": "text/html; charset=utf-8",
+      "source_url": "https://sly.systems/",
+      "sha256": "ee432bad7fe2a3b7878921efc78b6afb357fdb5e854b8b8674f6fa8d4ae1acd5"
+    },
+    "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap": {
+      "local_path": "_external/fonts.googleapis.com/css2__q_3d9f8086ccab429c",
+      "content_type": "text/css; charset=utf-8",
+      "source_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "sha256": "8d03eb23399e2fdc3d8e60573c7252f7990a7fe13082e4de2267308760ce0eb4"
+    },
+    "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap": {
+      "local_path": "_external/fonts.googleapis.com/css2__q_5bbcc4972b5bad20",
+      "content_type": "text/css; charset=utf-8",
+      "source_url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap",
+      "sha256": "98c563e2484ae54083231c82a986f66f2ae7af97efa7f7b90c2ba28e2562a969"
+    },
+    "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap": {
+      "local_path": "_external/fonts.googleapis.com/css2__q_8edcc57969308014",
+      "content_type": "text/css; charset=utf-8",
+      "source_url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      "sha256": "697fbb0c065bcffabf55808bc3ac91ee0ccdcf868b7855eec68268e902d2e685"
+    },
+    "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2": {
+      "local_path": "_external/fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "content_type": "font/woff2",
+      "source_url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370"
+    },
+    "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": {
+      "local_path": "_external/fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "content_type": "font/woff2",
+      "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2": {
+      "local_path": "_external/fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "content_type": "font/woff2",
+      "source_url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d"
+    },
+    "https://sly.systems/assets/index-BfiDsVd2.css": {
+      "local_path": "assets/index-BfiDsVd2.css",
+      "content_type": "text/css; charset=utf-8",
+      "source_url": "https://sly.systems/assets/index-BfiDsVd2.css",
+      "sha256": "8c7bf4df0b6160f4a3f981ba2de00b15fc499f2a1a4204738047a908f8675074"
+    },
+    "https://sly.systems/assets/index-C--Jvz_w.js": {
+      "local_path": "assets/index-C--Jvz_w.js",
+      "content_type": "application/javascript",
+      "source_url": "https://sly.systems/assets/index-C--Jvz_w.js",
+      "sha256": "b5a8fa5a1f29a78eac39277fef0349d691f23187823b7a6426b7ef089f8e6636"
+    },
+    "https://sly.systems/manifest.json": {
+      "local_path": "manifest.json",
+      "content_type": "application/json",
+      "source_url": "https://sly.systems/manifest.json",
+      "sha256": "9e22e0ab682d80077e9130103f4aadb6aabe825feb2f8e7ddd43765a732ef4ef"
+    },
+    "https://sly.systems/api/apps/manifests/6a38b9e683468637b6118425/manifest.json": {
+      "local_path": "manifest.json",
+      "content_type": "application/json",
+      "source_url": "https://sly.systems/manifest.json",
+      "sha256": "9e22e0ab682d80077e9130103f4aadb6aabe825feb2f8e7ddd43765a732ef4ef"
+    }
+  },
+  "downloaded": [
+    {
+      "url": "https://sly.systems/",
+      "normalized_url": "https://sly.systems/",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://sly.systems/",
+      "redirects": [],
+      "resource_type": "document",
+      "request_class": "document",
+      "data_type": "html_document",
+      "required": true,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "first_seen": "desktop:load",
+      "attempt_id": "20260815T212424Z-3768903-1786829064962998416",
+      "path": "_/index.html",
+      "bytes": 24329,
+      "sha256": "ee432bad7fe2a3b7878921efc78b6afb357fdb5e854b8b8674f6fa8d4ae1acd5",
+      "content_type": "text/html; charset=utf-8",
+      "captured_at": "2026-08-15T21:24:25Z"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "normalized_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "redirects": [],
+      "resource_type": "stylesheet",
+      "request_class": "static",
+      "data_type": "static_asset",
+      "required": false,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:3"
+      ],
+      "first_seen": null,
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516",
+      "path": "_external/fonts.googleapis.com/css2__q_3d9f8086ccab429c",
+      "bytes": 948,
+      "sha256": "8d03eb23399e2fdc3d8e60573c7252f7990a7fe13082e4de2267308760ce0eb4",
+      "content_type": "text/css; charset=utf-8",
+      "captured_at": "2026-08-15T21:25:13Z"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap",
+      "normalized_url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap",
+      "redirects": [],
+      "resource_type": "stylesheet",
+      "request_class": "static",
+      "data_type": "static_asset",
+      "required": false,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:1"
+      ],
+      "first_seen": null,
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516",
+      "path": "_external/fonts.googleapis.com/css2__q_5bbcc4972b5bad20",
+      "bytes": 645,
+      "sha256": "98c563e2484ae54083231c82a986f66f2ae7af97efa7f7b90c2ba28e2562a969",
+      "content_type": "text/css; charset=utf-8",
+      "captured_at": "2026-08-15T21:25:13Z"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      "normalized_url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      "redirects": [],
+      "resource_type": "stylesheet",
+      "request_class": "static",
+      "data_type": "static_asset",
+      "required": false,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:2"
+      ],
+      "first_seen": null,
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516",
+      "path": "_external/fonts.googleapis.com/css2__q_8edcc57969308014",
+      "bytes": 1603,
+      "sha256": "697fbb0c065bcffabf55808bc3ac91ee0ccdcf868b7855eec68268e902d2e685",
+      "content_type": "text/css; charset=utf-8",
+      "captured_at": "2026-08-15T21:25:13Z"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "normalized_url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "redirects": [],
+      "resource_type": "font",
+      "request_class": "static",
+      "data_type": "font",
+      "required": false,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:4",
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "first_seen": "desktop:load",
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516",
+      "path": "_external/fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "bytes": 25904,
+      "sha256": "09941fb1c169c38fd414536b37690057fc01b3117a5c63dd6571186540c8f370",
+      "content_type": "font/woff2",
+      "captured_at": "2026-08-15T21:25:13Z"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "normalized_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "redirects": [],
+      "resource_type": "font",
+      "request_class": "static",
+      "data_type": "font",
+      "required": false,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:5",
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "first_seen": "desktop:load",
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "bytes": 48256,
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "content_type": "font/woff2",
+      "captured_at": "2026-08-15T21:25:13Z"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "normalized_url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "redirects": [],
+      "resource_type": "font",
+      "request_class": "static",
+      "data_type": "font",
+      "required": false,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:6",
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "first_seen": "desktop:load",
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516",
+      "path": "_external/fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "bytes": 22288,
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d",
+      "content_type": "font/woff2",
+      "captured_at": "2026-08-15T21:25:13Z"
+    },
+    {
+      "url": "https://sly.systems/assets/index-BfiDsVd2.css",
+      "normalized_url": "https://sly.systems/assets/index-BfiDsVd2.css",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://sly.systems/assets/index-BfiDsVd2.css",
+      "redirects": [],
+      "resource_type": "stylesheet",
+      "request_class": "static",
+      "data_type": "stylesheet",
+      "required": true,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "first_seen": "desktop:load",
+      "attempt_id": "20260815T212424Z-3768903-1786829064962998416",
+      "path": "assets/index-BfiDsVd2.css",
+      "bytes": 172710,
+      "sha256": "8c7bf4df0b6160f4a3f981ba2de00b15fc499f2a1a4204738047a908f8675074",
+      "content_type": "text/css; charset=utf-8",
+      "captured_at": "2026-08-15T21:24:25Z"
+    },
+    {
+      "url": "https://sly.systems/assets/index-C--Jvz_w.js",
+      "normalized_url": "https://sly.systems/assets/index-C--Jvz_w.js",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://sly.systems/assets/index-C--Jvz_w.js",
+      "redirects": [],
+      "resource_type": "script",
+      "request_class": "static",
+      "data_type": "script",
+      "required": true,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "first_seen": "desktop:load",
+      "attempt_id": "20260815T212424Z-3768903-1786829064962998416",
+      "path": "assets/index-C--Jvz_w.js",
+      "bytes": 1568584,
+      "sha256": "b5a8fa5a1f29a78eac39277fef0349d691f23187823b7a6426b7ef089f8e6636",
+      "content_type": "application/javascript",
+      "captured_at": "2026-08-15T21:24:25Z"
+    },
+    {
+      "url": "https://sly.systems/manifest.json",
+      "normalized_url": "https://sly.systems/manifest.json",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://sly.systems/api/apps/manifests/6a38b9e683468637b6118425/manifest.json",
+      "redirects": [
+        {
+          "from": "https://sly.systems/manifest.json",
+          "to": "https://sly.systems/api/apps/manifests/6a38b9e683468637b6118425/manifest.json",
+          "status": 302,
+          "allowed": true,
+          "scope": "primary",
+          "provider": null,
+          "reason": "primary origin"
+        }
+      ],
+      "resource_type": "fetch",
+      "request_class": "static",
+      "data_type": "web_manifest",
+      "required": false,
+      "source_graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "first_seen": "desktop:metadata",
+      "attempt_id": "20260815T212424Z-3768903-1786829064962998416",
+      "path": "manifest.json",
+      "bytes": 624,
+      "sha256": "9e22e0ab682d80077e9130103f4aadb6aabe825feb2f8e7ddd43765a732ef4ef",
+      "content_type": "application/json",
+      "captured_at": "2026-08-15T21:24:25Z"
+    }
+  ],
+  "probed": [],
+  "failed": [
+    {
+      "url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fintelligentsoundua%2Fgals-yellow-last-pines-remix-1&auto_play=false&show_artwork=false&visual=false",
+      "method": "GET",
+      "resource_type": "document",
+      "required": true,
+      "error": "Required resource was not eligible for automatic acquisition: destination is outside the authorized origin/host set",
+      "classification": "external",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "attempt_id": "20260815T212424Z-3768903-1786829064962998416"
+    },
+    {
+      "url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fintelligentsoundua%2Fgals-yellow-last-pines-remix-1&auto_play=false&show_artwork=false&visual=false",
+      "method": "GET",
+      "resource_type": "document",
+      "required": true,
+      "error": "Required resource was not eligible for automatic acquisition: destination is outside the authorized origin/host set",
+      "classification": "external",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516"
+    },
+    {
+      "url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fintelligentsoundua%2Fgals-yellow-last-pines-remix-1&auto_play=false&show_artwork=false&visual=false",
+      "method": "GET",
+      "resource_type": "document",
+      "required": true,
+      "error": "Required resource was not eligible for automatic acquisition: destination is outside the authorized origin/host set",
+      "classification": "external",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:7",
+      "attempt_id": "20260815T212513Z-3771861-1786829113621709516"
+    }
+  ],
+  "skipped_external": [
+    {
+      "url": "https://api-widget.soundcloud.com/resolve?url=https%3A//api.soundcloud.com/tracks/1426838842&format=json&client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu&app_version=1786605687",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://api-widget.soundcloud.com/resolve?url=https%3A//soundcloud.com/intelligentsoundua/gals-yellow-last-pines-remix-1&format=json&client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu&app_version=1786605687",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://api.motion.dev/score/badge?url=sly.clubop.site",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://dwt.soundcloud.com/tags.js",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/10c4e0c0f_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/338b2227d_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/38ed793cb_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/5e4f14ab2_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/66e8e7997_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/aa01ac71b_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/cb211c8be_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/cb8fbcc2b_generated_image.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/085e9f9ea_21-story-Maurices-teaser-1280x720.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/110cc9e3f_17-story-MIA-x-Base44-1280x720.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/14b1921fd_02-hero-letter-L-1280x720.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/2e068e838_03-hero-letter-Y-1280x720.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/38243bc4d_bailar-sly-showcase-6s.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/3ac941f36_18-story-Concept-07231-1280x720.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/4b0bc8e01_Jeremy-Gardner-SLY-8s-1600x1200.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/52998e764_FlipBot_WEB.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/5bf36ae83_12-feature-DCFdash-1280x720.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/5d1f6e23e_25-inline-Cover-clip-1-960x540.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/603077032_scansly.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/7a6f0ba06_GEMFLOW-hero-8s.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/d69164240_DosPinos-hero-8s.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/eff3e53ec_01-hero-letter-S-1280x720.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/f26382a8a_VUEintro01_WEB.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://media.base44.com/videos/public/6a38b9e683468637b6118425/f7beea690_ONE44-hero-7s.mp4",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fintelligentsoundua%2Fgals-yellow-last-pines-remix-1&auto_play=false&show_artwork=false&visual=false",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://w.soundcloud.com/player/api.js",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://wave.sndcdn.com/CppSGDo1GmsD_m.json",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://widget.sndcdn.com/assets/images/logo-200x120-3190df52.png",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-0-a61c0e7211ef.js",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-1-2a294ec9db9c.js",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-5-cd8b86ff1046.js",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-8-b64870f16fec.js",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://widget.sndcdn.com/widget-9-a34f7755ab5e.js",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fintelligentsoundua%2Fgals-yellow-last-pines-remix-1&auto_play=false&show_artwork=false&visual=false",
+      "allowed": false,
+      "scope": "external",
+      "reason": "destination is outside the authorized origin/host set",
+      "provider": null,
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/extra-urls.jsonl:7",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    }
+  ],
+  "skipped_provider_assets": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap",
+      "allowed": false,
+      "scope": "provider",
+      "reason": "provider-hosted resources are not auto-acquired",
+      "provider": "Google Fonts (openly licensed)",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      "allowed": false,
+      "scope": "provider",
+      "reason": "provider-hosted resources are not auto-acquired",
+      "provider": "Google Fonts (openly licensed)",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "allowed": false,
+      "scope": "provider",
+      "reason": "provider-hosted resources are not auto-acquired",
+      "provider": "Google Fonts (openly licensed)",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7.woff2",
+      "allowed": false,
+      "scope": "provider",
+      "reason": "provider-hosted resources are not auto-acquired",
+      "provider": "Google Fonts (openly licensed)",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "allowed": false,
+      "scope": "provider",
+      "reason": "provider-hosted resources are not auto-acquired",
+      "provider": "Google Fonts (openly licensed)",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+      "allowed": false,
+      "scope": "provider",
+      "reason": "provider-hosted resources are not auto-acquired",
+      "provider": "Google Fonts (openly licensed)",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "action": "classify: Embed / Kept External / User-Supplied Baseline Asset / Recreated From Observation / Blocked"
+    }
+  ],
+  "skipped_other": [
+    {
+      "reason": "request method is not GET/HEAD",
+      "method": "POST",
+      "url": "https://sly.systems/api/app-logs/6a38b9e683468637b6118425/log-user-in-app/home",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "request method is not GET/HEAD",
+      "method": "POST",
+      "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/analytics/track/batch",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "capture classification disallows automatic acquisition: personalized_evidence_observed_in_one_or_more_responses",
+      "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/ShowcaseApp?sort=sort_order&limit=60",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "non-2xx capture/probe status (401)",
+      "url": "https://sly.systems/api/apps/6a38b9e683468637b6118425/entities/User/me",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "capture classification disallows automatic acquisition: personalized_evidence_observed_in_one_or_more_responses",
+      "url": "https://sly.systems/api/apps/public/prod/public-settings/by-id/6a38b9e683468637b6118425",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "request method is not GET/HEAD",
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1971793499.1786829018&gtm=45be68c1za200xec&fmt=8",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "request method is not GET/HEAD",
+      "method": "POST",
+      "url": "https://api-widget.soundcloud.com/me?client_id=gqKBMSuBw5rbN9rDRYPqKNvF17ovlObu",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "request method is not GET/HEAD",
+      "method": "POST",
+      "url": "https://dwt.soundcloud.com/js/",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "request method is not GET/HEAD",
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=1&auid=1971793499.1786829018&dt=SLY%20%E2%80%94%20Custom%20AI%20Software%20%26%20Automation%20for%20Growing%20Businesses%20%7C%20Miami%20AI%20Product%20Group&tid=AW-18384236785&en=page_view&dl=https%3A%2F%2Fsly.systems%2F&scrsrc=www.googletagmanager.com&rnd=679871583.1786829018&navt=n&npa=1&gtm=45be68c1za200xec&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938466~115938468~118131810~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786829017863&tfd=2782&tids=AW-18384236785&fmt=8",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "telemetry is never auto-acquired",
+      "url": "https://www.googletagmanager.com/gtag/js?id=AW-18384236785",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "capture classification disallows automatic acquisition: personalized_evidence_observed_in_one_or_more_responses",
+      "url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "capture classification disallows automatic acquisition: personalized_evidence_observed_in_one_or_more_responses",
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    },
+    {
+      "reason": "capture classification disallows automatic acquisition: personalized_evidence_observed_in_one_or_more_responses",
+      "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "source_graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+    }
+  ],
+  "metadata_references": [
+    {
+      "url": "https://media.base44.com/images/public/69f1a258fba70dbfa61e4a23/e6201a5a5_brand_upload_logo.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=icon]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ],
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/f80c2e04f_generated_image.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_image",
+      "source": "json-ld:image",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ],
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/212e11dbc_logo.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_logo",
+      "source": "json-ld:logo",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ],
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/4e2c52326_ChatGPTImageJun21202612_26_13AM.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "json_ld_logo",
+      "source": "json-ld:logo",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ],
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png/v1/fill/w_1200,h_630/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "open_graph_image",
+      "source": "meta[og:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ],
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+    },
+    {
+      "url": "https://media.base44.com/images/public/6a38b9e683468637b6118425/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png/v1/fill/w_1200,h_630/32c4b2a20_ChatGPTImageJun21202612_26_13AM.png",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "twitter_image",
+      "source": "meta[twitter:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop"
+      ],
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+    },
+    {
+      "url": "https://sly.systems/manifest.json",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "web_manifest",
+      "source": "link[rel=manifest]",
+      "observed": true,
+      "probed": true,
+      "captured": true,
+      "states": [
+        "Observed",
+        "Probed",
+        "Captured"
+      ],
+      "probe": {
+        "status": 0,
+        "content_type": "",
+        "final_url": "https://sly.systems/manifest.json",
+        "method": "GET",
+        "metadata_only": true,
+        "response_type": "opaqueredirect",
+        "redirected": false,
+        "redirect_mode": "manual",
+        "declared_length": null,
+        "actual_bytes": null,
+        "skipped_reason": "manual_redirect_not_followed"
+      },
+      "passes": [
+        "desktop"
+      ],
+      "graph": "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json",
+      "graph_sha256": "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8",
+      "captured_path": "manifest.json",
+      "sha256": "9e22e0ab682d80077e9130103f4aadb6aabe825feb2f8e7ddd43765a732ef4ef"
+    }
+  ],
+  "local_modifications": [],
+  "construction_provenance": [],
+  "generated_artifacts": [],
+  "attempts": [
+    {
+      "id": "20260815T212424Z-3768903-1786829064962998416",
+      "started_at": "2026-08-15T21:24:24Z",
+      "graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "capture_graph_sha256": [
+        "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+      ],
+      "resume": false,
+      "downloaded": 4,
+      "reused": 0,
+      "probed": 0,
+      "failed": 1,
+      "required_failures": 1,
+      "integrity_errors": 0,
+      "status": "failed_required",
+      "finished_at": "2026-08-15T21:24:25Z"
+    },
+    {
+      "id": "20260815T212513Z-3771861-1786829113621709516",
+      "started_at": "2026-08-15T21:25:13Z",
+      "graphs": [
+        "/home/openclaw/Coding/ Cloning Sites/clone-website/slysystems/reports/home.asset-graph.json"
+      ],
+      "capture_graph_sha256": [
+        "b190389c9f9634ba09f35c9fc5ffce5b0dc934d97ea398ba9a2f97b40921b7b8"
+      ],
+      "resume": true,
+      "downloaded": 6,
+      "reused": 4,
+      "probed": 0,
+      "failed": 2,
+      "required_failures": 2,
+      "integrity_errors": 0,
+      "status": "failed_required",
+      "finished_at": "2026-08-15T21:25:13Z"
+    }
+  ],
+  "page": "https://sly.systems/",
+  "result": "failed_required",
+  "blocked_by_challenge": false,
+  "summary": {
+    "downloaded_total": 10,
+    "probed_total": 0,
+    "failed_history_total": 3,
+    "skipped_external_total": 38,
+    "skipped_provider_assets_total": 6,
+    "skipped_other_total": 13,
+    "metadata_references_total": 7,
+    "current_attempt": {
+      "downloaded": 6,
+      "reused": 4,
+      "probed": 0,
+      "failed": 2,
+      "required_failures": 2,
+      "integrity_errors": 0
+    }
+  }
+}

@@ -1,0 +1,576 @@
+[
+    {
+        "name": "i75i2omrjqvzhjwxg3gckrqhv2buv64w._domainkey",
+        "records": [
+            {
+                "content": "i75i2omrjqvzhjwxg3gckrqhv2buv64w.dkim.amazonses.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "5jxz6h7j5e7gubdqxafknp3rjhslhnhm._domainkey",
+        "records": [
+            {
+                "content": "5jxz6h7j5e7gubdqxafknp3rjhslhnhm.dkim.amazonses.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "mail._domainkey",
+        "records": [
+            {
+                "content": "\"k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeMVIzrCa3T14JsNY0IRv5/2V1/v2itlviLQBwXsa7shBD6TrBkswsFUToPyMRWC9tbR/5ey0nRBH0ZVxp+lsmTxid2Y2z+FApQ6ra2VsXfbJP3HE6wAO0YTVEJt1TmeczhEd2Jiz/fcabIISgXEdSpTYJhb0ct0VJRxcg4c8c7wIDAQAB\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "google._domainkey",
+        "records": [
+            {
+                "content": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqfE4dxMCt3Xf9axtTNre+KOCQvRNokAUZ0Ob0/EhWfgjBh/e7IUWlekF7C7aFGZAurMMqrpVyk7Ft0/Ef18aBWekOvYbCirypIiAZBeCeZIolU1rvZ6oht0TYInOPuEfMYoFbpvHww1fmp4wKCD9CJHln4Ov53RfaEbNb75Nf/c7UAvAtmoZskgS16AI/x8QVRGSEOk616WMjpzl8YwlVRvoKqFT2PgX9BTJ1SRYA9kiSVDsILz8dyxYERO6ayyvJTX+jd+bo0YmZzf7YHg6clGDjyyrNdr03j6Wz5Pwi+SyJwpN/8nLojiA7hA+IKmF836KdqptkS+YquUrl+gz5QIDAQAB\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 300,
+        "type": "TXT"
+    },
+    {
+        "name": "www",
+        "records": [
+            {
+                "content": "proxy-ssl.webflow.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 300,
+        "type": "CNAME"
+    },
+    {
+        "name": "_webflow",
+        "records": [
+            {
+                "content": "\"one-time-verification=3e6537ed-d13a-4a68-a7f3-e2e774d878ae\"",
+                "is_disabled": false
+            },
+            {
+                "content": "\"one-time-verification=b5e4536e-af4f-4f19-98b9-aa0985f8ec7f\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 300,
+        "type": "TXT"
+    },
+    {
+        "name": "zmail._domainkey.management",
+        "records": [
+            {
+                "content": "\"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5WG9/afaa2TNd214xtkiO/7pvqWrUxK5lcp4LkH1vMhc3iVg3lXYoGnAOoCV3Q6wALXU5dKQIWeLfRkxsTC1DSihU2EKjt+2vQeAUTh3/2tmyjgzbzB8+uwPW7USHPOnT/wRR4ObsNifaAgWN58eusrcNLYCr8+QaCdjLyJcXVQIDAQAB\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "_dmarc.management",
+        "records": [
+            {
+                "content": "\"v=DMARC1; p=none; rua=mailto:ella@pedicelmarketing.com; ruf=mailto:ella@pedicelmarketing.com; sp=none; adkim=r; aspf=r\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "management",
+        "records": [
+            {
+                "content": "\"zoho-verification=zb63236845.zmverify.zoho.eu\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "management",
+        "records": [
+            {
+                "content": "10 mx.zoho.eu.",
+                "is_disabled": false
+            },
+            {
+                "content": "20 mx2.zoho.eu.",
+                "is_disabled": false
+            },
+            {
+                "content": "50 mx3.zoho.eu.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "MX"
+    },
+    {
+        "name": "partners",
+        "records": [
+            {
+                "content": "\"google-site-verification=TmUT6al9DmcxB1iDQAHxoA24k-w1WM7DM9TFzn4vN6s\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "partners",
+        "records": [
+            {
+                "content": "10 SMTP.GOOGLE.COM.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "MX"
+    },
+    {
+        "name": "mailers",
+        "records": [
+            {
+                "content": "pedicelmarketing.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "zmail._domainkey.partnerships",
+        "records": [
+            {
+                "content": "\"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAgtH1P0zRQtsP5X22if9cwAwQbRYWoVw7Hz8Lqd3Ra2ZPvZBw0KKR/fQrtWBlOPPuD2pVw7y9gNPh9l3L+hn58Heng4De8QmzdvkXkPO2C6oUWjVmFe7ArWMf+13JZKJAwhNhmYk1AivkIZt+lJUMC7l1UCWRfKYztic6NyVs2QIDAQAB\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 300,
+        "type": "TXT"
+    },
+    {
+        "name": "zb78920975.partnerships",
+        "records": [
+            {
+                "content": "zmverify.zoho.eu.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "partnerships",
+        "records": [
+            {
+                "content": "\"zoho-verification=zb78920975.zmverify.zoho.eu\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "operations",
+        "records": [
+            {
+                "content": "cedar-galloway.aplosites.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "teams",
+        "records": [
+            {
+                "content": "\"v=spf1 include:amazonses.com ~all\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "teams",
+        "records": [
+            {
+                "content": "10 feedback-smtp.eu-north-1.amazonses.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "MX"
+    },
+    {
+        "name": "outreachs",
+        "records": [
+            {
+                "content": "watch.saleshandy.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "zmail._domainkey.sales",
+        "records": [
+            {
+                "content": "\"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCDj0gbJ5BXOuXJcgElwLBaNDLPSIPC4lUrkOLeGmyp3A0dNdE0Hp67NuUBDC318ykSOAwkuSmhbiKEku3Qf37pUNAD0rOKmUImIyZTUygjh4gVh7vsCJZLqQo/Zt0SDNwet9t1Ed7nuWPKnKDd5MJqxT4sqJX/IXtJJhdiyng6mwIDAQAB\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "_dmarc.sales",
+        "records": [
+            {
+                "content": "\"v=DMARC1; p=none; rua=mailto:ella@pedicelmarketing.com; ruf=mailto:ella@pedicelmarketing.com; sp=none; adkim=r; aspf=r\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "sales",
+        "records": [
+            {
+                "content": "2a02:4780:a:1757:0:19ef:ae:3",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 1800,
+        "type": "AAAA"
+    },
+    {
+        "name": "sales",
+        "records": [
+            {
+                "content": "\"v=spf1 include:zohomail.eu ~all\"",
+                "is_disabled": false
+            },
+            {
+                "content": "\"zoho-verification=zb60140668.zmverify.zoho.eu\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "sales",
+        "records": [
+            {
+                "content": "10 mx.zoho.eu.",
+                "is_disabled": false
+            },
+            {
+                "content": "20 mx2.zoho.eu.",
+                "is_disabled": false
+            },
+            {
+                "content": "50 mx3.zoho.eu.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "MX"
+    },
+    {
+        "name": "sales",
+        "records": [
+            {
+                "content": "194.36.184.59",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 1800,
+        "type": "A"
+    },
+    {
+        "name": "ftp",
+        "records": [
+            {
+                "content": "194.36.184.59",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 1800,
+        "type": "A"
+    },
+    {
+        "name": "promotion",
+        "records": [
+            {
+                "content": "23.21.157.88",
+                "is_disabled": false
+            },
+            {
+                "content": "23.21.234.173",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "A"
+    },
+    {
+        "name": "n8n",
+        "records": [
+            {
+                "content": "165.22.95.184",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "A"
+    },
+    {
+        "name": "3dbluvxkmaqx.team",
+        "records": [
+            {
+                "content": "gv-r4jkfeztnvpon3.dv.googlehosted.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "_webflow.team",
+        "records": [
+            {
+                "content": "\"one-time-verification=7860356c-2312-4cbc-a30f-e9034b714caa\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "team",
+        "records": [
+            {
+                "content": "1 SMTP.GOOGLE.COM.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "MX"
+    },
+    {
+        "name": "zmail._domainkey.outreach",
+        "records": [
+            {
+                "content": "\"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwX+02qZGXubuTDTh5xsIupRHlUk5NoCsK5GD8/Sfxe6wViU/cHXaCTMvlXN5oN/EWq0CWJ2rkxxMZy830yIVpC1E1HwWz6ir0y/hR64XL/YlLdYHkSArYu9B5J/kClwiTdbkuoEWsGrHSh9mLtRAyPQOeuOeRb55AzZ+Mtnv7fwIDAQAB\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "_dmarc.outreach",
+        "records": [
+            {
+                "content": "\"v=DMARC1; p=none\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 3600,
+        "type": "TXT"
+    },
+    {
+        "name": "zb79726021.outreach",
+        "records": [
+            {
+                "content": "zmverify.zoho.eu.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "outreach",
+        "records": [
+            {
+                "content": "2a02:4780:a:1757:0:19ef:ae:3",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 1800,
+        "type": "AAAA"
+    },
+    {
+        "name": "outreach",
+        "records": [
+            {
+                "content": "\"v=spf1 include:zohomail.eu ~all\"",
+                "is_disabled": false
+            },
+            {
+                "content": "\"zoho-verification=zb79726021.zmverify.zoho.eu\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "outreach",
+        "records": [
+            {
+                "content": "10 mx.zoho.eu.",
+                "is_disabled": false
+            },
+            {
+                "content": "20 mx2.zoho.eu.",
+                "is_disabled": false
+            },
+            {
+                "content": "50 mx3.zoho.eu.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "MX"
+    },
+    {
+        "name": "outreach",
+        "records": [
+            {
+                "content": "194.36.184.59",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "A"
+    },
+    {
+        "name": "mailing",
+        "records": [
+            {
+                "content": "\"google-site-verification=X-HTvKpDk-IfwiAvUf_BgpItUs5iK-gcYd0lHqNGZ3k\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "emailtracking",
+        "records": [
+            {
+                "content": "open.sleadtrack.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "CNAME"
+    },
+    {
+        "name": "_dmarc",
+        "records": [
+            {
+                "content": "\"v=DMARC1; p=none; rua=mailto:spalacio@pedicelmarketing.com\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "@",
+        "records": [
+            {
+                "content": "proxy-ssl.webflow.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 300,
+        "type": "ALIAS"
+    },
+    {
+        "name": "@",
+        "records": [
+            {
+                "content": "\"v=spf1 include:_spf.google.com ~all\"",
+                "is_disabled": false
+            },
+            {
+                "content": "\"zoho-verification=zb00341246.zmverify.zoho.eu\"",
+                "is_disabled": false
+            },
+            {
+                "content": "\"brevo-code:23d7a79504e80ef0200297c3b39c0e3a\"",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "TXT"
+    },
+    {
+        "name": "@",
+        "records": [
+            {
+                "content": "1 aspmx.l.google.com.",
+                "is_disabled": false
+            },
+            {
+                "content": "10 alt3.aspmx.l.google.com.",
+                "is_disabled": false
+            },
+            {
+                "content": "10 alt4.aspmx.l.google.com.",
+                "is_disabled": false
+            },
+            {
+                "content": "5 alt1.aspmx.l.google.com.",
+                "is_disabled": false
+            },
+            {
+                "content": "5 alt2.aspmx.l.google.com.",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 14400,
+        "type": "MX"
+    },
+    {
+        "name": "@",
+        "records": [
+            {
+                "content": "75.2.70.75",
+                "is_disabled": false
+            },
+            {
+                "content": "99.83.190.102",
+                "is_disabled": false
+            }
+        ],
+        "ttl": 300,
+        "type": "A"
+    }
+]

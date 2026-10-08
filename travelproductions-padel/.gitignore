@@ -1,0 +1,18 @@
+# Same reasoning as travelproductions/.gitignore: we version the record and the
+# work, not third-party payload and not regenerable evidence.
+#
+# What IS versioned here: the six built documents, the client's own imagery
+# under site/wp-content/uploads/stock/, the tools that produce the build, the
+# architecture document, and the reports.
+
+# Playwright screenshots. ~220 MB of full-page PNGs across the viewport runs,
+# and every one is regenerable with viewports.py. The machine-readable
+# viewport-results.json for each run IS kept — that is the actual evidence.
+reports/viewports*/**/*.png
+
+# The pre-content snapshot is the source's own Spanish documents, held only so
+# the copy pass can be re-run from a clean state. Reproducible from
+# travelproductions/mirror via tools/restructure.py.
+.pre-recontent/
+
+__pycache__/

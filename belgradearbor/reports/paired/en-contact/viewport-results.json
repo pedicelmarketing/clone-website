@@ -1,0 +1,2800 @@
+{
+  "allowed_navigation_origins": [
+    "http://127.0.0.1:8100",
+    "https://belgradearbor.rs"
+  ],
+  "allowed_telemetry_urls": [],
+  "generated_at": "2026-08-14T12:19:17Z",
+  "requested_urls": [
+    "https://belgradearbor.rs/en/contact",
+    "http://127.0.0.1:8100/en/contact"
+  ],
+  "requested_viewports": [
+    "desktop",
+    "tablet",
+    "mobile"
+  ],
+  "results": [
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "source",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://belgradearbor.rs"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "final_url": "https://belgradearbor.rs/en/contact",
+      "finished_at": "2026-08-14T12:19:25Z",
+      "http_errors": [],
+      "initial_response_url": "https://belgradearbor.rs/en/contact",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://belgradearbor.rs/en/contact"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=211208347.1786709958&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=211208347.1786709958&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=211208347.1786709958&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=211208347.1786709958&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&ae=g&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938469~118131809~118897920~118897930~119527020~120385423&tft=1786709958238&tfd=623&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&ae=g&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938469~118131809~118897920~118897930~119527020~120385423&tft=1786709958238&tfd=623&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&ae=g&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938469~118131809~118897920~118897930~119527020~120385423&tft=1786709958238&tfd=623&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&ae=g&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938469~118131809~118897920~118897930~119527020~120385423&tft=1786709958238&tfd=623&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&tft=1786709959081&tfd=1466&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&tft=1786709959081&tfd=1466&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&tft=1786709959081&tfd=1466&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&tft=1786709959081&tfd=1466&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709958479&cv=11&fst=1786709958479&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=17&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=211208347.1786709958&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709958479&cv=11&fst=1786709958479&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=17&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=211208347.1786709958&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709958479&cv=11&fst=1786709958479&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=17&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=211208347.1786709958&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709958479&cv=11&fst=1786709958479&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=17&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=211208347.1786709958&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709957985&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=688281352&_eu=AAAAAGAC&are=1&cid=764692840.1786709959&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~119793972~120385422&sid=1786709958&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1464",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709957985&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=688281352&_eu=AAAAAGAC&are=1&cid=764692840.1786709959&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~119793972~120385422&sid=1786709958&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1464",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709957985&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=688281352&_eu=AAAAAGAC&are=1&cid=764692840.1786709959&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~119793972~120385422&sid=1786709958&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1464"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709957985&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=688281352&_eu=AAAAAGAC&are=1&cid=764692840.1786709959&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~119793972~120385422&sid=1786709958&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1464"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=211208347.1786709958&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&ae=g&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938465~115938469~118131809~118897920~118897930~119527020~120385423&tft=1786709958238&tfd=623&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=211208347.1786709958&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1231602401.1786709958&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&tft=1786709959081&tfd=1466&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709958479&cv=11&fst=1786709958479&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118131809~118395334~118897920~118897930~119367802~119367810~119527020~120125304~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=17&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=211208347.1786709958&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709957985&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=688281352&_eu=AAAAAGAC&are=1&cid=764692840.1786709959&ec_mode=a&frm=0&pscdl=noapi&rcb=1&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~119793972~120385422&sid=1786709958&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1464"
+        }
+      ],
+      "requested_url": "https://belgradearbor.rs/en/contact",
+      "requested_url_redacted": false,
+      "required": false,
+      "required_failures": [],
+      "required_reason": "explicit_paired_source_evidence",
+      "response_url": "https://belgradearbor.rs/en/contact",
+      "screenshot": "reports/paired/en-contact/belgradearbor.rs_en_contact__0ff431c427__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 136
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1036,
+          "virtualSignals": [],
+          "windowRange": 136,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1787,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 410,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 51,
+          "scrollHeight": 1036
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 7,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T12:19:17Z",
+      "status": 200,
+      "success": true,
+      "title": "Contact | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "source",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://belgradearbor.rs"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "final_url": "https://belgradearbor.rs/en/contact",
+      "finished_at": "2026-08-14T12:19:27Z",
+      "http_errors": [],
+      "initial_response_url": "https://belgradearbor.rs/en/contact",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://belgradearbor.rs/en/contact"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=46304788.1786709966&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=46304788.1786709966&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=46304788.1786709966&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=46304788.1786709966&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&ae=g&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776796~118897920~118897930~119527020~120385422&tft=1786709965914&tfd=687&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&ae=g&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776796~118897920~118897930~119527020~120385422&tft=1786709965914&tfd=687&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&ae=g&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776796~118897920~118897930~119527020~120385422&tft=1786709965914&tfd=687&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&ae=g&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776796~118897920~118897930~119527020~120385422&tft=1786709965914&tfd=687&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709966700&tfd=1472&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709966700&tfd=1472&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709966700&tfd=1472&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709966700&tfd=1472&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709966109&cv=11&fst=1786709966109&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=46304788.1786709966&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709966109&cv=11&fst=1786709966109&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=46304788.1786709966&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709966109&cv=11&fst=1786709966109&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=46304788.1786709966&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709966109&cv=11&fst=1786709966109&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=46304788.1786709966&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709965671&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=362218175&_eu=AAAAAGAC&are=1&cid=462848738.1786709967&ec_mode=a&frm=0&pscdl=noapi&rcb=15&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786709966&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1467",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709965671&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=362218175&_eu=AAAAAGAC&are=1&cid=462848738.1786709967&ec_mode=a&frm=0&pscdl=noapi&rcb=15&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786709966&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1467",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709965671&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=362218175&_eu=AAAAAGAC&are=1&cid=462848738.1786709967&ec_mode=a&frm=0&pscdl=noapi&rcb=15&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786709966&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1467"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709965671&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=362218175&_eu=AAAAAGAC&are=1&cid=462848738.1786709967&ec_mode=a&frm=0&pscdl=noapi&rcb=15&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786709966&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1467"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=46304788.1786709966&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&ae=g&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~117776796~118897920~118897930~119527020~120385422&tft=1786709965914&tfd=687&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=46304788.1786709966&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=2110995889.1786709966&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709966700&tfd=1472&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709966109&cv=11&fst=1786709966109&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~117776796~118897920~118897930~119367802~119367810~119527019~120385422&u_w=768&u_h=1024&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=46304788.1786709966&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709965671&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=362218175&_eu=AAAAAGAC&are=1&cid=462848738.1786709967&ec_mode=a&frm=0&pscdl=noapi&rcb=15&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786709966&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1467"
+        }
+      ],
+      "requested_url": "https://belgradearbor.rs/en/contact",
+      "requested_url_redacted": false,
+      "required": false,
+      "required_failures": [],
+      "required_reason": "explicit_paired_source_evidence",
+      "response_url": "https://belgradearbor.rs/en/contact",
+      "screenshot": "reports/paired/en-contact/belgradearbor.rs_en_contact__0ff431c427__tablet__sw-allow.png",
+      "scroll": {
+        "mechanism": "none",
+        "observations": {},
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1059,
+          "virtualSignals": [],
+          "windowRange": 35,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 0,
+        "steps_requested": 8,
+        "warnings": [
+          "No scrollable range or virtual-scroll signal was detected."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1578,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 409,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 51,
+          "scrollHeight": 1059
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 6,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T12:19:25Z",
+      "status": 200,
+      "success": true,
+      "title": "Contact | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0.002,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "consent_present",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [],
+      "context": "source",
+      "correlated_console_errors": [],
+      "document_origins": [
+        "https://belgradearbor.rs"
+      ],
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0.002,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "consent_present",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "final_url": "https://belgradearbor.rs/en/contact",
+      "finished_at": "2026-08-14T12:19:34Z",
+      "http_errors": [],
+      "initial_response_url": "https://belgradearbor.rs/en/contact",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "https://belgradearbor.rs/en/contact"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1797596821.1786709968&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1797596821.1786709968&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1797596821.1786709968&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1797596821.1786709968&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709968296&tfd=612&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709968296&tfd=612&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709968296&tfd=612&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709968296&tfd=612&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709968499&cv=11&fst=1786709968499&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=7&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1797596821.1786709968&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709968499&cv=11&fst=1786709968499&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=7&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1797596821.1786709968&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709968499&cv=11&fst=1786709968499&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=7&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1797596821.1786709968&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709968499&cv=11&fst=1786709968499&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=7&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1797596821.1786709968&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709969101&tfd=1417&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709969101&tfd=1417&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709969101&tfd=1417&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709969101&tfd=1417&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "source_observation",
+          "console_message": null,
+          "context": "source",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709968022&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=339154083&_eu=AAAAAGAC&are=1&cid=679230231.1786709969&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709968&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1416",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709968022&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=339154083&_eu=AAAAAGAC&are=1&cid=679230231.1786709969&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709968&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1416",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709968022&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=339154083&_eu=AAAAAGAC&are=1&cid=679230231.1786709969&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709968&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1416"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709968022&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=339154083&_eu=AAAAAGAC&are=1&cid=679230231.1786709969&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709968&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1416"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0.002,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "https://belgradearbor.rs/en/contact",
+        "state": "consent_present",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1797596821.1786709968&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709968296&tfd=612&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709968499&cv=11&fst=1786709968499&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&rcb=7&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1797596821.1786709968&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=0&auid=1797596821.1786709968&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=1930960976.1786709968&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385422&tft=1786709969101&tfd=1417&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709968022&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=339154083&_eu=AAAAAGAC&are=1&cid=679230231.1786709969&ec_mode=a&frm=0&pscdl=noapi&rcb=0&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709968&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1416"
+        }
+      ],
+      "requested_url": "https://belgradearbor.rs/en/contact",
+      "requested_url_redacted": false,
+      "required": false,
+      "required_failures": [],
+      "required_reason": "explicit_paired_source_evidence",
+      "response_url": "https://belgradearbor.rs/en/contact",
+      "screenshot": "reports/paired/en-contact/belgradearbor.rs_en_contact__0ff431c427__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 321
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1165,
+          "virtualSignals": [],
+          "windowRange": 321,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1835,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 409,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 50,
+          "scrollHeight": 1165
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 7,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T12:19:27Z",
+      "status": 200,
+      "success": true,
+      "title": "Contact | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": []
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8100"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "final_url": "http://127.0.0.1:8100/en/contact",
+      "finished_at": "2026-08-14T12:19:41Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8100/en/contact",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8100/en/contact"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&ae=g&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119527019~120385422&tft=1786709975088&tfd=402&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&ae=g&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119527019~120385422&tft=1786709975088&tfd=402&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&ae=g&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119527019~120385422&tft=1786709975088&tfd=402&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&ae=g&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119527019~120385422&tft=1786709975088&tfd=402&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=779225857.1786709975&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=779225857.1786709975&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=779225857.1786709975&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=779225857.1786709975&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786709975923&tfd=1236&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786709975923&tfd=1236&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786709975923&tfd=1236&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786709975923&tfd=1236&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709975322&cv=11&fst=1786709975322&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=19&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=779225857.1786709975&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709975322&cv=11&fst=1786709975322&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=19&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=779225857.1786709975&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709975322&cv=11&fst=1786709975322&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=19&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=779225857.1786709975&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709975322&cv=11&fst=1786709975322&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=19&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=779225857.1786709975&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709974770&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=535700236&_eu=AAAAAGAC&are=1&cid=1547690335.1786709976&ec_mode=a&frm=0&pscdl=noapi&rcb=9&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709975&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1234",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709974770&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=535700236&_eu=AAAAAGAC&are=1&cid=1547690335.1786709976&ec_mode=a&frm=0&pscdl=noapi&rcb=9&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709975&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1234",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709974770&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=535700236&_eu=AAAAAGAC&are=1&cid=1547690335.1786709976&ec_mode=a&frm=0&pscdl=noapi&rcb=9&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709975&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1234"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709974770&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=535700236&_eu=AAAAAGAC&are=1&cid=1547690335.1786709976&ec_mode=a&frm=0&pscdl=noapi&rcb=9&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709975&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1234"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=13&frm=0&apvc=1&ae=g&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119527019~120385422&tft=1786709975088&tfd=402&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=779225857.1786709975&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=0&auid=779225857.1786709975&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=680219229.1786709975&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&tft=1786709975923&tfd=1236&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709975322&cv=11&fst=1786709975322&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119527020~120385422&u_w=1440&u_h=900&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=19&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=779225857.1786709975&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709974770&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=535700236&_eu=AAAAAGAC&are=1&cid=1547690335.1786709976&ec_mode=a&frm=0&pscdl=noapi&rcb=9&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709975&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1234"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8100/en/contact",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8100/en/contact",
+      "screenshot": "reports/paired/en-contact/127.0.0.1-8100_en_contact__cda77a4104__desktop__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 136
+        },
+        "profile": {
+          "innerHeight": 900,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1036,
+          "virtualSignals": [],
+          "windowRange": 136,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1856,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 410,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 46,
+          "scrollHeight": 1036
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 7,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T12:19:34Z",
+      "status": 200,
+      "success": false,
+      "title": "Contact | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      },
+      "viewport_name": "desktop",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8100"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "final_url": "http://127.0.0.1:8100/en/contact",
+      "finished_at": "2026-08-14T12:19:44Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8100/en/contact",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8100/en/contact"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385423&tft=1786709982287&tfd=296&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385423&tft=1786709982287&tfd=296&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385423&tft=1786709982287&tfd=296&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385423&tft=1786709982287&tfd=296&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=133673896.1786709982&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=133673896.1786709982&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=133673896.1786709982&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=133673896.1786709982&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709983077&tfd=1086&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709983077&tfd=1086&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709983077&tfd=1086&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709983077&tfd=1086&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709982538&cv=11&fst=1786709982538&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=1&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=133673896.1786709982&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709982538&cv=11&fst=1786709982538&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=1&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=133673896.1786709982&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709982538&cv=11&fst=1786709982538&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=1&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=133673896.1786709982&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709982538&cv=11&fst=1786709982538&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=1&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=133673896.1786709982&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709982057&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=554925940&_eu=AAAAAGAC&are=1&cid=1947122457.1786709983&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395335~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709982&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1063",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709982057&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=554925940&_eu=AAAAAGAC&are=1&cid=1947122457.1786709983&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395335~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709982&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1063",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709982057&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=554925940&_eu=AAAAAGAC&are=1&cid=1947122457.1786709983&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395335~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709982&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1063"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709982057&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=554925940&_eu=AAAAAGAC&are=1&cid=1947122457.1786709983&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395335~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709982&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1063"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "ok",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119527020~120385423&tft=1786709982287&tfd=296&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=133673896.1786709982&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&auid=133673896.1786709982&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=866197780.1786709982&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786709983077&tfd=1086&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709982538&cv=11&fst=1786709982538&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119367802~119367810~119527019~120385423&u_w=768&u_h=1024&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=1&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=133673896.1786709982&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709982057&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=554925940&_eu=AAAAAGAC&are=1&cid=1947122457.1786709983&ec_mode=a&frm=0&pscdl=noapi&rcb=2&sr=768x1024&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118395335~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786709982&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1063"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8100/en/contact",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+          ],
+          "url": "http://127.0.0.1:8100/en/contact?_rsc=bQfaZETtmDBiuz93"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8100/en/contact",
+      "screenshot": "reports/paired/en-contact/127.0.0.1-8100_en_contact__cda77a4104__tablet__sw-allow.png",
+      "scroll": {
+        "mechanism": "none",
+        "observations": {},
+        "profile": {
+          "innerHeight": 1024,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1059,
+          "virtualSignals": [],
+          "windowRange": 35,
+          "windowScrollY": 0
+        },
+        "returned_to_start": false,
+        "steps_completed": 0,
+        "steps_requested": 8,
+        "warnings": [
+          "No scrollable range or virtual-scroll signal was detected."
+        ]
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1813,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 409,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 49,
+          "scrollHeight": 1059
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 7,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T12:19:41Z",
+      "status": 200,
+      "success": false,
+      "title": "Contact | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      },
+      "viewport_name": "tablet",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    },
+    {
+      "access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0.002,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "consent_present",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "allowed_exceptions": [],
+      "capture_complete": true,
+      "capture_mode": "full_page",
+      "console_errors": [
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "context": "local",
+          "location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "context": "local",
+      "correlated_console_errors": [
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "network_resource_type": "fetch",
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "document_origins": [
+        "http://127.0.0.1:8100"
+      ],
+      "failure_reason": "required_runtime_failures_observed",
+      "final_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0.002,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "consent_present",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "final_url": "http://127.0.0.1:8100/en/contact",
+      "finished_at": "2026-08-14T12:19:50Z",
+      "http_errors": [
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "context": "local",
+          "method": "GET",
+          "resource_type": "fetch",
+          "status": 404,
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "initial_response_url": "http://127.0.0.1:8100/en/contact",
+      "initial_status": 200,
+      "navigation_responses": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:8100/en/contact"
+        }
+      ],
+      "observed_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1161636025.1786709985&gtm=45He68d0h2v9240485851za200zd9240485851xea&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://ad.doubleclick.net/ccm/s/collect?auid=1161636025.1786709985&gtm=45He68d0h2v9240485851za200zd9240485851xea&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://ad.doubleclick.net/ccm/s/collect?auid=1161636025.1786709985&gtm=45He68d0h2v9240485851za200zd9240485851xea&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1161636025.1786709985&gtm=45He68d0h2v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&ae=g&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68d0h2v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709984519&tfd=330&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&ae=g&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68d0h2v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709984519&tfd=330&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&ae=g&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68d0h2v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709984519&tfd=330&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&ae=g&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68d0h2v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709984519&tfd=330&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=0&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&tft=1786709985374&tfd=1185&tids=AW-17823718150&fmt=8",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=0&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&tft=1786709985374&tfd=1185&tids=AW-17823718150&fmt=8",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=0&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&tft=1786709985374&tfd=1185&tids=AW-17823718150&fmt=8"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=0&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&tft=1786709985374&tfd=1185&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709984782&cv=11&fst=1786709984782&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1161636025.1786709985&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709984782&cv=11&fst=1786709984782&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1161636025.1786709985&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://www.google.com/rmkt/collect/17823718150/?random=1786709984782&cv=11&fst=1786709984782&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1161636025.1786709985&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709984782&cv=11&fst=1786709984782&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1161636025.1786709985&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "observed_cross_origin_failure",
+          "console_message": null,
+          "context": "local",
+          "data_type": "request_body_or_mutation",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709984259&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=583328581&_eu=AAAAAGAC&are=1&cid=711696432.1786709985&ec_mode=a&frm=0&pscdl=noapi&rcb=16&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709984&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1183",
+          "http_status": null,
+          "http_status_history": [],
+          "initial_request_url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709984259&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=583328581&_eu=AAAAAGAC&are=1&cid=711696432.1786709985&ec_mode=a&frm=0&pscdl=noapi&rcb=16&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709984&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1183",
+          "method": "POST",
+          "request_chain_urls": [
+            "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709984259&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=583328581&_eu=AAAAAGAC&are=1&cid=711696432.1786709985&ec_mode=a&frm=0&pscdl=noapi&rcb=16&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709984&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1183"
+          ],
+          "request_class": "non_replayable",
+          "request_classification_reason": "method_post_must_not_be_replayed_as_get",
+          "request_failure": "net::ERR_ABORTED",
+          "required": false,
+          "resource_type": "fetch",
+          "same_origin": false,
+          "same_origin_basis_urls": [],
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709984259&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=583328581&_eu=AAAAAGAC&are=1&cid=711696432.1786709985&ec_mode=a&frm=0&pscdl=noapi&rcb=16&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709984&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1183"
+        }
+      ],
+      "page_errors": [],
+      "post_scroll_access": {
+        "blocked": false,
+        "evidence": {
+          "body_challenge_markers": [],
+          "body_error_markers": [],
+          "body_login_markers": [],
+          "consent_overlay_coverage": 0.002,
+          "http_status": 200,
+          "root_overflow_locked": false,
+          "selector_markers": [],
+          "title_challenge_markers": [],
+          "title_error_markers": [],
+          "title_login_markers": [],
+          "url_challenge_markers": [],
+          "url_login_markers": [],
+          "visible_password_fields": 0
+        },
+        "final_url": "http://127.0.0.1:8100/en/contact",
+        "state": "consent_present",
+        "title": "Contact | Belgrade Arbor"
+      },
+      "redirects": [],
+      "request_failures": [
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1161636025.1786709985&gtm=45He68d0h2v9240485851za200zd9240485851xea&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=1&ae=g&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68d0h2v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119527019~120125304~120385423&tft=1786709984519&tfd=330&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=0&auid=1161636025.1786709985&dt=Contact%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&scrsrc=www.googletagmanager.com&rnd=696449396.1786709985&navt=n&npa=0&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&tft=1786709985374&tfd=1185&tids=AW-17823718150&fmt=8"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786709984782&cv=11&fst=1786709984782&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118395334~118897920~118897930~119367802~119367810~119527020~120125305~120385423&u_w=390&u_h=844&url=http%3A%2F%2F127.0.0.1%3A8100%2Fen%2Fcontact&rcb=9&frm=0&tiba=Contact%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1161636025.1786709985&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5"
+        },
+        {
+          "failure": "net::ERR_ABORTED",
+          "method": "POST",
+          "resource_type": "fetch",
+          "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786709984259&em=tv.1~ec.e3&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=583328581&_eu=AAAAAGAC&are=1&cid=711696432.1786709985&ec_mode=a&frm=0&pscdl=noapi&rcb=16&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786709984&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fen%2Fcontact&dt=Contact%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1183"
+        }
+      ],
+      "requested_url": "http://127.0.0.1:8100/en/contact",
+      "requested_url_redacted": false,
+      "required": true,
+      "required_failures": [
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en?_rsc=0jGZgW6Ln_bTiVd1"
+        },
+        {
+          "allowed_exception": false,
+          "classification": "required_same_origin_http_error",
+          "console_location": {
+            "column_number": 0,
+            "line_number": 0,
+            "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          },
+          "console_message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "context": "local",
+          "data_type": "unknown_xhr_fetch",
+          "event_type": "network",
+          "exception_reason": null,
+          "final_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "http_status": 404,
+          "http_status_history": [
+            404
+          ],
+          "initial_request_url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1",
+          "method": "GET",
+          "request_chain_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "request_class": "data_api",
+          "request_classification_reason": "unknown_xhr_fetch_is_not_static",
+          "request_failure": null,
+          "required": true,
+          "resource_type": "fetch",
+          "same_origin": true,
+          "same_origin_basis_urls": [
+            "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+          ],
+          "url": "http://127.0.0.1:8100/en/privacy-policy?_rsc=0jGZgW6Ln_bTiVd1"
+        }
+      ],
+      "required_reason": "declared_local_viewport_cell",
+      "response_url": "http://127.0.0.1:8100/en/contact",
+      "screenshot": "reports/paired/en-contact/127.0.0.1-8100_en_contact__cda77a4104__mobile__sw-allow.png",
+      "scroll": {
+        "mechanism": "window_scroll",
+        "observations": {
+          "window_scroll_y_after_return": 0,
+          "window_scroll_y_max": 321
+        },
+        "profile": {
+          "innerHeight": 844,
+          "internalContainer": null,
+          "rootOverflowHidden": false,
+          "scrollHeight": 1165,
+          "virtualSignals": [],
+          "windowRange": 321,
+          "windowScrollY": 0
+        },
+        "returned_to_start": true,
+        "steps_completed": 8,
+        "steps_requested": 8,
+        "warnings": []
+      },
+      "sensitive_query_keys": [],
+      "service_worker": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_after_scroll": {
+        "api_available": true,
+        "cache_names": [],
+        "controller": null,
+        "errors": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "registrations": []
+      },
+      "service_worker_control_probe": {
+        "reloaded": false,
+        "state": {
+          "api_available": true,
+          "cache_names": [],
+          "controller": null,
+          "errors": [],
+          "precache_resources": [],
+          "precache_truncated": false,
+          "registrations": []
+        }
+      },
+      "service_worker_mode": "allow",
+      "settle": {
+        "elapsed_ms": 1882,
+        "errors": [],
+        "final_sample": {
+          "domNodes": 409,
+          "fontStatus": "loaded",
+          "pendingImages": 0,
+          "readyState": "complete",
+          "resourceCount": 49,
+          "scrollHeight": 1165
+        },
+        "max_ms": 5000,
+        "required_stable_samples": 3,
+        "sample_ms": 250,
+        "samples": 7,
+        "stable": true,
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "timed_out": false
+      },
+      "started_at": "2026-08-14T12:19:44Z",
+      "status": 200,
+      "success": false,
+      "title": "Contact | Belgrade Arbor",
+      "unauthorized_redirects": [],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "viewport_name": "mobile",
+      "warnings": [
+        "required runtime failures make this matrix cell incomplete"
+      ]
+    }
+  ],
+  "schema_version": "1.3",
+  "service_worker_policy": "auto",
+  "settle_policy": {
+    "max_settle_ms": 5000,
+    "navigation": "domcontentloaded",
+    "networkidle_used": false
+  },
+  "source_baseline_exceptions": [],
+  "source_local_pair": {
+    "local_url": "http://127.0.0.1:8100/en/contact",
+    "source_url": "https://belgradearbor.rs/en/contact"
+  },
+  "summary": {
+    "complete_matrix": false,
+    "expected": 3,
+    "failed": 3,
+    "passed": 0,
+    "produced": 3,
+    "source_evidence_produced": 3
+  },
+  "url_contexts": [
+    {
+      "context": "source",
+      "required": false,
+      "url": "https://belgradearbor.rs/en/contact"
+    },
+    {
+      "context": "local",
+      "required": true,
+      "url": "http://127.0.0.1:8100/en/contact"
+    }
+  ]
+}

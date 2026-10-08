@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Estructura de la web — Premium Padel Academy Marbella</title>
+<style>
+  /* Sólo tipografías del sistema. No se carga nada desde ningún sitio:
+     ni fuentes, ni scripts, ni imágenes, ni hojas de estilo externas. */
+  :root{
+    --ground:#2b3a33;      /* verde bosque — la tinta de la identidad, usada como fondo */
+    --ground-2:#33443c;
+    --line:#3d4d45;
+    --paper:#f7f5ef;
+    --text:#e8eae4;
+    --muted:#c3ccc6;
+    --faint:#95a29b;
+    --gold:#c9a227;        /* relleno, filete y marcador ÚNICAMENTE — nunca texto sobre el fondo */
+    --maxw:920px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--ground);color:var(--text);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .label{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--faint);font-weight:600;
+  }
+
+  /* ---------- selector de idioma ---------- */
+  .lang{display:flex;gap:6px;justify-content:flex-end;padding:16px 0 0}
+  .lang a{
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+    text-decoration:none;padding:4px 10px;border-radius:2px;
+    color:var(--muted);border:1px solid var(--line);
+  }
+  .lang a[aria-current]{color:var(--ground);background:var(--gold);border-color:var(--gold)}
+
+  /* ---------- cabecera ---------- */
+  header{padding:26px 0 40px;border-bottom:1px solid var(--line)}
+  .mark{display:block;width:56px;height:56px;color:var(--gold);margin-bottom:26px}
+  h1{
+    font-size:clamp(28px,5.4vw,44px);line-height:1.12;margin:0 0 18px;
+    font-weight:600;letter-spacing:-.015em;color:var(--paper);
+  }
+  .standfirst{font-size:clamp(17px,2.4vw,20px);color:var(--muted);margin:0;max-width:62ch}
+  .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px}
+
+  .notice{
+    margin:34px 0 0;padding:20px 22px;background:var(--ground-2);
+    border-left:3px solid var(--gold);border-radius:2px;
+  }
+  .notice p{margin:0;color:var(--muted);font-size:15.5px}
+  .notice strong{color:var(--paper);font-weight:600}
+
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--faint);font-weight:600;margin:0 0 28px;
+  }
+
+  .decided{display:grid;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:2px}
+  .decided div{background:var(--ground);padding:18px 20px}
+  .decided dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+  .decided dd{margin:0;color:var(--text);font-size:16px}
+  @media(min-width:680px){.decided{grid-template-columns:1fr 1fr}}
+
+  .route{padding:34px 0;border-top:1px solid var(--line)}
+  .route:first-of-type{border-top:0;padding-top:0}
+  .rhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+  .num{
+    font-variant-numeric:tabular-nums;font-size:12px;font-weight:700;
+    color:var(--ground);background:var(--gold);
+    width:23px;height:23px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;flex:none;
+  }
+  .rname{font-size:clamp(21px,3.4vw,27px);font-weight:600;color:var(--paper);margin:0;letter-spacing:-.01em}
+  .rpath{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13.5px;color:var(--muted);
+    background:var(--ground-2);padding:2px 8px;border-radius:2px;
+  }
+  .rgoal{color:var(--text);margin:14px 0 0;font-size:17.5px;max-width:64ch}
+  .rgoal b{color:var(--paper);font-weight:600}
+  .grid{margin-top:22px;display:grid;gap:22px}
+  @media(min-width:760px){.grid{grid-template-columns:1.15fr 1fr}}
+  .block .label{display:block;margin-bottom:9px}
+  ul{margin:0;padding-left:19px}
+  li{margin:0 0 6px;color:var(--muted);font-size:15.5px}
+  li::marker{color:var(--gold)}
+  .why{color:var(--muted);font-size:15.5px;margin:0}
+  .needs{
+    margin-top:20px;padding:13px 16px;background:var(--ground-2);border-radius:2px;
+    font-size:15px;color:var(--muted);
+  }
+  .needs .label{display:inline;margin-right:8px}
+  .needs.clear{color:var(--faint)}
+
+  ol.open{margin:0;padding:0;list-style:none;counter-reset:o}
+  ol.open>li{
+    counter-increment:o;position:relative;padding:16px 0 16px 46px;
+    border-top:1px solid var(--line);margin:0;color:var(--muted);font-size:16px;
+  }
+  ol.open>li:first-child{border-top:0}
+  ol.open>li::before{
+    content:counter(o,decimal-leading-zero);position:absolute;left:0;top:16px;
+    font-variant-numeric:tabular-nums;font-size:12px;font-weight:700;letter-spacing:.06em;
+    color:var(--faint);
+  }
+  ol.open>li b{color:var(--paper);font-weight:600;display:block;margin-bottom:3px}
+  .flag{
+    display:inline-block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:700;color:var(--ground);background:var(--gold);
+    padding:2px 7px;border-radius:2px;margin-left:9px;vertical-align:2px;
+  }
+
+  footer{padding:44px 0 72px;color:var(--faint);font-size:14.5px}
+  footer p{margin:0 0 9px;max-width:70ch}
+  .rule{height:1px;background:var(--gold);opacity:.55;margin:0 0 30px;max-width:72px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="lang" aria-label="Idioma">
+    <a href="../">EN</a>
+    <a href="./" aria-current="page">ES</a>
+  </nav>
+</div>
+
+<header>
+  <div class="wrap">
+    <!-- El logotipo actual, tal y como está: círculo de la pelota, dos arcos
+         discontinuos que representan las costuras y la inicial. Se mantiene sin
+         cambios por ahora, según lo indicado. -->
+    <svg class="mark" viewBox="0 0 100 100" fill="none" stroke="currentColor" role="img" aria-label="Monograma de pelota">
+      <circle cx="50" cy="50" r="45" stroke-width="1.6"/>
+      <path d="M20.5 16 A 45 45 0 0 0 20.5 84" stroke-width="1.2" stroke-dasharray="3.5 4.5" stroke-linecap="round"/>
+      <path d="M79.5 16 A 45 45 0 0 1 79.5 84" stroke-width="1.2" stroke-dasharray="3.5 4.5" stroke-linecap="round"/>
+      <text x="50" y="50" text-anchor="middle" dominant-baseline="central"
+            font-family="ui-sans-serif,system-ui,sans-serif" font-size="44" font-weight="400"
+            fill="none" stroke="currentColor" stroke-width="1.1">R</text>
+    </svg>
+
+    <p class="label" style="margin-bottom:14px">Premium Padel Academy Marbella</p>
+    <h1>Estructura de la web</h1>
+    <p class="standfirst">Siete páginas, para qué sirve cada una y qué tiene que transmitir.</p>
+
+    <div class="meta">
+      <span class="label">Para revisión</span>
+      <span class="label">Sólo estructura</span>
+      <span class="label">Primero en inglés, español después</span>
+    </div>
+
+    <div class="notice">
+      <p><strong>Esto es un documento de estructura, no un diseño.</strong> Aquí no hay maquetación, ni fotografía, ni textos definitivos: sólo para qué sirve cada página y por qué existe. Aprobar esto es aprobar la <em>forma</em> del sitio. El aspecto visual viene después y se presentará por separado.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Lo que ya está decidido</h2>
+    <dl class="decided">
+      <div>
+        <dt>El nombre es Premium Padel Academy Marbella</dt>
+        <dd>El sitio se construye alrededor de la academia, no de una persona. Los dos entrenadores aparecen con el mismo peso, en lugar de que sea un nombre el que sostenga el negocio. El logotipo actual se usa tal y como está, de momento.</dd>
+      </div>
+      <div>
+        <dt>Dos mercados, una marca</dt>
+        <dd>Las clases locales en Marbella y los programas internacionales son igual de importantes. Cada página sirve a uno de los dos, o a ambos, pero nunca los mezcla.</dd>
+      </div>
+      <div>
+        <dt>Primero en inglés</dt>
+        <dd>Siete páginas en inglés ahora. El español queda previsto como segundo idioma desde el principio, para poder añadirlo sin rehacer nada.</dd>
+      </div>
+      <div>
+        <dt>El logotipo actual se mantiene</dt>
+        <dd>El círculo, las costuras discontinuas y la inicial se quedan tal y como los dibujó el diseñador. Se usa así por ahora.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Las siete páginas</h2>
+
+    <!-- 1 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">1</span>
+        <h3 class="rname">Inicio</h3>
+        <span class="rpath">/</span>
+      </div>
+      <p class="rgoal">Decir cómo se llama la empresa, situarla en Marbella y dejar claro en la primera pantalla que hay <b>dos formas de entrar: entrenar aquí, o que vayamos nosotros.</b></p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">Qué transmite</span>
+          <ul>
+            <li>Qué es esto y dónde está, en una línea</li>
+            <li>Tres datos fijos: qué hacemos, dónde estamos y para quién es</li>
+            <li>La separación: jugadores locales, y jugadores y clubes que vienen de fuera</li>
+            <li>Un camino distinto para cada uno de esos dos visitantes</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Por qué existe la página</span>
+          <p class="why">Es la única página que verá la mayoría de los visitantes. Su trabajo es decir qué es esto y llevar a cada tipo de visitante al sitio correcto: alguien local que busca clases semanales y el director de un club en el extranjero quieren cosas completamente distintas, y la portada no debería obligar a ninguno de los dos a buscar.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Falta</span>Nada que bloquee.</p>
+    </article>
+
+    <!-- 2 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">2</span>
+        <h3 class="rname">Cómo entrenamos</h3>
+        <span class="rpath">/coaching/</span>
+      </div>
+      <p class="rgoal">Responder a la pregunta de la que depende todo lo demás: <b>qué pasa realmente en la pista.</b> Aquí es donde viven las clases particulares locales, como servicio completo y no como una nota al pie.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">Qué transmite</span>
+          <ul>
+            <li>Clases particulares en Marbella: el servicio local, dicho con claridad</li>
+            <li>Sesiones en grupo y cómo se gestionan los niveles</li>
+            <li>Trabajo técnico y táctico</li>
+            <li>Preparación física específica para deportes de raqueta</li>
+            <li>Clases partido con análisis real después</li>
+            <li>Cómo se hace el seguimiento de la evolución</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Por qué existe la página</span>
+          <p class="why">Los programas son lo que alguien compra; el entrenamiento es lo que realmente recibe. Quien está decidiendo entre vosotros y la academia de al lado compara método, no envoltorio. Esta página es además la que necesita un residente local: alguien que no va a coger ningún avión y simplemente quiere reservar pista y entrenador.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Falta</span>Nada que bloquee. Se escribe con lo que ya está documentado.</p>
+    </article>
+
+    <!-- 3 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">3</span>
+        <h3 class="rname">Programas</h3>
+        <span class="rpath">/programmes/</span>
+      </div>
+      <p class="rgoal">Convertir al visitante que viene de fuera. <b>Cada programa tiene su propio espacio</b>: para quién es, qué incluye y qué no incluye.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">Qué transmite</span>
+          <ul>
+            <li>Experiencias en España, para jugadores y grupos que viajan</li>
+            <li>El programa de entrenadores: entrenadores que van a un club en el extranjero, de siete a nueve días</li>
+            <li>Camps en Marbella, para grupos visitantes</li>
+            <li>Para quién es cada uno, dicho abiertamente</li>
+            <li>Qué está incluido y qué es sólo una recomendación</li>
+            <li>Que todo se presupuesta por cliente, porque realmente es así</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Por qué existe la página</span>
+          <p class="why">Son tres compradores distintos —un jugador, el director de un club, quien organiza un grupo— y llegan con preguntas distintas. Dar a cada programa su propio espacio evita que la página se convierta en una lista donde nadie se reconoce. Publicar lo que no está incluido junto a lo que sí lo está es deliberado: es la forma más rápida de que te crean.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Falta</span>Nada que bloquee.</p>
+    </article>
+
+    <!-- 4 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">4</span>
+        <h3 class="rname">Los entrenadores</h3>
+        <span class="rpath">/coaches/</span>
+      </div>
+      <p class="rgoal">Confianza. <b>Dos entrenadores, uno al lado del otro, con el mismo peso</b>: una foto de cada uno y una trayectoria breve, a dos columnas tal y como se pidió.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">Qué transmite</span>
+          <ul>
+            <li>Riki Padrón y Juanpi Vanella, presentados como iguales</li>
+            <li>Una trayectoria breve de cada uno: dónde han entrenado, en general y sin llegar a un currículum completo</li>
+            <li>La combinación en sí —uno español, otro argentino— como elemento diferencial</li>
+            <li>Entrenando en el Nueva Alcántara Club</li>
+            <li>Metodología desarrollada junto a M3 Academy</li>
+            <li>Assistant Manager en Tennis Brothers</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Por qué existe la página</span>
+          <p class="why">El entrenamiento se le compra a personas, no a una empresa. Quien va a dedicar una semana de sus vacaciones, o a traer a un entrenador de otro país a su club, quiere ver con quién va a estar en la pista. Esta página la especificó directamente el cliente, incluida la maquetación: dos columnas, una foto de cada uno y la trayectoria debajo.</p>
+        </div>
+      </div>
+      <p class="needs"><span class="label">Falta</span>Una foto de cada entrenador y una trayectoria breve de cada uno, en sus propias palabras.</p>
+    </article>
+
+    <!-- 5 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">5</span>
+        <h3 class="rname">Juanpi Vanella</h3>
+        <span class="rpath">/coaches/juanpi-vanella/</span>
+      </div>
+      <p class="rgoal">Una página propia. <b>La profundidad que no cabe en una maquetación a dos columnas</b>: su trayectoria, cómo entrena y qué hace en el club.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">Qué transmite</span>
+          <ul>
+            <li>Quién es y de dónde viene</li>
+            <li>Su trayectoria como jugador</li>
+            <li>Cómo entrena y por qué se le conoce</li>
+            <li>Su trabajo en el Nueva Alcántara Club</li>
+            <li>Una forma directa de reservar con él</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Por qué existe la página</span>
+          <p class="why">La página de entrenadores presenta a dos personas una al lado de la otra; no puede profundizar en ninguna sin desequilibrar a la otra. Una página propia recoge el detalle que quiere ver alguien antes de comprometerse a una semana de sesiones, y es además la página a la que puede mandar directamente a su propia audiencia.</p>
+        </div>
+      </div>
+      <p class="needs"><span class="label">Falta</span>Todo salvo su nombre. Hemos buscado a fondo y toda su huella pública es una línea en la página de personal del club: sin biografía, sin palmarés, sin entrevistas. Esta página sólo puede escribirse con lo que él nos cuente.</p>
+    </article>
+
+    <!-- 6 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">6</span>
+        <h3 class="rname">Marbella y el club</h3>
+        <span class="rpath">/marbella/</span>
+      </div>
+      <p class="rgoal">Vender el motivo para venir. <b>La ciudad y el club son un mismo argumento, no dos</b>: por qué viajar hasta aquí y dónde se entrena realmente una vez que has llegado.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">Qué transmite</span>
+          <ul>
+            <li>Marbella como lugar para entrenar: clima, duración de la temporada, condiciones de juego</li>
+            <li>Qué ofrece la ciudad alrededor del entrenamiento</li>
+            <li>Cómo llegar</li>
+            <li>El Nueva Alcántara Club, con presencia real</li>
+            <li>Dieciséis pistas panorámicas y el prestigio del club</li>
+            <li>Que su academia funciona con el método M3</li>
+            <li>Que allí se reciben grupos de todos los niveles de forma continua, con programas hechos para ellos</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Por qué existe la página</span>
+          <p class="why">La localización es un motivo real para elegir esta academia frente a otra más cercana a casa, y merece una página y no una frase. El club va aquí y no en una página aparte porque quien está valorando el viaje se hace una sola pregunta combinada: ¿es un sitio donde quiero estar, y es lo bastante serio para entrenar?</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Falta</span>Nada que bloquee. Hay imágenes disponibles, y los datos publicados por el propio club dan bastante contenido a esta página.</p>
+    </article>
+
+    <!-- 7 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">7</span>
+        <h3 class="rname">Contacto</h3>
+        <span class="rpath">/contact/</span>
+      </div>
+      <p class="rgoal">Una página, un objetivo: <b>que escribir sea inmediato.</b> Corto, directo, sin formularios que rellenar.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">Qué transmite</span>
+          <ul>
+            <li>El correo, bien visible</li>
+            <li>Dos opciones claras: clases en Marbella, o programas y visitas a clubes</li>
+            <li>Marbella, España</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Por qué existe la página</span>
+          <p class="why">Todas las demás páginas terminan aquí. Debería costar cinco segundos.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Falta</span>Nada que bloquee. Se usa un número provisional hasta confirmar el definitivo.</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Lo que necesitamos de ti</h2>
+    <p class="why" style="margin:-8px 0 26px;max-width:66ch">Dos cosas, y la primera ahora tiene una página entera parada.</p>
+    <ol class="open">
+      <li><b>Trayectoria de los dos entrenadores<span class="flag">Primero</span></b>Hemos buscado a fondo a Juanpi y hemos encontrado una línea: el club lo lista como entrenador. Sin biografía, sin palmarés, sin entrevistas, nada en sus propias palabras. Existe una ficha en una federación de pádel con un nombre parecido, pero nada la vincula a él y sus datos no cuadran con lo que nos contaron, así que no la usamos. Su página y la de entrenadores necesitan que escriba unas líneas él mismo; lo mismo vale para Riki. Y una foto de cada uno.</li>
+      <li><b>Qué relación tiene la academia con el club</b>La página de personal del club lista a Juanpi como uno más de su equipo técnico y nombra a otra persona como head coach. No es una contradicción —ser head coach de tu propia academia y a la vez entrenar en el club es completamente normal—, pero la web tiene que describir esa relación con precisión y no dar a entender que la academia dirige el club.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="rule"></div>
+    <p>Sólo estructura: sin diseño, sin fotografía y sin textos definitivos. Aprobar esto fija la forma del sitio para poder empezar la siguiente fase.</p>
+    <p>En esta página no se afirma nada que no esté confirmado. Donde faltaba un dato, aparece arriba como pregunta abierta en lugar de rellenarse con una suposición.</p>
+  </div>
+</footer>
+
+</body>
+</html>

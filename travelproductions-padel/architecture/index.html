@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Website structure — Premium Padel Academy Marbella</title>
+<style>
+  /* System stack only. Nothing is loaded from anywhere: no fonts, no scripts,
+     no images, no stylesheets. Open this file on a plane and it looks the same. */
+  :root{
+    --ground:#2b3a33;      /* forest green — the ink of the identity, used as ground */
+    --ground-2:#33443c;    /* one step up, for panels */
+    --line:#3d4d45;
+    --paper:#f7f5ef;
+    --text:#e8eae4;
+    --muted:#c3ccc6;
+    --faint:#95a29b;
+    --gold:#c9a227;        /* fill, rule and marker ONLY — never as text on the ground */
+    --maxw:920px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--ground);color:var(--text);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .label{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--faint);font-weight:600;
+  }
+
+  /* ---------- language switch ---------- */
+  .lang{display:flex;gap:6px;justify-content:flex-end;padding:16px 0 0}
+  .lang a{
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+    text-decoration:none;padding:4px 10px;border-radius:2px;
+    color:var(--muted);border:1px solid var(--line);
+  }
+  .lang a[aria-current]{color:var(--ground);background:var(--gold);border-color:var(--gold)}
+
+  /* ---------- masthead ---------- */
+  header{padding:26px 0 40px;border-bottom:1px solid var(--line)}
+  .mark{display:block;width:56px;height:56px;color:var(--gold);margin-bottom:26px}
+  h1{
+    font-size:clamp(28px,5.4vw,44px);line-height:1.12;margin:0 0 18px;
+    font-weight:600;letter-spacing:-.015em;color:var(--paper);
+  }
+  .standfirst{font-size:clamp(17px,2.4vw,20px);color:var(--muted);margin:0;max-width:62ch}
+  .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px}
+
+  /* ---------- notice ---------- */
+  .notice{
+    margin:34px 0 0;padding:20px 22px;background:var(--ground-2);
+    border-left:3px solid var(--gold);border-radius:2px;
+  }
+  .notice p{margin:0;color:var(--muted);font-size:15.5px}
+  .notice strong{color:var(--paper);font-weight:600}
+
+  /* ---------- generic section ---------- */
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--faint);font-weight:600;margin:0 0 28px;
+  }
+
+  /* ---------- decided ---------- */
+  .decided{display:grid;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:2px}
+  .decided div{background:var(--ground);padding:18px 20px}
+  .decided dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+  .decided dd{margin:0;color:var(--text);font-size:16px}
+  @media(min-width:680px){.decided{grid-template-columns:1fr 1fr}}
+
+  /* ---------- routes ---------- */
+  .route{padding:34px 0;border-top:1px solid var(--line)}
+  .route:first-of-type{border-top:0;padding-top:0}
+  .rhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+  .num{
+    font-variant-numeric:tabular-nums;font-size:12px;font-weight:700;
+    color:var(--ground);background:var(--gold);          /* dark text ON gold — the legible direction */
+    width:23px;height:23px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;flex:none;
+  }
+  .rname{font-size:clamp(21px,3.4vw,27px);font-weight:600;color:var(--paper);margin:0;letter-spacing:-.01em}
+  .rpath{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13.5px;color:var(--muted);
+    background:var(--ground-2);padding:2px 8px;border-radius:2px;
+  }
+  .rgoal{color:var(--text);margin:14px 0 0;font-size:17.5px;max-width:64ch}
+  .rgoal b{color:var(--paper);font-weight:600}
+  .grid{margin-top:22px;display:grid;gap:22px}
+  @media(min-width:760px){.grid{grid-template-columns:1.15fr 1fr}}
+  .block .label{display:block;margin-bottom:9px}
+  ul{margin:0;padding-left:19px}
+  li{margin:0 0 6px;color:var(--muted);font-size:15.5px}
+  li::marker{color:var(--gold)}
+  .why{color:var(--muted);font-size:15.5px;margin:0}
+  .needs{
+    margin-top:20px;padding:13px 16px;background:var(--ground-2);border-radius:2px;
+    font-size:15px;color:var(--muted);
+  }
+  .needs .label{display:inline;margin-right:8px}
+  .needs.clear{color:var(--faint)}
+
+  /* ---------- open items ---------- */
+  ol.open{margin:0;padding:0;list-style:none;counter-reset:o}
+  ol.open>li{
+    counter-increment:o;position:relative;padding:16px 0 16px 46px;
+    border-top:1px solid var(--line);margin:0;color:var(--muted);font-size:16px;
+  }
+  ol.open>li:first-child{border-top:0}
+  ol.open>li::before{
+    content:counter(o,decimal-leading-zero);position:absolute;left:0;top:16px;
+    font-variant-numeric:tabular-nums;font-size:12px;font-weight:700;letter-spacing:.06em;
+    color:var(--faint);
+  }
+  ol.open>li b{color:var(--paper);font-weight:600;display:block;margin-bottom:3px}
+  .flag{
+    display:inline-block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:700;color:var(--ground);background:var(--gold);
+    padding:2px 7px;border-radius:2px;margin-left:9px;vertical-align:2px;
+  }
+  .quote{color:var(--faint);font-style:italic}
+
+  footer{padding:44px 0 72px;color:var(--faint);font-size:14.5px}
+  footer p{margin:0 0 9px;max-width:70ch}
+  .rule{height:1px;background:var(--gold);opacity:.55;margin:0 0 30px;max-width:72px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="lang" aria-label="Language">
+    <a href="./" aria-current="page">EN</a>
+    <a href="es/">ES</a>
+  </nav>
+</div>
+
+<header>
+  <div class="wrap">
+    <!-- The existing mark, used as supplied: ball circle, two dashed seam arcs,
+         outlined initial. Kept as-is for now, per instruction. -->
+    <svg class="mark" viewBox="0 0 100 100" fill="none" stroke="currentColor" role="img" aria-label="Ball monogram">
+      <circle cx="50" cy="50" r="45" stroke-width="1.6"/>
+      <path d="M20.5 16 A 45 45 0 0 0 20.5 84" stroke-width="1.2" stroke-dasharray="3.5 4.5" stroke-linecap="round"/>
+      <path d="M79.5 16 A 45 45 0 0 1 79.5 84" stroke-width="1.2" stroke-dasharray="3.5 4.5" stroke-linecap="round"/>
+      <text x="50" y="50" text-anchor="middle" dominant-baseline="central"
+            font-family="ui-sans-serif,system-ui,sans-serif" font-size="44" font-weight="400"
+            fill="none" stroke="currentColor" stroke-width="1.1">R</text>
+    </svg>
+
+    <p class="label" style="margin-bottom:14px">Premium Padel Academy Marbella</p>
+    <h1>Website structure</h1>
+    <p class="standfirst">Seven pages, what each one is for, and what it has to convey.</p>
+
+    <div class="meta">
+      <span class="label">For review</span>
+      <span class="label">Structure only</span>
+      <span class="label">English first, Spanish to follow</span>
+    </div>
+
+    <div class="notice">
+      <p><strong>This is a structure document, not a design.</strong> There is no layout, no photography and no finished wording here — only what each page is for and why it exists. Approving this approves the <em>shape</em> of the site. The look comes next, and will be shown separately.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What is already decided</h2>
+    <dl class="decided">
+      <div>
+        <dt>The name is Premium Padel Academy Marbella</dt>
+        <dd>The site is built around the academy, not a person. Both coaches appear at equal weight rather than one name carrying the business. The existing ball mark is used as it stands for now.</dd>
+      </div>
+      <div>
+        <dt>Two markets, one brand</dt>
+        <dd>Local coaching in Marbella and international programmes are both first-class. Every page serves one or both, and never blurs them.</dd>
+      </div>
+      <div>
+        <dt>English first</dt>
+        <dd>Seven pages in English now. Spanish is built in as a second language from the start, so it can be added without rebuilding anything.</dd>
+      </div>
+      <div>
+        <dt>The existing mark carries over</dt>
+        <dd>The circle, the dashed seams and the initial all stay as the designer drew them. Used as it stands for now.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The seven pages</h2>
+
+    <!-- 1 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">1</span>
+        <h3 class="rname">Home</h3>
+        <span class="rpath">/</span>
+      </div>
+      <p class="rgoal">Name the company, place it in Marbella, and make clear within the first screen that there are <b>two ways in — train here, or bring us to you.</b></p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">What it conveys</span>
+          <ul>
+            <li>Who this is and where it is, in one line</li>
+            <li>Three facts, held steady: what we do, where we are, who it is for</li>
+            <li>The split: local players, and players and clubs coming from abroad</li>
+            <li>One route onward for each of those two visitors</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Why the page exists</span>
+          <p class="why">It is the only page most visitors will see. Its whole job is to say what this is and send each type of visitor to the right place — a local looking for weekly lessons and a club director abroad want completely different things, and the home page should not make either of them hunt.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Still needed</span>Nothing blocking.</p>
+    </article>
+
+    <!-- 2 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">2</span>
+        <h3 class="rname">How we coach</h3>
+        <span class="rpath">/coaching/</span>
+      </div>
+      <p class="rgoal">Answer the question everything else depends on: <b>what actually happens on court.</b> This is where local private lessons live, as a full offer rather than a footnote.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">What it conveys</span>
+          <ul>
+            <li>Private lessons in Marbella — the local service, stated plainly</li>
+            <li>Group sessions, and how levels are handled</li>
+            <li>Technical and tactical work</li>
+            <li>Physical preparation specific to racket sport</li>
+            <li>Match play with real analysis afterwards</li>
+            <li>How progress is followed over time</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Why the page exists</span>
+          <p class="why">Programmes are what someone buys; coaching is what they actually receive. A visitor deciding between you and the next academy is comparing method, not packaging. This page is also the one a local resident needs — someone who is not flying anywhere and simply wants to book a court and a coach.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Still needed</span>Nothing blocking. Written from what is already on record.</p>
+    </article>
+
+    <!-- 3 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">3</span>
+        <h3 class="rname">Programmes</h3>
+        <span class="rpath">/programmes/</span>
+      </div>
+      <p class="rgoal">Convert the visitor coming from abroad. <b>Each programme gets real space</b> — who it is for, what is included, and what is explicitly not.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">What it conveys</span>
+          <ul>
+            <li>Experiences in Spain — for players and groups travelling in</li>
+            <li>The coaches programme — coaches travelling out to a club abroad, seven to nine days</li>
+            <li>Camps in Marbella — for visiting groups</li>
+            <li>Who each one is for, said out loud</li>
+            <li>What is included, and what is only a recommendation</li>
+            <li>That everything is quoted per client, because it genuinely is</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Why the page exists</span>
+          <p class="why">These are three different buyers — a player, a club director, a group organiser — and they arrive with different questions. Giving each programme its own space stops the page becoming a list where nobody finds themselves. Publishing the exclusions next to the inclusions is deliberate: it is the fastest way to be believed.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Still needed</span>Nothing blocking.</p>
+    </article>
+
+    <!-- 4 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">4</span>
+        <h3 class="rname">The coaches</h3>
+        <span class="rpath">/coaches/</span>
+      </div>
+      <p class="rgoal">Trust. <b>Two coaches, side by side, equal weight</b> — a photograph each and a short background, laid out in two columns as requested.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">What it conveys</span>
+          <ul>
+            <li>Riki Padrón and Juanpi Vanella, presented as equals</li>
+            <li>A short background each — where they have coached, kept general rather than a full CV</li>
+            <li>The pairing itself — one Spanish, one Argentine — as a point of difference</li>
+            <li>Coaching at Nueva Alcántara Club</li>
+            <li>Methodology developed jointly with M3 Academy</li>
+            <li>Assistant Manager at Tennis Brothers</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Why the page exists</span>
+          <p class="why">Coaching is bought from people, not from a company. Someone spending a week of their holiday, or bringing a coach across a border to their club, wants to see who they will be standing on court with. This page was specified directly by the client, layout included — two columns, a photograph each, background underneath.</p>
+        </div>
+      </div>
+      <p class="needs"><span class="label">Still needed</span>A photograph of each coach, and a short background for each in their own words.</p>
+    </article>
+
+    <!-- 5 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">5</span>
+        <h3 class="rname">Juanpi Vanella</h3>
+        <span class="rpath">/coaches/juanpi-vanella/</span>
+      </div>
+      <p class="rgoal">A page of his own. <b>Depth that a shared two-column layout cannot carry</b> — his background, how he coaches, and what he runs at the club.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">What it conveys</span>
+          <ul>
+            <li>Who he is and where he comes from</li>
+            <li>His playing background</li>
+            <li>How he coaches, and what he is known for</li>
+            <li>His work at Nueva Alcántara Club</li>
+            <li>A direct way to book with him</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Why the page exists</span>
+          <p class="why">The shared coaches page introduces two people side by side; it cannot go deep on either without unbalancing them. A page of his own carries the detail a player wants before committing to a week of sessions — and it is the page his own audience can be sent to directly.</p>
+        </div>
+      </div>
+      <p class="needs"><span class="label">Still needed</span>Everything except his name. We searched thoroughly and his entire public footprint is one line on the club’s staff page — no bio, no career record, no interviews. This page can only be written from what he tells us.</p>
+    </article>
+
+    <!-- 6 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">6</span>
+        <h3 class="rname">Marbella &amp; the club</h3>
+        <span class="rpath">/marbella/</span>
+      </div>
+      <p class="rgoal">Sell the reason to come. <b>The town and the club are one argument, not two</b> — why travel here, and where you would actually train once you did.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">What it conveys</span>
+          <ul>
+            <li>Marbella as a place to train: climate, season length, playing conditions</li>
+            <li>What the town offers around the training</li>
+            <li>Getting here</li>
+            <li>Nueva Alcántara Club, given real prominence</li>
+            <li>Sixteen panoramic courts, and the club’s standing in the sport</li>
+            <li>That its academy runs on the M3 method</li>
+            <li>That visiting groups of every level are hosted there continuously, with programmes built for them</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Why the page exists</span>
+          <p class="why">The location is a genuine reason to choose this academy over one closer to home, and it deserves a page rather than a sentence. The club belongs here rather than on a separate page because a visitor weighing up the trip is asking one combined question — is this somewhere I want to be, and is it somewhere serious enough to train.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Still needed</span>Nothing blocking. Imagery is available, and the club’s own published facts give this page real substance.</p>
+    </article>
+
+    <!-- 7 -->
+    <article class="route">
+      <div class="rhead">
+        <span class="num">7</span>
+        <h3 class="rname">Contact</h3>
+        <span class="rpath">/contact/</span>
+      </div>
+      <p class="rgoal">One page, one job: <b>make it effortless to get in touch.</b> Short, direct, no forms to wade through.</p>
+      <div class="grid">
+        <div class="block">
+          <span class="label">What it conveys</span>
+          <ul>
+            <li>Email, front and centre</li>
+            <li>Two clear options: lessons in Marbella, or programmes and club visits</li>
+            <li>Marbella, Spain</li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Why the page exists</span>
+          <p class="why">Every other page ends here. It should take five seconds.</p>
+        </div>
+      </div>
+      <p class="needs clear"><span class="label">Still needed</span>Nothing blocking. A placeholder number stands in until the real one is confirmed.</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What we need from you</h2>
+    <p class="why" style="margin:-8px 0 26px;max-width:66ch">Two things, and the first one now holds up a whole page.</p>
+    <ol class="open">
+      <li><b>Background from both coaches<span class="flag">First</span></b>We searched hard for Juanpi and found one line: the club lists him as a coach. No bio, no playing record, no interviews, nothing in his own words. There is a padel federation profile under a similar name, but nothing ties it to him and its details do not match what we were told, so we are not using it. His page and the shared coaches page both need him to write a few lines himself — the same goes for Riki. Photographs of each as well.</li>
+      <li><b>How the academy relates to the club</b>The club’s own staff page lists Juanpi as one of its coaching team, and names someone else as its head coach. That is not a contradiction — being head coaches of your own academy while coaching at the club is perfectly normal — but the site needs to describe the relationship accurately rather than imply the academy runs the club.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="rule"></div>
+    <p>Structure only — no design, no photography, no final wording. Approving this fixes the shape of the site so the next stage can begin.</p>
+    <p>Nothing on this page states anything that has not been confirmed. Where a fact was missing, it is listed above as an open question rather than filled in with a guess.</p>
+  </div>
+</footer>
+
+</body>
+</html>

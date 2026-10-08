@@ -1,0 +1,5253 @@
+{
+  "schema_version": "1.3",
+  "capture_tool_version": "1.3",
+  "page": "https://belgradearbor.rs/en/retail-spaces",
+  "requested_page": "https://belgradearbor.rs/en/retail-spaces",
+  "canonical_origin": "https://belgradearbor.rs",
+  "navigation": {
+    "requested_url": "https://belgradearbor.rs/en/retail-spaces",
+    "initial_url": "https://belgradearbor.rs/en/retail-spaces",
+    "initial_status": 200,
+    "final_url": "https://belgradearbor.rs/en/retail-spaces",
+    "final_status": 200,
+    "redirects": [],
+    "navigation_events": [
+      {
+        "url": "https://belgradearbor.rs/en/retail-spaces",
+        "status": 200,
+        "phase": "desktop:load",
+        "kind": "initial"
+      }
+    ],
+    "navigation_error": null,
+    "unauthorized_redirects": [],
+    "title": "Retail & Business Spaces | Belgrade Arbor",
+    "access": {
+      "state": "ok",
+      "blocked": false,
+      "title": "Retail & Business Spaces | Belgrade Arbor",
+      "final_url": "https://belgradearbor.rs/en/retail-spaces",
+      "evidence": {
+        "http_status": 200,
+        "url_challenge_markers": [],
+        "title_challenge_markers": [],
+        "body_challenge_markers": [],
+        "selector_markers": [],
+        "url_login_markers": [],
+        "title_login_markers": [],
+        "body_login_markers": [],
+        "visible_password_fields": 0,
+        "title_error_markers": [],
+        "body_error_markers": [],
+        "consent_overlay_coverage": 0,
+        "root_overflow_locked": false
+      }
+    }
+  },
+  "access_result": "ok",
+  "blocked_by_challenge": false,
+  "allowed_navigation_origins": [
+    "https://belgradearbor.rs"
+  ],
+  "capture_started_at": "2026-08-13T22:37:03Z",
+  "captured_at": "2026-08-13T22:37:38Z",
+  "capture_passes": [
+    {
+      "viewport": "desktop",
+      "size": {
+        "width": 1440,
+        "height": 900
+      },
+      "fresh_isolated_context": true,
+      "service_worker_mode": "allow",
+      "navigation": {
+        "requested_url": "https://belgradearbor.rs/en/retail-spaces",
+        "initial_url": "https://belgradearbor.rs/en/retail-spaces",
+        "initial_status": 200,
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "final_status": 200,
+        "redirects": [],
+        "navigation_events": [
+          {
+            "url": "https://belgradearbor.rs/en/retail-spaces",
+            "status": 200,
+            "phase": "desktop:load",
+            "kind": "initial"
+          }
+        ],
+        "navigation_error": null,
+        "unauthorized_redirects": [],
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "access": {
+          "state": "ok",
+          "blocked": false,
+          "title": "Retail & Business Spaces | Belgrade Arbor",
+          "final_url": "https://belgradearbor.rs/en/retail-spaces",
+          "evidence": {
+            "http_status": 200,
+            "url_challenge_markers": [],
+            "title_challenge_markers": [],
+            "body_challenge_markers": [],
+            "selector_markers": [],
+            "url_login_markers": [],
+            "title_login_markers": [],
+            "body_login_markers": [],
+            "visible_password_fields": 0,
+            "title_error_markers": [],
+            "body_error_markers": [],
+            "consent_overlay_coverage": 0,
+            "root_overflow_locked": false
+          }
+        }
+      },
+      "settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 6000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 9,
+        "elapsed_ms": 2302,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 869,
+          "resourceCount": 65,
+          "scrollHeight": 6245,
+          "pendingImages": 4,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "scroll": {
+        "mechanism": "window_scroll",
+        "steps_requested": 16,
+        "steps_completed": 16,
+        "returned_to_start": true,
+        "profile": {
+          "scrollHeight": 6245,
+          "innerHeight": 900,
+          "windowScrollY": 0,
+          "windowRange": 5345,
+          "rootOverflowHidden": false,
+          "internalContainer": null,
+          "virtualSignals": []
+        },
+        "observations": {
+          "window_scroll_y_max": 5345,
+          "window_scroll_y_after_return": 0
+        },
+        "warnings": []
+      },
+      "service_worker": {
+        "api_available": true,
+        "controller": null,
+        "registrations": [],
+        "cache_names": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "errors": []
+      },
+      "service_worker_validation": {
+        "required": false
+      },
+      "route_inventory": [
+        {
+          "url": "https://belgradearbor.rs/en",
+          "path": "/en",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/3d",
+          "path": "/en/3d",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/about-the-investor",
+          "path": "/en/about-the-investor",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/business",
+          "path": "/en/business",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/contact",
+          "path": "/en/contact",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/privacy-policy",
+          "path": "/en/privacy-policy",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/residences",
+          "path": "/en/residences",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces",
+          "path": "/en/retail-spaces",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp1",
+          "path": "/en/retail-spaces/a1-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp2",
+          "path": "/en/retail-spaces/a1-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp1",
+          "path": "/en/retail-spaces/a2-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp2",
+          "path": "/en/retail-spaces/a2-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp1",
+          "path": "/en/retail-spaces/a3-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp2",
+          "path": "/en/retail-spaces/a3-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp1",
+          "path": "/en/retail-spaces/a4-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp2",
+          "path": "/en/retail-spaces/a4-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp1",
+          "path": "/en/retail-spaces/a5-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp2",
+          "path": "/en/retail-spaces/a5-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a6-pp1",
+          "path": "/en/retail-spaces/a6-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/b1-pp1",
+          "path": "/en/retail-spaces/b1-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/sr/retail-spaces",
+          "path": "/sr/retail-spaces",
+          "source": "anchor",
+          "url_redacted": false
+        }
+      ],
+      "metadata_references": [
+        {
+          "url": "https://arbor.square43.com/opengraph-image.jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "open_graph_image",
+          "source": "meta[og:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://arbor.square43.com/twitter-image.jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "twitter_image",
+          "source": "meta[twitter:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "desktop"
+          ]
+        },
+        {
+          "url": "https://belgradearbor.rs/favicon.ico?favicon.0_jybvm-wd11s.ico",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=icon]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/vnd.microsoft.icon",
+            "final_url": "https://belgradearbor.rs/favicon.ico?favicon.0_jybvm-wd11s.ico",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "desktop"
+          ]
+        }
+      ],
+      "post_scroll_settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 6000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 3,
+        "elapsed_ms": 765,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 869,
+          "resourceCount": 100,
+          "scrollHeight": 6331,
+          "pendingImages": 0,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "post_scroll_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "post_metadata_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "final_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      }
+    },
+    {
+      "viewport": "mobile",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "fresh_isolated_context": true,
+      "service_worker_mode": "allow",
+      "navigation": {
+        "requested_url": "https://belgradearbor.rs/en/retail-spaces",
+        "initial_url": "https://belgradearbor.rs/en/retail-spaces",
+        "initial_status": 200,
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "final_status": 200,
+        "redirects": [],
+        "navigation_events": [
+          {
+            "url": "https://belgradearbor.rs/en/retail-spaces",
+            "status": 200,
+            "phase": "mobile:load",
+            "kind": "initial"
+          }
+        ],
+        "navigation_error": null,
+        "unauthorized_redirects": [],
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "access": {
+          "state": "ok",
+          "blocked": false,
+          "title": "Retail & Business Spaces | Belgrade Arbor",
+          "final_url": "https://belgradearbor.rs/en/retail-spaces",
+          "evidence": {
+            "http_status": 200,
+            "url_challenge_markers": [],
+            "title_challenge_markers": [],
+            "body_challenge_markers": [],
+            "selector_markers": [],
+            "url_login_markers": [],
+            "title_login_markers": [],
+            "body_login_markers": [],
+            "visible_password_fields": 0,
+            "title_error_markers": [],
+            "body_error_markers": [],
+            "consent_overlay_coverage": 0,
+            "root_overflow_locked": false
+          }
+        }
+      },
+      "settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 6000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 9,
+        "elapsed_ms": 2305,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 868,
+          "resourceCount": 58,
+          "scrollHeight": 8506,
+          "pendingImages": 7,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "scroll": {
+        "mechanism": "window_scroll",
+        "steps_requested": 16,
+        "steps_completed": 16,
+        "returned_to_start": true,
+        "profile": {
+          "scrollHeight": 8506,
+          "innerHeight": 844,
+          "windowScrollY": 0,
+          "windowRange": 7662,
+          "rootOverflowHidden": false,
+          "internalContainer": null,
+          "virtualSignals": []
+        },
+        "observations": {
+          "window_scroll_y_max": 7662,
+          "window_scroll_y_after_return": 0
+        },
+        "warnings": []
+      },
+      "service_worker": {
+        "api_available": true,
+        "controller": null,
+        "registrations": [],
+        "cache_names": [],
+        "precache_resources": [],
+        "precache_truncated": false,
+        "errors": []
+      },
+      "service_worker_validation": {
+        "required": false
+      },
+      "route_inventory": [
+        {
+          "url": "https://belgradearbor.rs/en",
+          "path": "/en",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/3d",
+          "path": "/en/3d",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/about-the-investor",
+          "path": "/en/about-the-investor",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/business",
+          "path": "/en/business",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/contact",
+          "path": "/en/contact",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/privacy-policy",
+          "path": "/en/privacy-policy",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/residences",
+          "path": "/en/residences",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces",
+          "path": "/en/retail-spaces",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp1",
+          "path": "/en/retail-spaces/a1-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp2",
+          "path": "/en/retail-spaces/a1-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp1",
+          "path": "/en/retail-spaces/a2-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp2",
+          "path": "/en/retail-spaces/a2-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp1",
+          "path": "/en/retail-spaces/a3-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp2",
+          "path": "/en/retail-spaces/a3-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp1",
+          "path": "/en/retail-spaces/a4-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp2",
+          "path": "/en/retail-spaces/a4-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp1",
+          "path": "/en/retail-spaces/a5-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp2",
+          "path": "/en/retail-spaces/a5-pp2",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/a6-pp1",
+          "path": "/en/retail-spaces/a6-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/en/retail-spaces/b1-pp1",
+          "path": "/en/retail-spaces/b1-pp1",
+          "source": "anchor",
+          "url_redacted": false
+        },
+        {
+          "url": "https://belgradearbor.rs/sr/retail-spaces",
+          "path": "/sr/retail-spaces",
+          "source": "anchor",
+          "url_redacted": false
+        }
+      ],
+      "metadata_references": [
+        {
+          "url": "https://arbor.square43.com/opengraph-image.jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "open_graph_image",
+          "source": "meta[og:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "mobile"
+          ]
+        },
+        {
+          "url": "https://arbor.square43.com/twitter-image.jpg",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "twitter_image",
+          "source": "meta[twitter:image]",
+          "observed": true,
+          "probed": false,
+          "captured": false,
+          "states": [
+            "Observed"
+          ],
+          "probe": null,
+          "passes": [
+            "mobile"
+          ]
+        },
+        {
+          "url": "https://belgradearbor.rs/favicon.ico?favicon.0_jybvm-wd11s.ico",
+          "url_redacted": false,
+          "sensitive_query_keys": [],
+          "kind": "favicon",
+          "source": "link[rel=icon]",
+          "observed": true,
+          "probed": true,
+          "captured": false,
+          "states": [
+            "Observed",
+            "Probed"
+          ],
+          "probe": {
+            "method": "HEAD",
+            "metadata_only": true,
+            "status": 200,
+            "content_type": "image/vnd.microsoft.icon",
+            "final_url": "https://belgradearbor.rs/favicon.ico?favicon.0_jybvm-wd11s.ico",
+            "redirect_target": null,
+            "redirect_authorized": null
+          },
+          "passes": [
+            "mobile"
+          ]
+        }
+      ],
+      "post_scroll_settle": {
+        "strategy": "domcontentloaded_plus_bounded_stability",
+        "max_ms": 6000,
+        "sample_ms": 250,
+        "required_stable_samples": 3,
+        "samples": 3,
+        "elapsed_ms": 758,
+        "stable": true,
+        "timed_out": false,
+        "final_sample": {
+          "readyState": "complete",
+          "domNodes": 868,
+          "resourceCount": 99,
+          "scrollHeight": 8506,
+          "pendingImages": 1,
+          "fontStatus": "loaded"
+        },
+        "errors": []
+      },
+      "post_scroll_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "post_metadata_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      },
+      "final_access": {
+        "state": "ok",
+        "blocked": false,
+        "title": "Retail & Business Spaces | Belgrade Arbor",
+        "final_url": "https://belgradearbor.rs/en/retail-spaces",
+        "evidence": {
+          "http_status": 200,
+          "url_challenge_markers": [],
+          "title_challenge_markers": [],
+          "body_challenge_markers": [],
+          "selector_markers": [],
+          "url_login_markers": [],
+          "title_login_markers": [],
+          "body_login_markers": [],
+          "visible_password_fields": 0,
+          "title_error_markers": [],
+          "body_error_markers": [],
+          "consent_overlay_coverage": 0,
+          "root_overflow_locked": false
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_requests": 114,
+    "total_responses": 114,
+    "same_origin": 81,
+    "external": 33,
+    "loaded_during_scroll": 42,
+    "automatically_acquirable_static_get_head": 52,
+    "metadata_references": 3,
+    "by_resource_type": {
+      "image": 24,
+      "script": 30,
+      "stylesheet": 4,
+      "font": 4,
+      "fetch": 49,
+      "document": 1,
+      "ping": 2
+    },
+    "by_request_class": {
+      "static": 52,
+      "personalized_data": 40,
+      "non_replayable": 12,
+      "telemetry": 10
+    },
+    "providers_detected": [],
+    "recorder_errors": 0
+  },
+  "same_site_routes_from_anchors": [
+    "/en",
+    "/en/3d",
+    "/en/about-the-investor",
+    "/en/business",
+    "/en/contact",
+    "/en/privacy-policy",
+    "/en/residences",
+    "/en/retail-spaces",
+    "/en/retail-spaces/a1-pp1",
+    "/en/retail-spaces/a1-pp2",
+    "/en/retail-spaces/a2-pp1",
+    "/en/retail-spaces/a2-pp2",
+    "/en/retail-spaces/a3-pp1",
+    "/en/retail-spaces/a3-pp2",
+    "/en/retail-spaces/a4-pp1",
+    "/en/retail-spaces/a4-pp2",
+    "/en/retail-spaces/a5-pp1",
+    "/en/retail-spaces/a5-pp2",
+    "/en/retail-spaces/a6-pp1",
+    "/en/retail-spaces/b1-pp1",
+    "/sr/retail-spaces"
+  ],
+  "route_inventory": [
+    {
+      "url": "https://belgradearbor.rs/en",
+      "path": "/en",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/3d",
+      "path": "/en/3d",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/about-the-investor",
+      "path": "/en/about-the-investor",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/business",
+      "path": "/en/business",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/contact",
+      "path": "/en/contact",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/privacy-policy",
+      "path": "/en/privacy-policy",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/residences",
+      "path": "/en/residences",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces",
+      "path": "/en/retail-spaces",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp1",
+      "path": "/en/retail-spaces/a1-pp1",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp2",
+      "path": "/en/retail-spaces/a1-pp2",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp1",
+      "path": "/en/retail-spaces/a2-pp1",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp2",
+      "path": "/en/retail-spaces/a2-pp2",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp1",
+      "path": "/en/retail-spaces/a3-pp1",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp2",
+      "path": "/en/retail-spaces/a3-pp2",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp1",
+      "path": "/en/retail-spaces/a4-pp1",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp2",
+      "path": "/en/retail-spaces/a4-pp2",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp1",
+      "path": "/en/retail-spaces/a5-pp1",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp2",
+      "path": "/en/retail-spaces/a5-pp2",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a6-pp1",
+      "path": "/en/retail-spaces/a6-pp1",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/b1-pp1",
+      "path": "/en/retail-spaces/b1-pp1",
+      "source": "anchor",
+      "url_redacted": false
+    },
+    {
+      "url": "https://belgradearbor.rs/sr/retail-spaces",
+      "path": "/sr/retail-spaces",
+      "source": "anchor",
+      "url_redacted": false
+    }
+  ],
+  "metadata_references": [
+    {
+      "url": "https://belgradearbor.rs/favicon.ico?favicon.0_jybvm-wd11s.ico",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "favicon",
+      "source": "link[rel=icon]",
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "states": [
+        "Observed",
+        "Probed"
+      ],
+      "probe": {
+        "method": "HEAD",
+        "metadata_only": true,
+        "status": 200,
+        "content_type": "image/vnd.microsoft.icon",
+        "final_url": "https://belgradearbor.rs/favicon.ico?favicon.0_jybvm-wd11s.ico",
+        "redirect_target": null,
+        "redirect_authorized": null
+      },
+      "passes": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "url": "https://arbor.square43.com/opengraph-image.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "open_graph_image",
+      "source": "meta[og:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    {
+      "url": "https://arbor.square43.com/twitter-image.jpg",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "kind": "twitter_image",
+      "source": "meta[twitter:image]",
+      "observed": true,
+      "probed": false,
+      "captured": false,
+      "states": [
+        "Observed"
+      ],
+      "probe": null,
+      "passes": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fhome%2Ffooter%2Ffront.webp&w=1920&q=75&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "35854aa9a31acc3efe64c2d3cc90906c7ca2d52f1d5d8bead4fd8b508f553b9a",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 251390,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fhome%2Ffooter%2Ftree-l.webp&w=640&q=75&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cea5fb16322ab5e6119ea4e0883745da6842008bca396a9e2311c56f019d02c4",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 31608,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fhome%2Ffooter%2Ftree-r.webp&w=1920&q=75&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9f1cc9665eab3eaf779f8d3850eaaed9fa767ca3ba74907cf8267d75562bafa9",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 176692,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa1-pp1-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e1852bdd54fd31b0884470641664ccd04348c905e6d27162d6bd8e097c706803",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 12480,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa1-pp2-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5bb0a929ec26b39360b224bb9e855666f051c534a97b11ffb660d3cecf7569cf",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 13234,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa2-pp1-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7a59bbec0145dc048103db3899133a7c9f1808d9375cb921317a71d77be72991",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 10098,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa2-pp2-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a7733816aedf46363f0efb9e99b5c5ef13e54a12ec033559a68d5d7c1971db10",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 8144,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa3-pp1-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6349fda82eb77914fccb591917cddcd25718211562056cd1e3d943fee3a75896",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 10018,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa3-pp2-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ca9fd956f659b99cd6fc30192e391a5a5aa40a24025ef8b43206a573dae6769c",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 8152,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa4-pp1-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "36cfc07a6f03874e8b7ad65f194ed159bf3e41189ede06916c1e22e9a0a92802",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 10146,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa4-pp2-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "04cad6b6de40a7df0486b4dc8a8f6ff874ede7232bf0997b3dde9f9e7afa0eb3",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 8248,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa5-pp1-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ede6e8cc704f9790dcf5e16ec48682bff0ea156c4b83ba7331ef696b2b0bb635",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 10080,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa5-pp2-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "06a022cce73c9df69551c472835a64b9bc17913c3b51c052bf865b24574551c3",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 8178,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fa6-pp1-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0efd3df65f3786a835fba9961180519219cd9acacc9ba1ccaf82d5acd787867e",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 7402,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/image?url=%2Fsingle-business%2Flayout-and-floor%2Fb1-pp1-layout.webp&w=640&q=100&dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4bfb94bdeee92a8e7d28c366dd48da4ac95ae0750337be3e4862b67f117c5831",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 12480,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/00u~npbo7.a04.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4b1c46fb684fd7d9c5a9cdc6956e935e7603ee31371840f702df13cdc623bbe1",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/00xx30o3ajzic.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3446e16ed8a6cd520bdd04269cd484b5fc72303f4b28aaaae66a35b78635d25a",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/01v_j1qgz7279.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5a6e2f092361a3f621546b00e1c65c19f1be6eb84ad68ed99be554832cd947a5",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/03vuy6q6j4ly0.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1748679c3afd8cffa10299f38a09c30dc5047571ea90a876245b5c89672cc234",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/07p~t9_ipiabo.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9587e1f461b9ec7be395e2e5c29866140c24b543f38b8e2c3ed5f3fd6556388d",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/0dkd599cyydmj.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a464af0bec513c9227cf2507f98297a872c23981d04435cf51f5727be91a62a6",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/0eqspdm2dt5_-.css?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "51b584bd3c6dca39cd97c1dd9c4c264e1f362be1766e72ab69aca4182021422f",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": 457,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/0fp4f9n3kdnns.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "bb79aa163df0c0199277877da8f025204307d1b0b770038ffb723822240ac811",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/0pss3t_uv6ka2.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b0579a3bddb054aaadc24dde14ee9586b44039f8ad9fd583f7c10b1ca76e790f",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/0pu5ckuyou92-.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3ee9f38b7619760ec9495fdc811f496cac217bc6843ad3e0cdd5e0c97e1bd210",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/0uyi_dig40r_1.css?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5a682d536e38bc197e3765bfe25b5a26f49dec41da2cf02148330fa58b86e425",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/0~ekro4dwr2lx.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a73c1731545ce086f8302411eb2764dcd668d23d84f25f49b9969ddbd063349c",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/10q.k6qzclwm5.css?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2e2dc77c94756c1b81b1664a1344950da1ee99099aa60c5202e3f68f69da9345",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/10tlgl5wd827~.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c40754da28c69891c9c4caa77c3551775f15263d52396244c6acb0a374805cbc",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/11-jbnjmn3saw.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "adb3475239643bb07fff9a3a7fde286554e882d55d2abc1d5fcd1d5b4d8aa6ec",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/110q6k5sdl4es.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4b0e2b1920ebf3be306c9320578893237298458d248b6412e672accfff4ce9de",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/11baw.1hi3v5x.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ae8bebfef74243632d55c7005002ae1d2c2852434c3eca0c2a7079afd768b61c",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/13uxtbrew9p8k.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6d8adda6b5a2baafb2c6be3820e8575b3c4ecf2deba177cb5713641719a01095",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/15kkz14ouerlw.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "23f476a346424a1e6045a2e9f9626f2da0273097425144b92060f704436f2adb",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/1803w2asd5ai5.css?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2173c63e2094db79ba98a4f3fcd3f36d5c38ce54363b3bba442f117a5cc6d4f9",
+      "method": "GET",
+      "resource_type": "stylesheet",
+      "data_type": "stylesheet",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/css; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/chunks/turbopack-11d20dr7kd-ys.js?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "10b38812dc41741159f595c18ce2c8e1c926379cbad3c5935d6d996c9e884044",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/media/7ddd198311ba7843-s.p.11f_0f-25f9yg.woff2?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3528b5e3f9d900a74abf00364735334e0aec2b74a60abf9b57fae56aa6c79363",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/woff2",
+      "content_length": 50524,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/media/PPEditorialOld_Regular-s.p.10x77zcrykmnq.otf?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0f7f8bc4323a7293c48bc1a2c8e7e8c8c6a7d726006ef89a59d3952780364d97",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/otf",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/media/PPEditorialOld_Ultralight-s.p.0u.0t_8-1e3wa.otf?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "39818a94327075aed6d7973d8542d5e3d2f245675a208d0efe2ed3ea5a186349",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/otf",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/_next/static/media/PPEditorialOld_UltralightItalic-s.p.0ojl3s380s~4~.otf?dpl=dpl_4chUSd6yu8wiVu9envanYd5CW6A4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "742745869a84ee3eaae1072a34b17aaa92665bda13829fe618ae635a9a9255c6",
+      "method": "GET",
+      "resource_type": "font",
+      "data_type": "font",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "font/otf",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://belgradearbor.rs/en/3d?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "aa1ebc02250f65033043838953c149801548e5b2f6069b08bb262dbd13cb08ab",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/3d?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "132e761080c4274ea4651986902589984b85e6e54ba64fafa60bf7d1d0a0a9aa",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/about-the-investor?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8e6ae41ed8f1aec26015a1d229125c963cbd80965e7e36112af715faf6206a45",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/about-the-investor?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c7e32705c7dc9e9eab1e8db3db8d4f0aa009afb992a915fe0d8ca7b4e495f854",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/business?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "864174f59a395e974e8741939c5d71fea769a87f4d82933864de922bdea37057",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/business?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c50c445b1d4ce5c326ca2f1c69b32b70b6a71e827d5954f56f3e136eb8e975be",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/contact?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "05d75345c9c66dd8c6783d4529ee20cc9293b7423e8cae6289876ca68323b12f",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/contact?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "36cd0224c6bfe74153f7abfb2dfd46db25686d68e54814c677da2d6b6d5a03a3",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/privacy-policy?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5baa632c2c688886cfdda1c257cfada2915eb3eb5292c782135f21727aac4861",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/privacy-policy?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b006bc81f267d59dbad9790eb323fbb697a6cba7b9bc2fbf661ae547babddd4a",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/residences?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c90e7c7a3e6bf03d581ff3dcf20dd6f99ec6af1fb0465347e3e0d27da449ff0c",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/residences?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "abe632b79a0346de2b1248514d1b28b1cb840effed2beebe3b4adb4fa8dd46d9",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ddc00e1dac647ead2449c2622daad37629663851039d603448ed845e0502a999",
+      "method": "GET",
+      "resource_type": "document",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/html; charset=utf-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp1?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "13e5488b0d9641eb85cfd3d115e7d9d4945437782050c1e665294a18c59d2ea1",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp1?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a78d1604ae6de9d928f1d31dbb79fee6ce87257be9ac1e7af7a5f28f8320ae51",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp2?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f45724b307c8618da7b84db5ca7c5832f14b0d3706a98f4e23bcba998238c9df",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a1-pp2?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "fc46a1d217474c59705b55d09e9514a17e38f5b9becd87fbaa8f642d427923ee",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp1?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3598e7e03ac02a5b36b95ff050f137679f2188b786e4ed82250fcfa4937ab8e6",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp1?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cd6d17a38e5719e15c352c1fbd3cf536a1955492593f749f02b767e68d1da789",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp2?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cdbe3ee36581389de82689125882dfd2f460552b8be1ef38971d1d34c6a731aa",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a2-pp2?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "14e9e96b4356938dda5bf60b0b5476058e73d498ca07691ea591785459db95ef",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp1?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cf88dbafff7ed36665f2bdf14defd74da769971cb0c56053d55432e8078bdc82",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp1?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d22cacd0e5ad8a6b6dd853bfd29a2dfd511f0986db8304b531e02db23894cb19",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp2?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1615f192f62c3370a8f2c5028ef9462be4f01b44a0a5ce1d1c1152cd6728ed99",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a3-pp2?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9b46dc752d45b847824d3bffba84f57ffacd51010fc7620cf1d9dc352e513539",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp1?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9cfa19b1406e984ce33ac14186b7048a90547145f2ab36cf3da6bc5a9c891d2e",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp1?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "50c530b5baa83a5f6a5bde692ed49e158dbf90034901054e0884a4348f130853",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp2?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "62f84763518f47e50319690b4bc100895eae18605c2217f66078e4c6c838e4b4",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a4-pp2?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d0a1c572fda823f307d7027488c0bdf9c386266e82ee3c421c5c3e674a826253",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp1?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "31b55b30f6ec2cbe1562ce3bf6aa19260478260cbd196354ce5b7c9817d5c2ac",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp1?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a21f883cb58ba189347f9fc5b7d567dd703876a4e064802288a99619b892f573",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp2?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "350c95990cb5a1c3d735979753c45a7eeeda31d1b43ffa87deda26c75ee815b4",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a5-pp2?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6e3f92575d1dfd810bf9cfc60a81ec3541b647809ac0954b41d64e30802dbc9d",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a6-pp1?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e1f2f5beec67a2f2d581f32a762713521133f3fd30c5ab456b8c22567de53386",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/a6-pp1?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "166be19c12d44342d4aade230dd68cd008f94d1afebf348512a78f7d06ee0db6",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/b1-pp1?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a566bedf9841da18e2f291cd571f8bd9b89593aef40b169e9ad2072ad4a26aa7",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces/b1-pp1?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "22d5c22372441987681f6bea35e034e45ecb8b37ccbe9e41d3842e17813a6ab3",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en/retail-spaces?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ef02977ec5f19c240ad42856545f1fb53cdda4c4221a6c453633d4ef6c1dcb58",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:scroll",
+      "phases": [
+        "desktop:scroll",
+        "mobile:scroll"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en?_rsc=fVnK2iirx_LkWBBM",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "3f7a04dc28c75b265c7dc991f5c3b536a7044d0e15b69c44b837226f1cd7daad",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/en?_rsc=jhOD-QAiJjZVxy3d",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2e599d03c218f089117db95b4f2d4b33935c6272ed49216dc6bd47c91869f990",
+      "method": "GET",
+      "resource_type": "fetch",
+      "data_type": "identity_varying_response",
+      "request_class": "personalized_data",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "personalized_evidence_observed_in_one_or_more_responses"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/x-component",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://belgradearbor.rs/retail-spaces/hero.webp",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "836395a792832fbdc9d75e311eb26e51d084ece293b851101737fed3013faea8",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/webp",
+      "content_length": 563678,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://belgradearbor.rs",
+      "same_origin": true,
+      "required_for_baseline": true,
+      "requirement_reason": "observed successful same-origin static GET in declared capture coverage"
+    },
+    {
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1759570629.1786660625&gtm=45He68d0h2v9240485851za200zd9240485851xea&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8219bc1d34b4b2d549615203fa4039802b451f2f36507aec6aaf9569356098fc",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://ad.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=511414112.1786660642&gtm=45He68c1v9240485851za200zd9240485851xea&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "56835aa89717cf96322bd17bd0c287750aa187611ca39caeaa9c68f213698c11",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://ad.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://capi-automation.s3.us-east-2.amazonaws.com/public/client_js/capiParamBuilder/clientParamBuilder.bundle.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "b867a46892a5213cba7d2b0d0eeaf8c5236e4e79c174a163848a2969d1729c89",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript",
+      "content_length": 64294,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://capi-automation.s3.us-east-2.amazonaws.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c40b6c24f89857ed072a19f44b4043faeffaf47e2abf488e66c737de5c5f42da",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript; charset=utf-8",
+      "content_length": 107315,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://connect.facebook.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://connect.facebook.net/signals/config/881461921059348?v=2.9.377&r=stable&domain=belgradearbor.rs&optin_meta_enabled_capi=true&hme=54e1ff78c67c58505a168f4db6b2d95d2daeace7ee6b53e01d6f2396e8523fa0&ex_m=113%2C218%2C164%2C25%2C78%2C79%2C156%2C74%2C73%2C11%2C174%2C98%2C19%2C148%2C136%2C43%2C81%2C86%2C144%2C169%2C176%2C29%2C17%2C30%2C31%2C32%2C34%2C52%2C157%2C83%2C121%2C21%2C23%2C48%2C44%2C46%2C45%2C91%2C100%2C104%2C119%2C155%2C158%2C50%2C120%2C27%2C24%2C128%2C75%2C40%2C160%2C159%2C161%2C152%2C150%2C28%2C39%2C63%2C118%2C171%2C76%2C20%2C123%2C89%2C72%2C22%2C93%2C94%2C125%2C92%2C146%2C145%2C149%2C105%2C170%2C173%2C38%2C53%2C122%2C51%2C8%2C4%2C5%2C7%2C6%2C3%2C99%2C110%2C177%2C185%2C232%2C80%2C245%2C244%2C243%2C14%2C26%2C37%2C59%2C112%2C65%2C10%2C69%2C106%2C107%2C108%2C114%2C139%2C35%2C33%2C141%2C142%2C143%2C138%2C137%2C165%2C82%2C168%2C166%2C167%2C54%2C64%2C132%2C18%2C172%2C49%2C290%2C291%2C289%2C304%2C323%2C225%2C214%2C66%2C215%2C213%2C326%2C317%2C56%2C226%2C116%2C140%2C88%2C130%2C58%2C129%2C135%2C134%2C62%2C70%2C68%2C162%2C84%2C85%2C124%2C41%2C36%2C57%2C60%2C109%2C175%2C1%2C133%2C16%2C131%2C12%2C2%2C61%2C101%2C15%2C71%2C67%2C127%2C97%2C96%2C178%2C179%2C102%2C103%2C9%2C111%2C55%2C153%2C95%2C87%2C77%2C126%2C115%2C47%2C154%2C0%2C90%2C147%2C151%2C163%2C42%2C117%2C13%2C180",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4acbbe755ccfca93c4351645a89bacd541dd658cf3e388ee3f175930e6b28aeb",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/x-javascript; charset=utf-8",
+      "content_length": 64646,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://connect.facebook.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17823718150/?random=1786660624712&cv=11&fst=1786660624712&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119527020~119793972~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=3&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1759570629.1786660625&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "cb0c57f049a3efbbed3f7922210bb8775c2dc548051511dd2170a5c301c19bfe",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript; charset=UTF-8",
+      "content_length": 2542,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://googleads.g.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17823718150/?random=1786660641848&cv=11&fst=1786660641848&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527020~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=2&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=511414112.1786660642&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "5f949def230d5cdb0859ffd8b6f7b9bcd2675972bbfbf55aac4ff3e9adde8e9c",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript; charset=UTF-8",
+      "content_length": 2522,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://googleads.g.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://js-eu1.hs-analytics.net/analytics/1786653900000/148338609.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "1b3c104650862b20a022be6236ca59612344c7a2432c012d224e4eaa3b65629a",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://js-eu1.hs-analytics.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://js-eu1.hs-banner.com/v2/148338609/banner.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8b10ee46a5e7e8cd59e68a0573982f43525b8f948e48131cc503bdf76e933db5",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "text/javascript; charset=UTF-8",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://js-eu1.hs-banner.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://js-eu1.hs-scripts.com/148338609.js",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c310ad6484221a9f60acfb03a1017f8c34d25eed651515ea86abb978d66ddfa1",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "script",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript;charset=utf-8",
+      "content_length": 597,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://js-eu1.hs-scripts.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786660641245&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=785866051&_eu=AAAAAGAC&are=1&cid=2093526177.1786660642&ec_mode=a&frm=0&pscdl=noapi&rcb=7&sr=390x844&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125304~120385423&sid=1786660641&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&dt=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1482",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "01dc0a043abdd0462ed1a3c4a61b8e20ace02dc934b83a247aaf2ffd6301e93b",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://region1.analytics.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-VMF0WT0D1Q&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&_p=1786660624080&_gaz=1&gcs=G111&gcd=13t3t3t2t5l1&npa=0&dma_cps=a&dma=1&ecid=1155524717&_eu=AAAAAGAC&are=1&cid=360511769.1786660625&ec_mode=a&frm=0&pscdl=noapi&rcb=7&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385422&sid=1786660624&sct=1&seg=0&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&dt=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1545",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "102e1d2a67c73dcc74996b7f246fa420ccff640eea7cbfe9fbcf42de0e5b6159",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://region1.analytics.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-VMF0WT0D1Q&cid=2093526177.1786660642&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G111&gcd=13t3t3t2t5l1&npa=0&frm=0&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125304~120385423",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "4733c65f819da0e4f29a1b554064f058ad09442f195cd3c6c54bd4ad2be42ec6",
+      "method": "POST",
+      "resource_type": "ping",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://stats.g.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-VMF0WT0D1Q&cid=360511769.1786660625&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G111&gcd=13t3t3t2t5l1&npa=0&frm=0&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385422",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2366542103f6004b507630f4e51bc69e385c8cef54d7400e4b5fff0494989963",
+      "method": "POST",
+      "resource_type": "ping",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 204,
+      "status_history": [
+        204
+      ],
+      "content_type": "text/plain",
+      "content_length": 0,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://stats.g.doubleclick.net",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://track-eu1.hubspot.com/__ptq.gif?k=1&sd=1440x900&cd=24-bit&cs=UTF-8&ln=en-us&bfp=7dcd3348bbf7dc7a3b54f62ba733dfea&v=1.1&a=148338609&rcu=https%3A%2F%2Farbor.square43.com%2Fen%2Fretail-spaces&pu=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&t=Retail+%26+Business+Spaces+%7C+Belgrade+Arbor&cts=1786660625666&vi=742aba326640e36ed5b6b500de3bfa1e&nc=true&u=44699579.742aba326640e36ed5b6b500de3bfa1e.1786660625662.1786660625662.1786660625662.1&b=44699579.1.1786660625663&cc=15",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "11b6abad580d76c9e95775e7fc1f0c85c3caeffacfdafd1e2c0b3d6d96256ea5",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 45,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://track-eu1.hubspot.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://track-eu1.hubspot.com/__ptq.gif?k=1&sd=390x844&cd=24-bit&cs=UTF-8&ln=en-us&bfp=9b010b2217c01eecf20ffb84e4730e4f&v=1.1&a=148338609&rcu=https%3A%2F%2Farbor.square43.com%2Fen%2Fretail-spaces&pu=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&t=Retail+%26+Business+Spaces+%7C+Belgrade+Arbor&cts=1786660642843&vi=9356c946a5d97aa99d69aac5458795ae&nc=true&u=44699579.9356c946a5d97aa99d69aac5458795ae.1786660642841.1786660642841.1786660642841.1&b=44699579.1.1786660642841&cc=15",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "df87af2757485dbaded504059bcb6c4cb4d293f9c05e66f275d88668c20faefc",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 45,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://track-eu1.hubspot.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/ccm/collect?rcb=2&frm=0&apvc=0&auid=511414112.1786660642&dt=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&scrsrc=www.googletagmanager.com&rnd=814491658.1786660642&navt=n&npa=0&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527020~120385423&tft=1786660642478&tfd=1485&tids=AW-17823718150&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "d2f5ad7634fd62fb0817020418b8ab6c49e162cf8d40170004e135604bab0212",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/ccm/collect?rcb=3&frm=0&apvc=0&auid=1759570629.1786660625&dt=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&tid=AW-17823718150&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&scrsrc=www.googletagmanager.com&rnd=1811986556.1786660625&navt=n&npa=0&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcs=G111&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119527020~119793972~120385423&tft=1786660625304&tfd=1547&tids=AW-17823718150&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6083f9c3146caab928fdb41010e7567220017115ee4bc4af0d61f84d63ed6967",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/ccm/collect?rcb=5&frm=0&apvc=1&ae=g&auid=511414112.1786660642&dt=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&scrsrc=www.googletagmanager.com&rnd=814491658.1786660642&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68c1v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119527020~120385422&tft=1786660641717&tfd=724&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a0c00f6042a816277b0e78bc1367ccf0871bb53cd7d48d3cf508f353fba29dd6",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/ccm/collect?rcb=9&frm=0&apvc=1&ae=g&auid=1759570629.1786660625&dt=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&en=page_view&dl=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&scrsrc=www.googletagmanager.com&rnd=1811986556.1786660625&navt=n&npa=1&ep.ads_data_redaction=0&gtm=45He68d0h2v9240485851za200zd9240485851xea&gcd=13l3l3l2l1l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118395335~118897920~118897930~119527020~119791749~120385423&tft=1786660624577&tfd=820&fmt=8",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "6a6c9f606196dc2a80e040556361995b6e5c4068e33541a26f377d156ccb84bb",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/pagead/1p-user-list/17823718150/?random=1786660624712&cv=11&fst=1786658400000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119527020~119793972~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=3&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1759570629.1786660625&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQSTwARCiqBWhGuuJbQFoTIwNWpu4HO80yEhsxvxwYSik1lmDlvZEouQGsjsNosSyVaZpKtSb_fH7iUNYL2w5HP6na6NWM1lu2p09fq7m0PSiA&random=1587002315&rmt_tld=0&ipr=y",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f79065e1197f351b8060e647d1e1bedd088a873cc7458b5c38885cad662e2a78",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/pagead/1p-user-list/17823718150/?random=1786660641848&cv=11&fst=1786658400000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527020~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=2&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=511414112.1786660642&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQSTwARCiqBVpxu9z4ffDVYW_lyrSfPMiQwcV_ukMxaAcV0PRK0dAN2T5jO80NUep-_TG5qgtWrExRJk8VNHbM8AtIMz54VHU3ZOiwQeyRbbXE&random=2837560075&rmt_tld=0&ipr=y",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "a18d684d14e17976b31bba1fb09c77ce0af269a6cf4a1a9cd29a0a9bceb07683",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786660624712&cv=11&fst=1786660624712&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119527020~119793972~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=3&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1759570629.1786660625&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7a131936aae5e1f97eb12b8dcd28d17e8dcd93b16ded550714cdeea1ece0c2a3",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.com/rmkt/collect/17823718150/?random=1786660641848&cv=11&fst=1786660641848&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527020~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=2&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=511414112.1786660642&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "8c8e47f324902216fcf57f96e6dd59ebf86eb104e357dd2546e1115a03047cba",
+      "method": "POST",
+      "resource_type": "fetch",
+      "data_type": "request_body_or_mutation",
+      "request_class": "non_replayable",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": false,
+        "reason": "method_post_must_not_be_replayed_as_get"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "",
+      "content_length": null,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": "net::ERR_ABORTED",
+      "recomputed_origin": "https://www.google.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.fr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-VMF0WT0D1Q&cid=2093526177.1786660642&gtm=45je68c1v9240488232z89240485851za20gzb9240485851zd9240485851&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G111&gcd=13t3t3t2t5l1&npa=0&frm=0&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~119527019~120125304~120385423&z=575789922",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "9e3777bca1ecd4a5bcaa23517ef21d1a3ab049afa934b857f3897bae846dd9fa",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.fr",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.fr/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-VMF0WT0D1Q&cid=360511769.1786660625&gtm=45je68d0h2v9240488232z89240485851za20gzb9240485851zd9240485851&rcb=7&aip=1&dma=1&dma_cps=a&gcs=G111&gcd=13t3t3t2t5l1&npa=0&frm=0&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~119527020~120385422&z=1918733670",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "ce5eb7e4756f9c8d98b9d20de135ea7cf5239d4a026d991b59161b81c49f0436",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.fr",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.fr/pagead/1p-user-list/17823718150/?random=1786660624712&cv=11&fst=1786658400000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68d0h2v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115616986~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119527020~119793972~120385423&u_w=1440&u_h=900&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=3&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1759570629.1786660625&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQSTwARCiqBWhGuuJbQFoTIwNWpu4HO80yEhsxvxwYSik1lmDlvZEouQGsjsNosSyVaZpKtSb_fH7iUNYL2w5HP6na6NWM1lu2p09fq7m0PSiA&random=1587002315&rmt_tld=1&ipr=y",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "e080394fbdc612b277952122513475cc6cab0fb8c3a2ed2e5bf4da182275c26d",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.fr",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.google.fr/pagead/1p-user-list/17823718150/?random=1786660641848&cv=11&fst=1786658400000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v9238495308z89240485851za20gzb9240485851zd9240485851xec&gcd=13t3t3t2t5l1&dma_cps=a&dma=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527020~120385423&u_w=390&u_h=844&url=https%3A%2F%2Fbelgradearbor.rs%2Fen%2Fretail-spaces&rcb=2&frm=0&tiba=Retail%20%26%20Business%20Spaces%20%7C%20Belgrade%20Arbor&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=511414112.1786660642&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Linux&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQSTwARCiqBVpxu9z4ffDVYW_lyrSfPMiQwcV_ukMxaAcV0PRK0dAN2T5jO80NUep-_TG5qgtWrExRJk8VNHbM8AtIMz54VHU3ZOiwQeyRbbXE&random=2837560075&rmt_tld=1&ipr=y",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "c54db1622ffe76ccc86ce67deff3750671a4e84f3b44f64f9812d77a506b258b",
+      "method": "GET",
+      "resource_type": "image",
+      "data_type": "image",
+      "request_class": "static",
+      "privacy_signals": [],
+      "acquisition": {
+        "automatic": true,
+        "reason": "classified_static_get_head"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "image/gif",
+      "content_length": 42,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.google.fr",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=AW-17823718150&cx=c&gtm=4e68c1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "f687035aa60266c419a336fd13888c2c1ae6ff75660c07c2c6245bb92581f14b",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 148995,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=AW-17823718150&cx=c&gtm=4e68d0h2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "0473b9b41c4339e8415acb9960b39dc15e24db7a01a11e11874b01d7fe5ed3ad",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 148994,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-VMF0WT0D1Q&cx=c&gtm=4e68c1",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "7967eedb3ae08a3fb534a803dd753f689fae8fcc99c71508c51b2f3a2ca81dc9",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 188205,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "mobile:load",
+      "phases": [
+        "mobile:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-VMF0WT0D1Q&cx=c&gtm=4e68d0h2",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "98965c1a24277d170bad2f96cc470f2fc25c58e5e28035fef129b1267cba9eb4",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 188203,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load"
+      ],
+      "occurrences": 1,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-MSFLG4VN",
+      "url_redacted": false,
+      "sensitive_query_keys": [],
+      "request_identity": "2f2f1bdd5973184af807c1ed76048248ed1820a51b0308d0f5e1e5fdcbeebde3",
+      "method": "GET",
+      "resource_type": "script",
+      "data_type": "telemetry",
+      "request_class": "telemetry",
+      "privacy_signals": [
+        "cache_control_private"
+      ],
+      "acquisition": {
+        "automatic": false,
+        "reason": "telemetry_is_not_part_of_local_fidelity"
+      },
+      "status": 200,
+      "status_history": [
+        200
+      ],
+      "content_type": "application/javascript; charset=UTF-8",
+      "content_length": 154115,
+      "provider": null,
+      "from_service_worker": false,
+      "first_seen": "desktop:load",
+      "phases": [
+        "desktop:load",
+        "mobile:load"
+      ],
+      "occurrences": 2,
+      "observed": true,
+      "probed": true,
+      "captured": false,
+      "failure": null,
+      "recomputed_origin": "https://www.googletagmanager.com",
+      "same_origin": false,
+      "required_for_baseline": false
+    }
+  ],
+  "recorder_errors": []
+}

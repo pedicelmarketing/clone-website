@@ -1,0 +1,73 @@
+NEXUM PADEL — ARCHIVOS DE LOGO
+==============================
+Preparado el 3 de agosto de 2026.
+
+
+QUÉ HAY AQUÍ
+------------
+
+Dos versiones del logo, cada una en azul marino y en blanco:
+
+  CON MARBELLA      El logo completo: pelota + NEXUM PADEL + MARBELLA - SPAIN.
+                    Es el logo tal cual está en el cartel.
+
+  SIN MARBELLA      Sólo pelota + NEXUM PADEL, sin el texto curvo de abajo.
+                    Úsalo cuando el logo va pequeño (firma de email, cabecera
+                    de una web, un icono, una camiseta bordada): a tamaño
+                    reducido "MARBELLA - SPAIN" no se lee y ensucia la imagen.
+
+Y en dos formatos:
+
+  SVG/              Vectorial. ESTE ES EL BUENO. No pierde calidad nunca, da
+                    igual el tamaño: una tarjeta de visita o una lona de diez
+                    metros. Es el que hay que mandar a cualquier imprenta,
+                    rotulista o diseñador.
+
+  PNG/              Imagen normal, con fondo transparente. Para cuando algo no
+                    acepta SVG: Instagram, WhatsApp, PowerPoint, Word, Canva.
+                    Hay dos tamaños de cada uno:
+                      4000px  → máxima calidad, para imprimir o ampliar
+                      1000px  → para pantalla, redes y documentos
+
+
+CUÁL USO
+--------
+
+  Imprenta, rótulos, vinilo, camisetas ....... SVG
+  Web ........................................ SVG
+  Instagram, redes, presentaciones ........... PNG 1000px
+  Cartel grande, photocall, lona ............. PNG 4000px (o mejor, el SVG)
+
+  Fondo claro (blanco, gris, foto clara) ..... versión azul marino
+  Fondo oscuro (azul, negro, foto oscura) .... versión "blanco"
+
+
+COLOR DE MARCA
+--------------
+
+  Azul marino     #172338      RGB 23 / 35 / 56
+
+Ese es el azul exacto medido del logo. Dáselo a cualquiera que tenga que
+imprimir o diseñar algo de la marca, para que el color coincida siempre.
+
+
+UNA COSA IMPORTANTE, POR HONESTIDAD
+-----------------------------------
+
+Estos archivos están reconstruidos a partir de la foto del logo en la pared de
+hormigón, que es lo único que había. El resultado es fiel —las proporciones y
+las formas coinciden con el original— y sirve perfectamente para todo lo de
+arriba.
+
+Pero no es el archivo original del diseñador. Si quien hizo el logo todavía
+conserva el archivo de trabajo (.ai, .eps, .pdf o .svg), ese siempre será mejor
+que éste: tendrá las curvas exactas y el texto como texto de verdad. Merece la
+pena pedírselo y guardarlo. Si aparece, se sustituye esta carpeta y listo.
+
+
+CÓMO SE HIZO
+------------
+
+Foto original → recorte del logo → ampliado x4 (Comfy Cloud, modelo
+4x-UltraSharp) → separado del fondo de hormigón por luminancia → limpiadas 159
+motas de la pared → vectorizado con potrace → PNG generados desde el vector.
